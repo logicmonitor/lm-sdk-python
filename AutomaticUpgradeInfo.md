@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **hour** | **int** |  | 
 **created_by** | **str** |  | [optional] 
 **level** | **str** |  | [optional] 
+**timezone** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **occurrence** | **str** |  | 
 **type** | **str** |  | [optional] 

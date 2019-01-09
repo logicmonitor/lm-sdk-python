@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **created_by** | **str** |  | [optional] 
 **level** | **str** |  | [optional] 
+**timezone** | **str** |  | [optional] 
 **end_epoch** | **int** |  | [optional] 
 **description** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 

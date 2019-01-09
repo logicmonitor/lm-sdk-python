@@ -1,2 +1,2 @@
 test
-logicmonitor
+logicmonitor_sdk
