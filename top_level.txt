@@ -1,2 +1,0 @@
-test
-logicmonitor_sdk
