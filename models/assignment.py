@@ -31,90 +31,46 @@ class Assignment(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'group_name': 'str',
-        'tag_value': 'str',
         'action': 'str',
         'disable_alerting': 'bool',
+        'group': 'int',
+        'group_name': 'str',
         'tag_key': 'str',
-        'group': 'int'
+        'tag_value': 'str'
     }
 
     attribute_map = {
-        'group_name': 'groupName',
-        'tag_value': 'tagValue',
         'action': 'action',
         'disable_alerting': 'disableAlerting',
+        'group': 'group',
+        'group_name': 'groupName',
         'tag_key': 'tagKey',
-        'group': 'group'
+        'tag_value': 'tagValue'
     }
 
-    def __init__(self, group_name=None, tag_value=None, action=None, disable_alerting=None, tag_key=None, group=None):  # noqa: E501
+    def __init__(self, action=None, disable_alerting=None, group=None, group_name=None, tag_key=None, tag_value=None):  # noqa: E501
         """Assignment - a model defined in Swagger"""  # noqa: E501
 
-        self._group_name = None
-        self._tag_value = None
         self._action = None
         self._disable_alerting = None
-        self._tag_key = None
         self._group = None
+        self._group_name = None
+        self._tag_key = None
+        self._tag_value = None
         self.discriminator = None
 
-        if group_name is not None:
-            self.group_name = group_name
-        if tag_value is not None:
-            self.tag_value = tag_value
         if action is not None:
             self.action = action
         if disable_alerting is not None:
             self.disable_alerting = disable_alerting
-        if tag_key is not None:
-            self.tag_key = tag_key
         if group is not None:
             self.group = group
-
-    @property
-    def group_name(self):
-        """Gets the group_name of this Assignment.  # noqa: E501
-
-        The name of the group that discovered devices should be added into  # noqa: E501
-
-        :return: The group_name of this Assignment.  # noqa: E501
-        :rtype: str
-        """
-        return self._group_name
-
-    @group_name.setter
-    def group_name(self, group_name):
-        """Sets the group_name of this Assignment.
-
-        The name of the group that discovered devices should be added into  # noqa: E501
-
-        :param group_name: The group_name of this Assignment.  # noqa: E501
-        :type: str
-        """
-
-        self._group_name = group_name
-
-    @property
-    def tag_value(self):
-        """Gets the tag_value of this Assignment.  # noqa: E501
-
-
-        :return: The tag_value of this Assignment.  # noqa: E501
-        :rtype: str
-        """
-        return self._tag_value
-
-    @tag_value.setter
-    def tag_value(self, tag_value):
-        """Sets the tag_value of this Assignment.
-
-
-        :param tag_value: The tag_value of this Assignment.  # noqa: E501
-        :type: str
-        """
-
-        self._tag_value = tag_value
+        if group_name is not None:
+            self.group_name = group_name
+        if tag_key is not None:
+            self.tag_key = tag_key
+        if tag_value is not None:
+            self.tag_value = tag_value
 
     @property
     def action(self):
@@ -163,27 +119,6 @@ class Assignment(object):
         self._disable_alerting = disable_alerting
 
     @property
-    def tag_key(self):
-        """Gets the tag_key of this Assignment.  # noqa: E501
-
-
-        :return: The tag_key of this Assignment.  # noqa: E501
-        :rtype: str
-        """
-        return self._tag_key
-
-    @tag_key.setter
-    def tag_key(self, tag_key):
-        """Sets the tag_key of this Assignment.
-
-
-        :param tag_key: The tag_key of this Assignment.  # noqa: E501
-        :type: str
-        """
-
-        self._tag_key = tag_key
-
-    @property
     def group(self):
         """Gets the group of this Assignment.  # noqa: E501
 
@@ -205,6 +140,71 @@ class Assignment(object):
         """
 
         self._group = group
+
+    @property
+    def group_name(self):
+        """Gets the group_name of this Assignment.  # noqa: E501
+
+        The name of the group that discovered devices should be added into  # noqa: E501
+
+        :return: The group_name of this Assignment.  # noqa: E501
+        :rtype: str
+        """
+        return self._group_name
+
+    @group_name.setter
+    def group_name(self, group_name):
+        """Sets the group_name of this Assignment.
+
+        The name of the group that discovered devices should be added into  # noqa: E501
+
+        :param group_name: The group_name of this Assignment.  # noqa: E501
+        :type: str
+        """
+
+        self._group_name = group_name
+
+    @property
+    def tag_key(self):
+        """Gets the tag_key of this Assignment.  # noqa: E501
+
+
+        :return: The tag_key of this Assignment.  # noqa: E501
+        :rtype: str
+        """
+        return self._tag_key
+
+    @tag_key.setter
+    def tag_key(self, tag_key):
+        """Sets the tag_key of this Assignment.
+
+
+        :param tag_key: The tag_key of this Assignment.  # noqa: E501
+        :type: str
+        """
+
+        self._tag_key = tag_key
+
+    @property
+    def tag_value(self):
+        """Gets the tag_value of this Assignment.  # noqa: E501
+
+
+        :return: The tag_value of this Assignment.  # noqa: E501
+        :rtype: str
+        """
+        return self._tag_value
+
+    @tag_value.setter
+    def tag_value(self, tag_value):
+        """Sets the tag_value of this Assignment.
+
+
+        :param tag_value: The tag_value of this Assignment.  # noqa: E501
+        :type: str
+        """
+
+        self._tag_value = tag_value
 
     def to_dict(self):
         """Returns the model properties as a dict"""

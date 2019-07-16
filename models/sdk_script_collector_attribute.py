@@ -35,30 +35,30 @@ class SDKScriptCollectorAttribute(CollectorAttribute):
     swagger_types = {
         'name': 'str',
         'groovy_script': 'str',
-        'sdk_version': 'str',
-        'sdk_name': 'str'
+        'sdk_name': 'str',
+        'sdk_version': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'groovy_script': 'groovyScript',
-        'sdk_version': 'sdkVersion',
-        'sdk_name': 'sdkName'
+        'sdk_name': 'sdkName',
+        'sdk_version': 'sdkVersion'
     }
 
-    def __init__(self, name=None, groovy_script=None, sdk_version=None, sdk_name=None):  # noqa: E501
+    def __init__(self, name=None, groovy_script=None, sdk_name=None, sdk_version=None):  # noqa: E501
         """SDKScriptCollectorAttribute - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
         self._groovy_script = None
-        self._sdk_version = None
         self._sdk_name = None
+        self._sdk_version = None
         self.discriminator = None
 
         self.name = name
         self.groovy_script = groovy_script
-        self.sdk_version = sdk_version
         self.sdk_name = sdk_name
+        self.sdk_version = sdk_version
 
     @property
     def name(self):
@@ -107,29 +107,6 @@ class SDKScriptCollectorAttribute(CollectorAttribute):
         self._groovy_script = groovy_script
 
     @property
-    def sdk_version(self):
-        """Gets the sdk_version of this SDKScriptCollectorAttribute.  # noqa: E501
-
-
-        :return: The sdk_version of this SDKScriptCollectorAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._sdk_version
-
-    @sdk_version.setter
-    def sdk_version(self, sdk_version):
-        """Sets the sdk_version of this SDKScriptCollectorAttribute.
-
-
-        :param sdk_version: The sdk_version of this SDKScriptCollectorAttribute.  # noqa: E501
-        :type: str
-        """
-        if sdk_version is None:
-            raise ValueError("Invalid value for `sdk_version`, must not be `None`")  # noqa: E501
-
-        self._sdk_version = sdk_version
-
-    @property
     def sdk_name(self):
         """Gets the sdk_name of this SDKScriptCollectorAttribute.  # noqa: E501
 
@@ -151,6 +128,29 @@ class SDKScriptCollectorAttribute(CollectorAttribute):
             raise ValueError("Invalid value for `sdk_name`, must not be `None`")  # noqa: E501
 
         self._sdk_name = sdk_name
+
+    @property
+    def sdk_version(self):
+        """Gets the sdk_version of this SDKScriptCollectorAttribute.  # noqa: E501
+
+
+        :return: The sdk_version of this SDKScriptCollectorAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._sdk_version
+
+    @sdk_version.setter
+    def sdk_version(self, sdk_version):
+        """Sets the sdk_version of this SDKScriptCollectorAttribute.
+
+
+        :param sdk_version: The sdk_version of this SDKScriptCollectorAttribute.  # noqa: E501
+        :type: str
+        """
+        if sdk_version is None:
+            raise ValueError("Invalid value for `sdk_version`, must not be `None`")  # noqa: E501
+
+        self._sdk_version = sdk_version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

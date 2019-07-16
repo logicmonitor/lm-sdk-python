@@ -33,47 +33,26 @@ class Ec2DDR(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'change_name': 'str',
-        'assignment': 'list[Assignment]'
+        'assignment': 'list[Assignment]',
+        'change_name': 'str'
     }
 
     attribute_map = {
-        'change_name': 'changeName',
-        'assignment': 'assignment'
+        'assignment': 'assignment',
+        'change_name': 'changeName'
     }
 
-    def __init__(self, change_name=None, assignment=None):  # noqa: E501
+    def __init__(self, assignment=None, change_name=None):  # noqa: E501
         """Ec2DDR - a model defined in Swagger"""  # noqa: E501
 
-        self._change_name = None
         self._assignment = None
+        self._change_name = None
         self.discriminator = None
 
-        if change_name is not None:
-            self.change_name = change_name
         if assignment is not None:
             self.assignment = assignment
-
-    @property
-    def change_name(self):
-        """Gets the change_name of this Ec2DDR.  # noqa: E501
-
-
-        :return: The change_name of this Ec2DDR.  # noqa: E501
-        :rtype: str
-        """
-        return self._change_name
-
-    @change_name.setter
-    def change_name(self, change_name):
-        """Sets the change_name of this Ec2DDR.
-
-
-        :param change_name: The change_name of this Ec2DDR.  # noqa: E501
-        :type: str
-        """
-
-        self._change_name = change_name
+        if change_name is not None:
+            self.change_name = change_name
 
     @property
     def assignment(self):
@@ -95,6 +74,27 @@ class Ec2DDR(object):
         """
 
         self._assignment = assignment
+
+    @property
+    def change_name(self):
+        """Gets the change_name of this Ec2DDR.  # noqa: E501
+
+
+        :return: The change_name of this Ec2DDR.  # noqa: E501
+        :rtype: str
+        """
+        return self._change_name
+
+    @change_name.setter
+    def change_name(self, change_name):
+        """Sets the change_name of this Ec2DDR.
+
+
+        :param change_name: The change_name of this Ec2DDR.  # noqa: E501
+        :type: str
+        """
+
+        self._change_name = change_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

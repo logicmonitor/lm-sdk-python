@@ -33,138 +33,92 @@ class NetflowGroupWidget(Widget):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'last_updated_by': 'str',
-        'user_permission': 'str',
         'dashboard_id': 'int',
-        'name': 'str',
         'description': 'str',
-        'last_updated_on': 'int',
-        'theme': 'str',
-        'interval': 'int',
         'id': 'int',
-        'type': 'str',
+        'interval': 'int',
+        'last_updated_by': 'str',
+        'last_updated_on': 'int',
+        'name': 'str',
+        'theme': 'str',
         'timescale': 'str',
-        'row_filters': 'str',
-        'device_group_id': 'int',
+        'type': 'str',
+        'user_permission': 'str',
         'data_type': 'str',
+        'device_group_id': 'int',
+        'device_group_name': 'str',
         'qos_type': 'str',
-        'device_group_name': 'str'
+        'row_filters': 'str'
     }
 
     attribute_map = {
-        'last_updated_by': 'lastUpdatedBy',
-        'user_permission': 'userPermission',
         'dashboard_id': 'dashboardId',
-        'name': 'name',
         'description': 'description',
-        'last_updated_on': 'lastUpdatedOn',
-        'theme': 'theme',
-        'interval': 'interval',
         'id': 'id',
-        'type': 'type',
+        'interval': 'interval',
+        'last_updated_by': 'lastUpdatedBy',
+        'last_updated_on': 'lastUpdatedOn',
+        'name': 'name',
+        'theme': 'theme',
         'timescale': 'timescale',
-        'row_filters': 'rowFilters',
-        'device_group_id': 'deviceGroupId',
+        'type': 'type',
+        'user_permission': 'userPermission',
         'data_type': 'dataType',
+        'device_group_id': 'deviceGroupId',
+        'device_group_name': 'deviceGroupName',
         'qos_type': 'qosType',
-        'device_group_name': 'deviceGroupName'
+        'row_filters': 'rowFilters'
     }
 
-    def __init__(self, last_updated_by=None, user_permission=None, dashboard_id=None, name=None, description=None, last_updated_on=None, theme=None, interval=None, id=None, type=None, timescale=None, row_filters=None, device_group_id=None, data_type=None, qos_type=None, device_group_name=None):  # noqa: E501
+    def __init__(self, dashboard_id=None, description=None, id=None, interval=None, last_updated_by=None, last_updated_on=None, name=None, theme=None, timescale=None, type=None, user_permission=None, data_type=None, device_group_id=None, device_group_name=None, qos_type=None, row_filters=None):  # noqa: E501
         """NetflowGroupWidget - a model defined in Swagger"""  # noqa: E501
 
-        self._last_updated_by = None
-        self._user_permission = None
         self._dashboard_id = None
-        self._name = None
         self._description = None
-        self._last_updated_on = None
-        self._theme = None
-        self._interval = None
         self._id = None
-        self._type = None
+        self._interval = None
+        self._last_updated_by = None
+        self._last_updated_on = None
+        self._name = None
+        self._theme = None
         self._timescale = None
-        self._row_filters = None
-        self._device_group_id = None
+        self._type = None
+        self._user_permission = None
         self._data_type = None
-        self._qos_type = None
+        self._device_group_id = None
         self._device_group_name = None
+        self._qos_type = None
+        self._row_filters = None
         self.discriminator = None
 
-        if last_updated_by is not None:
-            self.last_updated_by = last_updated_by
-        if user_permission is not None:
-            self.user_permission = user_permission
         self.dashboard_id = dashboard_id
-        self.name = name
         if description is not None:
             self.description = description
-        if last_updated_on is not None:
-            self.last_updated_on = last_updated_on
-        if theme is not None:
-            self.theme = theme
-        if interval is not None:
-            self.interval = interval
         if id is not None:
             self.id = id
-        self.type = type
+        if interval is not None:
+            self.interval = interval
+        if last_updated_by is not None:
+            self.last_updated_by = last_updated_by
+        if last_updated_on is not None:
+            self.last_updated_on = last_updated_on
+        self.name = name
+        if theme is not None:
+            self.theme = theme
         if timescale is not None:
             self.timescale = timescale
-        if row_filters is not None:
-            self.row_filters = row_filters
-        self.device_group_id = device_group_id
+        self.type = type
+        if user_permission is not None:
+            self.user_permission = user_permission
         if data_type is not None:
             self.data_type = data_type
-        if qos_type is not None:
-            self.qos_type = qos_type
+        self.device_group_id = device_group_id
         if device_group_name is not None:
             self.device_group_name = device_group_name
-
-    @property
-    def last_updated_by(self):
-        """Gets the last_updated_by of this NetflowGroupWidget.  # noqa: E501
-
-        The user that last updated the widget  # noqa: E501
-
-        :return: The last_updated_by of this NetflowGroupWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._last_updated_by
-
-    @last_updated_by.setter
-    def last_updated_by(self, last_updated_by):
-        """Sets the last_updated_by of this NetflowGroupWidget.
-
-        The user that last updated the widget  # noqa: E501
-
-        :param last_updated_by: The last_updated_by of this NetflowGroupWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._last_updated_by = last_updated_by
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this NetflowGroupWidget.  # noqa: E501
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :return: The user_permission of this NetflowGroupWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this NetflowGroupWidget.
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :param user_permission: The user_permission of this NetflowGroupWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
+        if qos_type is not None:
+            self.qos_type = qos_type
+        if row_filters is not None:
+            self.row_filters = row_filters
 
     @property
     def dashboard_id(self):
@@ -192,31 +146,6 @@ class NetflowGroupWidget(Widget):
         self._dashboard_id = dashboard_id
 
     @property
-    def name(self):
-        """Gets the name of this NetflowGroupWidget.  # noqa: E501
-
-        The name of the widget  # noqa: E501
-
-        :return: The name of this NetflowGroupWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this NetflowGroupWidget.
-
-        The name of the widget  # noqa: E501
-
-        :param name: The name of this NetflowGroupWidget.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
     def description(self):
         """Gets the description of this NetflowGroupWidget.  # noqa: E501
 
@@ -240,50 +169,27 @@ class NetflowGroupWidget(Widget):
         self._description = description
 
     @property
-    def last_updated_on(self):
-        """Gets the last_updated_on of this NetflowGroupWidget.  # noqa: E501
+    def id(self):
+        """Gets the id of this NetflowGroupWidget.  # noqa: E501
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :return: The last_updated_on of this NetflowGroupWidget.  # noqa: E501
+        :return: The id of this NetflowGroupWidget.  # noqa: E501
         :rtype: int
         """
-        return self._last_updated_on
+        return self._id
 
-    @last_updated_on.setter
-    def last_updated_on(self, last_updated_on):
-        """Sets the last_updated_on of this NetflowGroupWidget.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this NetflowGroupWidget.
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :param last_updated_on: The last_updated_on of this NetflowGroupWidget.  # noqa: E501
+        :param id: The id of this NetflowGroupWidget.  # noqa: E501
         :type: int
         """
 
-        self._last_updated_on = last_updated_on
-
-    @property
-    def theme(self):
-        """Gets the theme of this NetflowGroupWidget.  # noqa: E501
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :return: The theme of this NetflowGroupWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._theme
-
-    @theme.setter
-    def theme(self, theme):
-        """Sets the theme of this NetflowGroupWidget.
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :param theme: The theme of this NetflowGroupWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._theme = theme
+        self._id = id
 
     @property
     def interval(self):
@@ -309,27 +215,121 @@ class NetflowGroupWidget(Widget):
         self._interval = interval
 
     @property
-    def id(self):
-        """Gets the id of this NetflowGroupWidget.  # noqa: E501
+    def last_updated_by(self):
+        """Gets the last_updated_by of this NetflowGroupWidget.  # noqa: E501
 
-        The Id of the widget  # noqa: E501
+        The user that last updated the widget  # noqa: E501
 
-        :return: The id of this NetflowGroupWidget.  # noqa: E501
+        :return: The last_updated_by of this NetflowGroupWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_updated_by
+
+    @last_updated_by.setter
+    def last_updated_by(self, last_updated_by):
+        """Sets the last_updated_by of this NetflowGroupWidget.
+
+        The user that last updated the widget  # noqa: E501
+
+        :param last_updated_by: The last_updated_by of this NetflowGroupWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._last_updated_by = last_updated_by
+
+    @property
+    def last_updated_on(self):
+        """Gets the last_updated_on of this NetflowGroupWidget.  # noqa: E501
+
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+
+        :return: The last_updated_on of this NetflowGroupWidget.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._last_updated_on
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this NetflowGroupWidget.
+    @last_updated_on.setter
+    def last_updated_on(self, last_updated_on):
+        """Sets the last_updated_on of this NetflowGroupWidget.
 
-        The Id of the widget  # noqa: E501
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
 
-        :param id: The id of this NetflowGroupWidget.  # noqa: E501
+        :param last_updated_on: The last_updated_on of this NetflowGroupWidget.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._last_updated_on = last_updated_on
+
+    @property
+    def name(self):
+        """Gets the name of this NetflowGroupWidget.  # noqa: E501
+
+        The name of the widget  # noqa: E501
+
+        :return: The name of this NetflowGroupWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this NetflowGroupWidget.
+
+        The name of the widget  # noqa: E501
+
+        :param name: The name of this NetflowGroupWidget.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def theme(self):
+        """Gets the theme of this NetflowGroupWidget.  # noqa: E501
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :return: The theme of this NetflowGroupWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._theme
+
+    @theme.setter
+    def theme(self, theme):
+        """Sets the theme of this NetflowGroupWidget.
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :param theme: The theme of this NetflowGroupWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._theme = theme
+
+    @property
+    def timescale(self):
+        """Gets the timescale of this NetflowGroupWidget.  # noqa: E501
+
+        The default timescale of the widget  # noqa: E501
+
+        :return: The timescale of this NetflowGroupWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._timescale
+
+    @timescale.setter
+    def timescale(self, timescale):
+        """Sets the timescale of this NetflowGroupWidget.
+
+        The default timescale of the widget  # noqa: E501
+
+        :param timescale: The timescale of this NetflowGroupWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._timescale = timescale
 
     @property
     def type(self):
@@ -357,48 +357,48 @@ class NetflowGroupWidget(Widget):
         self._type = type
 
     @property
-    def timescale(self):
-        """Gets the timescale of this NetflowGroupWidget.  # noqa: E501
+    def user_permission(self):
+        """Gets the user_permission of this NetflowGroupWidget.  # noqa: E501
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :return: The timescale of this NetflowGroupWidget.  # noqa: E501
+        :return: The user_permission of this NetflowGroupWidget.  # noqa: E501
         :rtype: str
         """
-        return self._timescale
+        return self._user_permission
 
-    @timescale.setter
-    def timescale(self, timescale):
-        """Sets the timescale of this NetflowGroupWidget.
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this NetflowGroupWidget.
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :param timescale: The timescale of this NetflowGroupWidget.  # noqa: E501
+        :param user_permission: The user_permission of this NetflowGroupWidget.  # noqa: E501
         :type: str
         """
 
-        self._timescale = timescale
+        self._user_permission = user_permission
 
     @property
-    def row_filters(self):
-        """Gets the row_filters of this NetflowGroupWidget.  # noqa: E501
+    def data_type(self):
+        """Gets the data_type of this NetflowGroupWidget.  # noqa: E501
 
 
-        :return: The row_filters of this NetflowGroupWidget.  # noqa: E501
+        :return: The data_type of this NetflowGroupWidget.  # noqa: E501
         :rtype: str
         """
-        return self._row_filters
+        return self._data_type
 
-    @row_filters.setter
-    def row_filters(self, row_filters):
-        """Sets the row_filters of this NetflowGroupWidget.
+    @data_type.setter
+    def data_type(self, data_type):
+        """Sets the data_type of this NetflowGroupWidget.
 
 
-        :param row_filters: The row_filters of this NetflowGroupWidget.  # noqa: E501
+        :param data_type: The data_type of this NetflowGroupWidget.  # noqa: E501
         :type: str
         """
 
-        self._row_filters = row_filters
+        self._data_type = data_type
 
     @property
     def device_group_id(self):
@@ -424,25 +424,25 @@ class NetflowGroupWidget(Widget):
         self._device_group_id = device_group_id
 
     @property
-    def data_type(self):
-        """Gets the data_type of this NetflowGroupWidget.  # noqa: E501
+    def device_group_name(self):
+        """Gets the device_group_name of this NetflowGroupWidget.  # noqa: E501
 
 
-        :return: The data_type of this NetflowGroupWidget.  # noqa: E501
+        :return: The device_group_name of this NetflowGroupWidget.  # noqa: E501
         :rtype: str
         """
-        return self._data_type
+        return self._device_group_name
 
-    @data_type.setter
-    def data_type(self, data_type):
-        """Sets the data_type of this NetflowGroupWidget.
+    @device_group_name.setter
+    def device_group_name(self, device_group_name):
+        """Sets the device_group_name of this NetflowGroupWidget.
 
 
-        :param data_type: The data_type of this NetflowGroupWidget.  # noqa: E501
+        :param device_group_name: The device_group_name of this NetflowGroupWidget.  # noqa: E501
         :type: str
         """
 
-        self._data_type = data_type
+        self._device_group_name = device_group_name
 
     @property
     def qos_type(self):
@@ -466,25 +466,25 @@ class NetflowGroupWidget(Widget):
         self._qos_type = qos_type
 
     @property
-    def device_group_name(self):
-        """Gets the device_group_name of this NetflowGroupWidget.  # noqa: E501
+    def row_filters(self):
+        """Gets the row_filters of this NetflowGroupWidget.  # noqa: E501
 
 
-        :return: The device_group_name of this NetflowGroupWidget.  # noqa: E501
+        :return: The row_filters of this NetflowGroupWidget.  # noqa: E501
         :rtype: str
         """
-        return self._device_group_name
+        return self._row_filters
 
-    @device_group_name.setter
-    def device_group_name(self, device_group_name):
-        """Sets the device_group_name of this NetflowGroupWidget.
+    @row_filters.setter
+    def row_filters(self, row_filters):
+        """Sets the row_filters of this NetflowGroupWidget.
 
 
-        :param device_group_name: The device_group_name of this NetflowGroupWidget.  # noqa: E501
+        :param row_filters: The row_filters of this NetflowGroupWidget.  # noqa: E501
         :type: str
         """
 
-        self._device_group_name = device_group_name
+        self._row_filters = row_filters
 
     def to_dict(self):
         """Returns the model properties as a dict"""

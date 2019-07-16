@@ -31,149 +31,107 @@ class GraphPlotLine(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'color_name': 'str',
-        'std': 'object',
-        'visible': 'bool',
+        'avg': 'object',
         'color': 'str',
+        'color_name': 'str',
         'data': 'list[object]',
-        'max': 'object',
-        'legend': 'str',
+        'decimal': 'int',
         'description': 'str',
         'label': 'str',
-        'type': 'str',
+        'legend': 'str',
+        'max': 'object',
         'min': 'object',
-        'avg': 'object',
-        'decimal': 'int',
-        'use_y_max': 'bool'
+        'std': 'object',
+        'type': 'str',
+        'use_y_max': 'bool',
+        'visible': 'bool'
     }
 
     attribute_map = {
-        'color_name': 'colorName',
-        'std': 'std',
-        'visible': 'visible',
+        'avg': 'avg',
         'color': 'color',
+        'color_name': 'colorName',
         'data': 'data',
-        'max': 'max',
-        'legend': 'legend',
+        'decimal': 'decimal',
         'description': 'description',
         'label': 'label',
-        'type': 'type',
+        'legend': 'legend',
+        'max': 'max',
         'min': 'min',
-        'avg': 'avg',
-        'decimal': 'decimal',
-        'use_y_max': 'useYMax'
+        'std': 'std',
+        'type': 'type',
+        'use_y_max': 'useYMax',
+        'visible': 'visible'
     }
 
-    def __init__(self, color_name=None, std=None, visible=None, color=None, data=None, max=None, legend=None, description=None, label=None, type=None, min=None, avg=None, decimal=None, use_y_max=None):  # noqa: E501
+    def __init__(self, avg=None, color=None, color_name=None, data=None, decimal=None, description=None, label=None, legend=None, max=None, min=None, std=None, type=None, use_y_max=None, visible=None):  # noqa: E501
         """GraphPlotLine - a model defined in Swagger"""  # noqa: E501
 
-        self._color_name = None
-        self._std = None
-        self._visible = None
+        self._avg = None
         self._color = None
+        self._color_name = None
         self._data = None
-        self._max = None
-        self._legend = None
+        self._decimal = None
         self._description = None
         self._label = None
-        self._type = None
+        self._legend = None
+        self._max = None
         self._min = None
-        self._avg = None
-        self._decimal = None
+        self._std = None
+        self._type = None
         self._use_y_max = None
+        self._visible = None
         self.discriminator = None
 
-        if color_name is not None:
-            self.color_name = color_name
-        if std is not None:
-            self.std = std
-        if visible is not None:
-            self.visible = visible
+        if avg is not None:
+            self.avg = avg
         if color is not None:
             self.color = color
+        if color_name is not None:
+            self.color_name = color_name
         if data is not None:
             self.data = data
-        if max is not None:
-            self.max = max
-        if legend is not None:
-            self.legend = legend
+        if decimal is not None:
+            self.decimal = decimal
         if description is not None:
             self.description = description
         if label is not None:
             self.label = label
-        if type is not None:
-            self.type = type
+        if legend is not None:
+            self.legend = legend
+        if max is not None:
+            self.max = max
         if min is not None:
             self.min = min
-        if avg is not None:
-            self.avg = avg
-        if decimal is not None:
-            self.decimal = decimal
+        if std is not None:
+            self.std = std
+        if type is not None:
+            self.type = type
         if use_y_max is not None:
             self.use_y_max = use_y_max
+        if visible is not None:
+            self.visible = visible
 
     @property
-    def color_name(self):
-        """Gets the color_name of this GraphPlotLine.  # noqa: E501
+    def avg(self):
+        """Gets the avg of this GraphPlotLine.  # noqa: E501
 
 
-        :return: The color_name of this GraphPlotLine.  # noqa: E501
-        :rtype: str
-        """
-        return self._color_name
-
-    @color_name.setter
-    def color_name(self, color_name):
-        """Sets the color_name of this GraphPlotLine.
-
-
-        :param color_name: The color_name of this GraphPlotLine.  # noqa: E501
-        :type: str
-        """
-
-        self._color_name = color_name
-
-    @property
-    def std(self):
-        """Gets the std of this GraphPlotLine.  # noqa: E501
-
-
-        :return: The std of this GraphPlotLine.  # noqa: E501
+        :return: The avg of this GraphPlotLine.  # noqa: E501
         :rtype: object
         """
-        return self._std
+        return self._avg
 
-    @std.setter
-    def std(self, std):
-        """Sets the std of this GraphPlotLine.
+    @avg.setter
+    def avg(self, avg):
+        """Sets the avg of this GraphPlotLine.
 
 
-        :param std: The std of this GraphPlotLine.  # noqa: E501
+        :param avg: The avg of this GraphPlotLine.  # noqa: E501
         :type: object
         """
 
-        self._std = std
-
-    @property
-    def visible(self):
-        """Gets the visible of this GraphPlotLine.  # noqa: E501
-
-
-        :return: The visible of this GraphPlotLine.  # noqa: E501
-        :rtype: bool
-        """
-        return self._visible
-
-    @visible.setter
-    def visible(self, visible):
-        """Sets the visible of this GraphPlotLine.
-
-
-        :param visible: The visible of this GraphPlotLine.  # noqa: E501
-        :type: bool
-        """
-
-        self._visible = visible
+        self._avg = avg
 
     @property
     def color(self):
@@ -197,6 +155,27 @@ class GraphPlotLine(object):
         self._color = color
 
     @property
+    def color_name(self):
+        """Gets the color_name of this GraphPlotLine.  # noqa: E501
+
+
+        :return: The color_name of this GraphPlotLine.  # noqa: E501
+        :rtype: str
+        """
+        return self._color_name
+
+    @color_name.setter
+    def color_name(self, color_name):
+        """Sets the color_name of this GraphPlotLine.
+
+
+        :param color_name: The color_name of this GraphPlotLine.  # noqa: E501
+        :type: str
+        """
+
+        self._color_name = color_name
+
+    @property
     def data(self):
         """Gets the data of this GraphPlotLine.  # noqa: E501
 
@@ -218,46 +197,25 @@ class GraphPlotLine(object):
         self._data = data
 
     @property
-    def max(self):
-        """Gets the max of this GraphPlotLine.  # noqa: E501
+    def decimal(self):
+        """Gets the decimal of this GraphPlotLine.  # noqa: E501
 
 
-        :return: The max of this GraphPlotLine.  # noqa: E501
-        :rtype: object
+        :return: The decimal of this GraphPlotLine.  # noqa: E501
+        :rtype: int
         """
-        return self._max
+        return self._decimal
 
-    @max.setter
-    def max(self, max):
-        """Sets the max of this GraphPlotLine.
-
-
-        :param max: The max of this GraphPlotLine.  # noqa: E501
-        :type: object
-        """
-
-        self._max = max
-
-    @property
-    def legend(self):
-        """Gets the legend of this GraphPlotLine.  # noqa: E501
+    @decimal.setter
+    def decimal(self, decimal):
+        """Sets the decimal of this GraphPlotLine.
 
 
-        :return: The legend of this GraphPlotLine.  # noqa: E501
-        :rtype: str
-        """
-        return self._legend
-
-    @legend.setter
-    def legend(self, legend):
-        """Sets the legend of this GraphPlotLine.
-
-
-        :param legend: The legend of this GraphPlotLine.  # noqa: E501
-        :type: str
+        :param decimal: The decimal of this GraphPlotLine.  # noqa: E501
+        :type: int
         """
 
-        self._legend = legend
+        self._decimal = decimal
 
     @property
     def description(self):
@@ -302,25 +260,46 @@ class GraphPlotLine(object):
         self._label = label
 
     @property
-    def type(self):
-        """Gets the type of this GraphPlotLine.  # noqa: E501
+    def legend(self):
+        """Gets the legend of this GraphPlotLine.  # noqa: E501
 
 
-        :return: The type of this GraphPlotLine.  # noqa: E501
+        :return: The legend of this GraphPlotLine.  # noqa: E501
         :rtype: str
         """
-        return self._type
+        return self._legend
 
-    @type.setter
-    def type(self, type):
-        """Sets the type of this GraphPlotLine.
+    @legend.setter
+    def legend(self, legend):
+        """Sets the legend of this GraphPlotLine.
 
 
-        :param type: The type of this GraphPlotLine.  # noqa: E501
+        :param legend: The legend of this GraphPlotLine.  # noqa: E501
         :type: str
         """
 
-        self._type = type
+        self._legend = legend
+
+    @property
+    def max(self):
+        """Gets the max of this GraphPlotLine.  # noqa: E501
+
+
+        :return: The max of this GraphPlotLine.  # noqa: E501
+        :rtype: object
+        """
+        return self._max
+
+    @max.setter
+    def max(self, max):
+        """Sets the max of this GraphPlotLine.
+
+
+        :param max: The max of this GraphPlotLine.  # noqa: E501
+        :type: object
+        """
+
+        self._max = max
 
     @property
     def min(self):
@@ -344,46 +323,46 @@ class GraphPlotLine(object):
         self._min = min
 
     @property
-    def avg(self):
-        """Gets the avg of this GraphPlotLine.  # noqa: E501
+    def std(self):
+        """Gets the std of this GraphPlotLine.  # noqa: E501
 
 
-        :return: The avg of this GraphPlotLine.  # noqa: E501
+        :return: The std of this GraphPlotLine.  # noqa: E501
         :rtype: object
         """
-        return self._avg
+        return self._std
 
-    @avg.setter
-    def avg(self, avg):
-        """Sets the avg of this GraphPlotLine.
+    @std.setter
+    def std(self, std):
+        """Sets the std of this GraphPlotLine.
 
 
-        :param avg: The avg of this GraphPlotLine.  # noqa: E501
+        :param std: The std of this GraphPlotLine.  # noqa: E501
         :type: object
         """
 
-        self._avg = avg
+        self._std = std
 
     @property
-    def decimal(self):
-        """Gets the decimal of this GraphPlotLine.  # noqa: E501
+    def type(self):
+        """Gets the type of this GraphPlotLine.  # noqa: E501
 
 
-        :return: The decimal of this GraphPlotLine.  # noqa: E501
-        :rtype: int
+        :return: The type of this GraphPlotLine.  # noqa: E501
+        :rtype: str
         """
-        return self._decimal
+        return self._type
 
-    @decimal.setter
-    def decimal(self, decimal):
-        """Sets the decimal of this GraphPlotLine.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this GraphPlotLine.
 
 
-        :param decimal: The decimal of this GraphPlotLine.  # noqa: E501
-        :type: int
+        :param type: The type of this GraphPlotLine.  # noqa: E501
+        :type: str
         """
 
-        self._decimal = decimal
+        self._type = type
 
     @property
     def use_y_max(self):
@@ -405,6 +384,27 @@ class GraphPlotLine(object):
         """
 
         self._use_y_max = use_y_max
+
+    @property
+    def visible(self):
+        """Gets the visible of this GraphPlotLine.  # noqa: E501
+
+
+        :return: The visible of this GraphPlotLine.  # noqa: E501
+        :rtype: bool
+        """
+        return self._visible
+
+    @visible.setter
+    def visible(self, visible):
+        """Sets the visible of this GraphPlotLine.
+
+
+        :param visible: The visible of this GraphPlotLine.  # noqa: E501
+        :type: bool
+        """
+
+        self._visible = visible
 
     def to_dict(self):
         """Returns the model properties as a dict"""

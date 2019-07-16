@@ -33,152 +33,106 @@ class OverviewGraphWidget(Widget):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'last_updated_by': 'str',
-        'user_permission': 'str',
         'dashboard_id': 'int',
-        'name': 'str',
         'description': 'str',
-        'last_updated_on': 'int',
-        'theme': 'str',
-        'interval': 'int',
         'id': 'int',
-        'type': 'str',
+        'interval': 'int',
+        'last_updated_by': 'str',
+        'last_updated_on': 'int',
+        'name': 'str',
+        'theme': 'str',
         'timescale': 'str',
-        'host_name': 'str',
+        'type': 'str',
+        'user_permission': 'str',
+        'ds_id': 'int',
+        'ds_name': 'str',
+        'dsig_id': 'int',
+        'dsig_name': 'str',
+        'graph_id': 'int',
         'graph_name': 'str',
         'h_id': 'int',
-        'dsig_id': 'int',
-        'ds_name': 'str',
-        'ds_id': 'int',
-        'dsig_name': 'str',
-        'graph_id': 'int'
+        'host_name': 'str'
     }
 
     attribute_map = {
-        'last_updated_by': 'lastUpdatedBy',
-        'user_permission': 'userPermission',
         'dashboard_id': 'dashboardId',
-        'name': 'name',
         'description': 'description',
-        'last_updated_on': 'lastUpdatedOn',
-        'theme': 'theme',
-        'interval': 'interval',
         'id': 'id',
-        'type': 'type',
+        'interval': 'interval',
+        'last_updated_by': 'lastUpdatedBy',
+        'last_updated_on': 'lastUpdatedOn',
+        'name': 'name',
+        'theme': 'theme',
         'timescale': 'timescale',
-        'host_name': 'hostName',
+        'type': 'type',
+        'user_permission': 'userPermission',
+        'ds_id': 'dsId',
+        'ds_name': 'dsName',
+        'dsig_id': 'dsigId',
+        'dsig_name': 'dsigName',
+        'graph_id': 'graphId',
         'graph_name': 'graphName',
         'h_id': 'hId',
-        'dsig_id': 'dsigId',
-        'ds_name': 'dsName',
-        'ds_id': 'dsId',
-        'dsig_name': 'dsigName',
-        'graph_id': 'graphId'
+        'host_name': 'hostName'
     }
 
-    def __init__(self, last_updated_by=None, user_permission=None, dashboard_id=None, name=None, description=None, last_updated_on=None, theme=None, interval=None, id=None, type=None, timescale=None, host_name=None, graph_name=None, h_id=None, dsig_id=None, ds_name=None, ds_id=None, dsig_name=None, graph_id=None):  # noqa: E501
+    def __init__(self, dashboard_id=None, description=None, id=None, interval=None, last_updated_by=None, last_updated_on=None, name=None, theme=None, timescale=None, type=None, user_permission=None, ds_id=None, ds_name=None, dsig_id=None, dsig_name=None, graph_id=None, graph_name=None, h_id=None, host_name=None):  # noqa: E501
         """OverviewGraphWidget - a model defined in Swagger"""  # noqa: E501
 
-        self._last_updated_by = None
-        self._user_permission = None
         self._dashboard_id = None
-        self._name = None
         self._description = None
-        self._last_updated_on = None
-        self._theme = None
-        self._interval = None
         self._id = None
-        self._type = None
+        self._interval = None
+        self._last_updated_by = None
+        self._last_updated_on = None
+        self._name = None
+        self._theme = None
         self._timescale = None
-        self._host_name = None
-        self._graph_name = None
-        self._h_id = None
-        self._dsig_id = None
-        self._ds_name = None
+        self._type = None
+        self._user_permission = None
         self._ds_id = None
+        self._ds_name = None
+        self._dsig_id = None
         self._dsig_name = None
         self._graph_id = None
+        self._graph_name = None
+        self._h_id = None
+        self._host_name = None
         self.discriminator = None
 
-        if last_updated_by is not None:
-            self.last_updated_by = last_updated_by
-        if user_permission is not None:
-            self.user_permission = user_permission
         self.dashboard_id = dashboard_id
-        self.name = name
         if description is not None:
             self.description = description
-        if last_updated_on is not None:
-            self.last_updated_on = last_updated_on
-        if theme is not None:
-            self.theme = theme
-        if interval is not None:
-            self.interval = interval
         if id is not None:
             self.id = id
-        self.type = type
+        if interval is not None:
+            self.interval = interval
+        if last_updated_by is not None:
+            self.last_updated_by = last_updated_by
+        if last_updated_on is not None:
+            self.last_updated_on = last_updated_on
+        self.name = name
+        if theme is not None:
+            self.theme = theme
         if timescale is not None:
             self.timescale = timescale
-        if host_name is not None:
-            self.host_name = host_name
-        if graph_name is not None:
-            self.graph_name = graph_name
-        self.h_id = h_id
-        self.dsig_id = dsig_id
-        if ds_name is not None:
-            self.ds_name = ds_name
+        self.type = type
+        if user_permission is not None:
+            self.user_permission = user_permission
         if ds_id is not None:
             self.ds_id = ds_id
+        if ds_name is not None:
+            self.ds_name = ds_name
+        self.dsig_id = dsig_id
         if dsig_name is not None:
             self.dsig_name = dsig_name
         if graph_id is not None:
             self.graph_id = graph_id
-
-    @property
-    def last_updated_by(self):
-        """Gets the last_updated_by of this OverviewGraphWidget.  # noqa: E501
-
-        The user that last updated the widget  # noqa: E501
-
-        :return: The last_updated_by of this OverviewGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._last_updated_by
-
-    @last_updated_by.setter
-    def last_updated_by(self, last_updated_by):
-        """Sets the last_updated_by of this OverviewGraphWidget.
-
-        The user that last updated the widget  # noqa: E501
-
-        :param last_updated_by: The last_updated_by of this OverviewGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._last_updated_by = last_updated_by
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this OverviewGraphWidget.  # noqa: E501
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :return: The user_permission of this OverviewGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this OverviewGraphWidget.
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :param user_permission: The user_permission of this OverviewGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
+        if graph_name is not None:
+            self.graph_name = graph_name
+        self.h_id = h_id
+        if host_name is not None:
+            self.host_name = host_name
 
     @property
     def dashboard_id(self):
@@ -206,31 +160,6 @@ class OverviewGraphWidget(Widget):
         self._dashboard_id = dashboard_id
 
     @property
-    def name(self):
-        """Gets the name of this OverviewGraphWidget.  # noqa: E501
-
-        The name of the widget  # noqa: E501
-
-        :return: The name of this OverviewGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this OverviewGraphWidget.
-
-        The name of the widget  # noqa: E501
-
-        :param name: The name of this OverviewGraphWidget.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
     def description(self):
         """Gets the description of this OverviewGraphWidget.  # noqa: E501
 
@@ -254,50 +183,27 @@ class OverviewGraphWidget(Widget):
         self._description = description
 
     @property
-    def last_updated_on(self):
-        """Gets the last_updated_on of this OverviewGraphWidget.  # noqa: E501
+    def id(self):
+        """Gets the id of this OverviewGraphWidget.  # noqa: E501
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :return: The last_updated_on of this OverviewGraphWidget.  # noqa: E501
+        :return: The id of this OverviewGraphWidget.  # noqa: E501
         :rtype: int
         """
-        return self._last_updated_on
+        return self._id
 
-    @last_updated_on.setter
-    def last_updated_on(self, last_updated_on):
-        """Sets the last_updated_on of this OverviewGraphWidget.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this OverviewGraphWidget.
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :param last_updated_on: The last_updated_on of this OverviewGraphWidget.  # noqa: E501
+        :param id: The id of this OverviewGraphWidget.  # noqa: E501
         :type: int
         """
 
-        self._last_updated_on = last_updated_on
-
-    @property
-    def theme(self):
-        """Gets the theme of this OverviewGraphWidget.  # noqa: E501
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :return: The theme of this OverviewGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._theme
-
-    @theme.setter
-    def theme(self, theme):
-        """Sets the theme of this OverviewGraphWidget.
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :param theme: The theme of this OverviewGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._theme = theme
+        self._id = id
 
     @property
     def interval(self):
@@ -323,27 +229,121 @@ class OverviewGraphWidget(Widget):
         self._interval = interval
 
     @property
-    def id(self):
-        """Gets the id of this OverviewGraphWidget.  # noqa: E501
+    def last_updated_by(self):
+        """Gets the last_updated_by of this OverviewGraphWidget.  # noqa: E501
 
-        The Id of the widget  # noqa: E501
+        The user that last updated the widget  # noqa: E501
 
-        :return: The id of this OverviewGraphWidget.  # noqa: E501
+        :return: The last_updated_by of this OverviewGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_updated_by
+
+    @last_updated_by.setter
+    def last_updated_by(self, last_updated_by):
+        """Sets the last_updated_by of this OverviewGraphWidget.
+
+        The user that last updated the widget  # noqa: E501
+
+        :param last_updated_by: The last_updated_by of this OverviewGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._last_updated_by = last_updated_by
+
+    @property
+    def last_updated_on(self):
+        """Gets the last_updated_on of this OverviewGraphWidget.  # noqa: E501
+
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+
+        :return: The last_updated_on of this OverviewGraphWidget.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._last_updated_on
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this OverviewGraphWidget.
+    @last_updated_on.setter
+    def last_updated_on(self, last_updated_on):
+        """Sets the last_updated_on of this OverviewGraphWidget.
 
-        The Id of the widget  # noqa: E501
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
 
-        :param id: The id of this OverviewGraphWidget.  # noqa: E501
+        :param last_updated_on: The last_updated_on of this OverviewGraphWidget.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._last_updated_on = last_updated_on
+
+    @property
+    def name(self):
+        """Gets the name of this OverviewGraphWidget.  # noqa: E501
+
+        The name of the widget  # noqa: E501
+
+        :return: The name of this OverviewGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this OverviewGraphWidget.
+
+        The name of the widget  # noqa: E501
+
+        :param name: The name of this OverviewGraphWidget.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def theme(self):
+        """Gets the theme of this OverviewGraphWidget.  # noqa: E501
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :return: The theme of this OverviewGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._theme
+
+    @theme.setter
+    def theme(self, theme):
+        """Sets the theme of this OverviewGraphWidget.
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :param theme: The theme of this OverviewGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._theme = theme
+
+    @property
+    def timescale(self):
+        """Gets the timescale of this OverviewGraphWidget.  # noqa: E501
+
+        The default timescale of the widget  # noqa: E501
+
+        :return: The timescale of this OverviewGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._timescale
+
+    @timescale.setter
+    def timescale(self, timescale):
+        """Sets the timescale of this OverviewGraphWidget.
+
+        The default timescale of the widget  # noqa: E501
+
+        :param timescale: The timescale of this OverviewGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._timescale = timescale
 
     @property
     def type(self):
@@ -371,48 +371,134 @@ class OverviewGraphWidget(Widget):
         self._type = type
 
     @property
-    def timescale(self):
-        """Gets the timescale of this OverviewGraphWidget.  # noqa: E501
+    def user_permission(self):
+        """Gets the user_permission of this OverviewGraphWidget.  # noqa: E501
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :return: The timescale of this OverviewGraphWidget.  # noqa: E501
+        :return: The user_permission of this OverviewGraphWidget.  # noqa: E501
         :rtype: str
         """
-        return self._timescale
+        return self._user_permission
 
-    @timescale.setter
-    def timescale(self, timescale):
-        """Sets the timescale of this OverviewGraphWidget.
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this OverviewGraphWidget.
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :param timescale: The timescale of this OverviewGraphWidget.  # noqa: E501
+        :param user_permission: The user_permission of this OverviewGraphWidget.  # noqa: E501
         :type: str
         """
 
-        self._timescale = timescale
+        self._user_permission = user_permission
 
     @property
-    def host_name(self):
-        """Gets the host_name of this OverviewGraphWidget.  # noqa: E501
+    def ds_id(self):
+        """Gets the ds_id of this OverviewGraphWidget.  # noqa: E501
 
 
-        :return: The host_name of this OverviewGraphWidget.  # noqa: E501
+        :return: The ds_id of this OverviewGraphWidget.  # noqa: E501
+        :rtype: int
+        """
+        return self._ds_id
+
+    @ds_id.setter
+    def ds_id(self, ds_id):
+        """Sets the ds_id of this OverviewGraphWidget.
+
+
+        :param ds_id: The ds_id of this OverviewGraphWidget.  # noqa: E501
+        :type: int
+        """
+
+        self._ds_id = ds_id
+
+    @property
+    def ds_name(self):
+        """Gets the ds_name of this OverviewGraphWidget.  # noqa: E501
+
+
+        :return: The ds_name of this OverviewGraphWidget.  # noqa: E501
         :rtype: str
         """
-        return self._host_name
+        return self._ds_name
 
-    @host_name.setter
-    def host_name(self, host_name):
-        """Sets the host_name of this OverviewGraphWidget.
+    @ds_name.setter
+    def ds_name(self, ds_name):
+        """Sets the ds_name of this OverviewGraphWidget.
 
 
-        :param host_name: The host_name of this OverviewGraphWidget.  # noqa: E501
+        :param ds_name: The ds_name of this OverviewGraphWidget.  # noqa: E501
         :type: str
         """
 
-        self._host_name = host_name
+        self._ds_name = ds_name
+
+    @property
+    def dsig_id(self):
+        """Gets the dsig_id of this OverviewGraphWidget.  # noqa: E501
+
+
+        :return: The dsig_id of this OverviewGraphWidget.  # noqa: E501
+        :rtype: int
+        """
+        return self._dsig_id
+
+    @dsig_id.setter
+    def dsig_id(self, dsig_id):
+        """Sets the dsig_id of this OverviewGraphWidget.
+
+
+        :param dsig_id: The dsig_id of this OverviewGraphWidget.  # noqa: E501
+        :type: int
+        """
+        if dsig_id is None:
+            raise ValueError("Invalid value for `dsig_id`, must not be `None`")  # noqa: E501
+
+        self._dsig_id = dsig_id
+
+    @property
+    def dsig_name(self):
+        """Gets the dsig_name of this OverviewGraphWidget.  # noqa: E501
+
+
+        :return: The dsig_name of this OverviewGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._dsig_name
+
+    @dsig_name.setter
+    def dsig_name(self, dsig_name):
+        """Sets the dsig_name of this OverviewGraphWidget.
+
+
+        :param dsig_name: The dsig_name of this OverviewGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._dsig_name = dsig_name
+
+    @property
+    def graph_id(self):
+        """Gets the graph_id of this OverviewGraphWidget.  # noqa: E501
+
+
+        :return: The graph_id of this OverviewGraphWidget.  # noqa: E501
+        :rtype: int
+        """
+        return self._graph_id
+
+    @graph_id.setter
+    def graph_id(self, graph_id):
+        """Sets the graph_id of this OverviewGraphWidget.
+
+
+        :param graph_id: The graph_id of this OverviewGraphWidget.  # noqa: E501
+        :type: int
+        """
+
+        self._graph_id = graph_id
 
     @property
     def graph_name(self):
@@ -459,111 +545,25 @@ class OverviewGraphWidget(Widget):
         self._h_id = h_id
 
     @property
-    def dsig_id(self):
-        """Gets the dsig_id of this OverviewGraphWidget.  # noqa: E501
+    def host_name(self):
+        """Gets the host_name of this OverviewGraphWidget.  # noqa: E501
 
 
-        :return: The dsig_id of this OverviewGraphWidget.  # noqa: E501
-        :rtype: int
-        """
-        return self._dsig_id
-
-    @dsig_id.setter
-    def dsig_id(self, dsig_id):
-        """Sets the dsig_id of this OverviewGraphWidget.
-
-
-        :param dsig_id: The dsig_id of this OverviewGraphWidget.  # noqa: E501
-        :type: int
-        """
-        if dsig_id is None:
-            raise ValueError("Invalid value for `dsig_id`, must not be `None`")  # noqa: E501
-
-        self._dsig_id = dsig_id
-
-    @property
-    def ds_name(self):
-        """Gets the ds_name of this OverviewGraphWidget.  # noqa: E501
-
-
-        :return: The ds_name of this OverviewGraphWidget.  # noqa: E501
+        :return: The host_name of this OverviewGraphWidget.  # noqa: E501
         :rtype: str
         """
-        return self._ds_name
+        return self._host_name
 
-    @ds_name.setter
-    def ds_name(self, ds_name):
-        """Sets the ds_name of this OverviewGraphWidget.
+    @host_name.setter
+    def host_name(self, host_name):
+        """Sets the host_name of this OverviewGraphWidget.
 
 
-        :param ds_name: The ds_name of this OverviewGraphWidget.  # noqa: E501
+        :param host_name: The host_name of this OverviewGraphWidget.  # noqa: E501
         :type: str
         """
 
-        self._ds_name = ds_name
-
-    @property
-    def ds_id(self):
-        """Gets the ds_id of this OverviewGraphWidget.  # noqa: E501
-
-
-        :return: The ds_id of this OverviewGraphWidget.  # noqa: E501
-        :rtype: int
-        """
-        return self._ds_id
-
-    @ds_id.setter
-    def ds_id(self, ds_id):
-        """Sets the ds_id of this OverviewGraphWidget.
-
-
-        :param ds_id: The ds_id of this OverviewGraphWidget.  # noqa: E501
-        :type: int
-        """
-
-        self._ds_id = ds_id
-
-    @property
-    def dsig_name(self):
-        """Gets the dsig_name of this OverviewGraphWidget.  # noqa: E501
-
-
-        :return: The dsig_name of this OverviewGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._dsig_name
-
-    @dsig_name.setter
-    def dsig_name(self, dsig_name):
-        """Sets the dsig_name of this OverviewGraphWidget.
-
-
-        :param dsig_name: The dsig_name of this OverviewGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._dsig_name = dsig_name
-
-    @property
-    def graph_id(self):
-        """Gets the graph_id of this OverviewGraphWidget.  # noqa: E501
-
-
-        :return: The graph_id of this OverviewGraphWidget.  # noqa: E501
-        :rtype: int
-        """
-        return self._graph_id
-
-    @graph_id.setter
-    def graph_id(self, graph_id):
-        """Sets the graph_id of this OverviewGraphWidget.
-
-
-        :param graph_id: The graph_id of this OverviewGraphWidget.  # noqa: E501
-        :type: int
-        """
-
-        self._graph_id = graph_id
+        self._host_name = host_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

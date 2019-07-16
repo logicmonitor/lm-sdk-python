@@ -32,68 +32,68 @@ class APIToken(object):
     """
     swagger_types = {
         'access_id': 'str',
-        'admin_name': 'str',
-        'note': 'str',
-        'last_used_on': 'int',
         'access_key': 'str',
-        'created_by': 'str',
-        'roles': 'list[str]',
         'admin_id': 'int',
-        'id': 'int',
+        'admin_name': 'str',
+        'created_by': 'str',
         'created_on': 'int',
+        'id': 'int',
+        'last_used_on': 'int',
+        'note': 'str',
+        'roles': 'list[str]',
         'status': 'int'
     }
 
     attribute_map = {
         'access_id': 'accessId',
-        'admin_name': 'adminName',
-        'note': 'note',
-        'last_used_on': 'lastUsedOn',
         'access_key': 'accessKey',
-        'created_by': 'createdBy',
-        'roles': 'roles',
         'admin_id': 'adminId',
-        'id': 'id',
+        'admin_name': 'adminName',
+        'created_by': 'createdBy',
         'created_on': 'createdOn',
+        'id': 'id',
+        'last_used_on': 'lastUsedOn',
+        'note': 'note',
+        'roles': 'roles',
         'status': 'status'
     }
 
-    def __init__(self, access_id=None, admin_name=None, note=None, last_used_on=None, access_key=None, created_by=None, roles=None, admin_id=None, id=None, created_on=None, status=None):  # noqa: E501
+    def __init__(self, access_id=None, access_key=None, admin_id=None, admin_name=None, created_by=None, created_on=None, id=None, last_used_on=None, note=None, roles=None, status=None):  # noqa: E501
         """APIToken - a model defined in Swagger"""  # noqa: E501
 
         self._access_id = None
-        self._admin_name = None
-        self._note = None
-        self._last_used_on = None
         self._access_key = None
-        self._created_by = None
-        self._roles = None
         self._admin_id = None
-        self._id = None
+        self._admin_name = None
+        self._created_by = None
         self._created_on = None
+        self._id = None
+        self._last_used_on = None
+        self._note = None
+        self._roles = None
         self._status = None
         self.discriminator = None
 
         if access_id is not None:
             self.access_id = access_id
-        if admin_name is not None:
-            self.admin_name = admin_name
-        if note is not None:
-            self.note = note
-        if last_used_on is not None:
-            self.last_used_on = last_used_on
         if access_key is not None:
             self.access_key = access_key
-        if created_by is not None:
-            self.created_by = created_by
-        if roles is not None:
-            self.roles = roles
         if admin_id is not None:
             self.admin_id = admin_id
-        if id is not None:
-            self.id = id
+        if admin_name is not None:
+            self.admin_name = admin_name
+        if created_by is not None:
+            self.created_by = created_by
         if created_on is not None:
             self.created_on = created_on
+        if id is not None:
+            self.id = id
+        if last_used_on is not None:
+            self.last_used_on = last_used_on
+        if note is not None:
+            self.note = note
+        if roles is not None:
+            self.roles = roles
         if status is not None:
             self.status = status
 
@@ -121,75 +121,6 @@ class APIToken(object):
         self._access_id = access_id
 
     @property
-    def admin_name(self):
-        """Gets the admin_name of this APIToken.  # noqa: E501
-
-        The name of the user associated with the API Tokens  # noqa: E501
-
-        :return: The admin_name of this APIToken.  # noqa: E501
-        :rtype: str
-        """
-        return self._admin_name
-
-    @admin_name.setter
-    def admin_name(self, admin_name):
-        """Sets the admin_name of this APIToken.
-
-        The name of the user associated with the API Tokens  # noqa: E501
-
-        :param admin_name: The admin_name of this APIToken.  # noqa: E501
-        :type: str
-        """
-
-        self._admin_name = admin_name
-
-    @property
-    def note(self):
-        """Gets the note of this APIToken.  # noqa: E501
-
-        The note associated with the API Tokens  # noqa: E501
-
-        :return: The note of this APIToken.  # noqa: E501
-        :rtype: str
-        """
-        return self._note
-
-    @note.setter
-    def note(self, note):
-        """Sets the note of this APIToken.
-
-        The note associated with the API Tokens  # noqa: E501
-
-        :param note: The note of this APIToken.  # noqa: E501
-        :type: str
-        """
-
-        self._note = note
-
-    @property
-    def last_used_on(self):
-        """Gets the last_used_on of this APIToken.  # noqa: E501
-
-        The epoch at which the API Tokens were last used  # noqa: E501
-
-        :return: The last_used_on of this APIToken.  # noqa: E501
-        :rtype: int
-        """
-        return self._last_used_on
-
-    @last_used_on.setter
-    def last_used_on(self, last_used_on):
-        """Sets the last_used_on of this APIToken.
-
-        The epoch at which the API Tokens were last used  # noqa: E501
-
-        :param last_used_on: The last_used_on of this APIToken.  # noqa: E501
-        :type: int
-        """
-
-        self._last_used_on = last_used_on
-
-    @property
     def access_key(self):
         """Gets the access_key of this APIToken.  # noqa: E501
 
@@ -211,52 +142,6 @@ class APIToken(object):
         """
 
         self._access_key = access_key
-
-    @property
-    def created_by(self):
-        """Gets the created_by of this APIToken.  # noqa: E501
-
-        The user who is the API Tokens created by  # noqa: E501
-
-        :return: The created_by of this APIToken.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_by
-
-    @created_by.setter
-    def created_by(self, created_by):
-        """Sets the created_by of this APIToken.
-
-        The user who is the API Tokens created by  # noqa: E501
-
-        :param created_by: The created_by of this APIToken.  # noqa: E501
-        :type: str
-        """
-
-        self._created_by = created_by
-
-    @property
-    def roles(self):
-        """Gets the roles of this APIToken.  # noqa: E501
-
-        The roles assigned to the user that is associated with the API Tokens  # noqa: E501
-
-        :return: The roles of this APIToken.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._roles
-
-    @roles.setter
-    def roles(self, roles):
-        """Sets the roles of this APIToken.
-
-        The roles assigned to the user that is associated with the API Tokens  # noqa: E501
-
-        :param roles: The roles of this APIToken.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._roles = roles
 
     @property
     def admin_id(self):
@@ -282,27 +167,50 @@ class APIToken(object):
         self._admin_id = admin_id
 
     @property
-    def id(self):
-        """Gets the id of this APIToken.  # noqa: E501
+    def admin_name(self):
+        """Gets the admin_name of this APIToken.  # noqa: E501
 
-        The id of the API Token  # noqa: E501
+        The name of the user associated with the API Tokens  # noqa: E501
 
-        :return: The id of this APIToken.  # noqa: E501
-        :rtype: int
+        :return: The admin_name of this APIToken.  # noqa: E501
+        :rtype: str
         """
-        return self._id
+        return self._admin_name
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this APIToken.
+    @admin_name.setter
+    def admin_name(self, admin_name):
+        """Sets the admin_name of this APIToken.
 
-        The id of the API Token  # noqa: E501
+        The name of the user associated with the API Tokens  # noqa: E501
 
-        :param id: The id of this APIToken.  # noqa: E501
-        :type: int
+        :param admin_name: The admin_name of this APIToken.  # noqa: E501
+        :type: str
         """
 
-        self._id = id
+        self._admin_name = admin_name
+
+    @property
+    def created_by(self):
+        """Gets the created_by of this APIToken.  # noqa: E501
+
+        The user who is the API Tokens created by  # noqa: E501
+
+        :return: The created_by of this APIToken.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_by
+
+    @created_by.setter
+    def created_by(self, created_by):
+        """Sets the created_by of this APIToken.
+
+        The user who is the API Tokens created by  # noqa: E501
+
+        :param created_by: The created_by of this APIToken.  # noqa: E501
+        :type: str
+        """
+
+        self._created_by = created_by
 
     @property
     def created_on(self):
@@ -326,6 +234,98 @@ class APIToken(object):
         """
 
         self._created_on = created_on
+
+    @property
+    def id(self):
+        """Gets the id of this APIToken.  # noqa: E501
+
+        The id of the API Token  # noqa: E501
+
+        :return: The id of this APIToken.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this APIToken.
+
+        The id of the API Token  # noqa: E501
+
+        :param id: The id of this APIToken.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def last_used_on(self):
+        """Gets the last_used_on of this APIToken.  # noqa: E501
+
+        The epoch at which the API Tokens were last used  # noqa: E501
+
+        :return: The last_used_on of this APIToken.  # noqa: E501
+        :rtype: int
+        """
+        return self._last_used_on
+
+    @last_used_on.setter
+    def last_used_on(self, last_used_on):
+        """Sets the last_used_on of this APIToken.
+
+        The epoch at which the API Tokens were last used  # noqa: E501
+
+        :param last_used_on: The last_used_on of this APIToken.  # noqa: E501
+        :type: int
+        """
+
+        self._last_used_on = last_used_on
+
+    @property
+    def note(self):
+        """Gets the note of this APIToken.  # noqa: E501
+
+        The note associated with the API Tokens  # noqa: E501
+
+        :return: The note of this APIToken.  # noqa: E501
+        :rtype: str
+        """
+        return self._note
+
+    @note.setter
+    def note(self, note):
+        """Sets the note of this APIToken.
+
+        The note associated with the API Tokens  # noqa: E501
+
+        :param note: The note of this APIToken.  # noqa: E501
+        :type: str
+        """
+
+        self._note = note
+
+    @property
+    def roles(self):
+        """Gets the roles of this APIToken.  # noqa: E501
+
+        The roles assigned to the user that is associated with the API Tokens  # noqa: E501
+
+        :return: The roles of this APIToken.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._roles
+
+    @roles.setter
+    def roles(self, roles):
+        """Sets the roles of this APIToken.
+
+        The roles assigned to the user that is associated with the API Tokens  # noqa: E501
+
+        :param roles: The roles of this APIToken.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._roles = roles
 
     @property
     def status(self):

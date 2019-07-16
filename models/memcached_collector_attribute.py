@@ -34,29 +34,29 @@ class MemcachedCollectorAttribute(CollectorAttribute):
     """
     swagger_types = {
         'name': 'str',
-        'port': 'str',
-        'ip': 'str'
+        'ip': 'str',
+        'port': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'port': 'port',
-        'ip': 'ip'
+        'ip': 'ip',
+        'port': 'port'
     }
 
-    def __init__(self, name=None, port=None, ip=None):  # noqa: E501
+    def __init__(self, name=None, ip=None, port=None):  # noqa: E501
         """MemcachedCollectorAttribute - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._port = None
         self._ip = None
+        self._port = None
         self.discriminator = None
 
         self.name = name
-        if port is not None:
-            self.port = port
         if ip is not None:
             self.ip = ip
+        if port is not None:
+            self.port = port
 
     @property
     def name(self):
@@ -82,27 +82,6 @@ class MemcachedCollectorAttribute(CollectorAttribute):
         self._name = name
 
     @property
-    def port(self):
-        """Gets the port of this MemcachedCollectorAttribute.  # noqa: E501
-
-
-        :return: The port of this MemcachedCollectorAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._port
-
-    @port.setter
-    def port(self, port):
-        """Sets the port of this MemcachedCollectorAttribute.
-
-
-        :param port: The port of this MemcachedCollectorAttribute.  # noqa: E501
-        :type: str
-        """
-
-        self._port = port
-
-    @property
     def ip(self):
         """Gets the ip of this MemcachedCollectorAttribute.  # noqa: E501
 
@@ -122,6 +101,27 @@ class MemcachedCollectorAttribute(CollectorAttribute):
         """
 
         self._ip = ip
+
+    @property
+    def port(self):
+        """Gets the port of this MemcachedCollectorAttribute.  # noqa: E501
+
+
+        :return: The port of this MemcachedCollectorAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._port
+
+    @port.setter
+    def port(self, port):
+        """Sets the port of this MemcachedCollectorAttribute.
+
+
+        :param port: The port of this MemcachedCollectorAttribute.  # noqa: E501
+        :type: str
+        """
+
+        self._port = port
 
     def to_dict(self):
         """Returns the model properties as a dict"""

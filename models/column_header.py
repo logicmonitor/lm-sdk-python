@@ -31,52 +31,31 @@ class ColumnHeader(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'need_forecast': 'bool',
         'display_type': 'str',
-        'name': 'str'
+        'name': 'str',
+        'need_forecast': 'bool'
     }
 
     attribute_map = {
-        'need_forecast': 'needForecast',
         'display_type': 'displayType',
-        'name': 'name'
+        'name': 'name',
+        'need_forecast': 'needForecast'
     }
 
-    def __init__(self, need_forecast=None, display_type=None, name=None):  # noqa: E501
+    def __init__(self, display_type=None, name=None, need_forecast=None):  # noqa: E501
         """ColumnHeader - a model defined in Swagger"""  # noqa: E501
 
-        self._need_forecast = None
         self._display_type = None
         self._name = None
+        self._need_forecast = None
         self.discriminator = None
 
-        if need_forecast is not None:
-            self.need_forecast = need_forecast
         if display_type is not None:
             self.display_type = display_type
         if name is not None:
             self.name = name
-
-    @property
-    def need_forecast(self):
-        """Gets the need_forecast of this ColumnHeader.  # noqa: E501
-
-
-        :return: The need_forecast of this ColumnHeader.  # noqa: E501
-        :rtype: bool
-        """
-        return self._need_forecast
-
-    @need_forecast.setter
-    def need_forecast(self, need_forecast):
-        """Sets the need_forecast of this ColumnHeader.
-
-
-        :param need_forecast: The need_forecast of this ColumnHeader.  # noqa: E501
-        :type: bool
-        """
-
-        self._need_forecast = need_forecast
+        if need_forecast is not None:
+            self.need_forecast = need_forecast
 
     @property
     def display_type(self):
@@ -119,6 +98,27 @@ class ColumnHeader(object):
         """
 
         self._name = name
+
+    @property
+    def need_forecast(self):
+        """Gets the need_forecast of this ColumnHeader.  # noqa: E501
+
+
+        :return: The need_forecast of this ColumnHeader.  # noqa: E501
+        :rtype: bool
+        """
+        return self._need_forecast
+
+    @need_forecast.setter
+    def need_forecast(self, need_forecast):
+        """Sets the need_forecast of this ColumnHeader.
+
+
+        :param need_forecast: The need_forecast of this ColumnHeader.  # noqa: E501
+        :type: bool
+        """
+
+        self._need_forecast = need_forecast
 
     def to_dict(self):
         """Returns the model properties as a dict"""

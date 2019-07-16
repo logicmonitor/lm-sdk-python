@@ -32,40 +32,40 @@ class RestSchedule(object):
     """
     swagger_types = {
         'cron': 'str',
+        'notify': 'bool',
         'recipients': 'list[str]',
         'timezone': 'str',
-        'type': 'str',
-        'notify': 'bool'
+        'type': 'str'
     }
 
     attribute_map = {
         'cron': 'cron',
+        'notify': 'notify',
         'recipients': 'recipients',
         'timezone': 'timezone',
-        'type': 'type',
-        'notify': 'notify'
+        'type': 'type'
     }
 
-    def __init__(self, cron=None, recipients=None, timezone=None, type=None, notify=None):  # noqa: E501
+    def __init__(self, cron=None, notify=None, recipients=None, timezone=None, type=None):  # noqa: E501
         """RestSchedule - a model defined in Swagger"""  # noqa: E501
 
         self._cron = None
+        self._notify = None
         self._recipients = None
         self._timezone = None
         self._type = None
-        self._notify = None
         self.discriminator = None
 
         if cron is not None:
             self.cron = cron
+        if notify is not None:
+            self.notify = notify
         if recipients is not None:
             self.recipients = recipients
         if timezone is not None:
             self.timezone = timezone
         if type is not None:
             self.type = type
-        if notify is not None:
-            self.notify = notify
 
     @property
     def cron(self):
@@ -89,6 +89,29 @@ class RestSchedule(object):
         """
 
         self._cron = cron
+
+    @property
+    def notify(self):
+        """Gets the notify of this RestSchedule.  # noqa: E501
+
+        Whether or not an email should be sent when the scan finishes  # noqa: E501
+
+        :return: The notify of this RestSchedule.  # noqa: E501
+        :rtype: bool
+        """
+        return self._notify
+
+    @notify.setter
+    def notify(self, notify):
+        """Sets the notify of this RestSchedule.
+
+        Whether or not an email should be sent when the scan finishes  # noqa: E501
+
+        :param notify: The notify of this RestSchedule.  # noqa: E501
+        :type: bool
+        """
+
+        self._notify = notify
 
     @property
     def recipients(self):
@@ -158,29 +181,6 @@ class RestSchedule(object):
         """
 
         self._type = type
-
-    @property
-    def notify(self):
-        """Gets the notify of this RestSchedule.  # noqa: E501
-
-        Whether or not an email should be sent when the scan finishes  # noqa: E501
-
-        :return: The notify of this RestSchedule.  # noqa: E501
-        :rtype: bool
-        """
-        return self._notify
-
-    @notify.setter
-    def notify(self, notify):
-        """Sets the notify of this RestSchedule.
-
-        Whether or not an email should be sent when the scan finishes  # noqa: E501
-
-        :param notify: The notify of this RestSchedule.  # noqa: E501
-        :type: bool
-        """
-
-        self._notify = notify
 
     def to_dict(self):
         """Returns the model properties as a dict"""

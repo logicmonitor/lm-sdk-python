@@ -34,196 +34,85 @@ class WebsiteGroup(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'full_path': 'str',
-        'stop_monitoring': 'bool',
-        'user_permission': 'str',
-        'test_location': 'WebsiteLocation',
-        'has_websites_disabled': 'bool',
         'description': 'str',
         'disable_alerting': 'bool',
-        'parent_id': 'int',
-        'num_of_direct_websites': 'int',
+        'full_path': 'str',
+        'has_websites_disabled': 'bool',
+        'id': 'int',
         'name': 'str',
         'num_of_direct_sub_groups': 'int',
-        'id': 'int',
+        'num_of_direct_websites': 'int',
         'num_of_websites': 'int',
-        'properties': 'list[NameAndValue]'
+        'parent_id': 'int',
+        'properties': 'list[NameAndValue]',
+        'stop_monitoring': 'bool',
+        'test_location': 'WebsiteLocation',
+        'user_permission': 'str'
     }
 
     attribute_map = {
-        'full_path': 'fullPath',
-        'stop_monitoring': 'stopMonitoring',
-        'user_permission': 'userPermission',
-        'test_location': 'testLocation',
-        'has_websites_disabled': 'hasWebsitesDisabled',
         'description': 'description',
         'disable_alerting': 'disableAlerting',
-        'parent_id': 'parentId',
-        'num_of_direct_websites': 'numOfDirectWebsites',
+        'full_path': 'fullPath',
+        'has_websites_disabled': 'hasWebsitesDisabled',
+        'id': 'id',
         'name': 'name',
         'num_of_direct_sub_groups': 'numOfDirectSubGroups',
-        'id': 'id',
+        'num_of_direct_websites': 'numOfDirectWebsites',
         'num_of_websites': 'numOfWebsites',
-        'properties': 'properties'
+        'parent_id': 'parentId',
+        'properties': 'properties',
+        'stop_monitoring': 'stopMonitoring',
+        'test_location': 'testLocation',
+        'user_permission': 'userPermission'
     }
 
-    def __init__(self, full_path=None, stop_monitoring=None, user_permission=None, test_location=None, has_websites_disabled=None, description=None, disable_alerting=None, parent_id=None, num_of_direct_websites=None, name=None, num_of_direct_sub_groups=None, id=None, num_of_websites=None, properties=None):  # noqa: E501
+    def __init__(self, description=None, disable_alerting=None, full_path=None, has_websites_disabled=None, id=None, name=None, num_of_direct_sub_groups=None, num_of_direct_websites=None, num_of_websites=None, parent_id=None, properties=None, stop_monitoring=None, test_location=None, user_permission=None):  # noqa: E501
         """WebsiteGroup - a model defined in Swagger"""  # noqa: E501
 
-        self._full_path = None
-        self._stop_monitoring = None
-        self._user_permission = None
-        self._test_location = None
-        self._has_websites_disabled = None
         self._description = None
         self._disable_alerting = None
-        self._parent_id = None
-        self._num_of_direct_websites = None
+        self._full_path = None
+        self._has_websites_disabled = None
+        self._id = None
         self._name = None
         self._num_of_direct_sub_groups = None
-        self._id = None
+        self._num_of_direct_websites = None
         self._num_of_websites = None
+        self._parent_id = None
         self._properties = None
+        self._stop_monitoring = None
+        self._test_location = None
+        self._user_permission = None
         self.discriminator = None
 
-        if full_path is not None:
-            self.full_path = full_path
-        if stop_monitoring is not None:
-            self.stop_monitoring = stop_monitoring
-        if user_permission is not None:
-            self.user_permission = user_permission
-        if test_location is not None:
-            self.test_location = test_location
-        if has_websites_disabled is not None:
-            self.has_websites_disabled = has_websites_disabled
         if description is not None:
             self.description = description
         if disable_alerting is not None:
             self.disable_alerting = disable_alerting
-        if parent_id is not None:
-            self.parent_id = parent_id
-        if num_of_direct_websites is not None:
-            self.num_of_direct_websites = num_of_direct_websites
+        if full_path is not None:
+            self.full_path = full_path
+        if has_websites_disabled is not None:
+            self.has_websites_disabled = has_websites_disabled
+        if id is not None:
+            self.id = id
         self.name = name
         if num_of_direct_sub_groups is not None:
             self.num_of_direct_sub_groups = num_of_direct_sub_groups
-        if id is not None:
-            self.id = id
+        if num_of_direct_websites is not None:
+            self.num_of_direct_websites = num_of_direct_websites
         if num_of_websites is not None:
             self.num_of_websites = num_of_websites
+        if parent_id is not None:
+            self.parent_id = parent_id
         if properties is not None:
             self.properties = properties
-
-    @property
-    def full_path(self):
-        """Gets the full_path of this WebsiteGroup.  # noqa: E501
-
-        The full path of the group  # noqa: E501
-
-        :return: The full_path of this WebsiteGroup.  # noqa: E501
-        :rtype: str
-        """
-        return self._full_path
-
-    @full_path.setter
-    def full_path(self, full_path):
-        """Sets the full_path of this WebsiteGroup.
-
-        The full path of the group  # noqa: E501
-
-        :param full_path: The full_path of this WebsiteGroup.  # noqa: E501
-        :type: str
-        """
-
-        self._full_path = full_path
-
-    @property
-    def stop_monitoring(self):
-        """Gets the stop_monitoring of this WebsiteGroup.  # noqa: E501
-
-        true: monitoring is disabled for the websites in the group false: monitoring is enabled for the websites in the group If stopMonitoring=true, then alerting will also by default be disabled for the websites in the group  # noqa: E501
-
-        :return: The stop_monitoring of this WebsiteGroup.  # noqa: E501
-        :rtype: bool
-        """
-        return self._stop_monitoring
-
-    @stop_monitoring.setter
-    def stop_monitoring(self, stop_monitoring):
-        """Sets the stop_monitoring of this WebsiteGroup.
-
-        true: monitoring is disabled for the websites in the group false: monitoring is enabled for the websites in the group If stopMonitoring=true, then alerting will also by default be disabled for the websites in the group  # noqa: E501
-
-        :param stop_monitoring: The stop_monitoring of this WebsiteGroup.  # noqa: E501
-        :type: bool
-        """
-
-        self._stop_monitoring = stop_monitoring
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this WebsiteGroup.  # noqa: E501
-
-        The permission level of the user that made the API request. Acceptable values are: write, read, ack  # noqa: E501
-
-        :return: The user_permission of this WebsiteGroup.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this WebsiteGroup.
-
-        The permission level of the user that made the API request. Acceptable values are: write, read, ack  # noqa: E501
-
-        :param user_permission: The user_permission of this WebsiteGroup.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
-
-    @property
-    def test_location(self):
-        """Gets the test_location of this WebsiteGroup.  # noqa: E501
-
-
-        :return: The test_location of this WebsiteGroup.  # noqa: E501
-        :rtype: WebsiteLocation
-        """
-        return self._test_location
-
-    @test_location.setter
-    def test_location(self, test_location):
-        """Sets the test_location of this WebsiteGroup.
-
-
-        :param test_location: The test_location of this WebsiteGroup.  # noqa: E501
-        :type: WebsiteLocation
-        """
-
-        self._test_location = test_location
-
-    @property
-    def has_websites_disabled(self):
-        """Gets the has_websites_disabled of this WebsiteGroup.  # noqa: E501
-
-
-        :return: The has_websites_disabled of this WebsiteGroup.  # noqa: E501
-        :rtype: bool
-        """
-        return self._has_websites_disabled
-
-    @has_websites_disabled.setter
-    def has_websites_disabled(self, has_websites_disabled):
-        """Sets the has_websites_disabled of this WebsiteGroup.
-
-
-        :param has_websites_disabled: The has_websites_disabled of this WebsiteGroup.  # noqa: E501
-        :type: bool
-        """
-
-        self._has_websites_disabled = has_websites_disabled
+        if stop_monitoring is not None:
+            self.stop_monitoring = stop_monitoring
+        if test_location is not None:
+            self.test_location = test_location
+        if user_permission is not None:
+            self.user_permission = user_permission
 
     @property
     def description(self):
@@ -272,48 +161,71 @@ class WebsiteGroup(object):
         self._disable_alerting = disable_alerting
 
     @property
-    def parent_id(self):
-        """Gets the parent_id of this WebsiteGroup.  # noqa: E501
+    def full_path(self):
+        """Gets the full_path of this WebsiteGroup.  # noqa: E501
 
-        The Id of the parent group. If parentId=1 then the group exists under the root  group  # noqa: E501
+        The full path of the group  # noqa: E501
 
-        :return: The parent_id of this WebsiteGroup.  # noqa: E501
-        :rtype: int
+        :return: The full_path of this WebsiteGroup.  # noqa: E501
+        :rtype: str
         """
-        return self._parent_id
+        return self._full_path
 
-    @parent_id.setter
-    def parent_id(self, parent_id):
-        """Sets the parent_id of this WebsiteGroup.
+    @full_path.setter
+    def full_path(self, full_path):
+        """Sets the full_path of this WebsiteGroup.
 
-        The Id of the parent group. If parentId=1 then the group exists under the root  group  # noqa: E501
+        The full path of the group  # noqa: E501
 
-        :param parent_id: The parent_id of this WebsiteGroup.  # noqa: E501
-        :type: int
+        :param full_path: The full_path of this WebsiteGroup.  # noqa: E501
+        :type: str
         """
 
-        self._parent_id = parent_id
+        self._full_path = full_path
 
     @property
-    def num_of_direct_websites(self):
-        """Gets the num_of_direct_websites of this WebsiteGroup.  # noqa: E501
+    def has_websites_disabled(self):
+        """Gets the has_websites_disabled of this WebsiteGroup.  # noqa: E501
 
 
-        :return: The num_of_direct_websites of this WebsiteGroup.  # noqa: E501
+        :return: The has_websites_disabled of this WebsiteGroup.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_websites_disabled
+
+    @has_websites_disabled.setter
+    def has_websites_disabled(self, has_websites_disabled):
+        """Sets the has_websites_disabled of this WebsiteGroup.
+
+
+        :param has_websites_disabled: The has_websites_disabled of this WebsiteGroup.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_websites_disabled = has_websites_disabled
+
+    @property
+    def id(self):
+        """Gets the id of this WebsiteGroup.  # noqa: E501
+
+        The Id of the group  # noqa: E501
+
+        :return: The id of this WebsiteGroup.  # noqa: E501
         :rtype: int
         """
-        return self._num_of_direct_websites
+        return self._id
 
-    @num_of_direct_websites.setter
-    def num_of_direct_websites(self, num_of_direct_websites):
-        """Sets the num_of_direct_websites of this WebsiteGroup.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this WebsiteGroup.
 
+        The Id of the group  # noqa: E501
 
-        :param num_of_direct_websites: The num_of_direct_websites of this WebsiteGroup.  # noqa: E501
+        :param id: The id of this WebsiteGroup.  # noqa: E501
         :type: int
         """
 
-        self._num_of_direct_websites = num_of_direct_websites
+        self._id = id
 
     @property
     def name(self):
@@ -364,27 +276,25 @@ class WebsiteGroup(object):
         self._num_of_direct_sub_groups = num_of_direct_sub_groups
 
     @property
-    def id(self):
-        """Gets the id of this WebsiteGroup.  # noqa: E501
+    def num_of_direct_websites(self):
+        """Gets the num_of_direct_websites of this WebsiteGroup.  # noqa: E501
 
-        The Id of the group  # noqa: E501
 
-        :return: The id of this WebsiteGroup.  # noqa: E501
+        :return: The num_of_direct_websites of this WebsiteGroup.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._num_of_direct_websites
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this WebsiteGroup.
+    @num_of_direct_websites.setter
+    def num_of_direct_websites(self, num_of_direct_websites):
+        """Sets the num_of_direct_websites of this WebsiteGroup.
 
-        The Id of the group  # noqa: E501
 
-        :param id: The id of this WebsiteGroup.  # noqa: E501
+        :param num_of_direct_websites: The num_of_direct_websites of this WebsiteGroup.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._num_of_direct_websites = num_of_direct_websites
 
     @property
     def num_of_websites(self):
@@ -408,6 +318,29 @@ class WebsiteGroup(object):
         self._num_of_websites = num_of_websites
 
     @property
+    def parent_id(self):
+        """Gets the parent_id of this WebsiteGroup.  # noqa: E501
+
+        The Id of the parent group. If parentId=1 then the group exists under the root  group  # noqa: E501
+
+        :return: The parent_id of this WebsiteGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._parent_id
+
+    @parent_id.setter
+    def parent_id(self, parent_id):
+        """Sets the parent_id of this WebsiteGroup.
+
+        The Id of the parent group. If parentId=1 then the group exists under the root  group  # noqa: E501
+
+        :param parent_id: The parent_id of this WebsiteGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._parent_id = parent_id
+
+    @property
     def properties(self):
         """Gets the properties of this WebsiteGroup.  # noqa: E501
 
@@ -427,6 +360,73 @@ class WebsiteGroup(object):
         """
 
         self._properties = properties
+
+    @property
+    def stop_monitoring(self):
+        """Gets the stop_monitoring of this WebsiteGroup.  # noqa: E501
+
+        true: monitoring is disabled for the websites in the group false: monitoring is enabled for the websites in the group If stopMonitoring=true, then alerting will also by default be disabled for the websites in the group  # noqa: E501
+
+        :return: The stop_monitoring of this WebsiteGroup.  # noqa: E501
+        :rtype: bool
+        """
+        return self._stop_monitoring
+
+    @stop_monitoring.setter
+    def stop_monitoring(self, stop_monitoring):
+        """Sets the stop_monitoring of this WebsiteGroup.
+
+        true: monitoring is disabled for the websites in the group false: monitoring is enabled for the websites in the group If stopMonitoring=true, then alerting will also by default be disabled for the websites in the group  # noqa: E501
+
+        :param stop_monitoring: The stop_monitoring of this WebsiteGroup.  # noqa: E501
+        :type: bool
+        """
+
+        self._stop_monitoring = stop_monitoring
+
+    @property
+    def test_location(self):
+        """Gets the test_location of this WebsiteGroup.  # noqa: E501
+
+
+        :return: The test_location of this WebsiteGroup.  # noqa: E501
+        :rtype: WebsiteLocation
+        """
+        return self._test_location
+
+    @test_location.setter
+    def test_location(self, test_location):
+        """Sets the test_location of this WebsiteGroup.
+
+
+        :param test_location: The test_location of this WebsiteGroup.  # noqa: E501
+        :type: WebsiteLocation
+        """
+
+        self._test_location = test_location
+
+    @property
+    def user_permission(self):
+        """Gets the user_permission of this WebsiteGroup.  # noqa: E501
+
+        The permission level of the user that made the API request. Acceptable values are: write, read, ack  # noqa: E501
+
+        :return: The user_permission of this WebsiteGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_permission
+
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this WebsiteGroup.
+
+        The permission level of the user that made the API request. Acceptable values are: write, read, ack  # noqa: E501
+
+        :param user_permission: The user_permission of this WebsiteGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._user_permission = user_permission
 
     def to_dict(self):
         """Returns the model properties as a dict"""

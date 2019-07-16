@@ -34,27 +34,27 @@ class EC2AutoDiscoveryMethod(AutoDiscoveryMethod):
     """
     swagger_types = {
         'name': 'str',
-        'secret_access_key': 'str',
-        'access_key_id': 'str'
+        'access_key_id': 'str',
+        'secret_access_key': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'secret_access_key': 'secretAccessKey',
-        'access_key_id': 'accessKeyId'
+        'access_key_id': 'accessKeyId',
+        'secret_access_key': 'secretAccessKey'
     }
 
-    def __init__(self, name=None, secret_access_key=None, access_key_id=None):  # noqa: E501
+    def __init__(self, name=None, access_key_id=None, secret_access_key=None):  # noqa: E501
         """EC2AutoDiscoveryMethod - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._secret_access_key = None
         self._access_key_id = None
+        self._secret_access_key = None
         self.discriminator = None
 
         self.name = name
-        self.secret_access_key = secret_access_key
         self.access_key_id = access_key_id
+        self.secret_access_key = secret_access_key
 
     @property
     def name(self):
@@ -80,29 +80,6 @@ class EC2AutoDiscoveryMethod(AutoDiscoveryMethod):
         self._name = name
 
     @property
-    def secret_access_key(self):
-        """Gets the secret_access_key of this EC2AutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The secret_access_key of this EC2AutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._secret_access_key
-
-    @secret_access_key.setter
-    def secret_access_key(self, secret_access_key):
-        """Sets the secret_access_key of this EC2AutoDiscoveryMethod.
-
-
-        :param secret_access_key: The secret_access_key of this EC2AutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-        if secret_access_key is None:
-            raise ValueError("Invalid value for `secret_access_key`, must not be `None`")  # noqa: E501
-
-        self._secret_access_key = secret_access_key
-
-    @property
     def access_key_id(self):
         """Gets the access_key_id of this EC2AutoDiscoveryMethod.  # noqa: E501
 
@@ -124,6 +101,29 @@ class EC2AutoDiscoveryMethod(AutoDiscoveryMethod):
             raise ValueError("Invalid value for `access_key_id`, must not be `None`")  # noqa: E501
 
         self._access_key_id = access_key_id
+
+    @property
+    def secret_access_key(self):
+        """Gets the secret_access_key of this EC2AutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The secret_access_key of this EC2AutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._secret_access_key
+
+    @secret_access_key.setter
+    def secret_access_key(self, secret_access_key):
+        """Sets the secret_access_key of this EC2AutoDiscoveryMethod.
+
+
+        :param secret_access_key: The secret_access_key of this EC2AutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+        if secret_access_key is None:
+            raise ValueError("Invalid value for `secret_access_key`, must not be `None`")  # noqa: E501
+
+        self._secret_access_key = secret_access_key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

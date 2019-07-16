@@ -33,112 +33,91 @@ class GaugeWidgetData(WidgetData):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
         'title': 'str',
-        'max_value': 'float',
-        'legend': 'str',
-        'peak_time': 'int',
-        'history_timestamps': 'list[int]',
-        'display_unit': 'str',
-        'peak_time_on_local': 'str',
+        'type': 'str',
         'color_level': 'int',
-        'peak_value': 'float',
-        'min_value': 'float',
-        'display_type': 'int',
-        'show_peak': 'bool',
         'current_value': 'float',
-        'history_values': 'object'
+        'display_type': 'int',
+        'display_unit': 'str',
+        'history_timestamps': 'list[int]',
+        'history_values': 'object',
+        'legend': 'str',
+        'max_value': 'float',
+        'min_value': 'float',
+        'peak_time': 'int',
+        'peak_time_on_local': 'str',
+        'peak_value': 'float',
+        'show_peak': 'bool'
     }
 
     attribute_map = {
-        'type': 'type',
         'title': 'title',
-        'max_value': 'maxValue',
-        'legend': 'legend',
-        'peak_time': 'peakTime',
-        'history_timestamps': 'historyTimestamps',
-        'display_unit': 'displayUnit',
-        'peak_time_on_local': 'peakTimeOnLocal',
+        'type': 'type',
         'color_level': 'colorLevel',
-        'peak_value': 'peakValue',
-        'min_value': 'minValue',
-        'display_type': 'displayType',
-        'show_peak': 'showPeak',
         'current_value': 'currentValue',
-        'history_values': 'historyValues'
+        'display_type': 'displayType',
+        'display_unit': 'displayUnit',
+        'history_timestamps': 'historyTimestamps',
+        'history_values': 'historyValues',
+        'legend': 'legend',
+        'max_value': 'maxValue',
+        'min_value': 'minValue',
+        'peak_time': 'peakTime',
+        'peak_time_on_local': 'peakTimeOnLocal',
+        'peak_value': 'peakValue',
+        'show_peak': 'showPeak'
     }
 
-    def __init__(self, type=None, title=None, max_value=None, legend=None, peak_time=None, history_timestamps=None, display_unit=None, peak_time_on_local=None, color_level=None, peak_value=None, min_value=None, display_type=None, show_peak=None, current_value=None, history_values=None):  # noqa: E501
+    def __init__(self, title=None, type=None, color_level=None, current_value=None, display_type=None, display_unit=None, history_timestamps=None, history_values=None, legend=None, max_value=None, min_value=None, peak_time=None, peak_time_on_local=None, peak_value=None, show_peak=None):  # noqa: E501
         """GaugeWidgetData - a model defined in Swagger"""  # noqa: E501
 
-        self._type = None
         self._title = None
-        self._max_value = None
-        self._legend = None
-        self._peak_time = None
-        self._history_timestamps = None
-        self._display_unit = None
-        self._peak_time_on_local = None
+        self._type = None
         self._color_level = None
-        self._peak_value = None
-        self._min_value = None
-        self._display_type = None
-        self._show_peak = None
         self._current_value = None
+        self._display_type = None
+        self._display_unit = None
+        self._history_timestamps = None
         self._history_values = None
+        self._legend = None
+        self._max_value = None
+        self._min_value = None
+        self._peak_time = None
+        self._peak_time_on_local = None
+        self._peak_value = None
+        self._show_peak = None
         self.discriminator = None
 
-        if type is not None:
-            self.type = type
         if title is not None:
             self.title = title
-        if max_value is not None:
-            self.max_value = max_value
-        if legend is not None:
-            self.legend = legend
-        if peak_time is not None:
-            self.peak_time = peak_time
-        if history_timestamps is not None:
-            self.history_timestamps = history_timestamps
-        if display_unit is not None:
-            self.display_unit = display_unit
-        if peak_time_on_local is not None:
-            self.peak_time_on_local = peak_time_on_local
+        if type is not None:
+            self.type = type
         if color_level is not None:
             self.color_level = color_level
-        if peak_value is not None:
-            self.peak_value = peak_value
-        if min_value is not None:
-            self.min_value = min_value
-        if display_type is not None:
-            self.display_type = display_type
-        if show_peak is not None:
-            self.show_peak = show_peak
         if current_value is not None:
             self.current_value = current_value
+        if display_type is not None:
+            self.display_type = display_type
+        if display_unit is not None:
+            self.display_unit = display_unit
+        if history_timestamps is not None:
+            self.history_timestamps = history_timestamps
         if history_values is not None:
             self.history_values = history_values
-
-    @property
-    def type(self):
-        """Gets the type of this GaugeWidgetData.  # noqa: E501
-
-
-        :return: The type of this GaugeWidgetData.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this GaugeWidgetData.
-
-
-        :param type: The type of this GaugeWidgetData.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
+        if legend is not None:
+            self.legend = legend
+        if max_value is not None:
+            self.max_value = max_value
+        if min_value is not None:
+            self.min_value = min_value
+        if peak_time is not None:
+            self.peak_time = peak_time
+        if peak_time_on_local is not None:
+            self.peak_time_on_local = peak_time_on_local
+        if peak_value is not None:
+            self.peak_value = peak_value
+        if show_peak is not None:
+            self.show_peak = show_peak
 
     @property
     def title(self):
@@ -162,130 +141,25 @@ class GaugeWidgetData(WidgetData):
         self._title = title
 
     @property
-    def max_value(self):
-        """Gets the max_value of this GaugeWidgetData.  # noqa: E501
+    def type(self):
+        """Gets the type of this GaugeWidgetData.  # noqa: E501
 
 
-        :return: The max_value of this GaugeWidgetData.  # noqa: E501
-        :rtype: float
-        """
-        return self._max_value
-
-    @max_value.setter
-    def max_value(self, max_value):
-        """Sets the max_value of this GaugeWidgetData.
-
-
-        :param max_value: The max_value of this GaugeWidgetData.  # noqa: E501
-        :type: float
-        """
-
-        self._max_value = max_value
-
-    @property
-    def legend(self):
-        """Gets the legend of this GaugeWidgetData.  # noqa: E501
-
-
-        :return: The legend of this GaugeWidgetData.  # noqa: E501
+        :return: The type of this GaugeWidgetData.  # noqa: E501
         :rtype: str
         """
-        return self._legend
+        return self._type
 
-    @legend.setter
-    def legend(self, legend):
-        """Sets the legend of this GaugeWidgetData.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this GaugeWidgetData.
 
 
-        :param legend: The legend of this GaugeWidgetData.  # noqa: E501
+        :param type: The type of this GaugeWidgetData.  # noqa: E501
         :type: str
         """
 
-        self._legend = legend
-
-    @property
-    def peak_time(self):
-        """Gets the peak_time of this GaugeWidgetData.  # noqa: E501
-
-
-        :return: The peak_time of this GaugeWidgetData.  # noqa: E501
-        :rtype: int
-        """
-        return self._peak_time
-
-    @peak_time.setter
-    def peak_time(self, peak_time):
-        """Sets the peak_time of this GaugeWidgetData.
-
-
-        :param peak_time: The peak_time of this GaugeWidgetData.  # noqa: E501
-        :type: int
-        """
-
-        self._peak_time = peak_time
-
-    @property
-    def history_timestamps(self):
-        """Gets the history_timestamps of this GaugeWidgetData.  # noqa: E501
-
-
-        :return: The history_timestamps of this GaugeWidgetData.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._history_timestamps
-
-    @history_timestamps.setter
-    def history_timestamps(self, history_timestamps):
-        """Sets the history_timestamps of this GaugeWidgetData.
-
-
-        :param history_timestamps: The history_timestamps of this GaugeWidgetData.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._history_timestamps = history_timestamps
-
-    @property
-    def display_unit(self):
-        """Gets the display_unit of this GaugeWidgetData.  # noqa: E501
-
-
-        :return: The display_unit of this GaugeWidgetData.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_unit
-
-    @display_unit.setter
-    def display_unit(self, display_unit):
-        """Sets the display_unit of this GaugeWidgetData.
-
-
-        :param display_unit: The display_unit of this GaugeWidgetData.  # noqa: E501
-        :type: str
-        """
-
-        self._display_unit = display_unit
-
-    @property
-    def peak_time_on_local(self):
-        """Gets the peak_time_on_local of this GaugeWidgetData.  # noqa: E501
-
-
-        :return: The peak_time_on_local of this GaugeWidgetData.  # noqa: E501
-        :rtype: str
-        """
-        return self._peak_time_on_local
-
-    @peak_time_on_local.setter
-    def peak_time_on_local(self, peak_time_on_local):
-        """Sets the peak_time_on_local of this GaugeWidgetData.
-
-
-        :param peak_time_on_local: The peak_time_on_local of this GaugeWidgetData.  # noqa: E501
-        :type: str
-        """
-
-        self._peak_time_on_local = peak_time_on_local
+        self._type = type
 
     @property
     def color_level(self):
@@ -309,46 +183,25 @@ class GaugeWidgetData(WidgetData):
         self._color_level = color_level
 
     @property
-    def peak_value(self):
-        """Gets the peak_value of this GaugeWidgetData.  # noqa: E501
+    def current_value(self):
+        """Gets the current_value of this GaugeWidgetData.  # noqa: E501
 
 
-        :return: The peak_value of this GaugeWidgetData.  # noqa: E501
+        :return: The current_value of this GaugeWidgetData.  # noqa: E501
         :rtype: float
         """
-        return self._peak_value
+        return self._current_value
 
-    @peak_value.setter
-    def peak_value(self, peak_value):
-        """Sets the peak_value of this GaugeWidgetData.
+    @current_value.setter
+    def current_value(self, current_value):
+        """Sets the current_value of this GaugeWidgetData.
 
 
-        :param peak_value: The peak_value of this GaugeWidgetData.  # noqa: E501
+        :param current_value: The current_value of this GaugeWidgetData.  # noqa: E501
         :type: float
         """
 
-        self._peak_value = peak_value
-
-    @property
-    def min_value(self):
-        """Gets the min_value of this GaugeWidgetData.  # noqa: E501
-
-
-        :return: The min_value of this GaugeWidgetData.  # noqa: E501
-        :rtype: float
-        """
-        return self._min_value
-
-    @min_value.setter
-    def min_value(self, min_value):
-        """Sets the min_value of this GaugeWidgetData.
-
-
-        :param min_value: The min_value of this GaugeWidgetData.  # noqa: E501
-        :type: float
-        """
-
-        self._min_value = min_value
+        self._current_value = current_value
 
     @property
     def display_type(self):
@@ -372,46 +225,46 @@ class GaugeWidgetData(WidgetData):
         self._display_type = display_type
 
     @property
-    def show_peak(self):
-        """Gets the show_peak of this GaugeWidgetData.  # noqa: E501
+    def display_unit(self):
+        """Gets the display_unit of this GaugeWidgetData.  # noqa: E501
 
 
-        :return: The show_peak of this GaugeWidgetData.  # noqa: E501
-        :rtype: bool
+        :return: The display_unit of this GaugeWidgetData.  # noqa: E501
+        :rtype: str
         """
-        return self._show_peak
+        return self._display_unit
 
-    @show_peak.setter
-    def show_peak(self, show_peak):
-        """Sets the show_peak of this GaugeWidgetData.
+    @display_unit.setter
+    def display_unit(self, display_unit):
+        """Sets the display_unit of this GaugeWidgetData.
 
 
-        :param show_peak: The show_peak of this GaugeWidgetData.  # noqa: E501
-        :type: bool
+        :param display_unit: The display_unit of this GaugeWidgetData.  # noqa: E501
+        :type: str
         """
 
-        self._show_peak = show_peak
+        self._display_unit = display_unit
 
     @property
-    def current_value(self):
-        """Gets the current_value of this GaugeWidgetData.  # noqa: E501
+    def history_timestamps(self):
+        """Gets the history_timestamps of this GaugeWidgetData.  # noqa: E501
 
 
-        :return: The current_value of this GaugeWidgetData.  # noqa: E501
-        :rtype: float
+        :return: The history_timestamps of this GaugeWidgetData.  # noqa: E501
+        :rtype: list[int]
         """
-        return self._current_value
+        return self._history_timestamps
 
-    @current_value.setter
-    def current_value(self, current_value):
-        """Sets the current_value of this GaugeWidgetData.
+    @history_timestamps.setter
+    def history_timestamps(self, history_timestamps):
+        """Sets the history_timestamps of this GaugeWidgetData.
 
 
-        :param current_value: The current_value of this GaugeWidgetData.  # noqa: E501
-        :type: float
+        :param history_timestamps: The history_timestamps of this GaugeWidgetData.  # noqa: E501
+        :type: list[int]
         """
 
-        self._current_value = current_value
+        self._history_timestamps = history_timestamps
 
     @property
     def history_values(self):
@@ -433,6 +286,153 @@ class GaugeWidgetData(WidgetData):
         """
 
         self._history_values = history_values
+
+    @property
+    def legend(self):
+        """Gets the legend of this GaugeWidgetData.  # noqa: E501
+
+
+        :return: The legend of this GaugeWidgetData.  # noqa: E501
+        :rtype: str
+        """
+        return self._legend
+
+    @legend.setter
+    def legend(self, legend):
+        """Sets the legend of this GaugeWidgetData.
+
+
+        :param legend: The legend of this GaugeWidgetData.  # noqa: E501
+        :type: str
+        """
+
+        self._legend = legend
+
+    @property
+    def max_value(self):
+        """Gets the max_value of this GaugeWidgetData.  # noqa: E501
+
+
+        :return: The max_value of this GaugeWidgetData.  # noqa: E501
+        :rtype: float
+        """
+        return self._max_value
+
+    @max_value.setter
+    def max_value(self, max_value):
+        """Sets the max_value of this GaugeWidgetData.
+
+
+        :param max_value: The max_value of this GaugeWidgetData.  # noqa: E501
+        :type: float
+        """
+
+        self._max_value = max_value
+
+    @property
+    def min_value(self):
+        """Gets the min_value of this GaugeWidgetData.  # noqa: E501
+
+
+        :return: The min_value of this GaugeWidgetData.  # noqa: E501
+        :rtype: float
+        """
+        return self._min_value
+
+    @min_value.setter
+    def min_value(self, min_value):
+        """Sets the min_value of this GaugeWidgetData.
+
+
+        :param min_value: The min_value of this GaugeWidgetData.  # noqa: E501
+        :type: float
+        """
+
+        self._min_value = min_value
+
+    @property
+    def peak_time(self):
+        """Gets the peak_time of this GaugeWidgetData.  # noqa: E501
+
+
+        :return: The peak_time of this GaugeWidgetData.  # noqa: E501
+        :rtype: int
+        """
+        return self._peak_time
+
+    @peak_time.setter
+    def peak_time(self, peak_time):
+        """Sets the peak_time of this GaugeWidgetData.
+
+
+        :param peak_time: The peak_time of this GaugeWidgetData.  # noqa: E501
+        :type: int
+        """
+
+        self._peak_time = peak_time
+
+    @property
+    def peak_time_on_local(self):
+        """Gets the peak_time_on_local of this GaugeWidgetData.  # noqa: E501
+
+
+        :return: The peak_time_on_local of this GaugeWidgetData.  # noqa: E501
+        :rtype: str
+        """
+        return self._peak_time_on_local
+
+    @peak_time_on_local.setter
+    def peak_time_on_local(self, peak_time_on_local):
+        """Sets the peak_time_on_local of this GaugeWidgetData.
+
+
+        :param peak_time_on_local: The peak_time_on_local of this GaugeWidgetData.  # noqa: E501
+        :type: str
+        """
+
+        self._peak_time_on_local = peak_time_on_local
+
+    @property
+    def peak_value(self):
+        """Gets the peak_value of this GaugeWidgetData.  # noqa: E501
+
+
+        :return: The peak_value of this GaugeWidgetData.  # noqa: E501
+        :rtype: float
+        """
+        return self._peak_value
+
+    @peak_value.setter
+    def peak_value(self, peak_value):
+        """Sets the peak_value of this GaugeWidgetData.
+
+
+        :param peak_value: The peak_value of this GaugeWidgetData.  # noqa: E501
+        :type: float
+        """
+
+        self._peak_value = peak_value
+
+    @property
+    def show_peak(self):
+        """Gets the show_peak of this GaugeWidgetData.  # noqa: E501
+
+
+        :return: The show_peak of this GaugeWidgetData.  # noqa: E501
+        :rtype: bool
+        """
+        return self._show_peak
+
+    @show_peak.setter
+    def show_peak(self, show_peak):
+        """Sets the show_peak of this GaugeWidgetData.
+
+
+        :param show_peak: The show_peak of this GaugeWidgetData.  # noqa: E501
+        :type: bool
+        """
+
+        self._show_peak = show_peak
 
     def to_dict(self):
         """Returns the model properties as a dict"""

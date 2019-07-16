@@ -31,61 +31,61 @@ class TableWidgetInstanceCell(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'validation_status_code': 'int',
+        'data_point_id': 'int',
         'data_point_name': 'str',
         'instance_id': 'int',
-        'data_point_id': 'int',
-        'instance_name': 'str'
+        'instance_name': 'str',
+        'validation_status_code': 'int'
     }
 
     attribute_map = {
-        'validation_status_code': 'validationStatusCode',
+        'data_point_id': 'dataPointId',
         'data_point_name': 'dataPointName',
         'instance_id': 'instanceId',
-        'data_point_id': 'dataPointId',
-        'instance_name': 'instanceName'
+        'instance_name': 'instanceName',
+        'validation_status_code': 'validationStatusCode'
     }
 
-    def __init__(self, validation_status_code=None, data_point_name=None, instance_id=None, data_point_id=None, instance_name=None):  # noqa: E501
+    def __init__(self, data_point_id=None, data_point_name=None, instance_id=None, instance_name=None, validation_status_code=None):  # noqa: E501
         """TableWidgetInstanceCell - a model defined in Swagger"""  # noqa: E501
 
-        self._validation_status_code = None
+        self._data_point_id = None
         self._data_point_name = None
         self._instance_id = None
-        self._data_point_id = None
         self._instance_name = None
+        self._validation_status_code = None
         self.discriminator = None
 
-        if validation_status_code is not None:
-            self.validation_status_code = validation_status_code
+        if data_point_id is not None:
+            self.data_point_id = data_point_id
         if data_point_name is not None:
             self.data_point_name = data_point_name
         self.instance_id = instance_id
-        if data_point_id is not None:
-            self.data_point_id = data_point_id
         if instance_name is not None:
             self.instance_name = instance_name
+        if validation_status_code is not None:
+            self.validation_status_code = validation_status_code
 
     @property
-    def validation_status_code(self):
-        """Gets the validation_status_code of this TableWidgetInstanceCell.  # noqa: E501
+    def data_point_id(self):
+        """Gets the data_point_id of this TableWidgetInstanceCell.  # noqa: E501
 
 
-        :return: The validation_status_code of this TableWidgetInstanceCell.  # noqa: E501
+        :return: The data_point_id of this TableWidgetInstanceCell.  # noqa: E501
         :rtype: int
         """
-        return self._validation_status_code
+        return self._data_point_id
 
-    @validation_status_code.setter
-    def validation_status_code(self, validation_status_code):
-        """Sets the validation_status_code of this TableWidgetInstanceCell.
+    @data_point_id.setter
+    def data_point_id(self, data_point_id):
+        """Sets the data_point_id of this TableWidgetInstanceCell.
 
 
-        :param validation_status_code: The validation_status_code of this TableWidgetInstanceCell.  # noqa: E501
+        :param data_point_id: The data_point_id of this TableWidgetInstanceCell.  # noqa: E501
         :type: int
         """
 
-        self._validation_status_code = validation_status_code
+        self._data_point_id = data_point_id
 
     @property
     def data_point_name(self):
@@ -132,27 +132,6 @@ class TableWidgetInstanceCell(object):
         self._instance_id = instance_id
 
     @property
-    def data_point_id(self):
-        """Gets the data_point_id of this TableWidgetInstanceCell.  # noqa: E501
-
-
-        :return: The data_point_id of this TableWidgetInstanceCell.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_point_id
-
-    @data_point_id.setter
-    def data_point_id(self, data_point_id):
-        """Sets the data_point_id of this TableWidgetInstanceCell.
-
-
-        :param data_point_id: The data_point_id of this TableWidgetInstanceCell.  # noqa: E501
-        :type: int
-        """
-
-        self._data_point_id = data_point_id
-
-    @property
     def instance_name(self):
         """Gets the instance_name of this TableWidgetInstanceCell.  # noqa: E501
 
@@ -172,6 +151,27 @@ class TableWidgetInstanceCell(object):
         """
 
         self._instance_name = instance_name
+
+    @property
+    def validation_status_code(self):
+        """Gets the validation_status_code of this TableWidgetInstanceCell.  # noqa: E501
+
+
+        :return: The validation_status_code of this TableWidgetInstanceCell.  # noqa: E501
+        :rtype: int
+        """
+        return self._validation_status_code
+
+    @validation_status_code.setter
+    def validation_status_code(self, validation_status_code):
+        """Sets the validation_status_code of this TableWidgetInstanceCell.
+
+
+        :param validation_status_code: The validation_status_code of this TableWidgetInstanceCell.  # noqa: E501
+        :type: int
+        """
+
+        self._validation_status_code = validation_status_code
 
     def to_dict(self):
         """Returns the model properties as a dict"""

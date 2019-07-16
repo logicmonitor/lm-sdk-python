@@ -35,325 +35,137 @@ class AWSNetscan(Netscan):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'creator': 'str',
-        'collector_group_name': 'str',
-        'method': 'str',
-        'collector_group': 'int',
-        'description': 'str',
-        'next_start': 'str',
-        'duplicate': 'ExcludeDuplicateIps',
-        'version': 'int',
         'collector': 'int',
-        'schedule': 'RestSchedule',
         'collector_description': 'str',
-        'name': 'str',
-        'next_start_epoch': 'int',
-        'id': 'int',
-        'nsg_id': 'int',
+        'collector_group': 'int',
+        'collector_group_name': 'str',
+        'creator': 'str',
+        'description': 'str',
+        'duplicate': 'ExcludeDuplicateIps',
         'group': 'str',
+        'id': 'int',
+        'method': 'str',
+        'name': 'str',
+        'next_start': 'str',
+        'next_start_epoch': 'int',
+        'nsg_id': 'int',
+        'schedule': 'RestSchedule',
+        'version': 'int',
         'access_id': 'str',
         'account_id': 'str',
         'assumed_role_arn': 'str',
-        'secret_key': 'str',
-        'root_name': 'str',
-        'group_id': 'int',
         'aws_az': 'str',
+        'aws_service': 'str',
         'external_id': 'str',
-        'aws_service': 'str'
+        'group_id': 'int',
+        'root_name': 'str',
+        'secret_key': 'str'
     }
 
     attribute_map = {
-        'creator': 'creator',
-        'collector_group_name': 'collectorGroupName',
-        'method': 'method',
-        'collector_group': 'collectorGroup',
-        'description': 'description',
-        'next_start': 'nextStart',
-        'duplicate': 'duplicate',
-        'version': 'version',
         'collector': 'collector',
-        'schedule': 'schedule',
         'collector_description': 'collectorDescription',
-        'name': 'name',
-        'next_start_epoch': 'nextStartEpoch',
-        'id': 'id',
-        'nsg_id': 'nsgId',
+        'collector_group': 'collectorGroup',
+        'collector_group_name': 'collectorGroupName',
+        'creator': 'creator',
+        'description': 'description',
+        'duplicate': 'duplicate',
         'group': 'group',
+        'id': 'id',
+        'method': 'method',
+        'name': 'name',
+        'next_start': 'nextStart',
+        'next_start_epoch': 'nextStartEpoch',
+        'nsg_id': 'nsgId',
+        'schedule': 'schedule',
+        'version': 'version',
         'access_id': 'accessId',
         'account_id': 'accountId',
         'assumed_role_arn': 'assumedRoleArn',
-        'secret_key': 'secretKey',
-        'root_name': 'rootName',
-        'group_id': 'groupId',
         'aws_az': 'awsAZ',
+        'aws_service': 'awsService',
         'external_id': 'externalId',
-        'aws_service': 'awsService'
+        'group_id': 'groupId',
+        'root_name': 'rootName',
+        'secret_key': 'secretKey'
     }
 
-    def __init__(self, creator=None, collector_group_name=None, method=None, collector_group=None, description=None, next_start=None, duplicate=None, version=None, collector=None, schedule=None, collector_description=None, name=None, next_start_epoch=None, id=None, nsg_id=None, group=None, access_id=None, account_id=None, assumed_role_arn=None, secret_key=None, root_name=None, group_id=None, aws_az=None, external_id=None, aws_service=None):  # noqa: E501
+    def __init__(self, collector=None, collector_description=None, collector_group=None, collector_group_name=None, creator=None, description=None, duplicate=None, group=None, id=None, method=None, name=None, next_start=None, next_start_epoch=None, nsg_id=None, schedule=None, version=None, access_id=None, account_id=None, assumed_role_arn=None, aws_az=None, aws_service=None, external_id=None, group_id=None, root_name=None, secret_key=None):  # noqa: E501
         """AWSNetscan - a model defined in Swagger"""  # noqa: E501
 
-        self._creator = None
-        self._collector_group_name = None
-        self._method = None
-        self._collector_group = None
-        self._description = None
-        self._next_start = None
-        self._duplicate = None
-        self._version = None
         self._collector = None
-        self._schedule = None
         self._collector_description = None
-        self._name = None
-        self._next_start_epoch = None
-        self._id = None
-        self._nsg_id = None
+        self._collector_group = None
+        self._collector_group_name = None
+        self._creator = None
+        self._description = None
+        self._duplicate = None
         self._group = None
+        self._id = None
+        self._method = None
+        self._name = None
+        self._next_start = None
+        self._next_start_epoch = None
+        self._nsg_id = None
+        self._schedule = None
+        self._version = None
         self._access_id = None
         self._account_id = None
         self._assumed_role_arn = None
-        self._secret_key = None
-        self._root_name = None
-        self._group_id = None
         self._aws_az = None
-        self._external_id = None
         self._aws_service = None
+        self._external_id = None
+        self._group_id = None
+        self._root_name = None
+        self._secret_key = None
         self.discriminator = None
 
-        if creator is not None:
-            self.creator = creator
-        if collector_group_name is not None:
-            self.collector_group_name = collector_group_name
-        self.method = method
-        if collector_group is not None:
-            self.collector_group = collector_group
-        if description is not None:
-            self.description = description
-        if next_start is not None:
-            self.next_start = next_start
-        self.duplicate = duplicate
-        if version is not None:
-            self.version = version
         self.collector = collector
-        if schedule is not None:
-            self.schedule = schedule
         if collector_description is not None:
             self.collector_description = collector_description
-        self.name = name
-        if next_start_epoch is not None:
-            self.next_start_epoch = next_start_epoch
-        if id is not None:
-            self.id = id
-        if nsg_id is not None:
-            self.nsg_id = nsg_id
+        if collector_group is not None:
+            self.collector_group = collector_group
+        if collector_group_name is not None:
+            self.collector_group_name = collector_group_name
+        if creator is not None:
+            self.creator = creator
+        if description is not None:
+            self.description = description
+        self.duplicate = duplicate
         if group is not None:
             self.group = group
+        if id is not None:
+            self.id = id
+        self.method = method
+        self.name = name
+        if next_start is not None:
+            self.next_start = next_start
+        if next_start_epoch is not None:
+            self.next_start_epoch = next_start_epoch
+        if nsg_id is not None:
+            self.nsg_id = nsg_id
+        if schedule is not None:
+            self.schedule = schedule
+        if version is not None:
+            self.version = version
         if access_id is not None:
             self.access_id = access_id
         if account_id is not None:
             self.account_id = account_id
         if assumed_role_arn is not None:
             self.assumed_role_arn = assumed_role_arn
-        if secret_key is not None:
-            self.secret_key = secret_key
-        if root_name is not None:
-            self.root_name = root_name
-        if group_id is not None:
-            self.group_id = group_id
         if aws_az is not None:
             self.aws_az = aws_az
-        if external_id is not None:
-            self.external_id = external_id
         if aws_service is not None:
             self.aws_service = aws_service
-
-    @property
-    def creator(self):
-        """Gets the creator of this AWSNetscan.  # noqa: E501
-
-        The user that created the policy  # noqa: E501
-
-        :return: The creator of this AWSNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._creator
-
-    @creator.setter
-    def creator(self, creator):
-        """Sets the creator of this AWSNetscan.
-
-        The user that created the policy  # noqa: E501
-
-        :param creator: The creator of this AWSNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._creator = creator
-
-    @property
-    def collector_group_name(self):
-        """Gets the collector_group_name of this AWSNetscan.  # noqa: E501
-
-        The name of the group of the Collector associated with this Netscan  # noqa: E501
-
-        :return: The collector_group_name of this AWSNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._collector_group_name
-
-    @collector_group_name.setter
-    def collector_group_name(self, collector_group_name):
-        """Sets the collector_group_name of this AWSNetscan.
-
-        The name of the group of the Collector associated with this Netscan  # noqa: E501
-
-        :param collector_group_name: The collector_group_name of this AWSNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._collector_group_name = collector_group_name
-
-    @property
-    def method(self):
-        """Gets the method of this AWSNetscan.  # noqa: E501
-
-        The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), and script  # noqa: E501
-
-        :return: The method of this AWSNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._method
-
-    @method.setter
-    def method(self, method):
-        """Sets the method of this AWSNetscan.
-
-        The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), and script  # noqa: E501
-
-        :param method: The method of this AWSNetscan.  # noqa: E501
-        :type: str
-        """
-        if method is None:
-            raise ValueError("Invalid value for `method`, must not be `None`")  # noqa: E501
-
-        self._method = method
-
-    @property
-    def collector_group(self):
-        """Gets the collector_group of this AWSNetscan.  # noqa: E501
-
-        The ID of the group of the Collector associated with this Netscan  # noqa: E501
-
-        :return: The collector_group of this AWSNetscan.  # noqa: E501
-        :rtype: int
-        """
-        return self._collector_group
-
-    @collector_group.setter
-    def collector_group(self, collector_group):
-        """Sets the collector_group of this AWSNetscan.
-
-        The ID of the group of the Collector associated with this Netscan  # noqa: E501
-
-        :param collector_group: The collector_group of this AWSNetscan.  # noqa: E501
-        :type: int
-        """
-
-        self._collector_group = collector_group
-
-    @property
-    def description(self):
-        """Gets the description of this AWSNetscan.  # noqa: E501
-
-        The description of the Netscan Policy  # noqa: E501
-
-        :return: The description of this AWSNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this AWSNetscan.
-
-        The description of the Netscan Policy  # noqa: E501
-
-        :param description: The description of this AWSNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
-    def next_start(self):
-        """Gets the next_start of this AWSNetscan.  # noqa: E501
-
-        The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule  # noqa: E501
-
-        :return: The next_start of this AWSNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._next_start
-
-    @next_start.setter
-    def next_start(self, next_start):
-        """Sets the next_start of this AWSNetscan.
-
-        The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule  # noqa: E501
-
-        :param next_start: The next_start of this AWSNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._next_start = next_start
-
-    @property
-    def duplicate(self):
-        """Gets the duplicate of this AWSNetscan.  # noqa: E501
-
-        Information that determines how duplicate discovered devices should be handled  # noqa: E501
-
-        :return: The duplicate of this AWSNetscan.  # noqa: E501
-        :rtype: ExcludeDuplicateIps
-        """
-        return self._duplicate
-
-    @duplicate.setter
-    def duplicate(self, duplicate):
-        """Sets the duplicate of this AWSNetscan.
-
-        Information that determines how duplicate discovered devices should be handled  # noqa: E501
-
-        :param duplicate: The duplicate of this AWSNetscan.  # noqa: E501
-        :type: ExcludeDuplicateIps
-        """
-        if duplicate is None:
-            raise ValueError("Invalid value for `duplicate`, must not be `None`")  # noqa: E501
-
-        self._duplicate = duplicate
-
-    @property
-    def version(self):
-        """Gets the version of this AWSNetscan.  # noqa: E501
-
-        The Id of the device  # noqa: E501
-
-        :return: The version of this AWSNetscan.  # noqa: E501
-        :rtype: int
-        """
-        return self._version
-
-    @version.setter
-    def version(self, version):
-        """Sets the version of this AWSNetscan.
-
-        The Id of the device  # noqa: E501
-
-        :param version: The version of this AWSNetscan.  # noqa: E501
-        :type: int
-        """
-
-        self._version = version
+        if external_id is not None:
+            self.external_id = external_id
+        if group_id is not None:
+            self.group_id = group_id
+        if root_name is not None:
+            self.root_name = root_name
+        if secret_key is not None:
+            self.secret_key = secret_key
 
     @property
     def collector(self):
@@ -381,29 +193,6 @@ class AWSNetscan(Netscan):
         self._collector = collector
 
     @property
-    def schedule(self):
-        """Gets the schedule of this AWSNetscan.  # noqa: E501
-
-        Information related to the recurring execution schedule for the Netscan Policy  # noqa: E501
-
-        :return: The schedule of this AWSNetscan.  # noqa: E501
-        :rtype: RestSchedule
-        """
-        return self._schedule
-
-    @schedule.setter
-    def schedule(self, schedule):
-        """Sets the schedule of this AWSNetscan.
-
-        Information related to the recurring execution schedule for the Netscan Policy  # noqa: E501
-
-        :param schedule: The schedule of this AWSNetscan.  # noqa: E501
-        :type: RestSchedule
-        """
-
-        self._schedule = schedule
-
-    @property
     def collector_description(self):
         """Gets the collector_description of this AWSNetscan.  # noqa: E501
 
@@ -425,6 +214,194 @@ class AWSNetscan(Netscan):
         """
 
         self._collector_description = collector_description
+
+    @property
+    def collector_group(self):
+        """Gets the collector_group of this AWSNetscan.  # noqa: E501
+
+        The ID of the group of the Collector associated with this Netscan  # noqa: E501
+
+        :return: The collector_group of this AWSNetscan.  # noqa: E501
+        :rtype: int
+        """
+        return self._collector_group
+
+    @collector_group.setter
+    def collector_group(self, collector_group):
+        """Sets the collector_group of this AWSNetscan.
+
+        The ID of the group of the Collector associated with this Netscan  # noqa: E501
+
+        :param collector_group: The collector_group of this AWSNetscan.  # noqa: E501
+        :type: int
+        """
+
+        self._collector_group = collector_group
+
+    @property
+    def collector_group_name(self):
+        """Gets the collector_group_name of this AWSNetscan.  # noqa: E501
+
+        The name of the group of the Collector associated with this Netscan  # noqa: E501
+
+        :return: The collector_group_name of this AWSNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._collector_group_name
+
+    @collector_group_name.setter
+    def collector_group_name(self, collector_group_name):
+        """Sets the collector_group_name of this AWSNetscan.
+
+        The name of the group of the Collector associated with this Netscan  # noqa: E501
+
+        :param collector_group_name: The collector_group_name of this AWSNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._collector_group_name = collector_group_name
+
+    @property
+    def creator(self):
+        """Gets the creator of this AWSNetscan.  # noqa: E501
+
+        The user that created the policy  # noqa: E501
+
+        :return: The creator of this AWSNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._creator
+
+    @creator.setter
+    def creator(self, creator):
+        """Sets the creator of this AWSNetscan.
+
+        The user that created the policy  # noqa: E501
+
+        :param creator: The creator of this AWSNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._creator = creator
+
+    @property
+    def description(self):
+        """Gets the description of this AWSNetscan.  # noqa: E501
+
+        The description of the Netscan Policy  # noqa: E501
+
+        :return: The description of this AWSNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this AWSNetscan.
+
+        The description of the Netscan Policy  # noqa: E501
+
+        :param description: The description of this AWSNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def duplicate(self):
+        """Gets the duplicate of this AWSNetscan.  # noqa: E501
+
+        Information that determines how duplicate discovered devices should be handled  # noqa: E501
+
+        :return: The duplicate of this AWSNetscan.  # noqa: E501
+        :rtype: ExcludeDuplicateIps
+        """
+        return self._duplicate
+
+    @duplicate.setter
+    def duplicate(self, duplicate):
+        """Sets the duplicate of this AWSNetscan.
+
+        Information that determines how duplicate discovered devices should be handled  # noqa: E501
+
+        :param duplicate: The duplicate of this AWSNetscan.  # noqa: E501
+        :type: ExcludeDuplicateIps
+        """
+        if duplicate is None:
+            raise ValueError("Invalid value for `duplicate`, must not be `None`")  # noqa: E501
+
+        self._duplicate = duplicate
+
+    @property
+    def group(self):
+        """Gets the group of this AWSNetscan.  # noqa: E501
+
+        The group the Netscan policy should belong to  # noqa: E501
+
+        :return: The group of this AWSNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._group
+
+    @group.setter
+    def group(self, group):
+        """Sets the group of this AWSNetscan.
+
+        The group the Netscan policy should belong to  # noqa: E501
+
+        :param group: The group of this AWSNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._group = group
+
+    @property
+    def id(self):
+        """Gets the id of this AWSNetscan.  # noqa: E501
+
+        The ID of the Netscan Policy  # noqa: E501
+
+        :return: The id of this AWSNetscan.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this AWSNetscan.
+
+        The ID of the Netscan Policy  # noqa: E501
+
+        :param id: The id of this AWSNetscan.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def method(self):
+        """Gets the method of this AWSNetscan.  # noqa: E501
+
+        The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), and script  # noqa: E501
+
+        :return: The method of this AWSNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._method
+
+    @method.setter
+    def method(self, method):
+        """Sets the method of this AWSNetscan.
+
+        The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), and script  # noqa: E501
+
+        :param method: The method of this AWSNetscan.  # noqa: E501
+        :type: str
+        """
+        if method is None:
+            raise ValueError("Invalid value for `method`, must not be `None`")  # noqa: E501
+
+        self._method = method
 
     @property
     def name(self):
@@ -452,6 +429,29 @@ class AWSNetscan(Netscan):
         self._name = name
 
     @property
+    def next_start(self):
+        """Gets the next_start of this AWSNetscan.  # noqa: E501
+
+        The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule  # noqa: E501
+
+        :return: The next_start of this AWSNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._next_start
+
+    @next_start.setter
+    def next_start(self, next_start):
+        """Sets the next_start of this AWSNetscan.
+
+        The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule  # noqa: E501
+
+        :param next_start: The next_start of this AWSNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._next_start = next_start
+
+    @property
     def next_start_epoch(self):
         """Gets the next_start_epoch of this AWSNetscan.  # noqa: E501
 
@@ -473,29 +473,6 @@ class AWSNetscan(Netscan):
         """
 
         self._next_start_epoch = next_start_epoch
-
-    @property
-    def id(self):
-        """Gets the id of this AWSNetscan.  # noqa: E501
-
-        The ID of the Netscan Policy  # noqa: E501
-
-        :return: The id of this AWSNetscan.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this AWSNetscan.
-
-        The ID of the Netscan Policy  # noqa: E501
-
-        :param id: The id of this AWSNetscan.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
 
     @property
     def nsg_id(self):
@@ -521,27 +498,50 @@ class AWSNetscan(Netscan):
         self._nsg_id = nsg_id
 
     @property
-    def group(self):
-        """Gets the group of this AWSNetscan.  # noqa: E501
+    def schedule(self):
+        """Gets the schedule of this AWSNetscan.  # noqa: E501
 
-        The group the Netscan policy should belong to  # noqa: E501
+        Information related to the recurring execution schedule for the Netscan Policy  # noqa: E501
 
-        :return: The group of this AWSNetscan.  # noqa: E501
-        :rtype: str
+        :return: The schedule of this AWSNetscan.  # noqa: E501
+        :rtype: RestSchedule
         """
-        return self._group
+        return self._schedule
 
-    @group.setter
-    def group(self, group):
-        """Sets the group of this AWSNetscan.
+    @schedule.setter
+    def schedule(self, schedule):
+        """Sets the schedule of this AWSNetscan.
 
-        The group the Netscan policy should belong to  # noqa: E501
+        Information related to the recurring execution schedule for the Netscan Policy  # noqa: E501
 
-        :param group: The group of this AWSNetscan.  # noqa: E501
-        :type: str
+        :param schedule: The schedule of this AWSNetscan.  # noqa: E501
+        :type: RestSchedule
         """
 
-        self._group = group
+        self._schedule = schedule
+
+    @property
+    def version(self):
+        """Gets the version of this AWSNetscan.  # noqa: E501
+
+        The Id of the device  # noqa: E501
+
+        :return: The version of this AWSNetscan.  # noqa: E501
+        :rtype: int
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this AWSNetscan.
+
+        The Id of the device  # noqa: E501
+
+        :param version: The version of this AWSNetscan.  # noqa: E501
+        :type: int
+        """
+
+        self._version = version
 
     @property
     def access_id(self):
@@ -607,69 +607,6 @@ class AWSNetscan(Netscan):
         self._assumed_role_arn = assumed_role_arn
 
     @property
-    def secret_key(self):
-        """Gets the secret_key of this AWSNetscan.  # noqa: E501
-
-
-        :return: The secret_key of this AWSNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._secret_key
-
-    @secret_key.setter
-    def secret_key(self, secret_key):
-        """Sets the secret_key of this AWSNetscan.
-
-
-        :param secret_key: The secret_key of this AWSNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._secret_key = secret_key
-
-    @property
-    def root_name(self):
-        """Gets the root_name of this AWSNetscan.  # noqa: E501
-
-
-        :return: The root_name of this AWSNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._root_name
-
-    @root_name.setter
-    def root_name(self, root_name):
-        """Sets the root_name of this AWSNetscan.
-
-
-        :param root_name: The root_name of this AWSNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._root_name = root_name
-
-    @property
-    def group_id(self):
-        """Gets the group_id of this AWSNetscan.  # noqa: E501
-
-
-        :return: The group_id of this AWSNetscan.  # noqa: E501
-        :rtype: int
-        """
-        return self._group_id
-
-    @group_id.setter
-    def group_id(self, group_id):
-        """Sets the group_id of this AWSNetscan.
-
-
-        :param group_id: The group_id of this AWSNetscan.  # noqa: E501
-        :type: int
-        """
-
-        self._group_id = group_id
-
-    @property
     def aws_az(self):
         """Gets the aws_az of this AWSNetscan.  # noqa: E501
 
@@ -689,6 +626,27 @@ class AWSNetscan(Netscan):
         """
 
         self._aws_az = aws_az
+
+    @property
+    def aws_service(self):
+        """Gets the aws_service of this AWSNetscan.  # noqa: E501
+
+
+        :return: The aws_service of this AWSNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._aws_service
+
+    @aws_service.setter
+    def aws_service(self, aws_service):
+        """Sets the aws_service of this AWSNetscan.
+
+
+        :param aws_service: The aws_service of this AWSNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._aws_service = aws_service
 
     @property
     def external_id(self):
@@ -712,25 +670,67 @@ class AWSNetscan(Netscan):
         self._external_id = external_id
 
     @property
-    def aws_service(self):
-        """Gets the aws_service of this AWSNetscan.  # noqa: E501
+    def group_id(self):
+        """Gets the group_id of this AWSNetscan.  # noqa: E501
 
 
-        :return: The aws_service of this AWSNetscan.  # noqa: E501
+        :return: The group_id of this AWSNetscan.  # noqa: E501
+        :rtype: int
+        """
+        return self._group_id
+
+    @group_id.setter
+    def group_id(self, group_id):
+        """Sets the group_id of this AWSNetscan.
+
+
+        :param group_id: The group_id of this AWSNetscan.  # noqa: E501
+        :type: int
+        """
+
+        self._group_id = group_id
+
+    @property
+    def root_name(self):
+        """Gets the root_name of this AWSNetscan.  # noqa: E501
+
+
+        :return: The root_name of this AWSNetscan.  # noqa: E501
         :rtype: str
         """
-        return self._aws_service
+        return self._root_name
 
-    @aws_service.setter
-    def aws_service(self, aws_service):
-        """Sets the aws_service of this AWSNetscan.
+    @root_name.setter
+    def root_name(self, root_name):
+        """Sets the root_name of this AWSNetscan.
 
 
-        :param aws_service: The aws_service of this AWSNetscan.  # noqa: E501
+        :param root_name: The root_name of this AWSNetscan.  # noqa: E501
         :type: str
         """
 
-        self._aws_service = aws_service
+        self._root_name = root_name
+
+    @property
+    def secret_key(self):
+        """Gets the secret_key of this AWSNetscan.  # noqa: E501
+
+
+        :return: The secret_key of this AWSNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._secret_key
+
+    @secret_key.setter
+    def secret_key(self, secret_key):
+        """Sets the secret_key of this AWSNetscan.
+
+
+        :param secret_key: The secret_key of this AWSNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._secret_key = secret_key
 
     def to_dict(self):
         """Returns the model properties as a dict"""

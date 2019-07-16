@@ -31,83 +31,41 @@ class DeviceDataSourceInstanceConfigAlert(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'alert_level': 'int',
-        'id': 'str',
         'alert_id': 'str',
+        'alert_level': 'int',
         'alert_summary': 'str',
+        'id': 'str',
         'timestamp': 'int'
     }
 
     attribute_map = {
-        'alert_level': 'alertLevel',
-        'id': 'id',
         'alert_id': 'alertId',
+        'alert_level': 'alertLevel',
         'alert_summary': 'alertSummary',
+        'id': 'id',
         'timestamp': 'timestamp'
     }
 
-    def __init__(self, alert_level=None, id=None, alert_id=None, alert_summary=None, timestamp=None):  # noqa: E501
+    def __init__(self, alert_id=None, alert_level=None, alert_summary=None, id=None, timestamp=None):  # noqa: E501
         """DeviceDataSourceInstanceConfigAlert - a model defined in Swagger"""  # noqa: E501
 
-        self._alert_level = None
-        self._id = None
         self._alert_id = None
+        self._alert_level = None
         self._alert_summary = None
+        self._id = None
         self._timestamp = None
         self.discriminator = None
 
-        if alert_level is not None:
-            self.alert_level = alert_level
-        if id is not None:
-            self.id = id
         if alert_id is not None:
             self.alert_id = alert_id
+        if alert_level is not None:
+            self.alert_level = alert_level
         if alert_summary is not None:
             self.alert_summary = alert_summary
+        if id is not None:
+            self.id = id
         if timestamp is not None:
             self.timestamp = timestamp
-
-    @property
-    def alert_level(self):
-        """Gets the alert_level of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
-
-
-        :return: The alert_level of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
-        :rtype: int
-        """
-        return self._alert_level
-
-    @alert_level.setter
-    def alert_level(self, alert_level):
-        """Sets the alert_level of this DeviceDataSourceInstanceConfigAlert.
-
-
-        :param alert_level: The alert_level of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
-        :type: int
-        """
-
-        self._alert_level = alert_level
-
-    @property
-    def id(self):
-        """Gets the id of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
-
-
-        :return: The id of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this DeviceDataSourceInstanceConfigAlert.
-
-
-        :param id: The id of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
 
     @property
     def alert_id(self):
@@ -131,6 +89,27 @@ class DeviceDataSourceInstanceConfigAlert(object):
         self._alert_id = alert_id
 
     @property
+    def alert_level(self):
+        """Gets the alert_level of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
+
+
+        :return: The alert_level of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
+        :rtype: int
+        """
+        return self._alert_level
+
+    @alert_level.setter
+    def alert_level(self, alert_level):
+        """Sets the alert_level of this DeviceDataSourceInstanceConfigAlert.
+
+
+        :param alert_level: The alert_level of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
+        :type: int
+        """
+
+        self._alert_level = alert_level
+
+    @property
     def alert_summary(self):
         """Gets the alert_summary of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
 
@@ -150,6 +129,27 @@ class DeviceDataSourceInstanceConfigAlert(object):
         """
 
         self._alert_summary = alert_summary
+
+    @property
+    def id(self):
+        """Gets the id of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
+
+
+        :return: The id of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this DeviceDataSourceInstanceConfigAlert.
+
+
+        :param id: The id of this DeviceDataSourceInstanceConfigAlert.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def timestamp(self):

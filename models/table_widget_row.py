@@ -33,108 +33,66 @@ class TableWidgetRow(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'instances': 'list[TableWidgetInstanceCell]',
-        'group_id': 'int',
-        'label': 'str',
-        'device_id': 'int',
         'device_display_name': 'str',
-        'group_full_path': 'str'
+        'device_id': 'int',
+        'group_full_path': 'str',
+        'group_id': 'int',
+        'instances': 'list[TableWidgetInstanceCell]',
+        'label': 'str'
     }
 
     attribute_map = {
-        'instances': 'instances',
-        'group_id': 'groupId',
-        'label': 'label',
-        'device_id': 'deviceId',
         'device_display_name': 'deviceDisplayName',
-        'group_full_path': 'groupFullPath'
+        'device_id': 'deviceId',
+        'group_full_path': 'groupFullPath',
+        'group_id': 'groupId',
+        'instances': 'instances',
+        'label': 'label'
     }
 
-    def __init__(self, instances=None, group_id=None, label=None, device_id=None, device_display_name=None, group_full_path=None):  # noqa: E501
+    def __init__(self, device_display_name=None, device_id=None, group_full_path=None, group_id=None, instances=None, label=None):  # noqa: E501
         """TableWidgetRow - a model defined in Swagger"""  # noqa: E501
 
-        self._instances = None
-        self._group_id = None
-        self._label = None
-        self._device_id = None
         self._device_display_name = None
+        self._device_id = None
         self._group_full_path = None
+        self._group_id = None
+        self._instances = None
+        self._label = None
         self.discriminator = None
 
-        if instances is not None:
-            self.instances = instances
-        if group_id is not None:
-            self.group_id = group_id
-        if label is not None:
-            self.label = label
-        self.device_id = device_id
         if device_display_name is not None:
             self.device_display_name = device_display_name
+        self.device_id = device_id
         if group_full_path is not None:
             self.group_full_path = group_full_path
+        if group_id is not None:
+            self.group_id = group_id
+        if instances is not None:
+            self.instances = instances
+        if label is not None:
+            self.label = label
 
     @property
-    def instances(self):
-        """Gets the instances of this TableWidgetRow.  # noqa: E501
+    def device_display_name(self):
+        """Gets the device_display_name of this TableWidgetRow.  # noqa: E501
 
 
-        :return: The instances of this TableWidgetRow.  # noqa: E501
-        :rtype: list[TableWidgetInstanceCell]
-        """
-        return self._instances
-
-    @instances.setter
-    def instances(self, instances):
-        """Sets the instances of this TableWidgetRow.
-
-
-        :param instances: The instances of this TableWidgetRow.  # noqa: E501
-        :type: list[TableWidgetInstanceCell]
-        """
-
-        self._instances = instances
-
-    @property
-    def group_id(self):
-        """Gets the group_id of this TableWidgetRow.  # noqa: E501
-
-
-        :return: The group_id of this TableWidgetRow.  # noqa: E501
-        :rtype: int
-        """
-        return self._group_id
-
-    @group_id.setter
-    def group_id(self, group_id):
-        """Sets the group_id of this TableWidgetRow.
-
-
-        :param group_id: The group_id of this TableWidgetRow.  # noqa: E501
-        :type: int
-        """
-
-        self._group_id = group_id
-
-    @property
-    def label(self):
-        """Gets the label of this TableWidgetRow.  # noqa: E501
-
-
-        :return: The label of this TableWidgetRow.  # noqa: E501
+        :return: The device_display_name of this TableWidgetRow.  # noqa: E501
         :rtype: str
         """
-        return self._label
+        return self._device_display_name
 
-    @label.setter
-    def label(self, label):
-        """Sets the label of this TableWidgetRow.
+    @device_display_name.setter
+    def device_display_name(self, device_display_name):
+        """Sets the device_display_name of this TableWidgetRow.
 
 
-        :param label: The label of this TableWidgetRow.  # noqa: E501
+        :param device_display_name: The device_display_name of this TableWidgetRow.  # noqa: E501
         :type: str
         """
 
-        self._label = label
+        self._device_display_name = device_display_name
 
     @property
     def device_id(self):
@@ -160,27 +118,6 @@ class TableWidgetRow(object):
         self._device_id = device_id
 
     @property
-    def device_display_name(self):
-        """Gets the device_display_name of this TableWidgetRow.  # noqa: E501
-
-
-        :return: The device_display_name of this TableWidgetRow.  # noqa: E501
-        :rtype: str
-        """
-        return self._device_display_name
-
-    @device_display_name.setter
-    def device_display_name(self, device_display_name):
-        """Sets the device_display_name of this TableWidgetRow.
-
-
-        :param device_display_name: The device_display_name of this TableWidgetRow.  # noqa: E501
-        :type: str
-        """
-
-        self._device_display_name = device_display_name
-
-    @property
     def group_full_path(self):
         """Gets the group_full_path of this TableWidgetRow.  # noqa: E501
 
@@ -200,6 +137,69 @@ class TableWidgetRow(object):
         """
 
         self._group_full_path = group_full_path
+
+    @property
+    def group_id(self):
+        """Gets the group_id of this TableWidgetRow.  # noqa: E501
+
+
+        :return: The group_id of this TableWidgetRow.  # noqa: E501
+        :rtype: int
+        """
+        return self._group_id
+
+    @group_id.setter
+    def group_id(self, group_id):
+        """Sets the group_id of this TableWidgetRow.
+
+
+        :param group_id: The group_id of this TableWidgetRow.  # noqa: E501
+        :type: int
+        """
+
+        self._group_id = group_id
+
+    @property
+    def instances(self):
+        """Gets the instances of this TableWidgetRow.  # noqa: E501
+
+
+        :return: The instances of this TableWidgetRow.  # noqa: E501
+        :rtype: list[TableWidgetInstanceCell]
+        """
+        return self._instances
+
+    @instances.setter
+    def instances(self, instances):
+        """Sets the instances of this TableWidgetRow.
+
+
+        :param instances: The instances of this TableWidgetRow.  # noqa: E501
+        :type: list[TableWidgetInstanceCell]
+        """
+
+        self._instances = instances
+
+    @property
+    def label(self):
+        """Gets the label of this TableWidgetRow.  # noqa: E501
+
+
+        :return: The label of this TableWidgetRow.  # noqa: E501
+        :rtype: str
+        """
+        return self._label
+
+    @label.setter
+    def label(self, label):
+        """Sets the label of this TableWidgetRow.
+
+
+        :param label: The label of this TableWidgetRow.  # noqa: E501
+        :type: str
+        """
+
+        self._label = label
 
     def to_dict(self):
         """Returns the model properties as a dict"""

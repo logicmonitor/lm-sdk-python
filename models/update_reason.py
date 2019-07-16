@@ -31,67 +31,46 @@ class UpdateReason(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'time_epoch': 'int',
         'client_ip': 'str',
-        'update_reason': 'str',
-        'time_str': 'str',
         'id': 'int',
+        'time_epoch': 'int',
+        'time_str': 'str',
+        'update_reason': 'str',
         'user_name': 'str'
     }
 
     attribute_map = {
-        'time_epoch': 'timeEpoch',
         'client_ip': 'clientIp',
-        'update_reason': 'updateReason',
-        'time_str': 'timeStr',
         'id': 'id',
+        'time_epoch': 'timeEpoch',
+        'time_str': 'timeStr',
+        'update_reason': 'updateReason',
         'user_name': 'userName'
     }
 
-    def __init__(self, time_epoch=None, client_ip=None, update_reason=None, time_str=None, id=None, user_name=None):  # noqa: E501
+    def __init__(self, client_ip=None, id=None, time_epoch=None, time_str=None, update_reason=None, user_name=None):  # noqa: E501
         """UpdateReason - a model defined in Swagger"""  # noqa: E501
 
-        self._time_epoch = None
         self._client_ip = None
-        self._update_reason = None
-        self._time_str = None
         self._id = None
+        self._time_epoch = None
+        self._time_str = None
+        self._update_reason = None
         self._user_name = None
         self.discriminator = None
 
-        if time_epoch is not None:
-            self.time_epoch = time_epoch
         if client_ip is not None:
             self.client_ip = client_ip
-        if update_reason is not None:
-            self.update_reason = update_reason
-        if time_str is not None:
-            self.time_str = time_str
         if id is not None:
             self.id = id
+        if time_epoch is not None:
+            self.time_epoch = time_epoch
+        if time_str is not None:
+            self.time_str = time_str
+        if update_reason is not None:
+            self.update_reason = update_reason
         if user_name is not None:
             self.user_name = user_name
-
-    @property
-    def time_epoch(self):
-        """Gets the time_epoch of this UpdateReason.  # noqa: E501
-
-
-        :return: The time_epoch of this UpdateReason.  # noqa: E501
-        :rtype: int
-        """
-        return self._time_epoch
-
-    @time_epoch.setter
-    def time_epoch(self, time_epoch):
-        """Sets the time_epoch of this UpdateReason.
-
-
-        :param time_epoch: The time_epoch of this UpdateReason.  # noqa: E501
-        :type: int
-        """
-
-        self._time_epoch = time_epoch
 
     @property
     def client_ip(self):
@@ -115,25 +94,46 @@ class UpdateReason(object):
         self._client_ip = client_ip
 
     @property
-    def update_reason(self):
-        """Gets the update_reason of this UpdateReason.  # noqa: E501
+    def id(self):
+        """Gets the id of this UpdateReason.  # noqa: E501
 
 
-        :return: The update_reason of this UpdateReason.  # noqa: E501
-        :rtype: str
+        :return: The id of this UpdateReason.  # noqa: E501
+        :rtype: int
         """
-        return self._update_reason
+        return self._id
 
-    @update_reason.setter
-    def update_reason(self, update_reason):
-        """Sets the update_reason of this UpdateReason.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this UpdateReason.
 
 
-        :param update_reason: The update_reason of this UpdateReason.  # noqa: E501
-        :type: str
+        :param id: The id of this UpdateReason.  # noqa: E501
+        :type: int
         """
 
-        self._update_reason = update_reason
+        self._id = id
+
+    @property
+    def time_epoch(self):
+        """Gets the time_epoch of this UpdateReason.  # noqa: E501
+
+
+        :return: The time_epoch of this UpdateReason.  # noqa: E501
+        :rtype: int
+        """
+        return self._time_epoch
+
+    @time_epoch.setter
+    def time_epoch(self, time_epoch):
+        """Sets the time_epoch of this UpdateReason.
+
+
+        :param time_epoch: The time_epoch of this UpdateReason.  # noqa: E501
+        :type: int
+        """
+
+        self._time_epoch = time_epoch
 
     @property
     def time_str(self):
@@ -157,25 +157,25 @@ class UpdateReason(object):
         self._time_str = time_str
 
     @property
-    def id(self):
-        """Gets the id of this UpdateReason.  # noqa: E501
+    def update_reason(self):
+        """Gets the update_reason of this UpdateReason.  # noqa: E501
 
 
-        :return: The id of this UpdateReason.  # noqa: E501
-        :rtype: int
+        :return: The update_reason of this UpdateReason.  # noqa: E501
+        :rtype: str
         """
-        return self._id
+        return self._update_reason
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this UpdateReason.
+    @update_reason.setter
+    def update_reason(self, update_reason):
+        """Sets the update_reason of this UpdateReason.
 
 
-        :param id: The id of this UpdateReason.  # noqa: E501
-        :type: int
+        :param update_reason: The update_reason of this UpdateReason.  # noqa: E501
+        :type: str
         """
 
-        self._id = id
+        self._update_reason = update_reason
 
     @property
     def user_name(self):

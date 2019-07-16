@@ -34,171 +34,192 @@ class DeviceDataSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'alert_disable_status': 'str',
         'alert_status': 'str',
+        'alert_status_priority': 'int',
+        'alerting_disabled_on': 'TreeNode',
+        'assigned_on': 'int',
         'auto_discovery': 'bool',
+        'collect_method': 'str',
+        'created_on': 'int',
+        'data_source_description': 'str',
         'data_source_display_name': 'str',
+        'data_source_id': 'int',
+        'data_source_name': 'str',
+        'data_source_type': 'str',
+        'device_display_name': 'str',
         'device_id': 'int',
         'device_name': 'str',
-        'created_on': 'int',
-        'collect_method': 'str',
-        'data_source_id': 'int',
         'graphs': 'list[DeviceDatasourceGraph]',
-        'sdt_at': 'str',
-        'next_auto_discovery_on': 'int',
-        'id': 'int',
-        'alert_status_priority': 'int',
-        'alert_disable_status': 'str',
-        'data_source_description': 'str',
-        'overview_graphs': 'list[DeviceDatasourceGraph]',
-        'stop_monitoring': 'bool',
-        'assigned_on': 'int',
-        'is_multiple': 'bool',
-        'instance_number': 'int',
-        'updated_on': 'int',
-        'sdt_status': 'str',
-        'data_source_name': 'str',
-        'device_display_name': 'str',
-        'monitoring_instance_number': 'int',
-        'groups_disabled_this_source': 'list[TreeNode]',
         'group_name': 'str',
+        'groups_disabled_this_source': 'list[TreeNode]',
+        'id': 'int',
         'instance_auto_group_enabled': 'bool',
-        'alerting_disabled_on': 'TreeNode',
-        'data_source_type': 'str',
-        'status': 'int'
+        'instance_number': 'int',
+        'is_multiple': 'bool',
+        'monitoring_instance_number': 'int',
+        'next_auto_discovery_on': 'int',
+        'overview_graphs': 'list[DeviceDatasourceGraph]',
+        'sdt_at': 'str',
+        'sdt_status': 'str',
+        'status': 'int',
+        'stop_monitoring': 'bool',
+        'updated_on': 'int'
     }
 
     attribute_map = {
+        'alert_disable_status': 'alertDisableStatus',
         'alert_status': 'alertStatus',
+        'alert_status_priority': 'alertStatusPriority',
+        'alerting_disabled_on': 'alertingDisabledOn',
+        'assigned_on': 'assignedOn',
         'auto_discovery': 'autoDiscovery',
+        'collect_method': 'collectMethod',
+        'created_on': 'createdOn',
+        'data_source_description': 'dataSourceDescription',
         'data_source_display_name': 'dataSourceDisplayName',
+        'data_source_id': 'dataSourceId',
+        'data_source_name': 'dataSourceName',
+        'data_source_type': 'dataSourceType',
+        'device_display_name': 'deviceDisplayName',
         'device_id': 'deviceId',
         'device_name': 'deviceName',
-        'created_on': 'createdOn',
-        'collect_method': 'collectMethod',
-        'data_source_id': 'dataSourceId',
         'graphs': 'graphs',
-        'sdt_at': 'sdtAt',
-        'next_auto_discovery_on': 'nextAutoDiscoveryOn',
-        'id': 'id',
-        'alert_status_priority': 'alertStatusPriority',
-        'alert_disable_status': 'alertDisableStatus',
-        'data_source_description': 'dataSourceDescription',
-        'overview_graphs': 'overviewGraphs',
-        'stop_monitoring': 'stopMonitoring',
-        'assigned_on': 'assignedOn',
-        'is_multiple': 'isMultiple',
-        'instance_number': 'instanceNumber',
-        'updated_on': 'updatedOn',
-        'sdt_status': 'sdtStatus',
-        'data_source_name': 'dataSourceName',
-        'device_display_name': 'deviceDisplayName',
-        'monitoring_instance_number': 'monitoringInstanceNumber',
-        'groups_disabled_this_source': 'groupsDisabledThisSource',
         'group_name': 'groupName',
+        'groups_disabled_this_source': 'groupsDisabledThisSource',
+        'id': 'id',
         'instance_auto_group_enabled': 'instanceAutoGroupEnabled',
-        'alerting_disabled_on': 'alertingDisabledOn',
-        'data_source_type': 'dataSourceType',
-        'status': 'status'
+        'instance_number': 'instanceNumber',
+        'is_multiple': 'isMultiple',
+        'monitoring_instance_number': 'monitoringInstanceNumber',
+        'next_auto_discovery_on': 'nextAutoDiscoveryOn',
+        'overview_graphs': 'overviewGraphs',
+        'sdt_at': 'sdtAt',
+        'sdt_status': 'sdtStatus',
+        'status': 'status',
+        'stop_monitoring': 'stopMonitoring',
+        'updated_on': 'updatedOn'
     }
 
-    def __init__(self, alert_status=None, auto_discovery=None, data_source_display_name=None, device_id=None, device_name=None, created_on=None, collect_method=None, data_source_id=None, graphs=None, sdt_at=None, next_auto_discovery_on=None, id=None, alert_status_priority=None, alert_disable_status=None, data_source_description=None, overview_graphs=None, stop_monitoring=None, assigned_on=None, is_multiple=None, instance_number=None, updated_on=None, sdt_status=None, data_source_name=None, device_display_name=None, monitoring_instance_number=None, groups_disabled_this_source=None, group_name=None, instance_auto_group_enabled=None, alerting_disabled_on=None, data_source_type=None, status=None):  # noqa: E501
+    def __init__(self, alert_disable_status=None, alert_status=None, alert_status_priority=None, alerting_disabled_on=None, assigned_on=None, auto_discovery=None, collect_method=None, created_on=None, data_source_description=None, data_source_display_name=None, data_source_id=None, data_source_name=None, data_source_type=None, device_display_name=None, device_id=None, device_name=None, graphs=None, group_name=None, groups_disabled_this_source=None, id=None, instance_auto_group_enabled=None, instance_number=None, is_multiple=None, monitoring_instance_number=None, next_auto_discovery_on=None, overview_graphs=None, sdt_at=None, sdt_status=None, status=None, stop_monitoring=None, updated_on=None):  # noqa: E501
         """DeviceDataSource - a model defined in Swagger"""  # noqa: E501
 
+        self._alert_disable_status = None
         self._alert_status = None
+        self._alert_status_priority = None
+        self._alerting_disabled_on = None
+        self._assigned_on = None
         self._auto_discovery = None
+        self._collect_method = None
+        self._created_on = None
+        self._data_source_description = None
         self._data_source_display_name = None
+        self._data_source_id = None
+        self._data_source_name = None
+        self._data_source_type = None
+        self._device_display_name = None
         self._device_id = None
         self._device_name = None
-        self._created_on = None
-        self._collect_method = None
-        self._data_source_id = None
         self._graphs = None
-        self._sdt_at = None
-        self._next_auto_discovery_on = None
-        self._id = None
-        self._alert_status_priority = None
-        self._alert_disable_status = None
-        self._data_source_description = None
-        self._overview_graphs = None
-        self._stop_monitoring = None
-        self._assigned_on = None
-        self._is_multiple = None
-        self._instance_number = None
-        self._updated_on = None
-        self._sdt_status = None
-        self._data_source_name = None
-        self._device_display_name = None
-        self._monitoring_instance_number = None
-        self._groups_disabled_this_source = None
         self._group_name = None
+        self._groups_disabled_this_source = None
+        self._id = None
         self._instance_auto_group_enabled = None
-        self._alerting_disabled_on = None
-        self._data_source_type = None
+        self._instance_number = None
+        self._is_multiple = None
+        self._monitoring_instance_number = None
+        self._next_auto_discovery_on = None
+        self._overview_graphs = None
+        self._sdt_at = None
+        self._sdt_status = None
         self._status = None
+        self._stop_monitoring = None
+        self._updated_on = None
         self.discriminator = None
 
+        if alert_disable_status is not None:
+            self.alert_disable_status = alert_disable_status
         if alert_status is not None:
             self.alert_status = alert_status
+        if alert_status_priority is not None:
+            self.alert_status_priority = alert_status_priority
+        if alerting_disabled_on is not None:
+            self.alerting_disabled_on = alerting_disabled_on
+        if assigned_on is not None:
+            self.assigned_on = assigned_on
         if auto_discovery is not None:
             self.auto_discovery = auto_discovery
+        if collect_method is not None:
+            self.collect_method = collect_method
+        if created_on is not None:
+            self.created_on = created_on
+        if data_source_description is not None:
+            self.data_source_description = data_source_description
         if data_source_display_name is not None:
             self.data_source_display_name = data_source_display_name
+        if data_source_id is not None:
+            self.data_source_id = data_source_id
+        if data_source_name is not None:
+            self.data_source_name = data_source_name
+        if data_source_type is not None:
+            self.data_source_type = data_source_type
+        if device_display_name is not None:
+            self.device_display_name = device_display_name
         if device_id is not None:
             self.device_id = device_id
         if device_name is not None:
             self.device_name = device_name
-        if created_on is not None:
-            self.created_on = created_on
-        if collect_method is not None:
-            self.collect_method = collect_method
-        if data_source_id is not None:
-            self.data_source_id = data_source_id
         if graphs is not None:
             self.graphs = graphs
-        if sdt_at is not None:
-            self.sdt_at = sdt_at
-        if next_auto_discovery_on is not None:
-            self.next_auto_discovery_on = next_auto_discovery_on
-        if id is not None:
-            self.id = id
-        if alert_status_priority is not None:
-            self.alert_status_priority = alert_status_priority
-        if alert_disable_status is not None:
-            self.alert_disable_status = alert_disable_status
-        if data_source_description is not None:
-            self.data_source_description = data_source_description
-        if overview_graphs is not None:
-            self.overview_graphs = overview_graphs
-        if stop_monitoring is not None:
-            self.stop_monitoring = stop_monitoring
-        if assigned_on is not None:
-            self.assigned_on = assigned_on
-        if is_multiple is not None:
-            self.is_multiple = is_multiple
-        if instance_number is not None:
-            self.instance_number = instance_number
-        if updated_on is not None:
-            self.updated_on = updated_on
-        if sdt_status is not None:
-            self.sdt_status = sdt_status
-        if data_source_name is not None:
-            self.data_source_name = data_source_name
-        if device_display_name is not None:
-            self.device_display_name = device_display_name
-        if monitoring_instance_number is not None:
-            self.monitoring_instance_number = monitoring_instance_number
-        if groups_disabled_this_source is not None:
-            self.groups_disabled_this_source = groups_disabled_this_source
         if group_name is not None:
             self.group_name = group_name
+        if groups_disabled_this_source is not None:
+            self.groups_disabled_this_source = groups_disabled_this_source
+        if id is not None:
+            self.id = id
         if instance_auto_group_enabled is not None:
             self.instance_auto_group_enabled = instance_auto_group_enabled
-        if alerting_disabled_on is not None:
-            self.alerting_disabled_on = alerting_disabled_on
-        if data_source_type is not None:
-            self.data_source_type = data_source_type
+        if instance_number is not None:
+            self.instance_number = instance_number
+        if is_multiple is not None:
+            self.is_multiple = is_multiple
+        if monitoring_instance_number is not None:
+            self.monitoring_instance_number = monitoring_instance_number
+        if next_auto_discovery_on is not None:
+            self.next_auto_discovery_on = next_auto_discovery_on
+        if overview_graphs is not None:
+            self.overview_graphs = overview_graphs
+        if sdt_at is not None:
+            self.sdt_at = sdt_at
+        if sdt_status is not None:
+            self.sdt_status = sdt_status
         if status is not None:
             self.status = status
+        if stop_monitoring is not None:
+            self.stop_monitoring = stop_monitoring
+        if updated_on is not None:
+            self.updated_on = updated_on
+
+    @property
+    def alert_disable_status(self):
+        """Gets the alert_disable_status of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The alert_disable_status of this DeviceDataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_disable_status
+
+    @alert_disable_status.setter
+    def alert_disable_status(self, alert_disable_status):
+        """Sets the alert_disable_status of this DeviceDataSource.
+
+
+        :param alert_disable_status: The alert_disable_status of this DeviceDataSource.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_disable_status = alert_disable_status
 
     @property
     def alert_status(self):
@@ -222,6 +243,69 @@ class DeviceDataSource(object):
         self._alert_status = alert_status
 
     @property
+    def alert_status_priority(self):
+        """Gets the alert_status_priority of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The alert_status_priority of this DeviceDataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._alert_status_priority
+
+    @alert_status_priority.setter
+    def alert_status_priority(self, alert_status_priority):
+        """Sets the alert_status_priority of this DeviceDataSource.
+
+
+        :param alert_status_priority: The alert_status_priority of this DeviceDataSource.  # noqa: E501
+        :type: int
+        """
+
+        self._alert_status_priority = alert_status_priority
+
+    @property
+    def alerting_disabled_on(self):
+        """Gets the alerting_disabled_on of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The alerting_disabled_on of this DeviceDataSource.  # noqa: E501
+        :rtype: TreeNode
+        """
+        return self._alerting_disabled_on
+
+    @alerting_disabled_on.setter
+    def alerting_disabled_on(self, alerting_disabled_on):
+        """Sets the alerting_disabled_on of this DeviceDataSource.
+
+
+        :param alerting_disabled_on: The alerting_disabled_on of this DeviceDataSource.  # noqa: E501
+        :type: TreeNode
+        """
+
+        self._alerting_disabled_on = alerting_disabled_on
+
+    @property
+    def assigned_on(self):
+        """Gets the assigned_on of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The assigned_on of this DeviceDataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._assigned_on
+
+    @assigned_on.setter
+    def assigned_on(self, assigned_on):
+        """Sets the assigned_on of this DeviceDataSource.
+
+
+        :param assigned_on: The assigned_on of this DeviceDataSource.  # noqa: E501
+        :type: int
+        """
+
+        self._assigned_on = assigned_on
+
+    @property
     def auto_discovery(self):
         """Gets the auto_discovery of this DeviceDataSource.  # noqa: E501
 
@@ -243,6 +327,69 @@ class DeviceDataSource(object):
         self._auto_discovery = auto_discovery
 
     @property
+    def collect_method(self):
+        """Gets the collect_method of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The collect_method of this DeviceDataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._collect_method
+
+    @collect_method.setter
+    def collect_method(self, collect_method):
+        """Sets the collect_method of this DeviceDataSource.
+
+
+        :param collect_method: The collect_method of this DeviceDataSource.  # noqa: E501
+        :type: str
+        """
+
+        self._collect_method = collect_method
+
+    @property
+    def created_on(self):
+        """Gets the created_on of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The created_on of this DeviceDataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._created_on
+
+    @created_on.setter
+    def created_on(self, created_on):
+        """Sets the created_on of this DeviceDataSource.
+
+
+        :param created_on: The created_on of this DeviceDataSource.  # noqa: E501
+        :type: int
+        """
+
+        self._created_on = created_on
+
+    @property
+    def data_source_description(self):
+        """Gets the data_source_description of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The data_source_description of this DeviceDataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_source_description
+
+    @data_source_description.setter
+    def data_source_description(self, data_source_description):
+        """Sets the data_source_description of this DeviceDataSource.
+
+
+        :param data_source_description: The data_source_description of this DeviceDataSource.  # noqa: E501
+        :type: str
+        """
+
+        self._data_source_description = data_source_description
+
+    @property
     def data_source_display_name(self):
         """Gets the data_source_display_name of this DeviceDataSource.  # noqa: E501
 
@@ -262,6 +409,90 @@ class DeviceDataSource(object):
         """
 
         self._data_source_display_name = data_source_display_name
+
+    @property
+    def data_source_id(self):
+        """Gets the data_source_id of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The data_source_id of this DeviceDataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_source_id
+
+    @data_source_id.setter
+    def data_source_id(self, data_source_id):
+        """Sets the data_source_id of this DeviceDataSource.
+
+
+        :param data_source_id: The data_source_id of this DeviceDataSource.  # noqa: E501
+        :type: int
+        """
+
+        self._data_source_id = data_source_id
+
+    @property
+    def data_source_name(self):
+        """Gets the data_source_name of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The data_source_name of this DeviceDataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_source_name
+
+    @data_source_name.setter
+    def data_source_name(self, data_source_name):
+        """Sets the data_source_name of this DeviceDataSource.
+
+
+        :param data_source_name: The data_source_name of this DeviceDataSource.  # noqa: E501
+        :type: str
+        """
+
+        self._data_source_name = data_source_name
+
+    @property
+    def data_source_type(self):
+        """Gets the data_source_type of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The data_source_type of this DeviceDataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_source_type
+
+    @data_source_type.setter
+    def data_source_type(self, data_source_type):
+        """Sets the data_source_type of this DeviceDataSource.
+
+
+        :param data_source_type: The data_source_type of this DeviceDataSource.  # noqa: E501
+        :type: str
+        """
+
+        self._data_source_type = data_source_type
+
+    @property
+    def device_display_name(self):
+        """Gets the device_display_name of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The device_display_name of this DeviceDataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._device_display_name
+
+    @device_display_name.setter
+    def device_display_name(self, device_display_name):
+        """Sets the device_display_name of this DeviceDataSource.
+
+
+        :param device_display_name: The device_display_name of this DeviceDataSource.  # noqa: E501
+        :type: str
+        """
+
+        self._device_display_name = device_display_name
 
     @property
     def device_id(self):
@@ -306,69 +537,6 @@ class DeviceDataSource(object):
         self._device_name = device_name
 
     @property
-    def created_on(self):
-        """Gets the created_on of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The created_on of this DeviceDataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._created_on
-
-    @created_on.setter
-    def created_on(self, created_on):
-        """Sets the created_on of this DeviceDataSource.
-
-
-        :param created_on: The created_on of this DeviceDataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._created_on = created_on
-
-    @property
-    def collect_method(self):
-        """Gets the collect_method of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The collect_method of this DeviceDataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._collect_method
-
-    @collect_method.setter
-    def collect_method(self, collect_method):
-        """Sets the collect_method of this DeviceDataSource.
-
-
-        :param collect_method: The collect_method of this DeviceDataSource.  # noqa: E501
-        :type: str
-        """
-
-        self._collect_method = collect_method
-
-    @property
-    def data_source_id(self):
-        """Gets the data_source_id of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The data_source_id of this DeviceDataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_source_id
-
-    @data_source_id.setter
-    def data_source_id(self, data_source_id):
-        """Sets the data_source_id of this DeviceDataSource.
-
-
-        :param data_source_id: The data_source_id of this DeviceDataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._data_source_id = data_source_id
-
-    @property
     def graphs(self):
         """Gets the graphs of this DeviceDataSource.  # noqa: E501
 
@@ -388,363 +556,6 @@ class DeviceDataSource(object):
         """
 
         self._graphs = graphs
-
-    @property
-    def sdt_at(self):
-        """Gets the sdt_at of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The sdt_at of this DeviceDataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._sdt_at
-
-    @sdt_at.setter
-    def sdt_at(self, sdt_at):
-        """Sets the sdt_at of this DeviceDataSource.
-
-
-        :param sdt_at: The sdt_at of this DeviceDataSource.  # noqa: E501
-        :type: str
-        """
-
-        self._sdt_at = sdt_at
-
-    @property
-    def next_auto_discovery_on(self):
-        """Gets the next_auto_discovery_on of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The next_auto_discovery_on of this DeviceDataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._next_auto_discovery_on
-
-    @next_auto_discovery_on.setter
-    def next_auto_discovery_on(self, next_auto_discovery_on):
-        """Sets the next_auto_discovery_on of this DeviceDataSource.
-
-
-        :param next_auto_discovery_on: The next_auto_discovery_on of this DeviceDataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._next_auto_discovery_on = next_auto_discovery_on
-
-    @property
-    def id(self):
-        """Gets the id of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The id of this DeviceDataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this DeviceDataSource.
-
-
-        :param id: The id of this DeviceDataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def alert_status_priority(self):
-        """Gets the alert_status_priority of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The alert_status_priority of this DeviceDataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._alert_status_priority
-
-    @alert_status_priority.setter
-    def alert_status_priority(self, alert_status_priority):
-        """Sets the alert_status_priority of this DeviceDataSource.
-
-
-        :param alert_status_priority: The alert_status_priority of this DeviceDataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._alert_status_priority = alert_status_priority
-
-    @property
-    def alert_disable_status(self):
-        """Gets the alert_disable_status of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The alert_disable_status of this DeviceDataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._alert_disable_status
-
-    @alert_disable_status.setter
-    def alert_disable_status(self, alert_disable_status):
-        """Sets the alert_disable_status of this DeviceDataSource.
-
-
-        :param alert_disable_status: The alert_disable_status of this DeviceDataSource.  # noqa: E501
-        :type: str
-        """
-
-        self._alert_disable_status = alert_disable_status
-
-    @property
-    def data_source_description(self):
-        """Gets the data_source_description of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The data_source_description of this DeviceDataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_source_description
-
-    @data_source_description.setter
-    def data_source_description(self, data_source_description):
-        """Sets the data_source_description of this DeviceDataSource.
-
-
-        :param data_source_description: The data_source_description of this DeviceDataSource.  # noqa: E501
-        :type: str
-        """
-
-        self._data_source_description = data_source_description
-
-    @property
-    def overview_graphs(self):
-        """Gets the overview_graphs of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The overview_graphs of this DeviceDataSource.  # noqa: E501
-        :rtype: list[DeviceDatasourceGraph]
-        """
-        return self._overview_graphs
-
-    @overview_graphs.setter
-    def overview_graphs(self, overview_graphs):
-        """Sets the overview_graphs of this DeviceDataSource.
-
-
-        :param overview_graphs: The overview_graphs of this DeviceDataSource.  # noqa: E501
-        :type: list[DeviceDatasourceGraph]
-        """
-
-        self._overview_graphs = overview_graphs
-
-    @property
-    def stop_monitoring(self):
-        """Gets the stop_monitoring of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The stop_monitoring of this DeviceDataSource.  # noqa: E501
-        :rtype: bool
-        """
-        return self._stop_monitoring
-
-    @stop_monitoring.setter
-    def stop_monitoring(self, stop_monitoring):
-        """Sets the stop_monitoring of this DeviceDataSource.
-
-
-        :param stop_monitoring: The stop_monitoring of this DeviceDataSource.  # noqa: E501
-        :type: bool
-        """
-
-        self._stop_monitoring = stop_monitoring
-
-    @property
-    def assigned_on(self):
-        """Gets the assigned_on of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The assigned_on of this DeviceDataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._assigned_on
-
-    @assigned_on.setter
-    def assigned_on(self, assigned_on):
-        """Sets the assigned_on of this DeviceDataSource.
-
-
-        :param assigned_on: The assigned_on of this DeviceDataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._assigned_on = assigned_on
-
-    @property
-    def is_multiple(self):
-        """Gets the is_multiple of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The is_multiple of this DeviceDataSource.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_multiple
-
-    @is_multiple.setter
-    def is_multiple(self, is_multiple):
-        """Sets the is_multiple of this DeviceDataSource.
-
-
-        :param is_multiple: The is_multiple of this DeviceDataSource.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_multiple = is_multiple
-
-    @property
-    def instance_number(self):
-        """Gets the instance_number of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The instance_number of this DeviceDataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._instance_number
-
-    @instance_number.setter
-    def instance_number(self, instance_number):
-        """Sets the instance_number of this DeviceDataSource.
-
-
-        :param instance_number: The instance_number of this DeviceDataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._instance_number = instance_number
-
-    @property
-    def updated_on(self):
-        """Gets the updated_on of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The updated_on of this DeviceDataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._updated_on
-
-    @updated_on.setter
-    def updated_on(self, updated_on):
-        """Sets the updated_on of this DeviceDataSource.
-
-
-        :param updated_on: The updated_on of this DeviceDataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._updated_on = updated_on
-
-    @property
-    def sdt_status(self):
-        """Gets the sdt_status of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The sdt_status of this DeviceDataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._sdt_status
-
-    @sdt_status.setter
-    def sdt_status(self, sdt_status):
-        """Sets the sdt_status of this DeviceDataSource.
-
-
-        :param sdt_status: The sdt_status of this DeviceDataSource.  # noqa: E501
-        :type: str
-        """
-
-        self._sdt_status = sdt_status
-
-    @property
-    def data_source_name(self):
-        """Gets the data_source_name of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The data_source_name of this DeviceDataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_source_name
-
-    @data_source_name.setter
-    def data_source_name(self, data_source_name):
-        """Sets the data_source_name of this DeviceDataSource.
-
-
-        :param data_source_name: The data_source_name of this DeviceDataSource.  # noqa: E501
-        :type: str
-        """
-
-        self._data_source_name = data_source_name
-
-    @property
-    def device_display_name(self):
-        """Gets the device_display_name of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The device_display_name of this DeviceDataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._device_display_name
-
-    @device_display_name.setter
-    def device_display_name(self, device_display_name):
-        """Sets the device_display_name of this DeviceDataSource.
-
-
-        :param device_display_name: The device_display_name of this DeviceDataSource.  # noqa: E501
-        :type: str
-        """
-
-        self._device_display_name = device_display_name
-
-    @property
-    def monitoring_instance_number(self):
-        """Gets the monitoring_instance_number of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The monitoring_instance_number of this DeviceDataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._monitoring_instance_number
-
-    @monitoring_instance_number.setter
-    def monitoring_instance_number(self, monitoring_instance_number):
-        """Sets the monitoring_instance_number of this DeviceDataSource.
-
-
-        :param monitoring_instance_number: The monitoring_instance_number of this DeviceDataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._monitoring_instance_number = monitoring_instance_number
-
-    @property
-    def groups_disabled_this_source(self):
-        """Gets the groups_disabled_this_source of this DeviceDataSource.  # noqa: E501
-
-
-        :return: The groups_disabled_this_source of this DeviceDataSource.  # noqa: E501
-        :rtype: list[TreeNode]
-        """
-        return self._groups_disabled_this_source
-
-    @groups_disabled_this_source.setter
-    def groups_disabled_this_source(self, groups_disabled_this_source):
-        """Sets the groups_disabled_this_source of this DeviceDataSource.
-
-
-        :param groups_disabled_this_source: The groups_disabled_this_source of this DeviceDataSource.  # noqa: E501
-        :type: list[TreeNode]
-        """
-
-        self._groups_disabled_this_source = groups_disabled_this_source
 
     @property
     def group_name(self):
@@ -768,6 +579,48 @@ class DeviceDataSource(object):
         self._group_name = group_name
 
     @property
+    def groups_disabled_this_source(self):
+        """Gets the groups_disabled_this_source of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The groups_disabled_this_source of this DeviceDataSource.  # noqa: E501
+        :rtype: list[TreeNode]
+        """
+        return self._groups_disabled_this_source
+
+    @groups_disabled_this_source.setter
+    def groups_disabled_this_source(self, groups_disabled_this_source):
+        """Sets the groups_disabled_this_source of this DeviceDataSource.
+
+
+        :param groups_disabled_this_source: The groups_disabled_this_source of this DeviceDataSource.  # noqa: E501
+        :type: list[TreeNode]
+        """
+
+        self._groups_disabled_this_source = groups_disabled_this_source
+
+    @property
+    def id(self):
+        """Gets the id of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The id of this DeviceDataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this DeviceDataSource.
+
+
+        :param id: The id of this DeviceDataSource.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
     def instance_auto_group_enabled(self):
         """Gets the instance_auto_group_enabled of this DeviceDataSource.  # noqa: E501
 
@@ -789,46 +642,151 @@ class DeviceDataSource(object):
         self._instance_auto_group_enabled = instance_auto_group_enabled
 
     @property
-    def alerting_disabled_on(self):
-        """Gets the alerting_disabled_on of this DeviceDataSource.  # noqa: E501
+    def instance_number(self):
+        """Gets the instance_number of this DeviceDataSource.  # noqa: E501
 
 
-        :return: The alerting_disabled_on of this DeviceDataSource.  # noqa: E501
-        :rtype: TreeNode
+        :return: The instance_number of this DeviceDataSource.  # noqa: E501
+        :rtype: int
         """
-        return self._alerting_disabled_on
+        return self._instance_number
 
-    @alerting_disabled_on.setter
-    def alerting_disabled_on(self, alerting_disabled_on):
-        """Sets the alerting_disabled_on of this DeviceDataSource.
+    @instance_number.setter
+    def instance_number(self, instance_number):
+        """Sets the instance_number of this DeviceDataSource.
 
 
-        :param alerting_disabled_on: The alerting_disabled_on of this DeviceDataSource.  # noqa: E501
-        :type: TreeNode
+        :param instance_number: The instance_number of this DeviceDataSource.  # noqa: E501
+        :type: int
         """
 
-        self._alerting_disabled_on = alerting_disabled_on
+        self._instance_number = instance_number
 
     @property
-    def data_source_type(self):
-        """Gets the data_source_type of this DeviceDataSource.  # noqa: E501
+    def is_multiple(self):
+        """Gets the is_multiple of this DeviceDataSource.  # noqa: E501
 
 
-        :return: The data_source_type of this DeviceDataSource.  # noqa: E501
+        :return: The is_multiple of this DeviceDataSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_multiple
+
+    @is_multiple.setter
+    def is_multiple(self, is_multiple):
+        """Sets the is_multiple of this DeviceDataSource.
+
+
+        :param is_multiple: The is_multiple of this DeviceDataSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_multiple = is_multiple
+
+    @property
+    def monitoring_instance_number(self):
+        """Gets the monitoring_instance_number of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The monitoring_instance_number of this DeviceDataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._monitoring_instance_number
+
+    @monitoring_instance_number.setter
+    def monitoring_instance_number(self, monitoring_instance_number):
+        """Sets the monitoring_instance_number of this DeviceDataSource.
+
+
+        :param monitoring_instance_number: The monitoring_instance_number of this DeviceDataSource.  # noqa: E501
+        :type: int
+        """
+
+        self._monitoring_instance_number = monitoring_instance_number
+
+    @property
+    def next_auto_discovery_on(self):
+        """Gets the next_auto_discovery_on of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The next_auto_discovery_on of this DeviceDataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._next_auto_discovery_on
+
+    @next_auto_discovery_on.setter
+    def next_auto_discovery_on(self, next_auto_discovery_on):
+        """Sets the next_auto_discovery_on of this DeviceDataSource.
+
+
+        :param next_auto_discovery_on: The next_auto_discovery_on of this DeviceDataSource.  # noqa: E501
+        :type: int
+        """
+
+        self._next_auto_discovery_on = next_auto_discovery_on
+
+    @property
+    def overview_graphs(self):
+        """Gets the overview_graphs of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The overview_graphs of this DeviceDataSource.  # noqa: E501
+        :rtype: list[DeviceDatasourceGraph]
+        """
+        return self._overview_graphs
+
+    @overview_graphs.setter
+    def overview_graphs(self, overview_graphs):
+        """Sets the overview_graphs of this DeviceDataSource.
+
+
+        :param overview_graphs: The overview_graphs of this DeviceDataSource.  # noqa: E501
+        :type: list[DeviceDatasourceGraph]
+        """
+
+        self._overview_graphs = overview_graphs
+
+    @property
+    def sdt_at(self):
+        """Gets the sdt_at of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The sdt_at of this DeviceDataSource.  # noqa: E501
         :rtype: str
         """
-        return self._data_source_type
+        return self._sdt_at
 
-    @data_source_type.setter
-    def data_source_type(self, data_source_type):
-        """Sets the data_source_type of this DeviceDataSource.
+    @sdt_at.setter
+    def sdt_at(self, sdt_at):
+        """Sets the sdt_at of this DeviceDataSource.
 
 
-        :param data_source_type: The data_source_type of this DeviceDataSource.  # noqa: E501
+        :param sdt_at: The sdt_at of this DeviceDataSource.  # noqa: E501
         :type: str
         """
 
-        self._data_source_type = data_source_type
+        self._sdt_at = sdt_at
+
+    @property
+    def sdt_status(self):
+        """Gets the sdt_status of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The sdt_status of this DeviceDataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._sdt_status
+
+    @sdt_status.setter
+    def sdt_status(self, sdt_status):
+        """Sets the sdt_status of this DeviceDataSource.
+
+
+        :param sdt_status: The sdt_status of this DeviceDataSource.  # noqa: E501
+        :type: str
+        """
+
+        self._sdt_status = sdt_status
 
     @property
     def status(self):
@@ -850,6 +808,48 @@ class DeviceDataSource(object):
         """
 
         self._status = status
+
+    @property
+    def stop_monitoring(self):
+        """Gets the stop_monitoring of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The stop_monitoring of this DeviceDataSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._stop_monitoring
+
+    @stop_monitoring.setter
+    def stop_monitoring(self, stop_monitoring):
+        """Sets the stop_monitoring of this DeviceDataSource.
+
+
+        :param stop_monitoring: The stop_monitoring of this DeviceDataSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._stop_monitoring = stop_monitoring
+
+    @property
+    def updated_on(self):
+        """Gets the updated_on of this DeviceDataSource.  # noqa: E501
+
+
+        :return: The updated_on of this DeviceDataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._updated_on
+
+    @updated_on.setter
+    def updated_on(self, updated_on):
+        """Sets the updated_on of this DeviceDataSource.
+
+
+        :param updated_on: The updated_on of this DeviceDataSource.  # noqa: E501
+        :type: int
+        """
+
+        self._updated_on = updated_on
 
     def to_dict(self):
         """Returns the model properties as a dict"""

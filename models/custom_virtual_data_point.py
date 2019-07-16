@@ -33,62 +33,41 @@ class CustomVirtualDataPoint(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'rpn': 'str',
         'custom_graph_id': 'int',
         'display': 'GraphDisplay',
+        'id': 'int',
         'name': 'str',
-        'id': 'int'
+        'rpn': 'str'
     }
 
     attribute_map = {
-        'rpn': 'rpn',
         'custom_graph_id': 'customGraphId',
         'display': 'display',
+        'id': 'id',
         'name': 'name',
-        'id': 'id'
+        'rpn': 'rpn'
     }
 
-    def __init__(self, rpn=None, custom_graph_id=None, display=None, name=None, id=None):  # noqa: E501
+    def __init__(self, custom_graph_id=None, display=None, id=None, name=None, rpn=None):  # noqa: E501
         """CustomVirtualDataPoint - a model defined in Swagger"""  # noqa: E501
 
-        self._rpn = None
         self._custom_graph_id = None
         self._display = None
-        self._name = None
         self._id = None
+        self._name = None
+        self._rpn = None
         self.discriminator = None
 
-        if rpn is not None:
-            self.rpn = rpn
         if custom_graph_id is not None:
             self.custom_graph_id = custom_graph_id
         if display is not None:
             self.display = display
-        if name is not None:
-            self.name = name
         if id is not None:
             self.id = id
-
-    @property
-    def rpn(self):
-        """Gets the rpn of this CustomVirtualDataPoint.  # noqa: E501
-
-
-        :return: The rpn of this CustomVirtualDataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._rpn
-
-    @rpn.setter
-    def rpn(self, rpn):
-        """Sets the rpn of this CustomVirtualDataPoint.
-
-
-        :param rpn: The rpn of this CustomVirtualDataPoint.  # noqa: E501
-        :type: str
-        """
-
-        self._rpn = rpn
+        if name is not None:
+            self.name = name
+        if rpn is not None:
+            self.rpn = rpn
 
     @property
     def custom_graph_id(self):
@@ -133,6 +112,27 @@ class CustomVirtualDataPoint(object):
         self._display = display
 
     @property
+    def id(self):
+        """Gets the id of this CustomVirtualDataPoint.  # noqa: E501
+
+
+        :return: The id of this CustomVirtualDataPoint.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this CustomVirtualDataPoint.
+
+
+        :param id: The id of this CustomVirtualDataPoint.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
     def name(self):
         """Gets the name of this CustomVirtualDataPoint.  # noqa: E501
 
@@ -154,25 +154,25 @@ class CustomVirtualDataPoint(object):
         self._name = name
 
     @property
-    def id(self):
-        """Gets the id of this CustomVirtualDataPoint.  # noqa: E501
+    def rpn(self):
+        """Gets the rpn of this CustomVirtualDataPoint.  # noqa: E501
 
 
-        :return: The id of this CustomVirtualDataPoint.  # noqa: E501
-        :rtype: int
+        :return: The rpn of this CustomVirtualDataPoint.  # noqa: E501
+        :rtype: str
         """
-        return self._id
+        return self._rpn
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this CustomVirtualDataPoint.
+    @rpn.setter
+    def rpn(self, rpn):
+        """Sets the rpn of this CustomVirtualDataPoint.
 
 
-        :param id: The id of this CustomVirtualDataPoint.  # noqa: E501
-        :type: int
+        :param rpn: The rpn of this CustomVirtualDataPoint.  # noqa: E501
+        :type: str
         """
 
-        self._id = id
+        self._rpn = rpn
 
     def to_dict(self):
         """Returns the model properties as a dict"""

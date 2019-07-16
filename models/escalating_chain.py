@@ -34,122 +34,101 @@ class EscalatingChain(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'in_alerting': 'bool',
-        'throttling_alerts': 'int',
-        'enable_throttling': 'bool',
-        'destinations': 'list[Chain]',
-        'name': 'str',
-        'description': 'str',
-        'id': 'int',
         'cc_destinations': 'list[Recipient]',
+        'description': 'str',
+        'destinations': 'list[Chain]',
+        'enable_throttling': 'bool',
+        'id': 'int',
+        'in_alerting': 'bool',
+        'name': 'str',
+        'throttling_alerts': 'int',
         'throttling_period': 'int'
     }
 
     attribute_map = {
-        'in_alerting': 'inAlerting',
-        'throttling_alerts': 'throttlingAlerts',
-        'enable_throttling': 'enableThrottling',
-        'destinations': 'destinations',
-        'name': 'name',
-        'description': 'description',
-        'id': 'id',
         'cc_destinations': 'ccDestinations',
+        'description': 'description',
+        'destinations': 'destinations',
+        'enable_throttling': 'enableThrottling',
+        'id': 'id',
+        'in_alerting': 'inAlerting',
+        'name': 'name',
+        'throttling_alerts': 'throttlingAlerts',
         'throttling_period': 'throttlingPeriod'
     }
 
-    def __init__(self, in_alerting=None, throttling_alerts=None, enable_throttling=None, destinations=None, name=None, description=None, id=None, cc_destinations=None, throttling_period=None):  # noqa: E501
+    def __init__(self, cc_destinations=None, description=None, destinations=None, enable_throttling=None, id=None, in_alerting=None, name=None, throttling_alerts=None, throttling_period=None):  # noqa: E501
         """EscalatingChain - a model defined in Swagger"""  # noqa: E501
 
-        self._in_alerting = None
-        self._throttling_alerts = None
-        self._enable_throttling = None
-        self._destinations = None
-        self._name = None
-        self._description = None
-        self._id = None
         self._cc_destinations = None
+        self._description = None
+        self._destinations = None
+        self._enable_throttling = None
+        self._id = None
+        self._in_alerting = None
+        self._name = None
+        self._throttling_alerts = None
         self._throttling_period = None
         self.discriminator = None
 
-        if in_alerting is not None:
-            self.in_alerting = in_alerting
-        if throttling_alerts is not None:
-            self.throttling_alerts = throttling_alerts
-        if enable_throttling is not None:
-            self.enable_throttling = enable_throttling
-        self.destinations = destinations
-        self.name = name
-        if description is not None:
-            self.description = description
-        if id is not None:
-            self.id = id
         if cc_destinations is not None:
             self.cc_destinations = cc_destinations
+        if description is not None:
+            self.description = description
+        self.destinations = destinations
+        if enable_throttling is not None:
+            self.enable_throttling = enable_throttling
+        if id is not None:
+            self.id = id
+        if in_alerting is not None:
+            self.in_alerting = in_alerting
+        self.name = name
+        if throttling_alerts is not None:
+            self.throttling_alerts = throttling_alerts
         if throttling_period is not None:
             self.throttling_period = throttling_period
 
     @property
-    def in_alerting(self):
-        """Gets the in_alerting of this EscalatingChain.  # noqa: E501
+    def cc_destinations(self):
+        """Gets the cc_destinations of this EscalatingChain.  # noqa: E501
 
 
-        :return: The in_alerting of this EscalatingChain.  # noqa: E501
-        :rtype: bool
+        :return: The cc_destinations of this EscalatingChain.  # noqa: E501
+        :rtype: list[Recipient]
         """
-        return self._in_alerting
+        return self._cc_destinations
 
-    @in_alerting.setter
-    def in_alerting(self, in_alerting):
-        """Sets the in_alerting of this EscalatingChain.
+    @cc_destinations.setter
+    def cc_destinations(self, cc_destinations):
+        """Sets the cc_destinations of this EscalatingChain.
 
 
-        :param in_alerting: The in_alerting of this EscalatingChain.  # noqa: E501
-        :type: bool
+        :param cc_destinations: The cc_destinations of this EscalatingChain.  # noqa: E501
+        :type: list[Recipient]
         """
 
-        self._in_alerting = in_alerting
+        self._cc_destinations = cc_destinations
 
     @property
-    def throttling_alerts(self):
-        """Gets the throttling_alerts of this EscalatingChain.  # noqa: E501
+    def description(self):
+        """Gets the description of this EscalatingChain.  # noqa: E501
 
 
-        :return: The throttling_alerts of this EscalatingChain.  # noqa: E501
-        :rtype: int
+        :return: The description of this EscalatingChain.  # noqa: E501
+        :rtype: str
         """
-        return self._throttling_alerts
+        return self._description
 
-    @throttling_alerts.setter
-    def throttling_alerts(self, throttling_alerts):
-        """Sets the throttling_alerts of this EscalatingChain.
-
-
-        :param throttling_alerts: The throttling_alerts of this EscalatingChain.  # noqa: E501
-        :type: int
-        """
-
-        self._throttling_alerts = throttling_alerts
-
-    @property
-    def enable_throttling(self):
-        """Gets the enable_throttling of this EscalatingChain.  # noqa: E501
+    @description.setter
+    def description(self, description):
+        """Sets the description of this EscalatingChain.
 
 
-        :return: The enable_throttling of this EscalatingChain.  # noqa: E501
-        :rtype: bool
-        """
-        return self._enable_throttling
-
-    @enable_throttling.setter
-    def enable_throttling(self, enable_throttling):
-        """Sets the enable_throttling of this EscalatingChain.
-
-
-        :param enable_throttling: The enable_throttling of this EscalatingChain.  # noqa: E501
-        :type: bool
+        :param description: The description of this EscalatingChain.  # noqa: E501
+        :type: str
         """
 
-        self._enable_throttling = enable_throttling
+        self._description = description
 
     @property
     def destinations(self):
@@ -175,48 +154,25 @@ class EscalatingChain(object):
         self._destinations = destinations
 
     @property
-    def name(self):
-        """Gets the name of this EscalatingChain.  # noqa: E501
+    def enable_throttling(self):
+        """Gets the enable_throttling of this EscalatingChain.  # noqa: E501
 
 
-        :return: The name of this EscalatingChain.  # noqa: E501
-        :rtype: str
+        :return: The enable_throttling of this EscalatingChain.  # noqa: E501
+        :rtype: bool
         """
-        return self._name
+        return self._enable_throttling
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this EscalatingChain.
-
-
-        :param name: The name of this EscalatingChain.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
-    def description(self):
-        """Gets the description of this EscalatingChain.  # noqa: E501
+    @enable_throttling.setter
+    def enable_throttling(self, enable_throttling):
+        """Sets the enable_throttling of this EscalatingChain.
 
 
-        :return: The description of this EscalatingChain.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this EscalatingChain.
-
-
-        :param description: The description of this EscalatingChain.  # noqa: E501
-        :type: str
+        :param enable_throttling: The enable_throttling of this EscalatingChain.  # noqa: E501
+        :type: bool
         """
 
-        self._description = description
+        self._enable_throttling = enable_throttling
 
     @property
     def id(self):
@@ -240,25 +196,69 @@ class EscalatingChain(object):
         self._id = id
 
     @property
-    def cc_destinations(self):
-        """Gets the cc_destinations of this EscalatingChain.  # noqa: E501
+    def in_alerting(self):
+        """Gets the in_alerting of this EscalatingChain.  # noqa: E501
 
 
-        :return: The cc_destinations of this EscalatingChain.  # noqa: E501
-        :rtype: list[Recipient]
+        :return: The in_alerting of this EscalatingChain.  # noqa: E501
+        :rtype: bool
         """
-        return self._cc_destinations
+        return self._in_alerting
 
-    @cc_destinations.setter
-    def cc_destinations(self, cc_destinations):
-        """Sets the cc_destinations of this EscalatingChain.
+    @in_alerting.setter
+    def in_alerting(self, in_alerting):
+        """Sets the in_alerting of this EscalatingChain.
 
 
-        :param cc_destinations: The cc_destinations of this EscalatingChain.  # noqa: E501
-        :type: list[Recipient]
+        :param in_alerting: The in_alerting of this EscalatingChain.  # noqa: E501
+        :type: bool
         """
 
-        self._cc_destinations = cc_destinations
+        self._in_alerting = in_alerting
+
+    @property
+    def name(self):
+        """Gets the name of this EscalatingChain.  # noqa: E501
+
+
+        :return: The name of this EscalatingChain.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this EscalatingChain.
+
+
+        :param name: The name of this EscalatingChain.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def throttling_alerts(self):
+        """Gets the throttling_alerts of this EscalatingChain.  # noqa: E501
+
+
+        :return: The throttling_alerts of this EscalatingChain.  # noqa: E501
+        :rtype: int
+        """
+        return self._throttling_alerts
+
+    @throttling_alerts.setter
+    def throttling_alerts(self, throttling_alerts):
+        """Sets the throttling_alerts of this EscalatingChain.
+
+
+        :param throttling_alerts: The throttling_alerts of this EscalatingChain.  # noqa: E501
+        :type: int
+        """
+
+        self._throttling_alerts = throttling_alerts
 
     @property
     def throttling_period(self):

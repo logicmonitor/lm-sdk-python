@@ -31,126 +31,84 @@ class GaugeDataPoint(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'rpn': 'str',
-        'data_source_id': 'int',
-        'data_point_name': 'str',
-        'data_point_id': 'int',
-        'instance_name': 'str',
-        'data_source_full_name': 'str',
-        'data_series': 'str',
         'aggregate_function': 'str',
+        'data_point_id': 'int',
+        'data_point_name': 'str',
+        'data_series': 'str',
+        'data_source_full_name': 'str',
+        'data_source_id': 'int',
+        'device_display_name': 'str',
         'device_group_full_path': 'str',
-        'device_display_name': 'str'
+        'instance_name': 'str',
+        'rpn': 'str'
     }
 
     attribute_map = {
-        'rpn': 'rpn',
-        'data_source_id': 'dataSourceId',
-        'data_point_name': 'dataPointName',
-        'data_point_id': 'dataPointId',
-        'instance_name': 'instanceName',
-        'data_source_full_name': 'dataSourceFullName',
-        'data_series': 'dataSeries',
         'aggregate_function': 'aggregateFunction',
+        'data_point_id': 'dataPointId',
+        'data_point_name': 'dataPointName',
+        'data_series': 'dataSeries',
+        'data_source_full_name': 'dataSourceFullName',
+        'data_source_id': 'dataSourceId',
+        'device_display_name': 'deviceDisplayName',
         'device_group_full_path': 'deviceGroupFullPath',
-        'device_display_name': 'deviceDisplayName'
+        'instance_name': 'instanceName',
+        'rpn': 'rpn'
     }
 
-    def __init__(self, rpn=None, data_source_id=None, data_point_name=None, data_point_id=None, instance_name=None, data_source_full_name=None, data_series=None, aggregate_function=None, device_group_full_path=None, device_display_name=None):  # noqa: E501
+    def __init__(self, aggregate_function=None, data_point_id=None, data_point_name=None, data_series=None, data_source_full_name=None, data_source_id=None, device_display_name=None, device_group_full_path=None, instance_name=None, rpn=None):  # noqa: E501
         """GaugeDataPoint - a model defined in Swagger"""  # noqa: E501
 
-        self._rpn = None
-        self._data_source_id = None
-        self._data_point_name = None
-        self._data_point_id = None
-        self._instance_name = None
-        self._data_source_full_name = None
-        self._data_series = None
         self._aggregate_function = None
-        self._device_group_full_path = None
+        self._data_point_id = None
+        self._data_point_name = None
+        self._data_series = None
+        self._data_source_full_name = None
+        self._data_source_id = None
         self._device_display_name = None
+        self._device_group_full_path = None
+        self._instance_name = None
+        self._rpn = None
         self.discriminator = None
 
-        if rpn is not None:
-            self.rpn = rpn
-        if data_source_id is not None:
-            self.data_source_id = data_source_id
-        if data_point_name is not None:
-            self.data_point_name = data_point_name
-        if data_point_id is not None:
-            self.data_point_id = data_point_id
-        self.instance_name = instance_name
-        if data_source_full_name is not None:
-            self.data_source_full_name = data_source_full_name
-        if data_series is not None:
-            self.data_series = data_series
         if aggregate_function is not None:
             self.aggregate_function = aggregate_function
-        self.device_group_full_path = device_group_full_path
+        if data_point_id is not None:
+            self.data_point_id = data_point_id
+        if data_point_name is not None:
+            self.data_point_name = data_point_name
+        if data_series is not None:
+            self.data_series = data_series
+        if data_source_full_name is not None:
+            self.data_source_full_name = data_source_full_name
+        if data_source_id is not None:
+            self.data_source_id = data_source_id
         self.device_display_name = device_display_name
+        self.device_group_full_path = device_group_full_path
+        self.instance_name = instance_name
+        if rpn is not None:
+            self.rpn = rpn
 
     @property
-    def rpn(self):
-        """Gets the rpn of this GaugeDataPoint.  # noqa: E501
+    def aggregate_function(self):
+        """Gets the aggregate_function of this GaugeDataPoint.  # noqa: E501
 
 
-        :return: The rpn of this GaugeDataPoint.  # noqa: E501
+        :return: The aggregate_function of this GaugeDataPoint.  # noqa: E501
         :rtype: str
         """
-        return self._rpn
+        return self._aggregate_function
 
-    @rpn.setter
-    def rpn(self, rpn):
-        """Sets the rpn of this GaugeDataPoint.
+    @aggregate_function.setter
+    def aggregate_function(self, aggregate_function):
+        """Sets the aggregate_function of this GaugeDataPoint.
 
 
-        :param rpn: The rpn of this GaugeDataPoint.  # noqa: E501
+        :param aggregate_function: The aggregate_function of this GaugeDataPoint.  # noqa: E501
         :type: str
         """
 
-        self._rpn = rpn
-
-    @property
-    def data_source_id(self):
-        """Gets the data_source_id of this GaugeDataPoint.  # noqa: E501
-
-
-        :return: The data_source_id of this GaugeDataPoint.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_source_id
-
-    @data_source_id.setter
-    def data_source_id(self, data_source_id):
-        """Sets the data_source_id of this GaugeDataPoint.
-
-
-        :param data_source_id: The data_source_id of this GaugeDataPoint.  # noqa: E501
-        :type: int
-        """
-
-        self._data_source_id = data_source_id
-
-    @property
-    def data_point_name(self):
-        """Gets the data_point_name of this GaugeDataPoint.  # noqa: E501
-
-
-        :return: The data_point_name of this GaugeDataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_point_name
-
-    @data_point_name.setter
-    def data_point_name(self, data_point_name):
-        """Sets the data_point_name of this GaugeDataPoint.
-
-
-        :param data_point_name: The data_point_name of this GaugeDataPoint.  # noqa: E501
-        :type: str
-        """
-
-        self._data_point_name = data_point_name
+        self._aggregate_function = aggregate_function
 
     @property
     def data_point_id(self):
@@ -174,48 +132,25 @@ class GaugeDataPoint(object):
         self._data_point_id = data_point_id
 
     @property
-    def instance_name(self):
-        """Gets the instance_name of this GaugeDataPoint.  # noqa: E501
+    def data_point_name(self):
+        """Gets the data_point_name of this GaugeDataPoint.  # noqa: E501
 
 
-        :return: The instance_name of this GaugeDataPoint.  # noqa: E501
+        :return: The data_point_name of this GaugeDataPoint.  # noqa: E501
         :rtype: str
         """
-        return self._instance_name
+        return self._data_point_name
 
-    @instance_name.setter
-    def instance_name(self, instance_name):
-        """Sets the instance_name of this GaugeDataPoint.
-
-
-        :param instance_name: The instance_name of this GaugeDataPoint.  # noqa: E501
-        :type: str
-        """
-        if instance_name is None:
-            raise ValueError("Invalid value for `instance_name`, must not be `None`")  # noqa: E501
-
-        self._instance_name = instance_name
-
-    @property
-    def data_source_full_name(self):
-        """Gets the data_source_full_name of this GaugeDataPoint.  # noqa: E501
+    @data_point_name.setter
+    def data_point_name(self, data_point_name):
+        """Sets the data_point_name of this GaugeDataPoint.
 
 
-        :return: The data_source_full_name of this GaugeDataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_source_full_name
-
-    @data_source_full_name.setter
-    def data_source_full_name(self, data_source_full_name):
-        """Sets the data_source_full_name of this GaugeDataPoint.
-
-
-        :param data_source_full_name: The data_source_full_name of this GaugeDataPoint.  # noqa: E501
+        :param data_point_name: The data_point_name of this GaugeDataPoint.  # noqa: E501
         :type: str
         """
 
-        self._data_source_full_name = data_source_full_name
+        self._data_point_name = data_point_name
 
     @property
     def data_series(self):
@@ -239,25 +174,69 @@ class GaugeDataPoint(object):
         self._data_series = data_series
 
     @property
-    def aggregate_function(self):
-        """Gets the aggregate_function of this GaugeDataPoint.  # noqa: E501
+    def data_source_full_name(self):
+        """Gets the data_source_full_name of this GaugeDataPoint.  # noqa: E501
 
 
-        :return: The aggregate_function of this GaugeDataPoint.  # noqa: E501
+        :return: The data_source_full_name of this GaugeDataPoint.  # noqa: E501
         :rtype: str
         """
-        return self._aggregate_function
+        return self._data_source_full_name
 
-    @aggregate_function.setter
-    def aggregate_function(self, aggregate_function):
-        """Sets the aggregate_function of this GaugeDataPoint.
+    @data_source_full_name.setter
+    def data_source_full_name(self, data_source_full_name):
+        """Sets the data_source_full_name of this GaugeDataPoint.
 
 
-        :param aggregate_function: The aggregate_function of this GaugeDataPoint.  # noqa: E501
+        :param data_source_full_name: The data_source_full_name of this GaugeDataPoint.  # noqa: E501
         :type: str
         """
 
-        self._aggregate_function = aggregate_function
+        self._data_source_full_name = data_source_full_name
+
+    @property
+    def data_source_id(self):
+        """Gets the data_source_id of this GaugeDataPoint.  # noqa: E501
+
+
+        :return: The data_source_id of this GaugeDataPoint.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_source_id
+
+    @data_source_id.setter
+    def data_source_id(self, data_source_id):
+        """Sets the data_source_id of this GaugeDataPoint.
+
+
+        :param data_source_id: The data_source_id of this GaugeDataPoint.  # noqa: E501
+        :type: int
+        """
+
+        self._data_source_id = data_source_id
+
+    @property
+    def device_display_name(self):
+        """Gets the device_display_name of this GaugeDataPoint.  # noqa: E501
+
+
+        :return: The device_display_name of this GaugeDataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._device_display_name
+
+    @device_display_name.setter
+    def device_display_name(self, device_display_name):
+        """Sets the device_display_name of this GaugeDataPoint.
+
+
+        :param device_display_name: The device_display_name of this GaugeDataPoint.  # noqa: E501
+        :type: str
+        """
+        if device_display_name is None:
+            raise ValueError("Invalid value for `device_display_name`, must not be `None`")  # noqa: E501
+
+        self._device_display_name = device_display_name
 
     @property
     def device_group_full_path(self):
@@ -283,27 +262,48 @@ class GaugeDataPoint(object):
         self._device_group_full_path = device_group_full_path
 
     @property
-    def device_display_name(self):
-        """Gets the device_display_name of this GaugeDataPoint.  # noqa: E501
+    def instance_name(self):
+        """Gets the instance_name of this GaugeDataPoint.  # noqa: E501
 
 
-        :return: The device_display_name of this GaugeDataPoint.  # noqa: E501
+        :return: The instance_name of this GaugeDataPoint.  # noqa: E501
         :rtype: str
         """
-        return self._device_display_name
+        return self._instance_name
 
-    @device_display_name.setter
-    def device_display_name(self, device_display_name):
-        """Sets the device_display_name of this GaugeDataPoint.
+    @instance_name.setter
+    def instance_name(self, instance_name):
+        """Sets the instance_name of this GaugeDataPoint.
 
 
-        :param device_display_name: The device_display_name of this GaugeDataPoint.  # noqa: E501
+        :param instance_name: The instance_name of this GaugeDataPoint.  # noqa: E501
         :type: str
         """
-        if device_display_name is None:
-            raise ValueError("Invalid value for `device_display_name`, must not be `None`")  # noqa: E501
+        if instance_name is None:
+            raise ValueError("Invalid value for `instance_name`, must not be `None`")  # noqa: E501
 
-        self._device_display_name = device_display_name
+        self._instance_name = instance_name
+
+    @property
+    def rpn(self):
+        """Gets the rpn of this GaugeDataPoint.  # noqa: E501
+
+
+        :return: The rpn of this GaugeDataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._rpn
+
+    @rpn.setter
+    def rpn(self, rpn):
+        """Sets the rpn of this GaugeDataPoint.
+
+
+        :param rpn: The rpn of this GaugeDataPoint.  # noqa: E501
+        :type: str
+        """
+
+        self._rpn = rpn
 
     def to_dict(self):
         """Returns the model properties as a dict"""

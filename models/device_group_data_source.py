@@ -31,148 +31,56 @@ class DeviceGroupDataSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'stop_monitoring': 'bool',
-        'data_source_id': 'int',
-        'data_source_group_name': 'str',
-        'device_group_id': 'int',
         'data_source_display_name': 'str',
-        'disable_alerting': 'bool',
+        'data_source_group_name': 'str',
+        'data_source_id': 'int',
         'data_source_name': 'str',
-        'data_source_type': 'str'
+        'data_source_type': 'str',
+        'device_group_id': 'int',
+        'disable_alerting': 'bool',
+        'stop_monitoring': 'bool'
     }
 
     attribute_map = {
-        'stop_monitoring': 'stopMonitoring',
-        'data_source_id': 'dataSourceId',
-        'data_source_group_name': 'dataSourceGroupName',
-        'device_group_id': 'deviceGroupId',
         'data_source_display_name': 'dataSourceDisplayName',
-        'disable_alerting': 'disableAlerting',
+        'data_source_group_name': 'dataSourceGroupName',
+        'data_source_id': 'dataSourceId',
         'data_source_name': 'dataSourceName',
-        'data_source_type': 'dataSourceType'
+        'data_source_type': 'dataSourceType',
+        'device_group_id': 'deviceGroupId',
+        'disable_alerting': 'disableAlerting',
+        'stop_monitoring': 'stopMonitoring'
     }
 
-    def __init__(self, stop_monitoring=None, data_source_id=None, data_source_group_name=None, device_group_id=None, data_source_display_name=None, disable_alerting=None, data_source_name=None, data_source_type=None):  # noqa: E501
+    def __init__(self, data_source_display_name=None, data_source_group_name=None, data_source_id=None, data_source_name=None, data_source_type=None, device_group_id=None, disable_alerting=None, stop_monitoring=None):  # noqa: E501
         """DeviceGroupDataSource - a model defined in Swagger"""  # noqa: E501
 
-        self._stop_monitoring = None
-        self._data_source_id = None
-        self._data_source_group_name = None
-        self._device_group_id = None
         self._data_source_display_name = None
-        self._disable_alerting = None
+        self._data_source_group_name = None
+        self._data_source_id = None
         self._data_source_name = None
         self._data_source_type = None
+        self._device_group_id = None
+        self._disable_alerting = None
+        self._stop_monitoring = None
         self.discriminator = None
 
-        if stop_monitoring is not None:
-            self.stop_monitoring = stop_monitoring
-        if data_source_id is not None:
-            self.data_source_id = data_source_id
-        if data_source_group_name is not None:
-            self.data_source_group_name = data_source_group_name
-        if device_group_id is not None:
-            self.device_group_id = device_group_id
         if data_source_display_name is not None:
             self.data_source_display_name = data_source_display_name
-        if disable_alerting is not None:
-            self.disable_alerting = disable_alerting
+        if data_source_group_name is not None:
+            self.data_source_group_name = data_source_group_name
+        if data_source_id is not None:
+            self.data_source_id = data_source_id
         if data_source_name is not None:
             self.data_source_name = data_source_name
         if data_source_type is not None:
             self.data_source_type = data_source_type
-
-    @property
-    def stop_monitoring(self):
-        """Gets the stop_monitoring of this DeviceGroupDataSource.  # noqa: E501
-
-        Boolean flag for enabling/disabling monitoring of DataSource  # noqa: E501
-
-        :return: The stop_monitoring of this DeviceGroupDataSource.  # noqa: E501
-        :rtype: bool
-        """
-        return self._stop_monitoring
-
-    @stop_monitoring.setter
-    def stop_monitoring(self, stop_monitoring):
-        """Sets the stop_monitoring of this DeviceGroupDataSource.
-
-        Boolean flag for enabling/disabling monitoring of DataSource  # noqa: E501
-
-        :param stop_monitoring: The stop_monitoring of this DeviceGroupDataSource.  # noqa: E501
-        :type: bool
-        """
-
-        self._stop_monitoring = stop_monitoring
-
-    @property
-    def data_source_id(self):
-        """Gets the data_source_id of this DeviceGroupDataSource.  # noqa: E501
-
-        The ID of the DataSource  # noqa: E501
-
-        :return: The data_source_id of this DeviceGroupDataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_source_id
-
-    @data_source_id.setter
-    def data_source_id(self, data_source_id):
-        """Sets the data_source_id of this DeviceGroupDataSource.
-
-        The ID of the DataSource  # noqa: E501
-
-        :param data_source_id: The data_source_id of this DeviceGroupDataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._data_source_id = data_source_id
-
-    @property
-    def data_source_group_name(self):
-        """Gets the data_source_group_name of this DeviceGroupDataSource.  # noqa: E501
-
-        The DataSource Group name  # noqa: E501
-
-        :return: The data_source_group_name of this DeviceGroupDataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_source_group_name
-
-    @data_source_group_name.setter
-    def data_source_group_name(self, data_source_group_name):
-        """Sets the data_source_group_name of this DeviceGroupDataSource.
-
-        The DataSource Group name  # noqa: E501
-
-        :param data_source_group_name: The data_source_group_name of this DeviceGroupDataSource.  # noqa: E501
-        :type: str
-        """
-
-        self._data_source_group_name = data_source_group_name
-
-    @property
-    def device_group_id(self):
-        """Gets the device_group_id of this DeviceGroupDataSource.  # noqa: E501
-
-        The ID of the Device Group for the DataSource  # noqa: E501
-
-        :return: The device_group_id of this DeviceGroupDataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._device_group_id
-
-    @device_group_id.setter
-    def device_group_id(self, device_group_id):
-        """Sets the device_group_id of this DeviceGroupDataSource.
-
-        The ID of the Device Group for the DataSource  # noqa: E501
-
-        :param device_group_id: The device_group_id of this DeviceGroupDataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._device_group_id = device_group_id
+        if device_group_id is not None:
+            self.device_group_id = device_group_id
+        if disable_alerting is not None:
+            self.disable_alerting = disable_alerting
+        if stop_monitoring is not None:
+            self.stop_monitoring = stop_monitoring
 
     @property
     def data_source_display_name(self):
@@ -198,27 +106,50 @@ class DeviceGroupDataSource(object):
         self._data_source_display_name = data_source_display_name
 
     @property
-    def disable_alerting(self):
-        """Gets the disable_alerting of this DeviceGroupDataSource.  # noqa: E501
+    def data_source_group_name(self):
+        """Gets the data_source_group_name of this DeviceGroupDataSource.  # noqa: E501
 
-        Boolean flag for enabling/disabling alerting for DataSource  # noqa: E501
+        The DataSource Group name  # noqa: E501
 
-        :return: The disable_alerting of this DeviceGroupDataSource.  # noqa: E501
-        :rtype: bool
+        :return: The data_source_group_name of this DeviceGroupDataSource.  # noqa: E501
+        :rtype: str
         """
-        return self._disable_alerting
+        return self._data_source_group_name
 
-    @disable_alerting.setter
-    def disable_alerting(self, disable_alerting):
-        """Sets the disable_alerting of this DeviceGroupDataSource.
+    @data_source_group_name.setter
+    def data_source_group_name(self, data_source_group_name):
+        """Sets the data_source_group_name of this DeviceGroupDataSource.
 
-        Boolean flag for enabling/disabling alerting for DataSource  # noqa: E501
+        The DataSource Group name  # noqa: E501
 
-        :param disable_alerting: The disable_alerting of this DeviceGroupDataSource.  # noqa: E501
-        :type: bool
+        :param data_source_group_name: The data_source_group_name of this DeviceGroupDataSource.  # noqa: E501
+        :type: str
         """
 
-        self._disable_alerting = disable_alerting
+        self._data_source_group_name = data_source_group_name
+
+    @property
+    def data_source_id(self):
+        """Gets the data_source_id of this DeviceGroupDataSource.  # noqa: E501
+
+        The ID of the DataSource  # noqa: E501
+
+        :return: The data_source_id of this DeviceGroupDataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_source_id
+
+    @data_source_id.setter
+    def data_source_id(self, data_source_id):
+        """Sets the data_source_id of this DeviceGroupDataSource.
+
+        The ID of the DataSource  # noqa: E501
+
+        :param data_source_id: The data_source_id of this DeviceGroupDataSource.  # noqa: E501
+        :type: int
+        """
+
+        self._data_source_id = data_source_id
 
     @property
     def data_source_name(self):
@@ -265,6 +196,75 @@ class DeviceGroupDataSource(object):
         """
 
         self._data_source_type = data_source_type
+
+    @property
+    def device_group_id(self):
+        """Gets the device_group_id of this DeviceGroupDataSource.  # noqa: E501
+
+        The ID of the Device Group for the DataSource  # noqa: E501
+
+        :return: The device_group_id of this DeviceGroupDataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._device_group_id
+
+    @device_group_id.setter
+    def device_group_id(self, device_group_id):
+        """Sets the device_group_id of this DeviceGroupDataSource.
+
+        The ID of the Device Group for the DataSource  # noqa: E501
+
+        :param device_group_id: The device_group_id of this DeviceGroupDataSource.  # noqa: E501
+        :type: int
+        """
+
+        self._device_group_id = device_group_id
+
+    @property
+    def disable_alerting(self):
+        """Gets the disable_alerting of this DeviceGroupDataSource.  # noqa: E501
+
+        Boolean flag for enabling/disabling alerting for DataSource  # noqa: E501
+
+        :return: The disable_alerting of this DeviceGroupDataSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._disable_alerting
+
+    @disable_alerting.setter
+    def disable_alerting(self, disable_alerting):
+        """Sets the disable_alerting of this DeviceGroupDataSource.
+
+        Boolean flag for enabling/disabling alerting for DataSource  # noqa: E501
+
+        :param disable_alerting: The disable_alerting of this DeviceGroupDataSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._disable_alerting = disable_alerting
+
+    @property
+    def stop_monitoring(self):
+        """Gets the stop_monitoring of this DeviceGroupDataSource.  # noqa: E501
+
+        Boolean flag for enabling/disabling monitoring of DataSource  # noqa: E501
+
+        :return: The stop_monitoring of this DeviceGroupDataSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._stop_monitoring
+
+    @stop_monitoring.setter
+    def stop_monitoring(self, stop_monitoring):
+        """Sets the stop_monitoring of this DeviceGroupDataSource.
+
+        Boolean flag for enabling/disabling monitoring of DataSource  # noqa: E501
+
+        :param stop_monitoring: The stop_monitoring of this DeviceGroupDataSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._stop_monitoring = stop_monitoring
 
     def to_dict(self):
         """Returns the model properties as a dict"""

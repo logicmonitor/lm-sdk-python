@@ -370,6 +370,7 @@ logicmonitor_sdk/models/udp_collector_attribute.py
 logicmonitor_sdk/models/unmonitored_device_pagination_response.py
 logicmonitor_sdk/models/unmonitored_devices.py
 logicmonitor_sdk/models/update_reason.py
+logicmonitor_sdk/models/usage.py
 logicmonitor_sdk/models/user_filter.py
 logicmonitor_sdk/models/user_report.py
 logicmonitor_sdk/models/virtual_data_point.py
@@ -772,6 +773,7 @@ test/test_udp_collector_attribute.py
 test/test_unmonitored_device_pagination_response.py
 test/test_unmonitored_devices.py
 test/test_update_reason.py
+test/test_usage.py
 test/test_user_filter.py
 test/test_user_report.py
 test/test_virtual_data_point.py

@@ -33,35 +33,58 @@ class RecipientGroup(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'group_name': 'str',
-        'recipients': 'list[Recipient]',
         'description': 'str',
-        'id': 'int'
+        'group_name': 'str',
+        'id': 'int',
+        'recipients': 'list[Recipient]'
     }
 
     attribute_map = {
-        'group_name': 'groupName',
-        'recipients': 'recipients',
         'description': 'description',
-        'id': 'id'
+        'group_name': 'groupName',
+        'id': 'id',
+        'recipients': 'recipients'
     }
 
-    def __init__(self, group_name=None, recipients=None, description=None, id=None):  # noqa: E501
+    def __init__(self, description=None, group_name=None, id=None, recipients=None):  # noqa: E501
         """RecipientGroup - a model defined in Swagger"""  # noqa: E501
 
-        self._group_name = None
-        self._recipients = None
         self._description = None
+        self._group_name = None
         self._id = None
+        self._recipients = None
         self.discriminator = None
 
-        self.group_name = group_name
-        if recipients is not None:
-            self.recipients = recipients
         if description is not None:
             self.description = description
+        self.group_name = group_name
         if id is not None:
             self.id = id
+        if recipients is not None:
+            self.recipients = recipients
+
+    @property
+    def description(self):
+        """Gets the description of this RecipientGroup.  # noqa: E501
+
+        The description of the recipient group  # noqa: E501
+
+        :return: The description of this RecipientGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this RecipientGroup.
+
+        The description of the recipient group  # noqa: E501
+
+        :param description: The description of this RecipientGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def group_name(self):
@@ -89,6 +112,27 @@ class RecipientGroup(object):
         self._group_name = group_name
 
     @property
+    def id(self):
+        """Gets the id of this RecipientGroup.  # noqa: E501
+
+
+        :return: The id of this RecipientGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this RecipientGroup.
+
+
+        :param id: The id of this RecipientGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
     def recipients(self):
         """Gets the recipients of this RecipientGroup.  # noqa: E501
 
@@ -110,50 +154,6 @@ class RecipientGroup(object):
         """
 
         self._recipients = recipients
-
-    @property
-    def description(self):
-        """Gets the description of this RecipientGroup.  # noqa: E501
-
-        The description of the recipient group  # noqa: E501
-
-        :return: The description of this RecipientGroup.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this RecipientGroup.
-
-        The description of the recipient group  # noqa: E501
-
-        :param description: The description of this RecipientGroup.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
-    def id(self):
-        """Gets the id of this RecipientGroup.  # noqa: E501
-
-
-        :return: The id of this RecipientGroup.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this RecipientGroup.
-
-
-        :param id: The id of this RecipientGroup.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

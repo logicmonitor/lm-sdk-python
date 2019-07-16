@@ -31,47 +31,47 @@ class SDT(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'end_date_time_on_local': 'str',
-        'timezone': 'str',
-        'sdt_type': 'str',
-        'month_day': 'int',
-        'week_of_month': 'str',
         'admin': 'str',
+        'comment': 'str',
+        'duration': 'int',
         'end_date_time': 'int',
-        'type': 'str',
+        'end_date_time_on_local': 'str',
+        'end_hour': 'int',
+        'end_minute': 'int',
+        'hour': 'int',
+        'id': 'str',
         'is_effective': 'bool',
         'minute': 'int',
-        'duration': 'int',
-        'end_hour': 'int',
+        'month_day': 'int',
+        'sdt_type': 'str',
         'start_date_time': 'int',
-        'hour': 'int',
         'start_date_time_on_local': 'str',
+        'timezone': 'str',
+        'type': 'str',
         'week_day': 'str',
-        'comment': 'str',
-        'id': 'str',
-        'end_minute': 'int'
+        'week_of_month': 'str'
     }
 
     attribute_map = {
-        'end_date_time_on_local': 'endDateTimeOnLocal',
-        'timezone': 'timezone',
-        'sdt_type': 'sdtType',
-        'month_day': 'monthDay',
-        'week_of_month': 'weekOfMonth',
         'admin': 'admin',
+        'comment': 'comment',
+        'duration': 'duration',
         'end_date_time': 'endDateTime',
-        'type': 'type',
+        'end_date_time_on_local': 'endDateTimeOnLocal',
+        'end_hour': 'endHour',
+        'end_minute': 'endMinute',
+        'hour': 'hour',
+        'id': 'id',
         'is_effective': 'isEffective',
         'minute': 'minute',
-        'duration': 'duration',
-        'end_hour': 'endHour',
+        'month_day': 'monthDay',
+        'sdt_type': 'sdtType',
         'start_date_time': 'startDateTime',
-        'hour': 'hour',
         'start_date_time_on_local': 'startDateTimeOnLocal',
+        'timezone': 'timezone',
+        'type': 'type',
         'week_day': 'weekDay',
-        'comment': 'comment',
-        'id': 'id',
-        'end_minute': 'endMinute'
+        'week_of_month': 'weekOfMonth'
     }
 
     discriminator_value_class_map = {
@@ -90,180 +90,67 @@ class SDT(object):
         'websitegroupsdt': 'WebsiteGroupSDT'
     }
 
-    def __init__(self, end_date_time_on_local=None, timezone=None, sdt_type=None, month_day=None, week_of_month=None, admin=None, end_date_time=None, type=None, is_effective=None, minute=None, duration=None, end_hour=None, start_date_time=None, hour=None, start_date_time_on_local=None, week_day=None, comment=None, id=None, end_minute=None):  # noqa: E501
+    def __init__(self, admin=None, comment=None, duration=None, end_date_time=None, end_date_time_on_local=None, end_hour=None, end_minute=None, hour=None, id=None, is_effective=None, minute=None, month_day=None, sdt_type=None, start_date_time=None, start_date_time_on_local=None, timezone=None, type=None, week_day=None, week_of_month=None):  # noqa: E501
         """SDT - a model defined in Swagger"""  # noqa: E501
 
-        self._end_date_time_on_local = None
-        self._timezone = None
-        self._sdt_type = None
-        self._month_day = None
-        self._week_of_month = None
         self._admin = None
+        self._comment = None
+        self._duration = None
         self._end_date_time = None
-        self._type = None
+        self._end_date_time_on_local = None
+        self._end_hour = None
+        self._end_minute = None
+        self._hour = None
+        self._id = None
         self._is_effective = None
         self._minute = None
-        self._duration = None
-        self._end_hour = None
+        self._month_day = None
+        self._sdt_type = None
         self._start_date_time = None
-        self._hour = None
         self._start_date_time_on_local = None
+        self._timezone = None
+        self._type = None
         self._week_day = None
-        self._comment = None
-        self._id = None
-        self._end_minute = None
+        self._week_of_month = None
         self.discriminator = 'type'
 
-        if end_date_time_on_local is not None:
-            self.end_date_time_on_local = end_date_time_on_local
-        if timezone is not None:
-            self.timezone = timezone
-        if sdt_type is not None:
-            self.sdt_type = sdt_type
-        if month_day is not None:
-            self.month_day = month_day
-        if week_of_month is not None:
-            self.week_of_month = week_of_month
         if admin is not None:
             self.admin = admin
+        if comment is not None:
+            self.comment = comment
+        if duration is not None:
+            self.duration = duration
         if end_date_time is not None:
             self.end_date_time = end_date_time
-        self.type = type
+        if end_date_time_on_local is not None:
+            self.end_date_time_on_local = end_date_time_on_local
+        if end_hour is not None:
+            self.end_hour = end_hour
+        if end_minute is not None:
+            self.end_minute = end_minute
+        if hour is not None:
+            self.hour = hour
+        if id is not None:
+            self.id = id
         if is_effective is not None:
             self.is_effective = is_effective
         if minute is not None:
             self.minute = minute
-        if duration is not None:
-            self.duration = duration
-        if end_hour is not None:
-            self.end_hour = end_hour
+        if month_day is not None:
+            self.month_day = month_day
+        if sdt_type is not None:
+            self.sdt_type = sdt_type
         if start_date_time is not None:
             self.start_date_time = start_date_time
-        if hour is not None:
-            self.hour = hour
         if start_date_time_on_local is not None:
             self.start_date_time_on_local = start_date_time_on_local
+        if timezone is not None:
+            self.timezone = timezone
+        self.type = type
         if week_day is not None:
             self.week_day = week_day
-        if comment is not None:
-            self.comment = comment
-        if id is not None:
-            self.id = id
-        if end_minute is not None:
-            self.end_minute = end_minute
-
-    @property
-    def end_date_time_on_local(self):
-        """Gets the end_date_time_on_local of this SDT.  # noqa: E501
-
-        The date, time and time zone that the SDT will end at  # noqa: E501
-
-        :return: The end_date_time_on_local of this SDT.  # noqa: E501
-        :rtype: str
-        """
-        return self._end_date_time_on_local
-
-    @end_date_time_on_local.setter
-    def end_date_time_on_local(self, end_date_time_on_local):
-        """Sets the end_date_time_on_local of this SDT.
-
-        The date, time and time zone that the SDT will end at  # noqa: E501
-
-        :param end_date_time_on_local: The end_date_time_on_local of this SDT.  # noqa: E501
-        :type: str
-        """
-
-        self._end_date_time_on_local = end_date_time_on_local
-
-    @property
-    def timezone(self):
-        """Gets the timezone of this SDT.  # noqa: E501
-
-        The specific timezone for SDT  # noqa: E501
-
-        :return: The timezone of this SDT.  # noqa: E501
-        :rtype: str
-        """
-        return self._timezone
-
-    @timezone.setter
-    def timezone(self, timezone):
-        """Sets the timezone of this SDT.
-
-        The specific timezone for SDT  # noqa: E501
-
-        :param timezone: The timezone of this SDT.  # noqa: E501
-        :type: str
-        """
-
-        self._timezone = timezone
-
-    @property
-    def sdt_type(self):
-        """Gets the sdt_type of this SDT.  # noqa: E501
-
-
-        :return: The sdt_type of this SDT.  # noqa: E501
-        :rtype: str
-        """
-        return self._sdt_type
-
-    @sdt_type.setter
-    def sdt_type(self, sdt_type):
-        """Sets the sdt_type of this SDT.
-
-
-        :param sdt_type: The sdt_type of this SDT.  # noqa: E501
-        :type: str
-        """
-
-        self._sdt_type = sdt_type
-
-    @property
-    def month_day(self):
-        """Gets the month_day of this SDT.  # noqa: E501
-
-        1 | 2....| 31 The day of the month that the SDT will be active for a monthly SDT  # noqa: E501
-
-        :return: The month_day of this SDT.  # noqa: E501
-        :rtype: int
-        """
-        return self._month_day
-
-    @month_day.setter
-    def month_day(self, month_day):
-        """Sets the month_day of this SDT.
-
-        1 | 2....| 31 The day of the month that the SDT will be active for a monthly SDT  # noqa: E501
-
-        :param month_day: The month_day of this SDT.  # noqa: E501
-        :type: int
-        """
-
-        self._month_day = month_day
-
-    @property
-    def week_of_month(self):
-        """Gets the week_of_month of this SDT.  # noqa: E501
-
-        The weel of the month that the SDT will be active for a monthly SDT  # noqa: E501
-
-        :return: The week_of_month of this SDT.  # noqa: E501
-        :rtype: str
-        """
-        return self._week_of_month
-
-    @week_of_month.setter
-    def week_of_month(self, week_of_month):
-        """Sets the week_of_month of this SDT.
-
-        The weel of the month that the SDT will be active for a monthly SDT  # noqa: E501
-
-        :param week_of_month: The week_of_month of this SDT.  # noqa: E501
-        :type: str
-        """
-
-        self._week_of_month = week_of_month
+        if week_of_month is not None:
+            self.week_of_month = week_of_month
 
     @property
     def admin(self):
@@ -289,6 +176,52 @@ class SDT(object):
         self._admin = admin
 
     @property
+    def comment(self):
+        """Gets the comment of this SDT.  # noqa: E501
+
+        The notes associated with the SDT  # noqa: E501
+
+        :return: The comment of this SDT.  # noqa: E501
+        :rtype: str
+        """
+        return self._comment
+
+    @comment.setter
+    def comment(self, comment):
+        """Sets the comment of this SDT.
+
+        The notes associated with the SDT  # noqa: E501
+
+        :param comment: The comment of this SDT.  # noqa: E501
+        :type: str
+        """
+
+        self._comment = comment
+
+    @property
+    def duration(self):
+        """Gets the duration of this SDT.  # noqa: E501
+
+        The duration of the SDT in minutes  # noqa: E501
+
+        :return: The duration of this SDT.  # noqa: E501
+        :rtype: int
+        """
+        return self._duration
+
+    @duration.setter
+    def duration(self, duration):
+        """Sets the duration of this SDT.
+
+        The duration of the SDT in minutes  # noqa: E501
+
+        :param duration: The duration of this SDT.  # noqa: E501
+        :type: int
+        """
+
+        self._duration = duration
+
+    @property
     def end_date_time(self):
         """Gets the end_date_time of this SDT.  # noqa: E501
 
@@ -312,29 +245,119 @@ class SDT(object):
         self._end_date_time = end_date_time
 
     @property
-    def type(self):
-        """Gets the type of this SDT.  # noqa: E501
+    def end_date_time_on_local(self):
+        """Gets the end_date_time_on_local of this SDT.  # noqa: E501
 
-        The type resource that this SDT is for: ServiceSDT | CollectorSDT | DeviceDataSourceInstanceSDT | DeviceBatchJobSDT | DeviceClusterAlertDefSDT | DeviceDataSourceInstanceGroupSDT | DeviceDataSourceSDT | DeviceEventSourceSDT | DeviceGroupSDT | DeviceSDT | WebsiteCheckpointSDT | WebsiteGroupSDT | WebsiteSDT  # noqa: E501
+        The date, time and time zone that the SDT will end at  # noqa: E501
 
-        :return: The type of this SDT.  # noqa: E501
+        :return: The end_date_time_on_local of this SDT.  # noqa: E501
         :rtype: str
         """
-        return self._type
+        return self._end_date_time_on_local
 
-    @type.setter
-    def type(self, type):
-        """Sets the type of this SDT.
+    @end_date_time_on_local.setter
+    def end_date_time_on_local(self, end_date_time_on_local):
+        """Sets the end_date_time_on_local of this SDT.
 
-        The type resource that this SDT is for: ServiceSDT | CollectorSDT | DeviceDataSourceInstanceSDT | DeviceBatchJobSDT | DeviceClusterAlertDefSDT | DeviceDataSourceInstanceGroupSDT | DeviceDataSourceSDT | DeviceEventSourceSDT | DeviceGroupSDT | DeviceSDT | WebsiteCheckpointSDT | WebsiteGroupSDT | WebsiteSDT  # noqa: E501
+        The date, time and time zone that the SDT will end at  # noqa: E501
 
-        :param type: The type of this SDT.  # noqa: E501
+        :param end_date_time_on_local: The end_date_time_on_local of this SDT.  # noqa: E501
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
 
-        self._type = type
+        self._end_date_time_on_local = end_date_time_on_local
+
+    @property
+    def end_hour(self):
+        """Gets the end_hour of this SDT.  # noqa: E501
+
+        1 | 2....| 24 The hour that the SDT ends for a repeating SDT  # noqa: E501
+
+        :return: The end_hour of this SDT.  # noqa: E501
+        :rtype: int
+        """
+        return self._end_hour
+
+    @end_hour.setter
+    def end_hour(self, end_hour):
+        """Sets the end_hour of this SDT.
+
+        1 | 2....| 24 The hour that the SDT ends for a repeating SDT  # noqa: E501
+
+        :param end_hour: The end_hour of this SDT.  # noqa: E501
+        :type: int
+        """
+
+        self._end_hour = end_hour
+
+    @property
+    def end_minute(self):
+        """Gets the end_minute of this SDT.  # noqa: E501
+
+        1 | 2....| 60 The minute of the hour that the SDT ends for a repeating SDT  # noqa: E501
+
+        :return: The end_minute of this SDT.  # noqa: E501
+        :rtype: int
+        """
+        return self._end_minute
+
+    @end_minute.setter
+    def end_minute(self, end_minute):
+        """Sets the end_minute of this SDT.
+
+        1 | 2....| 60 The minute of the hour that the SDT ends for a repeating SDT  # noqa: E501
+
+        :param end_minute: The end_minute of this SDT.  # noqa: E501
+        :type: int
+        """
+
+        self._end_minute = end_minute
+
+    @property
+    def hour(self):
+        """Gets the hour of this SDT.  # noqa: E501
+
+        1 | 2....| 24 The hour that the SDT will start for a repeating SDT (daily, weekly, or monthly)  # noqa: E501
+
+        :return: The hour of this SDT.  # noqa: E501
+        :rtype: int
+        """
+        return self._hour
+
+    @hour.setter
+    def hour(self, hour):
+        """Sets the hour of this SDT.
+
+        1 | 2....| 24 The hour that the SDT will start for a repeating SDT (daily, weekly, or monthly)  # noqa: E501
+
+        :param hour: The hour of this SDT.  # noqa: E501
+        :type: int
+        """
+
+        self._hour = hour
+
+    @property
+    def id(self):
+        """Gets the id of this SDT.  # noqa: E501
+
+        The Id of the SDT. This value will be in the following format \"XX_##\" where XX will refer to the type of SDT and ## will refer to the number of SDTs of that type  # noqa: E501
+
+        :return: The id of this SDT.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this SDT.
+
+        The Id of the SDT. This value will be in the following format \"XX_##\" where XX will refer to the type of SDT and ## will refer to the number of SDTs of that type  # noqa: E501
+
+        :param id: The id of this SDT.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def is_effective(self):
@@ -383,50 +406,48 @@ class SDT(object):
         self._minute = minute
 
     @property
-    def duration(self):
-        """Gets the duration of this SDT.  # noqa: E501
+    def month_day(self):
+        """Gets the month_day of this SDT.  # noqa: E501
 
-        The duration of the SDT in minutes  # noqa: E501
+        1 | 2....| 31 The day of the month that the SDT will be active for a monthly SDT  # noqa: E501
 
-        :return: The duration of this SDT.  # noqa: E501
+        :return: The month_day of this SDT.  # noqa: E501
         :rtype: int
         """
-        return self._duration
+        return self._month_day
 
-    @duration.setter
-    def duration(self, duration):
-        """Sets the duration of this SDT.
+    @month_day.setter
+    def month_day(self, month_day):
+        """Sets the month_day of this SDT.
 
-        The duration of the SDT in minutes  # noqa: E501
+        1 | 2....| 31 The day of the month that the SDT will be active for a monthly SDT  # noqa: E501
 
-        :param duration: The duration of this SDT.  # noqa: E501
+        :param month_day: The month_day of this SDT.  # noqa: E501
         :type: int
         """
 
-        self._duration = duration
+        self._month_day = month_day
 
     @property
-    def end_hour(self):
-        """Gets the end_hour of this SDT.  # noqa: E501
+    def sdt_type(self):
+        """Gets the sdt_type of this SDT.  # noqa: E501
 
-        1 | 2....| 24 The hour that the SDT ends for a repeating SDT  # noqa: E501
 
-        :return: The end_hour of this SDT.  # noqa: E501
-        :rtype: int
+        :return: The sdt_type of this SDT.  # noqa: E501
+        :rtype: str
         """
-        return self._end_hour
+        return self._sdt_type
 
-    @end_hour.setter
-    def end_hour(self, end_hour):
-        """Sets the end_hour of this SDT.
+    @sdt_type.setter
+    def sdt_type(self, sdt_type):
+        """Sets the sdt_type of this SDT.
 
-        1 | 2....| 24 The hour that the SDT ends for a repeating SDT  # noqa: E501
 
-        :param end_hour: The end_hour of this SDT.  # noqa: E501
-        :type: int
+        :param sdt_type: The sdt_type of this SDT.  # noqa: E501
+        :type: str
         """
 
-        self._end_hour = end_hour
+        self._sdt_type = sdt_type
 
     @property
     def start_date_time(self):
@@ -452,29 +473,6 @@ class SDT(object):
         self._start_date_time = start_date_time
 
     @property
-    def hour(self):
-        """Gets the hour of this SDT.  # noqa: E501
-
-        1 | 2....| 24 The hour that the SDT will start for a repeating SDT (daily, weekly, or monthly)  # noqa: E501
-
-        :return: The hour of this SDT.  # noqa: E501
-        :rtype: int
-        """
-        return self._hour
-
-    @hour.setter
-    def hour(self, hour):
-        """Sets the hour of this SDT.
-
-        1 | 2....| 24 The hour that the SDT will start for a repeating SDT (daily, weekly, or monthly)  # noqa: E501
-
-        :param hour: The hour of this SDT.  # noqa: E501
-        :type: int
-        """
-
-        self._hour = hour
-
-    @property
     def start_date_time_on_local(self):
         """Gets the start_date_time_on_local of this SDT.  # noqa: E501
 
@@ -498,6 +496,54 @@ class SDT(object):
         self._start_date_time_on_local = start_date_time_on_local
 
     @property
+    def timezone(self):
+        """Gets the timezone of this SDT.  # noqa: E501
+
+        The specific timezone for SDT  # noqa: E501
+
+        :return: The timezone of this SDT.  # noqa: E501
+        :rtype: str
+        """
+        return self._timezone
+
+    @timezone.setter
+    def timezone(self, timezone):
+        """Sets the timezone of this SDT.
+
+        The specific timezone for SDT  # noqa: E501
+
+        :param timezone: The timezone of this SDT.  # noqa: E501
+        :type: str
+        """
+
+        self._timezone = timezone
+
+    @property
+    def type(self):
+        """Gets the type of this SDT.  # noqa: E501
+
+        The type resource that this SDT is for: ServiceSDT | CollectorSDT | DeviceDataSourceInstanceSDT | DeviceBatchJobSDT | DeviceClusterAlertDefSDT | DeviceDataSourceInstanceGroupSDT | DeviceDataSourceSDT | DeviceEventSourceSDT | DeviceGroupSDT | DeviceSDT | WebsiteCheckpointSDT | WebsiteGroupSDT | WebsiteSDT  # noqa: E501
+
+        :return: The type of this SDT.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this SDT.
+
+        The type resource that this SDT is for: ServiceSDT | CollectorSDT | DeviceDataSourceInstanceSDT | DeviceBatchJobSDT | DeviceClusterAlertDefSDT | DeviceDataSourceInstanceGroupSDT | DeviceDataSourceSDT | DeviceEventSourceSDT | DeviceGroupSDT | DeviceSDT | WebsiteCheckpointSDT | WebsiteGroupSDT | WebsiteSDT  # noqa: E501
+
+        :param type: The type of this SDT.  # noqa: E501
+        :type: str
+        """
+        if type is None:
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+
+        self._type = type
+
+    @property
     def week_day(self):
         """Gets the week_day of this SDT.  # noqa: E501
 
@@ -519,73 +565,27 @@ class SDT(object):
         self._week_day = week_day
 
     @property
-    def comment(self):
-        """Gets the comment of this SDT.  # noqa: E501
+    def week_of_month(self):
+        """Gets the week_of_month of this SDT.  # noqa: E501
 
-        The notes associated with the SDT  # noqa: E501
+        The weel of the month that the SDT will be active for a monthly SDT  # noqa: E501
 
-        :return: The comment of this SDT.  # noqa: E501
+        :return: The week_of_month of this SDT.  # noqa: E501
         :rtype: str
         """
-        return self._comment
+        return self._week_of_month
 
-    @comment.setter
-    def comment(self, comment):
-        """Sets the comment of this SDT.
+    @week_of_month.setter
+    def week_of_month(self, week_of_month):
+        """Sets the week_of_month of this SDT.
 
-        The notes associated with the SDT  # noqa: E501
+        The weel of the month that the SDT will be active for a monthly SDT  # noqa: E501
 
-        :param comment: The comment of this SDT.  # noqa: E501
+        :param week_of_month: The week_of_month of this SDT.  # noqa: E501
         :type: str
         """
 
-        self._comment = comment
-
-    @property
-    def id(self):
-        """Gets the id of this SDT.  # noqa: E501
-
-        The Id of the SDT. This value will be in the following format \"XX_##\" where XX will refer to the type of SDT and ## will refer to the number of SDTs of that type  # noqa: E501
-
-        :return: The id of this SDT.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this SDT.
-
-        The Id of the SDT. This value will be in the following format \"XX_##\" where XX will refer to the type of SDT and ## will refer to the number of SDTs of that type  # noqa: E501
-
-        :param id: The id of this SDT.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
-    def end_minute(self):
-        """Gets the end_minute of this SDT.  # noqa: E501
-
-        1 | 2....| 60 The minute of the hour that the SDT ends for a repeating SDT  # noqa: E501
-
-        :return: The end_minute of this SDT.  # noqa: E501
-        :rtype: int
-        """
-        return self._end_minute
-
-    @end_minute.setter
-    def end_minute(self, end_minute):
-        """Sets the end_minute of this SDT.
-
-        1 | 2....| 60 The minute of the hour that the SDT ends for a repeating SDT  # noqa: E501
-
-        :param end_minute: The end_minute of this SDT.  # noqa: E501
-        :type: int
-        """
-
-        self._end_minute = end_minute
+        self._week_of_month = week_of_month
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

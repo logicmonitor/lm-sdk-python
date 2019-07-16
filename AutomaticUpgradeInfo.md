@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**day_of_week** | **str** |  | 
-**hour** | **int** |  | 
 **created_by** | **str** |  | [optional] 
-**level** | **str** |  | [optional] 
-**timezone** | **str** |  | [optional] 
+**day_of_week** | **str** |  | 
 **description** | **str** |  | [optional] 
+**hour** | **int** |  | 
+**level** | **str** |  | [optional] 
+**minute** | **int** |  | 
 **occurrence** | **str** |  | 
+**timezone** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 **version** | **str** |  | 
-**minute** | **int** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

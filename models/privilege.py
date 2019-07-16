@@ -31,103 +31,38 @@ class Privilege(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'object_name': 'str',
-        'sub_operation': 'str',
-        'operation': 'str',
         'object_id': 'str',
-        'object_type': 'str'
+        'object_name': 'str',
+        'object_type': 'str',
+        'operation': 'str',
+        'sub_operation': 'str'
     }
 
     attribute_map = {
-        'object_name': 'objectName',
-        'sub_operation': 'subOperation',
-        'operation': 'operation',
         'object_id': 'objectId',
-        'object_type': 'objectType'
+        'object_name': 'objectName',
+        'object_type': 'objectType',
+        'operation': 'operation',
+        'sub_operation': 'subOperation'
     }
 
-    def __init__(self, object_name=None, sub_operation=None, operation=None, object_id=None, object_type=None):  # noqa: E501
+    def __init__(self, object_id=None, object_name=None, object_type=None, operation=None, sub_operation=None):  # noqa: E501
         """Privilege - a model defined in Swagger"""  # noqa: E501
 
-        self._object_name = None
-        self._sub_operation = None
-        self._operation = None
         self._object_id = None
+        self._object_name = None
         self._object_type = None
+        self._operation = None
+        self._sub_operation = None
         self.discriminator = None
 
+        self.object_id = object_id
         if object_name is not None:
             self.object_name = object_name
+        self.object_type = object_type
+        self.operation = operation
         if sub_operation is not None:
             self.sub_operation = sub_operation
-        self.operation = operation
-        self.object_id = object_id
-        self.object_type = object_type
-
-    @property
-    def object_name(self):
-        """Gets the object_name of this Privilege.  # noqa: E501
-
-
-        :return: The object_name of this Privilege.  # noqa: E501
-        :rtype: str
-        """
-        return self._object_name
-
-    @object_name.setter
-    def object_name(self, object_name):
-        """Sets the object_name of this Privilege.
-
-
-        :param object_name: The object_name of this Privilege.  # noqa: E501
-        :type: str
-        """
-
-        self._object_name = object_name
-
-    @property
-    def sub_operation(self):
-        """Gets the sub_operation of this Privilege.  # noqa: E501
-
-
-        :return: The sub_operation of this Privilege.  # noqa: E501
-        :rtype: str
-        """
-        return self._sub_operation
-
-    @sub_operation.setter
-    def sub_operation(self, sub_operation):
-        """Sets the sub_operation of this Privilege.
-
-
-        :param sub_operation: The sub_operation of this Privilege.  # noqa: E501
-        :type: str
-        """
-
-        self._sub_operation = sub_operation
-
-    @property
-    def operation(self):
-        """Gets the operation of this Privilege.  # noqa: E501
-
-
-        :return: The operation of this Privilege.  # noqa: E501
-        :rtype: str
-        """
-        return self._operation
-
-    @operation.setter
-    def operation(self, operation):
-        """Sets the operation of this Privilege.
-
-
-        :param operation: The operation of this Privilege.  # noqa: E501
-        :type: str
-        """
-        if operation is None:
-            raise ValueError("Invalid value for `operation`, must not be `None`")  # noqa: E501
-
-        self._operation = operation
 
     @property
     def object_id(self):
@@ -153,6 +88,27 @@ class Privilege(object):
         self._object_id = object_id
 
     @property
+    def object_name(self):
+        """Gets the object_name of this Privilege.  # noqa: E501
+
+
+        :return: The object_name of this Privilege.  # noqa: E501
+        :rtype: str
+        """
+        return self._object_name
+
+    @object_name.setter
+    def object_name(self, object_name):
+        """Sets the object_name of this Privilege.
+
+
+        :param object_name: The object_name of this Privilege.  # noqa: E501
+        :type: str
+        """
+
+        self._object_name = object_name
+
+    @property
     def object_type(self):
         """Gets the object_type of this Privilege.  # noqa: E501
 
@@ -174,6 +130,50 @@ class Privilege(object):
             raise ValueError("Invalid value for `object_type`, must not be `None`")  # noqa: E501
 
         self._object_type = object_type
+
+    @property
+    def operation(self):
+        """Gets the operation of this Privilege.  # noqa: E501
+
+
+        :return: The operation of this Privilege.  # noqa: E501
+        :rtype: str
+        """
+        return self._operation
+
+    @operation.setter
+    def operation(self, operation):
+        """Sets the operation of this Privilege.
+
+
+        :param operation: The operation of this Privilege.  # noqa: E501
+        :type: str
+        """
+        if operation is None:
+            raise ValueError("Invalid value for `operation`, must not be `None`")  # noqa: E501
+
+        self._operation = operation
+
+    @property
+    def sub_operation(self):
+        """Gets the sub_operation of this Privilege.  # noqa: E501
+
+
+        :return: The sub_operation of this Privilege.  # noqa: E501
+        :rtype: str
+        """
+        return self._sub_operation
+
+    @sub_operation.setter
+    def sub_operation(self, sub_operation):
+        """Sets the sub_operation of this Privilege.
+
+
+        :param sub_operation: The sub_operation of this Privilege.  # noqa: E501
+        :type: str
+        """
+
+        self._sub_operation = sub_operation
 
     def to_dict(self):
         """Returns the model properties as a dict"""

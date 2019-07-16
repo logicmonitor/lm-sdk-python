@@ -33,133 +33,87 @@ class WebsiteGraphWidget(Widget):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'last_updated_by': 'str',
-        'user_permission': 'str',
         'dashboard_id': 'int',
-        'name': 'str',
         'description': 'str',
-        'last_updated_on': 'int',
-        'theme': 'str',
-        'interval': 'int',
         'id': 'int',
-        'type': 'str',
+        'interval': 'int',
+        'last_updated_by': 'str',
+        'last_updated_on': 'int',
+        'name': 'str',
+        'theme': 'str',
         'timescale': 'str',
-        'website_name': 'str',
-        'geo_info': 'str',
+        'type': 'str',
+        'user_permission': 'str',
         'checkpoint_id': 'int',
-        'graph': 'str'
+        'geo_info': 'str',
+        'graph': 'str',
+        'website_name': 'str'
     }
 
     attribute_map = {
-        'last_updated_by': 'lastUpdatedBy',
-        'user_permission': 'userPermission',
         'dashboard_id': 'dashboardId',
-        'name': 'name',
         'description': 'description',
-        'last_updated_on': 'lastUpdatedOn',
-        'theme': 'theme',
-        'interval': 'interval',
         'id': 'id',
-        'type': 'type',
+        'interval': 'interval',
+        'last_updated_by': 'lastUpdatedBy',
+        'last_updated_on': 'lastUpdatedOn',
+        'name': 'name',
+        'theme': 'theme',
         'timescale': 'timescale',
-        'website_name': 'websiteName',
-        'geo_info': 'geoInfo',
+        'type': 'type',
+        'user_permission': 'userPermission',
         'checkpoint_id': 'checkpointId',
-        'graph': 'graph'
+        'geo_info': 'geoInfo',
+        'graph': 'graph',
+        'website_name': 'websiteName'
     }
 
-    def __init__(self, last_updated_by=None, user_permission=None, dashboard_id=None, name=None, description=None, last_updated_on=None, theme=None, interval=None, id=None, type=None, timescale=None, website_name=None, geo_info=None, checkpoint_id=None, graph=None):  # noqa: E501
+    def __init__(self, dashboard_id=None, description=None, id=None, interval=None, last_updated_by=None, last_updated_on=None, name=None, theme=None, timescale=None, type=None, user_permission=None, checkpoint_id=None, geo_info=None, graph=None, website_name=None):  # noqa: E501
         """WebsiteGraphWidget - a model defined in Swagger"""  # noqa: E501
 
-        self._last_updated_by = None
-        self._user_permission = None
         self._dashboard_id = None
-        self._name = None
         self._description = None
-        self._last_updated_on = None
-        self._theme = None
-        self._interval = None
         self._id = None
-        self._type = None
+        self._interval = None
+        self._last_updated_by = None
+        self._last_updated_on = None
+        self._name = None
+        self._theme = None
         self._timescale = None
-        self._website_name = None
-        self._geo_info = None
+        self._type = None
+        self._user_permission = None
         self._checkpoint_id = None
+        self._geo_info = None
         self._graph = None
+        self._website_name = None
         self.discriminator = None
 
-        if last_updated_by is not None:
-            self.last_updated_by = last_updated_by
-        if user_permission is not None:
-            self.user_permission = user_permission
         self.dashboard_id = dashboard_id
-        self.name = name
         if description is not None:
             self.description = description
-        if last_updated_on is not None:
-            self.last_updated_on = last_updated_on
-        if theme is not None:
-            self.theme = theme
-        if interval is not None:
-            self.interval = interval
         if id is not None:
             self.id = id
-        self.type = type
+        if interval is not None:
+            self.interval = interval
+        if last_updated_by is not None:
+            self.last_updated_by = last_updated_by
+        if last_updated_on is not None:
+            self.last_updated_on = last_updated_on
+        self.name = name
+        if theme is not None:
+            self.theme = theme
         if timescale is not None:
             self.timescale = timescale
-        if website_name is not None:
-            self.website_name = website_name
+        self.type = type
+        if user_permission is not None:
+            self.user_permission = user_permission
+        self.checkpoint_id = checkpoint_id
         if geo_info is not None:
             self.geo_info = geo_info
-        self.checkpoint_id = checkpoint_id
         if graph is not None:
             self.graph = graph
-
-    @property
-    def last_updated_by(self):
-        """Gets the last_updated_by of this WebsiteGraphWidget.  # noqa: E501
-
-        The user that last updated the widget  # noqa: E501
-
-        :return: The last_updated_by of this WebsiteGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._last_updated_by
-
-    @last_updated_by.setter
-    def last_updated_by(self, last_updated_by):
-        """Sets the last_updated_by of this WebsiteGraphWidget.
-
-        The user that last updated the widget  # noqa: E501
-
-        :param last_updated_by: The last_updated_by of this WebsiteGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._last_updated_by = last_updated_by
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this WebsiteGraphWidget.  # noqa: E501
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :return: The user_permission of this WebsiteGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this WebsiteGraphWidget.
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :param user_permission: The user_permission of this WebsiteGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
+        if website_name is not None:
+            self.website_name = website_name
 
     @property
     def dashboard_id(self):
@@ -187,31 +141,6 @@ class WebsiteGraphWidget(Widget):
         self._dashboard_id = dashboard_id
 
     @property
-    def name(self):
-        """Gets the name of this WebsiteGraphWidget.  # noqa: E501
-
-        The name of the widget  # noqa: E501
-
-        :return: The name of this WebsiteGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this WebsiteGraphWidget.
-
-        The name of the widget  # noqa: E501
-
-        :param name: The name of this WebsiteGraphWidget.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
     def description(self):
         """Gets the description of this WebsiteGraphWidget.  # noqa: E501
 
@@ -235,50 +164,27 @@ class WebsiteGraphWidget(Widget):
         self._description = description
 
     @property
-    def last_updated_on(self):
-        """Gets the last_updated_on of this WebsiteGraphWidget.  # noqa: E501
+    def id(self):
+        """Gets the id of this WebsiteGraphWidget.  # noqa: E501
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :return: The last_updated_on of this WebsiteGraphWidget.  # noqa: E501
+        :return: The id of this WebsiteGraphWidget.  # noqa: E501
         :rtype: int
         """
-        return self._last_updated_on
+        return self._id
 
-    @last_updated_on.setter
-    def last_updated_on(self, last_updated_on):
-        """Sets the last_updated_on of this WebsiteGraphWidget.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this WebsiteGraphWidget.
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :param last_updated_on: The last_updated_on of this WebsiteGraphWidget.  # noqa: E501
+        :param id: The id of this WebsiteGraphWidget.  # noqa: E501
         :type: int
         """
 
-        self._last_updated_on = last_updated_on
-
-    @property
-    def theme(self):
-        """Gets the theme of this WebsiteGraphWidget.  # noqa: E501
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :return: The theme of this WebsiteGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._theme
-
-    @theme.setter
-    def theme(self, theme):
-        """Sets the theme of this WebsiteGraphWidget.
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :param theme: The theme of this WebsiteGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._theme = theme
+        self._id = id
 
     @property
     def interval(self):
@@ -304,27 +210,121 @@ class WebsiteGraphWidget(Widget):
         self._interval = interval
 
     @property
-    def id(self):
-        """Gets the id of this WebsiteGraphWidget.  # noqa: E501
+    def last_updated_by(self):
+        """Gets the last_updated_by of this WebsiteGraphWidget.  # noqa: E501
 
-        The Id of the widget  # noqa: E501
+        The user that last updated the widget  # noqa: E501
 
-        :return: The id of this WebsiteGraphWidget.  # noqa: E501
+        :return: The last_updated_by of this WebsiteGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_updated_by
+
+    @last_updated_by.setter
+    def last_updated_by(self, last_updated_by):
+        """Sets the last_updated_by of this WebsiteGraphWidget.
+
+        The user that last updated the widget  # noqa: E501
+
+        :param last_updated_by: The last_updated_by of this WebsiteGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._last_updated_by = last_updated_by
+
+    @property
+    def last_updated_on(self):
+        """Gets the last_updated_on of this WebsiteGraphWidget.  # noqa: E501
+
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+
+        :return: The last_updated_on of this WebsiteGraphWidget.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._last_updated_on
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this WebsiteGraphWidget.
+    @last_updated_on.setter
+    def last_updated_on(self, last_updated_on):
+        """Sets the last_updated_on of this WebsiteGraphWidget.
 
-        The Id of the widget  # noqa: E501
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
 
-        :param id: The id of this WebsiteGraphWidget.  # noqa: E501
+        :param last_updated_on: The last_updated_on of this WebsiteGraphWidget.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._last_updated_on = last_updated_on
+
+    @property
+    def name(self):
+        """Gets the name of this WebsiteGraphWidget.  # noqa: E501
+
+        The name of the widget  # noqa: E501
+
+        :return: The name of this WebsiteGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this WebsiteGraphWidget.
+
+        The name of the widget  # noqa: E501
+
+        :param name: The name of this WebsiteGraphWidget.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def theme(self):
+        """Gets the theme of this WebsiteGraphWidget.  # noqa: E501
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :return: The theme of this WebsiteGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._theme
+
+    @theme.setter
+    def theme(self, theme):
+        """Sets the theme of this WebsiteGraphWidget.
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :param theme: The theme of this WebsiteGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._theme = theme
+
+    @property
+    def timescale(self):
+        """Gets the timescale of this WebsiteGraphWidget.  # noqa: E501
+
+        The default timescale of the widget  # noqa: E501
+
+        :return: The timescale of this WebsiteGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._timescale
+
+    @timescale.setter
+    def timescale(self, timescale):
+        """Sets the timescale of this WebsiteGraphWidget.
+
+        The default timescale of the widget  # noqa: E501
+
+        :param timescale: The timescale of this WebsiteGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._timescale = timescale
 
     @property
     def type(self):
@@ -352,73 +352,27 @@ class WebsiteGraphWidget(Widget):
         self._type = type
 
     @property
-    def timescale(self):
-        """Gets the timescale of this WebsiteGraphWidget.  # noqa: E501
+    def user_permission(self):
+        """Gets the user_permission of this WebsiteGraphWidget.  # noqa: E501
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :return: The timescale of this WebsiteGraphWidget.  # noqa: E501
+        :return: The user_permission of this WebsiteGraphWidget.  # noqa: E501
         :rtype: str
         """
-        return self._timescale
+        return self._user_permission
 
-    @timescale.setter
-    def timescale(self, timescale):
-        """Sets the timescale of this WebsiteGraphWidget.
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this WebsiteGraphWidget.
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :param timescale: The timescale of this WebsiteGraphWidget.  # noqa: E501
+        :param user_permission: The user_permission of this WebsiteGraphWidget.  # noqa: E501
         :type: str
         """
 
-        self._timescale = timescale
-
-    @property
-    def website_name(self):
-        """Gets the website_name of this WebsiteGraphWidget.  # noqa: E501
-
-        The name of the website this graph is associated with  # noqa: E501
-
-        :return: The website_name of this WebsiteGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._website_name
-
-    @website_name.setter
-    def website_name(self, website_name):
-        """Sets the website_name of this WebsiteGraphWidget.
-
-        The name of the website this graph is associated with  # noqa: E501
-
-        :param website_name: The website_name of this WebsiteGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._website_name = website_name
-
-    @property
-    def geo_info(self):
-        """Gets the geo_info of this WebsiteGraphWidget.  # noqa: E501
-
-        The checkpoint location this graph is associated with  # noqa: E501
-
-        :return: The geo_info of this WebsiteGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._geo_info
-
-    @geo_info.setter
-    def geo_info(self, geo_info):
-        """Sets the geo_info of this WebsiteGraphWidget.
-
-        The checkpoint location this graph is associated with  # noqa: E501
-
-        :param geo_info: The geo_info of this WebsiteGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._geo_info = geo_info
+        self._user_permission = user_permission
 
     @property
     def checkpoint_id(self):
@@ -446,6 +400,29 @@ class WebsiteGraphWidget(Widget):
         self._checkpoint_id = checkpoint_id
 
     @property
+    def geo_info(self):
+        """Gets the geo_info of this WebsiteGraphWidget.  # noqa: E501
+
+        The checkpoint location this graph is associated with  # noqa: E501
+
+        :return: The geo_info of this WebsiteGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._geo_info
+
+    @geo_info.setter
+    def geo_info(self, geo_info):
+        """Sets the geo_info of this WebsiteGraphWidget.
+
+        The checkpoint location this graph is associated with  # noqa: E501
+
+        :param geo_info: The geo_info of this WebsiteGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._geo_info = geo_info
+
+    @property
     def graph(self):
         """Gets the graph of this WebsiteGraphWidget.  # noqa: E501
 
@@ -467,6 +444,29 @@ class WebsiteGraphWidget(Widget):
         """
 
         self._graph = graph
+
+    @property
+    def website_name(self):
+        """Gets the website_name of this WebsiteGraphWidget.  # noqa: E501
+
+        The name of the website this graph is associated with  # noqa: E501
+
+        :return: The website_name of this WebsiteGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._website_name
+
+    @website_name.setter
+    def website_name(self, website_name):
+        """Sets the website_name of this WebsiteGraphWidget.
+
+        The name of the website this graph is associated with  # noqa: E501
+
+        :param website_name: The website_name of this WebsiteGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._website_name = website_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

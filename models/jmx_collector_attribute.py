@@ -34,29 +34,29 @@ class JMXCollectorAttribute(CollectorAttribute):
     """
     swagger_types = {
         'name': 'str',
-        'query_url': 'str',
-        'ip': 'str'
+        'ip': 'str',
+        'query_url': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'query_url': 'queryUrl',
-        'ip': 'ip'
+        'ip': 'ip',
+        'query_url': 'queryUrl'
     }
 
-    def __init__(self, name=None, query_url=None, ip=None):  # noqa: E501
+    def __init__(self, name=None, ip=None, query_url=None):  # noqa: E501
         """JMXCollectorAttribute - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._query_url = None
         self._ip = None
+        self._query_url = None
         self.discriminator = None
 
         self.name = name
-        if query_url is not None:
-            self.query_url = query_url
         if ip is not None:
             self.ip = ip
+        if query_url is not None:
+            self.query_url = query_url
 
     @property
     def name(self):
@@ -82,27 +82,6 @@ class JMXCollectorAttribute(CollectorAttribute):
         self._name = name
 
     @property
-    def query_url(self):
-        """Gets the query_url of this JMXCollectorAttribute.  # noqa: E501
-
-
-        :return: The query_url of this JMXCollectorAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._query_url
-
-    @query_url.setter
-    def query_url(self, query_url):
-        """Sets the query_url of this JMXCollectorAttribute.
-
-
-        :param query_url: The query_url of this JMXCollectorAttribute.  # noqa: E501
-        :type: str
-        """
-
-        self._query_url = query_url
-
-    @property
     def ip(self):
         """Gets the ip of this JMXCollectorAttribute.  # noqa: E501
 
@@ -122,6 +101,27 @@ class JMXCollectorAttribute(CollectorAttribute):
         """
 
         self._ip = ip
+
+    @property
+    def query_url(self):
+        """Gets the query_url of this JMXCollectorAttribute.  # noqa: E501
+
+
+        :return: The query_url of this JMXCollectorAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._query_url
+
+    @query_url.setter
+    def query_url(self, query_url):
+        """Sets the query_url of this JMXCollectorAttribute.
+
+
+        :param query_url: The query_url of this JMXCollectorAttribute.  # noqa: E501
+        :type: str
+        """
+
+        self._query_url = query_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,92 +33,115 @@ class Role(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'enable_remote_session_in_company_level': 'bool',
+        'acct_require_two_fa': 'bool',
+        'associated_user_count': 'int',
         'custom_help_label': 'str',
         'custom_help_url': 'str',
-        'privileges': 'list[Privilege]',
-        'associated_user_count': 'int',
-        'name': 'str',
         'description': 'str',
+        'enable_remote_session_in_company_level': 'bool',
         'id': 'int',
-        'two_fa_required': 'bool',
+        'name': 'str',
+        'privileges': 'list[Privilege]',
         'require_eula': 'bool',
-        'acct_require_two_fa': 'bool'
+        'two_fa_required': 'bool'
     }
 
     attribute_map = {
-        'enable_remote_session_in_company_level': 'enableRemoteSessionInCompanyLevel',
+        'acct_require_two_fa': 'acctRequireTwoFA',
+        'associated_user_count': 'associatedUserCount',
         'custom_help_label': 'customHelpLabel',
         'custom_help_url': 'customHelpURL',
-        'privileges': 'privileges',
-        'associated_user_count': 'associatedUserCount',
-        'name': 'name',
         'description': 'description',
+        'enable_remote_session_in_company_level': 'enableRemoteSessionInCompanyLevel',
         'id': 'id',
-        'two_fa_required': 'twoFARequired',
+        'name': 'name',
+        'privileges': 'privileges',
         'require_eula': 'requireEULA',
-        'acct_require_two_fa': 'acctRequireTwoFA'
+        'two_fa_required': 'twoFARequired'
     }
 
-    def __init__(self, enable_remote_session_in_company_level=None, custom_help_label=None, custom_help_url=None, privileges=None, associated_user_count=None, name=None, description=None, id=None, two_fa_required=None, require_eula=None, acct_require_two_fa=None):  # noqa: E501
+    def __init__(self, acct_require_two_fa=None, associated_user_count=None, custom_help_label=None, custom_help_url=None, description=None, enable_remote_session_in_company_level=None, id=None, name=None, privileges=None, require_eula=None, two_fa_required=None):  # noqa: E501
         """Role - a model defined in Swagger"""  # noqa: E501
 
-        self._enable_remote_session_in_company_level = None
+        self._acct_require_two_fa = None
+        self._associated_user_count = None
         self._custom_help_label = None
         self._custom_help_url = None
-        self._privileges = None
-        self._associated_user_count = None
-        self._name = None
         self._description = None
+        self._enable_remote_session_in_company_level = None
         self._id = None
-        self._two_fa_required = None
+        self._name = None
+        self._privileges = None
         self._require_eula = None
-        self._acct_require_two_fa = None
+        self._two_fa_required = None
         self.discriminator = None
 
-        if enable_remote_session_in_company_level is not None:
-            self.enable_remote_session_in_company_level = enable_remote_session_in_company_level
+        if acct_require_two_fa is not None:
+            self.acct_require_two_fa = acct_require_two_fa
+        if associated_user_count is not None:
+            self.associated_user_count = associated_user_count
         if custom_help_label is not None:
             self.custom_help_label = custom_help_label
         if custom_help_url is not None:
             self.custom_help_url = custom_help_url
-        self.privileges = privileges
-        if associated_user_count is not None:
-            self.associated_user_count = associated_user_count
-        self.name = name
         if description is not None:
             self.description = description
+        if enable_remote_session_in_company_level is not None:
+            self.enable_remote_session_in_company_level = enable_remote_session_in_company_level
         if id is not None:
             self.id = id
-        if two_fa_required is not None:
-            self.two_fa_required = two_fa_required
+        self.name = name
+        self.privileges = privileges
         if require_eula is not None:
             self.require_eula = require_eula
-        if acct_require_two_fa is not None:
-            self.acct_require_two_fa = acct_require_two_fa
+        if two_fa_required is not None:
+            self.two_fa_required = two_fa_required
 
     @property
-    def enable_remote_session_in_company_level(self):
-        """Gets the enable_remote_session_in_company_level of this Role.  # noqa: E501
+    def acct_require_two_fa(self):
+        """Gets the acct_require_two_fa of this Role.  # noqa: E501
 
-        Whether Remote Session should be enabled at the account level  # noqa: E501
+        Whether Two-Factor Authentication should be required for the entire account  # noqa: E501
 
-        :return: The enable_remote_session_in_company_level of this Role.  # noqa: E501
+        :return: The acct_require_two_fa of this Role.  # noqa: E501
         :rtype: bool
         """
-        return self._enable_remote_session_in_company_level
+        return self._acct_require_two_fa
 
-    @enable_remote_session_in_company_level.setter
-    def enable_remote_session_in_company_level(self, enable_remote_session_in_company_level):
-        """Sets the enable_remote_session_in_company_level of this Role.
+    @acct_require_two_fa.setter
+    def acct_require_two_fa(self, acct_require_two_fa):
+        """Sets the acct_require_two_fa of this Role.
 
-        Whether Remote Session should be enabled at the account level  # noqa: E501
+        Whether Two-Factor Authentication should be required for the entire account  # noqa: E501
 
-        :param enable_remote_session_in_company_level: The enable_remote_session_in_company_level of this Role.  # noqa: E501
+        :param acct_require_two_fa: The acct_require_two_fa of this Role.  # noqa: E501
         :type: bool
         """
 
-        self._enable_remote_session_in_company_level = enable_remote_session_in_company_level
+        self._acct_require_two_fa = acct_require_two_fa
+
+    @property
+    def associated_user_count(self):
+        """Gets the associated_user_count of this Role.  # noqa: E501
+
+        The count of the users which are belongs to the role  # noqa: E501
+
+        :return: The associated_user_count of this Role.  # noqa: E501
+        :rtype: int
+        """
+        return self._associated_user_count
+
+    @associated_user_count.setter
+    def associated_user_count(self, associated_user_count):
+        """Sets the associated_user_count of this Role.
+
+        The count of the users which are belongs to the role  # noqa: E501
+
+        :param associated_user_count: The associated_user_count of this Role.  # noqa: E501
+        :type: int
+        """
+
+        self._associated_user_count = associated_user_count
 
     @property
     def custom_help_label(self):
@@ -167,52 +190,73 @@ class Role(object):
         self._custom_help_url = custom_help_url
 
     @property
-    def privileges(self):
-        """Gets the privileges of this Role.  # noqa: E501
+    def description(self):
+        """Gets the description of this Role.  # noqa: E501
 
-        The account privileges associated with the role. Privileges can be added to a role for each area of your account  # noqa: E501
+        The description of the role  # noqa: E501
 
-        :return: The privileges of this Role.  # noqa: E501
-        :rtype: list[Privilege]
+        :return: The description of this Role.  # noqa: E501
+        :rtype: str
         """
-        return self._privileges
+        return self._description
 
-    @privileges.setter
-    def privileges(self, privileges):
-        """Sets the privileges of this Role.
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Role.
 
-        The account privileges associated with the role. Privileges can be added to a role for each area of your account  # noqa: E501
+        The description of the role  # noqa: E501
 
-        :param privileges: The privileges of this Role.  # noqa: E501
-        :type: list[Privilege]
+        :param description: The description of this Role.  # noqa: E501
+        :type: str
         """
-        if privileges is None:
-            raise ValueError("Invalid value for `privileges`, must not be `None`")  # noqa: E501
 
-        self._privileges = privileges
+        self._description = description
 
     @property
-    def associated_user_count(self):
-        """Gets the associated_user_count of this Role.  # noqa: E501
+    def enable_remote_session_in_company_level(self):
+        """Gets the enable_remote_session_in_company_level of this Role.  # noqa: E501
 
-        The count of the users which are belongs to the role  # noqa: E501
+        Whether Remote Session should be enabled at the account level  # noqa: E501
 
-        :return: The associated_user_count of this Role.  # noqa: E501
+        :return: The enable_remote_session_in_company_level of this Role.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_remote_session_in_company_level
+
+    @enable_remote_session_in_company_level.setter
+    def enable_remote_session_in_company_level(self, enable_remote_session_in_company_level):
+        """Sets the enable_remote_session_in_company_level of this Role.
+
+        Whether Remote Session should be enabled at the account level  # noqa: E501
+
+        :param enable_remote_session_in_company_level: The enable_remote_session_in_company_level of this Role.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_remote_session_in_company_level = enable_remote_session_in_company_level
+
+    @property
+    def id(self):
+        """Gets the id of this Role.  # noqa: E501
+
+        The Id of the role  # noqa: E501
+
+        :return: The id of this Role.  # noqa: E501
         :rtype: int
         """
-        return self._associated_user_count
+        return self._id
 
-    @associated_user_count.setter
-    def associated_user_count(self, associated_user_count):
-        """Sets the associated_user_count of this Role.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Role.
 
-        The count of the users which are belongs to the role  # noqa: E501
+        The Id of the role  # noqa: E501
 
-        :param associated_user_count: The associated_user_count of this Role.  # noqa: E501
+        :param id: The id of this Role.  # noqa: E501
         :type: int
         """
 
-        self._associated_user_count = associated_user_count
+        self._id = id
 
     @property
     def name(self):
@@ -240,73 +284,29 @@ class Role(object):
         self._name = name
 
     @property
-    def description(self):
-        """Gets the description of this Role.  # noqa: E501
+    def privileges(self):
+        """Gets the privileges of this Role.  # noqa: E501
 
-        The description of the role  # noqa: E501
+        The account privileges associated with the role. Privileges can be added to a role for each area of your account  # noqa: E501
 
-        :return: The description of this Role.  # noqa: E501
-        :rtype: str
+        :return: The privileges of this Role.  # noqa: E501
+        :rtype: list[Privilege]
         """
-        return self._description
+        return self._privileges
 
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Role.
+    @privileges.setter
+    def privileges(self, privileges):
+        """Sets the privileges of this Role.
 
-        The description of the role  # noqa: E501
+        The account privileges associated with the role. Privileges can be added to a role for each area of your account  # noqa: E501
 
-        :param description: The description of this Role.  # noqa: E501
-        :type: str
+        :param privileges: The privileges of this Role.  # noqa: E501
+        :type: list[Privilege]
         """
+        if privileges is None:
+            raise ValueError("Invalid value for `privileges`, must not be `None`")  # noqa: E501
 
-        self._description = description
-
-    @property
-    def id(self):
-        """Gets the id of this Role.  # noqa: E501
-
-        The Id of the role  # noqa: E501
-
-        :return: The id of this Role.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this Role.
-
-        The Id of the role  # noqa: E501
-
-        :param id: The id of this Role.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def two_fa_required(self):
-        """Gets the two_fa_required of this Role.  # noqa: E501
-
-        Whether Two-Factor Authentication should be required for this role  # noqa: E501
-
-        :return: The two_fa_required of this Role.  # noqa: E501
-        :rtype: bool
-        """
-        return self._two_fa_required
-
-    @two_fa_required.setter
-    def two_fa_required(self, two_fa_required):
-        """Sets the two_fa_required of this Role.
-
-        Whether Two-Factor Authentication should be required for this role  # noqa: E501
-
-        :param two_fa_required: The two_fa_required of this Role.  # noqa: E501
-        :type: bool
-        """
-
-        self._two_fa_required = two_fa_required
+        self._privileges = privileges
 
     @property
     def require_eula(self):
@@ -332,27 +332,27 @@ class Role(object):
         self._require_eula = require_eula
 
     @property
-    def acct_require_two_fa(self):
-        """Gets the acct_require_two_fa of this Role.  # noqa: E501
+    def two_fa_required(self):
+        """Gets the two_fa_required of this Role.  # noqa: E501
 
-        Whether Two-Factor Authentication should be required for the entire account  # noqa: E501
+        Whether Two-Factor Authentication should be required for this role  # noqa: E501
 
-        :return: The acct_require_two_fa of this Role.  # noqa: E501
+        :return: The two_fa_required of this Role.  # noqa: E501
         :rtype: bool
         """
-        return self._acct_require_two_fa
+        return self._two_fa_required
 
-    @acct_require_two_fa.setter
-    def acct_require_two_fa(self, acct_require_two_fa):
-        """Sets the acct_require_two_fa of this Role.
+    @two_fa_required.setter
+    def two_fa_required(self, two_fa_required):
+        """Sets the two_fa_required of this Role.
 
-        Whether Two-Factor Authentication should be required for the entire account  # noqa: E501
+        Whether Two-Factor Authentication should be required for this role  # noqa: E501
 
-        :param acct_require_two_fa: The acct_require_two_fa of this Role.  # noqa: E501
+        :param two_fa_required: The two_fa_required of this Role.  # noqa: E501
         :type: bool
         """
 
-        self._acct_require_two_fa = acct_require_two_fa
+        self._two_fa_required = two_fa_required
 
     def to_dict(self):
         """Returns the model properties as a dict"""

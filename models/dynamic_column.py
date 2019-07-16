@@ -31,47 +31,26 @@ class DynamicColumn(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'is_hidden': 'bool'
+        'is_hidden': 'bool',
+        'name': 'str'
     }
 
     attribute_map = {
-        'name': 'name',
-        'is_hidden': 'isHidden'
+        'is_hidden': 'isHidden',
+        'name': 'name'
     }
 
-    def __init__(self, name=None, is_hidden=None):  # noqa: E501
+    def __init__(self, is_hidden=None, name=None):  # noqa: E501
         """DynamicColumn - a model defined in Swagger"""  # noqa: E501
 
-        self._name = None
         self._is_hidden = None
+        self._name = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
         if is_hidden is not None:
             self.is_hidden = is_hidden
-
-    @property
-    def name(self):
-        """Gets the name of this DynamicColumn.  # noqa: E501
-
-
-        :return: The name of this DynamicColumn.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this DynamicColumn.
-
-
-        :param name: The name of this DynamicColumn.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
+        if name is not None:
+            self.name = name
 
     @property
     def is_hidden(self):
@@ -93,6 +72,27 @@ class DynamicColumn(object):
         """
 
         self._is_hidden = is_hidden
+
+    @property
+    def name(self):
+        """Gets the name of this DynamicColumn.  # noqa: E501
+
+
+        :return: The name of this DynamicColumn.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this DynamicColumn.
+
+
+        :param name: The name of this DynamicColumn.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

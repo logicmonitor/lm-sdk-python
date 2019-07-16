@@ -32,33 +32,33 @@ class DeviceDatasourceGraph(object):
     """
     swagger_types = {
         'display_prio': 'int',
-        'name': 'str',
         'id': 'int',
+        'name': 'str',
         'title': 'str'
     }
 
     attribute_map = {
         'display_prio': 'displayPrio',
-        'name': 'name',
         'id': 'id',
+        'name': 'name',
         'title': 'title'
     }
 
-    def __init__(self, display_prio=None, name=None, id=None, title=None):  # noqa: E501
+    def __init__(self, display_prio=None, id=None, name=None, title=None):  # noqa: E501
         """DeviceDatasourceGraph - a model defined in Swagger"""  # noqa: E501
 
         self._display_prio = None
-        self._name = None
         self._id = None
+        self._name = None
         self._title = None
         self.discriminator = None
 
         if display_prio is not None:
             self.display_prio = display_prio
-        if name is not None:
-            self.name = name
         if id is not None:
             self.id = id
+        if name is not None:
+            self.name = name
         if title is not None:
             self.title = title
 
@@ -84,27 +84,6 @@ class DeviceDatasourceGraph(object):
         self._display_prio = display_prio
 
     @property
-    def name(self):
-        """Gets the name of this DeviceDatasourceGraph.  # noqa: E501
-
-
-        :return: The name of this DeviceDatasourceGraph.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this DeviceDatasourceGraph.
-
-
-        :param name: The name of this DeviceDatasourceGraph.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
-
-    @property
     def id(self):
         """Gets the id of this DeviceDatasourceGraph.  # noqa: E501
 
@@ -124,6 +103,27 @@ class DeviceDatasourceGraph(object):
         """
 
         self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this DeviceDatasourceGraph.  # noqa: E501
+
+
+        :return: The name of this DeviceDatasourceGraph.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this DeviceDatasourceGraph.
+
+
+        :param name: The name of this DeviceDatasourceGraph.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     @property
     def title(self):

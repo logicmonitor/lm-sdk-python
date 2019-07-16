@@ -34,264 +34,96 @@ class DeviceDataSourceInstanceConfig(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'instance_name': 'str',
-        'device_data_source_id': 'int',
-        'config_status': 'int',
-        'version': 'int',
-        'device_id': 'int',
-        'delta_config': 'list[DeviceDataSourceInstanceConfigDiff]',
-        'device_display_name': 'str',
-        'data_source_name': 'str',
         'alerts': 'list[DeviceDataSourceInstanceConfigAlert]',
-        'data_source_id': 'int',
-        'instance_id': 'int',
-        'config_err_msg': 'str',
         'change_status': 'str',
+        'config': 'str',
+        'config_err_msg': 'str',
+        'config_status': 'int',
+        'data_source_id': 'int',
+        'data_source_name': 'str',
+        'delta_config': 'list[DeviceDataSourceInstanceConfigDiff]',
+        'device_data_source_id': 'int',
+        'device_display_name': 'str',
+        'device_id': 'int',
         'id': 'str',
+        'instance_id': 'int',
+        'instance_name': 'str',
         'poll_timestamp': 'int',
-        'config': 'str'
+        'version': 'int'
     }
 
     attribute_map = {
-        'instance_name': 'instanceName',
-        'device_data_source_id': 'deviceDataSourceId',
-        'config_status': 'configStatus',
-        'version': 'version',
-        'device_id': 'deviceId',
-        'delta_config': 'deltaConfig',
-        'device_display_name': 'deviceDisplayName',
-        'data_source_name': 'dataSourceName',
         'alerts': 'alerts',
-        'data_source_id': 'dataSourceId',
-        'instance_id': 'instanceId',
-        'config_err_msg': 'configErrMsg',
         'change_status': 'changeStatus',
+        'config': 'config',
+        'config_err_msg': 'configErrMsg',
+        'config_status': 'configStatus',
+        'data_source_id': 'dataSourceId',
+        'data_source_name': 'dataSourceName',
+        'delta_config': 'deltaConfig',
+        'device_data_source_id': 'deviceDataSourceId',
+        'device_display_name': 'deviceDisplayName',
+        'device_id': 'deviceId',
         'id': 'id',
+        'instance_id': 'instanceId',
+        'instance_name': 'instanceName',
         'poll_timestamp': 'pollTimestamp',
-        'config': 'config'
+        'version': 'version'
     }
 
-    def __init__(self, instance_name=None, device_data_source_id=None, config_status=None, version=None, device_id=None, delta_config=None, device_display_name=None, data_source_name=None, alerts=None, data_source_id=None, instance_id=None, config_err_msg=None, change_status=None, id=None, poll_timestamp=None, config=None):  # noqa: E501
+    def __init__(self, alerts=None, change_status=None, config=None, config_err_msg=None, config_status=None, data_source_id=None, data_source_name=None, delta_config=None, device_data_source_id=None, device_display_name=None, device_id=None, id=None, instance_id=None, instance_name=None, poll_timestamp=None, version=None):  # noqa: E501
         """DeviceDataSourceInstanceConfig - a model defined in Swagger"""  # noqa: E501
 
-        self._instance_name = None
-        self._device_data_source_id = None
-        self._config_status = None
-        self._version = None
-        self._device_id = None
-        self._delta_config = None
-        self._device_display_name = None
-        self._data_source_name = None
         self._alerts = None
-        self._data_source_id = None
-        self._instance_id = None
-        self._config_err_msg = None
         self._change_status = None
-        self._id = None
-        self._poll_timestamp = None
         self._config = None
+        self._config_err_msg = None
+        self._config_status = None
+        self._data_source_id = None
+        self._data_source_name = None
+        self._delta_config = None
+        self._device_data_source_id = None
+        self._device_display_name = None
+        self._device_id = None
+        self._id = None
+        self._instance_id = None
+        self._instance_name = None
+        self._poll_timestamp = None
+        self._version = None
         self.discriminator = None
 
-        if instance_name is not None:
-            self.instance_name = instance_name
-        if device_data_source_id is not None:
-            self.device_data_source_id = device_data_source_id
-        if config_status is not None:
-            self.config_status = config_status
-        if version is not None:
-            self.version = version
-        if device_id is not None:
-            self.device_id = device_id
-        if delta_config is not None:
-            self.delta_config = delta_config
-        if device_display_name is not None:
-            self.device_display_name = device_display_name
-        if data_source_name is not None:
-            self.data_source_name = data_source_name
         if alerts is not None:
             self.alerts = alerts
-        if data_source_id is not None:
-            self.data_source_id = data_source_id
-        if instance_id is not None:
-            self.instance_id = instance_id
-        if config_err_msg is not None:
-            self.config_err_msg = config_err_msg
         if change_status is not None:
             self.change_status = change_status
-        if id is not None:
-            self.id = id
-        if poll_timestamp is not None:
-            self.poll_timestamp = poll_timestamp
         if config is not None:
             self.config = config
-
-    @property
-    def instance_name(self):
-        """Gets the instance_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
-
-
-        :return: The instance_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._instance_name
-
-    @instance_name.setter
-    def instance_name(self, instance_name):
-        """Sets the instance_name of this DeviceDataSourceInstanceConfig.
-
-
-        :param instance_name: The instance_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :type: str
-        """
-
-        self._instance_name = instance_name
-
-    @property
-    def device_data_source_id(self):
-        """Gets the device_data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
-
-
-        :return: The device_data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :rtype: int
-        """
-        return self._device_data_source_id
-
-    @device_data_source_id.setter
-    def device_data_source_id(self, device_data_source_id):
-        """Sets the device_data_source_id of this DeviceDataSourceInstanceConfig.
-
-
-        :param device_data_source_id: The device_data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :type: int
-        """
-
-        self._device_data_source_id = device_data_source_id
-
-    @property
-    def config_status(self):
-        """Gets the config_status of this DeviceDataSourceInstanceConfig.  # noqa: E501
-
-
-        :return: The config_status of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :rtype: int
-        """
-        return self._config_status
-
-    @config_status.setter
-    def config_status(self, config_status):
-        """Sets the config_status of this DeviceDataSourceInstanceConfig.
-
-
-        :param config_status: The config_status of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :type: int
-        """
-
-        self._config_status = config_status
-
-    @property
-    def version(self):
-        """Gets the version of this DeviceDataSourceInstanceConfig.  # noqa: E501
-
-
-        :return: The version of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :rtype: int
-        """
-        return self._version
-
-    @version.setter
-    def version(self, version):
-        """Sets the version of this DeviceDataSourceInstanceConfig.
-
-
-        :param version: The version of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :type: int
-        """
-
-        self._version = version
-
-    @property
-    def device_id(self):
-        """Gets the device_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
-
-
-        :return: The device_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :rtype: int
-        """
-        return self._device_id
-
-    @device_id.setter
-    def device_id(self, device_id):
-        """Sets the device_id of this DeviceDataSourceInstanceConfig.
-
-
-        :param device_id: The device_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :type: int
-        """
-
-        self._device_id = device_id
-
-    @property
-    def delta_config(self):
-        """Gets the delta_config of this DeviceDataSourceInstanceConfig.  # noqa: E501
-
-
-        :return: The delta_config of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :rtype: list[DeviceDataSourceInstanceConfigDiff]
-        """
-        return self._delta_config
-
-    @delta_config.setter
-    def delta_config(self, delta_config):
-        """Sets the delta_config of this DeviceDataSourceInstanceConfig.
-
-
-        :param delta_config: The delta_config of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :type: list[DeviceDataSourceInstanceConfigDiff]
-        """
-
-        self._delta_config = delta_config
-
-    @property
-    def device_display_name(self):
-        """Gets the device_display_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
-
-
-        :return: The device_display_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._device_display_name
-
-    @device_display_name.setter
-    def device_display_name(self, device_display_name):
-        """Sets the device_display_name of this DeviceDataSourceInstanceConfig.
-
-
-        :param device_display_name: The device_display_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :type: str
-        """
-
-        self._device_display_name = device_display_name
-
-    @property
-    def data_source_name(self):
-        """Gets the data_source_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
-
-
-        :return: The data_source_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_source_name
-
-    @data_source_name.setter
-    def data_source_name(self, data_source_name):
-        """Sets the data_source_name of this DeviceDataSourceInstanceConfig.
-
-
-        :param data_source_name: The data_source_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :type: str
-        """
-
-        self._data_source_name = data_source_name
+        if config_err_msg is not None:
+            self.config_err_msg = config_err_msg
+        if config_status is not None:
+            self.config_status = config_status
+        if data_source_id is not None:
+            self.data_source_id = data_source_id
+        if data_source_name is not None:
+            self.data_source_name = data_source_name
+        if delta_config is not None:
+            self.delta_config = delta_config
+        if device_data_source_id is not None:
+            self.device_data_source_id = device_data_source_id
+        if device_display_name is not None:
+            self.device_display_name = device_display_name
+        if device_id is not None:
+            self.device_id = device_id
+        if id is not None:
+            self.id = id
+        if instance_id is not None:
+            self.instance_id = instance_id
+        if instance_name is not None:
+            self.instance_name = instance_name
+        if poll_timestamp is not None:
+            self.poll_timestamp = poll_timestamp
+        if version is not None:
+            self.version = version
 
     @property
     def alerts(self):
@@ -315,46 +147,46 @@ class DeviceDataSourceInstanceConfig(object):
         self._alerts = alerts
 
     @property
-    def data_source_id(self):
-        """Gets the data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+    def change_status(self):
+        """Gets the change_status of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
 
-        :return: The data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :rtype: int
+        :return: The change_status of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :rtype: str
         """
-        return self._data_source_id
+        return self._change_status
 
-    @data_source_id.setter
-    def data_source_id(self, data_source_id):
-        """Sets the data_source_id of this DeviceDataSourceInstanceConfig.
+    @change_status.setter
+    def change_status(self, change_status):
+        """Sets the change_status of this DeviceDataSourceInstanceConfig.
 
 
-        :param data_source_id: The data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :type: int
+        :param change_status: The change_status of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :type: str
         """
 
-        self._data_source_id = data_source_id
+        self._change_status = change_status
 
     @property
-    def instance_id(self):
-        """Gets the instance_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+    def config(self):
+        """Gets the config of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
 
-        :return: The instance_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :rtype: int
+        :return: The config of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :rtype: str
         """
-        return self._instance_id
+        return self._config
 
-    @instance_id.setter
-    def instance_id(self, instance_id):
-        """Sets the instance_id of this DeviceDataSourceInstanceConfig.
+    @config.setter
+    def config(self, config):
+        """Sets the config of this DeviceDataSourceInstanceConfig.
 
 
-        :param instance_id: The instance_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :type: int
+        :param config: The config of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :type: str
         """
 
-        self._instance_id = instance_id
+        self._config = config
 
     @property
     def config_err_msg(self):
@@ -378,25 +210,151 @@ class DeviceDataSourceInstanceConfig(object):
         self._config_err_msg = config_err_msg
 
     @property
-    def change_status(self):
-        """Gets the change_status of this DeviceDataSourceInstanceConfig.  # noqa: E501
+    def config_status(self):
+        """Gets the config_status of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
 
-        :return: The change_status of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :return: The config_status of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :rtype: int
+        """
+        return self._config_status
+
+    @config_status.setter
+    def config_status(self, config_status):
+        """Sets the config_status of this DeviceDataSourceInstanceConfig.
+
+
+        :param config_status: The config_status of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :type: int
+        """
+
+        self._config_status = config_status
+
+    @property
+    def data_source_id(self):
+        """Gets the data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+
+
+        :return: The data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_source_id
+
+    @data_source_id.setter
+    def data_source_id(self, data_source_id):
+        """Sets the data_source_id of this DeviceDataSourceInstanceConfig.
+
+
+        :param data_source_id: The data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :type: int
+        """
+
+        self._data_source_id = data_source_id
+
+    @property
+    def data_source_name(self):
+        """Gets the data_source_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
+
+
+        :return: The data_source_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :rtype: str
         """
-        return self._change_status
+        return self._data_source_name
 
-    @change_status.setter
-    def change_status(self, change_status):
-        """Sets the change_status of this DeviceDataSourceInstanceConfig.
+    @data_source_name.setter
+    def data_source_name(self, data_source_name):
+        """Sets the data_source_name of this DeviceDataSourceInstanceConfig.
 
 
-        :param change_status: The change_status of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :param data_source_name: The data_source_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :type: str
         """
 
-        self._change_status = change_status
+        self._data_source_name = data_source_name
+
+    @property
+    def delta_config(self):
+        """Gets the delta_config of this DeviceDataSourceInstanceConfig.  # noqa: E501
+
+
+        :return: The delta_config of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :rtype: list[DeviceDataSourceInstanceConfigDiff]
+        """
+        return self._delta_config
+
+    @delta_config.setter
+    def delta_config(self, delta_config):
+        """Sets the delta_config of this DeviceDataSourceInstanceConfig.
+
+
+        :param delta_config: The delta_config of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :type: list[DeviceDataSourceInstanceConfigDiff]
+        """
+
+        self._delta_config = delta_config
+
+    @property
+    def device_data_source_id(self):
+        """Gets the device_data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+
+
+        :return: The device_data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :rtype: int
+        """
+        return self._device_data_source_id
+
+    @device_data_source_id.setter
+    def device_data_source_id(self, device_data_source_id):
+        """Sets the device_data_source_id of this DeviceDataSourceInstanceConfig.
+
+
+        :param device_data_source_id: The device_data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :type: int
+        """
+
+        self._device_data_source_id = device_data_source_id
+
+    @property
+    def device_display_name(self):
+        """Gets the device_display_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
+
+
+        :return: The device_display_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._device_display_name
+
+    @device_display_name.setter
+    def device_display_name(self, device_display_name):
+        """Sets the device_display_name of this DeviceDataSourceInstanceConfig.
+
+
+        :param device_display_name: The device_display_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._device_display_name = device_display_name
+
+    @property
+    def device_id(self):
+        """Gets the device_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+
+
+        :return: The device_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :rtype: int
+        """
+        return self._device_id
+
+    @device_id.setter
+    def device_id(self, device_id):
+        """Sets the device_id of this DeviceDataSourceInstanceConfig.
+
+
+        :param device_id: The device_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :type: int
+        """
+
+        self._device_id = device_id
 
     @property
     def id(self):
@@ -420,6 +378,48 @@ class DeviceDataSourceInstanceConfig(object):
         self._id = id
 
     @property
+    def instance_id(self):
+        """Gets the instance_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+
+
+        :return: The instance_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :rtype: int
+        """
+        return self._instance_id
+
+    @instance_id.setter
+    def instance_id(self, instance_id):
+        """Sets the instance_id of this DeviceDataSourceInstanceConfig.
+
+
+        :param instance_id: The instance_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :type: int
+        """
+
+        self._instance_id = instance_id
+
+    @property
+    def instance_name(self):
+        """Gets the instance_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
+
+
+        :return: The instance_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._instance_name
+
+    @instance_name.setter
+    def instance_name(self, instance_name):
+        """Sets the instance_name of this DeviceDataSourceInstanceConfig.
+
+
+        :param instance_name: The instance_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._instance_name = instance_name
+
+    @property
     def poll_timestamp(self):
         """Gets the poll_timestamp of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
@@ -441,25 +441,25 @@ class DeviceDataSourceInstanceConfig(object):
         self._poll_timestamp = poll_timestamp
 
     @property
-    def config(self):
-        """Gets the config of this DeviceDataSourceInstanceConfig.  # noqa: E501
+    def version(self):
+        """Gets the version of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
 
-        :return: The config of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :rtype: str
+        :return: The version of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :rtype: int
         """
-        return self._config
+        return self._version
 
-    @config.setter
-    def config(self, config):
-        """Sets the config of this DeviceDataSourceInstanceConfig.
+    @version.setter
+    def version(self, version):
+        """Sets the version of this DeviceDataSourceInstanceConfig.
 
 
-        :param config: The config of this DeviceDataSourceInstanceConfig.  # noqa: E501
-        :type: str
+        :param version: The version of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :type: int
         """
 
-        self._config = config
+        self._version = version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

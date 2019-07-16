@@ -34,29 +34,29 @@ class AwsServiceLimitsFromTrustedAdvisorCollectorAttribute(CollectorAttribute):
     """
     swagger_types = {
         'name': 'str',
-        'period': 'int',
-        'aws_service_name': 'str'
+        'aws_service_name': 'str',
+        'period': 'int'
     }
 
     attribute_map = {
         'name': 'name',
-        'period': 'period',
-        'aws_service_name': 'awsServiceName'
+        'aws_service_name': 'awsServiceName',
+        'period': 'period'
     }
 
-    def __init__(self, name=None, period=None, aws_service_name=None):  # noqa: E501
+    def __init__(self, name=None, aws_service_name=None, period=None):  # noqa: E501
         """AwsServiceLimitsFromTrustedAdvisorCollectorAttribute - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._period = None
         self._aws_service_name = None
+        self._period = None
         self.discriminator = None
 
         self.name = name
-        if period is not None:
-            self.period = period
         if aws_service_name is not None:
             self.aws_service_name = aws_service_name
+        if period is not None:
+            self.period = period
 
     @property
     def name(self):
@@ -82,27 +82,6 @@ class AwsServiceLimitsFromTrustedAdvisorCollectorAttribute(CollectorAttribute):
         self._name = name
 
     @property
-    def period(self):
-        """Gets the period of this AwsServiceLimitsFromTrustedAdvisorCollectorAttribute.  # noqa: E501
-
-
-        :return: The period of this AwsServiceLimitsFromTrustedAdvisorCollectorAttribute.  # noqa: E501
-        :rtype: int
-        """
-        return self._period
-
-    @period.setter
-    def period(self, period):
-        """Sets the period of this AwsServiceLimitsFromTrustedAdvisorCollectorAttribute.
-
-
-        :param period: The period of this AwsServiceLimitsFromTrustedAdvisorCollectorAttribute.  # noqa: E501
-        :type: int
-        """
-
-        self._period = period
-
-    @property
     def aws_service_name(self):
         """Gets the aws_service_name of this AwsServiceLimitsFromTrustedAdvisorCollectorAttribute.  # noqa: E501
 
@@ -122,6 +101,27 @@ class AwsServiceLimitsFromTrustedAdvisorCollectorAttribute(CollectorAttribute):
         """
 
         self._aws_service_name = aws_service_name
+
+    @property
+    def period(self):
+        """Gets the period of this AwsServiceLimitsFromTrustedAdvisorCollectorAttribute.  # noqa: E501
+
+
+        :return: The period of this AwsServiceLimitsFromTrustedAdvisorCollectorAttribute.  # noqa: E501
+        :rtype: int
+        """
+        return self._period
+
+    @period.setter
+    def period(self, period):
+        """Sets the period of this AwsServiceLimitsFromTrustedAdvisorCollectorAttribute.
+
+
+        :param period: The period of this AwsServiceLimitsFromTrustedAdvisorCollectorAttribute.  # noqa: E501
+        :type: int
+        """
+
+        self._period = period
 
     def to_dict(self):
         """Returns the model properties as a dict"""

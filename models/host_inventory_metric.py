@@ -31,30 +31,51 @@ class HostInventoryMetric(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'data_source_full_name': 'str',
         'data_source_id': 'int',
-        'instances': 'str',
-        'data_source_full_name': 'str'
+        'instances': 'str'
     }
 
     attribute_map = {
+        'data_source_full_name': 'dataSourceFullName',
         'data_source_id': 'dataSourceId',
-        'instances': 'instances',
-        'data_source_full_name': 'dataSourceFullName'
+        'instances': 'instances'
     }
 
-    def __init__(self, data_source_id=None, instances=None, data_source_full_name=None):  # noqa: E501
+    def __init__(self, data_source_full_name=None, data_source_id=None, instances=None):  # noqa: E501
         """HostInventoryMetric - a model defined in Swagger"""  # noqa: E501
 
+        self._data_source_full_name = None
         self._data_source_id = None
         self._instances = None
-        self._data_source_full_name = None
         self.discriminator = None
 
+        if data_source_full_name is not None:
+            self.data_source_full_name = data_source_full_name
         self.data_source_id = data_source_id
         if instances is not None:
             self.instances = instances
-        if data_source_full_name is not None:
-            self.data_source_full_name = data_source_full_name
+
+    @property
+    def data_source_full_name(self):
+        """Gets the data_source_full_name of this HostInventoryMetric.  # noqa: E501
+
+
+        :return: The data_source_full_name of this HostInventoryMetric.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_source_full_name
+
+    @data_source_full_name.setter
+    def data_source_full_name(self, data_source_full_name):
+        """Sets the data_source_full_name of this HostInventoryMetric.
+
+
+        :param data_source_full_name: The data_source_full_name of this HostInventoryMetric.  # noqa: E501
+        :type: str
+        """
+
+        self._data_source_full_name = data_source_full_name
 
     @property
     def data_source_id(self):
@@ -99,27 +120,6 @@ class HostInventoryMetric(object):
         """
 
         self._instances = instances
-
-    @property
-    def data_source_full_name(self):
-        """Gets the data_source_full_name of this HostInventoryMetric.  # noqa: E501
-
-
-        :return: The data_source_full_name of this HostInventoryMetric.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_source_full_name
-
-    @data_source_full_name.setter
-    def data_source_full_name(self, data_source_full_name):
-        """Sets the data_source_full_name of this HostInventoryMetric.
-
-
-        :param data_source_full_name: The data_source_full_name of this HostInventoryMetric.  # noqa: E501
-        :type: str
-        """
-
-        self._data_source_full_name = data_source_full_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

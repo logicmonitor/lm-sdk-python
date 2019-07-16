@@ -35,38 +35,38 @@ class OpsNoteWebsiteScope(OpsNoteScope):
     swagger_types = {
         'type': 'str',
         'full_path': 'str',
-        'website_name': 'str',
+        'group_id': 'int',
         'website_id': 'int',
-        'group_id': 'int'
+        'website_name': 'str'
     }
 
     attribute_map = {
         'type': 'type',
         'full_path': 'fullPath',
-        'website_name': 'websiteName',
+        'group_id': 'groupId',
         'website_id': 'websiteId',
-        'group_id': 'groupId'
+        'website_name': 'websiteName'
     }
 
-    def __init__(self, type=None, full_path=None, website_name=None, website_id=None, group_id=None):  # noqa: E501
+    def __init__(self, type=None, full_path=None, group_id=None, website_id=None, website_name=None):  # noqa: E501
         """OpsNoteWebsiteScope - a model defined in Swagger"""  # noqa: E501
 
         self._type = None
         self._full_path = None
-        self._website_name = None
-        self._website_id = None
         self._group_id = None
+        self._website_id = None
+        self._website_name = None
         self.discriminator = None
 
         self.type = type
         if full_path is not None:
             self.full_path = full_path
-        if website_name is not None:
-            self.website_name = website_name
-        if website_id is not None:
-            self.website_id = website_id
         if group_id is not None:
             self.group_id = group_id
+        if website_id is not None:
+            self.website_id = website_id
+        if website_name is not None:
+            self.website_name = website_name
 
     @property
     def type(self):
@@ -113,25 +113,25 @@ class OpsNoteWebsiteScope(OpsNoteScope):
         self._full_path = full_path
 
     @property
-    def website_name(self):
-        """Gets the website_name of this OpsNoteWebsiteScope.  # noqa: E501
+    def group_id(self):
+        """Gets the group_id of this OpsNoteWebsiteScope.  # noqa: E501
 
 
-        :return: The website_name of this OpsNoteWebsiteScope.  # noqa: E501
-        :rtype: str
+        :return: The group_id of this OpsNoteWebsiteScope.  # noqa: E501
+        :rtype: int
         """
-        return self._website_name
+        return self._group_id
 
-    @website_name.setter
-    def website_name(self, website_name):
-        """Sets the website_name of this OpsNoteWebsiteScope.
+    @group_id.setter
+    def group_id(self, group_id):
+        """Sets the group_id of this OpsNoteWebsiteScope.
 
 
-        :param website_name: The website_name of this OpsNoteWebsiteScope.  # noqa: E501
-        :type: str
+        :param group_id: The group_id of this OpsNoteWebsiteScope.  # noqa: E501
+        :type: int
         """
 
-        self._website_name = website_name
+        self._group_id = group_id
 
     @property
     def website_id(self):
@@ -155,25 +155,25 @@ class OpsNoteWebsiteScope(OpsNoteScope):
         self._website_id = website_id
 
     @property
-    def group_id(self):
-        """Gets the group_id of this OpsNoteWebsiteScope.  # noqa: E501
+    def website_name(self):
+        """Gets the website_name of this OpsNoteWebsiteScope.  # noqa: E501
 
 
-        :return: The group_id of this OpsNoteWebsiteScope.  # noqa: E501
-        :rtype: int
+        :return: The website_name of this OpsNoteWebsiteScope.  # noqa: E501
+        :rtype: str
         """
-        return self._group_id
+        return self._website_name
 
-    @group_id.setter
-    def group_id(self, group_id):
-        """Sets the group_id of this OpsNoteWebsiteScope.
+    @website_name.setter
+    def website_name(self, website_name):
+        """Sets the website_name of this OpsNoteWebsiteScope.
 
 
-        :param group_id: The group_id of this OpsNoteWebsiteScope.  # noqa: E501
-        :type: int
+        :param website_name: The website_name of this OpsNoteWebsiteScope.  # noqa: E501
+        :type: str
         """
 
-        self._group_id = group_id
+        self._website_name = website_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

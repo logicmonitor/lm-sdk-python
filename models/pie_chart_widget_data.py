@@ -34,67 +34,46 @@ class PieChartWidgetData(WidgetData):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
         'title': 'str',
-        'max_slices_can_be_shown': 'int',
+        'type': 'str',
         'data': 'list[PieChartData]',
+        'group_remaining_as_others': 'bool',
         'hide_zero_percent_slices': 'bool',
-        'group_remaining_as_others': 'bool'
+        'max_slices_can_be_shown': 'int'
     }
 
     attribute_map = {
-        'type': 'type',
         'title': 'title',
-        'max_slices_can_be_shown': 'maxSlicesCanBeShown',
+        'type': 'type',
         'data': 'data',
+        'group_remaining_as_others': 'groupRemainingAsOthers',
         'hide_zero_percent_slices': 'hideZeroPercentSlices',
-        'group_remaining_as_others': 'groupRemainingAsOthers'
+        'max_slices_can_be_shown': 'maxSlicesCanBeShown'
     }
 
-    def __init__(self, type=None, title=None, max_slices_can_be_shown=None, data=None, hide_zero_percent_slices=None, group_remaining_as_others=None):  # noqa: E501
+    def __init__(self, title=None, type=None, data=None, group_remaining_as_others=None, hide_zero_percent_slices=None, max_slices_can_be_shown=None):  # noqa: E501
         """PieChartWidgetData - a model defined in Swagger"""  # noqa: E501
 
-        self._type = None
         self._title = None
-        self._max_slices_can_be_shown = None
+        self._type = None
         self._data = None
-        self._hide_zero_percent_slices = None
         self._group_remaining_as_others = None
+        self._hide_zero_percent_slices = None
+        self._max_slices_can_be_shown = None
         self.discriminator = None
 
-        if type is not None:
-            self.type = type
         if title is not None:
             self.title = title
-        if max_slices_can_be_shown is not None:
-            self.max_slices_can_be_shown = max_slices_can_be_shown
+        if type is not None:
+            self.type = type
         if data is not None:
             self.data = data
-        if hide_zero_percent_slices is not None:
-            self.hide_zero_percent_slices = hide_zero_percent_slices
         if group_remaining_as_others is not None:
             self.group_remaining_as_others = group_remaining_as_others
-
-    @property
-    def type(self):
-        """Gets the type of this PieChartWidgetData.  # noqa: E501
-
-
-        :return: The type of this PieChartWidgetData.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this PieChartWidgetData.
-
-
-        :param type: The type of this PieChartWidgetData.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
+        if hide_zero_percent_slices is not None:
+            self.hide_zero_percent_slices = hide_zero_percent_slices
+        if max_slices_can_be_shown is not None:
+            self.max_slices_can_be_shown = max_slices_can_be_shown
 
     @property
     def title(self):
@@ -118,25 +97,25 @@ class PieChartWidgetData(WidgetData):
         self._title = title
 
     @property
-    def max_slices_can_be_shown(self):
-        """Gets the max_slices_can_be_shown of this PieChartWidgetData.  # noqa: E501
+    def type(self):
+        """Gets the type of this PieChartWidgetData.  # noqa: E501
 
 
-        :return: The max_slices_can_be_shown of this PieChartWidgetData.  # noqa: E501
-        :rtype: int
+        :return: The type of this PieChartWidgetData.  # noqa: E501
+        :rtype: str
         """
-        return self._max_slices_can_be_shown
+        return self._type
 
-    @max_slices_can_be_shown.setter
-    def max_slices_can_be_shown(self, max_slices_can_be_shown):
-        """Sets the max_slices_can_be_shown of this PieChartWidgetData.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this PieChartWidgetData.
 
 
-        :param max_slices_can_be_shown: The max_slices_can_be_shown of this PieChartWidgetData.  # noqa: E501
-        :type: int
+        :param type: The type of this PieChartWidgetData.  # noqa: E501
+        :type: str
         """
 
-        self._max_slices_can_be_shown = max_slices_can_be_shown
+        self._type = type
 
     @property
     def data(self):
@@ -160,6 +139,27 @@ class PieChartWidgetData(WidgetData):
         self._data = data
 
     @property
+    def group_remaining_as_others(self):
+        """Gets the group_remaining_as_others of this PieChartWidgetData.  # noqa: E501
+
+
+        :return: The group_remaining_as_others of this PieChartWidgetData.  # noqa: E501
+        :rtype: bool
+        """
+        return self._group_remaining_as_others
+
+    @group_remaining_as_others.setter
+    def group_remaining_as_others(self, group_remaining_as_others):
+        """Sets the group_remaining_as_others of this PieChartWidgetData.
+
+
+        :param group_remaining_as_others: The group_remaining_as_others of this PieChartWidgetData.  # noqa: E501
+        :type: bool
+        """
+
+        self._group_remaining_as_others = group_remaining_as_others
+
+    @property
     def hide_zero_percent_slices(self):
         """Gets the hide_zero_percent_slices of this PieChartWidgetData.  # noqa: E501
 
@@ -181,25 +181,25 @@ class PieChartWidgetData(WidgetData):
         self._hide_zero_percent_slices = hide_zero_percent_slices
 
     @property
-    def group_remaining_as_others(self):
-        """Gets the group_remaining_as_others of this PieChartWidgetData.  # noqa: E501
+    def max_slices_can_be_shown(self):
+        """Gets the max_slices_can_be_shown of this PieChartWidgetData.  # noqa: E501
 
 
-        :return: The group_remaining_as_others of this PieChartWidgetData.  # noqa: E501
-        :rtype: bool
+        :return: The max_slices_can_be_shown of this PieChartWidgetData.  # noqa: E501
+        :rtype: int
         """
-        return self._group_remaining_as_others
+        return self._max_slices_can_be_shown
 
-    @group_remaining_as_others.setter
-    def group_remaining_as_others(self, group_remaining_as_others):
-        """Sets the group_remaining_as_others of this PieChartWidgetData.
+    @max_slices_can_be_shown.setter
+    def max_slices_can_be_shown(self, max_slices_can_be_shown):
+        """Sets the max_slices_can_be_shown of this PieChartWidgetData.
 
 
-        :param group_remaining_as_others: The group_remaining_as_others of this PieChartWidgetData.  # noqa: E501
-        :type: bool
+        :param max_slices_can_be_shown: The max_slices_can_be_shown of this PieChartWidgetData.  # noqa: E501
+        :type: int
         """
 
-        self._group_remaining_as_others = group_remaining_as_others
+        self._max_slices_can_be_shown = max_slices_can_be_shown
 
     def to_dict(self):
         """Returns the model properties as a dict"""

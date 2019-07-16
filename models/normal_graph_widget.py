@@ -33,147 +33,101 @@ class NormalGraphWidget(Widget):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'last_updated_by': 'str',
-        'user_permission': 'str',
         'dashboard_id': 'int',
-        'name': 'str',
         'description': 'str',
-        'last_updated_on': 'int',
-        'theme': 'str',
-        'interval': 'int',
         'id': 'int',
-        'type': 'str',
+        'interval': 'int',
+        'last_updated_by': 'str',
+        'last_updated_on': 'int',
+        'name': 'str',
+        'theme': 'str',
         'timescale': 'str',
-        'graph_name': 'str',
-        'host_name': 'str',
-        'h_id': 'int',
-        'dsi_id': 'int',
+        'type': 'str',
+        'user_permission': 'str',
         'ds_name': 'str',
+        'dsi_id': 'int',
+        'dsi_name': 'str',
         'graph_id': 'int',
-        'dsi_name': 'str'
+        'graph_name': 'str',
+        'h_id': 'int',
+        'host_name': 'str'
     }
 
     attribute_map = {
-        'last_updated_by': 'lastUpdatedBy',
-        'user_permission': 'userPermission',
         'dashboard_id': 'dashboardId',
-        'name': 'name',
         'description': 'description',
-        'last_updated_on': 'lastUpdatedOn',
-        'theme': 'theme',
-        'interval': 'interval',
         'id': 'id',
-        'type': 'type',
+        'interval': 'interval',
+        'last_updated_by': 'lastUpdatedBy',
+        'last_updated_on': 'lastUpdatedOn',
+        'name': 'name',
+        'theme': 'theme',
         'timescale': 'timescale',
-        'graph_name': 'graphName',
-        'host_name': 'hostName',
-        'h_id': 'hId',
-        'dsi_id': 'dsiId',
+        'type': 'type',
+        'user_permission': 'userPermission',
         'ds_name': 'dsName',
+        'dsi_id': 'dsiId',
+        'dsi_name': 'dsiName',
         'graph_id': 'graphId',
-        'dsi_name': 'dsiName'
+        'graph_name': 'graphName',
+        'h_id': 'hId',
+        'host_name': 'hostName'
     }
 
-    def __init__(self, last_updated_by=None, user_permission=None, dashboard_id=None, name=None, description=None, last_updated_on=None, theme=None, interval=None, id=None, type=None, timescale=None, graph_name=None, host_name=None, h_id=None, dsi_id=None, ds_name=None, graph_id=None, dsi_name=None):  # noqa: E501
+    def __init__(self, dashboard_id=None, description=None, id=None, interval=None, last_updated_by=None, last_updated_on=None, name=None, theme=None, timescale=None, type=None, user_permission=None, ds_name=None, dsi_id=None, dsi_name=None, graph_id=None, graph_name=None, h_id=None, host_name=None):  # noqa: E501
         """NormalGraphWidget - a model defined in Swagger"""  # noqa: E501
 
-        self._last_updated_by = None
-        self._user_permission = None
         self._dashboard_id = None
-        self._name = None
         self._description = None
-        self._last_updated_on = None
-        self._theme = None
-        self._interval = None
         self._id = None
-        self._type = None
+        self._interval = None
+        self._last_updated_by = None
+        self._last_updated_on = None
+        self._name = None
+        self._theme = None
         self._timescale = None
-        self._graph_name = None
-        self._host_name = None
-        self._h_id = None
-        self._dsi_id = None
+        self._type = None
+        self._user_permission = None
         self._ds_name = None
-        self._graph_id = None
+        self._dsi_id = None
         self._dsi_name = None
+        self._graph_id = None
+        self._graph_name = None
+        self._h_id = None
+        self._host_name = None
         self.discriminator = None
 
-        if last_updated_by is not None:
-            self.last_updated_by = last_updated_by
-        if user_permission is not None:
-            self.user_permission = user_permission
         self.dashboard_id = dashboard_id
-        self.name = name
         if description is not None:
             self.description = description
-        if last_updated_on is not None:
-            self.last_updated_on = last_updated_on
-        if theme is not None:
-            self.theme = theme
-        if interval is not None:
-            self.interval = interval
         if id is not None:
             self.id = id
-        self.type = type
+        if interval is not None:
+            self.interval = interval
+        if last_updated_by is not None:
+            self.last_updated_by = last_updated_by
+        if last_updated_on is not None:
+            self.last_updated_on = last_updated_on
+        self.name = name
+        if theme is not None:
+            self.theme = theme
         if timescale is not None:
             self.timescale = timescale
-        if graph_name is not None:
-            self.graph_name = graph_name
-        if host_name is not None:
-            self.host_name = host_name
-        if h_id is not None:
-            self.h_id = h_id
-        self.dsi_id = dsi_id
+        self.type = type
+        if user_permission is not None:
+            self.user_permission = user_permission
         if ds_name is not None:
             self.ds_name = ds_name
-        self.graph_id = graph_id
+        self.dsi_id = dsi_id
         if dsi_name is not None:
             self.dsi_name = dsi_name
-
-    @property
-    def last_updated_by(self):
-        """Gets the last_updated_by of this NormalGraphWidget.  # noqa: E501
-
-        The user that last updated the widget  # noqa: E501
-
-        :return: The last_updated_by of this NormalGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._last_updated_by
-
-    @last_updated_by.setter
-    def last_updated_by(self, last_updated_by):
-        """Sets the last_updated_by of this NormalGraphWidget.
-
-        The user that last updated the widget  # noqa: E501
-
-        :param last_updated_by: The last_updated_by of this NormalGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._last_updated_by = last_updated_by
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this NormalGraphWidget.  # noqa: E501
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :return: The user_permission of this NormalGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this NormalGraphWidget.
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :param user_permission: The user_permission of this NormalGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
+        self.graph_id = graph_id
+        if graph_name is not None:
+            self.graph_name = graph_name
+        if h_id is not None:
+            self.h_id = h_id
+        if host_name is not None:
+            self.host_name = host_name
 
     @property
     def dashboard_id(self):
@@ -201,31 +155,6 @@ class NormalGraphWidget(Widget):
         self._dashboard_id = dashboard_id
 
     @property
-    def name(self):
-        """Gets the name of this NormalGraphWidget.  # noqa: E501
-
-        The name of the widget  # noqa: E501
-
-        :return: The name of this NormalGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this NormalGraphWidget.
-
-        The name of the widget  # noqa: E501
-
-        :param name: The name of this NormalGraphWidget.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
     def description(self):
         """Gets the description of this NormalGraphWidget.  # noqa: E501
 
@@ -249,50 +178,27 @@ class NormalGraphWidget(Widget):
         self._description = description
 
     @property
-    def last_updated_on(self):
-        """Gets the last_updated_on of this NormalGraphWidget.  # noqa: E501
+    def id(self):
+        """Gets the id of this NormalGraphWidget.  # noqa: E501
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :return: The last_updated_on of this NormalGraphWidget.  # noqa: E501
+        :return: The id of this NormalGraphWidget.  # noqa: E501
         :rtype: int
         """
-        return self._last_updated_on
+        return self._id
 
-    @last_updated_on.setter
-    def last_updated_on(self, last_updated_on):
-        """Sets the last_updated_on of this NormalGraphWidget.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this NormalGraphWidget.
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :param last_updated_on: The last_updated_on of this NormalGraphWidget.  # noqa: E501
+        :param id: The id of this NormalGraphWidget.  # noqa: E501
         :type: int
         """
 
-        self._last_updated_on = last_updated_on
-
-    @property
-    def theme(self):
-        """Gets the theme of this NormalGraphWidget.  # noqa: E501
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :return: The theme of this NormalGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._theme
-
-    @theme.setter
-    def theme(self, theme):
-        """Sets the theme of this NormalGraphWidget.
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :param theme: The theme of this NormalGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._theme = theme
+        self._id = id
 
     @property
     def interval(self):
@@ -318,27 +224,121 @@ class NormalGraphWidget(Widget):
         self._interval = interval
 
     @property
-    def id(self):
-        """Gets the id of this NormalGraphWidget.  # noqa: E501
+    def last_updated_by(self):
+        """Gets the last_updated_by of this NormalGraphWidget.  # noqa: E501
 
-        The Id of the widget  # noqa: E501
+        The user that last updated the widget  # noqa: E501
 
-        :return: The id of this NormalGraphWidget.  # noqa: E501
+        :return: The last_updated_by of this NormalGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_updated_by
+
+    @last_updated_by.setter
+    def last_updated_by(self, last_updated_by):
+        """Sets the last_updated_by of this NormalGraphWidget.
+
+        The user that last updated the widget  # noqa: E501
+
+        :param last_updated_by: The last_updated_by of this NormalGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._last_updated_by = last_updated_by
+
+    @property
+    def last_updated_on(self):
+        """Gets the last_updated_on of this NormalGraphWidget.  # noqa: E501
+
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+
+        :return: The last_updated_on of this NormalGraphWidget.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._last_updated_on
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this NormalGraphWidget.
+    @last_updated_on.setter
+    def last_updated_on(self, last_updated_on):
+        """Sets the last_updated_on of this NormalGraphWidget.
 
-        The Id of the widget  # noqa: E501
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
 
-        :param id: The id of this NormalGraphWidget.  # noqa: E501
+        :param last_updated_on: The last_updated_on of this NormalGraphWidget.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._last_updated_on = last_updated_on
+
+    @property
+    def name(self):
+        """Gets the name of this NormalGraphWidget.  # noqa: E501
+
+        The name of the widget  # noqa: E501
+
+        :return: The name of this NormalGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this NormalGraphWidget.
+
+        The name of the widget  # noqa: E501
+
+        :param name: The name of this NormalGraphWidget.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def theme(self):
+        """Gets the theme of this NormalGraphWidget.  # noqa: E501
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :return: The theme of this NormalGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._theme
+
+    @theme.setter
+    def theme(self, theme):
+        """Sets the theme of this NormalGraphWidget.
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :param theme: The theme of this NormalGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._theme = theme
+
+    @property
+    def timescale(self):
+        """Gets the timescale of this NormalGraphWidget.  # noqa: E501
+
+        The default timescale of the widget  # noqa: E501
+
+        :return: The timescale of this NormalGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._timescale
+
+    @timescale.setter
+    def timescale(self, timescale):
+        """Sets the timescale of this NormalGraphWidget.
+
+        The default timescale of the widget  # noqa: E501
+
+        :param timescale: The timescale of this NormalGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._timescale = timescale
 
     @property
     def type(self):
@@ -366,96 +366,50 @@ class NormalGraphWidget(Widget):
         self._type = type
 
     @property
-    def timescale(self):
-        """Gets the timescale of this NormalGraphWidget.  # noqa: E501
+    def user_permission(self):
+        """Gets the user_permission of this NormalGraphWidget.  # noqa: E501
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :return: The timescale of this NormalGraphWidget.  # noqa: E501
+        :return: The user_permission of this NormalGraphWidget.  # noqa: E501
         :rtype: str
         """
-        return self._timescale
+        return self._user_permission
 
-    @timescale.setter
-    def timescale(self, timescale):
-        """Sets the timescale of this NormalGraphWidget.
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this NormalGraphWidget.
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :param timescale: The timescale of this NormalGraphWidget.  # noqa: E501
+        :param user_permission: The user_permission of this NormalGraphWidget.  # noqa: E501
         :type: str
         """
 
-        self._timescale = timescale
+        self._user_permission = user_permission
 
     @property
-    def graph_name(self):
-        """Gets the graph_name of this NormalGraphWidget.  # noqa: E501
+    def ds_name(self):
+        """Gets the ds_name of this NormalGraphWidget.  # noqa: E501
 
-        The id of the datasource graph this widget was pinned from  # noqa: E501
+        The name (not display name) of the datasource the graph is associated with  # noqa: E501
 
-        :return: The graph_name of this NormalGraphWidget.  # noqa: E501
+        :return: The ds_name of this NormalGraphWidget.  # noqa: E501
         :rtype: str
         """
-        return self._graph_name
+        return self._ds_name
 
-    @graph_name.setter
-    def graph_name(self, graph_name):
-        """Sets the graph_name of this NormalGraphWidget.
+    @ds_name.setter
+    def ds_name(self, ds_name):
+        """Sets the ds_name of this NormalGraphWidget.
 
-        The id of the datasource graph this widget was pinned from  # noqa: E501
+        The name (not display name) of the datasource the graph is associated with  # noqa: E501
 
-        :param graph_name: The graph_name of this NormalGraphWidget.  # noqa: E501
+        :param ds_name: The ds_name of this NormalGraphWidget.  # noqa: E501
         :type: str
         """
 
-        self._graph_name = graph_name
-
-    @property
-    def host_name(self):
-        """Gets the host_name of this NormalGraphWidget.  # noqa: E501
-
-        The display name of the device the graph was pinned from  # noqa: E501
-
-        :return: The host_name of this NormalGraphWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._host_name
-
-    @host_name.setter
-    def host_name(self, host_name):
-        """Sets the host_name of this NormalGraphWidget.
-
-        The display name of the device the graph was pinned from  # noqa: E501
-
-        :param host_name: The host_name of this NormalGraphWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._host_name = host_name
-
-    @property
-    def h_id(self):
-        """Gets the h_id of this NormalGraphWidget.  # noqa: E501
-
-        The id of the device the graph was pinned from  # noqa: E501
-
-        :return: The h_id of this NormalGraphWidget.  # noqa: E501
-        :rtype: int
-        """
-        return self._h_id
-
-    @h_id.setter
-    def h_id(self, h_id):
-        """Sets the h_id of this NormalGraphWidget.
-
-        The id of the device the graph was pinned from  # noqa: E501
-
-        :param h_id: The h_id of this NormalGraphWidget.  # noqa: E501
-        :type: int
-        """
-
-        self._h_id = h_id
+        self._ds_name = ds_name
 
     @property
     def dsi_id(self):
@@ -483,27 +437,27 @@ class NormalGraphWidget(Widget):
         self._dsi_id = dsi_id
 
     @property
-    def ds_name(self):
-        """Gets the ds_name of this NormalGraphWidget.  # noqa: E501
+    def dsi_name(self):
+        """Gets the dsi_name of this NormalGraphWidget.  # noqa: E501
 
-        The name (not display name) of the datasource the graph is associated with  # noqa: E501
+        The name of the instance the graph was pinned from  # noqa: E501
 
-        :return: The ds_name of this NormalGraphWidget.  # noqa: E501
+        :return: The dsi_name of this NormalGraphWidget.  # noqa: E501
         :rtype: str
         """
-        return self._ds_name
+        return self._dsi_name
 
-    @ds_name.setter
-    def ds_name(self, ds_name):
-        """Sets the ds_name of this NormalGraphWidget.
+    @dsi_name.setter
+    def dsi_name(self, dsi_name):
+        """Sets the dsi_name of this NormalGraphWidget.
 
-        The name (not display name) of the datasource the graph is associated with  # noqa: E501
+        The name of the instance the graph was pinned from  # noqa: E501
 
-        :param ds_name: The ds_name of this NormalGraphWidget.  # noqa: E501
+        :param dsi_name: The dsi_name of this NormalGraphWidget.  # noqa: E501
         :type: str
         """
 
-        self._ds_name = ds_name
+        self._dsi_name = dsi_name
 
     @property
     def graph_id(self):
@@ -531,27 +485,73 @@ class NormalGraphWidget(Widget):
         self._graph_id = graph_id
 
     @property
-    def dsi_name(self):
-        """Gets the dsi_name of this NormalGraphWidget.  # noqa: E501
+    def graph_name(self):
+        """Gets the graph_name of this NormalGraphWidget.  # noqa: E501
 
-        The name of the instance the graph was pinned from  # noqa: E501
+        The id of the datasource graph this widget was pinned from  # noqa: E501
 
-        :return: The dsi_name of this NormalGraphWidget.  # noqa: E501
+        :return: The graph_name of this NormalGraphWidget.  # noqa: E501
         :rtype: str
         """
-        return self._dsi_name
+        return self._graph_name
 
-    @dsi_name.setter
-    def dsi_name(self, dsi_name):
-        """Sets the dsi_name of this NormalGraphWidget.
+    @graph_name.setter
+    def graph_name(self, graph_name):
+        """Sets the graph_name of this NormalGraphWidget.
 
-        The name of the instance the graph was pinned from  # noqa: E501
+        The id of the datasource graph this widget was pinned from  # noqa: E501
 
-        :param dsi_name: The dsi_name of this NormalGraphWidget.  # noqa: E501
+        :param graph_name: The graph_name of this NormalGraphWidget.  # noqa: E501
         :type: str
         """
 
-        self._dsi_name = dsi_name
+        self._graph_name = graph_name
+
+    @property
+    def h_id(self):
+        """Gets the h_id of this NormalGraphWidget.  # noqa: E501
+
+        The id of the device the graph was pinned from  # noqa: E501
+
+        :return: The h_id of this NormalGraphWidget.  # noqa: E501
+        :rtype: int
+        """
+        return self._h_id
+
+    @h_id.setter
+    def h_id(self, h_id):
+        """Sets the h_id of this NormalGraphWidget.
+
+        The id of the device the graph was pinned from  # noqa: E501
+
+        :param h_id: The h_id of this NormalGraphWidget.  # noqa: E501
+        :type: int
+        """
+
+        self._h_id = h_id
+
+    @property
+    def host_name(self):
+        """Gets the host_name of this NormalGraphWidget.  # noqa: E501
+
+        The display name of the device the graph was pinned from  # noqa: E501
+
+        :return: The host_name of this NormalGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._host_name
+
+    @host_name.setter
+    def host_name(self, host_name):
+        """Sets the host_name of this NormalGraphWidget.
+
+        The display name of the device the graph was pinned from  # noqa: E501
+
+        :param host_name: The host_name of this NormalGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._host_name = host_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

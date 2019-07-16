@@ -31,47 +31,26 @@ class Counter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'applies_to': 'str'
+        'applies_to': 'str',
+        'name': 'str'
     }
 
     attribute_map = {
-        'name': 'name',
-        'applies_to': 'appliesTo'
+        'applies_to': 'appliesTo',
+        'name': 'name'
     }
 
-    def __init__(self, name=None, applies_to=None):  # noqa: E501
+    def __init__(self, applies_to=None, name=None):  # noqa: E501
         """Counter - a model defined in Swagger"""  # noqa: E501
 
-        self._name = None
         self._applies_to = None
+        self._name = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
         if applies_to is not None:
             self.applies_to = applies_to
-
-    @property
-    def name(self):
-        """Gets the name of this Counter.  # noqa: E501
-
-
-        :return: The name of this Counter.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this Counter.
-
-
-        :param name: The name of this Counter.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
+        if name is not None:
+            self.name = name
 
     @property
     def applies_to(self):
@@ -93,6 +72,27 @@ class Counter(object):
         """
 
         self._applies_to = applies_to
+
+    @property
+    def name(self):
+        """Gets the name of this Counter.  # noqa: E501
+
+
+        :return: The name of this Counter.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this Counter.
+
+
+        :param name: The name of this Counter.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

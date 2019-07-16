@@ -31,88 +31,46 @@ class NextUpgradeInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'upgrade_time': 'str',
-        'stable': 'bool',
         'major_version': 'int',
-        'minor_version': 'int',
         'mandatory': 'bool',
+        'minor_version': 'int',
+        'stable': 'bool',
+        'upgrade_time': 'str',
         'upgrade_time_epoch': 'int'
     }
 
     attribute_map = {
-        'upgrade_time': 'upgradeTime',
-        'stable': 'stable',
         'major_version': 'majorVersion',
-        'minor_version': 'minorVersion',
         'mandatory': 'mandatory',
+        'minor_version': 'minorVersion',
+        'stable': 'stable',
+        'upgrade_time': 'upgradeTime',
         'upgrade_time_epoch': 'upgradeTimeEpoch'
     }
 
-    def __init__(self, upgrade_time=None, stable=None, major_version=None, minor_version=None, mandatory=None, upgrade_time_epoch=None):  # noqa: E501
+    def __init__(self, major_version=None, mandatory=None, minor_version=None, stable=None, upgrade_time=None, upgrade_time_epoch=None):  # noqa: E501
         """NextUpgradeInfo - a model defined in Swagger"""  # noqa: E501
 
-        self._upgrade_time = None
-        self._stable = None
         self._major_version = None
-        self._minor_version = None
         self._mandatory = None
+        self._minor_version = None
+        self._stable = None
+        self._upgrade_time = None
         self._upgrade_time_epoch = None
         self.discriminator = None
 
-        if upgrade_time is not None:
-            self.upgrade_time = upgrade_time
-        if stable is not None:
-            self.stable = stable
         if major_version is not None:
             self.major_version = major_version
-        if minor_version is not None:
-            self.minor_version = minor_version
         if mandatory is not None:
             self.mandatory = mandatory
+        if minor_version is not None:
+            self.minor_version = minor_version
+        if stable is not None:
+            self.stable = stable
+        if upgrade_time is not None:
+            self.upgrade_time = upgrade_time
         if upgrade_time_epoch is not None:
             self.upgrade_time_epoch = upgrade_time_epoch
-
-    @property
-    def upgrade_time(self):
-        """Gets the upgrade_time of this NextUpgradeInfo.  # noqa: E501
-
-
-        :return: The upgrade_time of this NextUpgradeInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._upgrade_time
-
-    @upgrade_time.setter
-    def upgrade_time(self, upgrade_time):
-        """Sets the upgrade_time of this NextUpgradeInfo.
-
-
-        :param upgrade_time: The upgrade_time of this NextUpgradeInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._upgrade_time = upgrade_time
-
-    @property
-    def stable(self):
-        """Gets the stable of this NextUpgradeInfo.  # noqa: E501
-
-
-        :return: The stable of this NextUpgradeInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._stable
-
-    @stable.setter
-    def stable(self, stable):
-        """Sets the stable of this NextUpgradeInfo.
-
-
-        :param stable: The stable of this NextUpgradeInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._stable = stable
 
     @property
     def major_version(self):
@@ -136,6 +94,27 @@ class NextUpgradeInfo(object):
         self._major_version = major_version
 
     @property
+    def mandatory(self):
+        """Gets the mandatory of this NextUpgradeInfo.  # noqa: E501
+
+
+        :return: The mandatory of this NextUpgradeInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._mandatory
+
+    @mandatory.setter
+    def mandatory(self, mandatory):
+        """Sets the mandatory of this NextUpgradeInfo.
+
+
+        :param mandatory: The mandatory of this NextUpgradeInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._mandatory = mandatory
+
+    @property
     def minor_version(self):
         """Gets the minor_version of this NextUpgradeInfo.  # noqa: E501
 
@@ -157,25 +136,46 @@ class NextUpgradeInfo(object):
         self._minor_version = minor_version
 
     @property
-    def mandatory(self):
-        """Gets the mandatory of this NextUpgradeInfo.  # noqa: E501
+    def stable(self):
+        """Gets the stable of this NextUpgradeInfo.  # noqa: E501
 
 
-        :return: The mandatory of this NextUpgradeInfo.  # noqa: E501
+        :return: The stable of this NextUpgradeInfo.  # noqa: E501
         :rtype: bool
         """
-        return self._mandatory
+        return self._stable
 
-    @mandatory.setter
-    def mandatory(self, mandatory):
-        """Sets the mandatory of this NextUpgradeInfo.
+    @stable.setter
+    def stable(self, stable):
+        """Sets the stable of this NextUpgradeInfo.
 
 
-        :param mandatory: The mandatory of this NextUpgradeInfo.  # noqa: E501
+        :param stable: The stable of this NextUpgradeInfo.  # noqa: E501
         :type: bool
         """
 
-        self._mandatory = mandatory
+        self._stable = stable
+
+    @property
+    def upgrade_time(self):
+        """Gets the upgrade_time of this NextUpgradeInfo.  # noqa: E501
+
+
+        :return: The upgrade_time of this NextUpgradeInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._upgrade_time
+
+    @upgrade_time.setter
+    def upgrade_time(self, upgrade_time):
+        """Sets the upgrade_time of this NextUpgradeInfo.
+
+
+        :param upgrade_time: The upgrade_time of this NextUpgradeInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._upgrade_time = upgrade_time
 
     @property
     def upgrade_time_epoch(self):

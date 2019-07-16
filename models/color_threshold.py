@@ -32,27 +32,27 @@ class ColorThreshold(object):
     """
     swagger_types = {
         'level': 'int',
-        'threshold': 'float',
-        'relation': 'str'
+        'relation': 'str',
+        'threshold': 'float'
     }
 
     attribute_map = {
         'level': 'level',
-        'threshold': 'threshold',
-        'relation': 'relation'
+        'relation': 'relation',
+        'threshold': 'threshold'
     }
 
-    def __init__(self, level=None, threshold=None, relation=None):  # noqa: E501
+    def __init__(self, level=None, relation=None, threshold=None):  # noqa: E501
         """ColorThreshold - a model defined in Swagger"""  # noqa: E501
 
         self._level = None
-        self._threshold = None
         self._relation = None
+        self._threshold = None
         self.discriminator = None
 
         self.level = level
-        self.threshold = threshold
         self.relation = relation
+        self.threshold = threshold
 
     @property
     def level(self):
@@ -78,29 +78,6 @@ class ColorThreshold(object):
         self._level = level
 
     @property
-    def threshold(self):
-        """Gets the threshold of this ColorThreshold.  # noqa: E501
-
-
-        :return: The threshold of this ColorThreshold.  # noqa: E501
-        :rtype: float
-        """
-        return self._threshold
-
-    @threshold.setter
-    def threshold(self, threshold):
-        """Sets the threshold of this ColorThreshold.
-
-
-        :param threshold: The threshold of this ColorThreshold.  # noqa: E501
-        :type: float
-        """
-        if threshold is None:
-            raise ValueError("Invalid value for `threshold`, must not be `None`")  # noqa: E501
-
-        self._threshold = threshold
-
-    @property
     def relation(self):
         """Gets the relation of this ColorThreshold.  # noqa: E501
 
@@ -122,6 +99,29 @@ class ColorThreshold(object):
             raise ValueError("Invalid value for `relation`, must not be `None`")  # noqa: E501
 
         self._relation = relation
+
+    @property
+    def threshold(self):
+        """Gets the threshold of this ColorThreshold.  # noqa: E501
+
+
+        :return: The threshold of this ColorThreshold.  # noqa: E501
+        :rtype: float
+        """
+        return self._threshold
+
+    @threshold.setter
+    def threshold(self, threshold):
+        """Sets the threshold of this ColorThreshold.
+
+
+        :param threshold: The threshold of this ColorThreshold.  # noqa: E501
+        :type: float
+        """
+        if threshold is None:
+            raise ValueError("Invalid value for `threshold`, must not be `None`")  # noqa: E501
+
+        self._threshold = threshold
 
     def to_dict(self):
         """Returns the model properties as a dict"""

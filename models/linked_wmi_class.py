@@ -34,39 +34,60 @@ class LinkedWmiClass(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'ilp': 'list[ILP]',
         'anchor_class_wmi_property': 'str',
         'linked_wmi_class': 'str',
         'match': 'PropertyMatchRule',
-        'my_link_wmi_property': 'str',
-        'ilp': 'list[ILP]'
+        'my_link_wmi_property': 'str'
     }
 
     attribute_map = {
+        'ilp': 'ILP',
         'anchor_class_wmi_property': 'anchorClassWMIProperty',
         'linked_wmi_class': 'linkedWmiClass',
         'match': 'match',
-        'my_link_wmi_property': 'myLinkWMIProperty',
-        'ilp': 'ILP'
+        'my_link_wmi_property': 'myLinkWMIProperty'
     }
 
-    def __init__(self, anchor_class_wmi_property=None, linked_wmi_class=None, match=None, my_link_wmi_property=None, ilp=None):  # noqa: E501
+    def __init__(self, ilp=None, anchor_class_wmi_property=None, linked_wmi_class=None, match=None, my_link_wmi_property=None):  # noqa: E501
         """LinkedWmiClass - a model defined in Swagger"""  # noqa: E501
 
+        self._ilp = None
         self._anchor_class_wmi_property = None
         self._linked_wmi_class = None
         self._match = None
         self._my_link_wmi_property = None
-        self._ilp = None
         self.discriminator = None
 
+        if ilp is not None:
+            self.ilp = ilp
         self.anchor_class_wmi_property = anchor_class_wmi_property
         self.linked_wmi_class = linked_wmi_class
         if match is not None:
             self.match = match
         if my_link_wmi_property is not None:
             self.my_link_wmi_property = my_link_wmi_property
-        if ilp is not None:
-            self.ilp = ilp
+
+    @property
+    def ilp(self):
+        """Gets the ilp of this LinkedWmiClass.  # noqa: E501
+
+
+        :return: The ilp of this LinkedWmiClass.  # noqa: E501
+        :rtype: list[ILP]
+        """
+        return self._ilp
+
+    @ilp.setter
+    def ilp(self, ilp):
+        """Sets the ilp of this LinkedWmiClass.
+
+
+        :param ilp: The ilp of this LinkedWmiClass.  # noqa: E501
+        :type: list[ILP]
+        """
+
+        self._ilp = ilp
 
     @property
     def anchor_class_wmi_property(self):
@@ -155,27 +176,6 @@ class LinkedWmiClass(object):
         """
 
         self._my_link_wmi_property = my_link_wmi_property
-
-    @property
-    def ilp(self):
-        """Gets the ilp of this LinkedWmiClass.  # noqa: E501
-
-
-        :return: The ilp of this LinkedWmiClass.  # noqa: E501
-        :rtype: list[ILP]
-        """
-        return self._ilp
-
-    @ilp.setter
-    def ilp(self, ilp):
-        """Sets the ilp of this LinkedWmiClass.
-
-
-        :param ilp: The ilp of this LinkedWmiClass.  # noqa: E501
-        :type: list[ILP]
-        """
-
-        self._ilp = ilp
 
     def to_dict(self):
         """Returns the model properties as a dict"""

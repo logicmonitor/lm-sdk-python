@@ -31,41 +31,83 @@ class NetflowPort(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'data_type': 'str',
+        'description': 'str',
         'percent_usage': 'float',
         'port': 'int',
-        'data_type': 'str',
-        'usage': 'float',
-        'description': 'str'
+        'usage': 'float'
     }
 
     attribute_map = {
+        'data_type': 'dataType',
+        'description': 'description',
         'percent_usage': 'percentUsage',
         'port': 'port',
-        'data_type': 'dataType',
-        'usage': 'usage',
-        'description': 'description'
+        'usage': 'usage'
     }
 
-    def __init__(self, percent_usage=None, port=None, data_type=None, usage=None, description=None):  # noqa: E501
+    def __init__(self, data_type=None, description=None, percent_usage=None, port=None, usage=None):  # noqa: E501
         """NetflowPort - a model defined in Swagger"""  # noqa: E501
 
+        self._data_type = None
+        self._description = None
         self._percent_usage = None
         self._port = None
-        self._data_type = None
         self._usage = None
-        self._description = None
         self.discriminator = None
 
+        if data_type is not None:
+            self.data_type = data_type
+        if description is not None:
+            self.description = description
         if percent_usage is not None:
             self.percent_usage = percent_usage
         if port is not None:
             self.port = port
-        if data_type is not None:
-            self.data_type = data_type
         if usage is not None:
             self.usage = usage
-        if description is not None:
-            self.description = description
+
+    @property
+    def data_type(self):
+        """Gets the data_type of this NetflowPort.  # noqa: E501
+
+
+        :return: The data_type of this NetflowPort.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_type
+
+    @data_type.setter
+    def data_type(self, data_type):
+        """Sets the data_type of this NetflowPort.
+
+
+        :param data_type: The data_type of this NetflowPort.  # noqa: E501
+        :type: str
+        """
+
+        self._data_type = data_type
+
+    @property
+    def description(self):
+        """Gets the description of this NetflowPort.  # noqa: E501
+
+
+        :return: The description of this NetflowPort.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this NetflowPort.
+
+
+        :param description: The description of this NetflowPort.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def percent_usage(self):
@@ -110,27 +152,6 @@ class NetflowPort(object):
         self._port = port
 
     @property
-    def data_type(self):
-        """Gets the data_type of this NetflowPort.  # noqa: E501
-
-
-        :return: The data_type of this NetflowPort.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_type
-
-    @data_type.setter
-    def data_type(self, data_type):
-        """Sets the data_type of this NetflowPort.
-
-
-        :param data_type: The data_type of this NetflowPort.  # noqa: E501
-        :type: str
-        """
-
-        self._data_type = data_type
-
-    @property
     def usage(self):
         """Gets the usage of this NetflowPort.  # noqa: E501
 
@@ -150,27 +171,6 @@ class NetflowPort(object):
         """
 
         self._usage = usage
-
-    @property
-    def description(self):
-        """Gets the description of this NetflowPort.  # noqa: E501
-
-
-        :return: The description of this NetflowPort.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this NetflowPort.
-
-
-        :param description: The description of this NetflowPort.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
 
     def to_dict(self):
         """Returns the model properties as a dict"""

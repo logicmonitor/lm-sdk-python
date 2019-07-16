@@ -35,138 +35,92 @@ class WebsiteSLAWidget(Widget):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'last_updated_by': 'str',
-        'user_permission': 'str',
         'dashboard_id': 'int',
-        'name': 'str',
         'description': 'str',
-        'last_updated_on': 'int',
-        'theme': 'str',
-        'interval': 'int',
         'id': 'int',
-        'type': 'str',
+        'interval': 'int',
+        'last_updated_by': 'str',
+        'last_updated_on': 'int',
+        'name': 'str',
+        'theme': 'str',
         'timescale': 'str',
+        'type': 'str',
+        'user_permission': 'str',
+        'color_thresholds': 'list[ColorThreshold]',
         'days_in_week': 'str',
-        'timezone': 'str',
-        'period_in_one_day': 'str',
         'items': 'list[WebsiteItemConfig]',
-        'color_thresholds': 'list[ColorThreshold]'
+        'period_in_one_day': 'str',
+        'timezone': 'str'
     }
 
     attribute_map = {
-        'last_updated_by': 'lastUpdatedBy',
-        'user_permission': 'userPermission',
         'dashboard_id': 'dashboardId',
-        'name': 'name',
         'description': 'description',
-        'last_updated_on': 'lastUpdatedOn',
-        'theme': 'theme',
-        'interval': 'interval',
         'id': 'id',
-        'type': 'type',
+        'interval': 'interval',
+        'last_updated_by': 'lastUpdatedBy',
+        'last_updated_on': 'lastUpdatedOn',
+        'name': 'name',
+        'theme': 'theme',
         'timescale': 'timescale',
+        'type': 'type',
+        'user_permission': 'userPermission',
+        'color_thresholds': 'colorThresholds',
         'days_in_week': 'daysInWeek',
-        'timezone': 'timezone',
-        'period_in_one_day': 'periodInOneDay',
         'items': 'items',
-        'color_thresholds': 'colorThresholds'
+        'period_in_one_day': 'periodInOneDay',
+        'timezone': 'timezone'
     }
 
-    def __init__(self, last_updated_by=None, user_permission=None, dashboard_id=None, name=None, description=None, last_updated_on=None, theme=None, interval=None, id=None, type=None, timescale=None, days_in_week=None, timezone=None, period_in_one_day=None, items=None, color_thresholds=None):  # noqa: E501
+    def __init__(self, dashboard_id=None, description=None, id=None, interval=None, last_updated_by=None, last_updated_on=None, name=None, theme=None, timescale=None, type=None, user_permission=None, color_thresholds=None, days_in_week=None, items=None, period_in_one_day=None, timezone=None):  # noqa: E501
         """WebsiteSLAWidget - a model defined in Swagger"""  # noqa: E501
 
-        self._last_updated_by = None
-        self._user_permission = None
         self._dashboard_id = None
-        self._name = None
         self._description = None
-        self._last_updated_on = None
-        self._theme = None
-        self._interval = None
         self._id = None
-        self._type = None
+        self._interval = None
+        self._last_updated_by = None
+        self._last_updated_on = None
+        self._name = None
+        self._theme = None
         self._timescale = None
-        self._days_in_week = None
-        self._timezone = None
-        self._period_in_one_day = None
-        self._items = None
+        self._type = None
+        self._user_permission = None
         self._color_thresholds = None
+        self._days_in_week = None
+        self._items = None
+        self._period_in_one_day = None
+        self._timezone = None
         self.discriminator = None
 
-        if last_updated_by is not None:
-            self.last_updated_by = last_updated_by
-        if user_permission is not None:
-            self.user_permission = user_permission
         self.dashboard_id = dashboard_id
-        self.name = name
         if description is not None:
             self.description = description
-        if last_updated_on is not None:
-            self.last_updated_on = last_updated_on
-        if theme is not None:
-            self.theme = theme
-        if interval is not None:
-            self.interval = interval
         if id is not None:
             self.id = id
-        self.type = type
+        if interval is not None:
+            self.interval = interval
+        if last_updated_by is not None:
+            self.last_updated_by = last_updated_by
+        if last_updated_on is not None:
+            self.last_updated_on = last_updated_on
+        self.name = name
+        if theme is not None:
+            self.theme = theme
         if timescale is not None:
             self.timescale = timescale
-        if days_in_week is not None:
-            self.days_in_week = days_in_week
-        if timezone is not None:
-            self.timezone = timezone
-        if period_in_one_day is not None:
-            self.period_in_one_day = period_in_one_day
-        self.items = items
+        self.type = type
+        if user_permission is not None:
+            self.user_permission = user_permission
         if color_thresholds is not None:
             self.color_thresholds = color_thresholds
-
-    @property
-    def last_updated_by(self):
-        """Gets the last_updated_by of this WebsiteSLAWidget.  # noqa: E501
-
-        The user that last updated the widget  # noqa: E501
-
-        :return: The last_updated_by of this WebsiteSLAWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._last_updated_by
-
-    @last_updated_by.setter
-    def last_updated_by(self, last_updated_by):
-        """Sets the last_updated_by of this WebsiteSLAWidget.
-
-        The user that last updated the widget  # noqa: E501
-
-        :param last_updated_by: The last_updated_by of this WebsiteSLAWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._last_updated_by = last_updated_by
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this WebsiteSLAWidget.  # noqa: E501
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :return: The user_permission of this WebsiteSLAWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this WebsiteSLAWidget.
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :param user_permission: The user_permission of this WebsiteSLAWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
+        if days_in_week is not None:
+            self.days_in_week = days_in_week
+        self.items = items
+        if period_in_one_day is not None:
+            self.period_in_one_day = period_in_one_day
+        if timezone is not None:
+            self.timezone = timezone
 
     @property
     def dashboard_id(self):
@@ -194,31 +148,6 @@ class WebsiteSLAWidget(Widget):
         self._dashboard_id = dashboard_id
 
     @property
-    def name(self):
-        """Gets the name of this WebsiteSLAWidget.  # noqa: E501
-
-        The name of the widget  # noqa: E501
-
-        :return: The name of this WebsiteSLAWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this WebsiteSLAWidget.
-
-        The name of the widget  # noqa: E501
-
-        :param name: The name of this WebsiteSLAWidget.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
     def description(self):
         """Gets the description of this WebsiteSLAWidget.  # noqa: E501
 
@@ -242,50 +171,27 @@ class WebsiteSLAWidget(Widget):
         self._description = description
 
     @property
-    def last_updated_on(self):
-        """Gets the last_updated_on of this WebsiteSLAWidget.  # noqa: E501
+    def id(self):
+        """Gets the id of this WebsiteSLAWidget.  # noqa: E501
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :return: The last_updated_on of this WebsiteSLAWidget.  # noqa: E501
+        :return: The id of this WebsiteSLAWidget.  # noqa: E501
         :rtype: int
         """
-        return self._last_updated_on
+        return self._id
 
-    @last_updated_on.setter
-    def last_updated_on(self, last_updated_on):
-        """Sets the last_updated_on of this WebsiteSLAWidget.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this WebsiteSLAWidget.
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :param last_updated_on: The last_updated_on of this WebsiteSLAWidget.  # noqa: E501
+        :param id: The id of this WebsiteSLAWidget.  # noqa: E501
         :type: int
         """
 
-        self._last_updated_on = last_updated_on
-
-    @property
-    def theme(self):
-        """Gets the theme of this WebsiteSLAWidget.  # noqa: E501
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :return: The theme of this WebsiteSLAWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._theme
-
-    @theme.setter
-    def theme(self, theme):
-        """Sets the theme of this WebsiteSLAWidget.
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :param theme: The theme of this WebsiteSLAWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._theme = theme
+        self._id = id
 
     @property
     def interval(self):
@@ -311,27 +217,121 @@ class WebsiteSLAWidget(Widget):
         self._interval = interval
 
     @property
-    def id(self):
-        """Gets the id of this WebsiteSLAWidget.  # noqa: E501
+    def last_updated_by(self):
+        """Gets the last_updated_by of this WebsiteSLAWidget.  # noqa: E501
 
-        The Id of the widget  # noqa: E501
+        The user that last updated the widget  # noqa: E501
 
-        :return: The id of this WebsiteSLAWidget.  # noqa: E501
+        :return: The last_updated_by of this WebsiteSLAWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_updated_by
+
+    @last_updated_by.setter
+    def last_updated_by(self, last_updated_by):
+        """Sets the last_updated_by of this WebsiteSLAWidget.
+
+        The user that last updated the widget  # noqa: E501
+
+        :param last_updated_by: The last_updated_by of this WebsiteSLAWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._last_updated_by = last_updated_by
+
+    @property
+    def last_updated_on(self):
+        """Gets the last_updated_on of this WebsiteSLAWidget.  # noqa: E501
+
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+
+        :return: The last_updated_on of this WebsiteSLAWidget.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._last_updated_on
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this WebsiteSLAWidget.
+    @last_updated_on.setter
+    def last_updated_on(self, last_updated_on):
+        """Sets the last_updated_on of this WebsiteSLAWidget.
 
-        The Id of the widget  # noqa: E501
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
 
-        :param id: The id of this WebsiteSLAWidget.  # noqa: E501
+        :param last_updated_on: The last_updated_on of this WebsiteSLAWidget.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._last_updated_on = last_updated_on
+
+    @property
+    def name(self):
+        """Gets the name of this WebsiteSLAWidget.  # noqa: E501
+
+        The name of the widget  # noqa: E501
+
+        :return: The name of this WebsiteSLAWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this WebsiteSLAWidget.
+
+        The name of the widget  # noqa: E501
+
+        :param name: The name of this WebsiteSLAWidget.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def theme(self):
+        """Gets the theme of this WebsiteSLAWidget.  # noqa: E501
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :return: The theme of this WebsiteSLAWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._theme
+
+    @theme.setter
+    def theme(self, theme):
+        """Sets the theme of this WebsiteSLAWidget.
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :param theme: The theme of this WebsiteSLAWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._theme = theme
+
+    @property
+    def timescale(self):
+        """Gets the timescale of this WebsiteSLAWidget.  # noqa: E501
+
+        The default timescale of the widget  # noqa: E501
+
+        :return: The timescale of this WebsiteSLAWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._timescale
+
+    @timescale.setter
+    def timescale(self, timescale):
+        """Sets the timescale of this WebsiteSLAWidget.
+
+        The default timescale of the widget  # noqa: E501
+
+        :param timescale: The timescale of this WebsiteSLAWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._timescale = timescale
 
     @property
     def type(self):
@@ -359,27 +359,50 @@ class WebsiteSLAWidget(Widget):
         self._type = type
 
     @property
-    def timescale(self):
-        """Gets the timescale of this WebsiteSLAWidget.  # noqa: E501
+    def user_permission(self):
+        """Gets the user_permission of this WebsiteSLAWidget.  # noqa: E501
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :return: The timescale of this WebsiteSLAWidget.  # noqa: E501
+        :return: The user_permission of this WebsiteSLAWidget.  # noqa: E501
         :rtype: str
         """
-        return self._timescale
+        return self._user_permission
 
-    @timescale.setter
-    def timescale(self, timescale):
-        """Sets the timescale of this WebsiteSLAWidget.
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this WebsiteSLAWidget.
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :param timescale: The timescale of this WebsiteSLAWidget.  # noqa: E501
+        :param user_permission: The user_permission of this WebsiteSLAWidget.  # noqa: E501
         :type: str
         """
 
-        self._timescale = timescale
+        self._user_permission = user_permission
+
+    @property
+    def color_thresholds(self):
+        """Gets the color_thresholds of this WebsiteSLAWidget.  # noqa: E501
+
+        The threshold of color changes  # noqa: E501
+
+        :return: The color_thresholds of this WebsiteSLAWidget.  # noqa: E501
+        :rtype: list[ColorThreshold]
+        """
+        return self._color_thresholds
+
+    @color_thresholds.setter
+    def color_thresholds(self, color_thresholds):
+        """Sets the color_thresholds of this WebsiteSLAWidget.
+
+        The threshold of color changes  # noqa: E501
+
+        :param color_thresholds: The color_thresholds of this WebsiteSLAWidget.  # noqa: E501
+        :type: list[ColorThreshold]
+        """
+
+        self._color_thresholds = color_thresholds
 
     @property
     def days_in_week(self):
@@ -403,52 +426,6 @@ class WebsiteSLAWidget(Widget):
         """
 
         self._days_in_week = days_in_week
-
-    @property
-    def timezone(self):
-        """Gets the timezone of this WebsiteSLAWidget.  # noqa: E501
-
-        The specific timezone for the widget  # noqa: E501
-
-        :return: The timezone of this WebsiteSLAWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._timezone
-
-    @timezone.setter
-    def timezone(self, timezone):
-        """Sets the timezone of this WebsiteSLAWidget.
-
-        The specific timezone for the widget  # noqa: E501
-
-        :param timezone: The timezone of this WebsiteSLAWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._timezone = timezone
-
-    @property
-    def period_in_one_day(self):
-        """Gets the period_in_one_day of this WebsiteSLAWidget.  # noqa: E501
-
-        The period during the selected days that the SLA should be computed for. * = all day, or a time range can be specified in the format of \"hh:mm TO hh:mm\", e.g. \"01:15 TO 17:15\"  # noqa: E501
-
-        :return: The period_in_one_day of this WebsiteSLAWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._period_in_one_day
-
-    @period_in_one_day.setter
-    def period_in_one_day(self, period_in_one_day):
-        """Sets the period_in_one_day of this WebsiteSLAWidget.
-
-        The period during the selected days that the SLA should be computed for. * = all day, or a time range can be specified in the format of \"hh:mm TO hh:mm\", e.g. \"01:15 TO 17:15\"  # noqa: E501
-
-        :param period_in_one_day: The period_in_one_day of this WebsiteSLAWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._period_in_one_day = period_in_one_day
 
     @property
     def items(self):
@@ -476,27 +453,50 @@ class WebsiteSLAWidget(Widget):
         self._items = items
 
     @property
-    def color_thresholds(self):
-        """Gets the color_thresholds of this WebsiteSLAWidget.  # noqa: E501
+    def period_in_one_day(self):
+        """Gets the period_in_one_day of this WebsiteSLAWidget.  # noqa: E501
 
-        The threshold of color changes  # noqa: E501
+        The period during the selected days that the SLA should be computed for. * = all day, or a time range can be specified in the format of \"hh:mm TO hh:mm\", e.g. \"01:15 TO 17:15\"  # noqa: E501
 
-        :return: The color_thresholds of this WebsiteSLAWidget.  # noqa: E501
-        :rtype: list[ColorThreshold]
+        :return: The period_in_one_day of this WebsiteSLAWidget.  # noqa: E501
+        :rtype: str
         """
-        return self._color_thresholds
+        return self._period_in_one_day
 
-    @color_thresholds.setter
-    def color_thresholds(self, color_thresholds):
-        """Sets the color_thresholds of this WebsiteSLAWidget.
+    @period_in_one_day.setter
+    def period_in_one_day(self, period_in_one_day):
+        """Sets the period_in_one_day of this WebsiteSLAWidget.
 
-        The threshold of color changes  # noqa: E501
+        The period during the selected days that the SLA should be computed for. * = all day, or a time range can be specified in the format of \"hh:mm TO hh:mm\", e.g. \"01:15 TO 17:15\"  # noqa: E501
 
-        :param color_thresholds: The color_thresholds of this WebsiteSLAWidget.  # noqa: E501
-        :type: list[ColorThreshold]
+        :param period_in_one_day: The period_in_one_day of this WebsiteSLAWidget.  # noqa: E501
+        :type: str
         """
 
-        self._color_thresholds = color_thresholds
+        self._period_in_one_day = period_in_one_day
+
+    @property
+    def timezone(self):
+        """Gets the timezone of this WebsiteSLAWidget.  # noqa: E501
+
+        The specific timezone for the widget  # noqa: E501
+
+        :return: The timezone of this WebsiteSLAWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._timezone
+
+    @timezone.setter
+    def timezone(self, timezone):
+        """Sets the timezone of this WebsiteSLAWidget.
+
+        The specific timezone for the widget  # noqa: E501
+
+        :param timezone: The timezone of this WebsiteSLAWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._timezone = timezone
 
     def to_dict(self):
         """Returns the model properties as a dict"""

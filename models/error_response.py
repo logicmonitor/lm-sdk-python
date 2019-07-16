@@ -31,54 +31,31 @@ class ErrorResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'error_message': 'str',
         'error_code': 'int',
-        'error_detail': 'object'
+        'error_detail': 'object',
+        'error_message': 'str'
     }
 
     attribute_map = {
-        'error_message': 'errorMessage',
         'error_code': 'errorCode',
-        'error_detail': 'errorDetail'
+        'error_detail': 'errorDetail',
+        'error_message': 'errorMessage'
     }
 
-    def __init__(self, error_message=None, error_code=None, error_detail=None):  # noqa: E501
+    def __init__(self, error_code=None, error_detail=None, error_message=None):  # noqa: E501
         """ErrorResponse - a model defined in Swagger"""  # noqa: E501
 
-        self._error_message = None
         self._error_code = None
         self._error_detail = None
+        self._error_message = None
         self.discriminator = None
 
-        if error_message is not None:
-            self.error_message = error_message
         if error_code is not None:
             self.error_code = error_code
         if error_detail is not None:
             self.error_detail = error_detail
-
-    @property
-    def error_message(self):
-        """Gets the error_message of this ErrorResponse.  # noqa: E501
-
-        The error message  # noqa: E501
-
-        :return: The error_message of this ErrorResponse.  # noqa: E501
-        :rtype: str
-        """
-        return self._error_message
-
-    @error_message.setter
-    def error_message(self, error_message):
-        """Sets the error_message of this ErrorResponse.
-
-        The error message  # noqa: E501
-
-        :param error_message: The error_message of this ErrorResponse.  # noqa: E501
-        :type: str
-        """
-
-        self._error_message = error_message
+        if error_message is not None:
+            self.error_message = error_message
 
     @property
     def error_code(self):
@@ -125,6 +102,29 @@ class ErrorResponse(object):
         """
 
         self._error_detail = error_detail
+
+    @property
+    def error_message(self):
+        """Gets the error_message of this ErrorResponse.  # noqa: E501
+
+        The error message  # noqa: E501
+
+        :return: The error_message of this ErrorResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._error_message
+
+    @error_message.setter
+    def error_message(self, error_message):
+        """Sets the error_message of this ErrorResponse.
+
+        The error message  # noqa: E501
+
+        :param error_message: The error_message of this ErrorResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._error_message = error_message
 
     def to_dict(self):
         """Returns the model properties as a dict"""

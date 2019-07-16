@@ -34,39 +34,39 @@ class OpsNoteDeviceScope(OpsNoteScope):
     """
     swagger_types = {
         'type': 'str',
-        'full_path': 'str',
-        'group_id': 'int',
         'device_id': 'int',
-        'device_name': 'str'
+        'device_name': 'str',
+        'full_path': 'str',
+        'group_id': 'int'
     }
 
     attribute_map = {
         'type': 'type',
-        'full_path': 'fullPath',
-        'group_id': 'groupId',
         'device_id': 'deviceId',
-        'device_name': 'deviceName'
+        'device_name': 'deviceName',
+        'full_path': 'fullPath',
+        'group_id': 'groupId'
     }
 
-    def __init__(self, type=None, full_path=None, group_id=None, device_id=None, device_name=None):  # noqa: E501
+    def __init__(self, type=None, device_id=None, device_name=None, full_path=None, group_id=None):  # noqa: E501
         """OpsNoteDeviceScope - a model defined in Swagger"""  # noqa: E501
 
         self._type = None
-        self._full_path = None
-        self._group_id = None
         self._device_id = None
         self._device_name = None
+        self._full_path = None
+        self._group_id = None
         self.discriminator = None
 
         self.type = type
-        if full_path is not None:
-            self.full_path = full_path
-        if group_id is not None:
-            self.group_id = group_id
         if device_id is not None:
             self.device_id = device_id
         if device_name is not None:
             self.device_name = device_name
+        if full_path is not None:
+            self.full_path = full_path
+        if group_id is not None:
+            self.group_id = group_id
 
     @property
     def type(self):
@@ -90,48 +90,6 @@ class OpsNoteDeviceScope(OpsNoteScope):
             raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
 
         self._type = type
-
-    @property
-    def full_path(self):
-        """Gets the full_path of this OpsNoteDeviceScope.  # noqa: E501
-
-
-        :return: The full_path of this OpsNoteDeviceScope.  # noqa: E501
-        :rtype: str
-        """
-        return self._full_path
-
-    @full_path.setter
-    def full_path(self, full_path):
-        """Sets the full_path of this OpsNoteDeviceScope.
-
-
-        :param full_path: The full_path of this OpsNoteDeviceScope.  # noqa: E501
-        :type: str
-        """
-
-        self._full_path = full_path
-
-    @property
-    def group_id(self):
-        """Gets the group_id of this OpsNoteDeviceScope.  # noqa: E501
-
-
-        :return: The group_id of this OpsNoteDeviceScope.  # noqa: E501
-        :rtype: int
-        """
-        return self._group_id
-
-    @group_id.setter
-    def group_id(self, group_id):
-        """Sets the group_id of this OpsNoteDeviceScope.
-
-
-        :param group_id: The group_id of this OpsNoteDeviceScope.  # noqa: E501
-        :type: int
-        """
-
-        self._group_id = group_id
 
     @property
     def device_id(self):
@@ -174,6 +132,48 @@ class OpsNoteDeviceScope(OpsNoteScope):
         """
 
         self._device_name = device_name
+
+    @property
+    def full_path(self):
+        """Gets the full_path of this OpsNoteDeviceScope.  # noqa: E501
+
+
+        :return: The full_path of this OpsNoteDeviceScope.  # noqa: E501
+        :rtype: str
+        """
+        return self._full_path
+
+    @full_path.setter
+    def full_path(self, full_path):
+        """Sets the full_path of this OpsNoteDeviceScope.
+
+
+        :param full_path: The full_path of this OpsNoteDeviceScope.  # noqa: E501
+        :type: str
+        """
+
+        self._full_path = full_path
+
+    @property
+    def group_id(self):
+        """Gets the group_id of this OpsNoteDeviceScope.  # noqa: E501
+
+
+        :return: The group_id of this OpsNoteDeviceScope.  # noqa: E501
+        :rtype: int
+        """
+        return self._group_id
+
+    @group_id.setter
+    def group_id(self, group_id):
+        """Sets the group_id of this OpsNoteDeviceScope.
+
+
+        :param group_id: The group_id of this OpsNoteDeviceScope.  # noqa: E501
+        :type: int
+        """
+
+        self._group_id = group_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,78 +31,57 @@ class DeviceDataSourceInstanceData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'values': 'list[list[object]]',
-        'time': 'list[int]',
+        'data_source_name': 'str',
         'next_page_params': 'str',
-        'data_source_name': 'str'
+        'time': 'list[int]',
+        'values': 'list[list[object]]'
     }
 
     attribute_map = {
-        'values': 'values',
-        'time': 'time',
+        'data_source_name': 'dataSourceName',
         'next_page_params': 'nextPageParams',
-        'data_source_name': 'dataSourceName'
+        'time': 'time',
+        'values': 'values'
     }
 
-    def __init__(self, values=None, time=None, next_page_params=None, data_source_name=None):  # noqa: E501
+    def __init__(self, data_source_name=None, next_page_params=None, time=None, values=None):  # noqa: E501
         """DeviceDataSourceInstanceData - a model defined in Swagger"""  # noqa: E501
 
-        self._values = None
-        self._time = None
-        self._next_page_params = None
         self._data_source_name = None
+        self._next_page_params = None
+        self._time = None
+        self._values = None
         self.discriminator = None
 
-        if values is not None:
-            self.values = values
-        if time is not None:
-            self.time = time
-        if next_page_params is not None:
-            self.next_page_params = next_page_params
         if data_source_name is not None:
             self.data_source_name = data_source_name
+        if next_page_params is not None:
+            self.next_page_params = next_page_params
+        if time is not None:
+            self.time = time
+        if values is not None:
+            self.values = values
 
     @property
-    def values(self):
-        """Gets the values of this DeviceDataSourceInstanceData.  # noqa: E501
+    def data_source_name(self):
+        """Gets the data_source_name of this DeviceDataSourceInstanceData.  # noqa: E501
 
 
-        :return: The values of this DeviceDataSourceInstanceData.  # noqa: E501
-        :rtype: list[list[object]]
+        :return: The data_source_name of this DeviceDataSourceInstanceData.  # noqa: E501
+        :rtype: str
         """
-        return self._values
+        return self._data_source_name
 
-    @values.setter
-    def values(self, values):
-        """Sets the values of this DeviceDataSourceInstanceData.
-
-
-        :param values: The values of this DeviceDataSourceInstanceData.  # noqa: E501
-        :type: list[list[object]]
-        """
-
-        self._values = values
-
-    @property
-    def time(self):
-        """Gets the time of this DeviceDataSourceInstanceData.  # noqa: E501
+    @data_source_name.setter
+    def data_source_name(self, data_source_name):
+        """Sets the data_source_name of this DeviceDataSourceInstanceData.
 
 
-        :return: The time of this DeviceDataSourceInstanceData.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._time
-
-    @time.setter
-    def time(self, time):
-        """Sets the time of this DeviceDataSourceInstanceData.
-
-
-        :param time: The time of this DeviceDataSourceInstanceData.  # noqa: E501
-        :type: list[int]
+        :param data_source_name: The data_source_name of this DeviceDataSourceInstanceData.  # noqa: E501
+        :type: str
         """
 
-        self._time = time
+        self._data_source_name = data_source_name
 
     @property
     def next_page_params(self):
@@ -126,25 +105,46 @@ class DeviceDataSourceInstanceData(object):
         self._next_page_params = next_page_params
 
     @property
-    def data_source_name(self):
-        """Gets the data_source_name of this DeviceDataSourceInstanceData.  # noqa: E501
+    def time(self):
+        """Gets the time of this DeviceDataSourceInstanceData.  # noqa: E501
 
 
-        :return: The data_source_name of this DeviceDataSourceInstanceData.  # noqa: E501
-        :rtype: str
+        :return: The time of this DeviceDataSourceInstanceData.  # noqa: E501
+        :rtype: list[int]
         """
-        return self._data_source_name
+        return self._time
 
-    @data_source_name.setter
-    def data_source_name(self, data_source_name):
-        """Sets the data_source_name of this DeviceDataSourceInstanceData.
+    @time.setter
+    def time(self, time):
+        """Sets the time of this DeviceDataSourceInstanceData.
 
 
-        :param data_source_name: The data_source_name of this DeviceDataSourceInstanceData.  # noqa: E501
-        :type: str
+        :param time: The time of this DeviceDataSourceInstanceData.  # noqa: E501
+        :type: list[int]
         """
 
-        self._data_source_name = data_source_name
+        self._time = time
+
+    @property
+    def values(self):
+        """Gets the values of this DeviceDataSourceInstanceData.  # noqa: E501
+
+
+        :return: The values of this DeviceDataSourceInstanceData.  # noqa: E501
+        :rtype: list[list[object]]
+        """
+        return self._values
+
+    @values.setter
+    def values(self, values):
+        """Sets the values of this DeviceDataSourceInstanceData.
+
+
+        :param values: The values of this DeviceDataSourceInstanceData.  # noqa: E501
+        :type: list[list[object]]
+        """
+
+        self._values = values
 
     def to_dict(self):
         """Returns the model properties as a dict"""

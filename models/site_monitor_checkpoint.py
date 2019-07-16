@@ -31,129 +31,45 @@ class SiteMonitorCheckpoint(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'geo_info': 'str',
-        'display_prio': 'int',
-        'name': 'str',
-        'is_enabled_in_root': 'bool',
         'description': 'str',
-        'id': 'int'
+        'display_prio': 'int',
+        'geo_info': 'str',
+        'id': 'int',
+        'is_enabled_in_root': 'bool',
+        'name': 'str'
     }
 
     attribute_map = {
-        'geo_info': 'geoInfo',
-        'display_prio': 'displayPrio',
-        'name': 'name',
-        'is_enabled_in_root': 'isEnabledInRoot',
         'description': 'description',
-        'id': 'id'
+        'display_prio': 'displayPrio',
+        'geo_info': 'geoInfo',
+        'id': 'id',
+        'is_enabled_in_root': 'isEnabledInRoot',
+        'name': 'name'
     }
 
-    def __init__(self, geo_info=None, display_prio=None, name=None, is_enabled_in_root=None, description=None, id=None):  # noqa: E501
+    def __init__(self, description=None, display_prio=None, geo_info=None, id=None, is_enabled_in_root=None, name=None):  # noqa: E501
         """SiteMonitorCheckpoint - a model defined in Swagger"""  # noqa: E501
 
-        self._geo_info = None
-        self._display_prio = None
-        self._name = None
-        self._is_enabled_in_root = None
         self._description = None
+        self._display_prio = None
+        self._geo_info = None
         self._id = None
+        self._is_enabled_in_root = None
+        self._name = None
         self.discriminator = None
 
-        if geo_info is not None:
-            self.geo_info = geo_info
+        self.description = description
         if display_prio is not None:
             self.display_prio = display_prio
-        if name is not None:
-            self.name = name
-        if is_enabled_in_root is not None:
-            self.is_enabled_in_root = is_enabled_in_root
-        self.description = description
+        if geo_info is not None:
+            self.geo_info = geo_info
         if id is not None:
             self.id = id
-
-    @property
-    def geo_info(self):
-        """Gets the geo_info of this SiteMonitorCheckpoint.  # noqa: E501
-
-
-        :return: The geo_info of this SiteMonitorCheckpoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._geo_info
-
-    @geo_info.setter
-    def geo_info(self, geo_info):
-        """Sets the geo_info of this SiteMonitorCheckpoint.
-
-
-        :param geo_info: The geo_info of this SiteMonitorCheckpoint.  # noqa: E501
-        :type: str
-        """
-
-        self._geo_info = geo_info
-
-    @property
-    def display_prio(self):
-        """Gets the display_prio of this SiteMonitorCheckpoint.  # noqa: E501
-
-
-        :return: The display_prio of this SiteMonitorCheckpoint.  # noqa: E501
-        :rtype: int
-        """
-        return self._display_prio
-
-    @display_prio.setter
-    def display_prio(self, display_prio):
-        """Sets the display_prio of this SiteMonitorCheckpoint.
-
-
-        :param display_prio: The display_prio of this SiteMonitorCheckpoint.  # noqa: E501
-        :type: int
-        """
-
-        self._display_prio = display_prio
-
-    @property
-    def name(self):
-        """Gets the name of this SiteMonitorCheckpoint.  # noqa: E501
-
-
-        :return: The name of this SiteMonitorCheckpoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this SiteMonitorCheckpoint.
-
-
-        :param name: The name of this SiteMonitorCheckpoint.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
-
-    @property
-    def is_enabled_in_root(self):
-        """Gets the is_enabled_in_root of this SiteMonitorCheckpoint.  # noqa: E501
-
-
-        :return: The is_enabled_in_root of this SiteMonitorCheckpoint.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_enabled_in_root
-
-    @is_enabled_in_root.setter
-    def is_enabled_in_root(self, is_enabled_in_root):
-        """Sets the is_enabled_in_root of this SiteMonitorCheckpoint.
-
-
-        :param is_enabled_in_root: The is_enabled_in_root of this SiteMonitorCheckpoint.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_enabled_in_root = is_enabled_in_root
+        if is_enabled_in_root is not None:
+            self.is_enabled_in_root = is_enabled_in_root
+        if name is not None:
+            self.name = name
 
     @property
     def description(self):
@@ -179,6 +95,48 @@ class SiteMonitorCheckpoint(object):
         self._description = description
 
     @property
+    def display_prio(self):
+        """Gets the display_prio of this SiteMonitorCheckpoint.  # noqa: E501
+
+
+        :return: The display_prio of this SiteMonitorCheckpoint.  # noqa: E501
+        :rtype: int
+        """
+        return self._display_prio
+
+    @display_prio.setter
+    def display_prio(self, display_prio):
+        """Sets the display_prio of this SiteMonitorCheckpoint.
+
+
+        :param display_prio: The display_prio of this SiteMonitorCheckpoint.  # noqa: E501
+        :type: int
+        """
+
+        self._display_prio = display_prio
+
+    @property
+    def geo_info(self):
+        """Gets the geo_info of this SiteMonitorCheckpoint.  # noqa: E501
+
+
+        :return: The geo_info of this SiteMonitorCheckpoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._geo_info
+
+    @geo_info.setter
+    def geo_info(self, geo_info):
+        """Sets the geo_info of this SiteMonitorCheckpoint.
+
+
+        :param geo_info: The geo_info of this SiteMonitorCheckpoint.  # noqa: E501
+        :type: str
+        """
+
+        self._geo_info = geo_info
+
+    @property
     def id(self):
         """Gets the id of this SiteMonitorCheckpoint.  # noqa: E501
 
@@ -198,6 +156,48 @@ class SiteMonitorCheckpoint(object):
         """
 
         self._id = id
+
+    @property
+    def is_enabled_in_root(self):
+        """Gets the is_enabled_in_root of this SiteMonitorCheckpoint.  # noqa: E501
+
+
+        :return: The is_enabled_in_root of this SiteMonitorCheckpoint.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_enabled_in_root
+
+    @is_enabled_in_root.setter
+    def is_enabled_in_root(self, is_enabled_in_root):
+        """Sets the is_enabled_in_root of this SiteMonitorCheckpoint.
+
+
+        :param is_enabled_in_root: The is_enabled_in_root of this SiteMonitorCheckpoint.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_enabled_in_root = is_enabled_in_root
+
+    @property
+    def name(self):
+        """Gets the name of this SiteMonitorCheckpoint.  # noqa: E501
+
+
+        :return: The name of this SiteMonitorCheckpoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this SiteMonitorCheckpoint.
+
+
+        :param name: The name of this SiteMonitorCheckpoint.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

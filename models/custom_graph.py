@@ -34,162 +34,93 @@ class CustomGraph(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'virtual_data_points': 'list[CustomVirtualDataPoint]',
-        'min_value': 'object',
-        'top_x': 'int',
-        'max_value': 'object',
-        'data_points': 'list[CustomFlexibleVirtualDataSourceEx]',
-        'vertical_label': 'str',
-        'id': 'int',
         'aggregate': 'object',
+        'data_points': 'list[CustomFlexibleVirtualDataSourceEx]',
         'desc': 'object',
+        'global_consolidate_function': 'str',
+        'id': 'int',
+        'max_value': 'object',
+        'min_value': 'object',
         'scale_unit': 'int',
-        'global_consolidate_function': 'str'
+        'top_x': 'int',
+        'vertical_label': 'str',
+        'virtual_data_points': 'list[CustomVirtualDataPoint]'
     }
 
     attribute_map = {
-        'virtual_data_points': 'virtualDataPoints',
-        'min_value': 'minValue',
-        'top_x': 'topX',
-        'max_value': 'maxValue',
-        'data_points': 'dataPoints',
-        'vertical_label': 'verticalLabel',
-        'id': 'id',
         'aggregate': 'aggregate',
+        'data_points': 'dataPoints',
         'desc': 'desc',
+        'global_consolidate_function': 'globalConsolidateFunction',
+        'id': 'id',
+        'max_value': 'maxValue',
+        'min_value': 'minValue',
         'scale_unit': 'scaleUnit',
-        'global_consolidate_function': 'globalConsolidateFunction'
+        'top_x': 'topX',
+        'vertical_label': 'verticalLabel',
+        'virtual_data_points': 'virtualDataPoints'
     }
 
-    def __init__(self, virtual_data_points=None, min_value=None, top_x=None, max_value=None, data_points=None, vertical_label=None, id=None, aggregate=None, desc=None, scale_unit=None, global_consolidate_function=None):  # noqa: E501
+    def __init__(self, aggregate=None, data_points=None, desc=None, global_consolidate_function=None, id=None, max_value=None, min_value=None, scale_unit=None, top_x=None, vertical_label=None, virtual_data_points=None):  # noqa: E501
         """CustomGraph - a model defined in Swagger"""  # noqa: E501
 
-        self._virtual_data_points = None
-        self._min_value = None
-        self._top_x = None
-        self._max_value = None
-        self._data_points = None
-        self._vertical_label = None
-        self._id = None
         self._aggregate = None
+        self._data_points = None
         self._desc = None
-        self._scale_unit = None
         self._global_consolidate_function = None
+        self._id = None
+        self._max_value = None
+        self._min_value = None
+        self._scale_unit = None
+        self._top_x = None
+        self._vertical_label = None
+        self._virtual_data_points = None
         self.discriminator = None
 
-        if virtual_data_points is not None:
-            self.virtual_data_points = virtual_data_points
-        if min_value is not None:
-            self.min_value = min_value
-        if top_x is not None:
-            self.top_x = top_x
-        if max_value is not None:
-            self.max_value = max_value
-        self.data_points = data_points
-        if vertical_label is not None:
-            self.vertical_label = vertical_label
-        if id is not None:
-            self.id = id
         if aggregate is not None:
             self.aggregate = aggregate
+        self.data_points = data_points
         if desc is not None:
             self.desc = desc
-        if scale_unit is not None:
-            self.scale_unit = scale_unit
         if global_consolidate_function is not None:
             self.global_consolidate_function = global_consolidate_function
+        if id is not None:
+            self.id = id
+        if max_value is not None:
+            self.max_value = max_value
+        if min_value is not None:
+            self.min_value = min_value
+        if scale_unit is not None:
+            self.scale_unit = scale_unit
+        if top_x is not None:
+            self.top_x = top_x
+        if vertical_label is not None:
+            self.vertical_label = vertical_label
+        if virtual_data_points is not None:
+            self.virtual_data_points = virtual_data_points
 
     @property
-    def virtual_data_points(self):
-        """Gets the virtual_data_points of this CustomGraph.  # noqa: E501
+    def aggregate(self):
+        """Gets the aggregate of this CustomGraph.  # noqa: E501
 
-        The virtual datapoints added to the widget (note that a virtual datapoint must be referenced in a graph line to be displayed)  # noqa: E501
+        true: You can set this field to true to aggregate results into one line. false: Results will not be aggregated the default value is true  # noqa: E501
 
-        :return: The virtual_data_points of this CustomGraph.  # noqa: E501
-        :rtype: list[CustomVirtualDataPoint]
-        """
-        return self._virtual_data_points
-
-    @virtual_data_points.setter
-    def virtual_data_points(self, virtual_data_points):
-        """Sets the virtual_data_points of this CustomGraph.
-
-        The virtual datapoints added to the widget (note that a virtual datapoint must be referenced in a graph line to be displayed)  # noqa: E501
-
-        :param virtual_data_points: The virtual_data_points of this CustomGraph.  # noqa: E501
-        :type: list[CustomVirtualDataPoint]
-        """
-
-        self._virtual_data_points = virtual_data_points
-
-    @property
-    def min_value(self):
-        """Gets the min_value of this CustomGraph.  # noqa: E501
-
-        The minimum value that should be displayed on the y-axis  # noqa: E501
-
-        :return: The min_value of this CustomGraph.  # noqa: E501
+        :return: The aggregate of this CustomGraph.  # noqa: E501
         :rtype: object
         """
-        return self._min_value
+        return self._aggregate
 
-    @min_value.setter
-    def min_value(self, min_value):
-        """Sets the min_value of this CustomGraph.
+    @aggregate.setter
+    def aggregate(self, aggregate):
+        """Sets the aggregate of this CustomGraph.
 
-        The minimum value that should be displayed on the y-axis  # noqa: E501
+        true: You can set this field to true to aggregate results into one line. false: Results will not be aggregated the default value is true  # noqa: E501
 
-        :param min_value: The min_value of this CustomGraph.  # noqa: E501
+        :param aggregate: The aggregate of this CustomGraph.  # noqa: E501
         :type: object
         """
 
-        self._min_value = min_value
-
-    @property
-    def top_x(self):
-        """Gets the top_x of this CustomGraph.  # noqa: E501
-
-        The number of lines to display for each configured datapoint  # noqa: E501
-
-        :return: The top_x of this CustomGraph.  # noqa: E501
-        :rtype: int
-        """
-        return self._top_x
-
-    @top_x.setter
-    def top_x(self, top_x):
-        """Sets the top_x of this CustomGraph.
-
-        The number of lines to display for each configured datapoint  # noqa: E501
-
-        :param top_x: The top_x of this CustomGraph.  # noqa: E501
-        :type: int
-        """
-
-        self._top_x = top_x
-
-    @property
-    def max_value(self):
-        """Gets the max_value of this CustomGraph.  # noqa: E501
-
-        The maximum value that should be displayed on the y-axis  # noqa: E501
-
-        :return: The max_value of this CustomGraph.  # noqa: E501
-        :rtype: object
-        """
-        return self._max_value
-
-    @max_value.setter
-    def max_value(self, max_value):
-        """Sets the max_value of this CustomGraph.
-
-        The maximum value that should be displayed on the y-axis  # noqa: E501
-
-        :param max_value: The max_value of this CustomGraph.  # noqa: E501
-        :type: object
-        """
-
-        self._max_value = max_value
+        self._aggregate = aggregate
 
     @property
     def data_points(self):
@@ -217,27 +148,50 @@ class CustomGraph(object):
         self._data_points = data_points
 
     @property
-    def vertical_label(self):
-        """Gets the vertical_label of this CustomGraph.  # noqa: E501
+    def desc(self):
+        """Gets the desc of this CustomGraph.  # noqa: E501
 
-        The label that will be display along the y axis  # noqa: E501
+        Whether the top X are displayed (false) or the bottom X are displayed (true), the default value is true  # noqa: E501
 
-        :return: The vertical_label of this CustomGraph.  # noqa: E501
+        :return: The desc of this CustomGraph.  # noqa: E501
+        :rtype: object
+        """
+        return self._desc
+
+    @desc.setter
+    def desc(self, desc):
+        """Sets the desc of this CustomGraph.
+
+        Whether the top X are displayed (false) or the bottom X are displayed (true), the default value is true  # noqa: E501
+
+        :param desc: The desc of this CustomGraph.  # noqa: E501
+        :type: object
+        """
+
+        self._desc = desc
+
+    @property
+    def global_consolidate_function(self):
+        """Gets the global_consolidate_function of this CustomGraph.  # noqa: E501
+
+        The function for global consolidate  # noqa: E501
+
+        :return: The global_consolidate_function of this CustomGraph.  # noqa: E501
         :rtype: str
         """
-        return self._vertical_label
+        return self._global_consolidate_function
 
-    @vertical_label.setter
-    def vertical_label(self, vertical_label):
-        """Sets the vertical_label of this CustomGraph.
+    @global_consolidate_function.setter
+    def global_consolidate_function(self, global_consolidate_function):
+        """Sets the global_consolidate_function of this CustomGraph.
 
-        The label that will be display along the y axis  # noqa: E501
+        The function for global consolidate  # noqa: E501
 
-        :param vertical_label: The vertical_label of this CustomGraph.  # noqa: E501
+        :param global_consolidate_function: The global_consolidate_function of this CustomGraph.  # noqa: E501
         :type: str
         """
 
-        self._vertical_label = vertical_label
+        self._global_consolidate_function = global_consolidate_function
 
     @property
     def id(self):
@@ -263,50 +217,50 @@ class CustomGraph(object):
         self._id = id
 
     @property
-    def aggregate(self):
-        """Gets the aggregate of this CustomGraph.  # noqa: E501
+    def max_value(self):
+        """Gets the max_value of this CustomGraph.  # noqa: E501
 
-        true: You can set this field to true to aggregate results into one line. false: Results will not be aggregated the default value is true  # noqa: E501
+        The maximum value that should be displayed on the y-axis  # noqa: E501
 
-        :return: The aggregate of this CustomGraph.  # noqa: E501
+        :return: The max_value of this CustomGraph.  # noqa: E501
         :rtype: object
         """
-        return self._aggregate
+        return self._max_value
 
-    @aggregate.setter
-    def aggregate(self, aggregate):
-        """Sets the aggregate of this CustomGraph.
+    @max_value.setter
+    def max_value(self, max_value):
+        """Sets the max_value of this CustomGraph.
 
-        true: You can set this field to true to aggregate results into one line. false: Results will not be aggregated the default value is true  # noqa: E501
+        The maximum value that should be displayed on the y-axis  # noqa: E501
 
-        :param aggregate: The aggregate of this CustomGraph.  # noqa: E501
+        :param max_value: The max_value of this CustomGraph.  # noqa: E501
         :type: object
         """
 
-        self._aggregate = aggregate
+        self._max_value = max_value
 
     @property
-    def desc(self):
-        """Gets the desc of this CustomGraph.  # noqa: E501
+    def min_value(self):
+        """Gets the min_value of this CustomGraph.  # noqa: E501
 
-        Whether the top X are displayed (false) or the bottom X are displayed (true), the default value is true  # noqa: E501
+        The minimum value that should be displayed on the y-axis  # noqa: E501
 
-        :return: The desc of this CustomGraph.  # noqa: E501
+        :return: The min_value of this CustomGraph.  # noqa: E501
         :rtype: object
         """
-        return self._desc
+        return self._min_value
 
-    @desc.setter
-    def desc(self, desc):
-        """Sets the desc of this CustomGraph.
+    @min_value.setter
+    def min_value(self, min_value):
+        """Sets the min_value of this CustomGraph.
 
-        Whether the top X are displayed (false) or the bottom X are displayed (true), the default value is true  # noqa: E501
+        The minimum value that should be displayed on the y-axis  # noqa: E501
 
-        :param desc: The desc of this CustomGraph.  # noqa: E501
+        :param min_value: The min_value of this CustomGraph.  # noqa: E501
         :type: object
         """
 
-        self._desc = desc
+        self._min_value = min_value
 
     @property
     def scale_unit(self):
@@ -332,27 +286,73 @@ class CustomGraph(object):
         self._scale_unit = scale_unit
 
     @property
-    def global_consolidate_function(self):
-        """Gets the global_consolidate_function of this CustomGraph.  # noqa: E501
+    def top_x(self):
+        """Gets the top_x of this CustomGraph.  # noqa: E501
 
-        The function for global consolidate  # noqa: E501
+        The number of lines to display for each configured datapoint  # noqa: E501
 
-        :return: The global_consolidate_function of this CustomGraph.  # noqa: E501
+        :return: The top_x of this CustomGraph.  # noqa: E501
+        :rtype: int
+        """
+        return self._top_x
+
+    @top_x.setter
+    def top_x(self, top_x):
+        """Sets the top_x of this CustomGraph.
+
+        The number of lines to display for each configured datapoint  # noqa: E501
+
+        :param top_x: The top_x of this CustomGraph.  # noqa: E501
+        :type: int
+        """
+
+        self._top_x = top_x
+
+    @property
+    def vertical_label(self):
+        """Gets the vertical_label of this CustomGraph.  # noqa: E501
+
+        The label that will be display along the y axis  # noqa: E501
+
+        :return: The vertical_label of this CustomGraph.  # noqa: E501
         :rtype: str
         """
-        return self._global_consolidate_function
+        return self._vertical_label
 
-    @global_consolidate_function.setter
-    def global_consolidate_function(self, global_consolidate_function):
-        """Sets the global_consolidate_function of this CustomGraph.
+    @vertical_label.setter
+    def vertical_label(self, vertical_label):
+        """Sets the vertical_label of this CustomGraph.
 
-        The function for global consolidate  # noqa: E501
+        The label that will be display along the y axis  # noqa: E501
 
-        :param global_consolidate_function: The global_consolidate_function of this CustomGraph.  # noqa: E501
+        :param vertical_label: The vertical_label of this CustomGraph.  # noqa: E501
         :type: str
         """
 
-        self._global_consolidate_function = global_consolidate_function
+        self._vertical_label = vertical_label
+
+    @property
+    def virtual_data_points(self):
+        """Gets the virtual_data_points of this CustomGraph.  # noqa: E501
+
+        The virtual datapoints added to the widget (note that a virtual datapoint must be referenced in a graph line to be displayed)  # noqa: E501
+
+        :return: The virtual_data_points of this CustomGraph.  # noqa: E501
+        :rtype: list[CustomVirtualDataPoint]
+        """
+        return self._virtual_data_points
+
+    @virtual_data_points.setter
+    def virtual_data_points(self, virtual_data_points):
+        """Sets the virtual_data_points of this CustomGraph.
+
+        The virtual datapoints added to the widget (note that a virtual datapoint must be referenced in a graph line to be displayed)  # noqa: E501
+
+        :param virtual_data_points: The virtual_data_points of this CustomGraph.  # noqa: E501
+        :type: list[CustomVirtualDataPoint]
+        """
+
+        self._virtual_data_points = virtual_data_points
 
     def to_dict(self):
         """Returns the model properties as a dict"""

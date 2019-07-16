@@ -31,78 +31,55 @@ class Period(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'week_days': 'list[int]',
-        'timezone': 'str',
+        'end_minutes': 'int',
         'start_minutes': 'int',
-        'end_minutes': 'int'
+        'timezone': 'str',
+        'week_days': 'list[int]'
     }
 
     attribute_map = {
-        'week_days': 'weekDays',
-        'timezone': 'timezone',
+        'end_minutes': 'endMinutes',
         'start_minutes': 'startMinutes',
-        'end_minutes': 'endMinutes'
+        'timezone': 'timezone',
+        'week_days': 'weekDays'
     }
 
-    def __init__(self, week_days=None, timezone=None, start_minutes=None, end_minutes=None):  # noqa: E501
+    def __init__(self, end_minutes=None, start_minutes=None, timezone=None, week_days=None):  # noqa: E501
         """Period - a model defined in Swagger"""  # noqa: E501
 
-        self._week_days = None
-        self._timezone = None
-        self._start_minutes = None
         self._end_minutes = None
+        self._start_minutes = None
+        self._timezone = None
+        self._week_days = None
         self.discriminator = None
 
-        self.week_days = week_days
-        self.timezone = timezone
-        self.start_minutes = start_minutes
         self.end_minutes = end_minutes
+        self.start_minutes = start_minutes
+        self.timezone = timezone
+        self.week_days = week_days
 
     @property
-    def week_days(self):
-        """Gets the week_days of this Period.  # noqa: E501
+    def end_minutes(self):
+        """Gets the end_minutes of this Period.  # noqa: E501
 
 
-        :return: The week_days of this Period.  # noqa: E501
-        :rtype: list[int]
+        :return: The end_minutes of this Period.  # noqa: E501
+        :rtype: int
         """
-        return self._week_days
+        return self._end_minutes
 
-    @week_days.setter
-    def week_days(self, week_days):
-        """Sets the week_days of this Period.
+    @end_minutes.setter
+    def end_minutes(self, end_minutes):
+        """Sets the end_minutes of this Period.
 
 
-        :param week_days: The week_days of this Period.  # noqa: E501
-        :type: list[int]
+        :param end_minutes: The end_minutes of this Period.  # noqa: E501
+        :type: int
         """
-        if week_days is None:
-            raise ValueError("Invalid value for `week_days`, must not be `None`")  # noqa: E501
+        if end_minutes is None:
+            raise ValueError("Invalid value for `end_minutes`, must not be `None`")  # noqa: E501
 
-        self._week_days = week_days
-
-    @property
-    def timezone(self):
-        """Gets the timezone of this Period.  # noqa: E501
-
-
-        :return: The timezone of this Period.  # noqa: E501
-        :rtype: str
-        """
-        return self._timezone
-
-    @timezone.setter
-    def timezone(self, timezone):
-        """Sets the timezone of this Period.
-
-
-        :param timezone: The timezone of this Period.  # noqa: E501
-        :type: str
-        """
-        if timezone is None:
-            raise ValueError("Invalid value for `timezone`, must not be `None`")  # noqa: E501
-
-        self._timezone = timezone
+        self._end_minutes = end_minutes
 
     @property
     def start_minutes(self):
@@ -128,27 +105,50 @@ class Period(object):
         self._start_minutes = start_minutes
 
     @property
-    def end_minutes(self):
-        """Gets the end_minutes of this Period.  # noqa: E501
+    def timezone(self):
+        """Gets the timezone of this Period.  # noqa: E501
 
 
-        :return: The end_minutes of this Period.  # noqa: E501
-        :rtype: int
+        :return: The timezone of this Period.  # noqa: E501
+        :rtype: str
         """
-        return self._end_minutes
+        return self._timezone
 
-    @end_minutes.setter
-    def end_minutes(self, end_minutes):
-        """Sets the end_minutes of this Period.
+    @timezone.setter
+    def timezone(self, timezone):
+        """Sets the timezone of this Period.
 
 
-        :param end_minutes: The end_minutes of this Period.  # noqa: E501
-        :type: int
+        :param timezone: The timezone of this Period.  # noqa: E501
+        :type: str
         """
-        if end_minutes is None:
-            raise ValueError("Invalid value for `end_minutes`, must not be `None`")  # noqa: E501
+        if timezone is None:
+            raise ValueError("Invalid value for `timezone`, must not be `None`")  # noqa: E501
 
-        self._end_minutes = end_minutes
+        self._timezone = timezone
+
+    @property
+    def week_days(self):
+        """Gets the week_days of this Period.  # noqa: E501
+
+
+        :return: The week_days of this Period.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._week_days
+
+    @week_days.setter
+    def week_days(self, week_days):
+        """Sets the week_days of this Period.
+
+
+        :param week_days: The week_days of this Period.  # noqa: E501
+        :type: list[int]
+        """
+        if week_days is None:
+            raise ValueError("Invalid value for `week_days`, must not be `None`")  # noqa: E501
+
+        self._week_days = week_days
 
     def to_dict(self):
         """Returns the model properties as a dict"""

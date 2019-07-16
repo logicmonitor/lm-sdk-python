@@ -31,82 +31,36 @@ class DynamicTableWidgetRow(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'instance_name': 'str',
-        'label': 'str',
         'device_display_name': 'str',
-        'group_full_path': 'str'
+        'group_full_path': 'str',
+        'instance_name': 'str',
+        'label': 'str'
     }
 
     attribute_map = {
-        'instance_name': 'instanceName',
-        'label': 'label',
         'device_display_name': 'deviceDisplayName',
-        'group_full_path': 'groupFullPath'
+        'group_full_path': 'groupFullPath',
+        'instance_name': 'instanceName',
+        'label': 'label'
     }
 
-    def __init__(self, instance_name=None, label=None, device_display_name=None, group_full_path=None):  # noqa: E501
+    def __init__(self, device_display_name=None, group_full_path=None, instance_name=None, label=None):  # noqa: E501
         """DynamicTableWidgetRow - a model defined in Swagger"""  # noqa: E501
 
-        self._instance_name = None
-        self._label = None
         self._device_display_name = None
         self._group_full_path = None
+        self._instance_name = None
+        self._label = None
         self.discriminator = None
 
-        if instance_name is not None:
-            self.instance_name = instance_name
-        if label is not None:
-            self.label = label
         if device_display_name is not None:
             self.device_display_name = device_display_name
         if group_full_path is not None:
             self.group_full_path = group_full_path
-
-    @property
-    def instance_name(self):
-        """Gets the instance_name of this DynamicTableWidgetRow.  # noqa: E501
-
-        The instances for each column of the row  # noqa: E501
-
-        :return: The instance_name of this DynamicTableWidgetRow.  # noqa: E501
-        :rtype: str
-        """
-        return self._instance_name
-
-    @instance_name.setter
-    def instance_name(self, instance_name):
-        """Sets the instance_name of this DynamicTableWidgetRow.
-
-        The instances for each column of the row  # noqa: E501
-
-        :param instance_name: The instance_name of this DynamicTableWidgetRow.  # noqa: E501
-        :type: str
-        """
-
-        self._instance_name = instance_name
-
-    @property
-    def label(self):
-        """Gets the label of this DynamicTableWidgetRow.  # noqa: E501
-
-        The label for the row  # noqa: E501
-
-        :return: The label of this DynamicTableWidgetRow.  # noqa: E501
-        :rtype: str
-        """
-        return self._label
-
-    @label.setter
-    def label(self, label):
-        """Sets the label of this DynamicTableWidgetRow.
-
-        The label for the row  # noqa: E501
-
-        :param label: The label of this DynamicTableWidgetRow.  # noqa: E501
-        :type: str
-        """
-
-        self._label = label
+        if instance_name is not None:
+            self.instance_name = instance_name
+        if label is not None:
+            self.label = label
 
     @property
     def device_display_name(self):
@@ -153,6 +107,52 @@ class DynamicTableWidgetRow(object):
         """
 
         self._group_full_path = group_full_path
+
+    @property
+    def instance_name(self):
+        """Gets the instance_name of this DynamicTableWidgetRow.  # noqa: E501
+
+        The instances for each column of the row  # noqa: E501
+
+        :return: The instance_name of this DynamicTableWidgetRow.  # noqa: E501
+        :rtype: str
+        """
+        return self._instance_name
+
+    @instance_name.setter
+    def instance_name(self, instance_name):
+        """Sets the instance_name of this DynamicTableWidgetRow.
+
+        The instances for each column of the row  # noqa: E501
+
+        :param instance_name: The instance_name of this DynamicTableWidgetRow.  # noqa: E501
+        :type: str
+        """
+
+        self._instance_name = instance_name
+
+    @property
+    def label(self):
+        """Gets the label of this DynamicTableWidgetRow.  # noqa: E501
+
+        The label for the row  # noqa: E501
+
+        :return: The label of this DynamicTableWidgetRow.  # noqa: E501
+        :rtype: str
+        """
+        return self._label
+
+    @label.setter
+    def label(self, label):
+        """Sets the label of this DynamicTableWidgetRow.
+
+        The label for the row  # noqa: E501
+
+        :param label: The label of this DynamicTableWidgetRow.  # noqa: E501
+        :type: str
+        """
+
+        self._label = label
 
     def to_dict(self):
         """Returns the model properties as a dict"""

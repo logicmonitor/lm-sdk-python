@@ -31,83 +31,39 @@ class TableWidgetDataPoint(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data_source_id': 'int',
-        'data_point_name': 'str',
         'data_point_id': 'int',
+        'data_point_name': 'str',
         'data_source_full_name': 'str',
+        'data_source_id': 'int',
         'is_multiple': 'bool'
     }
 
     attribute_map = {
-        'data_source_id': 'dataSourceId',
-        'data_point_name': 'dataPointName',
         'data_point_id': 'dataPointId',
+        'data_point_name': 'dataPointName',
         'data_source_full_name': 'dataSourceFullName',
+        'data_source_id': 'dataSourceId',
         'is_multiple': 'isMultiple'
     }
 
-    def __init__(self, data_source_id=None, data_point_name=None, data_point_id=None, data_source_full_name=None, is_multiple=None):  # noqa: E501
+    def __init__(self, data_point_id=None, data_point_name=None, data_source_full_name=None, data_source_id=None, is_multiple=None):  # noqa: E501
         """TableWidgetDataPoint - a model defined in Swagger"""  # noqa: E501
 
-        self._data_source_id = None
-        self._data_point_name = None
         self._data_point_id = None
+        self._data_point_name = None
         self._data_source_full_name = None
+        self._data_source_id = None
         self._is_multiple = None
         self.discriminator = None
 
-        self.data_source_id = data_source_id
+        self.data_point_id = data_point_id
         if data_point_name is not None:
             self.data_point_name = data_point_name
-        self.data_point_id = data_point_id
         if data_source_full_name is not None:
             self.data_source_full_name = data_source_full_name
+        self.data_source_id = data_source_id
         if is_multiple is not None:
             self.is_multiple = is_multiple
-
-    @property
-    def data_source_id(self):
-        """Gets the data_source_id of this TableWidgetDataPoint.  # noqa: E501
-
-
-        :return: The data_source_id of this TableWidgetDataPoint.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_source_id
-
-    @data_source_id.setter
-    def data_source_id(self, data_source_id):
-        """Sets the data_source_id of this TableWidgetDataPoint.
-
-
-        :param data_source_id: The data_source_id of this TableWidgetDataPoint.  # noqa: E501
-        :type: int
-        """
-        if data_source_id is None:
-            raise ValueError("Invalid value for `data_source_id`, must not be `None`")  # noqa: E501
-
-        self._data_source_id = data_source_id
-
-    @property
-    def data_point_name(self):
-        """Gets the data_point_name of this TableWidgetDataPoint.  # noqa: E501
-
-
-        :return: The data_point_name of this TableWidgetDataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_point_name
-
-    @data_point_name.setter
-    def data_point_name(self, data_point_name):
-        """Sets the data_point_name of this TableWidgetDataPoint.
-
-
-        :param data_point_name: The data_point_name of this TableWidgetDataPoint.  # noqa: E501
-        :type: str
-        """
-
-        self._data_point_name = data_point_name
 
     @property
     def data_point_id(self):
@@ -133,6 +89,27 @@ class TableWidgetDataPoint(object):
         self._data_point_id = data_point_id
 
     @property
+    def data_point_name(self):
+        """Gets the data_point_name of this TableWidgetDataPoint.  # noqa: E501
+
+
+        :return: The data_point_name of this TableWidgetDataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_point_name
+
+    @data_point_name.setter
+    def data_point_name(self, data_point_name):
+        """Sets the data_point_name of this TableWidgetDataPoint.
+
+
+        :param data_point_name: The data_point_name of this TableWidgetDataPoint.  # noqa: E501
+        :type: str
+        """
+
+        self._data_point_name = data_point_name
+
+    @property
     def data_source_full_name(self):
         """Gets the data_source_full_name of this TableWidgetDataPoint.  # noqa: E501
 
@@ -152,6 +129,29 @@ class TableWidgetDataPoint(object):
         """
 
         self._data_source_full_name = data_source_full_name
+
+    @property
+    def data_source_id(self):
+        """Gets the data_source_id of this TableWidgetDataPoint.  # noqa: E501
+
+
+        :return: The data_source_id of this TableWidgetDataPoint.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_source_id
+
+    @data_source_id.setter
+    def data_source_id(self, data_source_id):
+        """Sets the data_source_id of this TableWidgetDataPoint.
+
+
+        :param data_source_id: The data_source_id of this TableWidgetDataPoint.  # noqa: E501
+        :type: int
+        """
+        if data_source_id is None:
+            raise ValueError("Invalid value for `data_source_id`, must not be `None`")  # noqa: E501
+
+        self._data_source_id = data_source_id
 
     @property
     def is_multiple(self):

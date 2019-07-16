@@ -34,37 +34,37 @@ class TCPCollectorAttribute(CollectorAttribute):
     """
     swagger_types = {
         'name': 'str',
+        'encoding': 'str',
         'payload': 'str',
         'port': 'str',
-        'encoding': 'str',
         'timeout': 'int'
     }
 
     attribute_map = {
         'name': 'name',
+        'encoding': 'encoding',
         'payload': 'payload',
         'port': 'port',
-        'encoding': 'encoding',
         'timeout': 'timeout'
     }
 
-    def __init__(self, name=None, payload=None, port=None, encoding=None, timeout=None):  # noqa: E501
+    def __init__(self, name=None, encoding=None, payload=None, port=None, timeout=None):  # noqa: E501
         """TCPCollectorAttribute - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
+        self._encoding = None
         self._payload = None
         self._port = None
-        self._encoding = None
         self._timeout = None
         self.discriminator = None
 
         self.name = name
+        if encoding is not None:
+            self.encoding = encoding
         if payload is not None:
             self.payload = payload
         if port is not None:
             self.port = port
-        if encoding is not None:
-            self.encoding = encoding
         if timeout is not None:
             self.timeout = timeout
 
@@ -90,6 +90,27 @@ class TCPCollectorAttribute(CollectorAttribute):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def encoding(self):
+        """Gets the encoding of this TCPCollectorAttribute.  # noqa: E501
+
+
+        :return: The encoding of this TCPCollectorAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._encoding
+
+    @encoding.setter
+    def encoding(self, encoding):
+        """Sets the encoding of this TCPCollectorAttribute.
+
+
+        :param encoding: The encoding of this TCPCollectorAttribute.  # noqa: E501
+        :type: str
+        """
+
+        self._encoding = encoding
 
     @property
     def payload(self):
@@ -132,27 +153,6 @@ class TCPCollectorAttribute(CollectorAttribute):
         """
 
         self._port = port
-
-    @property
-    def encoding(self):
-        """Gets the encoding of this TCPCollectorAttribute.  # noqa: E501
-
-
-        :return: The encoding of this TCPCollectorAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._encoding
-
-    @encoding.setter
-    def encoding(self, encoding):
-        """Sets the encoding of this TCPCollectorAttribute.
-
-
-        :param encoding: The encoding of this TCPCollectorAttribute.  # noqa: E501
-        :type: str
-        """
-
-        self._encoding = encoding
 
     @property
     def timeout(self):

@@ -34,62 +34,41 @@ class NOCWidgetData(WidgetData):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
         'title': 'str',
+        'type': 'str',
         'ack_checked': 'bool',
-        'sdt_checked': 'bool',
-        'items': 'list[ItemData]'
+        'items': 'list[ItemData]',
+        'sdt_checked': 'bool'
     }
 
     attribute_map = {
-        'type': 'type',
         'title': 'title',
+        'type': 'type',
         'ack_checked': 'ackChecked',
-        'sdt_checked': 'sdtChecked',
-        'items': 'items'
+        'items': 'items',
+        'sdt_checked': 'sdtChecked'
     }
 
-    def __init__(self, type=None, title=None, ack_checked=None, sdt_checked=None, items=None):  # noqa: E501
+    def __init__(self, title=None, type=None, ack_checked=None, items=None, sdt_checked=None):  # noqa: E501
         """NOCWidgetData - a model defined in Swagger"""  # noqa: E501
 
-        self._type = None
         self._title = None
+        self._type = None
         self._ack_checked = None
-        self._sdt_checked = None
         self._items = None
+        self._sdt_checked = None
         self.discriminator = None
 
-        if type is not None:
-            self.type = type
         if title is not None:
             self.title = title
+        if type is not None:
+            self.type = type
         if ack_checked is not None:
             self.ack_checked = ack_checked
-        if sdt_checked is not None:
-            self.sdt_checked = sdt_checked
         if items is not None:
             self.items = items
-
-    @property
-    def type(self):
-        """Gets the type of this NOCWidgetData.  # noqa: E501
-
-
-        :return: The type of this NOCWidgetData.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this NOCWidgetData.
-
-
-        :param type: The type of this NOCWidgetData.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
+        if sdt_checked is not None:
+            self.sdt_checked = sdt_checked
 
     @property
     def title(self):
@@ -113,6 +92,27 @@ class NOCWidgetData(WidgetData):
         self._title = title
 
     @property
+    def type(self):
+        """Gets the type of this NOCWidgetData.  # noqa: E501
+
+
+        :return: The type of this NOCWidgetData.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this NOCWidgetData.
+
+
+        :param type: The type of this NOCWidgetData.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
+
+    @property
     def ack_checked(self):
         """Gets the ack_checked of this NOCWidgetData.  # noqa: E501
 
@@ -134,27 +134,6 @@ class NOCWidgetData(WidgetData):
         self._ack_checked = ack_checked
 
     @property
-    def sdt_checked(self):
-        """Gets the sdt_checked of this NOCWidgetData.  # noqa: E501
-
-
-        :return: The sdt_checked of this NOCWidgetData.  # noqa: E501
-        :rtype: bool
-        """
-        return self._sdt_checked
-
-    @sdt_checked.setter
-    def sdt_checked(self, sdt_checked):
-        """Sets the sdt_checked of this NOCWidgetData.
-
-
-        :param sdt_checked: The sdt_checked of this NOCWidgetData.  # noqa: E501
-        :type: bool
-        """
-
-        self._sdt_checked = sdt_checked
-
-    @property
     def items(self):
         """Gets the items of this NOCWidgetData.  # noqa: E501
 
@@ -174,6 +153,27 @@ class NOCWidgetData(WidgetData):
         """
 
         self._items = items
+
+    @property
+    def sdt_checked(self):
+        """Gets the sdt_checked of this NOCWidgetData.  # noqa: E501
+
+
+        :return: The sdt_checked of this NOCWidgetData.  # noqa: E501
+        :rtype: bool
+        """
+        return self._sdt_checked
+
+    @sdt_checked.setter
+    def sdt_checked(self, sdt_checked):
+        """Sets the sdt_checked of this NOCWidgetData.
+
+
+        :param sdt_checked: The sdt_checked of this NOCWidgetData.  # noqa: E501
+        :type: bool
+        """
+
+        self._sdt_checked = sdt_checked
 
     def to_dict(self):
         """Returns the model properties as a dict"""

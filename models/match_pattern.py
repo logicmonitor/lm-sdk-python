@@ -31,49 +31,26 @@ class MatchPattern(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'pattern': 'str',
-        'alert_level': 'str'
+        'alert_level': 'str',
+        'pattern': 'str'
     }
 
     attribute_map = {
-        'pattern': 'pattern',
-        'alert_level': 'alertLevel'
+        'alert_level': 'alertLevel',
+        'pattern': 'pattern'
     }
 
-    def __init__(self, pattern=None, alert_level=None):  # noqa: E501
+    def __init__(self, alert_level=None, pattern=None):  # noqa: E501
         """MatchPattern - a model defined in Swagger"""  # noqa: E501
 
-        self._pattern = None
         self._alert_level = None
+        self._pattern = None
         self.discriminator = None
 
-        if pattern is not None:
-            self.pattern = pattern
         if alert_level is not None:
             self.alert_level = alert_level
-
-    @property
-    def pattern(self):
-        """Gets the pattern of this MatchPattern.  # noqa: E501
-
-        The regex or plain text to look for in the file and trigger alert if found  # noqa: E501
-
-        :return: The pattern of this MatchPattern.  # noqa: E501
-        :rtype: str
-        """
-        return self._pattern
-
-    @pattern.setter
-    def pattern(self, pattern):
-        """Sets the pattern of this MatchPattern.
-
-        The regex or plain text to look for in the file and trigger alert if found  # noqa: E501
-
-        :param pattern: The pattern of this MatchPattern.  # noqa: E501
-        :type: str
-        """
-
-        self._pattern = pattern
+        if pattern is not None:
+            self.pattern = pattern
 
     @property
     def alert_level(self):
@@ -97,6 +74,29 @@ class MatchPattern(object):
         """
 
         self._alert_level = alert_level
+
+    @property
+    def pattern(self):
+        """Gets the pattern of this MatchPattern.  # noqa: E501
+
+        The regex or plain text to look for in the file and trigger alert if found  # noqa: E501
+
+        :return: The pattern of this MatchPattern.  # noqa: E501
+        :rtype: str
+        """
+        return self._pattern
+
+    @pattern.setter
+    def pattern(self, pattern):
+        """Sets the pattern of this MatchPattern.
+
+        The regex or plain text to look for in the file and trigger alert if found  # noqa: E501
+
+        :param pattern: The pattern of this MatchPattern.  # noqa: E501
+        :type: str
+        """
+
+        self._pattern = pattern
 
     def to_dict(self):
         """Returns the model properties as a dict"""

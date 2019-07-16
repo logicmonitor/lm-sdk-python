@@ -31,99 +31,78 @@ class BigNumberDataPoint(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data_source_id': 'int',
-        'data_point_name': 'str',
-        'data_point_id': 'int',
-        'instance_name': 'str',
-        'data_source_full_name': 'str',
-        'name': 'str',
         'aggregate_function': 'str',
+        'data_point_id': 'int',
+        'data_point_name': 'str',
+        'data_source_full_name': 'str',
+        'data_source_id': 'int',
+        'device_display_name': 'str',
         'device_group_full_path': 'str',
-        'device_display_name': 'str'
+        'instance_name': 'str',
+        'name': 'str'
     }
 
     attribute_map = {
-        'data_source_id': 'dataSourceId',
-        'data_point_name': 'dataPointName',
-        'data_point_id': 'dataPointId',
-        'instance_name': 'instanceName',
-        'data_source_full_name': 'dataSourceFullName',
-        'name': 'name',
         'aggregate_function': 'aggregateFunction',
+        'data_point_id': 'dataPointId',
+        'data_point_name': 'dataPointName',
+        'data_source_full_name': 'dataSourceFullName',
+        'data_source_id': 'dataSourceId',
+        'device_display_name': 'deviceDisplayName',
         'device_group_full_path': 'deviceGroupFullPath',
-        'device_display_name': 'deviceDisplayName'
+        'instance_name': 'instanceName',
+        'name': 'name'
     }
 
-    def __init__(self, data_source_id=None, data_point_name=None, data_point_id=None, instance_name=None, data_source_full_name=None, name=None, aggregate_function=None, device_group_full_path=None, device_display_name=None):  # noqa: E501
+    def __init__(self, aggregate_function=None, data_point_id=None, data_point_name=None, data_source_full_name=None, data_source_id=None, device_display_name=None, device_group_full_path=None, instance_name=None, name=None):  # noqa: E501
         """BigNumberDataPoint - a model defined in Swagger"""  # noqa: E501
 
-        self._data_source_id = None
-        self._data_point_name = None
-        self._data_point_id = None
-        self._instance_name = None
-        self._data_source_full_name = None
-        self._name = None
         self._aggregate_function = None
-        self._device_group_full_path = None
+        self._data_point_id = None
+        self._data_point_name = None
+        self._data_source_full_name = None
+        self._data_source_id = None
         self._device_display_name = None
+        self._device_group_full_path = None
+        self._instance_name = None
+        self._name = None
         self.discriminator = None
 
-        if data_source_id is not None:
-            self.data_source_id = data_source_id
-        if data_point_name is not None:
-            self.data_point_name = data_point_name
-        if data_point_id is not None:
-            self.data_point_id = data_point_id
-        self.instance_name = instance_name
-        if data_source_full_name is not None:
-            self.data_source_full_name = data_source_full_name
-        self.name = name
         if aggregate_function is not None:
             self.aggregate_function = aggregate_function
-        self.device_group_full_path = device_group_full_path
+        if data_point_id is not None:
+            self.data_point_id = data_point_id
+        if data_point_name is not None:
+            self.data_point_name = data_point_name
+        if data_source_full_name is not None:
+            self.data_source_full_name = data_source_full_name
+        if data_source_id is not None:
+            self.data_source_id = data_source_id
         self.device_display_name = device_display_name
+        self.device_group_full_path = device_group_full_path
+        self.instance_name = instance_name
+        self.name = name
 
     @property
-    def data_source_id(self):
-        """Gets the data_source_id of this BigNumberDataPoint.  # noqa: E501
+    def aggregate_function(self):
+        """Gets the aggregate_function of this BigNumberDataPoint.  # noqa: E501
 
 
-        :return: The data_source_id of this BigNumberDataPoint.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_source_id
-
-    @data_source_id.setter
-    def data_source_id(self, data_source_id):
-        """Sets the data_source_id of this BigNumberDataPoint.
-
-
-        :param data_source_id: The data_source_id of this BigNumberDataPoint.  # noqa: E501
-        :type: int
-        """
-
-        self._data_source_id = data_source_id
-
-    @property
-    def data_point_name(self):
-        """Gets the data_point_name of this BigNumberDataPoint.  # noqa: E501
-
-
-        :return: The data_point_name of this BigNumberDataPoint.  # noqa: E501
+        :return: The aggregate_function of this BigNumberDataPoint.  # noqa: E501
         :rtype: str
         """
-        return self._data_point_name
+        return self._aggregate_function
 
-    @data_point_name.setter
-    def data_point_name(self, data_point_name):
-        """Sets the data_point_name of this BigNumberDataPoint.
+    @aggregate_function.setter
+    def aggregate_function(self, aggregate_function):
+        """Sets the aggregate_function of this BigNumberDataPoint.
 
 
-        :param data_point_name: The data_point_name of this BigNumberDataPoint.  # noqa: E501
+        :param aggregate_function: The aggregate_function of this BigNumberDataPoint.  # noqa: E501
         :type: str
         """
 
-        self._data_point_name = data_point_name
+        self._aggregate_function = aggregate_function
 
     @property
     def data_point_id(self):
@@ -147,27 +126,25 @@ class BigNumberDataPoint(object):
         self._data_point_id = data_point_id
 
     @property
-    def instance_name(self):
-        """Gets the instance_name of this BigNumberDataPoint.  # noqa: E501
+    def data_point_name(self):
+        """Gets the data_point_name of this BigNumberDataPoint.  # noqa: E501
 
 
-        :return: The instance_name of this BigNumberDataPoint.  # noqa: E501
+        :return: The data_point_name of this BigNumberDataPoint.  # noqa: E501
         :rtype: str
         """
-        return self._instance_name
+        return self._data_point_name
 
-    @instance_name.setter
-    def instance_name(self, instance_name):
-        """Sets the instance_name of this BigNumberDataPoint.
+    @data_point_name.setter
+    def data_point_name(self, data_point_name):
+        """Sets the data_point_name of this BigNumberDataPoint.
 
 
-        :param instance_name: The instance_name of this BigNumberDataPoint.  # noqa: E501
+        :param data_point_name: The data_point_name of this BigNumberDataPoint.  # noqa: E501
         :type: str
         """
-        if instance_name is None:
-            raise ValueError("Invalid value for `instance_name`, must not be `None`")  # noqa: E501
 
-        self._instance_name = instance_name
+        self._data_point_name = data_point_name
 
     @property
     def data_source_full_name(self):
@@ -191,48 +168,48 @@ class BigNumberDataPoint(object):
         self._data_source_full_name = data_source_full_name
 
     @property
-    def name(self):
-        """Gets the name of this BigNumberDataPoint.  # noqa: E501
+    def data_source_id(self):
+        """Gets the data_source_id of this BigNumberDataPoint.  # noqa: E501
 
 
-        :return: The name of this BigNumberDataPoint.  # noqa: E501
-        :rtype: str
+        :return: The data_source_id of this BigNumberDataPoint.  # noqa: E501
+        :rtype: int
         """
-        return self._name
+        return self._data_source_id
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this BigNumberDataPoint.
+    @data_source_id.setter
+    def data_source_id(self, data_source_id):
+        """Sets the data_source_id of this BigNumberDataPoint.
 
 
-        :param name: The name of this BigNumberDataPoint.  # noqa: E501
-        :type: str
+        :param data_source_id: The data_source_id of this BigNumberDataPoint.  # noqa: E501
+        :type: int
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
-        self._name = name
+        self._data_source_id = data_source_id
 
     @property
-    def aggregate_function(self):
-        """Gets the aggregate_function of this BigNumberDataPoint.  # noqa: E501
+    def device_display_name(self):
+        """Gets the device_display_name of this BigNumberDataPoint.  # noqa: E501
 
 
-        :return: The aggregate_function of this BigNumberDataPoint.  # noqa: E501
+        :return: The device_display_name of this BigNumberDataPoint.  # noqa: E501
         :rtype: str
         """
-        return self._aggregate_function
+        return self._device_display_name
 
-    @aggregate_function.setter
-    def aggregate_function(self, aggregate_function):
-        """Sets the aggregate_function of this BigNumberDataPoint.
+    @device_display_name.setter
+    def device_display_name(self, device_display_name):
+        """Sets the device_display_name of this BigNumberDataPoint.
 
 
-        :param aggregate_function: The aggregate_function of this BigNumberDataPoint.  # noqa: E501
+        :param device_display_name: The device_display_name of this BigNumberDataPoint.  # noqa: E501
         :type: str
         """
+        if device_display_name is None:
+            raise ValueError("Invalid value for `device_display_name`, must not be `None`")  # noqa: E501
 
-        self._aggregate_function = aggregate_function
+        self._device_display_name = device_display_name
 
     @property
     def device_group_full_path(self):
@@ -258,27 +235,50 @@ class BigNumberDataPoint(object):
         self._device_group_full_path = device_group_full_path
 
     @property
-    def device_display_name(self):
-        """Gets the device_display_name of this BigNumberDataPoint.  # noqa: E501
+    def instance_name(self):
+        """Gets the instance_name of this BigNumberDataPoint.  # noqa: E501
 
 
-        :return: The device_display_name of this BigNumberDataPoint.  # noqa: E501
+        :return: The instance_name of this BigNumberDataPoint.  # noqa: E501
         :rtype: str
         """
-        return self._device_display_name
+        return self._instance_name
 
-    @device_display_name.setter
-    def device_display_name(self, device_display_name):
-        """Sets the device_display_name of this BigNumberDataPoint.
+    @instance_name.setter
+    def instance_name(self, instance_name):
+        """Sets the instance_name of this BigNumberDataPoint.
 
 
-        :param device_display_name: The device_display_name of this BigNumberDataPoint.  # noqa: E501
+        :param instance_name: The instance_name of this BigNumberDataPoint.  # noqa: E501
         :type: str
         """
-        if device_display_name is None:
-            raise ValueError("Invalid value for `device_display_name`, must not be `None`")  # noqa: E501
+        if instance_name is None:
+            raise ValueError("Invalid value for `instance_name`, must not be `None`")  # noqa: E501
 
-        self._device_display_name = device_display_name
+        self._instance_name = instance_name
+
+    @property
+    def name(self):
+        """Gets the name of this BigNumberDataPoint.  # noqa: E501
+
+
+        :return: The name of this BigNumberDataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this BigNumberDataPoint.
+
+
+        :param name: The name of this BigNumberDataPoint.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

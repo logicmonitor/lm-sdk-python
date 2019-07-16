@@ -35,30 +35,30 @@ class CIMAutoDiscoveryMethod(AutoDiscoveryMethod):
     swagger_types = {
         'name': 'str',
         'cim_class': 'str',
-        '_property': 'str',
-        'namespace': 'str'
+        'namespace': 'str',
+        '_property': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'cim_class': 'cimClass',
-        '_property': 'property',
-        'namespace': 'namespace'
+        'namespace': 'namespace',
+        '_property': 'property'
     }
 
-    def __init__(self, name=None, cim_class=None, _property=None, namespace=None):  # noqa: E501
+    def __init__(self, name=None, cim_class=None, namespace=None, _property=None):  # noqa: E501
         """CIMAutoDiscoveryMethod - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
         self._cim_class = None
-        self.__property = None
         self._namespace = None
+        self.__property = None
         self.discriminator = None
 
         self.name = name
         self.cim_class = cim_class
-        self._property = _property
         self.namespace = namespace
+        self._property = _property
 
     @property
     def name(self):
@@ -107,29 +107,6 @@ class CIMAutoDiscoveryMethod(AutoDiscoveryMethod):
         self._cim_class = cim_class
 
     @property
-    def _property(self):
-        """Gets the _property of this CIMAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The _property of this CIMAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self.__property
-
-    @_property.setter
-    def _property(self, _property):
-        """Sets the _property of this CIMAutoDiscoveryMethod.
-
-
-        :param _property: The _property of this CIMAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-        if _property is None:
-            raise ValueError("Invalid value for `_property`, must not be `None`")  # noqa: E501
-
-        self.__property = _property
-
-    @property
     def namespace(self):
         """Gets the namespace of this CIMAutoDiscoveryMethod.  # noqa: E501
 
@@ -151,6 +128,29 @@ class CIMAutoDiscoveryMethod(AutoDiscoveryMethod):
             raise ValueError("Invalid value for `namespace`, must not be `None`")  # noqa: E501
 
         self._namespace = namespace
+
+    @property
+    def _property(self):
+        """Gets the _property of this CIMAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The _property of this CIMAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self.__property
+
+    @_property.setter
+    def _property(self, _property):
+        """Sets the _property of this CIMAutoDiscoveryMethod.
+
+
+        :param _property: The _property of this CIMAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+        if _property is None:
+            raise ValueError("Invalid value for `_property`, must not be `None`")  # noqa: E501
+
+        self.__property = _property
 
     def to_dict(self):
         """Returns the model properties as a dict"""

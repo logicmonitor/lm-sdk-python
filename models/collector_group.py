@@ -33,50 +33,73 @@ class CollectorGroup(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'custom_properties': 'list[NameAndValue]',
-        'user_permission': 'str',
-        'num_of_collectors': 'int',
-        'name': 'str',
-        'description': 'str',
         'create_on': 'int',
-        'id': 'int'
+        'custom_properties': 'list[NameAndValue]',
+        'description': 'str',
+        'id': 'int',
+        'name': 'str',
+        'num_of_collectors': 'int',
+        'user_permission': 'str'
     }
 
     attribute_map = {
-        'custom_properties': 'customProperties',
-        'user_permission': 'userPermission',
-        'num_of_collectors': 'numOfCollectors',
-        'name': 'name',
-        'description': 'description',
         'create_on': 'createOn',
-        'id': 'id'
+        'custom_properties': 'customProperties',
+        'description': 'description',
+        'id': 'id',
+        'name': 'name',
+        'num_of_collectors': 'numOfCollectors',
+        'user_permission': 'userPermission'
     }
 
-    def __init__(self, custom_properties=None, user_permission=None, num_of_collectors=None, name=None, description=None, create_on=None, id=None):  # noqa: E501
+    def __init__(self, create_on=None, custom_properties=None, description=None, id=None, name=None, num_of_collectors=None, user_permission=None):  # noqa: E501
         """CollectorGroup - a model defined in Swagger"""  # noqa: E501
 
-        self._custom_properties = None
-        self._user_permission = None
-        self._num_of_collectors = None
-        self._name = None
-        self._description = None
         self._create_on = None
+        self._custom_properties = None
+        self._description = None
         self._id = None
+        self._name = None
+        self._num_of_collectors = None
+        self._user_permission = None
         self.discriminator = None
 
-        if custom_properties is not None:
-            self.custom_properties = custom_properties
-        if user_permission is not None:
-            self.user_permission = user_permission
-        if num_of_collectors is not None:
-            self.num_of_collectors = num_of_collectors
-        self.name = name
-        if description is not None:
-            self.description = description
         if create_on is not None:
             self.create_on = create_on
+        if custom_properties is not None:
+            self.custom_properties = custom_properties
+        if description is not None:
+            self.description = description
         if id is not None:
             self.id = id
+        self.name = name
+        if num_of_collectors is not None:
+            self.num_of_collectors = num_of_collectors
+        if user_permission is not None:
+            self.user_permission = user_permission
+
+    @property
+    def create_on(self):
+        """Gets the create_on of this CollectorGroup.  # noqa: E501
+
+        The time at which the group was created, in epoch format  # noqa: E501
+
+        :return: The create_on of this CollectorGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._create_on
+
+    @create_on.setter
+    def create_on(self, create_on):
+        """Sets the create_on of this CollectorGroup.
+
+        The time at which the group was created, in epoch format  # noqa: E501
+
+        :param create_on: The create_on of this CollectorGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._create_on = create_on
 
     @property
     def custom_properties(self):
@@ -102,50 +125,50 @@ class CollectorGroup(object):
         self._custom_properties = custom_properties
 
     @property
-    def user_permission(self):
-        """Gets the user_permission of this CollectorGroup.  # noqa: E501
+    def description(self):
+        """Gets the description of this CollectorGroup.  # noqa: E501
 
-        The permission level of the user that made the API request  # noqa: E501
+        The description of the Collector Group  # noqa: E501
 
-        :return: The user_permission of this CollectorGroup.  # noqa: E501
+        :return: The description of this CollectorGroup.  # noqa: E501
         :rtype: str
         """
-        return self._user_permission
+        return self._description
 
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this CollectorGroup.
+    @description.setter
+    def description(self, description):
+        """Sets the description of this CollectorGroup.
 
-        The permission level of the user that made the API request  # noqa: E501
+        The description of the Collector Group  # noqa: E501
 
-        :param user_permission: The user_permission of this CollectorGroup.  # noqa: E501
+        :param description: The description of this CollectorGroup.  # noqa: E501
         :type: str
         """
 
-        self._user_permission = user_permission
+        self._description = description
 
     @property
-    def num_of_collectors(self):
-        """Gets the num_of_collectors of this CollectorGroup.  # noqa: E501
+    def id(self):
+        """Gets the id of this CollectorGroup.  # noqa: E501
 
-        The number of Collectors that belong to the group  # noqa: E501
+        The id of the Collector Group  # noqa: E501
 
-        :return: The num_of_collectors of this CollectorGroup.  # noqa: E501
+        :return: The id of this CollectorGroup.  # noqa: E501
         :rtype: int
         """
-        return self._num_of_collectors
+        return self._id
 
-    @num_of_collectors.setter
-    def num_of_collectors(self, num_of_collectors):
-        """Sets the num_of_collectors of this CollectorGroup.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this CollectorGroup.
 
-        The number of Collectors that belong to the group  # noqa: E501
+        The id of the Collector Group  # noqa: E501
 
-        :param num_of_collectors: The num_of_collectors of this CollectorGroup.  # noqa: E501
+        :param id: The id of this CollectorGroup.  # noqa: E501
         :type: int
         """
 
-        self._num_of_collectors = num_of_collectors
+        self._id = id
 
     @property
     def name(self):
@@ -173,73 +196,50 @@ class CollectorGroup(object):
         self._name = name
 
     @property
-    def description(self):
-        """Gets the description of this CollectorGroup.  # noqa: E501
+    def num_of_collectors(self):
+        """Gets the num_of_collectors of this CollectorGroup.  # noqa: E501
 
-        The description of the Collector Group  # noqa: E501
+        The number of Collectors that belong to the group  # noqa: E501
 
-        :return: The description of this CollectorGroup.  # noqa: E501
+        :return: The num_of_collectors of this CollectorGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._num_of_collectors
+
+    @num_of_collectors.setter
+    def num_of_collectors(self, num_of_collectors):
+        """Sets the num_of_collectors of this CollectorGroup.
+
+        The number of Collectors that belong to the group  # noqa: E501
+
+        :param num_of_collectors: The num_of_collectors of this CollectorGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._num_of_collectors = num_of_collectors
+
+    @property
+    def user_permission(self):
+        """Gets the user_permission of this CollectorGroup.  # noqa: E501
+
+        The permission level of the user that made the API request  # noqa: E501
+
+        :return: The user_permission of this CollectorGroup.  # noqa: E501
         :rtype: str
         """
-        return self._description
+        return self._user_permission
 
-    @description.setter
-    def description(self, description):
-        """Sets the description of this CollectorGroup.
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this CollectorGroup.
 
-        The description of the Collector Group  # noqa: E501
+        The permission level of the user that made the API request  # noqa: E501
 
-        :param description: The description of this CollectorGroup.  # noqa: E501
+        :param user_permission: The user_permission of this CollectorGroup.  # noqa: E501
         :type: str
         """
 
-        self._description = description
-
-    @property
-    def create_on(self):
-        """Gets the create_on of this CollectorGroup.  # noqa: E501
-
-        The time at which the group was created, in epoch format  # noqa: E501
-
-        :return: The create_on of this CollectorGroup.  # noqa: E501
-        :rtype: int
-        """
-        return self._create_on
-
-    @create_on.setter
-    def create_on(self, create_on):
-        """Sets the create_on of this CollectorGroup.
-
-        The time at which the group was created, in epoch format  # noqa: E501
-
-        :param create_on: The create_on of this CollectorGroup.  # noqa: E501
-        :type: int
-        """
-
-        self._create_on = create_on
-
-    @property
-    def id(self):
-        """Gets the id of this CollectorGroup.  # noqa: E501
-
-        The id of the Collector Group  # noqa: E501
-
-        :return: The id of this CollectorGroup.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this CollectorGroup.
-
-        The id of the Collector Group  # noqa: E501
-
-        :param id: The id of this CollectorGroup.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
+        self._user_permission = user_permission
 
     def to_dict(self):
         """Returns the model properties as a dict"""

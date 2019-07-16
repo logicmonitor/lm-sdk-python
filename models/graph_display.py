@@ -33,34 +33,34 @@ class GraphDisplay(object):
     swagger_types = {
         'color': 'str',
         'legend': 'str',
-        'type': 'str',
-        'option': 'str'
+        'option': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
         'color': 'color',
         'legend': 'legend',
-        'type': 'type',
-        'option': 'option'
+        'option': 'option',
+        'type': 'type'
     }
 
-    def __init__(self, color=None, legend=None, type=None, option=None):  # noqa: E501
+    def __init__(self, color=None, legend=None, option=None, type=None):  # noqa: E501
         """GraphDisplay - a model defined in Swagger"""  # noqa: E501
 
         self._color = None
         self._legend = None
-        self._type = None
         self._option = None
+        self._type = None
         self.discriminator = None
 
         if color is not None:
             self.color = color
         if legend is not None:
             self.legend = legend
-        if type is not None:
-            self.type = type
         if option is not None:
             self.option = option
+        if type is not None:
+            self.type = type
 
     @property
     def color(self):
@@ -105,27 +105,6 @@ class GraphDisplay(object):
         self._legend = legend
 
     @property
-    def type(self):
-        """Gets the type of this GraphDisplay.  # noqa: E501
-
-
-        :return: The type of this GraphDisplay.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this GraphDisplay.
-
-
-        :param type: The type of this GraphDisplay.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
-
-    @property
     def option(self):
         """Gets the option of this GraphDisplay.  # noqa: E501
 
@@ -145,6 +124,27 @@ class GraphDisplay(object):
         """
 
         self._option = option
+
+    @property
+    def type(self):
+        """Gets the type of this GraphDisplay.  # noqa: E501
+
+
+        :return: The type of this GraphDisplay.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this GraphDisplay.
+
+
+        :param type: The type of this GraphDisplay.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

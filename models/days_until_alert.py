@@ -31,57 +31,36 @@ class DaysUntilAlert(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'severity': 'str',
         'forecast_day': 'int',
         'forecast_period_in_days': 'int',
-        'is_waiting_forecast_results': 'bool'
+        'is_waiting_forecast_results': 'bool',
+        'severity': 'str'
     }
 
     attribute_map = {
-        'severity': 'severity',
         'forecast_day': 'forecastDay',
         'forecast_period_in_days': 'forecastPeriodInDays',
-        'is_waiting_forecast_results': 'isWaitingForecastResults'
+        'is_waiting_forecast_results': 'isWaitingForecastResults',
+        'severity': 'severity'
     }
 
-    def __init__(self, severity=None, forecast_day=None, forecast_period_in_days=None, is_waiting_forecast_results=None):  # noqa: E501
+    def __init__(self, forecast_day=None, forecast_period_in_days=None, is_waiting_forecast_results=None, severity=None):  # noqa: E501
         """DaysUntilAlert - a model defined in Swagger"""  # noqa: E501
 
-        self._severity = None
         self._forecast_day = None
         self._forecast_period_in_days = None
         self._is_waiting_forecast_results = None
+        self._severity = None
         self.discriminator = None
 
-        if severity is not None:
-            self.severity = severity
         if forecast_day is not None:
             self.forecast_day = forecast_day
         if forecast_period_in_days is not None:
             self.forecast_period_in_days = forecast_period_in_days
         if is_waiting_forecast_results is not None:
             self.is_waiting_forecast_results = is_waiting_forecast_results
-
-    @property
-    def severity(self):
-        """Gets the severity of this DaysUntilAlert.  # noqa: E501
-
-
-        :return: The severity of this DaysUntilAlert.  # noqa: E501
-        :rtype: str
-        """
-        return self._severity
-
-    @severity.setter
-    def severity(self, severity):
-        """Sets the severity of this DaysUntilAlert.
-
-
-        :param severity: The severity of this DaysUntilAlert.  # noqa: E501
-        :type: str
-        """
-
-        self._severity = severity
+        if severity is not None:
+            self.severity = severity
 
     @property
     def forecast_day(self):
@@ -145,6 +124,27 @@ class DaysUntilAlert(object):
         """
 
         self._is_waiting_forecast_results = is_waiting_forecast_results
+
+    @property
+    def severity(self):
+        """Gets the severity of this DaysUntilAlert.  # noqa: E501
+
+
+        :return: The severity of this DaysUntilAlert.  # noqa: E501
+        :rtype: str
+        """
+        return self._severity
+
+    @severity.setter
+    def severity(self, severity):
+        """Sets the severity of this DaysUntilAlert.
+
+
+        :param severity: The severity of this DaysUntilAlert.  # noqa: E501
+        :type: str
+        """
+
+        self._severity = severity
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,120 +31,51 @@ class CollectorVersion(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'stable': 'bool',
-        'release_epoch': 'int',
-        'has32bit_windows': 'bool',
         'has32bit_linux': 'bool',
+        'has32bit_windows': 'bool',
         'major_version': 'int',
+        'mandatory': 'bool',
         'minor_version': 'int',
-        'mandatory': 'bool'
+        'release_epoch': 'int',
+        'stable': 'bool'
     }
 
     attribute_map = {
-        'stable': 'stable',
-        'release_epoch': 'releaseEpoch',
-        'has32bit_windows': 'has32bitWindows',
         'has32bit_linux': 'has32bitLinux',
+        'has32bit_windows': 'has32bitWindows',
         'major_version': 'majorVersion',
+        'mandatory': 'mandatory',
         'minor_version': 'minorVersion',
-        'mandatory': 'mandatory'
+        'release_epoch': 'releaseEpoch',
+        'stable': 'stable'
     }
 
-    def __init__(self, stable=None, release_epoch=None, has32bit_windows=None, has32bit_linux=None, major_version=None, minor_version=None, mandatory=None):  # noqa: E501
+    def __init__(self, has32bit_linux=None, has32bit_windows=None, major_version=None, mandatory=None, minor_version=None, release_epoch=None, stable=None):  # noqa: E501
         """CollectorVersion - a model defined in Swagger"""  # noqa: E501
 
-        self._stable = None
-        self._release_epoch = None
-        self._has32bit_windows = None
         self._has32bit_linux = None
+        self._has32bit_windows = None
         self._major_version = None
-        self._minor_version = None
         self._mandatory = None
+        self._minor_version = None
+        self._release_epoch = None
+        self._stable = None
         self.discriminator = None
 
-        if stable is not None:
-            self.stable = stable
-        if release_epoch is not None:
-            self.release_epoch = release_epoch
-        if has32bit_windows is not None:
-            self.has32bit_windows = has32bit_windows
         if has32bit_linux is not None:
             self.has32bit_linux = has32bit_linux
+        if has32bit_windows is not None:
+            self.has32bit_windows = has32bit_windows
         if major_version is not None:
             self.major_version = major_version
-        if minor_version is not None:
-            self.minor_version = minor_version
         if mandatory is not None:
             self.mandatory = mandatory
-
-    @property
-    def stable(self):
-        """Gets the stable of this CollectorVersion.  # noqa: E501
-
-        False for early release. True for general release  # noqa: E501
-
-        :return: The stable of this CollectorVersion.  # noqa: E501
-        :rtype: bool
-        """
-        return self._stable
-
-    @stable.setter
-    def stable(self, stable):
-        """Sets the stable of this CollectorVersion.
-
-        False for early release. True for general release  # noqa: E501
-
-        :param stable: The stable of this CollectorVersion.  # noqa: E501
-        :type: bool
-        """
-
-        self._stable = stable
-
-    @property
-    def release_epoch(self):
-        """Gets the release_epoch of this CollectorVersion.  # noqa: E501
-
-        Release Epoch for official releases  # noqa: E501
-
-        :return: The release_epoch of this CollectorVersion.  # noqa: E501
-        :rtype: int
-        """
-        return self._release_epoch
-
-    @release_epoch.setter
-    def release_epoch(self, release_epoch):
-        """Sets the release_epoch of this CollectorVersion.
-
-        Release Epoch for official releases  # noqa: E501
-
-        :param release_epoch: The release_epoch of this CollectorVersion.  # noqa: E501
-        :type: int
-        """
-
-        self._release_epoch = release_epoch
-
-    @property
-    def has32bit_windows(self):
-        """Gets the has32bit_windows of this CollectorVersion.  # noqa: E501
-
-        True if Windows collector available  # noqa: E501
-
-        :return: The has32bit_windows of this CollectorVersion.  # noqa: E501
-        :rtype: bool
-        """
-        return self._has32bit_windows
-
-    @has32bit_windows.setter
-    def has32bit_windows(self, has32bit_windows):
-        """Sets the has32bit_windows of this CollectorVersion.
-
-        True if Windows collector available  # noqa: E501
-
-        :param has32bit_windows: The has32bit_windows of this CollectorVersion.  # noqa: E501
-        :type: bool
-        """
-
-        self._has32bit_windows = has32bit_windows
+        if minor_version is not None:
+            self.minor_version = minor_version
+        if release_epoch is not None:
+            self.release_epoch = release_epoch
+        if stable is not None:
+            self.stable = stable
 
     @property
     def has32bit_linux(self):
@@ -170,6 +101,29 @@ class CollectorVersion(object):
         self._has32bit_linux = has32bit_linux
 
     @property
+    def has32bit_windows(self):
+        """Gets the has32bit_windows of this CollectorVersion.  # noqa: E501
+
+        True if Windows collector available  # noqa: E501
+
+        :return: The has32bit_windows of this CollectorVersion.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has32bit_windows
+
+    @has32bit_windows.setter
+    def has32bit_windows(self, has32bit_windows):
+        """Sets the has32bit_windows of this CollectorVersion.
+
+        True if Windows collector available  # noqa: E501
+
+        :param has32bit_windows: The has32bit_windows of this CollectorVersion.  # noqa: E501
+        :type: bool
+        """
+
+        self._has32bit_windows = has32bit_windows
+
+    @property
     def major_version(self):
         """Gets the major_version of this CollectorVersion.  # noqa: E501
 
@@ -191,6 +145,29 @@ class CollectorVersion(object):
         """
 
         self._major_version = major_version
+
+    @property
+    def mandatory(self):
+        """Gets the mandatory of this CollectorVersion.  # noqa: E501
+
+        True if collector is a required release  # noqa: E501
+
+        :return: The mandatory of this CollectorVersion.  # noqa: E501
+        :rtype: bool
+        """
+        return self._mandatory
+
+    @mandatory.setter
+    def mandatory(self, mandatory):
+        """Sets the mandatory of this CollectorVersion.
+
+        True if collector is a required release  # noqa: E501
+
+        :param mandatory: The mandatory of this CollectorVersion.  # noqa: E501
+        :type: bool
+        """
+
+        self._mandatory = mandatory
 
     @property
     def minor_version(self):
@@ -216,27 +193,50 @@ class CollectorVersion(object):
         self._minor_version = minor_version
 
     @property
-    def mandatory(self):
-        """Gets the mandatory of this CollectorVersion.  # noqa: E501
+    def release_epoch(self):
+        """Gets the release_epoch of this CollectorVersion.  # noqa: E501
 
-        True if collector is a required release  # noqa: E501
+        Release Epoch for official releases  # noqa: E501
 
-        :return: The mandatory of this CollectorVersion.  # noqa: E501
+        :return: The release_epoch of this CollectorVersion.  # noqa: E501
+        :rtype: int
+        """
+        return self._release_epoch
+
+    @release_epoch.setter
+    def release_epoch(self, release_epoch):
+        """Sets the release_epoch of this CollectorVersion.
+
+        Release Epoch for official releases  # noqa: E501
+
+        :param release_epoch: The release_epoch of this CollectorVersion.  # noqa: E501
+        :type: int
+        """
+
+        self._release_epoch = release_epoch
+
+    @property
+    def stable(self):
+        """Gets the stable of this CollectorVersion.  # noqa: E501
+
+        False for early release. True for general release  # noqa: E501
+
+        :return: The stable of this CollectorVersion.  # noqa: E501
         :rtype: bool
         """
-        return self._mandatory
+        return self._stable
 
-    @mandatory.setter
-    def mandatory(self, mandatory):
-        """Sets the mandatory of this CollectorVersion.
+    @stable.setter
+    def stable(self, stable):
+        """Sets the stable of this CollectorVersion.
 
-        True if collector is a required release  # noqa: E501
+        False for early release. True for general release  # noqa: E501
 
-        :param mandatory: The mandatory of this CollectorVersion.  # noqa: E501
+        :param stable: The stable of this CollectorVersion.  # noqa: E501
         :type: bool
         """
 
-        self._mandatory = mandatory
+        self._stable = stable
 
     def to_dict(self):
         """Returns the model properties as a dict"""

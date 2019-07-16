@@ -36,129 +36,60 @@ class PieChartInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'max_slices_can_be_shown': 'int',
-        'virtual_data_points': 'list[VirtualDataPoint]',
-        'show_labels_and_lines_on_pc': 'bool',
         'counters': 'list[Counter]',
         'data_points': 'list[PieChartDataPoint]',
-        'hide_zero_percent_slices': 'bool',
         'group_remaining_as_others': 'bool',
+        'hide_zero_percent_slices': 'bool',
+        'max_slices_can_be_shown': 'int',
         'pie_chart_items': 'list[PieChartItem]',
-        'title': 'str'
+        'show_labels_and_lines_on_pc': 'bool',
+        'title': 'str',
+        'virtual_data_points': 'list[VirtualDataPoint]'
     }
 
     attribute_map = {
-        'max_slices_can_be_shown': 'maxSlicesCanBeShown',
-        'virtual_data_points': 'virtualDataPoints',
-        'show_labels_and_lines_on_pc': 'showLabelsAndLinesOnPC',
         'counters': 'counters',
         'data_points': 'dataPoints',
-        'hide_zero_percent_slices': 'hideZeroPercentSlices',
         'group_remaining_as_others': 'groupRemainingAsOthers',
+        'hide_zero_percent_slices': 'hideZeroPercentSlices',
+        'max_slices_can_be_shown': 'maxSlicesCanBeShown',
         'pie_chart_items': 'pieChartItems',
-        'title': 'title'
+        'show_labels_and_lines_on_pc': 'showLabelsAndLinesOnPC',
+        'title': 'title',
+        'virtual_data_points': 'virtualDataPoints'
     }
 
-    def __init__(self, max_slices_can_be_shown=None, virtual_data_points=None, show_labels_and_lines_on_pc=None, counters=None, data_points=None, hide_zero_percent_slices=None, group_remaining_as_others=None, pie_chart_items=None, title=None):  # noqa: E501
+    def __init__(self, counters=None, data_points=None, group_remaining_as_others=None, hide_zero_percent_slices=None, max_slices_can_be_shown=None, pie_chart_items=None, show_labels_and_lines_on_pc=None, title=None, virtual_data_points=None):  # noqa: E501
         """PieChartInfo - a model defined in Swagger"""  # noqa: E501
 
-        self._max_slices_can_be_shown = None
-        self._virtual_data_points = None
-        self._show_labels_and_lines_on_pc = None
         self._counters = None
         self._data_points = None
-        self._hide_zero_percent_slices = None
         self._group_remaining_as_others = None
+        self._hide_zero_percent_slices = None
+        self._max_slices_can_be_shown = None
         self._pie_chart_items = None
+        self._show_labels_and_lines_on_pc = None
         self._title = None
+        self._virtual_data_points = None
         self.discriminator = None
 
-        if max_slices_can_be_shown is not None:
-            self.max_slices_can_be_shown = max_slices_can_be_shown
-        if virtual_data_points is not None:
-            self.virtual_data_points = virtual_data_points
-        if show_labels_and_lines_on_pc is not None:
-            self.show_labels_and_lines_on_pc = show_labels_and_lines_on_pc
         if counters is not None:
             self.counters = counters
         if data_points is not None:
             self.data_points = data_points
-        if hide_zero_percent_slices is not None:
-            self.hide_zero_percent_slices = hide_zero_percent_slices
         if group_remaining_as_others is not None:
             self.group_remaining_as_others = group_remaining_as_others
+        if hide_zero_percent_slices is not None:
+            self.hide_zero_percent_slices = hide_zero_percent_slices
+        if max_slices_can_be_shown is not None:
+            self.max_slices_can_be_shown = max_slices_can_be_shown
         self.pie_chart_items = pie_chart_items
+        if show_labels_and_lines_on_pc is not None:
+            self.show_labels_and_lines_on_pc = show_labels_and_lines_on_pc
         if title is not None:
             self.title = title
-
-    @property
-    def max_slices_can_be_shown(self):
-        """Gets the max_slices_can_be_shown of this PieChartInfo.  # noqa: E501
-
-        The maximum number of slices you'd like displayed in the pie chart  # noqa: E501
-
-        :return: The max_slices_can_be_shown of this PieChartInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._max_slices_can_be_shown
-
-    @max_slices_can_be_shown.setter
-    def max_slices_can_be_shown(self, max_slices_can_be_shown):
-        """Sets the max_slices_can_be_shown of this PieChartInfo.
-
-        The maximum number of slices you'd like displayed in the pie chart  # noqa: E501
-
-        :param max_slices_can_be_shown: The max_slices_can_be_shown of this PieChartInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._max_slices_can_be_shown = max_slices_can_be_shown
-
-    @property
-    def virtual_data_points(self):
-        """Gets the virtual_data_points of this PieChartInfo.  # noqa: E501
-
-        The virtual datapoints added to the widget. Note that virtual datapoints must be included in the pieChartItems object to be displayed in the widget  # noqa: E501
-
-        :return: The virtual_data_points of this PieChartInfo.  # noqa: E501
-        :rtype: list[VirtualDataPoint]
-        """
-        return self._virtual_data_points
-
-    @virtual_data_points.setter
-    def virtual_data_points(self, virtual_data_points):
-        """Sets the virtual_data_points of this PieChartInfo.
-
-        The virtual datapoints added to the widget. Note that virtual datapoints must be included in the pieChartItems object to be displayed in the widget  # noqa: E501
-
-        :param virtual_data_points: The virtual_data_points of this PieChartInfo.  # noqa: E501
-        :type: list[VirtualDataPoint]
-        """
-
-        self._virtual_data_points = virtual_data_points
-
-    @property
-    def show_labels_and_lines_on_pc(self):
-        """Gets the show_labels_and_lines_on_pc of this PieChartInfo.  # noqa: E501
-
-        Whether or not labels and lines should be displayed on the pie chart  # noqa: E501
-
-        :return: The show_labels_and_lines_on_pc of this PieChartInfo.  # noqa: E501
-        :rtype: bool
-        """
-        return self._show_labels_and_lines_on_pc
-
-    @show_labels_and_lines_on_pc.setter
-    def show_labels_and_lines_on_pc(self, show_labels_and_lines_on_pc):
-        """Sets the show_labels_and_lines_on_pc of this PieChartInfo.
-
-        Whether or not labels and lines should be displayed on the pie chart  # noqa: E501
-
-        :param show_labels_and_lines_on_pc: The show_labels_and_lines_on_pc of this PieChartInfo.  # noqa: E501
-        :type: bool
-        """
-
-        self._show_labels_and_lines_on_pc = show_labels_and_lines_on_pc
+        if virtual_data_points is not None:
+            self.virtual_data_points = virtual_data_points
 
     @property
     def counters(self):
@@ -207,6 +138,29 @@ class PieChartInfo(object):
         self._data_points = data_points
 
     @property
+    def group_remaining_as_others(self):
+        """Gets the group_remaining_as_others of this PieChartInfo.  # noqa: E501
+
+        If the number of slices exceeds the maxSlicesCanBeShown, this value indicates whether the remaining slices should be grouped together  # noqa: E501
+
+        :return: The group_remaining_as_others of this PieChartInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._group_remaining_as_others
+
+    @group_remaining_as_others.setter
+    def group_remaining_as_others(self, group_remaining_as_others):
+        """Sets the group_remaining_as_others of this PieChartInfo.
+
+        If the number of slices exceeds the maxSlicesCanBeShown, this value indicates whether the remaining slices should be grouped together  # noqa: E501
+
+        :param group_remaining_as_others: The group_remaining_as_others of this PieChartInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._group_remaining_as_others = group_remaining_as_others
+
+    @property
     def hide_zero_percent_slices(self):
         """Gets the hide_zero_percent_slices of this PieChartInfo.  # noqa: E501
 
@@ -230,27 +184,27 @@ class PieChartInfo(object):
         self._hide_zero_percent_slices = hide_zero_percent_slices
 
     @property
-    def group_remaining_as_others(self):
-        """Gets the group_remaining_as_others of this PieChartInfo.  # noqa: E501
+    def max_slices_can_be_shown(self):
+        """Gets the max_slices_can_be_shown of this PieChartInfo.  # noqa: E501
 
-        If the number of slices exceeds the maxSlicesCanBeShown, this value indicates whether the remaining slices should be grouped together  # noqa: E501
+        The maximum number of slices you'd like displayed in the pie chart  # noqa: E501
 
-        :return: The group_remaining_as_others of this PieChartInfo.  # noqa: E501
-        :rtype: bool
+        :return: The max_slices_can_be_shown of this PieChartInfo.  # noqa: E501
+        :rtype: int
         """
-        return self._group_remaining_as_others
+        return self._max_slices_can_be_shown
 
-    @group_remaining_as_others.setter
-    def group_remaining_as_others(self, group_remaining_as_others):
-        """Sets the group_remaining_as_others of this PieChartInfo.
+    @max_slices_can_be_shown.setter
+    def max_slices_can_be_shown(self, max_slices_can_be_shown):
+        """Sets the max_slices_can_be_shown of this PieChartInfo.
 
-        If the number of slices exceeds the maxSlicesCanBeShown, this value indicates whether the remaining slices should be grouped together  # noqa: E501
+        The maximum number of slices you'd like displayed in the pie chart  # noqa: E501
 
-        :param group_remaining_as_others: The group_remaining_as_others of this PieChartInfo.  # noqa: E501
-        :type: bool
+        :param max_slices_can_be_shown: The max_slices_can_be_shown of this PieChartInfo.  # noqa: E501
+        :type: int
         """
 
-        self._group_remaining_as_others = group_remaining_as_others
+        self._max_slices_can_be_shown = max_slices_can_be_shown
 
     @property
     def pie_chart_items(self):
@@ -278,6 +232,29 @@ class PieChartInfo(object):
         self._pie_chart_items = pie_chart_items
 
     @property
+    def show_labels_and_lines_on_pc(self):
+        """Gets the show_labels_and_lines_on_pc of this PieChartInfo.  # noqa: E501
+
+        Whether or not labels and lines should be displayed on the pie chart  # noqa: E501
+
+        :return: The show_labels_and_lines_on_pc of this PieChartInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._show_labels_and_lines_on_pc
+
+    @show_labels_and_lines_on_pc.setter
+    def show_labels_and_lines_on_pc(self, show_labels_and_lines_on_pc):
+        """Sets the show_labels_and_lines_on_pc of this PieChartInfo.
+
+        Whether or not labels and lines should be displayed on the pie chart  # noqa: E501
+
+        :param show_labels_and_lines_on_pc: The show_labels_and_lines_on_pc of this PieChartInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._show_labels_and_lines_on_pc = show_labels_and_lines_on_pc
+
+    @property
     def title(self):
         """Gets the title of this PieChartInfo.  # noqa: E501
 
@@ -299,6 +276,29 @@ class PieChartInfo(object):
         """
 
         self._title = title
+
+    @property
+    def virtual_data_points(self):
+        """Gets the virtual_data_points of this PieChartInfo.  # noqa: E501
+
+        The virtual datapoints added to the widget. Note that virtual datapoints must be included in the pieChartItems object to be displayed in the widget  # noqa: E501
+
+        :return: The virtual_data_points of this PieChartInfo.  # noqa: E501
+        :rtype: list[VirtualDataPoint]
+        """
+        return self._virtual_data_points
+
+    @virtual_data_points.setter
+    def virtual_data_points(self, virtual_data_points):
+        """Sets the virtual_data_points of this PieChartInfo.
+
+        The virtual datapoints added to the widget. Note that virtual datapoints must be included in the pieChartItems object to be displayed in the widget  # noqa: E501
+
+        :param virtual_data_points: The virtual_data_points of this PieChartInfo.  # noqa: E501
+        :type: list[VirtualDataPoint]
+        """
+
+        self._virtual_data_points = virtual_data_points
 
     def to_dict(self):
         """Returns the model properties as a dict"""

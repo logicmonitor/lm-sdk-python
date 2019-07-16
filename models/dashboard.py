@@ -33,80 +33,243 @@ class Dashboard(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'description': 'str',
+        'full_name': 'str',
+        'group_full_path': 'str',
+        'group_id': 'int',
+        'group_name': 'str',
+        'id': 'int',
+        'name': 'str',
         'owner': 'str',
+        'sharable': 'bool',
         'template': 'object',
         'user_permission': 'str',
-        'group_id': 'int',
-        'full_name': 'str',
-        'description': 'str',
-        'sharable': 'bool',
-        'widgets_config': 'object',
-        'group_name': 'str',
         'widget_tokens': 'list[WidgetToken]',
-        'name': 'str',
-        'id': 'int',
-        'group_full_path': 'str'
+        'widgets_config': 'object'
     }
 
     attribute_map = {
+        'description': 'description',
+        'full_name': 'fullName',
+        'group_full_path': 'groupFullPath',
+        'group_id': 'groupId',
+        'group_name': 'groupName',
+        'id': 'id',
+        'name': 'name',
         'owner': 'owner',
+        'sharable': 'sharable',
         'template': 'template',
         'user_permission': 'userPermission',
-        'group_id': 'groupId',
-        'full_name': 'fullName',
-        'description': 'description',
-        'sharable': 'sharable',
-        'widgets_config': 'widgetsConfig',
-        'group_name': 'groupName',
         'widget_tokens': 'widgetTokens',
-        'name': 'name',
-        'id': 'id',
-        'group_full_path': 'groupFullPath'
+        'widgets_config': 'widgetsConfig'
     }
 
-    def __init__(self, owner=None, template=None, user_permission=None, group_id=None, full_name=None, description=None, sharable=None, widgets_config=None, group_name=None, widget_tokens=None, name=None, id=None, group_full_path=None):  # noqa: E501
+    def __init__(self, description=None, full_name=None, group_full_path=None, group_id=None, group_name=None, id=None, name=None, owner=None, sharable=None, template=None, user_permission=None, widget_tokens=None, widgets_config=None):  # noqa: E501
         """Dashboard - a model defined in Swagger"""  # noqa: E501
 
+        self._description = None
+        self._full_name = None
+        self._group_full_path = None
+        self._group_id = None
+        self._group_name = None
+        self._id = None
+        self._name = None
         self._owner = None
+        self._sharable = None
         self._template = None
         self._user_permission = None
-        self._group_id = None
-        self._full_name = None
-        self._description = None
-        self._sharable = None
-        self._widgets_config = None
-        self._group_name = None
         self._widget_tokens = None
-        self._name = None
-        self._id = None
-        self._group_full_path = None
+        self._widgets_config = None
         self.discriminator = None
 
+        if description is not None:
+            self.description = description
+        if full_name is not None:
+            self.full_name = full_name
+        if group_full_path is not None:
+            self.group_full_path = group_full_path
+        if group_id is not None:
+            self.group_id = group_id
+        if group_name is not None:
+            self.group_name = group_name
+        if id is not None:
+            self.id = id
+        self.name = name
         if owner is not None:
             self.owner = owner
+        if sharable is not None:
+            self.sharable = sharable
         if template is not None:
             self.template = template
         if user_permission is not None:
             self.user_permission = user_permission
-        if group_id is not None:
-            self.group_id = group_id
-        if full_name is not None:
-            self.full_name = full_name
-        if description is not None:
-            self.description = description
-        if sharable is not None:
-            self.sharable = sharable
-        if widgets_config is not None:
-            self.widgets_config = widgets_config
-        if group_name is not None:
-            self.group_name = group_name
         if widget_tokens is not None:
             self.widget_tokens = widget_tokens
-        self.name = name
-        if id is not None:
-            self.id = id
-        if group_full_path is not None:
-            self.group_full_path = group_full_path
+        if widgets_config is not None:
+            self.widgets_config = widgets_config
+
+    @property
+    def description(self):
+        """Gets the description of this Dashboard.  # noqa: E501
+
+        The description of the dashboard  # noqa: E501
+
+        :return: The description of this Dashboard.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Dashboard.
+
+        The description of the dashboard  # noqa: E501
+
+        :param description: The description of this Dashboard.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def full_name(self):
+        """Gets the full_name of this Dashboard.  # noqa: E501
+
+        Full name of the dashboard, including group path  # noqa: E501
+
+        :return: The full_name of this Dashboard.  # noqa: E501
+        :rtype: str
+        """
+        return self._full_name
+
+    @full_name.setter
+    def full_name(self, full_name):
+        """Sets the full_name of this Dashboard.
+
+        Full name of the dashboard, including group path  # noqa: E501
+
+        :param full_name: The full_name of this Dashboard.  # noqa: E501
+        :type: str
+        """
+
+        self._full_name = full_name
+
+    @property
+    def group_full_path(self):
+        """Gets the group_full_path of this Dashboard.  # noqa: E501
+
+        The full path (excluding root group) of the group the dashboard belongs to  # noqa: E501
+
+        :return: The group_full_path of this Dashboard.  # noqa: E501
+        :rtype: str
+        """
+        return self._group_full_path
+
+    @group_full_path.setter
+    def group_full_path(self, group_full_path):
+        """Sets the group_full_path of this Dashboard.
+
+        The full path (excluding root group) of the group the dashboard belongs to  # noqa: E501
+
+        :param group_full_path: The group_full_path of this Dashboard.  # noqa: E501
+        :type: str
+        """
+
+        self._group_full_path = group_full_path
+
+    @property
+    def group_id(self):
+        """Gets the group_id of this Dashboard.  # noqa: E501
+
+        The id of the group the dashboard belongs to  # noqa: E501
+
+        :return: The group_id of this Dashboard.  # noqa: E501
+        :rtype: int
+        """
+        return self._group_id
+
+    @group_id.setter
+    def group_id(self, group_id):
+        """Sets the group_id of this Dashboard.
+
+        The id of the group the dashboard belongs to  # noqa: E501
+
+        :param group_id: The group_id of this Dashboard.  # noqa: E501
+        :type: int
+        """
+
+        self._group_id = group_id
+
+    @property
+    def group_name(self):
+        """Gets the group_name of this Dashboard.  # noqa: E501
+
+        The name of group where created dashboard will reside  # noqa: E501
+
+        :return: The group_name of this Dashboard.  # noqa: E501
+        :rtype: str
+        """
+        return self._group_name
+
+    @group_name.setter
+    def group_name(self, group_name):
+        """Sets the group_name of this Dashboard.
+
+        The name of group where created dashboard will reside  # noqa: E501
+
+        :param group_name: The group_name of this Dashboard.  # noqa: E501
+        :type: str
+        """
+
+        self._group_name = group_name
+
+    @property
+    def id(self):
+        """Gets the id of this Dashboard.  # noqa: E501
+
+        The Id of the dashboard  # noqa: E501
+
+        :return: The id of this Dashboard.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Dashboard.
+
+        The Id of the dashboard  # noqa: E501
+
+        :param id: The id of this Dashboard.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this Dashboard.  # noqa: E501
+
+        The name of the dashboard  # noqa: E501
+
+        :return: The name of this Dashboard.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this Dashboard.
+
+        The name of the dashboard  # noqa: E501
+
+        :param name: The name of this Dashboard.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
 
     @property
     def owner(self):
@@ -130,6 +293,29 @@ class Dashboard(object):
         """
 
         self._owner = owner
+
+    @property
+    def sharable(self):
+        """Gets the sharable of this Dashboard.  # noqa: E501
+
+        Whether or not the dashboard is sharable. This value will always be true unless the dashboard is a private dashboard  # noqa: E501
+
+        :return: The sharable of this Dashboard.  # noqa: E501
+        :rtype: bool
+        """
+        return self._sharable
+
+    @sharable.setter
+    def sharable(self, sharable):
+        """Sets the sharable of this Dashboard.
+
+        Whether or not the dashboard is sharable. This value will always be true unless the dashboard is a private dashboard  # noqa: E501
+
+        :param sharable: The sharable of this Dashboard.  # noqa: E501
+        :type: bool
+        """
+
+        self._sharable = sharable
 
     @property
     def template(self):
@@ -178,144 +364,6 @@ class Dashboard(object):
         self._user_permission = user_permission
 
     @property
-    def group_id(self):
-        """Gets the group_id of this Dashboard.  # noqa: E501
-
-        The id of the group the dashboard belongs to  # noqa: E501
-
-        :return: The group_id of this Dashboard.  # noqa: E501
-        :rtype: int
-        """
-        return self._group_id
-
-    @group_id.setter
-    def group_id(self, group_id):
-        """Sets the group_id of this Dashboard.
-
-        The id of the group the dashboard belongs to  # noqa: E501
-
-        :param group_id: The group_id of this Dashboard.  # noqa: E501
-        :type: int
-        """
-
-        self._group_id = group_id
-
-    @property
-    def full_name(self):
-        """Gets the full_name of this Dashboard.  # noqa: E501
-
-        Full name of the dashboard, including group path  # noqa: E501
-
-        :return: The full_name of this Dashboard.  # noqa: E501
-        :rtype: str
-        """
-        return self._full_name
-
-    @full_name.setter
-    def full_name(self, full_name):
-        """Sets the full_name of this Dashboard.
-
-        Full name of the dashboard, including group path  # noqa: E501
-
-        :param full_name: The full_name of this Dashboard.  # noqa: E501
-        :type: str
-        """
-
-        self._full_name = full_name
-
-    @property
-    def description(self):
-        """Gets the description of this Dashboard.  # noqa: E501
-
-        The description of the dashboard  # noqa: E501
-
-        :return: The description of this Dashboard.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Dashboard.
-
-        The description of the dashboard  # noqa: E501
-
-        :param description: The description of this Dashboard.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
-    def sharable(self):
-        """Gets the sharable of this Dashboard.  # noqa: E501
-
-        Whether or not the dashboard is sharable. This value will always be true unless the dashboard is a private dashboard  # noqa: E501
-
-        :return: The sharable of this Dashboard.  # noqa: E501
-        :rtype: bool
-        """
-        return self._sharable
-
-    @sharable.setter
-    def sharable(self, sharable):
-        """Sets the sharable of this Dashboard.
-
-        Whether or not the dashboard is sharable. This value will always be true unless the dashboard is a private dashboard  # noqa: E501
-
-        :param sharable: The sharable of this Dashboard.  # noqa: E501
-        :type: bool
-        """
-
-        self._sharable = sharable
-
-    @property
-    def widgets_config(self):
-        """Gets the widgets_config of this Dashboard.  # noqa: E501
-
-        Information about widget configuration used by the UI  # noqa: E501
-
-        :return: The widgets_config of this Dashboard.  # noqa: E501
-        :rtype: object
-        """
-        return self._widgets_config
-
-    @widgets_config.setter
-    def widgets_config(self, widgets_config):
-        """Sets the widgets_config of this Dashboard.
-
-        Information about widget configuration used by the UI  # noqa: E501
-
-        :param widgets_config: The widgets_config of this Dashboard.  # noqa: E501
-        :type: object
-        """
-
-        self._widgets_config = widgets_config
-
-    @property
-    def group_name(self):
-        """Gets the group_name of this Dashboard.  # noqa: E501
-
-        The name of group where created dashboard will reside  # noqa: E501
-
-        :return: The group_name of this Dashboard.  # noqa: E501
-        :rtype: str
-        """
-        return self._group_name
-
-    @group_name.setter
-    def group_name(self, group_name):
-        """Sets the group_name of this Dashboard.
-
-        The name of group where created dashboard will reside  # noqa: E501
-
-        :param group_name: The group_name of this Dashboard.  # noqa: E501
-        :type: str
-        """
-
-        self._group_name = group_name
-
-    @property
     def widget_tokens(self):
         """Gets the widget_tokens of this Dashboard.  # noqa: E501
 
@@ -339,75 +387,27 @@ class Dashboard(object):
         self._widget_tokens = widget_tokens
 
     @property
-    def name(self):
-        """Gets the name of this Dashboard.  # noqa: E501
+    def widgets_config(self):
+        """Gets the widgets_config of this Dashboard.  # noqa: E501
 
-        The name of the dashboard  # noqa: E501
+        Information about widget configuration used by the UI  # noqa: E501
 
-        :return: The name of this Dashboard.  # noqa: E501
-        :rtype: str
+        :return: The widgets_config of this Dashboard.  # noqa: E501
+        :rtype: object
         """
-        return self._name
+        return self._widgets_config
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this Dashboard.
+    @widgets_config.setter
+    def widgets_config(self, widgets_config):
+        """Sets the widgets_config of this Dashboard.
 
-        The name of the dashboard  # noqa: E501
+        Information about widget configuration used by the UI  # noqa: E501
 
-        :param name: The name of this Dashboard.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
-    def id(self):
-        """Gets the id of this Dashboard.  # noqa: E501
-
-        The Id of the dashboard  # noqa: E501
-
-        :return: The id of this Dashboard.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this Dashboard.
-
-        The Id of the dashboard  # noqa: E501
-
-        :param id: The id of this Dashboard.  # noqa: E501
-        :type: int
+        :param widgets_config: The widgets_config of this Dashboard.  # noqa: E501
+        :type: object
         """
 
-        self._id = id
-
-    @property
-    def group_full_path(self):
-        """Gets the group_full_path of this Dashboard.  # noqa: E501
-
-        The full path (excluding root group) of the group the dashboard belongs to  # noqa: E501
-
-        :return: The group_full_path of this Dashboard.  # noqa: E501
-        :rtype: str
-        """
-        return self._group_full_path
-
-    @group_full_path.setter
-    def group_full_path(self, group_full_path):
-        """Sets the group_full_path of this Dashboard.
-
-        The full path (excluding root group) of the group the dashboard belongs to  # noqa: E501
-
-        :param group_full_path: The group_full_path of this Dashboard.  # noqa: E501
-        :type: str
-        """
-
-        self._group_full_path = group_full_path
+        self._widgets_config = widgets_config
 
     def to_dict(self):
         """Returns the model properties as a dict"""

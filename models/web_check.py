@@ -38,177 +38,593 @@ class WebCheck(Website):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'template': 'object',
-        'test_location': 'WebsiteLocation',
-        'group_id': 'int',
-        'overall_alert_level': 'str',
-        'polling_interval': 'int',
+        'checkpoints': 'list[WebsiteCheckPoint]',
+        'collectors': 'list[WebsiteCollectorInfo]',
         'description': 'str',
         'disable_alerting': 'bool',
-        'type': 'str',
-        'last_updated': 'int',
-        'stop_monitoring_by_folder': 'bool',
-        'id': 'int',
-        'stop_monitoring': 'bool',
-        'user_permission': 'str',
-        'individual_sm_alert_enable': 'bool',
-        'checkpoints': 'list[WebsiteCheckPoint]',
-        'transition': 'int',
         'global_sm_alert_cond': 'int',
-        'is_internal': 'bool',
-        'collectors': 'list[WebsiteCollectorInfo]',
-        'name': 'str',
-        'use_default_location_setting': 'bool',
-        'use_default_alert_setting': 'bool',
+        'group_id': 'int',
+        'id': 'int',
         'individual_alert_level': 'str',
+        'individual_sm_alert_enable': 'bool',
+        'is_internal': 'bool',
+        'last_updated': 'int',
+        'name': 'str',
+        'overall_alert_level': 'str',
+        'polling_interval': 'int',
         'properties': 'list[NameAndValue]',
         'status': 'str',
-        'schema': 'str',
-        'trigger_ssl_expiration_alert': 'bool',
-        'trigger_ssl_status_alert': 'bool',
+        'stop_monitoring': 'bool',
+        'stop_monitoring_by_folder': 'bool',
+        'template': 'object',
+        'test_location': 'WebsiteLocation',
+        'transition': 'int',
+        'type': 'str',
+        'use_default_alert_setting': 'bool',
+        'use_default_location_setting': 'bool',
+        'user_permission': 'str',
+        'alert_expr': 'str',
         'domain': 'str',
-        'page_load_alert_time_in_ms': 'int',
         'ignore_ssl': 'object',
+        'page_load_alert_time_in_ms': 'int',
+        'schema': 'str',
         'steps': 'list[WebCheckStep]',
-        'alert_expr': 'str'
+        'trigger_ssl_expiration_alert': 'bool',
+        'trigger_ssl_status_alert': 'bool'
     }
 
     attribute_map = {
-        'template': 'template',
-        'test_location': 'testLocation',
-        'group_id': 'groupId',
-        'overall_alert_level': 'overallAlertLevel',
-        'polling_interval': 'pollingInterval',
+        'checkpoints': 'checkpoints',
+        'collectors': 'collectors',
         'description': 'description',
         'disable_alerting': 'disableAlerting',
-        'type': 'type',
-        'last_updated': 'lastUpdated',
-        'stop_monitoring_by_folder': 'stopMonitoringByFolder',
-        'id': 'id',
-        'stop_monitoring': 'stopMonitoring',
-        'user_permission': 'userPermission',
-        'individual_sm_alert_enable': 'individualSmAlertEnable',
-        'checkpoints': 'checkpoints',
-        'transition': 'transition',
         'global_sm_alert_cond': 'globalSmAlertCond',
-        'is_internal': 'isInternal',
-        'collectors': 'collectors',
-        'name': 'name',
-        'use_default_location_setting': 'useDefaultLocationSetting',
-        'use_default_alert_setting': 'useDefaultAlertSetting',
+        'group_id': 'groupId',
+        'id': 'id',
         'individual_alert_level': 'individualAlertLevel',
+        'individual_sm_alert_enable': 'individualSmAlertEnable',
+        'is_internal': 'isInternal',
+        'last_updated': 'lastUpdated',
+        'name': 'name',
+        'overall_alert_level': 'overallAlertLevel',
+        'polling_interval': 'pollingInterval',
         'properties': 'properties',
         'status': 'status',
-        'schema': 'schema',
-        'trigger_ssl_expiration_alert': 'triggerSSLExpirationAlert',
-        'trigger_ssl_status_alert': 'triggerSSLStatusAlert',
+        'stop_monitoring': 'stopMonitoring',
+        'stop_monitoring_by_folder': 'stopMonitoringByFolder',
+        'template': 'template',
+        'test_location': 'testLocation',
+        'transition': 'transition',
+        'type': 'type',
+        'use_default_alert_setting': 'useDefaultAlertSetting',
+        'use_default_location_setting': 'useDefaultLocationSetting',
+        'user_permission': 'userPermission',
+        'alert_expr': 'alertExpr',
         'domain': 'domain',
-        'page_load_alert_time_in_ms': 'pageLoadAlertTimeInMS',
         'ignore_ssl': 'ignoreSSL',
+        'page_load_alert_time_in_ms': 'pageLoadAlertTimeInMS',
+        'schema': 'schema',
         'steps': 'steps',
-        'alert_expr': 'alertExpr'
+        'trigger_ssl_expiration_alert': 'triggerSSLExpirationAlert',
+        'trigger_ssl_status_alert': 'triggerSSLStatusAlert'
     }
 
-    def __init__(self, template=None, test_location=None, group_id=None, overall_alert_level=None, polling_interval=None, description=None, disable_alerting=None, type=None, last_updated=None, stop_monitoring_by_folder=None, id=None, stop_monitoring=None, user_permission=None, individual_sm_alert_enable=None, checkpoints=None, transition=None, global_sm_alert_cond=None, is_internal=None, collectors=None, name=None, use_default_location_setting=None, use_default_alert_setting=None, individual_alert_level=None, properties=None, status=None, schema=None, trigger_ssl_expiration_alert=None, trigger_ssl_status_alert=None, domain=None, page_load_alert_time_in_ms=None, ignore_ssl=None, steps=None, alert_expr=None):  # noqa: E501
+    def __init__(self, checkpoints=None, collectors=None, description=None, disable_alerting=None, global_sm_alert_cond=None, group_id=None, id=None, individual_alert_level=None, individual_sm_alert_enable=None, is_internal=None, last_updated=None, name=None, overall_alert_level=None, polling_interval=None, properties=None, status=None, stop_monitoring=None, stop_monitoring_by_folder=None, template=None, test_location=None, transition=None, type=None, use_default_alert_setting=None, use_default_location_setting=None, user_permission=None, alert_expr=None, domain=None, ignore_ssl=None, page_load_alert_time_in_ms=None, schema=None, steps=None, trigger_ssl_expiration_alert=None, trigger_ssl_status_alert=None):  # noqa: E501
         """WebCheck - a model defined in Swagger"""  # noqa: E501
 
-        self._template = None
-        self._test_location = None
-        self._group_id = None
-        self._overall_alert_level = None
-        self._polling_interval = None
+        self._checkpoints = None
+        self._collectors = None
         self._description = None
         self._disable_alerting = None
-        self._type = None
-        self._last_updated = None
-        self._stop_monitoring_by_folder = None
-        self._id = None
-        self._stop_monitoring = None
-        self._user_permission = None
-        self._individual_sm_alert_enable = None
-        self._checkpoints = None
-        self._transition = None
         self._global_sm_alert_cond = None
-        self._is_internal = None
-        self._collectors = None
-        self._name = None
-        self._use_default_location_setting = None
-        self._use_default_alert_setting = None
+        self._group_id = None
+        self._id = None
         self._individual_alert_level = None
+        self._individual_sm_alert_enable = None
+        self._is_internal = None
+        self._last_updated = None
+        self._name = None
+        self._overall_alert_level = None
+        self._polling_interval = None
         self._properties = None
         self._status = None
+        self._stop_monitoring = None
+        self._stop_monitoring_by_folder = None
+        self._template = None
+        self._test_location = None
+        self._transition = None
+        self._type = None
+        self._use_default_alert_setting = None
+        self._use_default_location_setting = None
+        self._user_permission = None
+        self._alert_expr = None
+        self._domain = None
+        self._ignore_ssl = None
+        self._page_load_alert_time_in_ms = None
         self._schema = None
+        self._steps = None
         self._trigger_ssl_expiration_alert = None
         self._trigger_ssl_status_alert = None
-        self._domain = None
-        self._page_load_alert_time_in_ms = None
-        self._ignore_ssl = None
-        self._steps = None
-        self._alert_expr = None
         self.discriminator = None
 
-        if template is not None:
-            self.template = template
-        self.test_location = test_location
-        if group_id is not None:
-            self.group_id = group_id
-        if overall_alert_level is not None:
-            self.overall_alert_level = overall_alert_level
-        if polling_interval is not None:
-            self.polling_interval = polling_interval
+        if checkpoints is not None:
+            self.checkpoints = checkpoints
+        if collectors is not None:
+            self.collectors = collectors
         if description is not None:
             self.description = description
         if disable_alerting is not None:
             self.disable_alerting = disable_alerting
-        self.type = type
-        if last_updated is not None:
-            self.last_updated = last_updated
-        if stop_monitoring_by_folder is not None:
-            self.stop_monitoring_by_folder = stop_monitoring_by_folder
-        if id is not None:
-            self.id = id
-        if stop_monitoring is not None:
-            self.stop_monitoring = stop_monitoring
-        if user_permission is not None:
-            self.user_permission = user_permission
-        if individual_sm_alert_enable is not None:
-            self.individual_sm_alert_enable = individual_sm_alert_enable
-        if checkpoints is not None:
-            self.checkpoints = checkpoints
-        if transition is not None:
-            self.transition = transition
         if global_sm_alert_cond is not None:
             self.global_sm_alert_cond = global_sm_alert_cond
-        if is_internal is not None:
-            self.is_internal = is_internal
-        if collectors is not None:
-            self.collectors = collectors
-        self.name = name
-        if use_default_location_setting is not None:
-            self.use_default_location_setting = use_default_location_setting
-        if use_default_alert_setting is not None:
-            self.use_default_alert_setting = use_default_alert_setting
+        if group_id is not None:
+            self.group_id = group_id
+        if id is not None:
+            self.id = id
         if individual_alert_level is not None:
             self.individual_alert_level = individual_alert_level
+        if individual_sm_alert_enable is not None:
+            self.individual_sm_alert_enable = individual_sm_alert_enable
+        if is_internal is not None:
+            self.is_internal = is_internal
+        if last_updated is not None:
+            self.last_updated = last_updated
+        self.name = name
+        if overall_alert_level is not None:
+            self.overall_alert_level = overall_alert_level
+        if polling_interval is not None:
+            self.polling_interval = polling_interval
         if properties is not None:
             self.properties = properties
         if status is not None:
             self.status = status
+        if stop_monitoring is not None:
+            self.stop_monitoring = stop_monitoring
+        if stop_monitoring_by_folder is not None:
+            self.stop_monitoring_by_folder = stop_monitoring_by_folder
+        if template is not None:
+            self.template = template
+        self.test_location = test_location
+        if transition is not None:
+            self.transition = transition
+        self.type = type
+        if use_default_alert_setting is not None:
+            self.use_default_alert_setting = use_default_alert_setting
+        if use_default_location_setting is not None:
+            self.use_default_location_setting = use_default_location_setting
+        if user_permission is not None:
+            self.user_permission = user_permission
+        if alert_expr is not None:
+            self.alert_expr = alert_expr
+        self.domain = domain
+        if ignore_ssl is not None:
+            self.ignore_ssl = ignore_ssl
+        if page_load_alert_time_in_ms is not None:
+            self.page_load_alert_time_in_ms = page_load_alert_time_in_ms
         if schema is not None:
             self.schema = schema
+        if steps is not None:
+            self.steps = steps
         if trigger_ssl_expiration_alert is not None:
             self.trigger_ssl_expiration_alert = trigger_ssl_expiration_alert
         if trigger_ssl_status_alert is not None:
             self.trigger_ssl_status_alert = trigger_ssl_status_alert
-        self.domain = domain
-        if page_load_alert_time_in_ms is not None:
-            self.page_load_alert_time_in_ms = page_load_alert_time_in_ms
-        if ignore_ssl is not None:
-            self.ignore_ssl = ignore_ssl
-        if steps is not None:
-            self.steps = steps
-        if alert_expr is not None:
-            self.alert_expr = alert_expr
+
+    @property
+    def checkpoints(self):
+        """Gets the checkpoints of this WebCheck.  # noqa: E501
+
+        The checkpoints from the which the website is monitored. This object should reference each location specified in testLocation in addition to an 'Overall' checkpoint  # noqa: E501
+
+        :return: The checkpoints of this WebCheck.  # noqa: E501
+        :rtype: list[WebsiteCheckPoint]
+        """
+        return self._checkpoints
+
+    @checkpoints.setter
+    def checkpoints(self, checkpoints):
+        """Sets the checkpoints of this WebCheck.
+
+        The checkpoints from the which the website is monitored. This object should reference each location specified in testLocation in addition to an 'Overall' checkpoint  # noqa: E501
+
+        :param checkpoints: The checkpoints of this WebCheck.  # noqa: E501
+        :type: list[WebsiteCheckPoint]
+        """
+
+        self._checkpoints = checkpoints
+
+    @property
+    def collectors(self):
+        """Gets the collectors of this WebCheck.  # noqa: E501
+
+        The collectors that are monitoring the website, if the website is internal  # noqa: E501
+
+        :return: The collectors of this WebCheck.  # noqa: E501
+        :rtype: list[WebsiteCollectorInfo]
+        """
+        return self._collectors
+
+    @collectors.setter
+    def collectors(self, collectors):
+        """Sets the collectors of this WebCheck.
+
+        The collectors that are monitoring the website, if the website is internal  # noqa: E501
+
+        :param collectors: The collectors of this WebCheck.  # noqa: E501
+        :type: list[WebsiteCollectorInfo]
+        """
+
+        self._collectors = collectors
+
+    @property
+    def description(self):
+        """Gets the description of this WebCheck.  # noqa: E501
+
+        The description of the website  # noqa: E501
+
+        :return: The description of this WebCheck.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this WebCheck.
+
+        The description of the website  # noqa: E501
+
+        :param description: The description of this WebCheck.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def disable_alerting(self):
+        """Gets the disable_alerting of this WebCheck.  # noqa: E501
+
+        true: alerting is disabled for the website false: alerting is enabled for the website If stopMonitoring=true, then alerting will also by default be disabled for the website  # noqa: E501
+
+        :return: The disable_alerting of this WebCheck.  # noqa: E501
+        :rtype: bool
+        """
+        return self._disable_alerting
+
+    @disable_alerting.setter
+    def disable_alerting(self, disable_alerting):
+        """Sets the disable_alerting of this WebCheck.
+
+        true: alerting is disabled for the website false: alerting is enabled for the website If stopMonitoring=true, then alerting will also by default be disabled for the website  # noqa: E501
+
+        :param disable_alerting: The disable_alerting of this WebCheck.  # noqa: E501
+        :type: bool
+        """
+
+        self._disable_alerting = disable_alerting
+
+    @property
+    def global_sm_alert_cond(self):
+        """Gets the global_sm_alert_cond of this WebCheck.  # noqa: E501
+
+        The number of test locations that checks must fail at to trigger an alert, where the alert triggered will be consistent with the value of overallAlertLevel. Possible values and corresponding number of Site Monitor locations are 0 : all 1 : half 2 : more than one 3 : any  # noqa: E501
+
+        :return: The global_sm_alert_cond of this WebCheck.  # noqa: E501
+        :rtype: int
+        """
+        return self._global_sm_alert_cond
+
+    @global_sm_alert_cond.setter
+    def global_sm_alert_cond(self, global_sm_alert_cond):
+        """Sets the global_sm_alert_cond of this WebCheck.
+
+        The number of test locations that checks must fail at to trigger an alert, where the alert triggered will be consistent with the value of overallAlertLevel. Possible values and corresponding number of Site Monitor locations are 0 : all 1 : half 2 : more than one 3 : any  # noqa: E501
+
+        :param global_sm_alert_cond: The global_sm_alert_cond of this WebCheck.  # noqa: E501
+        :type: int
+        """
+
+        self._global_sm_alert_cond = global_sm_alert_cond
+
+    @property
+    def group_id(self):
+        """Gets the group_id of this WebCheck.  # noqa: E501
+
+        The id of the group the website is in  # noqa: E501
+
+        :return: The group_id of this WebCheck.  # noqa: E501
+        :rtype: int
+        """
+        return self._group_id
+
+    @group_id.setter
+    def group_id(self, group_id):
+        """Sets the group_id of this WebCheck.
+
+        The id of the group the website is in  # noqa: E501
+
+        :param group_id: The group_id of this WebCheck.  # noqa: E501
+        :type: int
+        """
+
+        self._group_id = group_id
+
+    @property
+    def id(self):
+        """Gets the id of this WebCheck.  # noqa: E501
+
+        The id of the website  # noqa: E501
+
+        :return: The id of this WebCheck.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this WebCheck.
+
+        The id of the website  # noqa: E501
+
+        :param id: The id of this WebCheck.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def individual_alert_level(self):
+        """Gets the individual_alert_level of this WebCheck.  # noqa: E501
+
+        warn | error | critical The level of alert to trigger if the website fails a check from an individual test location  # noqa: E501
+
+        :return: The individual_alert_level of this WebCheck.  # noqa: E501
+        :rtype: str
+        """
+        return self._individual_alert_level
+
+    @individual_alert_level.setter
+    def individual_alert_level(self, individual_alert_level):
+        """Sets the individual_alert_level of this WebCheck.
+
+        warn | error | critical The level of alert to trigger if the website fails a check from an individual test location  # noqa: E501
+
+        :param individual_alert_level: The individual_alert_level of this WebCheck.  # noqa: E501
+        :type: str
+        """
+
+        self._individual_alert_level = individual_alert_level
+
+    @property
+    def individual_sm_alert_enable(self):
+        """Gets the individual_sm_alert_enable of this WebCheck.  # noqa: E501
+
+        true: an alert will be triggered if a check fails from an individual test location false: an alert will not be triggered if a check fails from an individual test location  # noqa: E501
+
+        :return: The individual_sm_alert_enable of this WebCheck.  # noqa: E501
+        :rtype: bool
+        """
+        return self._individual_sm_alert_enable
+
+    @individual_sm_alert_enable.setter
+    def individual_sm_alert_enable(self, individual_sm_alert_enable):
+        """Sets the individual_sm_alert_enable of this WebCheck.
+
+        true: an alert will be triggered if a check fails from an individual test location false: an alert will not be triggered if a check fails from an individual test location  # noqa: E501
+
+        :param individual_sm_alert_enable: The individual_sm_alert_enable of this WebCheck.  # noqa: E501
+        :type: bool
+        """
+
+        self._individual_sm_alert_enable = individual_sm_alert_enable
+
+    @property
+    def is_internal(self):
+        """Gets the is_internal of this WebCheck.  # noqa: E501
+
+        Whether or not the website is internal  # noqa: E501
+
+        :return: The is_internal of this WebCheck.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_internal
+
+    @is_internal.setter
+    def is_internal(self, is_internal):
+        """Sets the is_internal of this WebCheck.
+
+        Whether or not the website is internal  # noqa: E501
+
+        :param is_internal: The is_internal of this WebCheck.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_internal = is_internal
+
+    @property
+    def last_updated(self):
+        """Gets the last_updated of this WebCheck.  # noqa: E501
+
+        The time (in epoch format) that the website was updated  # noqa: E501
+
+        :return: The last_updated of this WebCheck.  # noqa: E501
+        :rtype: int
+        """
+        return self._last_updated
+
+    @last_updated.setter
+    def last_updated(self, last_updated):
+        """Sets the last_updated of this WebCheck.
+
+        The time (in epoch format) that the website was updated  # noqa: E501
+
+        :param last_updated: The last_updated of this WebCheck.  # noqa: E501
+        :type: int
+        """
+
+        self._last_updated = last_updated
+
+    @property
+    def name(self):
+        """Gets the name of this WebCheck.  # noqa: E501
+
+        The name of the website  # noqa: E501
+
+        :return: The name of this WebCheck.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this WebCheck.
+
+        The name of the website  # noqa: E501
+
+        :param name: The name of this WebCheck.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def overall_alert_level(self):
+        """Gets the overall_alert_level of this WebCheck.  # noqa: E501
+
+        warn | error | critical The level of alert to trigger if the website fails the number of checks specified by transition from the test locations specified by globalSmAlertCond  # noqa: E501
+
+        :return: The overall_alert_level of this WebCheck.  # noqa: E501
+        :rtype: str
+        """
+        return self._overall_alert_level
+
+    @overall_alert_level.setter
+    def overall_alert_level(self, overall_alert_level):
+        """Sets the overall_alert_level of this WebCheck.
+
+        warn | error | critical The level of alert to trigger if the website fails the number of checks specified by transition from the test locations specified by globalSmAlertCond  # noqa: E501
+
+        :param overall_alert_level: The overall_alert_level of this WebCheck.  # noqa: E501
+        :type: str
+        """
+
+        self._overall_alert_level = overall_alert_level
+
+    @property
+    def polling_interval(self):
+        """Gets the polling_interval of this WebCheck.  # noqa: E501
+
+        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 The polling interval for the website, in units of minutes. This value indicates how often the website is checked. The minimum is 1 minute, and the maximum is 10 minutes  # noqa: E501
+
+        :return: The polling_interval of this WebCheck.  # noqa: E501
+        :rtype: int
+        """
+        return self._polling_interval
+
+    @polling_interval.setter
+    def polling_interval(self, polling_interval):
+        """Sets the polling_interval of this WebCheck.
+
+        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 The polling interval for the website, in units of minutes. This value indicates how often the website is checked. The minimum is 1 minute, and the maximum is 10 minutes  # noqa: E501
+
+        :param polling_interval: The polling_interval of this WebCheck.  # noqa: E501
+        :type: int
+        """
+
+        self._polling_interval = polling_interval
+
+    @property
+    def properties(self):
+        """Gets the properties of this WebCheck.  # noqa: E501
+
+        The properties associated with the website  # noqa: E501
+
+        :return: The properties of this WebCheck.  # noqa: E501
+        :rtype: list[NameAndValue]
+        """
+        return self._properties
+
+    @properties.setter
+    def properties(self, properties):
+        """Sets the properties of this WebCheck.
+
+        The properties associated with the website  # noqa: E501
+
+        :param properties: The properties of this WebCheck.  # noqa: E501
+        :type: list[NameAndValue]
+        """
+
+        self._properties = properties
+
+    @property
+    def status(self):
+        """Gets the status of this WebCheck.  # noqa: E501
+
+        Whether is the website dead (the collector is down) or not  # noqa: E501
+
+        :return: The status of this WebCheck.  # noqa: E501
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """Sets the status of this WebCheck.
+
+        Whether is the website dead (the collector is down) or not  # noqa: E501
+
+        :param status: The status of this WebCheck.  # noqa: E501
+        :type: str
+        """
+
+        self._status = status
+
+    @property
+    def stop_monitoring(self):
+        """Gets the stop_monitoring of this WebCheck.  # noqa: E501
+
+        true: monitoring is disabled for the website false: monitoring is enabled for the website If stopMonitoring=true, then alerting will also by default be disabled for the website  # noqa: E501
+
+        :return: The stop_monitoring of this WebCheck.  # noqa: E501
+        :rtype: bool
+        """
+        return self._stop_monitoring
+
+    @stop_monitoring.setter
+    def stop_monitoring(self, stop_monitoring):
+        """Sets the stop_monitoring of this WebCheck.
+
+        true: monitoring is disabled for the website false: monitoring is enabled for the website If stopMonitoring=true, then alerting will also by default be disabled for the website  # noqa: E501
+
+        :param stop_monitoring: The stop_monitoring of this WebCheck.  # noqa: E501
+        :type: bool
+        """
+
+        self._stop_monitoring = stop_monitoring
+
+    @property
+    def stop_monitoring_by_folder(self):
+        """Gets the stop_monitoring_by_folder of this WebCheck.  # noqa: E501
+
+        true: monitoring is disabled for all services in the website's folder false: monitoring is not disabled for all services in website's folder  # noqa: E501
+
+        :return: The stop_monitoring_by_folder of this WebCheck.  # noqa: E501
+        :rtype: bool
+        """
+        return self._stop_monitoring_by_folder
+
+    @stop_monitoring_by_folder.setter
+    def stop_monitoring_by_folder(self, stop_monitoring_by_folder):
+        """Sets the stop_monitoring_by_folder of this WebCheck.
+
+        true: monitoring is disabled for all services in the website's folder false: monitoring is not disabled for all services in website's folder  # noqa: E501
+
+        :param stop_monitoring_by_folder: The stop_monitoring_by_folder of this WebCheck.  # noqa: E501
+        :type: bool
+        """
+
+        self._stop_monitoring_by_folder = stop_monitoring_by_folder
 
     @property
     def template(self):
@@ -259,119 +675,27 @@ class WebCheck(Website):
         self._test_location = test_location
 
     @property
-    def group_id(self):
-        """Gets the group_id of this WebCheck.  # noqa: E501
+    def transition(self):
+        """Gets the transition of this WebCheck.  # noqa: E501
 
-        The id of the group the website is in  # noqa: E501
+        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 30 | 60 The number of checks that must fail before an alert is triggered  # noqa: E501
 
-        :return: The group_id of this WebCheck.  # noqa: E501
+        :return: The transition of this WebCheck.  # noqa: E501
         :rtype: int
         """
-        return self._group_id
+        return self._transition
 
-    @group_id.setter
-    def group_id(self, group_id):
-        """Sets the group_id of this WebCheck.
+    @transition.setter
+    def transition(self, transition):
+        """Sets the transition of this WebCheck.
 
-        The id of the group the website is in  # noqa: E501
+        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 30 | 60 The number of checks that must fail before an alert is triggered  # noqa: E501
 
-        :param group_id: The group_id of this WebCheck.  # noqa: E501
+        :param transition: The transition of this WebCheck.  # noqa: E501
         :type: int
         """
 
-        self._group_id = group_id
-
-    @property
-    def overall_alert_level(self):
-        """Gets the overall_alert_level of this WebCheck.  # noqa: E501
-
-        warn | error | critical The level of alert to trigger if the website fails the number of checks specified by transition from the test locations specified by globalSmAlertCond  # noqa: E501
-
-        :return: The overall_alert_level of this WebCheck.  # noqa: E501
-        :rtype: str
-        """
-        return self._overall_alert_level
-
-    @overall_alert_level.setter
-    def overall_alert_level(self, overall_alert_level):
-        """Sets the overall_alert_level of this WebCheck.
-
-        warn | error | critical The level of alert to trigger if the website fails the number of checks specified by transition from the test locations specified by globalSmAlertCond  # noqa: E501
-
-        :param overall_alert_level: The overall_alert_level of this WebCheck.  # noqa: E501
-        :type: str
-        """
-
-        self._overall_alert_level = overall_alert_level
-
-    @property
-    def polling_interval(self):
-        """Gets the polling_interval of this WebCheck.  # noqa: E501
-
-        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 The polling interval for the website, in units of minutes. This value indicates how often the website is checked. The minimum is 1 minute, and the maximum is 10 minutes  # noqa: E501
-
-        :return: The polling_interval of this WebCheck.  # noqa: E501
-        :rtype: int
-        """
-        return self._polling_interval
-
-    @polling_interval.setter
-    def polling_interval(self, polling_interval):
-        """Sets the polling_interval of this WebCheck.
-
-        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 The polling interval for the website, in units of minutes. This value indicates how often the website is checked. The minimum is 1 minute, and the maximum is 10 minutes  # noqa: E501
-
-        :param polling_interval: The polling_interval of this WebCheck.  # noqa: E501
-        :type: int
-        """
-
-        self._polling_interval = polling_interval
-
-    @property
-    def description(self):
-        """Gets the description of this WebCheck.  # noqa: E501
-
-        The description of the website  # noqa: E501
-
-        :return: The description of this WebCheck.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this WebCheck.
-
-        The description of the website  # noqa: E501
-
-        :param description: The description of this WebCheck.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
-    def disable_alerting(self):
-        """Gets the disable_alerting of this WebCheck.  # noqa: E501
-
-        true: alerting is disabled for the website false: alerting is enabled for the website If stopMonitoring=true, then alerting will also by default be disabled for the website  # noqa: E501
-
-        :return: The disable_alerting of this WebCheck.  # noqa: E501
-        :rtype: bool
-        """
-        return self._disable_alerting
-
-    @disable_alerting.setter
-    def disable_alerting(self, disable_alerting):
-        """Sets the disable_alerting of this WebCheck.
-
-        true: alerting is disabled for the website false: alerting is enabled for the website If stopMonitoring=true, then alerting will also by default be disabled for the website  # noqa: E501
-
-        :param disable_alerting: The disable_alerting of this WebCheck.  # noqa: E501
-        :type: bool
-        """
-
-        self._disable_alerting = disable_alerting
+        self._transition = transition
 
     @property
     def type(self):
@@ -399,282 +723,27 @@ class WebCheck(Website):
         self._type = type
 
     @property
-    def last_updated(self):
-        """Gets the last_updated of this WebCheck.  # noqa: E501
+    def use_default_alert_setting(self):
+        """Gets the use_default_alert_setting of this WebCheck.  # noqa: E501
 
-        The time (in epoch format) that the website was updated  # noqa: E501
+        true: The alert settings configured in the website Default Settings will be used false: Service Default Settings will not be used, and you will need to specify individualSMAlertEnable, individualAlertLevel, globalSmAlertConf, overallAlertLevel and pollingInterval  # noqa: E501
 
-        :return: The last_updated of this WebCheck.  # noqa: E501
-        :rtype: int
-        """
-        return self._last_updated
-
-    @last_updated.setter
-    def last_updated(self, last_updated):
-        """Sets the last_updated of this WebCheck.
-
-        The time (in epoch format) that the website was updated  # noqa: E501
-
-        :param last_updated: The last_updated of this WebCheck.  # noqa: E501
-        :type: int
-        """
-
-        self._last_updated = last_updated
-
-    @property
-    def stop_monitoring_by_folder(self):
-        """Gets the stop_monitoring_by_folder of this WebCheck.  # noqa: E501
-
-        true: monitoring is disabled for all services in the website's folder false: monitoring is not disabled for all services in website's folder  # noqa: E501
-
-        :return: The stop_monitoring_by_folder of this WebCheck.  # noqa: E501
+        :return: The use_default_alert_setting of this WebCheck.  # noqa: E501
         :rtype: bool
         """
-        return self._stop_monitoring_by_folder
+        return self._use_default_alert_setting
 
-    @stop_monitoring_by_folder.setter
-    def stop_monitoring_by_folder(self, stop_monitoring_by_folder):
-        """Sets the stop_monitoring_by_folder of this WebCheck.
+    @use_default_alert_setting.setter
+    def use_default_alert_setting(self, use_default_alert_setting):
+        """Sets the use_default_alert_setting of this WebCheck.
 
-        true: monitoring is disabled for all services in the website's folder false: monitoring is not disabled for all services in website's folder  # noqa: E501
+        true: The alert settings configured in the website Default Settings will be used false: Service Default Settings will not be used, and you will need to specify individualSMAlertEnable, individualAlertLevel, globalSmAlertConf, overallAlertLevel and pollingInterval  # noqa: E501
 
-        :param stop_monitoring_by_folder: The stop_monitoring_by_folder of this WebCheck.  # noqa: E501
+        :param use_default_alert_setting: The use_default_alert_setting of this WebCheck.  # noqa: E501
         :type: bool
         """
 
-        self._stop_monitoring_by_folder = stop_monitoring_by_folder
-
-    @property
-    def id(self):
-        """Gets the id of this WebCheck.  # noqa: E501
-
-        The id of the website  # noqa: E501
-
-        :return: The id of this WebCheck.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this WebCheck.
-
-        The id of the website  # noqa: E501
-
-        :param id: The id of this WebCheck.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def stop_monitoring(self):
-        """Gets the stop_monitoring of this WebCheck.  # noqa: E501
-
-        true: monitoring is disabled for the website false: monitoring is enabled for the website If stopMonitoring=true, then alerting will also by default be disabled for the website  # noqa: E501
-
-        :return: The stop_monitoring of this WebCheck.  # noqa: E501
-        :rtype: bool
-        """
-        return self._stop_monitoring
-
-    @stop_monitoring.setter
-    def stop_monitoring(self, stop_monitoring):
-        """Sets the stop_monitoring of this WebCheck.
-
-        true: monitoring is disabled for the website false: monitoring is enabled for the website If stopMonitoring=true, then alerting will also by default be disabled for the website  # noqa: E501
-
-        :param stop_monitoring: The stop_monitoring of this WebCheck.  # noqa: E501
-        :type: bool
-        """
-
-        self._stop_monitoring = stop_monitoring
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this WebCheck.  # noqa: E501
-
-        write | read | ack. The permission level of the user that made the API request  # noqa: E501
-
-        :return: The user_permission of this WebCheck.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this WebCheck.
-
-        write | read | ack. The permission level of the user that made the API request  # noqa: E501
-
-        :param user_permission: The user_permission of this WebCheck.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
-
-    @property
-    def individual_sm_alert_enable(self):
-        """Gets the individual_sm_alert_enable of this WebCheck.  # noqa: E501
-
-        true: an alert will be triggered if a check fails from an individual test location false: an alert will not be triggered if a check fails from an individual test location  # noqa: E501
-
-        :return: The individual_sm_alert_enable of this WebCheck.  # noqa: E501
-        :rtype: bool
-        """
-        return self._individual_sm_alert_enable
-
-    @individual_sm_alert_enable.setter
-    def individual_sm_alert_enable(self, individual_sm_alert_enable):
-        """Sets the individual_sm_alert_enable of this WebCheck.
-
-        true: an alert will be triggered if a check fails from an individual test location false: an alert will not be triggered if a check fails from an individual test location  # noqa: E501
-
-        :param individual_sm_alert_enable: The individual_sm_alert_enable of this WebCheck.  # noqa: E501
-        :type: bool
-        """
-
-        self._individual_sm_alert_enable = individual_sm_alert_enable
-
-    @property
-    def checkpoints(self):
-        """Gets the checkpoints of this WebCheck.  # noqa: E501
-
-        The checkpoints from the which the website is monitored. This object should reference each location specified in testLocation in addition to an 'Overall' checkpoint  # noqa: E501
-
-        :return: The checkpoints of this WebCheck.  # noqa: E501
-        :rtype: list[WebsiteCheckPoint]
-        """
-        return self._checkpoints
-
-    @checkpoints.setter
-    def checkpoints(self, checkpoints):
-        """Sets the checkpoints of this WebCheck.
-
-        The checkpoints from the which the website is monitored. This object should reference each location specified in testLocation in addition to an 'Overall' checkpoint  # noqa: E501
-
-        :param checkpoints: The checkpoints of this WebCheck.  # noqa: E501
-        :type: list[WebsiteCheckPoint]
-        """
-
-        self._checkpoints = checkpoints
-
-    @property
-    def transition(self):
-        """Gets the transition of this WebCheck.  # noqa: E501
-
-        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 30 | 60 The number of checks that must fail before an alert is triggered  # noqa: E501
-
-        :return: The transition of this WebCheck.  # noqa: E501
-        :rtype: int
-        """
-        return self._transition
-
-    @transition.setter
-    def transition(self, transition):
-        """Sets the transition of this WebCheck.
-
-        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 30 | 60 The number of checks that must fail before an alert is triggered  # noqa: E501
-
-        :param transition: The transition of this WebCheck.  # noqa: E501
-        :type: int
-        """
-
-        self._transition = transition
-
-    @property
-    def global_sm_alert_cond(self):
-        """Gets the global_sm_alert_cond of this WebCheck.  # noqa: E501
-
-        The number of test locations that checks must fail at to trigger an alert, where the alert triggered will be consistent with the value of overallAlertLevel. Possible values and corresponding number of Site Monitor locations are 0 : all 1 : half 2 : more than one 3 : any  # noqa: E501
-
-        :return: The global_sm_alert_cond of this WebCheck.  # noqa: E501
-        :rtype: int
-        """
-        return self._global_sm_alert_cond
-
-    @global_sm_alert_cond.setter
-    def global_sm_alert_cond(self, global_sm_alert_cond):
-        """Sets the global_sm_alert_cond of this WebCheck.
-
-        The number of test locations that checks must fail at to trigger an alert, where the alert triggered will be consistent with the value of overallAlertLevel. Possible values and corresponding number of Site Monitor locations are 0 : all 1 : half 2 : more than one 3 : any  # noqa: E501
-
-        :param global_sm_alert_cond: The global_sm_alert_cond of this WebCheck.  # noqa: E501
-        :type: int
-        """
-
-        self._global_sm_alert_cond = global_sm_alert_cond
-
-    @property
-    def is_internal(self):
-        """Gets the is_internal of this WebCheck.  # noqa: E501
-
-        Whether or not the website is internal  # noqa: E501
-
-        :return: The is_internal of this WebCheck.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_internal
-
-    @is_internal.setter
-    def is_internal(self, is_internal):
-        """Sets the is_internal of this WebCheck.
-
-        Whether or not the website is internal  # noqa: E501
-
-        :param is_internal: The is_internal of this WebCheck.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_internal = is_internal
-
-    @property
-    def collectors(self):
-        """Gets the collectors of this WebCheck.  # noqa: E501
-
-        The collectors that are monitoring the website, if the website is internal  # noqa: E501
-
-        :return: The collectors of this WebCheck.  # noqa: E501
-        :rtype: list[WebsiteCollectorInfo]
-        """
-        return self._collectors
-
-    @collectors.setter
-    def collectors(self, collectors):
-        """Sets the collectors of this WebCheck.
-
-        The collectors that are monitoring the website, if the website is internal  # noqa: E501
-
-        :param collectors: The collectors of this WebCheck.  # noqa: E501
-        :type: list[WebsiteCollectorInfo]
-        """
-
-        self._collectors = collectors
-
-    @property
-    def name(self):
-        """Gets the name of this WebCheck.  # noqa: E501
-
-        The name of the website  # noqa: E501
-
-        :return: The name of this WebCheck.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this WebCheck.
-
-        The name of the website  # noqa: E501
-
-        :param name: The name of this WebCheck.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
+        self._use_default_alert_setting = use_default_alert_setting
 
     @property
     def use_default_location_setting(self):
@@ -700,96 +769,121 @@ class WebCheck(Website):
         self._use_default_location_setting = use_default_location_setting
 
     @property
-    def use_default_alert_setting(self):
-        """Gets the use_default_alert_setting of this WebCheck.  # noqa: E501
+    def user_permission(self):
+        """Gets the user_permission of this WebCheck.  # noqa: E501
 
-        true: The alert settings configured in the website Default Settings will be used false: Service Default Settings will not be used, and you will need to specify individualSMAlertEnable, individualAlertLevel, globalSmAlertConf, overallAlertLevel and pollingInterval  # noqa: E501
+        write | read | ack. The permission level of the user that made the API request  # noqa: E501
 
-        :return: The use_default_alert_setting of this WebCheck.  # noqa: E501
-        :rtype: bool
-        """
-        return self._use_default_alert_setting
-
-    @use_default_alert_setting.setter
-    def use_default_alert_setting(self, use_default_alert_setting):
-        """Sets the use_default_alert_setting of this WebCheck.
-
-        true: The alert settings configured in the website Default Settings will be used false: Service Default Settings will not be used, and you will need to specify individualSMAlertEnable, individualAlertLevel, globalSmAlertConf, overallAlertLevel and pollingInterval  # noqa: E501
-
-        :param use_default_alert_setting: The use_default_alert_setting of this WebCheck.  # noqa: E501
-        :type: bool
-        """
-
-        self._use_default_alert_setting = use_default_alert_setting
-
-    @property
-    def individual_alert_level(self):
-        """Gets the individual_alert_level of this WebCheck.  # noqa: E501
-
-        warn | error | critical The level of alert to trigger if the website fails a check from an individual test location  # noqa: E501
-
-        :return: The individual_alert_level of this WebCheck.  # noqa: E501
+        :return: The user_permission of this WebCheck.  # noqa: E501
         :rtype: str
         """
-        return self._individual_alert_level
+        return self._user_permission
 
-    @individual_alert_level.setter
-    def individual_alert_level(self, individual_alert_level):
-        """Sets the individual_alert_level of this WebCheck.
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this WebCheck.
 
-        warn | error | critical The level of alert to trigger if the website fails a check from an individual test location  # noqa: E501
+        write | read | ack. The permission level of the user that made the API request  # noqa: E501
 
-        :param individual_alert_level: The individual_alert_level of this WebCheck.  # noqa: E501
+        :param user_permission: The user_permission of this WebCheck.  # noqa: E501
         :type: str
         """
 
-        self._individual_alert_level = individual_alert_level
+        self._user_permission = user_permission
 
     @property
-    def properties(self):
-        """Gets the properties of this WebCheck.  # noqa: E501
+    def alert_expr(self):
+        """Gets the alert_expr of this WebCheck.  # noqa: E501
 
-        The properties associated with the website  # noqa: E501
+        The threshold (in days) for triggering SSL certification alerts  # noqa: E501
 
-        :return: The properties of this WebCheck.  # noqa: E501
-        :rtype: list[NameAndValue]
-        """
-        return self._properties
-
-    @properties.setter
-    def properties(self, properties):
-        """Sets the properties of this WebCheck.
-
-        The properties associated with the website  # noqa: E501
-
-        :param properties: The properties of this WebCheck.  # noqa: E501
-        :type: list[NameAndValue]
-        """
-
-        self._properties = properties
-
-    @property
-    def status(self):
-        """Gets the status of this WebCheck.  # noqa: E501
-
-        Whether is the website dead (the collector is down) or not  # noqa: E501
-
-        :return: The status of this WebCheck.  # noqa: E501
+        :return: The alert_expr of this WebCheck.  # noqa: E501
         :rtype: str
         """
-        return self._status
+        return self._alert_expr
 
-    @status.setter
-    def status(self, status):
-        """Sets the status of this WebCheck.
+    @alert_expr.setter
+    def alert_expr(self, alert_expr):
+        """Sets the alert_expr of this WebCheck.
 
-        Whether is the website dead (the collector is down) or not  # noqa: E501
+        The threshold (in days) for triggering SSL certification alerts  # noqa: E501
 
-        :param status: The status of this WebCheck.  # noqa: E501
+        :param alert_expr: The alert_expr of this WebCheck.  # noqa: E501
         :type: str
         """
 
-        self._status = status
+        self._alert_expr = alert_expr
+
+    @property
+    def domain(self):
+        """Gets the domain of this WebCheck.  # noqa: E501
+
+        The domain of the service. This is the base URL of the service  # noqa: E501
+
+        :return: The domain of this WebCheck.  # noqa: E501
+        :rtype: str
+        """
+        return self._domain
+
+    @domain.setter
+    def domain(self, domain):
+        """Sets the domain of this WebCheck.
+
+        The domain of the service. This is the base URL of the service  # noqa: E501
+
+        :param domain: The domain of this WebCheck.  # noqa: E501
+        :type: str
+        """
+        if domain is None:
+            raise ValueError("Invalid value for `domain`, must not be `None`")  # noqa: E501
+
+        self._domain = domain
+
+    @property
+    def ignore_ssl(self):
+        """Gets the ignore_ssl of this WebCheck.  # noqa: E501
+
+        Whether or not SSL should be ignored, the default value is true  # noqa: E501
+
+        :return: The ignore_ssl of this WebCheck.  # noqa: E501
+        :rtype: object
+        """
+        return self._ignore_ssl
+
+    @ignore_ssl.setter
+    def ignore_ssl(self, ignore_ssl):
+        """Sets the ignore_ssl of this WebCheck.
+
+        Whether or not SSL should be ignored, the default value is true  # noqa: E501
+
+        :param ignore_ssl: The ignore_ssl of this WebCheck.  # noqa: E501
+        :type: object
+        """
+
+        self._ignore_ssl = ignore_ssl
+
+    @property
+    def page_load_alert_time_in_ms(self):
+        """Gets the page_load_alert_time_in_ms of this WebCheck.  # noqa: E501
+
+        The time in milliseconds that the page must load within for each step to avoid triggering an alert  # noqa: E501
+
+        :return: The page_load_alert_time_in_ms of this WebCheck.  # noqa: E501
+        :rtype: int
+        """
+        return self._page_load_alert_time_in_ms
+
+    @page_load_alert_time_in_ms.setter
+    def page_load_alert_time_in_ms(self, page_load_alert_time_in_ms):
+        """Sets the page_load_alert_time_in_ms of this WebCheck.
+
+        The time in milliseconds that the page must load within for each step to avoid triggering an alert  # noqa: E501
+
+        :param page_load_alert_time_in_ms: The page_load_alert_time_in_ms of this WebCheck.  # noqa: E501
+        :type: int
+        """
+
+        self._page_load_alert_time_in_ms = page_load_alert_time_in_ms
 
     @property
     def schema(self):
@@ -813,6 +907,29 @@ class WebCheck(Website):
         """
 
         self._schema = schema
+
+    @property
+    def steps(self):
+        """Gets the steps of this WebCheck.  # noqa: E501
+
+        An object comprising one or more steps, see the table below for the properties included in each step  # noqa: E501
+
+        :return: The steps of this WebCheck.  # noqa: E501
+        :rtype: list[WebCheckStep]
+        """
+        return self._steps
+
+    @steps.setter
+    def steps(self, steps):
+        """Sets the steps of this WebCheck.
+
+        An object comprising one or more steps, see the table below for the properties included in each step  # noqa: E501
+
+        :param steps: The steps of this WebCheck.  # noqa: E501
+        :type: list[WebCheckStep]
+        """
+
+        self._steps = steps
 
     @property
     def trigger_ssl_expiration_alert(self):
@@ -859,123 +976,6 @@ class WebCheck(Website):
         """
 
         self._trigger_ssl_status_alert = trigger_ssl_status_alert
-
-    @property
-    def domain(self):
-        """Gets the domain of this WebCheck.  # noqa: E501
-
-        The domain of the service. This is the base URL of the service  # noqa: E501
-
-        :return: The domain of this WebCheck.  # noqa: E501
-        :rtype: str
-        """
-        return self._domain
-
-    @domain.setter
-    def domain(self, domain):
-        """Sets the domain of this WebCheck.
-
-        The domain of the service. This is the base URL of the service  # noqa: E501
-
-        :param domain: The domain of this WebCheck.  # noqa: E501
-        :type: str
-        """
-        if domain is None:
-            raise ValueError("Invalid value for `domain`, must not be `None`")  # noqa: E501
-
-        self._domain = domain
-
-    @property
-    def page_load_alert_time_in_ms(self):
-        """Gets the page_load_alert_time_in_ms of this WebCheck.  # noqa: E501
-
-        The time in milliseconds that the page must load within for each step to avoid triggering an alert  # noqa: E501
-
-        :return: The page_load_alert_time_in_ms of this WebCheck.  # noqa: E501
-        :rtype: int
-        """
-        return self._page_load_alert_time_in_ms
-
-    @page_load_alert_time_in_ms.setter
-    def page_load_alert_time_in_ms(self, page_load_alert_time_in_ms):
-        """Sets the page_load_alert_time_in_ms of this WebCheck.
-
-        The time in milliseconds that the page must load within for each step to avoid triggering an alert  # noqa: E501
-
-        :param page_load_alert_time_in_ms: The page_load_alert_time_in_ms of this WebCheck.  # noqa: E501
-        :type: int
-        """
-
-        self._page_load_alert_time_in_ms = page_load_alert_time_in_ms
-
-    @property
-    def ignore_ssl(self):
-        """Gets the ignore_ssl of this WebCheck.  # noqa: E501
-
-        Whether or not SSL should be ignored, the default value is true  # noqa: E501
-
-        :return: The ignore_ssl of this WebCheck.  # noqa: E501
-        :rtype: object
-        """
-        return self._ignore_ssl
-
-    @ignore_ssl.setter
-    def ignore_ssl(self, ignore_ssl):
-        """Sets the ignore_ssl of this WebCheck.
-
-        Whether or not SSL should be ignored, the default value is true  # noqa: E501
-
-        :param ignore_ssl: The ignore_ssl of this WebCheck.  # noqa: E501
-        :type: object
-        """
-
-        self._ignore_ssl = ignore_ssl
-
-    @property
-    def steps(self):
-        """Gets the steps of this WebCheck.  # noqa: E501
-
-        An object comprising one or more steps, see the table below for the properties included in each step  # noqa: E501
-
-        :return: The steps of this WebCheck.  # noqa: E501
-        :rtype: list[WebCheckStep]
-        """
-        return self._steps
-
-    @steps.setter
-    def steps(self, steps):
-        """Sets the steps of this WebCheck.
-
-        An object comprising one or more steps, see the table below for the properties included in each step  # noqa: E501
-
-        :param steps: The steps of this WebCheck.  # noqa: E501
-        :type: list[WebCheckStep]
-        """
-
-        self._steps = steps
-
-    @property
-    def alert_expr(self):
-        """Gets the alert_expr of this WebCheck.  # noqa: E501
-
-        The threshold (in days) for triggering SSL certification alerts  # noqa: E501
-
-        :return: The alert_expr of this WebCheck.  # noqa: E501
-        :rtype: str
-        """
-        return self._alert_expr
-
-    @alert_expr.setter
-    def alert_expr(self, alert_expr):
-        """Sets the alert_expr of this WebCheck.
-
-        The threshold (in days) for triggering SSL certification alerts  # noqa: E501
-
-        :param alert_expr: The alert_expr of this WebCheck.  # noqa: E501
-        :type: str
-        """
-
-        self._alert_expr = alert_expr
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,67 +33,46 @@ class StatsDGraph(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'min_value': 'float',
         'max_value': 'float',
-        'namespace': 'str',
-        'vertical_label': 'str',
         'metrics': 'list[StatsDMetricDefinition]',
-        'scale_unit': 'int'
+        'min_value': 'float',
+        'namespace': 'str',
+        'scale_unit': 'int',
+        'vertical_label': 'str'
     }
 
     attribute_map = {
-        'min_value': 'minValue',
         'max_value': 'maxValue',
-        'namespace': 'namespace',
-        'vertical_label': 'verticalLabel',
         'metrics': 'metrics',
-        'scale_unit': 'scaleUnit'
+        'min_value': 'minValue',
+        'namespace': 'namespace',
+        'scale_unit': 'scaleUnit',
+        'vertical_label': 'verticalLabel'
     }
 
-    def __init__(self, min_value=None, max_value=None, namespace=None, vertical_label=None, metrics=None, scale_unit=None):  # noqa: E501
+    def __init__(self, max_value=None, metrics=None, min_value=None, namespace=None, scale_unit=None, vertical_label=None):  # noqa: E501
         """StatsDGraph - a model defined in Swagger"""  # noqa: E501
 
-        self._min_value = None
         self._max_value = None
-        self._namespace = None
-        self._vertical_label = None
         self._metrics = None
+        self._min_value = None
+        self._namespace = None
         self._scale_unit = None
+        self._vertical_label = None
         self.discriminator = None
 
-        if min_value is not None:
-            self.min_value = min_value
         if max_value is not None:
             self.max_value = max_value
-        if namespace is not None:
-            self.namespace = namespace
-        if vertical_label is not None:
-            self.vertical_label = vertical_label
         if metrics is not None:
             self.metrics = metrics
+        if min_value is not None:
+            self.min_value = min_value
+        if namespace is not None:
+            self.namespace = namespace
         if scale_unit is not None:
             self.scale_unit = scale_unit
-
-    @property
-    def min_value(self):
-        """Gets the min_value of this StatsDGraph.  # noqa: E501
-
-
-        :return: The min_value of this StatsDGraph.  # noqa: E501
-        :rtype: float
-        """
-        return self._min_value
-
-    @min_value.setter
-    def min_value(self, min_value):
-        """Sets the min_value of this StatsDGraph.
-
-
-        :param min_value: The min_value of this StatsDGraph.  # noqa: E501
-        :type: float
-        """
-
-        self._min_value = min_value
+        if vertical_label is not None:
+            self.vertical_label = vertical_label
 
     @property
     def max_value(self):
@@ -117,48 +96,6 @@ class StatsDGraph(object):
         self._max_value = max_value
 
     @property
-    def namespace(self):
-        """Gets the namespace of this StatsDGraph.  # noqa: E501
-
-
-        :return: The namespace of this StatsDGraph.  # noqa: E501
-        :rtype: str
-        """
-        return self._namespace
-
-    @namespace.setter
-    def namespace(self, namespace):
-        """Sets the namespace of this StatsDGraph.
-
-
-        :param namespace: The namespace of this StatsDGraph.  # noqa: E501
-        :type: str
-        """
-
-        self._namespace = namespace
-
-    @property
-    def vertical_label(self):
-        """Gets the vertical_label of this StatsDGraph.  # noqa: E501
-
-
-        :return: The vertical_label of this StatsDGraph.  # noqa: E501
-        :rtype: str
-        """
-        return self._vertical_label
-
-    @vertical_label.setter
-    def vertical_label(self, vertical_label):
-        """Sets the vertical_label of this StatsDGraph.
-
-
-        :param vertical_label: The vertical_label of this StatsDGraph.  # noqa: E501
-        :type: str
-        """
-
-        self._vertical_label = vertical_label
-
-    @property
     def metrics(self):
         """Gets the metrics of this StatsDGraph.  # noqa: E501
 
@@ -180,6 +117,48 @@ class StatsDGraph(object):
         self._metrics = metrics
 
     @property
+    def min_value(self):
+        """Gets the min_value of this StatsDGraph.  # noqa: E501
+
+
+        :return: The min_value of this StatsDGraph.  # noqa: E501
+        :rtype: float
+        """
+        return self._min_value
+
+    @min_value.setter
+    def min_value(self, min_value):
+        """Sets the min_value of this StatsDGraph.
+
+
+        :param min_value: The min_value of this StatsDGraph.  # noqa: E501
+        :type: float
+        """
+
+        self._min_value = min_value
+
+    @property
+    def namespace(self):
+        """Gets the namespace of this StatsDGraph.  # noqa: E501
+
+
+        :return: The namespace of this StatsDGraph.  # noqa: E501
+        :rtype: str
+        """
+        return self._namespace
+
+    @namespace.setter
+    def namespace(self, namespace):
+        """Sets the namespace of this StatsDGraph.
+
+
+        :param namespace: The namespace of this StatsDGraph.  # noqa: E501
+        :type: str
+        """
+
+        self._namespace = namespace
+
+    @property
     def scale_unit(self):
         """Gets the scale_unit of this StatsDGraph.  # noqa: E501
 
@@ -199,6 +178,27 @@ class StatsDGraph(object):
         """
 
         self._scale_unit = scale_unit
+
+    @property
+    def vertical_label(self):
+        """Gets the vertical_label of this StatsDGraph.  # noqa: E501
+
+
+        :return: The vertical_label of this StatsDGraph.  # noqa: E501
+        :rtype: str
+        """
+        return self._vertical_label
+
+    @vertical_label.setter
+    def vertical_label(self, vertical_label):
+        """Sets the vertical_label of this StatsDGraph.
+
+
+        :param vertical_label: The vertical_label of this StatsDGraph.  # noqa: E501
+        :type: str
+        """
+
+        self._vertical_label = vertical_label
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,157 +31,48 @@ class DeviceGroupDataSourceDataPointConfig(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'global_alert_expr': 'str',
-        'data_point_name': 'str',
-        'data_point_id': 'int',
-        'disable_alerting': 'bool',
-        'alert_expr_note': 'str',
         'alert_expr': 'str',
-        'data_point_description': 'str'
+        'alert_expr_note': 'str',
+        'data_point_description': 'str',
+        'data_point_id': 'int',
+        'data_point_name': 'str',
+        'disable_alerting': 'bool',
+        'global_alert_expr': 'str'
     }
 
     attribute_map = {
-        'global_alert_expr': 'globalAlertExpr',
-        'data_point_name': 'dataPointName',
-        'data_point_id': 'dataPointId',
-        'disable_alerting': 'disableAlerting',
-        'alert_expr_note': 'alertExprNote',
         'alert_expr': 'alertExpr',
-        'data_point_description': 'dataPointDescription'
+        'alert_expr_note': 'alertExprNote',
+        'data_point_description': 'dataPointDescription',
+        'data_point_id': 'dataPointId',
+        'data_point_name': 'dataPointName',
+        'disable_alerting': 'disableAlerting',
+        'global_alert_expr': 'globalAlertExpr'
     }
 
-    def __init__(self, global_alert_expr=None, data_point_name=None, data_point_id=None, disable_alerting=None, alert_expr_note=None, alert_expr=None, data_point_description=None):  # noqa: E501
+    def __init__(self, alert_expr=None, alert_expr_note=None, data_point_description=None, data_point_id=None, data_point_name=None, disable_alerting=None, global_alert_expr=None):  # noqa: E501
         """DeviceGroupDataSourceDataPointConfig - a model defined in Swagger"""  # noqa: E501
 
-        self._global_alert_expr = None
-        self._data_point_name = None
-        self._data_point_id = None
-        self._disable_alerting = None
-        self._alert_expr_note = None
         self._alert_expr = None
+        self._alert_expr_note = None
         self._data_point_description = None
+        self._data_point_id = None
+        self._data_point_name = None
+        self._disable_alerting = None
+        self._global_alert_expr = None
         self.discriminator = None
 
-        if global_alert_expr is not None:
-            self.global_alert_expr = global_alert_expr
-        self.data_point_name = data_point_name
-        self.data_point_id = data_point_id
-        if disable_alerting is not None:
-            self.disable_alerting = disable_alerting
+        self.alert_expr = alert_expr
         if alert_expr_note is not None:
             self.alert_expr_note = alert_expr_note
-        self.alert_expr = alert_expr
         if data_point_description is not None:
             self.data_point_description = data_point_description
-
-    @property
-    def global_alert_expr(self):
-        """Gets the global_alert_expr of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-
-        :return: The global_alert_expr of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._global_alert_expr
-
-    @global_alert_expr.setter
-    def global_alert_expr(self, global_alert_expr):
-        """Sets the global_alert_expr of this DeviceGroupDataSourceDataPointConfig.
-
-
-        :param global_alert_expr: The global_alert_expr of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
-        """
-
-        self._global_alert_expr = global_alert_expr
-
-    @property
-    def data_point_name(self):
-        """Gets the data_point_name of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-
-        :return: The data_point_name of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_point_name
-
-    @data_point_name.setter
-    def data_point_name(self, data_point_name):
-        """Sets the data_point_name of this DeviceGroupDataSourceDataPointConfig.
-
-
-        :param data_point_name: The data_point_name of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
-        """
-        if data_point_name is None:
-            raise ValueError("Invalid value for `data_point_name`, must not be `None`")  # noqa: E501
-
-        self._data_point_name = data_point_name
-
-    @property
-    def data_point_id(self):
-        """Gets the data_point_id of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-
-        :return: The data_point_id of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_point_id
-
-    @data_point_id.setter
-    def data_point_id(self, data_point_id):
-        """Sets the data_point_id of this DeviceGroupDataSourceDataPointConfig.
-
-
-        :param data_point_id: The data_point_id of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: int
-        """
-        if data_point_id is None:
-            raise ValueError("Invalid value for `data_point_id`, must not be `None`")  # noqa: E501
-
-        self._data_point_id = data_point_id
-
-    @property
-    def disable_alerting(self):
-        """Gets the disable_alerting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-
-        :return: The disable_alerting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: bool
-        """
-        return self._disable_alerting
-
-    @disable_alerting.setter
-    def disable_alerting(self, disable_alerting):
-        """Sets the disable_alerting of this DeviceGroupDataSourceDataPointConfig.
-
-
-        :param disable_alerting: The disable_alerting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: bool
-        """
-
-        self._disable_alerting = disable_alerting
-
-    @property
-    def alert_expr_note(self):
-        """Gets the alert_expr_note of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-
-        :return: The alert_expr_note of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._alert_expr_note
-
-    @alert_expr_note.setter
-    def alert_expr_note(self, alert_expr_note):
-        """Sets the alert_expr_note of this DeviceGroupDataSourceDataPointConfig.
-
-
-        :param alert_expr_note: The alert_expr_note of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
-        """
-
-        self._alert_expr_note = alert_expr_note
+        self.data_point_id = data_point_id
+        self.data_point_name = data_point_name
+        if disable_alerting is not None:
+            self.disable_alerting = disable_alerting
+        if global_alert_expr is not None:
+            self.global_alert_expr = global_alert_expr
 
     @property
     def alert_expr(self):
@@ -207,6 +98,27 @@ class DeviceGroupDataSourceDataPointConfig(object):
         self._alert_expr = alert_expr
 
     @property
+    def alert_expr_note(self):
+        """Gets the alert_expr_note of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The alert_expr_note of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_expr_note
+
+    @alert_expr_note.setter
+    def alert_expr_note(self, alert_expr_note):
+        """Sets the alert_expr_note of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param alert_expr_note: The alert_expr_note of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_expr_note = alert_expr_note
+
+    @property
     def data_point_description(self):
         """Gets the data_point_description of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
 
@@ -226,6 +138,94 @@ class DeviceGroupDataSourceDataPointConfig(object):
         """
 
         self._data_point_description = data_point_description
+
+    @property
+    def data_point_id(self):
+        """Gets the data_point_id of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The data_point_id of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_point_id
+
+    @data_point_id.setter
+    def data_point_id(self, data_point_id):
+        """Sets the data_point_id of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param data_point_id: The data_point_id of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: int
+        """
+        if data_point_id is None:
+            raise ValueError("Invalid value for `data_point_id`, must not be `None`")  # noqa: E501
+
+        self._data_point_id = data_point_id
+
+    @property
+    def data_point_name(self):
+        """Gets the data_point_name of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The data_point_name of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_point_name
+
+    @data_point_name.setter
+    def data_point_name(self, data_point_name):
+        """Sets the data_point_name of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param data_point_name: The data_point_name of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: str
+        """
+        if data_point_name is None:
+            raise ValueError("Invalid value for `data_point_name`, must not be `None`")  # noqa: E501
+
+        self._data_point_name = data_point_name
+
+    @property
+    def disable_alerting(self):
+        """Gets the disable_alerting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The disable_alerting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: bool
+        """
+        return self._disable_alerting
+
+    @disable_alerting.setter
+    def disable_alerting(self, disable_alerting):
+        """Sets the disable_alerting of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param disable_alerting: The disable_alerting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: bool
+        """
+
+        self._disable_alerting = disable_alerting
+
+    @property
+    def global_alert_expr(self):
+        """Gets the global_alert_expr of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The global_alert_expr of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._global_alert_expr
+
+    @global_alert_expr.setter
+    def global_alert_expr(self, global_alert_expr):
+        """Sets the global_alert_expr of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param global_alert_expr: The global_alert_expr of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._global_alert_expr = global_alert_expr
 
     def to_dict(self):
         """Returns the model properties as a dict"""

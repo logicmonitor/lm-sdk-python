@@ -31,47 +31,26 @@ class VirtualDataPoint(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'rpn': 'str',
-        'name': 'str'
+        'name': 'str',
+        'rpn': 'str'
     }
 
     attribute_map = {
-        'rpn': 'rpn',
-        'name': 'name'
+        'name': 'name',
+        'rpn': 'rpn'
     }
 
-    def __init__(self, rpn=None, name=None):  # noqa: E501
+    def __init__(self, name=None, rpn=None):  # noqa: E501
         """VirtualDataPoint - a model defined in Swagger"""  # noqa: E501
 
-        self._rpn = None
         self._name = None
+        self._rpn = None
         self.discriminator = None
 
-        if rpn is not None:
-            self.rpn = rpn
         if name is not None:
             self.name = name
-
-    @property
-    def rpn(self):
-        """Gets the rpn of this VirtualDataPoint.  # noqa: E501
-
-
-        :return: The rpn of this VirtualDataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._rpn
-
-    @rpn.setter
-    def rpn(self, rpn):
-        """Sets the rpn of this VirtualDataPoint.
-
-
-        :param rpn: The rpn of this VirtualDataPoint.  # noqa: E501
-        :type: str
-        """
-
-        self._rpn = rpn
+        if rpn is not None:
+            self.rpn = rpn
 
     @property
     def name(self):
@@ -93,6 +72,27 @@ class VirtualDataPoint(object):
         """
 
         self._name = name
+
+    @property
+    def rpn(self):
+        """Gets the rpn of this VirtualDataPoint.  # noqa: E501
+
+
+        :return: The rpn of this VirtualDataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._rpn
+
+    @rpn.setter
+    def rpn(self, rpn):
+        """Sets the rpn of this VirtualDataPoint.
+
+
+        :param rpn: The rpn of this VirtualDataPoint.  # noqa: E501
+        :type: str
+        """
+
+        self._rpn = rpn
 
     def to_dict(self):
         """Returns the model properties as a dict"""

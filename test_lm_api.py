@@ -708,10 +708,17 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
-    def test_get_device_datasource_instance_alert_setting_list(self):
-        """Test case for get_device_datasource_instance_alert_setting_list
+    def test_get_device_datasource_instance_alert_setting_list_of_device(self):
+        """Test case for get_device_datasource_instance_alert_setting_list_of_device
 
         get a list of alert settings for a device  # noqa: E501
+        """
+        pass
+
+    def test_get_device_datasource_instance_alert_setting_list_of_dsi(self):
+        """Test case for get_device_datasource_instance_alert_setting_list_of_dsi
+
+        get a list of alert settings for a device datasource instance  # noqa: E501
         """
         pass
 
@@ -855,6 +862,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_device_instance_list(self):
+        """Test case for get_device_instance_list
+
+        get device instance list  # noqa: E501
+        """
+        pass
+
     def test_get_device_list(self):
         """Test case for get_device_list
 
@@ -915,6 +929,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for get_logic_module_metadata
 
         get logic module metadata  # noqa: E501
+        """
+        pass
+
+    def test_get_metrics_usage(self):
+        """Test case for get_metrics_usage
+
+        get metrics usage  # noqa: E501
         """
         pass
 

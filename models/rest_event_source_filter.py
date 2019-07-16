@@ -31,62 +31,41 @@ class RestEventSourceFilter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
         'comment': 'str',
         'id': 'int',
-        'value': 'str',
-        'operator': 'str'
+        'name': 'str',
+        'operator': 'str',
+        'value': 'str'
     }
 
     attribute_map = {
-        'name': 'name',
         'comment': 'comment',
         'id': 'id',
-        'value': 'value',
-        'operator': 'operator'
+        'name': 'name',
+        'operator': 'operator',
+        'value': 'value'
     }
 
-    def __init__(self, name=None, comment=None, id=None, value=None, operator=None):  # noqa: E501
+    def __init__(self, comment=None, id=None, name=None, operator=None, value=None):  # noqa: E501
         """RestEventSourceFilter - a model defined in Swagger"""  # noqa: E501
 
-        self._name = None
         self._comment = None
         self._id = None
-        self._value = None
+        self._name = None
         self._operator = None
+        self._value = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
         if comment is not None:
             self.comment = comment
         if id is not None:
             self.id = id
-        if value is not None:
-            self.value = value
+        if name is not None:
+            self.name = name
         if operator is not None:
             self.operator = operator
-
-    @property
-    def name(self):
-        """Gets the name of this RestEventSourceFilter.  # noqa: E501
-
-
-        :return: The name of this RestEventSourceFilter.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this RestEventSourceFilter.
-
-
-        :param name: The name of this RestEventSourceFilter.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
+        if value is not None:
+            self.value = value
 
     @property
     def comment(self):
@@ -131,25 +110,25 @@ class RestEventSourceFilter(object):
         self._id = id
 
     @property
-    def value(self):
-        """Gets the value of this RestEventSourceFilter.  # noqa: E501
+    def name(self):
+        """Gets the name of this RestEventSourceFilter.  # noqa: E501
 
 
-        :return: The value of this RestEventSourceFilter.  # noqa: E501
+        :return: The name of this RestEventSourceFilter.  # noqa: E501
         :rtype: str
         """
-        return self._value
+        return self._name
 
-    @value.setter
-    def value(self, value):
-        """Sets the value of this RestEventSourceFilter.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this RestEventSourceFilter.
 
 
-        :param value: The value of this RestEventSourceFilter.  # noqa: E501
+        :param name: The name of this RestEventSourceFilter.  # noqa: E501
         :type: str
         """
 
-        self._value = value
+        self._name = name
 
     @property
     def operator(self):
@@ -171,6 +150,27 @@ class RestEventSourceFilter(object):
         """
 
         self._operator = operator
+
+    @property
+    def value(self):
+        """Gets the value of this RestEventSourceFilter.  # noqa: E501
+
+
+        :return: The value of this RestEventSourceFilter.  # noqa: E501
+        :rtype: str
+        """
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        """Sets the value of this RestEventSourceFilter.
+
+
+        :param value: The value of this RestEventSourceFilter.  # noqa: E501
+        :type: str
+        """
+
+        self._value = value
 
     def to_dict(self):
         """Returns the model properties as a dict"""

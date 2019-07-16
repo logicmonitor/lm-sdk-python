@@ -31,49 +31,24 @@ class WebResource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
-        'url': 'str'
+        'url': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
-        'type': 'type',
-        'url': 'URL'
+        'url': 'URL',
+        'type': 'type'
     }
 
-    def __init__(self, type=None, url=None):  # noqa: E501
+    def __init__(self, url=None, type=None):  # noqa: E501
         """WebResource - a model defined in Swagger"""  # noqa: E501
 
-        self._type = None
         self._url = None
+        self._type = None
         self.discriminator = None
 
-        self.type = type
         self.url = url
-
-    @property
-    def type(self):
-        """Gets the type of this WebResource.  # noqa: E501
-
-        html | iframe  # noqa: E501
-
-        :return: The type of this WebResource.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this WebResource.
-
-        html | iframe  # noqa: E501
-
-        :param type: The type of this WebResource.  # noqa: E501
-        :type: str
-        """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
-
-        self._type = type
+        self.type = type
 
     @property
     def url(self):
@@ -99,6 +74,31 @@ class WebResource(object):
             raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
 
         self._url = url
+
+    @property
+    def type(self):
+        """Gets the type of this WebResource.  # noqa: E501
+
+        html | iframe  # noqa: E501
+
+        :return: The type of this WebResource.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this WebResource.
+
+        html | iframe  # noqa: E501
+
+        :param type: The type of this WebResource.  # noqa: E501
+        :type: str
+        """
+        if type is None:
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

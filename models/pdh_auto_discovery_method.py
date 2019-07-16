@@ -34,27 +34,27 @@ class PDHAutoDiscoveryMethod(AutoDiscoveryMethod):
     """
     swagger_types = {
         'name': 'str',
-        'obj_regex': 'str',
-        'category': 'str'
+        'category': 'str',
+        'obj_regex': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'obj_regex': 'objRegex',
-        'category': 'category'
+        'category': 'category',
+        'obj_regex': 'objRegex'
     }
 
-    def __init__(self, name=None, obj_regex=None, category=None):  # noqa: E501
+    def __init__(self, name=None, category=None, obj_regex=None):  # noqa: E501
         """PDHAutoDiscoveryMethod - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._obj_regex = None
         self._category = None
+        self._obj_regex = None
         self.discriminator = None
 
         self.name = name
-        self.obj_regex = obj_regex
         self.category = category
+        self.obj_regex = obj_regex
 
     @property
     def name(self):
@@ -80,29 +80,6 @@ class PDHAutoDiscoveryMethod(AutoDiscoveryMethod):
         self._name = name
 
     @property
-    def obj_regex(self):
-        """Gets the obj_regex of this PDHAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The obj_regex of this PDHAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._obj_regex
-
-    @obj_regex.setter
-    def obj_regex(self, obj_regex):
-        """Sets the obj_regex of this PDHAutoDiscoveryMethod.
-
-
-        :param obj_regex: The obj_regex of this PDHAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-        if obj_regex is None:
-            raise ValueError("Invalid value for `obj_regex`, must not be `None`")  # noqa: E501
-
-        self._obj_regex = obj_regex
-
-    @property
     def category(self):
         """Gets the category of this PDHAutoDiscoveryMethod.  # noqa: E501
 
@@ -124,6 +101,29 @@ class PDHAutoDiscoveryMethod(AutoDiscoveryMethod):
             raise ValueError("Invalid value for `category`, must not be `None`")  # noqa: E501
 
         self._category = category
+
+    @property
+    def obj_regex(self):
+        """Gets the obj_regex of this PDHAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The obj_regex of this PDHAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._obj_regex
+
+    @obj_regex.setter
+    def obj_regex(self, obj_regex):
+        """Sets the obj_regex of this PDHAutoDiscoveryMethod.
+
+
+        :param obj_regex: The obj_regex of this PDHAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+        if obj_regex is None:
+            raise ValueError("Invalid value for `obj_regex`, must not be `None`")  # noqa: E501
+
+        self._obj_regex = obj_regex
 
     def to_dict(self):
         """Returns the model properties as a dict"""

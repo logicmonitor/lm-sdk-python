@@ -31,180 +31,96 @@ class NetFlowRecord(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'src_ip': 'str',
-        'percent_usage': 'float',
-        'last_epoch_in_sec': 'int',
-        'if_out': 'int',
         'data_type': 'str',
-        'usage': 'float',
+        'destination_m_bytes': 'float',
         'dst_dns': 'str',
-        'src_port': 'int',
-        'first_epoch_in_sec': 'int',
-        'protocol': 'str',
+        'dst_ip': 'str',
         'dst_port': 'int',
+        'first_epoch_in_sec': 'int',
         'if_in': 'int',
+        'if_out': 'int',
+        'last_epoch_in_sec': 'int',
+        'percent_usage': 'float',
+        'protocol': 'str',
         'source_m_bytes': 'float',
         'src_dns': 'str',
-        'destination_m_bytes': 'float',
-        'dst_ip': 'str'
+        'src_ip': 'str',
+        'src_port': 'int',
+        'usage': 'float'
     }
 
     attribute_map = {
-        'src_ip': 'srcIP',
-        'percent_usage': 'percentUsage',
-        'last_epoch_in_sec': 'lastEpochInSec',
-        'if_out': 'ifOut',
         'data_type': 'dataType',
-        'usage': 'usage',
+        'destination_m_bytes': 'destinationMBytes',
         'dst_dns': 'dstDNS',
-        'src_port': 'srcPort',
-        'first_epoch_in_sec': 'firstEpochInSec',
-        'protocol': 'protocol',
+        'dst_ip': 'dstIP',
         'dst_port': 'dstPort',
+        'first_epoch_in_sec': 'firstEpochInSec',
         'if_in': 'ifIn',
+        'if_out': 'ifOut',
+        'last_epoch_in_sec': 'lastEpochInSec',
+        'percent_usage': 'percentUsage',
+        'protocol': 'protocol',
         'source_m_bytes': 'sourceMBytes',
         'src_dns': 'srcDNS',
-        'destination_m_bytes': 'destinationMBytes',
-        'dst_ip': 'dstIP'
+        'src_ip': 'srcIP',
+        'src_port': 'srcPort',
+        'usage': 'usage'
     }
 
-    def __init__(self, src_ip=None, percent_usage=None, last_epoch_in_sec=None, if_out=None, data_type=None, usage=None, dst_dns=None, src_port=None, first_epoch_in_sec=None, protocol=None, dst_port=None, if_in=None, source_m_bytes=None, src_dns=None, destination_m_bytes=None, dst_ip=None):  # noqa: E501
+    def __init__(self, data_type=None, destination_m_bytes=None, dst_dns=None, dst_ip=None, dst_port=None, first_epoch_in_sec=None, if_in=None, if_out=None, last_epoch_in_sec=None, percent_usage=None, protocol=None, source_m_bytes=None, src_dns=None, src_ip=None, src_port=None, usage=None):  # noqa: E501
         """NetFlowRecord - a model defined in Swagger"""  # noqa: E501
 
-        self._src_ip = None
-        self._percent_usage = None
-        self._last_epoch_in_sec = None
-        self._if_out = None
         self._data_type = None
-        self._usage = None
+        self._destination_m_bytes = None
         self._dst_dns = None
-        self._src_port = None
-        self._first_epoch_in_sec = None
-        self._protocol = None
+        self._dst_ip = None
         self._dst_port = None
+        self._first_epoch_in_sec = None
         self._if_in = None
+        self._if_out = None
+        self._last_epoch_in_sec = None
+        self._percent_usage = None
+        self._protocol = None
         self._source_m_bytes = None
         self._src_dns = None
-        self._destination_m_bytes = None
-        self._dst_ip = None
+        self._src_ip = None
+        self._src_port = None
+        self._usage = None
         self.discriminator = None
 
-        if src_ip is not None:
-            self.src_ip = src_ip
-        if percent_usage is not None:
-            self.percent_usage = percent_usage
-        if last_epoch_in_sec is not None:
-            self.last_epoch_in_sec = last_epoch_in_sec
-        if if_out is not None:
-            self.if_out = if_out
         if data_type is not None:
             self.data_type = data_type
-        if usage is not None:
-            self.usage = usage
+        if destination_m_bytes is not None:
+            self.destination_m_bytes = destination_m_bytes
         if dst_dns is not None:
             self.dst_dns = dst_dns
-        if src_port is not None:
-            self.src_port = src_port
-        if first_epoch_in_sec is not None:
-            self.first_epoch_in_sec = first_epoch_in_sec
-        if protocol is not None:
-            self.protocol = protocol
+        if dst_ip is not None:
+            self.dst_ip = dst_ip
         if dst_port is not None:
             self.dst_port = dst_port
+        if first_epoch_in_sec is not None:
+            self.first_epoch_in_sec = first_epoch_in_sec
         if if_in is not None:
             self.if_in = if_in
+        if if_out is not None:
+            self.if_out = if_out
+        if last_epoch_in_sec is not None:
+            self.last_epoch_in_sec = last_epoch_in_sec
+        if percent_usage is not None:
+            self.percent_usage = percent_usage
+        if protocol is not None:
+            self.protocol = protocol
         if source_m_bytes is not None:
             self.source_m_bytes = source_m_bytes
         if src_dns is not None:
             self.src_dns = src_dns
-        if destination_m_bytes is not None:
-            self.destination_m_bytes = destination_m_bytes
-        if dst_ip is not None:
-            self.dst_ip = dst_ip
-
-    @property
-    def src_ip(self):
-        """Gets the src_ip of this NetFlowRecord.  # noqa: E501
-
-
-        :return: The src_ip of this NetFlowRecord.  # noqa: E501
-        :rtype: str
-        """
-        return self._src_ip
-
-    @src_ip.setter
-    def src_ip(self, src_ip):
-        """Sets the src_ip of this NetFlowRecord.
-
-
-        :param src_ip: The src_ip of this NetFlowRecord.  # noqa: E501
-        :type: str
-        """
-
-        self._src_ip = src_ip
-
-    @property
-    def percent_usage(self):
-        """Gets the percent_usage of this NetFlowRecord.  # noqa: E501
-
-
-        :return: The percent_usage of this NetFlowRecord.  # noqa: E501
-        :rtype: float
-        """
-        return self._percent_usage
-
-    @percent_usage.setter
-    def percent_usage(self, percent_usage):
-        """Sets the percent_usage of this NetFlowRecord.
-
-
-        :param percent_usage: The percent_usage of this NetFlowRecord.  # noqa: E501
-        :type: float
-        """
-
-        self._percent_usage = percent_usage
-
-    @property
-    def last_epoch_in_sec(self):
-        """Gets the last_epoch_in_sec of this NetFlowRecord.  # noqa: E501
-
-
-        :return: The last_epoch_in_sec of this NetFlowRecord.  # noqa: E501
-        :rtype: int
-        """
-        return self._last_epoch_in_sec
-
-    @last_epoch_in_sec.setter
-    def last_epoch_in_sec(self, last_epoch_in_sec):
-        """Sets the last_epoch_in_sec of this NetFlowRecord.
-
-
-        :param last_epoch_in_sec: The last_epoch_in_sec of this NetFlowRecord.  # noqa: E501
-        :type: int
-        """
-
-        self._last_epoch_in_sec = last_epoch_in_sec
-
-    @property
-    def if_out(self):
-        """Gets the if_out of this NetFlowRecord.  # noqa: E501
-
-
-        :return: The if_out of this NetFlowRecord.  # noqa: E501
-        :rtype: int
-        """
-        return self._if_out
-
-    @if_out.setter
-    def if_out(self, if_out):
-        """Sets the if_out of this NetFlowRecord.
-
-
-        :param if_out: The if_out of this NetFlowRecord.  # noqa: E501
-        :type: int
-        """
-
-        self._if_out = if_out
+        if src_ip is not None:
+            self.src_ip = src_ip
+        if src_port is not None:
+            self.src_port = src_port
+        if usage is not None:
+            self.usage = usage
 
     @property
     def data_type(self):
@@ -228,25 +144,25 @@ class NetFlowRecord(object):
         self._data_type = data_type
 
     @property
-    def usage(self):
-        """Gets the usage of this NetFlowRecord.  # noqa: E501
+    def destination_m_bytes(self):
+        """Gets the destination_m_bytes of this NetFlowRecord.  # noqa: E501
 
 
-        :return: The usage of this NetFlowRecord.  # noqa: E501
+        :return: The destination_m_bytes of this NetFlowRecord.  # noqa: E501
         :rtype: float
         """
-        return self._usage
+        return self._destination_m_bytes
 
-    @usage.setter
-    def usage(self, usage):
-        """Sets the usage of this NetFlowRecord.
+    @destination_m_bytes.setter
+    def destination_m_bytes(self, destination_m_bytes):
+        """Sets the destination_m_bytes of this NetFlowRecord.
 
 
-        :param usage: The usage of this NetFlowRecord.  # noqa: E501
+        :param destination_m_bytes: The destination_m_bytes of this NetFlowRecord.  # noqa: E501
         :type: float
         """
 
-        self._usage = usage
+        self._destination_m_bytes = destination_m_bytes
 
     @property
     def dst_dns(self):
@@ -270,67 +186,25 @@ class NetFlowRecord(object):
         self._dst_dns = dst_dns
 
     @property
-    def src_port(self):
-        """Gets the src_port of this NetFlowRecord.  # noqa: E501
+    def dst_ip(self):
+        """Gets the dst_ip of this NetFlowRecord.  # noqa: E501
 
 
-        :return: The src_port of this NetFlowRecord.  # noqa: E501
-        :rtype: int
-        """
-        return self._src_port
-
-    @src_port.setter
-    def src_port(self, src_port):
-        """Sets the src_port of this NetFlowRecord.
-
-
-        :param src_port: The src_port of this NetFlowRecord.  # noqa: E501
-        :type: int
-        """
-
-        self._src_port = src_port
-
-    @property
-    def first_epoch_in_sec(self):
-        """Gets the first_epoch_in_sec of this NetFlowRecord.  # noqa: E501
-
-
-        :return: The first_epoch_in_sec of this NetFlowRecord.  # noqa: E501
-        :rtype: int
-        """
-        return self._first_epoch_in_sec
-
-    @first_epoch_in_sec.setter
-    def first_epoch_in_sec(self, first_epoch_in_sec):
-        """Sets the first_epoch_in_sec of this NetFlowRecord.
-
-
-        :param first_epoch_in_sec: The first_epoch_in_sec of this NetFlowRecord.  # noqa: E501
-        :type: int
-        """
-
-        self._first_epoch_in_sec = first_epoch_in_sec
-
-    @property
-    def protocol(self):
-        """Gets the protocol of this NetFlowRecord.  # noqa: E501
-
-
-        :return: The protocol of this NetFlowRecord.  # noqa: E501
+        :return: The dst_ip of this NetFlowRecord.  # noqa: E501
         :rtype: str
         """
-        return self._protocol
+        return self._dst_ip
 
-    @protocol.setter
-    def protocol(self, protocol):
-        """Sets the protocol of this NetFlowRecord.
+    @dst_ip.setter
+    def dst_ip(self, dst_ip):
+        """Sets the dst_ip of this NetFlowRecord.
 
 
-        :param protocol: The protocol of this NetFlowRecord.  # noqa: E501
+        :param dst_ip: The dst_ip of this NetFlowRecord.  # noqa: E501
         :type: str
         """
 
-        self._protocol = protocol
+        self._dst_ip = dst_ip
 
     @property
     def dst_port(self):
@@ -354,6 +228,27 @@ class NetFlowRecord(object):
         self._dst_port = dst_port
 
     @property
+    def first_epoch_in_sec(self):
+        """Gets the first_epoch_in_sec of this NetFlowRecord.  # noqa: E501
+
+
+        :return: The first_epoch_in_sec of this NetFlowRecord.  # noqa: E501
+        :rtype: int
+        """
+        return self._first_epoch_in_sec
+
+    @first_epoch_in_sec.setter
+    def first_epoch_in_sec(self, first_epoch_in_sec):
+        """Sets the first_epoch_in_sec of this NetFlowRecord.
+
+
+        :param first_epoch_in_sec: The first_epoch_in_sec of this NetFlowRecord.  # noqa: E501
+        :type: int
+        """
+
+        self._first_epoch_in_sec = first_epoch_in_sec
+
+    @property
     def if_in(self):
         """Gets the if_in of this NetFlowRecord.  # noqa: E501
 
@@ -373,6 +268,90 @@ class NetFlowRecord(object):
         """
 
         self._if_in = if_in
+
+    @property
+    def if_out(self):
+        """Gets the if_out of this NetFlowRecord.  # noqa: E501
+
+
+        :return: The if_out of this NetFlowRecord.  # noqa: E501
+        :rtype: int
+        """
+        return self._if_out
+
+    @if_out.setter
+    def if_out(self, if_out):
+        """Sets the if_out of this NetFlowRecord.
+
+
+        :param if_out: The if_out of this NetFlowRecord.  # noqa: E501
+        :type: int
+        """
+
+        self._if_out = if_out
+
+    @property
+    def last_epoch_in_sec(self):
+        """Gets the last_epoch_in_sec of this NetFlowRecord.  # noqa: E501
+
+
+        :return: The last_epoch_in_sec of this NetFlowRecord.  # noqa: E501
+        :rtype: int
+        """
+        return self._last_epoch_in_sec
+
+    @last_epoch_in_sec.setter
+    def last_epoch_in_sec(self, last_epoch_in_sec):
+        """Sets the last_epoch_in_sec of this NetFlowRecord.
+
+
+        :param last_epoch_in_sec: The last_epoch_in_sec of this NetFlowRecord.  # noqa: E501
+        :type: int
+        """
+
+        self._last_epoch_in_sec = last_epoch_in_sec
+
+    @property
+    def percent_usage(self):
+        """Gets the percent_usage of this NetFlowRecord.  # noqa: E501
+
+
+        :return: The percent_usage of this NetFlowRecord.  # noqa: E501
+        :rtype: float
+        """
+        return self._percent_usage
+
+    @percent_usage.setter
+    def percent_usage(self, percent_usage):
+        """Sets the percent_usage of this NetFlowRecord.
+
+
+        :param percent_usage: The percent_usage of this NetFlowRecord.  # noqa: E501
+        :type: float
+        """
+
+        self._percent_usage = percent_usage
+
+    @property
+    def protocol(self):
+        """Gets the protocol of this NetFlowRecord.  # noqa: E501
+
+
+        :return: The protocol of this NetFlowRecord.  # noqa: E501
+        :rtype: str
+        """
+        return self._protocol
+
+    @protocol.setter
+    def protocol(self, protocol):
+        """Sets the protocol of this NetFlowRecord.
+
+
+        :param protocol: The protocol of this NetFlowRecord.  # noqa: E501
+        :type: str
+        """
+
+        self._protocol = protocol
 
     @property
     def source_m_bytes(self):
@@ -417,46 +396,67 @@ class NetFlowRecord(object):
         self._src_dns = src_dns
 
     @property
-    def destination_m_bytes(self):
-        """Gets the destination_m_bytes of this NetFlowRecord.  # noqa: E501
+    def src_ip(self):
+        """Gets the src_ip of this NetFlowRecord.  # noqa: E501
 
 
-        :return: The destination_m_bytes of this NetFlowRecord.  # noqa: E501
-        :rtype: float
-        """
-        return self._destination_m_bytes
-
-    @destination_m_bytes.setter
-    def destination_m_bytes(self, destination_m_bytes):
-        """Sets the destination_m_bytes of this NetFlowRecord.
-
-
-        :param destination_m_bytes: The destination_m_bytes of this NetFlowRecord.  # noqa: E501
-        :type: float
-        """
-
-        self._destination_m_bytes = destination_m_bytes
-
-    @property
-    def dst_ip(self):
-        """Gets the dst_ip of this NetFlowRecord.  # noqa: E501
-
-
-        :return: The dst_ip of this NetFlowRecord.  # noqa: E501
+        :return: The src_ip of this NetFlowRecord.  # noqa: E501
         :rtype: str
         """
-        return self._dst_ip
+        return self._src_ip
 
-    @dst_ip.setter
-    def dst_ip(self, dst_ip):
-        """Sets the dst_ip of this NetFlowRecord.
+    @src_ip.setter
+    def src_ip(self, src_ip):
+        """Sets the src_ip of this NetFlowRecord.
 
 
-        :param dst_ip: The dst_ip of this NetFlowRecord.  # noqa: E501
+        :param src_ip: The src_ip of this NetFlowRecord.  # noqa: E501
         :type: str
         """
 
-        self._dst_ip = dst_ip
+        self._src_ip = src_ip
+
+    @property
+    def src_port(self):
+        """Gets the src_port of this NetFlowRecord.  # noqa: E501
+
+
+        :return: The src_port of this NetFlowRecord.  # noqa: E501
+        :rtype: int
+        """
+        return self._src_port
+
+    @src_port.setter
+    def src_port(self, src_port):
+        """Sets the src_port of this NetFlowRecord.
+
+
+        :param src_port: The src_port of this NetFlowRecord.  # noqa: E501
+        :type: int
+        """
+
+        self._src_port = src_port
+
+    @property
+    def usage(self):
+        """Gets the usage of this NetFlowRecord.  # noqa: E501
+
+
+        :return: The usage of this NetFlowRecord.  # noqa: E501
+        :rtype: float
+        """
+        return self._usage
+
+    @usage.setter
+    def usage(self, usage):
+        """Sets the usage of this NetFlowRecord.
+
+
+        :param usage: The usage of this NetFlowRecord.  # noqa: E501
+        :type: float
+        """
+
+        self._usage = usage
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,56 +31,35 @@ class OpsNoteTagBase(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'update_on_in_sec': 'int',
         'created_on_in_sec': 'int',
+        'id': 'str',
         'name': 'str',
-        'id': 'str'
+        'update_on_in_sec': 'int'
     }
 
     attribute_map = {
-        'update_on_in_sec': 'updateOnInSec',
         'created_on_in_sec': 'createdOnInSec',
+        'id': 'id',
         'name': 'name',
-        'id': 'id'
+        'update_on_in_sec': 'updateOnInSec'
     }
 
-    def __init__(self, update_on_in_sec=None, created_on_in_sec=None, name=None, id=None):  # noqa: E501
+    def __init__(self, created_on_in_sec=None, id=None, name=None, update_on_in_sec=None):  # noqa: E501
         """OpsNoteTagBase - a model defined in Swagger"""  # noqa: E501
 
-        self._update_on_in_sec = None
         self._created_on_in_sec = None
-        self._name = None
         self._id = None
+        self._name = None
+        self._update_on_in_sec = None
         self.discriminator = None
 
-        if update_on_in_sec is not None:
-            self.update_on_in_sec = update_on_in_sec
         if created_on_in_sec is not None:
             self.created_on_in_sec = created_on_in_sec
-        self.name = name
         if id is not None:
             self.id = id
-
-    @property
-    def update_on_in_sec(self):
-        """Gets the update_on_in_sec of this OpsNoteTagBase.  # noqa: E501
-
-
-        :return: The update_on_in_sec of this OpsNoteTagBase.  # noqa: E501
-        :rtype: int
-        """
-        return self._update_on_in_sec
-
-    @update_on_in_sec.setter
-    def update_on_in_sec(self, update_on_in_sec):
-        """Sets the update_on_in_sec of this OpsNoteTagBase.
-
-
-        :param update_on_in_sec: The update_on_in_sec of this OpsNoteTagBase.  # noqa: E501
-        :type: int
-        """
-
-        self._update_on_in_sec = update_on_in_sec
+        self.name = name
+        if update_on_in_sec is not None:
+            self.update_on_in_sec = update_on_in_sec
 
     @property
     def created_on_in_sec(self):
@@ -102,6 +81,27 @@ class OpsNoteTagBase(object):
         """
 
         self._created_on_in_sec = created_on_in_sec
+
+    @property
+    def id(self):
+        """Gets the id of this OpsNoteTagBase.  # noqa: E501
+
+
+        :return: The id of this OpsNoteTagBase.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this OpsNoteTagBase.
+
+
+        :param id: The id of this OpsNoteTagBase.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def name(self):
@@ -129,25 +129,25 @@ class OpsNoteTagBase(object):
         self._name = name
 
     @property
-    def id(self):
-        """Gets the id of this OpsNoteTagBase.  # noqa: E501
+    def update_on_in_sec(self):
+        """Gets the update_on_in_sec of this OpsNoteTagBase.  # noqa: E501
 
 
-        :return: The id of this OpsNoteTagBase.  # noqa: E501
-        :rtype: str
+        :return: The update_on_in_sec of this OpsNoteTagBase.  # noqa: E501
+        :rtype: int
         """
-        return self._id
+        return self._update_on_in_sec
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this OpsNoteTagBase.
+    @update_on_in_sec.setter
+    def update_on_in_sec(self, update_on_in_sec):
+        """Sets the update_on_in_sec of this OpsNoteTagBase.
 
 
-        :param id: The id of this OpsNoteTagBase.  # noqa: E501
-        :type: str
+        :param update_on_in_sec: The update_on_in_sec of this OpsNoteTagBase.  # noqa: E501
+        :type: int
         """
 
-        self._id = id
+        self._update_on_in_sec = update_on_in_sec
 
     def to_dict(self):
         """Returns the model properties as a dict"""

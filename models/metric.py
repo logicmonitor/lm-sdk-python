@@ -31,40 +31,103 @@ class Metric(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data_source_id': 'int',
-        'data_point_name': 'str',
         'data_point_id': 'int',
-        'instances': 'str',
-        'data_source_full_name': 'str'
+        'data_point_name': 'str',
+        'data_source_full_name': 'str',
+        'data_source_id': 'int',
+        'instances': 'str'
     }
 
     attribute_map = {
-        'data_source_id': 'dataSourceId',
-        'data_point_name': 'dataPointName',
         'data_point_id': 'dataPointId',
-        'instances': 'instances',
-        'data_source_full_name': 'dataSourceFullName'
+        'data_point_name': 'dataPointName',
+        'data_source_full_name': 'dataSourceFullName',
+        'data_source_id': 'dataSourceId',
+        'instances': 'instances'
     }
 
-    def __init__(self, data_source_id=None, data_point_name=None, data_point_id=None, instances=None, data_source_full_name=None):  # noqa: E501
+    def __init__(self, data_point_id=None, data_point_name=None, data_source_full_name=None, data_source_id=None, instances=None):  # noqa: E501
         """Metric - a model defined in Swagger"""  # noqa: E501
 
-        self._data_source_id = None
-        self._data_point_name = None
         self._data_point_id = None
-        self._instances = None
+        self._data_point_name = None
         self._data_source_full_name = None
+        self._data_source_id = None
+        self._instances = None
         self.discriminator = None
 
-        self.data_source_id = data_source_id
-        if data_point_name is not None:
-            self.data_point_name = data_point_name
         if data_point_id is not None:
             self.data_point_id = data_point_id
-        if instances is not None:
-            self.instances = instances
+        if data_point_name is not None:
+            self.data_point_name = data_point_name
         if data_source_full_name is not None:
             self.data_source_full_name = data_source_full_name
+        self.data_source_id = data_source_id
+        if instances is not None:
+            self.instances = instances
+
+    @property
+    def data_point_id(self):
+        """Gets the data_point_id of this Metric.  # noqa: E501
+
+
+        :return: The data_point_id of this Metric.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_point_id
+
+    @data_point_id.setter
+    def data_point_id(self, data_point_id):
+        """Sets the data_point_id of this Metric.
+
+
+        :param data_point_id: The data_point_id of this Metric.  # noqa: E501
+        :type: int
+        """
+
+        self._data_point_id = data_point_id
+
+    @property
+    def data_point_name(self):
+        """Gets the data_point_name of this Metric.  # noqa: E501
+
+
+        :return: The data_point_name of this Metric.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_point_name
+
+    @data_point_name.setter
+    def data_point_name(self, data_point_name):
+        """Sets the data_point_name of this Metric.
+
+
+        :param data_point_name: The data_point_name of this Metric.  # noqa: E501
+        :type: str
+        """
+
+        self._data_point_name = data_point_name
+
+    @property
+    def data_source_full_name(self):
+        """Gets the data_source_full_name of this Metric.  # noqa: E501
+
+
+        :return: The data_source_full_name of this Metric.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_source_full_name
+
+    @data_source_full_name.setter
+    def data_source_full_name(self, data_source_full_name):
+        """Sets the data_source_full_name of this Metric.
+
+
+        :param data_source_full_name: The data_source_full_name of this Metric.  # noqa: E501
+        :type: str
+        """
+
+        self._data_source_full_name = data_source_full_name
 
     @property
     def data_source_id(self):
@@ -90,48 +153,6 @@ class Metric(object):
         self._data_source_id = data_source_id
 
     @property
-    def data_point_name(self):
-        """Gets the data_point_name of this Metric.  # noqa: E501
-
-
-        :return: The data_point_name of this Metric.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_point_name
-
-    @data_point_name.setter
-    def data_point_name(self, data_point_name):
-        """Sets the data_point_name of this Metric.
-
-
-        :param data_point_name: The data_point_name of this Metric.  # noqa: E501
-        :type: str
-        """
-
-        self._data_point_name = data_point_name
-
-    @property
-    def data_point_id(self):
-        """Gets the data_point_id of this Metric.  # noqa: E501
-
-
-        :return: The data_point_id of this Metric.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_point_id
-
-    @data_point_id.setter
-    def data_point_id(self, data_point_id):
-        """Sets the data_point_id of this Metric.
-
-
-        :param data_point_id: The data_point_id of this Metric.  # noqa: E501
-        :type: int
-        """
-
-        self._data_point_id = data_point_id
-
-    @property
     def instances(self):
         """Gets the instances of this Metric.  # noqa: E501
 
@@ -151,27 +172,6 @@ class Metric(object):
         """
 
         self._instances = instances
-
-    @property
-    def data_source_full_name(self):
-        """Gets the data_source_full_name of this Metric.  # noqa: E501
-
-
-        :return: The data_source_full_name of this Metric.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_source_full_name
-
-    @data_source_full_name.setter
-    def data_source_full_name(self, data_source_full_name):
-        """Sets the data_source_full_name of this Metric.
-
-
-        :param data_source_full_name: The data_source_full_name of this Metric.  # noqa: E501
-        :type: str
-        """
-
-        self._data_source_full_name = data_source_full_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

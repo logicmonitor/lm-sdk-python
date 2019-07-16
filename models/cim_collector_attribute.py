@@ -35,37 +35,39 @@ class CIMCollectorAttribute(CollectorAttribute):
     """
     swagger_types = {
         'name': 'str',
+        'fields': 'list[DataSourceAttribute]',
         'ip': 'str',
         'namespace': 'str',
         'query_class': 'str',
         'query_index': 'str',
-        'query_value': 'str',
-        'fields': 'list[DataSourceAttribute]'
+        'query_value': 'str'
     }
 
     attribute_map = {
         'name': 'name',
+        'fields': 'fields',
         'ip': 'ip',
         'namespace': 'namespace',
         'query_class': 'queryClass',
         'query_index': 'queryIndex',
-        'query_value': 'queryValue',
-        'fields': 'fields'
+        'query_value': 'queryValue'
     }
 
-    def __init__(self, name=None, ip=None, namespace=None, query_class=None, query_index=None, query_value=None, fields=None):  # noqa: E501
+    def __init__(self, name=None, fields=None, ip=None, namespace=None, query_class=None, query_index=None, query_value=None):  # noqa: E501
         """CIMCollectorAttribute - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
+        self._fields = None
         self._ip = None
         self._namespace = None
         self._query_class = None
         self._query_index = None
         self._query_value = None
-        self._fields = None
         self.discriminator = None
 
         self.name = name
+        if fields is not None:
+            self.fields = fields
         if ip is not None:
             self.ip = ip
         if namespace is not None:
@@ -76,8 +78,6 @@ class CIMCollectorAttribute(CollectorAttribute):
             self.query_index = query_index
         if query_value is not None:
             self.query_value = query_value
-        if fields is not None:
-            self.fields = fields
 
     @property
     def name(self):
@@ -101,6 +101,27 @@ class CIMCollectorAttribute(CollectorAttribute):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def fields(self):
+        """Gets the fields of this CIMCollectorAttribute.  # noqa: E501
+
+
+        :return: The fields of this CIMCollectorAttribute.  # noqa: E501
+        :rtype: list[DataSourceAttribute]
+        """
+        return self._fields
+
+    @fields.setter
+    def fields(self, fields):
+        """Sets the fields of this CIMCollectorAttribute.
+
+
+        :param fields: The fields of this CIMCollectorAttribute.  # noqa: E501
+        :type: list[DataSourceAttribute]
+        """
+
+        self._fields = fields
 
     @property
     def ip(self):
@@ -206,27 +227,6 @@ class CIMCollectorAttribute(CollectorAttribute):
         """
 
         self._query_value = query_value
-
-    @property
-    def fields(self):
-        """Gets the fields of this CIMCollectorAttribute.  # noqa: E501
-
-
-        :return: The fields of this CIMCollectorAttribute.  # noqa: E501
-        :rtype: list[DataSourceAttribute]
-        """
-        return self._fields
-
-    @fields.setter
-    def fields(self, fields):
-        """Sets the fields of this CIMCollectorAttribute.
-
-
-        :param fields: The fields of this CIMCollectorAttribute.  # noqa: E501
-        :type: list[DataSourceAttribute]
-        """
-
-        self._fields = fields
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,52 +31,29 @@ class Macro(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'variable': 'str',
         'description': 'str',
-        'value': 'str'
+        'value': 'str',
+        'variable': 'str'
     }
 
     attribute_map = {
-        'variable': 'variable',
         'description': 'description',
-        'value': 'value'
+        'value': 'value',
+        'variable': 'variable'
     }
 
-    def __init__(self, variable=None, description=None, value=None):  # noqa: E501
+    def __init__(self, description=None, value=None, variable=None):  # noqa: E501
         """Macro - a model defined in Swagger"""  # noqa: E501
 
-        self._variable = None
         self._description = None
         self._value = None
+        self._variable = None
         self.discriminator = None
 
-        self.variable = variable
         if description is not None:
             self.description = description
         self.value = value
-
-    @property
-    def variable(self):
-        """Gets the variable of this Macro.  # noqa: E501
-
-
-        :return: The variable of this Macro.  # noqa: E501
-        :rtype: str
-        """
-        return self._variable
-
-    @variable.setter
-    def variable(self, variable):
-        """Sets the variable of this Macro.
-
-
-        :param variable: The variable of this Macro.  # noqa: E501
-        :type: str
-        """
-        if variable is None:
-            raise ValueError("Invalid value for `variable`, must not be `None`")  # noqa: E501
-
-        self._variable = variable
+        self.variable = variable
 
     @property
     def description(self):
@@ -121,6 +98,29 @@ class Macro(object):
             raise ValueError("Invalid value for `value`, must not be `None`")  # noqa: E501
 
         self._value = value
+
+    @property
+    def variable(self):
+        """Gets the variable of this Macro.  # noqa: E501
+
+
+        :return: The variable of this Macro.  # noqa: E501
+        :rtype: str
+        """
+        return self._variable
+
+    @variable.setter
+    def variable(self, variable):
+        """Sets the variable of this Macro.
+
+
+        :param variable: The variable of this Macro.  # noqa: E501
+        :type: str
+        """
+        if variable is None:
+            raise ValueError("Invalid value for `variable`, must not be `None`")  # noqa: E501
+
+        self._variable = variable
 
     def to_dict(self):
         """Returns the model properties as a dict"""

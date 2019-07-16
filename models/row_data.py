@@ -34,30 +34,30 @@ class RowData(object):
     """
     swagger_types = {
         'cells': 'list[CellData]',
-        'device_id': 'int',
-        'device_display_name': 'str'
+        'device_display_name': 'str',
+        'device_id': 'int'
     }
 
     attribute_map = {
         'cells': 'cells',
-        'device_id': 'deviceId',
-        'device_display_name': 'deviceDisplayName'
+        'device_display_name': 'deviceDisplayName',
+        'device_id': 'deviceId'
     }
 
-    def __init__(self, cells=None, device_id=None, device_display_name=None):  # noqa: E501
+    def __init__(self, cells=None, device_display_name=None, device_id=None):  # noqa: E501
         """RowData - a model defined in Swagger"""  # noqa: E501
 
         self._cells = None
-        self._device_id = None
         self._device_display_name = None
+        self._device_id = None
         self.discriminator = None
 
         if cells is not None:
             self.cells = cells
-        if device_id is not None:
-            self.device_id = device_id
         if device_display_name is not None:
             self.device_display_name = device_display_name
+        if device_id is not None:
+            self.device_id = device_id
 
     @property
     def cells(self):
@@ -81,27 +81,6 @@ class RowData(object):
         self._cells = cells
 
     @property
-    def device_id(self):
-        """Gets the device_id of this RowData.  # noqa: E501
-
-
-        :return: The device_id of this RowData.  # noqa: E501
-        :rtype: int
-        """
-        return self._device_id
-
-    @device_id.setter
-    def device_id(self, device_id):
-        """Sets the device_id of this RowData.
-
-
-        :param device_id: The device_id of this RowData.  # noqa: E501
-        :type: int
-        """
-
-        self._device_id = device_id
-
-    @property
     def device_display_name(self):
         """Gets the device_display_name of this RowData.  # noqa: E501
 
@@ -121,6 +100,27 @@ class RowData(object):
         """
 
         self._device_display_name = device_display_name
+
+    @property
+    def device_id(self):
+        """Gets the device_id of this RowData.  # noqa: E501
+
+
+        :return: The device_id of this RowData.  # noqa: E501
+        :rtype: int
+        """
+        return self._device_id
+
+    @device_id.setter
+    def device_id(self, device_id):
+        """Sets the device_id of this RowData.
+
+
+        :param device_id: The device_id of this RowData.  # noqa: E501
+        :type: int
+        """
+
+        self._device_id = device_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

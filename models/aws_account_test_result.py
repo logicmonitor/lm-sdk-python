@@ -31,52 +31,31 @@ class AwsAccountTestResult(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'no_permission_services': 'list[str]',
         'detail_link': 'str',
+        'no_permission_services': 'list[str]',
         'non_permission_errors': 'list[str]'
     }
 
     attribute_map = {
-        'no_permission_services': 'noPermissionServices',
         'detail_link': 'detailLink',
+        'no_permission_services': 'noPermissionServices',
         'non_permission_errors': 'nonPermissionErrors'
     }
 
-    def __init__(self, no_permission_services=None, detail_link=None, non_permission_errors=None):  # noqa: E501
+    def __init__(self, detail_link=None, no_permission_services=None, non_permission_errors=None):  # noqa: E501
         """AwsAccountTestResult - a model defined in Swagger"""  # noqa: E501
 
-        self._no_permission_services = None
         self._detail_link = None
+        self._no_permission_services = None
         self._non_permission_errors = None
         self.discriminator = None
 
-        if no_permission_services is not None:
-            self.no_permission_services = no_permission_services
         if detail_link is not None:
             self.detail_link = detail_link
+        if no_permission_services is not None:
+            self.no_permission_services = no_permission_services
         if non_permission_errors is not None:
             self.non_permission_errors = non_permission_errors
-
-    @property
-    def no_permission_services(self):
-        """Gets the no_permission_services of this AwsAccountTestResult.  # noqa: E501
-
-
-        :return: The no_permission_services of this AwsAccountTestResult.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._no_permission_services
-
-    @no_permission_services.setter
-    def no_permission_services(self, no_permission_services):
-        """Sets the no_permission_services of this AwsAccountTestResult.
-
-
-        :param no_permission_services: The no_permission_services of this AwsAccountTestResult.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._no_permission_services = no_permission_services
 
     @property
     def detail_link(self):
@@ -98,6 +77,27 @@ class AwsAccountTestResult(object):
         """
 
         self._detail_link = detail_link
+
+    @property
+    def no_permission_services(self):
+        """Gets the no_permission_services of this AwsAccountTestResult.  # noqa: E501
+
+
+        :return: The no_permission_services of this AwsAccountTestResult.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._no_permission_services
+
+    @no_permission_services.setter
+    def no_permission_services(self, no_permission_services):
+        """Sets the no_permission_services of this AwsAccountTestResult.
+
+
+        :param no_permission_services: The no_permission_services of this AwsAccountTestResult.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._no_permission_services = no_permission_services
 
     @property
     def non_permission_errors(self):

@@ -31,47 +31,24 @@ class ILP(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'wmi_name': 'str',
-        'lm_name': 'str'
+        'lm_name': 'str',
+        'wmi_name': 'str'
     }
 
     attribute_map = {
-        'wmi_name': 'wmiName',
-        'lm_name': 'lmName'
+        'lm_name': 'lmName',
+        'wmi_name': 'wmiName'
     }
 
-    def __init__(self, wmi_name=None, lm_name=None):  # noqa: E501
+    def __init__(self, lm_name=None, wmi_name=None):  # noqa: E501
         """ILP - a model defined in Swagger"""  # noqa: E501
 
-        self._wmi_name = None
         self._lm_name = None
+        self._wmi_name = None
         self.discriminator = None
 
-        self.wmi_name = wmi_name
         self.lm_name = lm_name
-
-    @property
-    def wmi_name(self):
-        """Gets the wmi_name of this ILP.  # noqa: E501
-
-
-        :return: The wmi_name of this ILP.  # noqa: E501
-        :rtype: str
-        """
-        return self._wmi_name
-
-    @wmi_name.setter
-    def wmi_name(self, wmi_name):
-        """Sets the wmi_name of this ILP.
-
-
-        :param wmi_name: The wmi_name of this ILP.  # noqa: E501
-        :type: str
-        """
-        if wmi_name is None:
-            raise ValueError("Invalid value for `wmi_name`, must not be `None`")  # noqa: E501
-
-        self._wmi_name = wmi_name
+        self.wmi_name = wmi_name
 
     @property
     def lm_name(self):
@@ -95,6 +72,29 @@ class ILP(object):
             raise ValueError("Invalid value for `lm_name`, must not be `None`")  # noqa: E501
 
         self._lm_name = lm_name
+
+    @property
+    def wmi_name(self):
+        """Gets the wmi_name of this ILP.  # noqa: E501
+
+
+        :return: The wmi_name of this ILP.  # noqa: E501
+        :rtype: str
+        """
+        return self._wmi_name
+
+    @wmi_name.setter
+    def wmi_name(self, wmi_name):
+        """Sets the wmi_name of this ILP.
+
+
+        :param wmi_name: The wmi_name of this ILP.  # noqa: E501
+        :type: str
+        """
+        if wmi_name is None:
+            raise ValueError("Invalid value for `wmi_name`, must not be `None`")  # noqa: E501
+
+        self._wmi_name = wmi_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,48 +34,48 @@ class ScriptAutoDiscoveryMethod(AutoDiscoveryMethod):
     """
     swagger_types = {
         'name': 'str',
-        'win_script': 'str',
         'groovy_script': 'str',
-        'type': 'str',
         'linux_cmdline': 'str',
         'linux_script': 'str',
-        'win_cmdline': 'str'
+        'type': 'str',
+        'win_cmdline': 'str',
+        'win_script': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'win_script': 'winScript',
         'groovy_script': 'groovyScript',
-        'type': 'type',
         'linux_cmdline': 'linuxCmdline',
         'linux_script': 'linuxScript',
-        'win_cmdline': 'winCmdline'
+        'type': 'type',
+        'win_cmdline': 'winCmdline',
+        'win_script': 'winScript'
     }
 
-    def __init__(self, name=None, win_script=None, groovy_script=None, type=None, linux_cmdline=None, linux_script=None, win_cmdline=None):  # noqa: E501
+    def __init__(self, name=None, groovy_script=None, linux_cmdline=None, linux_script=None, type=None, win_cmdline=None, win_script=None):  # noqa: E501
         """ScriptAutoDiscoveryMethod - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._win_script = None
         self._groovy_script = None
-        self._type = None
         self._linux_cmdline = None
         self._linux_script = None
+        self._type = None
         self._win_cmdline = None
+        self._win_script = None
         self.discriminator = None
 
         self.name = name
-        if win_script is not None:
-            self.win_script = win_script
         if groovy_script is not None:
             self.groovy_script = groovy_script
-        self.type = type
         if linux_cmdline is not None:
             self.linux_cmdline = linux_cmdline
         if linux_script is not None:
             self.linux_script = linux_script
+        self.type = type
         if win_cmdline is not None:
             self.win_cmdline = win_cmdline
+        if win_script is not None:
+            self.win_script = win_script
 
     @property
     def name(self):
@@ -101,27 +101,6 @@ class ScriptAutoDiscoveryMethod(AutoDiscoveryMethod):
         self._name = name
 
     @property
-    def win_script(self):
-        """Gets the win_script of this ScriptAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The win_script of this ScriptAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._win_script
-
-    @win_script.setter
-    def win_script(self, win_script):
-        """Sets the win_script of this ScriptAutoDiscoveryMethod.
-
-
-        :param win_script: The win_script of this ScriptAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-
-        self._win_script = win_script
-
-    @property
     def groovy_script(self):
         """Gets the groovy_script of this ScriptAutoDiscoveryMethod.  # noqa: E501
 
@@ -141,29 +120,6 @@ class ScriptAutoDiscoveryMethod(AutoDiscoveryMethod):
         """
 
         self._groovy_script = groovy_script
-
-    @property
-    def type(self):
-        """Gets the type of this ScriptAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The type of this ScriptAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this ScriptAutoDiscoveryMethod.
-
-
-        :param type: The type of this ScriptAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
-
-        self._type = type
 
     @property
     def linux_cmdline(self):
@@ -208,6 +164,29 @@ class ScriptAutoDiscoveryMethod(AutoDiscoveryMethod):
         self._linux_script = linux_script
 
     @property
+    def type(self):
+        """Gets the type of this ScriptAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The type of this ScriptAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this ScriptAutoDiscoveryMethod.
+
+
+        :param type: The type of this ScriptAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+        if type is None:
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+
+        self._type = type
+
+    @property
     def win_cmdline(self):
         """Gets the win_cmdline of this ScriptAutoDiscoveryMethod.  # noqa: E501
 
@@ -227,6 +206,27 @@ class ScriptAutoDiscoveryMethod(AutoDiscoveryMethod):
         """
 
         self._win_cmdline = win_cmdline
+
+    @property
+    def win_script(self):
+        """Gets the win_script of this ScriptAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The win_script of this ScriptAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._win_script
+
+    @win_script.setter
+    def win_script(self, win_script):
+        """Sets the win_script of this ScriptAutoDiscoveryMethod.
+
+
+        :param win_script: The win_script of this ScriptAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+
+        self._win_script = win_script
 
     def to_dict(self):
         """Returns the model properties as a dict"""

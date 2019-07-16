@@ -34,45 +34,45 @@ class JDBCAutoDiscoveryMethod(AutoDiscoveryMethod):
     """
     swagger_types = {
         'name': 'str',
-        'query': 'str',
         'ports': 'str',
-        'type': 'str',
+        'query': 'str',
         'separator': 'str',
-        'url': 'str',
-        'sid': 'str'
+        'sid': 'str',
+        'type': 'str',
+        'url': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'query': 'query',
         'ports': 'ports',
-        'type': 'type',
+        'query': 'query',
         'separator': 'separator',
-        'url': 'url',
-        'sid': 'sid'
+        'sid': 'sid',
+        'type': 'type',
+        'url': 'url'
     }
 
-    def __init__(self, name=None, query=None, ports=None, type=None, separator=None, url=None, sid=None):  # noqa: E501
+    def __init__(self, name=None, ports=None, query=None, separator=None, sid=None, type=None, url=None):  # noqa: E501
         """JDBCAutoDiscoveryMethod - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._query = None
         self._ports = None
-        self._type = None
+        self._query = None
         self._separator = None
-        self._url = None
         self._sid = None
+        self._type = None
+        self._url = None
         self.discriminator = None
 
         self.name = name
-        self.query = query
         self.ports = ports
-        self.type = type
+        self.query = query
         if separator is not None:
             self.separator = separator
-        self.url = url
         if sid is not None:
             self.sid = sid
+        self.type = type
+        self.url = url
 
     @property
     def name(self):
@@ -98,6 +98,29 @@ class JDBCAutoDiscoveryMethod(AutoDiscoveryMethod):
         self._name = name
 
     @property
+    def ports(self):
+        """Gets the ports of this JDBCAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The ports of this JDBCAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._ports
+
+    @ports.setter
+    def ports(self, ports):
+        """Sets the ports of this JDBCAutoDiscoveryMethod.
+
+
+        :param ports: The ports of this JDBCAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+        if ports is None:
+            raise ValueError("Invalid value for `ports`, must not be `None`")  # noqa: E501
+
+        self._ports = ports
+
+    @property
     def query(self):
         """Gets the query of this JDBCAutoDiscoveryMethod.  # noqa: E501
 
@@ -121,27 +144,46 @@ class JDBCAutoDiscoveryMethod(AutoDiscoveryMethod):
         self._query = query
 
     @property
-    def ports(self):
-        """Gets the ports of this JDBCAutoDiscoveryMethod.  # noqa: E501
+    def separator(self):
+        """Gets the separator of this JDBCAutoDiscoveryMethod.  # noqa: E501
 
 
-        :return: The ports of this JDBCAutoDiscoveryMethod.  # noqa: E501
+        :return: The separator of this JDBCAutoDiscoveryMethod.  # noqa: E501
         :rtype: str
         """
-        return self._ports
+        return self._separator
 
-    @ports.setter
-    def ports(self, ports):
-        """Sets the ports of this JDBCAutoDiscoveryMethod.
+    @separator.setter
+    def separator(self, separator):
+        """Sets the separator of this JDBCAutoDiscoveryMethod.
 
 
-        :param ports: The ports of this JDBCAutoDiscoveryMethod.  # noqa: E501
+        :param separator: The separator of this JDBCAutoDiscoveryMethod.  # noqa: E501
         :type: str
         """
-        if ports is None:
-            raise ValueError("Invalid value for `ports`, must not be `None`")  # noqa: E501
 
-        self._ports = ports
+        self._separator = separator
+
+    @property
+    def sid(self):
+        """Gets the sid of this JDBCAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The sid of this JDBCAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._sid
+
+    @sid.setter
+    def sid(self, sid):
+        """Sets the sid of this JDBCAutoDiscoveryMethod.
+
+
+        :param sid: The sid of this JDBCAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+
+        self._sid = sid
 
     @property
     def type(self):
@@ -167,27 +209,6 @@ class JDBCAutoDiscoveryMethod(AutoDiscoveryMethod):
         self._type = type
 
     @property
-    def separator(self):
-        """Gets the separator of this JDBCAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The separator of this JDBCAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._separator
-
-    @separator.setter
-    def separator(self, separator):
-        """Sets the separator of this JDBCAutoDiscoveryMethod.
-
-
-        :param separator: The separator of this JDBCAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-
-        self._separator = separator
-
-    @property
     def url(self):
         """Gets the url of this JDBCAutoDiscoveryMethod.  # noqa: E501
 
@@ -209,27 +230,6 @@ class JDBCAutoDiscoveryMethod(AutoDiscoveryMethod):
             raise ValueError("Invalid value for `url`, must not be `None`")  # noqa: E501
 
         self._url = url
-
-    @property
-    def sid(self):
-        """Gets the sid of this JDBCAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The sid of this JDBCAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._sid
-
-    @sid.setter
-    def sid(self, sid):
-        """Sets the sid of this JDBCAutoDiscoveryMethod.
-
-
-        :param sid: The sid of this JDBCAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-
-        self._sid = sid
 
     def to_dict(self):
         """Returns the model properties as a dict"""

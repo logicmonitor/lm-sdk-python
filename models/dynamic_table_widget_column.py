@@ -33,204 +33,64 @@ class DynamicTableWidgetColumn(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'rpn': 'str',
-        'data_point_name': 'str',
-        'display_type': 'str',
-        'min_value': 'float',
-        'data_point_id': 'int',
-        'max_value': 'float',
         'color_thresholds': 'list[ColorThreshold]',
         'column_name': 'str',
+        'data_point_id': 'int',
+        'data_point_name': 'str',
+        'display_type': 'str',
         'enable_forecast': 'bool',
-        'rounding_decimal': 'int'
+        'max_value': 'float',
+        'min_value': 'float',
+        'rounding_decimal': 'int',
+        'rpn': 'str'
     }
 
     attribute_map = {
-        'rpn': 'rpn',
-        'data_point_name': 'dataPointName',
-        'display_type': 'displayType',
-        'min_value': 'minValue',
-        'data_point_id': 'dataPointId',
-        'max_value': 'maxValue',
         'color_thresholds': 'colorThresholds',
         'column_name': 'columnName',
+        'data_point_id': 'dataPointId',
+        'data_point_name': 'dataPointName',
+        'display_type': 'displayType',
         'enable_forecast': 'enableForecast',
-        'rounding_decimal': 'roundingDecimal'
+        'max_value': 'maxValue',
+        'min_value': 'minValue',
+        'rounding_decimal': 'roundingDecimal',
+        'rpn': 'rpn'
     }
 
-    def __init__(self, rpn=None, data_point_name=None, display_type=None, min_value=None, data_point_id=None, max_value=None, color_thresholds=None, column_name=None, enable_forecast=None, rounding_decimal=None):  # noqa: E501
+    def __init__(self, color_thresholds=None, column_name=None, data_point_id=None, data_point_name=None, display_type=None, enable_forecast=None, max_value=None, min_value=None, rounding_decimal=None, rpn=None):  # noqa: E501
         """DynamicTableWidgetColumn - a model defined in Swagger"""  # noqa: E501
 
-        self._rpn = None
-        self._data_point_name = None
-        self._display_type = None
-        self._min_value = None
-        self._data_point_id = None
-        self._max_value = None
         self._color_thresholds = None
         self._column_name = None
+        self._data_point_id = None
+        self._data_point_name = None
+        self._display_type = None
         self._enable_forecast = None
+        self._max_value = None
+        self._min_value = None
         self._rounding_decimal = None
+        self._rpn = None
         self.discriminator = None
 
-        if rpn is not None:
-            self.rpn = rpn
+        if color_thresholds is not None:
+            self.color_thresholds = color_thresholds
+        self.column_name = column_name
+        self.data_point_id = data_point_id
         if data_point_name is not None:
             self.data_point_name = data_point_name
         if display_type is not None:
             self.display_type = display_type
-        if min_value is not None:
-            self.min_value = min_value
-        self.data_point_id = data_point_id
-        if max_value is not None:
-            self.max_value = max_value
-        if color_thresholds is not None:
-            self.color_thresholds = color_thresholds
-        self.column_name = column_name
         if enable_forecast is not None:
             self.enable_forecast = enable_forecast
+        if max_value is not None:
+            self.max_value = max_value
+        if min_value is not None:
+            self.min_value = min_value
         if rounding_decimal is not None:
             self.rounding_decimal = rounding_decimal
-
-    @property
-    def rpn(self):
-        """Gets the rpn of this DynamicTableWidgetColumn.  # noqa: E501
-
-        The expression in this field will be performed on the datapoint. The Column name should be referenced as the datapoint  # noqa: E501
-
-        :return: The rpn of this DynamicTableWidgetColumn.  # noqa: E501
-        :rtype: str
-        """
-        return self._rpn
-
-    @rpn.setter
-    def rpn(self, rpn):
-        """Sets the rpn of this DynamicTableWidgetColumn.
-
-        The expression in this field will be performed on the datapoint. The Column name should be referenced as the datapoint  # noqa: E501
-
-        :param rpn: The rpn of this DynamicTableWidgetColumn.  # noqa: E501
-        :type: str
-        """
-
-        self._rpn = rpn
-
-    @property
-    def data_point_name(self):
-        """Gets the data_point_name of this DynamicTableWidgetColumn.  # noqa: E501
-
-        The name of the datapoint  # noqa: E501
-
-        :return: The data_point_name of this DynamicTableWidgetColumn.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_point_name
-
-    @data_point_name.setter
-    def data_point_name(self, data_point_name):
-        """Sets the data_point_name of this DynamicTableWidgetColumn.
-
-        The name of the datapoint  # noqa: E501
-
-        :param data_point_name: The data_point_name of this DynamicTableWidgetColumn.  # noqa: E501
-        :type: str
-        """
-
-        self._data_point_name = data_point_name
-
-    @property
-    def display_type(self):
-        """Gets the display_type of this DynamicTableWidgetColumn.  # noqa: E501
-
-        The display type, it includes two options: raw|percent  # noqa: E501
-
-        :return: The display_type of this DynamicTableWidgetColumn.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_type
-
-    @display_type.setter
-    def display_type(self, display_type):
-        """Sets the display_type of this DynamicTableWidgetColumn.
-
-        The display type, it includes two options: raw|percent  # noqa: E501
-
-        :param display_type: The display_type of this DynamicTableWidgetColumn.  # noqa: E501
-        :type: str
-        """
-
-        self._display_type = display_type
-
-    @property
-    def min_value(self):
-        """Gets the min_value of this DynamicTableWidgetColumn.  # noqa: E501
-
-        The minimum value of the table widget  # noqa: E501
-
-        :return: The min_value of this DynamicTableWidgetColumn.  # noqa: E501
-        :rtype: float
-        """
-        return self._min_value
-
-    @min_value.setter
-    def min_value(self, min_value):
-        """Sets the min_value of this DynamicTableWidgetColumn.
-
-        The minimum value of the table widget  # noqa: E501
-
-        :param min_value: The min_value of this DynamicTableWidgetColumn.  # noqa: E501
-        :type: float
-        """
-
-        self._min_value = min_value
-
-    @property
-    def data_point_id(self):
-        """Gets the data_point_id of this DynamicTableWidgetColumn.  # noqa: E501
-
-        The id of the datapoint  # noqa: E501
-
-        :return: The data_point_id of this DynamicTableWidgetColumn.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_point_id
-
-    @data_point_id.setter
-    def data_point_id(self, data_point_id):
-        """Sets the data_point_id of this DynamicTableWidgetColumn.
-
-        The id of the datapoint  # noqa: E501
-
-        :param data_point_id: The data_point_id of this DynamicTableWidgetColumn.  # noqa: E501
-        :type: int
-        """
-        if data_point_id is None:
-            raise ValueError("Invalid value for `data_point_id`, must not be `None`")  # noqa: E501
-
-        self._data_point_id = data_point_id
-
-    @property
-    def max_value(self):
-        """Gets the max_value of this DynamicTableWidgetColumn.  # noqa: E501
-
-        The maximum value of the table widget  # noqa: E501
-
-        :return: The max_value of this DynamicTableWidgetColumn.  # noqa: E501
-        :rtype: float
-        """
-        return self._max_value
-
-    @max_value.setter
-    def max_value(self, max_value):
-        """Sets the max_value of this DynamicTableWidgetColumn.
-
-        The maximum value of the table widget  # noqa: E501
-
-        :param max_value: The max_value of this DynamicTableWidgetColumn.  # noqa: E501
-        :type: float
-        """
-
-        self._max_value = max_value
+        if rpn is not None:
+            self.rpn = rpn
 
     @property
     def color_thresholds(self):
@@ -281,6 +141,77 @@ class DynamicTableWidgetColumn(object):
         self._column_name = column_name
 
     @property
+    def data_point_id(self):
+        """Gets the data_point_id of this DynamicTableWidgetColumn.  # noqa: E501
+
+        The id of the datapoint  # noqa: E501
+
+        :return: The data_point_id of this DynamicTableWidgetColumn.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_point_id
+
+    @data_point_id.setter
+    def data_point_id(self, data_point_id):
+        """Sets the data_point_id of this DynamicTableWidgetColumn.
+
+        The id of the datapoint  # noqa: E501
+
+        :param data_point_id: The data_point_id of this DynamicTableWidgetColumn.  # noqa: E501
+        :type: int
+        """
+        if data_point_id is None:
+            raise ValueError("Invalid value for `data_point_id`, must not be `None`")  # noqa: E501
+
+        self._data_point_id = data_point_id
+
+    @property
+    def data_point_name(self):
+        """Gets the data_point_name of this DynamicTableWidgetColumn.  # noqa: E501
+
+        The name of the datapoint  # noqa: E501
+
+        :return: The data_point_name of this DynamicTableWidgetColumn.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_point_name
+
+    @data_point_name.setter
+    def data_point_name(self, data_point_name):
+        """Sets the data_point_name of this DynamicTableWidgetColumn.
+
+        The name of the datapoint  # noqa: E501
+
+        :param data_point_name: The data_point_name of this DynamicTableWidgetColumn.  # noqa: E501
+        :type: str
+        """
+
+        self._data_point_name = data_point_name
+
+    @property
+    def display_type(self):
+        """Gets the display_type of this DynamicTableWidgetColumn.  # noqa: E501
+
+        The display type, it includes two options: raw|percent  # noqa: E501
+
+        :return: The display_type of this DynamicTableWidgetColumn.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_type
+
+    @display_type.setter
+    def display_type(self, display_type):
+        """Sets the display_type of this DynamicTableWidgetColumn.
+
+        The display type, it includes two options: raw|percent  # noqa: E501
+
+        :param display_type: The display_type of this DynamicTableWidgetColumn.  # noqa: E501
+        :type: str
+        """
+
+        self._display_type = display_type
+
+    @property
     def enable_forecast(self):
         """Gets the enable_forecast of this DynamicTableWidgetColumn.  # noqa: E501
 
@@ -304,6 +235,52 @@ class DynamicTableWidgetColumn(object):
         self._enable_forecast = enable_forecast
 
     @property
+    def max_value(self):
+        """Gets the max_value of this DynamicTableWidgetColumn.  # noqa: E501
+
+        The maximum value of the table widget  # noqa: E501
+
+        :return: The max_value of this DynamicTableWidgetColumn.  # noqa: E501
+        :rtype: float
+        """
+        return self._max_value
+
+    @max_value.setter
+    def max_value(self, max_value):
+        """Sets the max_value of this DynamicTableWidgetColumn.
+
+        The maximum value of the table widget  # noqa: E501
+
+        :param max_value: The max_value of this DynamicTableWidgetColumn.  # noqa: E501
+        :type: float
+        """
+
+        self._max_value = max_value
+
+    @property
+    def min_value(self):
+        """Gets the min_value of this DynamicTableWidgetColumn.  # noqa: E501
+
+        The minimum value of the table widget  # noqa: E501
+
+        :return: The min_value of this DynamicTableWidgetColumn.  # noqa: E501
+        :rtype: float
+        """
+        return self._min_value
+
+    @min_value.setter
+    def min_value(self, min_value):
+        """Sets the min_value of this DynamicTableWidgetColumn.
+
+        The minimum value of the table widget  # noqa: E501
+
+        :param min_value: The min_value of this DynamicTableWidgetColumn.  # noqa: E501
+        :type: float
+        """
+
+        self._min_value = min_value
+
+    @property
     def rounding_decimal(self):
         """Gets the rounding_decimal of this DynamicTableWidgetColumn.  # noqa: E501
 
@@ -325,6 +302,29 @@ class DynamicTableWidgetColumn(object):
         """
 
         self._rounding_decimal = rounding_decimal
+
+    @property
+    def rpn(self):
+        """Gets the rpn of this DynamicTableWidgetColumn.  # noqa: E501
+
+        The expression in this field will be performed on the datapoint. The Column name should be referenced as the datapoint  # noqa: E501
+
+        :return: The rpn of this DynamicTableWidgetColumn.  # noqa: E501
+        :rtype: str
+        """
+        return self._rpn
+
+    @rpn.setter
+    def rpn(self, rpn):
+        """Sets the rpn of this DynamicTableWidgetColumn.
+
+        The expression in this field will be performed on the datapoint. The Column name should be referenced as the datapoint  # noqa: E501
+
+        :param rpn: The rpn of this DynamicTableWidgetColumn.  # noqa: E501
+        :type: str
+        """
+
+        self._rpn = rpn
 
     def to_dict(self):
         """Returns the model properties as a dict"""

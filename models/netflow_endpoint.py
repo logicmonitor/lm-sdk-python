@@ -31,51 +31,114 @@ class NetflowEndpoint(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'ip': 'str',
+        'data_type': 'str',
+        'dns': 'str',
         'last_seen': 'int',
         'percent_usage': 'float',
-        'data_type': 'str',
-        'ip': 'str',
-        'usage': 'float',
-        'dns': 'str',
-        'type': 'str'
+        'type': 'str',
+        'usage': 'float'
     }
 
     attribute_map = {
+        'ip': 'IP',
+        'data_type': 'dataType',
+        'dns': 'dns',
         'last_seen': 'lastSeen',
         'percent_usage': 'percentUsage',
-        'data_type': 'dataType',
-        'ip': 'IP',
-        'usage': 'usage',
-        'dns': 'dns',
-        'type': 'type'
+        'type': 'type',
+        'usage': 'usage'
     }
 
-    def __init__(self, last_seen=None, percent_usage=None, data_type=None, ip=None, usage=None, dns=None, type=None):  # noqa: E501
+    def __init__(self, ip=None, data_type=None, dns=None, last_seen=None, percent_usage=None, type=None, usage=None):  # noqa: E501
         """NetflowEndpoint - a model defined in Swagger"""  # noqa: E501
 
+        self._ip = None
+        self._data_type = None
+        self._dns = None
         self._last_seen = None
         self._percent_usage = None
-        self._data_type = None
-        self._ip = None
-        self._usage = None
-        self._dns = None
         self._type = None
+        self._usage = None
         self.discriminator = None
 
+        if ip is not None:
+            self.ip = ip
+        if data_type is not None:
+            self.data_type = data_type
+        if dns is not None:
+            self.dns = dns
         if last_seen is not None:
             self.last_seen = last_seen
         if percent_usage is not None:
             self.percent_usage = percent_usage
-        if data_type is not None:
-            self.data_type = data_type
-        if ip is not None:
-            self.ip = ip
-        if usage is not None:
-            self.usage = usage
-        if dns is not None:
-            self.dns = dns
         if type is not None:
             self.type = type
+        if usage is not None:
+            self.usage = usage
+
+    @property
+    def ip(self):
+        """Gets the ip of this NetflowEndpoint.  # noqa: E501
+
+
+        :return: The ip of this NetflowEndpoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._ip
+
+    @ip.setter
+    def ip(self, ip):
+        """Sets the ip of this NetflowEndpoint.
+
+
+        :param ip: The ip of this NetflowEndpoint.  # noqa: E501
+        :type: str
+        """
+
+        self._ip = ip
+
+    @property
+    def data_type(self):
+        """Gets the data_type of this NetflowEndpoint.  # noqa: E501
+
+
+        :return: The data_type of this NetflowEndpoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_type
+
+    @data_type.setter
+    def data_type(self, data_type):
+        """Sets the data_type of this NetflowEndpoint.
+
+
+        :param data_type: The data_type of this NetflowEndpoint.  # noqa: E501
+        :type: str
+        """
+
+        self._data_type = data_type
+
+    @property
+    def dns(self):
+        """Gets the dns of this NetflowEndpoint.  # noqa: E501
+
+
+        :return: The dns of this NetflowEndpoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._dns
+
+    @dns.setter
+    def dns(self, dns):
+        """Sets the dns of this NetflowEndpoint.
+
+
+        :param dns: The dns of this NetflowEndpoint.  # noqa: E501
+        :type: str
+        """
+
+        self._dns = dns
 
     @property
     def last_seen(self):
@@ -120,46 +183,25 @@ class NetflowEndpoint(object):
         self._percent_usage = percent_usage
 
     @property
-    def data_type(self):
-        """Gets the data_type of this NetflowEndpoint.  # noqa: E501
+    def type(self):
+        """Gets the type of this NetflowEndpoint.  # noqa: E501
 
 
-        :return: The data_type of this NetflowEndpoint.  # noqa: E501
+        :return: The type of this NetflowEndpoint.  # noqa: E501
         :rtype: str
         """
-        return self._data_type
+        return self._type
 
-    @data_type.setter
-    def data_type(self, data_type):
-        """Sets the data_type of this NetflowEndpoint.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this NetflowEndpoint.
 
 
-        :param data_type: The data_type of this NetflowEndpoint.  # noqa: E501
+        :param type: The type of this NetflowEndpoint.  # noqa: E501
         :type: str
         """
 
-        self._data_type = data_type
-
-    @property
-    def ip(self):
-        """Gets the ip of this NetflowEndpoint.  # noqa: E501
-
-
-        :return: The ip of this NetflowEndpoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._ip
-
-    @ip.setter
-    def ip(self, ip):
-        """Sets the ip of this NetflowEndpoint.
-
-
-        :param ip: The ip of this NetflowEndpoint.  # noqa: E501
-        :type: str
-        """
-
-        self._ip = ip
+        self._type = type
 
     @property
     def usage(self):
@@ -181,48 +223,6 @@ class NetflowEndpoint(object):
         """
 
         self._usage = usage
-
-    @property
-    def dns(self):
-        """Gets the dns of this NetflowEndpoint.  # noqa: E501
-
-
-        :return: The dns of this NetflowEndpoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._dns
-
-    @dns.setter
-    def dns(self, dns):
-        """Sets the dns of this NetflowEndpoint.
-
-
-        :param dns: The dns of this NetflowEndpoint.  # noqa: E501
-        :type: str
-        """
-
-        self._dns = dns
-
-    @property
-    def type(self):
-        """Gets the type of this NetflowEndpoint.  # noqa: E501
-
-
-        :return: The type of this NetflowEndpoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this NetflowEndpoint.
-
-
-        :param type: The type of this NetflowEndpoint.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

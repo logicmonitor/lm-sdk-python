@@ -34,39 +34,39 @@ class MongoCollectorAttribute(CollectorAttribute):
     """
     swagger_types = {
         'name': 'str',
+        'collection': 'str',
         'database': 'str',
         'port': 'str',
-        'query': 'str',
-        'collection': 'str'
+        'query': 'str'
     }
 
     attribute_map = {
         'name': 'name',
+        'collection': 'collection',
         'database': 'database',
         'port': 'port',
-        'query': 'query',
-        'collection': 'collection'
+        'query': 'query'
     }
 
-    def __init__(self, name=None, database=None, port=None, query=None, collection=None):  # noqa: E501
+    def __init__(self, name=None, collection=None, database=None, port=None, query=None):  # noqa: E501
         """MongoCollectorAttribute - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
+        self._collection = None
         self._database = None
         self._port = None
         self._query = None
-        self._collection = None
         self.discriminator = None
 
         self.name = name
+        if collection is not None:
+            self.collection = collection
         if database is not None:
             self.database = database
         if port is not None:
             self.port = port
         if query is not None:
             self.query = query
-        if collection is not None:
-            self.collection = collection
 
     @property
     def name(self):
@@ -90,6 +90,27 @@ class MongoCollectorAttribute(CollectorAttribute):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def collection(self):
+        """Gets the collection of this MongoCollectorAttribute.  # noqa: E501
+
+
+        :return: The collection of this MongoCollectorAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._collection
+
+    @collection.setter
+    def collection(self, collection):
+        """Sets the collection of this MongoCollectorAttribute.
+
+
+        :param collection: The collection of this MongoCollectorAttribute.  # noqa: E501
+        :type: str
+        """
+
+        self._collection = collection
 
     @property
     def database(self):
@@ -153,27 +174,6 @@ class MongoCollectorAttribute(CollectorAttribute):
         """
 
         self._query = query
-
-    @property
-    def collection(self):
-        """Gets the collection of this MongoCollectorAttribute.  # noqa: E501
-
-
-        :return: The collection of this MongoCollectorAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._collection
-
-    @collection.setter
-    def collection(self, collection):
-        """Sets the collection of this MongoCollectorAttribute.
-
-
-        :param collection: The collection of this MongoCollectorAttribute.  # noqa: E501
-        :type: str
-        """
-
-        self._collection = collection
 
     def to_dict(self):
         """Returns the model properties as a dict"""

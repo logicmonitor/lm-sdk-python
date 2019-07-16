@@ -35,34 +35,34 @@ class NetflowQoSReportTableRow(NetflowDataBase):
     swagger_types = {
         'data_type': 'str',
         'received': 'float',
-        'type': 'str',
-        'sent': 'float'
+        'sent': 'float',
+        'type': 'str'
     }
 
     attribute_map = {
         'data_type': 'dataType',
         'received': 'received',
-        'type': 'type',
-        'sent': 'sent'
+        'sent': 'sent',
+        'type': 'type'
     }
 
-    def __init__(self, data_type=None, received=None, type=None, sent=None):  # noqa: E501
+    def __init__(self, data_type=None, received=None, sent=None, type=None):  # noqa: E501
         """NetflowQoSReportTableRow - a model defined in Swagger"""  # noqa: E501
 
         self._data_type = None
         self._received = None
-        self._type = None
         self._sent = None
+        self._type = None
         self.discriminator = None
 
         if data_type is not None:
             self.data_type = data_type
         if received is not None:
             self.received = received
-        if type is not None:
-            self.type = type
         if sent is not None:
             self.sent = sent
+        if type is not None:
+            self.type = type
 
     @property
     def data_type(self):
@@ -107,27 +107,6 @@ class NetflowQoSReportTableRow(NetflowDataBase):
         self._received = received
 
     @property
-    def type(self):
-        """Gets the type of this NetflowQoSReportTableRow.  # noqa: E501
-
-
-        :return: The type of this NetflowQoSReportTableRow.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this NetflowQoSReportTableRow.
-
-
-        :param type: The type of this NetflowQoSReportTableRow.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
-
-    @property
     def sent(self):
         """Gets the sent of this NetflowQoSReportTableRow.  # noqa: E501
 
@@ -147,6 +126,27 @@ class NetflowQoSReportTableRow(NetflowDataBase):
         """
 
         self._sent = sent
+
+    @property
+    def type(self):
+        """Gets the type of this NetflowQoSReportTableRow.  # noqa: E501
+
+
+        :return: The type of this NetflowQoSReportTableRow.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this NetflowQoSReportTableRow.
+
+
+        :param type: The type of this NetflowQoSReportTableRow.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

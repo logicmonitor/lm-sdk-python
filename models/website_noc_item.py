@@ -34,36 +34,36 @@ class WebsiteNOCItem(NOCItemBase):
     """
     swagger_types = {
         'type': 'str',
-        'website_name': 'str',
+        'group_by': 'str',
         'name': 'str',
         'website_group_name': 'str',
-        'group_by': 'str'
+        'website_name': 'str'
     }
 
     attribute_map = {
         'type': 'type',
-        'website_name': 'websiteName',
+        'group_by': 'groupBy',
         'name': 'name',
         'website_group_name': 'websiteGroupName',
-        'group_by': 'groupBy'
+        'website_name': 'websiteName'
     }
 
-    def __init__(self, type=None, website_name=None, name=None, website_group_name=None, group_by=None):  # noqa: E501
+    def __init__(self, type=None, group_by=None, name=None, website_group_name=None, website_name=None):  # noqa: E501
         """WebsiteNOCItem - a model defined in Swagger"""  # noqa: E501
 
         self._type = None
-        self._website_name = None
+        self._group_by = None
         self._name = None
         self._website_group_name = None
-        self._group_by = None
+        self._website_name = None
         self.discriminator = None
 
         self.type = type
-        self.website_name = website_name
-        self.name = name
-        self.website_group_name = website_group_name
         if group_by is not None:
             self.group_by = group_by
+        self.name = name
+        self.website_group_name = website_group_name
+        self.website_name = website_name
 
     @property
     def type(self):
@@ -89,27 +89,25 @@ class WebsiteNOCItem(NOCItemBase):
         self._type = type
 
     @property
-    def website_name(self):
-        """Gets the website_name of this WebsiteNOCItem.  # noqa: E501
+    def group_by(self):
+        """Gets the group_by of this WebsiteNOCItem.  # noqa: E501
 
 
-        :return: The website_name of this WebsiteNOCItem.  # noqa: E501
+        :return: The group_by of this WebsiteNOCItem.  # noqa: E501
         :rtype: str
         """
-        return self._website_name
+        return self._group_by
 
-    @website_name.setter
-    def website_name(self, website_name):
-        """Sets the website_name of this WebsiteNOCItem.
+    @group_by.setter
+    def group_by(self, group_by):
+        """Sets the group_by of this WebsiteNOCItem.
 
 
-        :param website_name: The website_name of this WebsiteNOCItem.  # noqa: E501
+        :param group_by: The group_by of this WebsiteNOCItem.  # noqa: E501
         :type: str
         """
-        if website_name is None:
-            raise ValueError("Invalid value for `website_name`, must not be `None`")  # noqa: E501
 
-        self._website_name = website_name
+        self._group_by = group_by
 
     @property
     def name(self):
@@ -158,25 +156,27 @@ class WebsiteNOCItem(NOCItemBase):
         self._website_group_name = website_group_name
 
     @property
-    def group_by(self):
-        """Gets the group_by of this WebsiteNOCItem.  # noqa: E501
+    def website_name(self):
+        """Gets the website_name of this WebsiteNOCItem.  # noqa: E501
 
 
-        :return: The group_by of this WebsiteNOCItem.  # noqa: E501
+        :return: The website_name of this WebsiteNOCItem.  # noqa: E501
         :rtype: str
         """
-        return self._group_by
+        return self._website_name
 
-    @group_by.setter
-    def group_by(self, group_by):
-        """Sets the group_by of this WebsiteNOCItem.
+    @website_name.setter
+    def website_name(self, website_name):
+        """Sets the website_name of this WebsiteNOCItem.
 
 
-        :param group_by: The group_by of this WebsiteNOCItem.  # noqa: E501
+        :param website_name: The website_name of this WebsiteNOCItem.  # noqa: E501
         :type: str
         """
+        if website_name is None:
+            raise ValueError("Invalid value for `website_name`, must not be `None`")  # noqa: E501
 
-        self._group_by = group_by
+        self._website_name = website_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

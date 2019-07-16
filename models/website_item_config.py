@@ -31,29 +31,50 @@ class WebsiteItemConfig(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'website': 'str',
         'exclude_sdt': 'bool',
+        'website': 'str',
         'website_group': 'str'
     }
 
     attribute_map = {
-        'website': 'website',
         'exclude_sdt': 'excludeSDT',
+        'website': 'website',
         'website_group': 'websiteGroup'
     }
 
-    def __init__(self, website=None, exclude_sdt=None, website_group=None):  # noqa: E501
+    def __init__(self, exclude_sdt=None, website=None, website_group=None):  # noqa: E501
         """WebsiteItemConfig - a model defined in Swagger"""  # noqa: E501
 
-        self._website = None
         self._exclude_sdt = None
+        self._website = None
         self._website_group = None
         self.discriminator = None
 
-        self.website = website
         if exclude_sdt is not None:
             self.exclude_sdt = exclude_sdt
+        self.website = website
         self.website_group = website_group
+
+    @property
+    def exclude_sdt(self):
+        """Gets the exclude_sdt of this WebsiteItemConfig.  # noqa: E501
+
+
+        :return: The exclude_sdt of this WebsiteItemConfig.  # noqa: E501
+        :rtype: bool
+        """
+        return self._exclude_sdt
+
+    @exclude_sdt.setter
+    def exclude_sdt(self, exclude_sdt):
+        """Sets the exclude_sdt of this WebsiteItemConfig.
+
+
+        :param exclude_sdt: The exclude_sdt of this WebsiteItemConfig.  # noqa: E501
+        :type: bool
+        """
+
+        self._exclude_sdt = exclude_sdt
 
     @property
     def website(self):
@@ -77,27 +98,6 @@ class WebsiteItemConfig(object):
             raise ValueError("Invalid value for `website`, must not be `None`")  # noqa: E501
 
         self._website = website
-
-    @property
-    def exclude_sdt(self):
-        """Gets the exclude_sdt of this WebsiteItemConfig.  # noqa: E501
-
-
-        :return: The exclude_sdt of this WebsiteItemConfig.  # noqa: E501
-        :rtype: bool
-        """
-        return self._exclude_sdt
-
-    @exclude_sdt.setter
-    def exclude_sdt(self, exclude_sdt):
-        """Sets the exclude_sdt of this WebsiteItemConfig.
-
-
-        :param exclude_sdt: The exclude_sdt of this WebsiteItemConfig.  # noqa: E501
-        :type: bool
-        """
-
-        self._exclude_sdt = exclude_sdt
 
     @property
     def website_group(self):

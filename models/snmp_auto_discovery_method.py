@@ -35,56 +35,56 @@ class SNMPAutoDiscoveryMethod(AutoDiscoveryMethod):
     """
     swagger_types = {
         'name': 'str',
-        'lookup_oid': 'str',
-        'external_resource_id': 'str',
-        'description_oid': 'str',
-        'external_resource_type': 'str',
-        'oid': 'str',
         'ilp': 'list[ILP]',
+        'oid': 'str',
+        'description_oid': 'str',
         'discovery_type': 'str',
-        'enable_snmpilp': 'bool'
+        'enable_snmpilp': 'bool',
+        'external_resource_id': 'str',
+        'external_resource_type': 'str',
+        'lookup_oid': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'lookup_oid': 'lookupOID',
-        'external_resource_id': 'externalResourceID',
-        'description_oid': 'descriptionOID',
-        'external_resource_type': 'externalResourceType',
-        'oid': 'OID',
         'ilp': 'ILP',
+        'oid': 'OID',
+        'description_oid': 'descriptionOID',
         'discovery_type': 'discoveryType',
-        'enable_snmpilp': 'enableSNMPILP'
+        'enable_snmpilp': 'enableSNMPILP',
+        'external_resource_id': 'externalResourceID',
+        'external_resource_type': 'externalResourceType',
+        'lookup_oid': 'lookupOID'
     }
 
-    def __init__(self, name=None, lookup_oid=None, external_resource_id=None, description_oid=None, external_resource_type=None, oid=None, ilp=None, discovery_type=None, enable_snmpilp=None):  # noqa: E501
+    def __init__(self, name=None, ilp=None, oid=None, description_oid=None, discovery_type=None, enable_snmpilp=None, external_resource_id=None, external_resource_type=None, lookup_oid=None):  # noqa: E501
         """SNMPAutoDiscoveryMethod - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._lookup_oid = None
-        self._external_resource_id = None
-        self._description_oid = None
-        self._external_resource_type = None
-        self._oid = None
         self._ilp = None
+        self._oid = None
+        self._description_oid = None
         self._discovery_type = None
         self._enable_snmpilp = None
+        self._external_resource_id = None
+        self._external_resource_type = None
+        self._lookup_oid = None
         self.discriminator = None
 
         self.name = name
-        self.lookup_oid = lookup_oid
-        if external_resource_id is not None:
-            self.external_resource_id = external_resource_id
-        if description_oid is not None:
-            self.description_oid = description_oid
-        if external_resource_type is not None:
-            self.external_resource_type = external_resource_type
-        self.oid = oid
         if ilp is not None:
             self.ilp = ilp
+        self.oid = oid
+        if description_oid is not None:
+            self.description_oid = description_oid
         self.discovery_type = discovery_type
         if enable_snmpilp is not None:
             self.enable_snmpilp = enable_snmpilp
+        if external_resource_id is not None:
+            self.external_resource_id = external_resource_id
+        if external_resource_type is not None:
+            self.external_resource_type = external_resource_type
+        self.lookup_oid = lookup_oid
 
     @property
     def name(self):
@@ -110,90 +110,25 @@ class SNMPAutoDiscoveryMethod(AutoDiscoveryMethod):
         self._name = name
 
     @property
-    def lookup_oid(self):
-        """Gets the lookup_oid of this SNMPAutoDiscoveryMethod.  # noqa: E501
+    def ilp(self):
+        """Gets the ilp of this SNMPAutoDiscoveryMethod.  # noqa: E501
 
 
-        :return: The lookup_oid of this SNMPAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
+        :return: The ilp of this SNMPAutoDiscoveryMethod.  # noqa: E501
+        :rtype: list[ILP]
         """
-        return self._lookup_oid
+        return self._ilp
 
-    @lookup_oid.setter
-    def lookup_oid(self, lookup_oid):
-        """Sets the lookup_oid of this SNMPAutoDiscoveryMethod.
-
-
-        :param lookup_oid: The lookup_oid of this SNMPAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-        if lookup_oid is None:
-            raise ValueError("Invalid value for `lookup_oid`, must not be `None`")  # noqa: E501
-
-        self._lookup_oid = lookup_oid
-
-    @property
-    def external_resource_id(self):
-        """Gets the external_resource_id of this SNMPAutoDiscoveryMethod.  # noqa: E501
+    @ilp.setter
+    def ilp(self, ilp):
+        """Sets the ilp of this SNMPAutoDiscoveryMethod.
 
 
-        :return: The external_resource_id of this SNMPAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._external_resource_id
-
-    @external_resource_id.setter
-    def external_resource_id(self, external_resource_id):
-        """Sets the external_resource_id of this SNMPAutoDiscoveryMethod.
-
-
-        :param external_resource_id: The external_resource_id of this SNMPAutoDiscoveryMethod.  # noqa: E501
-        :type: str
+        :param ilp: The ilp of this SNMPAutoDiscoveryMethod.  # noqa: E501
+        :type: list[ILP]
         """
 
-        self._external_resource_id = external_resource_id
-
-    @property
-    def description_oid(self):
-        """Gets the description_oid of this SNMPAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The description_oid of this SNMPAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._description_oid
-
-    @description_oid.setter
-    def description_oid(self, description_oid):
-        """Sets the description_oid of this SNMPAutoDiscoveryMethod.
-
-
-        :param description_oid: The description_oid of this SNMPAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-
-        self._description_oid = description_oid
-
-    @property
-    def external_resource_type(self):
-        """Gets the external_resource_type of this SNMPAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The external_resource_type of this SNMPAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._external_resource_type
-
-    @external_resource_type.setter
-    def external_resource_type(self, external_resource_type):
-        """Sets the external_resource_type of this SNMPAutoDiscoveryMethod.
-
-
-        :param external_resource_type: The external_resource_type of this SNMPAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-
-        self._external_resource_type = external_resource_type
+        self._ilp = ilp
 
     @property
     def oid(self):
@@ -219,25 +154,25 @@ class SNMPAutoDiscoveryMethod(AutoDiscoveryMethod):
         self._oid = oid
 
     @property
-    def ilp(self):
-        """Gets the ilp of this SNMPAutoDiscoveryMethod.  # noqa: E501
+    def description_oid(self):
+        """Gets the description_oid of this SNMPAutoDiscoveryMethod.  # noqa: E501
 
 
-        :return: The ilp of this SNMPAutoDiscoveryMethod.  # noqa: E501
-        :rtype: list[ILP]
+        :return: The description_oid of this SNMPAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
         """
-        return self._ilp
+        return self._description_oid
 
-    @ilp.setter
-    def ilp(self, ilp):
-        """Sets the ilp of this SNMPAutoDiscoveryMethod.
+    @description_oid.setter
+    def description_oid(self, description_oid):
+        """Sets the description_oid of this SNMPAutoDiscoveryMethod.
 
 
-        :param ilp: The ilp of this SNMPAutoDiscoveryMethod.  # noqa: E501
-        :type: list[ILP]
+        :param description_oid: The description_oid of this SNMPAutoDiscoveryMethod.  # noqa: E501
+        :type: str
         """
 
-        self._ilp = ilp
+        self._description_oid = description_oid
 
     @property
     def discovery_type(self):
@@ -282,6 +217,71 @@ class SNMPAutoDiscoveryMethod(AutoDiscoveryMethod):
         """
 
         self._enable_snmpilp = enable_snmpilp
+
+    @property
+    def external_resource_id(self):
+        """Gets the external_resource_id of this SNMPAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The external_resource_id of this SNMPAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._external_resource_id
+
+    @external_resource_id.setter
+    def external_resource_id(self, external_resource_id):
+        """Sets the external_resource_id of this SNMPAutoDiscoveryMethod.
+
+
+        :param external_resource_id: The external_resource_id of this SNMPAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+
+        self._external_resource_id = external_resource_id
+
+    @property
+    def external_resource_type(self):
+        """Gets the external_resource_type of this SNMPAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The external_resource_type of this SNMPAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._external_resource_type
+
+    @external_resource_type.setter
+    def external_resource_type(self, external_resource_type):
+        """Sets the external_resource_type of this SNMPAutoDiscoveryMethod.
+
+
+        :param external_resource_type: The external_resource_type of this SNMPAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+
+        self._external_resource_type = external_resource_type
+
+    @property
+    def lookup_oid(self):
+        """Gets the lookup_oid of this SNMPAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The lookup_oid of this SNMPAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._lookup_oid
+
+    @lookup_oid.setter
+    def lookup_oid(self, lookup_oid):
+        """Sets the lookup_oid of this SNMPAutoDiscoveryMethod.
+
+
+        :param lookup_oid: The lookup_oid of this SNMPAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+        if lookup_oid is None:
+            raise ValueError("Invalid value for `lookup_oid`, must not be `None`")  # noqa: E501
+
+        self._lookup_oid = lookup_oid
 
     def to_dict(self):
         """Returns the model properties as a dict"""

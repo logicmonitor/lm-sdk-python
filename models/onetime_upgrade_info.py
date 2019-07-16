@@ -32,57 +32,57 @@ class OnetimeUpgradeInfo(object):
     """
     swagger_types = {
         'created_by': 'str',
-        'level': 'str',
-        'timezone': 'str',
-        'end_epoch': 'int',
         'description': 'str',
-        'type': 'str',
+        'end_epoch': 'int',
+        'level': 'str',
         'major_version': 'int',
         'minor_version': 'int',
-        'start_epoch': 'int'
+        'start_epoch': 'int',
+        'timezone': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
         'created_by': 'createdBy',
-        'level': 'level',
-        'timezone': 'timezone',
-        'end_epoch': 'endEpoch',
         'description': 'description',
-        'type': 'type',
+        'end_epoch': 'endEpoch',
+        'level': 'level',
         'major_version': 'majorVersion',
         'minor_version': 'minorVersion',
-        'start_epoch': 'startEpoch'
+        'start_epoch': 'startEpoch',
+        'timezone': 'timezone',
+        'type': 'type'
     }
 
-    def __init__(self, created_by=None, level=None, timezone=None, end_epoch=None, description=None, type=None, major_version=None, minor_version=None, start_epoch=None):  # noqa: E501
+    def __init__(self, created_by=None, description=None, end_epoch=None, level=None, major_version=None, minor_version=None, start_epoch=None, timezone=None, type=None):  # noqa: E501
         """OnetimeUpgradeInfo - a model defined in Swagger"""  # noqa: E501
 
         self._created_by = None
-        self._level = None
-        self._timezone = None
-        self._end_epoch = None
         self._description = None
-        self._type = None
+        self._end_epoch = None
+        self._level = None
         self._major_version = None
         self._minor_version = None
         self._start_epoch = None
+        self._timezone = None
+        self._type = None
         self.discriminator = None
 
         if created_by is not None:
             self.created_by = created_by
-        if level is not None:
-            self.level = level
-        if timezone is not None:
-            self.timezone = timezone
-        if end_epoch is not None:
-            self.end_epoch = end_epoch
         if description is not None:
             self.description = description
-        if type is not None:
-            self.type = type
+        if end_epoch is not None:
+            self.end_epoch = end_epoch
+        if level is not None:
+            self.level = level
         self.major_version = major_version
         self.minor_version = minor_version
         self.start_epoch = start_epoch
+        if timezone is not None:
+            self.timezone = timezone
+        if type is not None:
+            self.type = type
 
     @property
     def created_by(self):
@@ -106,46 +106,25 @@ class OnetimeUpgradeInfo(object):
         self._created_by = created_by
 
     @property
-    def level(self):
-        """Gets the level of this OnetimeUpgradeInfo.  # noqa: E501
+    def description(self):
+        """Gets the description of this OnetimeUpgradeInfo.  # noqa: E501
 
 
-        :return: The level of this OnetimeUpgradeInfo.  # noqa: E501
+        :return: The description of this OnetimeUpgradeInfo.  # noqa: E501
         :rtype: str
         """
-        return self._level
+        return self._description
 
-    @level.setter
-    def level(self, level):
-        """Sets the level of this OnetimeUpgradeInfo.
+    @description.setter
+    def description(self, description):
+        """Sets the description of this OnetimeUpgradeInfo.
 
 
-        :param level: The level of this OnetimeUpgradeInfo.  # noqa: E501
+        :param description: The description of this OnetimeUpgradeInfo.  # noqa: E501
         :type: str
         """
 
-        self._level = level
-
-    @property
-    def timezone(self):
-        """Gets the timezone of this OnetimeUpgradeInfo.  # noqa: E501
-
-
-        :return: The timezone of this OnetimeUpgradeInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._timezone
-
-    @timezone.setter
-    def timezone(self, timezone):
-        """Sets the timezone of this OnetimeUpgradeInfo.
-
-
-        :param timezone: The timezone of this OnetimeUpgradeInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._timezone = timezone
+        self._description = description
 
     @property
     def end_epoch(self):
@@ -169,46 +148,25 @@ class OnetimeUpgradeInfo(object):
         self._end_epoch = end_epoch
 
     @property
-    def description(self):
-        """Gets the description of this OnetimeUpgradeInfo.  # noqa: E501
+    def level(self):
+        """Gets the level of this OnetimeUpgradeInfo.  # noqa: E501
 
 
-        :return: The description of this OnetimeUpgradeInfo.  # noqa: E501
+        :return: The level of this OnetimeUpgradeInfo.  # noqa: E501
         :rtype: str
         """
-        return self._description
+        return self._level
 
-    @description.setter
-    def description(self, description):
-        """Sets the description of this OnetimeUpgradeInfo.
+    @level.setter
+    def level(self, level):
+        """Sets the level of this OnetimeUpgradeInfo.
 
 
-        :param description: The description of this OnetimeUpgradeInfo.  # noqa: E501
+        :param level: The level of this OnetimeUpgradeInfo.  # noqa: E501
         :type: str
         """
 
-        self._description = description
-
-    @property
-    def type(self):
-        """Gets the type of this OnetimeUpgradeInfo.  # noqa: E501
-
-
-        :return: The type of this OnetimeUpgradeInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this OnetimeUpgradeInfo.
-
-
-        :param type: The type of this OnetimeUpgradeInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
+        self._level = level
 
     @property
     def major_version(self):
@@ -278,6 +236,48 @@ class OnetimeUpgradeInfo(object):
             raise ValueError("Invalid value for `start_epoch`, must not be `None`")  # noqa: E501
 
         self._start_epoch = start_epoch
+
+    @property
+    def timezone(self):
+        """Gets the timezone of this OnetimeUpgradeInfo.  # noqa: E501
+
+
+        :return: The timezone of this OnetimeUpgradeInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._timezone
+
+    @timezone.setter
+    def timezone(self, timezone):
+        """Sets the timezone of this OnetimeUpgradeInfo.
+
+
+        :param timezone: The timezone of this OnetimeUpgradeInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._timezone = timezone
+
+    @property
+    def type(self):
+        """Gets the type of this OnetimeUpgradeInfo.  # noqa: E501
+
+
+        :return: The type of this OnetimeUpgradeInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this OnetimeUpgradeInfo.
+
+
+        :param type: The type of this OnetimeUpgradeInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

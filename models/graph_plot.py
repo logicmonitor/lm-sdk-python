@@ -35,182 +35,161 @@ class GraphPlot(WidgetData):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
         'title': 'str',
-        'missinglines': 'list[str]',
-        'time_scale': 'str',
-        'instances': 'list[int]',
-        'timestamps': 'list[int]',
-        'min_value': 'object',
-        'start_time': 'int',
-        'id': 'int',
-        'rigid': 'bool',
-        'lines': 'list[GraphPlotLine]',
-        'height': 'int',
-        'end_tz_offset': 'int',
-        'base1024': 'bool',
-        'ds_name': 'str',
-        'max_value': 'object',
-        'display_prio': 'int',
-        'time_zone_id': 'str',
-        'time_zone': 'str',
-        'start_tz_offset': 'int',
-        'x_axis_name': 'str',
-        'width': 'int',
-        'name': 'str',
-        'vertical_label': 'str',
-        'step': 'int',
-        'end_time': 'int',
-        'scopes': 'list[GraphOpsNoteScope]',
+        'type': 'str',
         'base': 'int',
-        'export_file_name': 'str'
+        'base1024': 'bool',
+        'display_prio': 'int',
+        'ds_name': 'str',
+        'end_tz_offset': 'int',
+        'end_time': 'int',
+        'export_file_name': 'str',
+        'height': 'int',
+        'id': 'int',
+        'instances': 'list[int]',
+        'lines': 'list[GraphPlotLine]',
+        'max_value': 'object',
+        'min_value': 'object',
+        'missinglines': 'list[str]',
+        'name': 'str',
+        'rigid': 'bool',
+        'scopes': 'list[GraphOpsNoteScope]',
+        'start_tz_offset': 'int',
+        'start_time': 'int',
+        'step': 'int',
+        'time_scale': 'str',
+        'time_zone': 'str',
+        'time_zone_id': 'str',
+        'timestamps': 'list[int]',
+        'vertical_label': 'str',
+        'width': 'int',
+        'x_axis_name': 'str'
     }
 
     attribute_map = {
-        'type': 'type',
         'title': 'title',
-        'missinglines': 'missinglines',
-        'time_scale': 'timeScale',
-        'instances': 'instances',
-        'timestamps': 'timestamps',
-        'min_value': 'minValue',
-        'start_time': 'startTime',
-        'id': 'id',
-        'rigid': 'rigid',
-        'lines': 'lines',
-        'height': 'height',
-        'end_tz_offset': 'endTZOffset',
-        'base1024': 'base1024',
-        'ds_name': 'dsName',
-        'max_value': 'maxValue',
-        'display_prio': 'displayPrio',
-        'time_zone_id': 'timeZoneId',
-        'time_zone': 'timeZone',
-        'start_tz_offset': 'startTZOffset',
-        'x_axis_name': 'xAxisName',
-        'width': 'width',
-        'name': 'name',
-        'vertical_label': 'verticalLabel',
-        'step': 'step',
-        'end_time': 'endTime',
-        'scopes': 'scopes',
+        'type': 'type',
         'base': 'base',
-        'export_file_name': 'exportFileName'
+        'base1024': 'base1024',
+        'display_prio': 'displayPrio',
+        'ds_name': 'dsName',
+        'end_tz_offset': 'endTZOffset',
+        'end_time': 'endTime',
+        'export_file_name': 'exportFileName',
+        'height': 'height',
+        'id': 'id',
+        'instances': 'instances',
+        'lines': 'lines',
+        'max_value': 'maxValue',
+        'min_value': 'minValue',
+        'missinglines': 'missinglines',
+        'name': 'name',
+        'rigid': 'rigid',
+        'scopes': 'scopes',
+        'start_tz_offset': 'startTZOffset',
+        'start_time': 'startTime',
+        'step': 'step',
+        'time_scale': 'timeScale',
+        'time_zone': 'timeZone',
+        'time_zone_id': 'timeZoneId',
+        'timestamps': 'timestamps',
+        'vertical_label': 'verticalLabel',
+        'width': 'width',
+        'x_axis_name': 'xAxisName'
     }
 
-    def __init__(self, type=None, title=None, missinglines=None, time_scale=None, instances=None, timestamps=None, min_value=None, start_time=None, id=None, rigid=None, lines=None, height=None, end_tz_offset=None, base1024=None, ds_name=None, max_value=None, display_prio=None, time_zone_id=None, time_zone=None, start_tz_offset=None, x_axis_name=None, width=None, name=None, vertical_label=None, step=None, end_time=None, scopes=None, base=None, export_file_name=None):  # noqa: E501
+    def __init__(self, title=None, type=None, base=None, base1024=None, display_prio=None, ds_name=None, end_tz_offset=None, end_time=None, export_file_name=None, height=None, id=None, instances=None, lines=None, max_value=None, min_value=None, missinglines=None, name=None, rigid=None, scopes=None, start_tz_offset=None, start_time=None, step=None, time_scale=None, time_zone=None, time_zone_id=None, timestamps=None, vertical_label=None, width=None, x_axis_name=None):  # noqa: E501
         """GraphPlot - a model defined in Swagger"""  # noqa: E501
 
-        self._type = None
         self._title = None
-        self._missinglines = None
-        self._time_scale = None
-        self._instances = None
-        self._timestamps = None
-        self._min_value = None
-        self._start_time = None
-        self._id = None
-        self._rigid = None
-        self._lines = None
-        self._height = None
-        self._end_tz_offset = None
-        self._base1024 = None
-        self._ds_name = None
-        self._max_value = None
-        self._display_prio = None
-        self._time_zone_id = None
-        self._time_zone = None
-        self._start_tz_offset = None
-        self._x_axis_name = None
-        self._width = None
-        self._name = None
-        self._vertical_label = None
-        self._step = None
-        self._end_time = None
-        self._scopes = None
+        self._type = None
         self._base = None
+        self._base1024 = None
+        self._display_prio = None
+        self._ds_name = None
+        self._end_tz_offset = None
+        self._end_time = None
         self._export_file_name = None
+        self._height = None
+        self._id = None
+        self._instances = None
+        self._lines = None
+        self._max_value = None
+        self._min_value = None
+        self._missinglines = None
+        self._name = None
+        self._rigid = None
+        self._scopes = None
+        self._start_tz_offset = None
+        self._start_time = None
+        self._step = None
+        self._time_scale = None
+        self._time_zone = None
+        self._time_zone_id = None
+        self._timestamps = None
+        self._vertical_label = None
+        self._width = None
+        self._x_axis_name = None
         self.discriminator = None
 
-        if type is not None:
-            self.type = type
         if title is not None:
             self.title = title
-        if missinglines is not None:
-            self.missinglines = missinglines
-        if time_scale is not None:
-            self.time_scale = time_scale
-        if instances is not None:
-            self.instances = instances
-        if timestamps is not None:
-            self.timestamps = timestamps
-        if min_value is not None:
-            self.min_value = min_value
-        if start_time is not None:
-            self.start_time = start_time
-        if id is not None:
-            self.id = id
-        if rigid is not None:
-            self.rigid = rigid
-        if lines is not None:
-            self.lines = lines
-        if height is not None:
-            self.height = height
-        if end_tz_offset is not None:
-            self.end_tz_offset = end_tz_offset
-        if base1024 is not None:
-            self.base1024 = base1024
-        if ds_name is not None:
-            self.ds_name = ds_name
-        if max_value is not None:
-            self.max_value = max_value
-        if display_prio is not None:
-            self.display_prio = display_prio
-        if time_zone_id is not None:
-            self.time_zone_id = time_zone_id
-        if time_zone is not None:
-            self.time_zone = time_zone
-        if start_tz_offset is not None:
-            self.start_tz_offset = start_tz_offset
-        if x_axis_name is not None:
-            self.x_axis_name = x_axis_name
-        if width is not None:
-            self.width = width
-        if name is not None:
-            self.name = name
-        if vertical_label is not None:
-            self.vertical_label = vertical_label
-        if step is not None:
-            self.step = step
-        if end_time is not None:
-            self.end_time = end_time
-        if scopes is not None:
-            self.scopes = scopes
+        if type is not None:
+            self.type = type
         if base is not None:
             self.base = base
+        if base1024 is not None:
+            self.base1024 = base1024
+        if display_prio is not None:
+            self.display_prio = display_prio
+        if ds_name is not None:
+            self.ds_name = ds_name
+        if end_tz_offset is not None:
+            self.end_tz_offset = end_tz_offset
+        if end_time is not None:
+            self.end_time = end_time
         if export_file_name is not None:
             self.export_file_name = export_file_name
-
-    @property
-    def type(self):
-        """Gets the type of this GraphPlot.  # noqa: E501
-
-
-        :return: The type of this GraphPlot.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this GraphPlot.
-
-
-        :param type: The type of this GraphPlot.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
+        if height is not None:
+            self.height = height
+        if id is not None:
+            self.id = id
+        if instances is not None:
+            self.instances = instances
+        if lines is not None:
+            self.lines = lines
+        if max_value is not None:
+            self.max_value = max_value
+        if min_value is not None:
+            self.min_value = min_value
+        if missinglines is not None:
+            self.missinglines = missinglines
+        if name is not None:
+            self.name = name
+        if rigid is not None:
+            self.rigid = rigid
+        if scopes is not None:
+            self.scopes = scopes
+        if start_tz_offset is not None:
+            self.start_tz_offset = start_tz_offset
+        if start_time is not None:
+            self.start_time = start_time
+        if step is not None:
+            self.step = step
+        if time_scale is not None:
+            self.time_scale = time_scale
+        if time_zone is not None:
+            self.time_zone = time_zone
+        if time_zone_id is not None:
+            self.time_zone_id = time_zone_id
+        if timestamps is not None:
+            self.timestamps = timestamps
+        if vertical_label is not None:
+            self.vertical_label = vertical_label
+        if width is not None:
+            self.width = width
+        if x_axis_name is not None:
+            self.x_axis_name = x_axis_name
 
     @property
     def title(self):
@@ -234,529 +213,25 @@ class GraphPlot(WidgetData):
         self._title = title
 
     @property
-    def missinglines(self):
-        """Gets the missinglines of this GraphPlot.  # noqa: E501
+    def type(self):
+        """Gets the type of this GraphPlot.  # noqa: E501
 
 
-        :return: The missinglines of this GraphPlot.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._missinglines
-
-    @missinglines.setter
-    def missinglines(self, missinglines):
-        """Sets the missinglines of this GraphPlot.
-
-
-        :param missinglines: The missinglines of this GraphPlot.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._missinglines = missinglines
-
-    @property
-    def time_scale(self):
-        """Gets the time_scale of this GraphPlot.  # noqa: E501
-
-
-        :return: The time_scale of this GraphPlot.  # noqa: E501
+        :return: The type of this GraphPlot.  # noqa: E501
         :rtype: str
         """
-        return self._time_scale
+        return self._type
 
-    @time_scale.setter
-    def time_scale(self, time_scale):
-        """Sets the time_scale of this GraphPlot.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this GraphPlot.
 
 
-        :param time_scale: The time_scale of this GraphPlot.  # noqa: E501
+        :param type: The type of this GraphPlot.  # noqa: E501
         :type: str
         """
 
-        self._time_scale = time_scale
-
-    @property
-    def instances(self):
-        """Gets the instances of this GraphPlot.  # noqa: E501
-
-
-        :return: The instances of this GraphPlot.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._instances
-
-    @instances.setter
-    def instances(self, instances):
-        """Sets the instances of this GraphPlot.
-
-
-        :param instances: The instances of this GraphPlot.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._instances = instances
-
-    @property
-    def timestamps(self):
-        """Gets the timestamps of this GraphPlot.  # noqa: E501
-
-
-        :return: The timestamps of this GraphPlot.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._timestamps
-
-    @timestamps.setter
-    def timestamps(self, timestamps):
-        """Sets the timestamps of this GraphPlot.
-
-
-        :param timestamps: The timestamps of this GraphPlot.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._timestamps = timestamps
-
-    @property
-    def min_value(self):
-        """Gets the min_value of this GraphPlot.  # noqa: E501
-
-
-        :return: The min_value of this GraphPlot.  # noqa: E501
-        :rtype: object
-        """
-        return self._min_value
-
-    @min_value.setter
-    def min_value(self, min_value):
-        """Sets the min_value of this GraphPlot.
-
-
-        :param min_value: The min_value of this GraphPlot.  # noqa: E501
-        :type: object
-        """
-
-        self._min_value = min_value
-
-    @property
-    def start_time(self):
-        """Gets the start_time of this GraphPlot.  # noqa: E501
-
-
-        :return: The start_time of this GraphPlot.  # noqa: E501
-        :rtype: int
-        """
-        return self._start_time
-
-    @start_time.setter
-    def start_time(self, start_time):
-        """Sets the start_time of this GraphPlot.
-
-
-        :param start_time: The start_time of this GraphPlot.  # noqa: E501
-        :type: int
-        """
-
-        self._start_time = start_time
-
-    @property
-    def id(self):
-        """Gets the id of this GraphPlot.  # noqa: E501
-
-
-        :return: The id of this GraphPlot.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this GraphPlot.
-
-
-        :param id: The id of this GraphPlot.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def rigid(self):
-        """Gets the rigid of this GraphPlot.  # noqa: E501
-
-
-        :return: The rigid of this GraphPlot.  # noqa: E501
-        :rtype: bool
-        """
-        return self._rigid
-
-    @rigid.setter
-    def rigid(self, rigid):
-        """Sets the rigid of this GraphPlot.
-
-
-        :param rigid: The rigid of this GraphPlot.  # noqa: E501
-        :type: bool
-        """
-
-        self._rigid = rigid
-
-    @property
-    def lines(self):
-        """Gets the lines of this GraphPlot.  # noqa: E501
-
-
-        :return: The lines of this GraphPlot.  # noqa: E501
-        :rtype: list[GraphPlotLine]
-        """
-        return self._lines
-
-    @lines.setter
-    def lines(self, lines):
-        """Sets the lines of this GraphPlot.
-
-
-        :param lines: The lines of this GraphPlot.  # noqa: E501
-        :type: list[GraphPlotLine]
-        """
-
-        self._lines = lines
-
-    @property
-    def height(self):
-        """Gets the height of this GraphPlot.  # noqa: E501
-
-
-        :return: The height of this GraphPlot.  # noqa: E501
-        :rtype: int
-        """
-        return self._height
-
-    @height.setter
-    def height(self, height):
-        """Sets the height of this GraphPlot.
-
-
-        :param height: The height of this GraphPlot.  # noqa: E501
-        :type: int
-        """
-
-        self._height = height
-
-    @property
-    def end_tz_offset(self):
-        """Gets the end_tz_offset of this GraphPlot.  # noqa: E501
-
-
-        :return: The end_tz_offset of this GraphPlot.  # noqa: E501
-        :rtype: int
-        """
-        return self._end_tz_offset
-
-    @end_tz_offset.setter
-    def end_tz_offset(self, end_tz_offset):
-        """Sets the end_tz_offset of this GraphPlot.
-
-
-        :param end_tz_offset: The end_tz_offset of this GraphPlot.  # noqa: E501
-        :type: int
-        """
-
-        self._end_tz_offset = end_tz_offset
-
-    @property
-    def base1024(self):
-        """Gets the base1024 of this GraphPlot.  # noqa: E501
-
-
-        :return: The base1024 of this GraphPlot.  # noqa: E501
-        :rtype: bool
-        """
-        return self._base1024
-
-    @base1024.setter
-    def base1024(self, base1024):
-        """Sets the base1024 of this GraphPlot.
-
-
-        :param base1024: The base1024 of this GraphPlot.  # noqa: E501
-        :type: bool
-        """
-
-        self._base1024 = base1024
-
-    @property
-    def ds_name(self):
-        """Gets the ds_name of this GraphPlot.  # noqa: E501
-
-
-        :return: The ds_name of this GraphPlot.  # noqa: E501
-        :rtype: str
-        """
-        return self._ds_name
-
-    @ds_name.setter
-    def ds_name(self, ds_name):
-        """Sets the ds_name of this GraphPlot.
-
-
-        :param ds_name: The ds_name of this GraphPlot.  # noqa: E501
-        :type: str
-        """
-
-        self._ds_name = ds_name
-
-    @property
-    def max_value(self):
-        """Gets the max_value of this GraphPlot.  # noqa: E501
-
-
-        :return: The max_value of this GraphPlot.  # noqa: E501
-        :rtype: object
-        """
-        return self._max_value
-
-    @max_value.setter
-    def max_value(self, max_value):
-        """Sets the max_value of this GraphPlot.
-
-
-        :param max_value: The max_value of this GraphPlot.  # noqa: E501
-        :type: object
-        """
-
-        self._max_value = max_value
-
-    @property
-    def display_prio(self):
-        """Gets the display_prio of this GraphPlot.  # noqa: E501
-
-
-        :return: The display_prio of this GraphPlot.  # noqa: E501
-        :rtype: int
-        """
-        return self._display_prio
-
-    @display_prio.setter
-    def display_prio(self, display_prio):
-        """Sets the display_prio of this GraphPlot.
-
-
-        :param display_prio: The display_prio of this GraphPlot.  # noqa: E501
-        :type: int
-        """
-
-        self._display_prio = display_prio
-
-    @property
-    def time_zone_id(self):
-        """Gets the time_zone_id of this GraphPlot.  # noqa: E501
-
-
-        :return: The time_zone_id of this GraphPlot.  # noqa: E501
-        :rtype: str
-        """
-        return self._time_zone_id
-
-    @time_zone_id.setter
-    def time_zone_id(self, time_zone_id):
-        """Sets the time_zone_id of this GraphPlot.
-
-
-        :param time_zone_id: The time_zone_id of this GraphPlot.  # noqa: E501
-        :type: str
-        """
-
-        self._time_zone_id = time_zone_id
-
-    @property
-    def time_zone(self):
-        """Gets the time_zone of this GraphPlot.  # noqa: E501
-
-
-        :return: The time_zone of this GraphPlot.  # noqa: E501
-        :rtype: str
-        """
-        return self._time_zone
-
-    @time_zone.setter
-    def time_zone(self, time_zone):
-        """Sets the time_zone of this GraphPlot.
-
-
-        :param time_zone: The time_zone of this GraphPlot.  # noqa: E501
-        :type: str
-        """
-
-        self._time_zone = time_zone
-
-    @property
-    def start_tz_offset(self):
-        """Gets the start_tz_offset of this GraphPlot.  # noqa: E501
-
-
-        :return: The start_tz_offset of this GraphPlot.  # noqa: E501
-        :rtype: int
-        """
-        return self._start_tz_offset
-
-    @start_tz_offset.setter
-    def start_tz_offset(self, start_tz_offset):
-        """Sets the start_tz_offset of this GraphPlot.
-
-
-        :param start_tz_offset: The start_tz_offset of this GraphPlot.  # noqa: E501
-        :type: int
-        """
-
-        self._start_tz_offset = start_tz_offset
-
-    @property
-    def x_axis_name(self):
-        """Gets the x_axis_name of this GraphPlot.  # noqa: E501
-
-
-        :return: The x_axis_name of this GraphPlot.  # noqa: E501
-        :rtype: str
-        """
-        return self._x_axis_name
-
-    @x_axis_name.setter
-    def x_axis_name(self, x_axis_name):
-        """Sets the x_axis_name of this GraphPlot.
-
-
-        :param x_axis_name: The x_axis_name of this GraphPlot.  # noqa: E501
-        :type: str
-        """
-
-        self._x_axis_name = x_axis_name
-
-    @property
-    def width(self):
-        """Gets the width of this GraphPlot.  # noqa: E501
-
-
-        :return: The width of this GraphPlot.  # noqa: E501
-        :rtype: int
-        """
-        return self._width
-
-    @width.setter
-    def width(self, width):
-        """Sets the width of this GraphPlot.
-
-
-        :param width: The width of this GraphPlot.  # noqa: E501
-        :type: int
-        """
-
-        self._width = width
-
-    @property
-    def name(self):
-        """Gets the name of this GraphPlot.  # noqa: E501
-
-
-        :return: The name of this GraphPlot.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this GraphPlot.
-
-
-        :param name: The name of this GraphPlot.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
-
-    @property
-    def vertical_label(self):
-        """Gets the vertical_label of this GraphPlot.  # noqa: E501
-
-
-        :return: The vertical_label of this GraphPlot.  # noqa: E501
-        :rtype: str
-        """
-        return self._vertical_label
-
-    @vertical_label.setter
-    def vertical_label(self, vertical_label):
-        """Sets the vertical_label of this GraphPlot.
-
-
-        :param vertical_label: The vertical_label of this GraphPlot.  # noqa: E501
-        :type: str
-        """
-
-        self._vertical_label = vertical_label
-
-    @property
-    def step(self):
-        """Gets the step of this GraphPlot.  # noqa: E501
-
-
-        :return: The step of this GraphPlot.  # noqa: E501
-        :rtype: int
-        """
-        return self._step
-
-    @step.setter
-    def step(self, step):
-        """Sets the step of this GraphPlot.
-
-
-        :param step: The step of this GraphPlot.  # noqa: E501
-        :type: int
-        """
-
-        self._step = step
-
-    @property
-    def end_time(self):
-        """Gets the end_time of this GraphPlot.  # noqa: E501
-
-
-        :return: The end_time of this GraphPlot.  # noqa: E501
-        :rtype: int
-        """
-        return self._end_time
-
-    @end_time.setter
-    def end_time(self, end_time):
-        """Sets the end_time of this GraphPlot.
-
-
-        :param end_time: The end_time of this GraphPlot.  # noqa: E501
-        :type: int
-        """
-
-        self._end_time = end_time
-
-    @property
-    def scopes(self):
-        """Gets the scopes of this GraphPlot.  # noqa: E501
-
-
-        :return: The scopes of this GraphPlot.  # noqa: E501
-        :rtype: list[GraphOpsNoteScope]
-        """
-        return self._scopes
-
-    @scopes.setter
-    def scopes(self, scopes):
-        """Sets the scopes of this GraphPlot.
-
-
-        :param scopes: The scopes of this GraphPlot.  # noqa: E501
-        :type: list[GraphOpsNoteScope]
-        """
-
-        self._scopes = scopes
+        self._type = type
 
     @property
     def base(self):
@@ -780,6 +255,111 @@ class GraphPlot(WidgetData):
         self._base = base
 
     @property
+    def base1024(self):
+        """Gets the base1024 of this GraphPlot.  # noqa: E501
+
+
+        :return: The base1024 of this GraphPlot.  # noqa: E501
+        :rtype: bool
+        """
+        return self._base1024
+
+    @base1024.setter
+    def base1024(self, base1024):
+        """Sets the base1024 of this GraphPlot.
+
+
+        :param base1024: The base1024 of this GraphPlot.  # noqa: E501
+        :type: bool
+        """
+
+        self._base1024 = base1024
+
+    @property
+    def display_prio(self):
+        """Gets the display_prio of this GraphPlot.  # noqa: E501
+
+
+        :return: The display_prio of this GraphPlot.  # noqa: E501
+        :rtype: int
+        """
+        return self._display_prio
+
+    @display_prio.setter
+    def display_prio(self, display_prio):
+        """Sets the display_prio of this GraphPlot.
+
+
+        :param display_prio: The display_prio of this GraphPlot.  # noqa: E501
+        :type: int
+        """
+
+        self._display_prio = display_prio
+
+    @property
+    def ds_name(self):
+        """Gets the ds_name of this GraphPlot.  # noqa: E501
+
+
+        :return: The ds_name of this GraphPlot.  # noqa: E501
+        :rtype: str
+        """
+        return self._ds_name
+
+    @ds_name.setter
+    def ds_name(self, ds_name):
+        """Sets the ds_name of this GraphPlot.
+
+
+        :param ds_name: The ds_name of this GraphPlot.  # noqa: E501
+        :type: str
+        """
+
+        self._ds_name = ds_name
+
+    @property
+    def end_tz_offset(self):
+        """Gets the end_tz_offset of this GraphPlot.  # noqa: E501
+
+
+        :return: The end_tz_offset of this GraphPlot.  # noqa: E501
+        :rtype: int
+        """
+        return self._end_tz_offset
+
+    @end_tz_offset.setter
+    def end_tz_offset(self, end_tz_offset):
+        """Sets the end_tz_offset of this GraphPlot.
+
+
+        :param end_tz_offset: The end_tz_offset of this GraphPlot.  # noqa: E501
+        :type: int
+        """
+
+        self._end_tz_offset = end_tz_offset
+
+    @property
+    def end_time(self):
+        """Gets the end_time of this GraphPlot.  # noqa: E501
+
+
+        :return: The end_time of this GraphPlot.  # noqa: E501
+        :rtype: int
+        """
+        return self._end_time
+
+    @end_time.setter
+    def end_time(self, end_time):
+        """Sets the end_time of this GraphPlot.
+
+
+        :param end_time: The end_time of this GraphPlot.  # noqa: E501
+        :type: int
+        """
+
+        self._end_time = end_time
+
+    @property
     def export_file_name(self):
         """Gets the export_file_name of this GraphPlot.  # noqa: E501
 
@@ -799,6 +379,426 @@ class GraphPlot(WidgetData):
         """
 
         self._export_file_name = export_file_name
+
+    @property
+    def height(self):
+        """Gets the height of this GraphPlot.  # noqa: E501
+
+
+        :return: The height of this GraphPlot.  # noqa: E501
+        :rtype: int
+        """
+        return self._height
+
+    @height.setter
+    def height(self, height):
+        """Sets the height of this GraphPlot.
+
+
+        :param height: The height of this GraphPlot.  # noqa: E501
+        :type: int
+        """
+
+        self._height = height
+
+    @property
+    def id(self):
+        """Gets the id of this GraphPlot.  # noqa: E501
+
+
+        :return: The id of this GraphPlot.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this GraphPlot.
+
+
+        :param id: The id of this GraphPlot.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def instances(self):
+        """Gets the instances of this GraphPlot.  # noqa: E501
+
+
+        :return: The instances of this GraphPlot.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._instances
+
+    @instances.setter
+    def instances(self, instances):
+        """Sets the instances of this GraphPlot.
+
+
+        :param instances: The instances of this GraphPlot.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._instances = instances
+
+    @property
+    def lines(self):
+        """Gets the lines of this GraphPlot.  # noqa: E501
+
+
+        :return: The lines of this GraphPlot.  # noqa: E501
+        :rtype: list[GraphPlotLine]
+        """
+        return self._lines
+
+    @lines.setter
+    def lines(self, lines):
+        """Sets the lines of this GraphPlot.
+
+
+        :param lines: The lines of this GraphPlot.  # noqa: E501
+        :type: list[GraphPlotLine]
+        """
+
+        self._lines = lines
+
+    @property
+    def max_value(self):
+        """Gets the max_value of this GraphPlot.  # noqa: E501
+
+
+        :return: The max_value of this GraphPlot.  # noqa: E501
+        :rtype: object
+        """
+        return self._max_value
+
+    @max_value.setter
+    def max_value(self, max_value):
+        """Sets the max_value of this GraphPlot.
+
+
+        :param max_value: The max_value of this GraphPlot.  # noqa: E501
+        :type: object
+        """
+
+        self._max_value = max_value
+
+    @property
+    def min_value(self):
+        """Gets the min_value of this GraphPlot.  # noqa: E501
+
+
+        :return: The min_value of this GraphPlot.  # noqa: E501
+        :rtype: object
+        """
+        return self._min_value
+
+    @min_value.setter
+    def min_value(self, min_value):
+        """Sets the min_value of this GraphPlot.
+
+
+        :param min_value: The min_value of this GraphPlot.  # noqa: E501
+        :type: object
+        """
+
+        self._min_value = min_value
+
+    @property
+    def missinglines(self):
+        """Gets the missinglines of this GraphPlot.  # noqa: E501
+
+
+        :return: The missinglines of this GraphPlot.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._missinglines
+
+    @missinglines.setter
+    def missinglines(self, missinglines):
+        """Sets the missinglines of this GraphPlot.
+
+
+        :param missinglines: The missinglines of this GraphPlot.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._missinglines = missinglines
+
+    @property
+    def name(self):
+        """Gets the name of this GraphPlot.  # noqa: E501
+
+
+        :return: The name of this GraphPlot.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this GraphPlot.
+
+
+        :param name: The name of this GraphPlot.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
+
+    @property
+    def rigid(self):
+        """Gets the rigid of this GraphPlot.  # noqa: E501
+
+
+        :return: The rigid of this GraphPlot.  # noqa: E501
+        :rtype: bool
+        """
+        return self._rigid
+
+    @rigid.setter
+    def rigid(self, rigid):
+        """Sets the rigid of this GraphPlot.
+
+
+        :param rigid: The rigid of this GraphPlot.  # noqa: E501
+        :type: bool
+        """
+
+        self._rigid = rigid
+
+    @property
+    def scopes(self):
+        """Gets the scopes of this GraphPlot.  # noqa: E501
+
+
+        :return: The scopes of this GraphPlot.  # noqa: E501
+        :rtype: list[GraphOpsNoteScope]
+        """
+        return self._scopes
+
+    @scopes.setter
+    def scopes(self, scopes):
+        """Sets the scopes of this GraphPlot.
+
+
+        :param scopes: The scopes of this GraphPlot.  # noqa: E501
+        :type: list[GraphOpsNoteScope]
+        """
+
+        self._scopes = scopes
+
+    @property
+    def start_tz_offset(self):
+        """Gets the start_tz_offset of this GraphPlot.  # noqa: E501
+
+
+        :return: The start_tz_offset of this GraphPlot.  # noqa: E501
+        :rtype: int
+        """
+        return self._start_tz_offset
+
+    @start_tz_offset.setter
+    def start_tz_offset(self, start_tz_offset):
+        """Sets the start_tz_offset of this GraphPlot.
+
+
+        :param start_tz_offset: The start_tz_offset of this GraphPlot.  # noqa: E501
+        :type: int
+        """
+
+        self._start_tz_offset = start_tz_offset
+
+    @property
+    def start_time(self):
+        """Gets the start_time of this GraphPlot.  # noqa: E501
+
+
+        :return: The start_time of this GraphPlot.  # noqa: E501
+        :rtype: int
+        """
+        return self._start_time
+
+    @start_time.setter
+    def start_time(self, start_time):
+        """Sets the start_time of this GraphPlot.
+
+
+        :param start_time: The start_time of this GraphPlot.  # noqa: E501
+        :type: int
+        """
+
+        self._start_time = start_time
+
+    @property
+    def step(self):
+        """Gets the step of this GraphPlot.  # noqa: E501
+
+
+        :return: The step of this GraphPlot.  # noqa: E501
+        :rtype: int
+        """
+        return self._step
+
+    @step.setter
+    def step(self, step):
+        """Sets the step of this GraphPlot.
+
+
+        :param step: The step of this GraphPlot.  # noqa: E501
+        :type: int
+        """
+
+        self._step = step
+
+    @property
+    def time_scale(self):
+        """Gets the time_scale of this GraphPlot.  # noqa: E501
+
+
+        :return: The time_scale of this GraphPlot.  # noqa: E501
+        :rtype: str
+        """
+        return self._time_scale
+
+    @time_scale.setter
+    def time_scale(self, time_scale):
+        """Sets the time_scale of this GraphPlot.
+
+
+        :param time_scale: The time_scale of this GraphPlot.  # noqa: E501
+        :type: str
+        """
+
+        self._time_scale = time_scale
+
+    @property
+    def time_zone(self):
+        """Gets the time_zone of this GraphPlot.  # noqa: E501
+
+
+        :return: The time_zone of this GraphPlot.  # noqa: E501
+        :rtype: str
+        """
+        return self._time_zone
+
+    @time_zone.setter
+    def time_zone(self, time_zone):
+        """Sets the time_zone of this GraphPlot.
+
+
+        :param time_zone: The time_zone of this GraphPlot.  # noqa: E501
+        :type: str
+        """
+
+        self._time_zone = time_zone
+
+    @property
+    def time_zone_id(self):
+        """Gets the time_zone_id of this GraphPlot.  # noqa: E501
+
+
+        :return: The time_zone_id of this GraphPlot.  # noqa: E501
+        :rtype: str
+        """
+        return self._time_zone_id
+
+    @time_zone_id.setter
+    def time_zone_id(self, time_zone_id):
+        """Sets the time_zone_id of this GraphPlot.
+
+
+        :param time_zone_id: The time_zone_id of this GraphPlot.  # noqa: E501
+        :type: str
+        """
+
+        self._time_zone_id = time_zone_id
+
+    @property
+    def timestamps(self):
+        """Gets the timestamps of this GraphPlot.  # noqa: E501
+
+
+        :return: The timestamps of this GraphPlot.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._timestamps
+
+    @timestamps.setter
+    def timestamps(self, timestamps):
+        """Sets the timestamps of this GraphPlot.
+
+
+        :param timestamps: The timestamps of this GraphPlot.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._timestamps = timestamps
+
+    @property
+    def vertical_label(self):
+        """Gets the vertical_label of this GraphPlot.  # noqa: E501
+
+
+        :return: The vertical_label of this GraphPlot.  # noqa: E501
+        :rtype: str
+        """
+        return self._vertical_label
+
+    @vertical_label.setter
+    def vertical_label(self, vertical_label):
+        """Sets the vertical_label of this GraphPlot.
+
+
+        :param vertical_label: The vertical_label of this GraphPlot.  # noqa: E501
+        :type: str
+        """
+
+        self._vertical_label = vertical_label
+
+    @property
+    def width(self):
+        """Gets the width of this GraphPlot.  # noqa: E501
+
+
+        :return: The width of this GraphPlot.  # noqa: E501
+        :rtype: int
+        """
+        return self._width
+
+    @width.setter
+    def width(self, width):
+        """Sets the width of this GraphPlot.
+
+
+        :param width: The width of this GraphPlot.  # noqa: E501
+        :type: int
+        """
+
+        self._width = width
+
+    @property
+    def x_axis_name(self):
+        """Gets the x_axis_name of this GraphPlot.  # noqa: E501
+
+
+        :return: The x_axis_name of this GraphPlot.  # noqa: E501
+        :rtype: str
+        """
+        return self._x_axis_name
+
+    @x_axis_name.setter
+    def x_axis_name(self, x_axis_name):
+        """Sets the x_axis_name of this GraphPlot.
+
+
+        :param x_axis_name: The x_axis_name of this GraphPlot.  # noqa: E501
+        :type: str
+        """
+
+        self._x_axis_name = x_axis_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,76 +31,99 @@ class DeviceClusterAlertConfig(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'alert_expr': 'str',
         'count_by': 'str',
-        'data_point_name': 'str',
-        'data_source_id': 'int',
+        'data_point_description': 'str',
         'data_point_id': 'int',
-        'min_alert_level': 'int',
+        'data_point_name': 'str',
         'data_source_display_name': 'str',
+        'data_source_id': 'int',
         'disable_alerting': 'bool',
         'id': 'int',
+        'min_alert_level': 'int',
         'suppress_ind_alert': 'object',
-        'threshold_type': 'str',
-        'data_point_description': 'str',
-        'alert_expr': 'str'
+        'threshold_type': 'str'
     }
 
     attribute_map = {
+        'alert_expr': 'alertExpr',
         'count_by': 'countBy',
-        'data_point_name': 'dataPointName',
-        'data_source_id': 'dataSourceId',
+        'data_point_description': 'dataPointDescription',
         'data_point_id': 'dataPointId',
-        'min_alert_level': 'minAlertLevel',
+        'data_point_name': 'dataPointName',
         'data_source_display_name': 'dataSourceDisplayName',
+        'data_source_id': 'dataSourceId',
         'disable_alerting': 'disableAlerting',
         'id': 'id',
+        'min_alert_level': 'minAlertLevel',
         'suppress_ind_alert': 'suppressIndAlert',
-        'threshold_type': 'thresholdType',
-        'data_point_description': 'dataPointDescription',
-        'alert_expr': 'alertExpr'
+        'threshold_type': 'thresholdType'
     }
 
-    def __init__(self, count_by=None, data_point_name=None, data_source_id=None, data_point_id=None, min_alert_level=None, data_source_display_name=None, disable_alerting=None, id=None, suppress_ind_alert=None, threshold_type=None, data_point_description=None, alert_expr=None):  # noqa: E501
+    def __init__(self, alert_expr=None, count_by=None, data_point_description=None, data_point_id=None, data_point_name=None, data_source_display_name=None, data_source_id=None, disable_alerting=None, id=None, min_alert_level=None, suppress_ind_alert=None, threshold_type=None):  # noqa: E501
         """DeviceClusterAlertConfig - a model defined in Swagger"""  # noqa: E501
 
+        self._alert_expr = None
         self._count_by = None
-        self._data_point_name = None
-        self._data_source_id = None
+        self._data_point_description = None
         self._data_point_id = None
-        self._min_alert_level = None
+        self._data_point_name = None
         self._data_source_display_name = None
+        self._data_source_id = None
         self._disable_alerting = None
         self._id = None
+        self._min_alert_level = None
         self._suppress_ind_alert = None
         self._threshold_type = None
-        self._data_point_description = None
-        self._alert_expr = None
         self.discriminator = None
 
+        if alert_expr is not None:
+            self.alert_expr = alert_expr
         if count_by is not None:
             self.count_by = count_by
-        if data_point_name is not None:
-            self.data_point_name = data_point_name
-        if data_source_id is not None:
-            self.data_source_id = data_source_id
+        if data_point_description is not None:
+            self.data_point_description = data_point_description
         if data_point_id is not None:
             self.data_point_id = data_point_id
-        if min_alert_level is not None:
-            self.min_alert_level = min_alert_level
+        if data_point_name is not None:
+            self.data_point_name = data_point_name
         if data_source_display_name is not None:
             self.data_source_display_name = data_source_display_name
+        if data_source_id is not None:
+            self.data_source_id = data_source_id
         if disable_alerting is not None:
             self.disable_alerting = disable_alerting
         if id is not None:
             self.id = id
+        if min_alert_level is not None:
+            self.min_alert_level = min_alert_level
         if suppress_ind_alert is not None:
             self.suppress_ind_alert = suppress_ind_alert
         if threshold_type is not None:
             self.threshold_type = threshold_type
-        if data_point_description is not None:
-            self.data_point_description = data_point_description
-        if alert_expr is not None:
-            self.alert_expr = alert_expr
+
+    @property
+    def alert_expr(self):
+        """Gets the alert_expr of this DeviceClusterAlertConfig.  # noqa: E501
+
+        The expression that indicates the number of objects (devices or instances) that need to be in alert to trigger the cluster alert. E.g. > 5  # noqa: E501
+
+        :return: The alert_expr of this DeviceClusterAlertConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_expr
+
+    @alert_expr.setter
+    def alert_expr(self, alert_expr):
+        """Sets the alert_expr of this DeviceClusterAlertConfig.
+
+        The expression that indicates the number of objects (devices or instances) that need to be in alert to trigger the cluster alert. E.g. > 5  # noqa: E501
+
+        :param alert_expr: The alert_expr of this DeviceClusterAlertConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_expr = alert_expr
 
     @property
     def count_by(self):
@@ -126,50 +149,27 @@ class DeviceClusterAlertConfig(object):
         self._count_by = count_by
 
     @property
-    def data_point_name(self):
-        """Gets the data_point_name of this DeviceClusterAlertConfig.  # noqa: E501
+    def data_point_description(self):
+        """Gets the data_point_description of this DeviceClusterAlertConfig.  # noqa: E501
 
-        The name of the dataPoint you want to base the cluster alert on  # noqa: E501
+        The description of the dataPoint you want to base the cluster alert on  # noqa: E501
 
-        :return: The data_point_name of this DeviceClusterAlertConfig.  # noqa: E501
+        :return: The data_point_description of this DeviceClusterAlertConfig.  # noqa: E501
         :rtype: str
         """
-        return self._data_point_name
+        return self._data_point_description
 
-    @data_point_name.setter
-    def data_point_name(self, data_point_name):
-        """Sets the data_point_name of this DeviceClusterAlertConfig.
+    @data_point_description.setter
+    def data_point_description(self, data_point_description):
+        """Sets the data_point_description of this DeviceClusterAlertConfig.
 
-        The name of the dataPoint you want to base the cluster alert on  # noqa: E501
+        The description of the dataPoint you want to base the cluster alert on  # noqa: E501
 
-        :param data_point_name: The data_point_name of this DeviceClusterAlertConfig.  # noqa: E501
+        :param data_point_description: The data_point_description of this DeviceClusterAlertConfig.  # noqa: E501
         :type: str
         """
 
-        self._data_point_name = data_point_name
-
-    @property
-    def data_source_id(self):
-        """Gets the data_source_id of this DeviceClusterAlertConfig.  # noqa: E501
-
-        The id of the dataSource you want to base the cluster alert on  # noqa: E501
-
-        :return: The data_source_id of this DeviceClusterAlertConfig.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_source_id
-
-    @data_source_id.setter
-    def data_source_id(self, data_source_id):
-        """Sets the data_source_id of this DeviceClusterAlertConfig.
-
-        The id of the dataSource you want to base the cluster alert on  # noqa: E501
-
-        :param data_source_id: The data_source_id of this DeviceClusterAlertConfig.  # noqa: E501
-        :type: int
-        """
-
-        self._data_source_id = data_source_id
+        self._data_point_description = data_point_description
 
     @property
     def data_point_id(self):
@@ -195,27 +195,27 @@ class DeviceClusterAlertConfig(object):
         self._data_point_id = data_point_id
 
     @property
-    def min_alert_level(self):
-        """Gets the min_alert_level of this DeviceClusterAlertConfig.  # noqa: E501
+    def data_point_name(self):
+        """Gets the data_point_name of this DeviceClusterAlertConfig.  # noqa: E501
 
-        The alert level that must be present for the devices or instances to trigger the cluster alert. Acceptable values are: 2, 3, 4  # noqa: E501
+        The name of the dataPoint you want to base the cluster alert on  # noqa: E501
 
-        :return: The min_alert_level of this DeviceClusterAlertConfig.  # noqa: E501
-        :rtype: int
+        :return: The data_point_name of this DeviceClusterAlertConfig.  # noqa: E501
+        :rtype: str
         """
-        return self._min_alert_level
+        return self._data_point_name
 
-    @min_alert_level.setter
-    def min_alert_level(self, min_alert_level):
-        """Sets the min_alert_level of this DeviceClusterAlertConfig.
+    @data_point_name.setter
+    def data_point_name(self, data_point_name):
+        """Sets the data_point_name of this DeviceClusterAlertConfig.
 
-        The alert level that must be present for the devices or instances to trigger the cluster alert. Acceptable values are: 2, 3, 4  # noqa: E501
+        The name of the dataPoint you want to base the cluster alert on  # noqa: E501
 
-        :param min_alert_level: The min_alert_level of this DeviceClusterAlertConfig.  # noqa: E501
-        :type: int
+        :param data_point_name: The data_point_name of this DeviceClusterAlertConfig.  # noqa: E501
+        :type: str
         """
 
-        self._min_alert_level = min_alert_level
+        self._data_point_name = data_point_name
 
     @property
     def data_source_display_name(self):
@@ -239,6 +239,29 @@ class DeviceClusterAlertConfig(object):
         """
 
         self._data_source_display_name = data_source_display_name
+
+    @property
+    def data_source_id(self):
+        """Gets the data_source_id of this DeviceClusterAlertConfig.  # noqa: E501
+
+        The id of the dataSource you want to base the cluster alert on  # noqa: E501
+
+        :return: The data_source_id of this DeviceClusterAlertConfig.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_source_id
+
+    @data_source_id.setter
+    def data_source_id(self, data_source_id):
+        """Sets the data_source_id of this DeviceClusterAlertConfig.
+
+        The id of the dataSource you want to base the cluster alert on  # noqa: E501
+
+        :param data_source_id: The data_source_id of this DeviceClusterAlertConfig.  # noqa: E501
+        :type: int
+        """
+
+        self._data_source_id = data_source_id
 
     @property
     def disable_alerting(self):
@@ -287,6 +310,29 @@ class DeviceClusterAlertConfig(object):
         self._id = id
 
     @property
+    def min_alert_level(self):
+        """Gets the min_alert_level of this DeviceClusterAlertConfig.  # noqa: E501
+
+        The alert level that must be present for the devices or instances to trigger the cluster alert. Acceptable values are: 2, 3, 4  # noqa: E501
+
+        :return: The min_alert_level of this DeviceClusterAlertConfig.  # noqa: E501
+        :rtype: int
+        """
+        return self._min_alert_level
+
+    @min_alert_level.setter
+    def min_alert_level(self, min_alert_level):
+        """Sets the min_alert_level of this DeviceClusterAlertConfig.
+
+        The alert level that must be present for the devices or instances to trigger the cluster alert. Acceptable values are: 2, 3, 4  # noqa: E501
+
+        :param min_alert_level: The min_alert_level of this DeviceClusterAlertConfig.  # noqa: E501
+        :type: int
+        """
+
+        self._min_alert_level = min_alert_level
+
+    @property
     def suppress_ind_alert(self):
         """Gets the suppress_ind_alert of this DeviceClusterAlertConfig.  # noqa: E501
 
@@ -331,52 +377,6 @@ class DeviceClusterAlertConfig(object):
         """
 
         self._threshold_type = threshold_type
-
-    @property
-    def data_point_description(self):
-        """Gets the data_point_description of this DeviceClusterAlertConfig.  # noqa: E501
-
-        The description of the dataPoint you want to base the cluster alert on  # noqa: E501
-
-        :return: The data_point_description of this DeviceClusterAlertConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_point_description
-
-    @data_point_description.setter
-    def data_point_description(self, data_point_description):
-        """Sets the data_point_description of this DeviceClusterAlertConfig.
-
-        The description of the dataPoint you want to base the cluster alert on  # noqa: E501
-
-        :param data_point_description: The data_point_description of this DeviceClusterAlertConfig.  # noqa: E501
-        :type: str
-        """
-
-        self._data_point_description = data_point_description
-
-    @property
-    def alert_expr(self):
-        """Gets the alert_expr of this DeviceClusterAlertConfig.  # noqa: E501
-
-        The expression that indicates the number of objects (devices or instances) that need to be in alert to trigger the cluster alert. E.g. > 5  # noqa: E501
-
-        :return: The alert_expr of this DeviceClusterAlertConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._alert_expr
-
-    @alert_expr.setter
-    def alert_expr(self, alert_expr):
-        """Sets the alert_expr of this DeviceClusterAlertConfig.
-
-        The expression that indicates the number of objects (devices or instances) that need to be in alert to trigger the cluster alert. E.g. > 5  # noqa: E501
-
-        :param alert_expr: The alert_expr of this DeviceClusterAlertConfig.  # noqa: E501
-        :type: str
-        """
-
-        self._alert_expr = alert_expr
 
     def to_dict(self):
         """Returns the model properties as a dict"""

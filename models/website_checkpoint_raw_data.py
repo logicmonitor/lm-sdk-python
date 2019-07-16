@@ -31,52 +31,52 @@ class WebsiteCheckpointRawData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'values': 'list[list[object]]',
+        'next_page_params': 'str',
         'time': 'list[int]',
-        'next_page_params': 'str'
+        'values': 'list[list[object]]'
     }
 
     attribute_map = {
-        'values': 'values',
+        'next_page_params': 'nextPageParams',
         'time': 'time',
-        'next_page_params': 'nextPageParams'
+        'values': 'values'
     }
 
-    def __init__(self, values=None, time=None, next_page_params=None):  # noqa: E501
+    def __init__(self, next_page_params=None, time=None, values=None):  # noqa: E501
         """WebsiteCheckpointRawData - a model defined in Swagger"""  # noqa: E501
 
-        self._values = None
-        self._time = None
         self._next_page_params = None
+        self._time = None
+        self._values = None
         self.discriminator = None
 
-        if values is not None:
-            self.values = values
-        if time is not None:
-            self.time = time
         if next_page_params is not None:
             self.next_page_params = next_page_params
+        if time is not None:
+            self.time = time
+        if values is not None:
+            self.values = values
 
     @property
-    def values(self):
-        """Gets the values of this WebsiteCheckpointRawData.  # noqa: E501
+    def next_page_params(self):
+        """Gets the next_page_params of this WebsiteCheckpointRawData.  # noqa: E501
 
 
-        :return: The values of this WebsiteCheckpointRawData.  # noqa: E501
-        :rtype: list[list[object]]
+        :return: The next_page_params of this WebsiteCheckpointRawData.  # noqa: E501
+        :rtype: str
         """
-        return self._values
+        return self._next_page_params
 
-    @values.setter
-    def values(self, values):
-        """Sets the values of this WebsiteCheckpointRawData.
+    @next_page_params.setter
+    def next_page_params(self, next_page_params):
+        """Sets the next_page_params of this WebsiteCheckpointRawData.
 
 
-        :param values: The values of this WebsiteCheckpointRawData.  # noqa: E501
-        :type: list[list[object]]
+        :param next_page_params: The next_page_params of this WebsiteCheckpointRawData.  # noqa: E501
+        :type: str
         """
 
-        self._values = values
+        self._next_page_params = next_page_params
 
     @property
     def time(self):
@@ -100,25 +100,25 @@ class WebsiteCheckpointRawData(object):
         self._time = time
 
     @property
-    def next_page_params(self):
-        """Gets the next_page_params of this WebsiteCheckpointRawData.  # noqa: E501
+    def values(self):
+        """Gets the values of this WebsiteCheckpointRawData.  # noqa: E501
 
 
-        :return: The next_page_params of this WebsiteCheckpointRawData.  # noqa: E501
-        :rtype: str
+        :return: The values of this WebsiteCheckpointRawData.  # noqa: E501
+        :rtype: list[list[object]]
         """
-        return self._next_page_params
+        return self._values
 
-    @next_page_params.setter
-    def next_page_params(self, next_page_params):
-        """Sets the next_page_params of this WebsiteCheckpointRawData.
+    @values.setter
+    def values(self, values):
+        """Sets the values of this WebsiteCheckpointRawData.
 
 
-        :param next_page_params: The next_page_params of this WebsiteCheckpointRawData.  # noqa: E501
-        :type: str
+        :param values: The values of this WebsiteCheckpointRawData.  # noqa: E501
+        :type: list[list[object]]
         """
 
-        self._next_page_params = next_page_params
+        self._values = values
 
     def to_dict(self):
         """Returns the model properties as a dict"""

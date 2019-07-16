@@ -31,52 +31,31 @@ class DeviceDataSourceAssociatedInstance(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
         'alias': 'str',
-        'id': 'int'
+        'id': 'int',
+        'name': 'str'
     }
 
     attribute_map = {
-        'name': 'name',
         'alias': 'alias',
-        'id': 'id'
+        'id': 'id',
+        'name': 'name'
     }
 
-    def __init__(self, name=None, alias=None, id=None):  # noqa: E501
+    def __init__(self, alias=None, id=None, name=None):  # noqa: E501
         """DeviceDataSourceAssociatedInstance - a model defined in Swagger"""  # noqa: E501
 
-        self._name = None
         self._alias = None
         self._id = None
+        self._name = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
         if alias is not None:
             self.alias = alias
         if id is not None:
             self.id = id
-
-    @property
-    def name(self):
-        """Gets the name of this DeviceDataSourceAssociatedInstance.  # noqa: E501
-
-
-        :return: The name of this DeviceDataSourceAssociatedInstance.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this DeviceDataSourceAssociatedInstance.
-
-
-        :param name: The name of this DeviceDataSourceAssociatedInstance.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
+        if name is not None:
+            self.name = name
 
     @property
     def alias(self):
@@ -119,6 +98,27 @@ class DeviceDataSourceAssociatedInstance(object):
         """
 
         self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this DeviceDataSourceAssociatedInstance.  # noqa: E501
+
+
+        :return: The name of this DeviceDataSourceAssociatedInstance.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this DeviceDataSourceAssociatedInstance.
+
+
+        :param name: The name of this DeviceDataSourceAssociatedInstance.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,55 +31,34 @@ class AutoDiscoveryFilter(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'comment': 'str',
         'attribute': 'str',
+        'comment': 'str',
         'operation': 'str',
         'value': 'str'
     }
 
     attribute_map = {
-        'comment': 'comment',
         'attribute': 'attribute',
+        'comment': 'comment',
         'operation': 'operation',
         'value': 'value'
     }
 
-    def __init__(self, comment=None, attribute=None, operation=None, value=None):  # noqa: E501
+    def __init__(self, attribute=None, comment=None, operation=None, value=None):  # noqa: E501
         """AutoDiscoveryFilter - a model defined in Swagger"""  # noqa: E501
 
-        self._comment = None
         self._attribute = None
+        self._comment = None
         self._operation = None
         self._value = None
         self.discriminator = None
 
+        self.attribute = attribute
         if comment is not None:
             self.comment = comment
-        self.attribute = attribute
         self.operation = operation
         if value is not None:
             self.value = value
-
-    @property
-    def comment(self):
-        """Gets the comment of this AutoDiscoveryFilter.  # noqa: E501
-
-
-        :return: The comment of this AutoDiscoveryFilter.  # noqa: E501
-        :rtype: str
-        """
-        return self._comment
-
-    @comment.setter
-    def comment(self, comment):
-        """Sets the comment of this AutoDiscoveryFilter.
-
-
-        :param comment: The comment of this AutoDiscoveryFilter.  # noqa: E501
-        :type: str
-        """
-
-        self._comment = comment
 
     @property
     def attribute(self):
@@ -103,6 +82,27 @@ class AutoDiscoveryFilter(object):
             raise ValueError("Invalid value for `attribute`, must not be `None`")  # noqa: E501
 
         self._attribute = attribute
+
+    @property
+    def comment(self):
+        """Gets the comment of this AutoDiscoveryFilter.  # noqa: E501
+
+
+        :return: The comment of this AutoDiscoveryFilter.  # noqa: E501
+        :rtype: str
+        """
+        return self._comment
+
+    @comment.setter
+    def comment(self, comment):
+        """Sets the comment of this AutoDiscoveryFilter.
+
+
+        :param comment: The comment of this AutoDiscoveryFilter.  # noqa: E501
+        :type: str
+        """
+
+        self._comment = comment
 
     @property
     def operation(self):

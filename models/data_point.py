@@ -31,125 +31,209 @@ class DataPoint(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'alert_body': 'str',
+        'alert_clear_transition_interval': 'int',
+        'alert_expr': 'str',
+        'alert_expr_note': 'str',
         'alert_for_no_data': 'int',
-        'max_value': 'str',
+        'alert_subject': 'str',
+        'alert_transition_interval': 'int',
+        'data_source_id': 'int',
         'data_type': 'int',
+        'description': 'str',
+        'id': 'int',
+        'max_digits': 'int',
+        'max_value': 'str',
+        'min_value': 'str',
+        'name': 'str',
         'post_processor_method': 'str',
         'post_processor_param': 'str',
-        'max_digits': 'int',
         'raw_data_field_name': 'str',
-        'description': 'str',
-        'alert_clear_transition_interval': 'int',
-        'user_param3': 'str',
-        'user_param2': 'str',
         'type': 'int',
-        'alert_expr_note': 'str',
-        'data_source_id': 'int',
-        'min_value': 'str',
-        'alert_body': 'str',
         'user_param1': 'str',
-        'name': 'str',
-        'alert_subject': 'str',
-        'id': 'int',
-        'alert_transition_interval': 'int',
-        'alert_expr': 'str'
+        'user_param2': 'str',
+        'user_param3': 'str'
     }
 
     attribute_map = {
+        'alert_body': 'alertBody',
+        'alert_clear_transition_interval': 'alertClearTransitionInterval',
+        'alert_expr': 'alertExpr',
+        'alert_expr_note': 'alertExprNote',
         'alert_for_no_data': 'alertForNoData',
-        'max_value': 'maxValue',
+        'alert_subject': 'alertSubject',
+        'alert_transition_interval': 'alertTransitionInterval',
+        'data_source_id': 'dataSourceId',
         'data_type': 'dataType',
+        'description': 'description',
+        'id': 'id',
+        'max_digits': 'maxDigits',
+        'max_value': 'maxValue',
+        'min_value': 'minValue',
+        'name': 'name',
         'post_processor_method': 'postProcessorMethod',
         'post_processor_param': 'postProcessorParam',
-        'max_digits': 'maxDigits',
         'raw_data_field_name': 'rawDataFieldName',
-        'description': 'description',
-        'alert_clear_transition_interval': 'alertClearTransitionInterval',
-        'user_param3': 'userParam3',
-        'user_param2': 'userParam2',
         'type': 'type',
-        'alert_expr_note': 'alertExprNote',
-        'data_source_id': 'dataSourceId',
-        'min_value': 'minValue',
-        'alert_body': 'alertBody',
         'user_param1': 'userParam1',
-        'name': 'name',
-        'alert_subject': 'alertSubject',
-        'id': 'id',
-        'alert_transition_interval': 'alertTransitionInterval',
-        'alert_expr': 'alertExpr'
+        'user_param2': 'userParam2',
+        'user_param3': 'userParam3'
     }
 
-    def __init__(self, alert_for_no_data=None, max_value=None, data_type=None, post_processor_method=None, post_processor_param=None, max_digits=None, raw_data_field_name=None, description=None, alert_clear_transition_interval=None, user_param3=None, user_param2=None, type=None, alert_expr_note=None, data_source_id=None, min_value=None, alert_body=None, user_param1=None, name=None, alert_subject=None, id=None, alert_transition_interval=None, alert_expr=None):  # noqa: E501
+    def __init__(self, alert_body=None, alert_clear_transition_interval=None, alert_expr=None, alert_expr_note=None, alert_for_no_data=None, alert_subject=None, alert_transition_interval=None, data_source_id=None, data_type=None, description=None, id=None, max_digits=None, max_value=None, min_value=None, name=None, post_processor_method=None, post_processor_param=None, raw_data_field_name=None, type=None, user_param1=None, user_param2=None, user_param3=None):  # noqa: E501
         """DataPoint - a model defined in Swagger"""  # noqa: E501
 
+        self._alert_body = None
+        self._alert_clear_transition_interval = None
+        self._alert_expr = None
+        self._alert_expr_note = None
         self._alert_for_no_data = None
-        self._max_value = None
+        self._alert_subject = None
+        self._alert_transition_interval = None
+        self._data_source_id = None
         self._data_type = None
+        self._description = None
+        self._id = None
+        self._max_digits = None
+        self._max_value = None
+        self._min_value = None
+        self._name = None
         self._post_processor_method = None
         self._post_processor_param = None
-        self._max_digits = None
         self._raw_data_field_name = None
-        self._description = None
-        self._alert_clear_transition_interval = None
-        self._user_param3 = None
-        self._user_param2 = None
         self._type = None
-        self._alert_expr_note = None
-        self._data_source_id = None
-        self._min_value = None
-        self._alert_body = None
         self._user_param1 = None
-        self._name = None
-        self._alert_subject = None
-        self._id = None
-        self._alert_transition_interval = None
-        self._alert_expr = None
+        self._user_param2 = None
+        self._user_param3 = None
         self.discriminator = None
 
+        if alert_body is not None:
+            self.alert_body = alert_body
+        if alert_clear_transition_interval is not None:
+            self.alert_clear_transition_interval = alert_clear_transition_interval
+        if alert_expr is not None:
+            self.alert_expr = alert_expr
+        if alert_expr_note is not None:
+            self.alert_expr_note = alert_expr_note
         if alert_for_no_data is not None:
             self.alert_for_no_data = alert_for_no_data
-        if max_value is not None:
-            self.max_value = max_value
+        if alert_subject is not None:
+            self.alert_subject = alert_subject
+        if alert_transition_interval is not None:
+            self.alert_transition_interval = alert_transition_interval
+        if data_source_id is not None:
+            self.data_source_id = data_source_id
         if data_type is not None:
             self.data_type = data_type
+        if description is not None:
+            self.description = description
+        if id is not None:
+            self.id = id
+        if max_digits is not None:
+            self.max_digits = max_digits
+        if max_value is not None:
+            self.max_value = max_value
+        if min_value is not None:
+            self.min_value = min_value
+        self.name = name
         if post_processor_method is not None:
             self.post_processor_method = post_processor_method
         if post_processor_param is not None:
             self.post_processor_param = post_processor_param
-        if max_digits is not None:
-            self.max_digits = max_digits
         if raw_data_field_name is not None:
             self.raw_data_field_name = raw_data_field_name
-        if description is not None:
-            self.description = description
-        if alert_clear_transition_interval is not None:
-            self.alert_clear_transition_interval = alert_clear_transition_interval
-        if user_param3 is not None:
-            self.user_param3 = user_param3
-        if user_param2 is not None:
-            self.user_param2 = user_param2
         if type is not None:
             self.type = type
-        if alert_expr_note is not None:
-            self.alert_expr_note = alert_expr_note
-        if data_source_id is not None:
-            self.data_source_id = data_source_id
-        if min_value is not None:
-            self.min_value = min_value
-        if alert_body is not None:
-            self.alert_body = alert_body
         if user_param1 is not None:
             self.user_param1 = user_param1
-        self.name = name
-        if alert_subject is not None:
-            self.alert_subject = alert_subject
-        if id is not None:
-            self.id = id
-        if alert_transition_interval is not None:
-            self.alert_transition_interval = alert_transition_interval
-        if alert_expr is not None:
-            self.alert_expr = alert_expr
+        if user_param2 is not None:
+            self.user_param2 = user_param2
+        if user_param3 is not None:
+            self.user_param3 = user_param3
+
+    @property
+    def alert_body(self):
+        """Gets the alert_body of this DataPoint.  # noqa: E501
+
+
+        :return: The alert_body of this DataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_body
+
+    @alert_body.setter
+    def alert_body(self, alert_body):
+        """Sets the alert_body of this DataPoint.
+
+
+        :param alert_body: The alert_body of this DataPoint.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_body = alert_body
+
+    @property
+    def alert_clear_transition_interval(self):
+        """Gets the alert_clear_transition_interval of this DataPoint.  # noqa: E501
+
+
+        :return: The alert_clear_transition_interval of this DataPoint.  # noqa: E501
+        :rtype: int
+        """
+        return self._alert_clear_transition_interval
+
+    @alert_clear_transition_interval.setter
+    def alert_clear_transition_interval(self, alert_clear_transition_interval):
+        """Sets the alert_clear_transition_interval of this DataPoint.
+
+
+        :param alert_clear_transition_interval: The alert_clear_transition_interval of this DataPoint.  # noqa: E501
+        :type: int
+        """
+
+        self._alert_clear_transition_interval = alert_clear_transition_interval
+
+    @property
+    def alert_expr(self):
+        """Gets the alert_expr of this DataPoint.  # noqa: E501
+
+
+        :return: The alert_expr of this DataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_expr
+
+    @alert_expr.setter
+    def alert_expr(self, alert_expr):
+        """Sets the alert_expr of this DataPoint.
+
+
+        :param alert_expr: The alert_expr of this DataPoint.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_expr = alert_expr
+
+    @property
+    def alert_expr_note(self):
+        """Gets the alert_expr_note of this DataPoint.  # noqa: E501
+
+
+        :return: The alert_expr_note of this DataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_expr_note
+
+    @alert_expr_note.setter
+    def alert_expr_note(self, alert_expr_note):
+        """Sets the alert_expr_note of this DataPoint.
+
+
+        :param alert_expr_note: The alert_expr_note of this DataPoint.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_expr_note = alert_expr_note
 
     @property
     def alert_for_no_data(self):
@@ -173,25 +257,67 @@ class DataPoint(object):
         self._alert_for_no_data = alert_for_no_data
 
     @property
-    def max_value(self):
-        """Gets the max_value of this DataPoint.  # noqa: E501
+    def alert_subject(self):
+        """Gets the alert_subject of this DataPoint.  # noqa: E501
 
 
-        :return: The max_value of this DataPoint.  # noqa: E501
+        :return: The alert_subject of this DataPoint.  # noqa: E501
         :rtype: str
         """
-        return self._max_value
+        return self._alert_subject
 
-    @max_value.setter
-    def max_value(self, max_value):
-        """Sets the max_value of this DataPoint.
+    @alert_subject.setter
+    def alert_subject(self, alert_subject):
+        """Sets the alert_subject of this DataPoint.
 
 
-        :param max_value: The max_value of this DataPoint.  # noqa: E501
+        :param alert_subject: The alert_subject of this DataPoint.  # noqa: E501
         :type: str
         """
 
-        self._max_value = max_value
+        self._alert_subject = alert_subject
+
+    @property
+    def alert_transition_interval(self):
+        """Gets the alert_transition_interval of this DataPoint.  # noqa: E501
+
+
+        :return: The alert_transition_interval of this DataPoint.  # noqa: E501
+        :rtype: int
+        """
+        return self._alert_transition_interval
+
+    @alert_transition_interval.setter
+    def alert_transition_interval(self, alert_transition_interval):
+        """Sets the alert_transition_interval of this DataPoint.
+
+
+        :param alert_transition_interval: The alert_transition_interval of this DataPoint.  # noqa: E501
+        :type: int
+        """
+
+        self._alert_transition_interval = alert_transition_interval
+
+    @property
+    def data_source_id(self):
+        """Gets the data_source_id of this DataPoint.  # noqa: E501
+
+
+        :return: The data_source_id of this DataPoint.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_source_id
+
+    @data_source_id.setter
+    def data_source_id(self, data_source_id):
+        """Sets the data_source_id of this DataPoint.
+
+
+        :param data_source_id: The data_source_id of this DataPoint.  # noqa: E501
+        :type: int
+        """
+
+        self._data_source_id = data_source_id
 
     @property
     def data_type(self):
@@ -213,6 +339,134 @@ class DataPoint(object):
         """
 
         self._data_type = data_type
+
+    @property
+    def description(self):
+        """Gets the description of this DataPoint.  # noqa: E501
+
+
+        :return: The description of this DataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this DataPoint.
+
+
+        :param description: The description of this DataPoint.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def id(self):
+        """Gets the id of this DataPoint.  # noqa: E501
+
+
+        :return: The id of this DataPoint.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this DataPoint.
+
+
+        :param id: The id of this DataPoint.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def max_digits(self):
+        """Gets the max_digits of this DataPoint.  # noqa: E501
+
+
+        :return: The max_digits of this DataPoint.  # noqa: E501
+        :rtype: int
+        """
+        return self._max_digits
+
+    @max_digits.setter
+    def max_digits(self, max_digits):
+        """Sets the max_digits of this DataPoint.
+
+
+        :param max_digits: The max_digits of this DataPoint.  # noqa: E501
+        :type: int
+        """
+
+        self._max_digits = max_digits
+
+    @property
+    def max_value(self):
+        """Gets the max_value of this DataPoint.  # noqa: E501
+
+
+        :return: The max_value of this DataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._max_value
+
+    @max_value.setter
+    def max_value(self, max_value):
+        """Sets the max_value of this DataPoint.
+
+
+        :param max_value: The max_value of this DataPoint.  # noqa: E501
+        :type: str
+        """
+
+        self._max_value = max_value
+
+    @property
+    def min_value(self):
+        """Gets the min_value of this DataPoint.  # noqa: E501
+
+
+        :return: The min_value of this DataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._min_value
+
+    @min_value.setter
+    def min_value(self, min_value):
+        """Sets the min_value of this DataPoint.
+
+
+        :param min_value: The min_value of this DataPoint.  # noqa: E501
+        :type: str
+        """
+
+        self._min_value = min_value
+
+    @property
+    def name(self):
+        """Gets the name of this DataPoint.  # noqa: E501
+
+
+        :return: The name of this DataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this DataPoint.
+
+
+        :param name: The name of this DataPoint.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
 
     @property
     def post_processor_method(self):
@@ -257,27 +511,6 @@ class DataPoint(object):
         self._post_processor_param = post_processor_param
 
     @property
-    def max_digits(self):
-        """Gets the max_digits of this DataPoint.  # noqa: E501
-
-
-        :return: The max_digits of this DataPoint.  # noqa: E501
-        :rtype: int
-        """
-        return self._max_digits
-
-    @max_digits.setter
-    def max_digits(self, max_digits):
-        """Sets the max_digits of this DataPoint.
-
-
-        :param max_digits: The max_digits of this DataPoint.  # noqa: E501
-        :type: int
-        """
-
-        self._max_digits = max_digits
-
-    @property
     def raw_data_field_name(self):
         """Gets the raw_data_field_name of this DataPoint.  # noqa: E501
 
@@ -297,90 +530,6 @@ class DataPoint(object):
         """
 
         self._raw_data_field_name = raw_data_field_name
-
-    @property
-    def description(self):
-        """Gets the description of this DataPoint.  # noqa: E501
-
-
-        :return: The description of this DataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this DataPoint.
-
-
-        :param description: The description of this DataPoint.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
-    def alert_clear_transition_interval(self):
-        """Gets the alert_clear_transition_interval of this DataPoint.  # noqa: E501
-
-
-        :return: The alert_clear_transition_interval of this DataPoint.  # noqa: E501
-        :rtype: int
-        """
-        return self._alert_clear_transition_interval
-
-    @alert_clear_transition_interval.setter
-    def alert_clear_transition_interval(self, alert_clear_transition_interval):
-        """Sets the alert_clear_transition_interval of this DataPoint.
-
-
-        :param alert_clear_transition_interval: The alert_clear_transition_interval of this DataPoint.  # noqa: E501
-        :type: int
-        """
-
-        self._alert_clear_transition_interval = alert_clear_transition_interval
-
-    @property
-    def user_param3(self):
-        """Gets the user_param3 of this DataPoint.  # noqa: E501
-
-
-        :return: The user_param3 of this DataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_param3
-
-    @user_param3.setter
-    def user_param3(self, user_param3):
-        """Sets the user_param3 of this DataPoint.
-
-
-        :param user_param3: The user_param3 of this DataPoint.  # noqa: E501
-        :type: str
-        """
-
-        self._user_param3 = user_param3
-
-    @property
-    def user_param2(self):
-        """Gets the user_param2 of this DataPoint.  # noqa: E501
-
-
-        :return: The user_param2 of this DataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_param2
-
-    @user_param2.setter
-    def user_param2(self, user_param2):
-        """Sets the user_param2 of this DataPoint.
-
-
-        :param user_param2: The user_param2 of this DataPoint.  # noqa: E501
-        :type: str
-        """
-
-        self._user_param2 = user_param2
 
     @property
     def type(self):
@@ -404,90 +553,6 @@ class DataPoint(object):
         self._type = type
 
     @property
-    def alert_expr_note(self):
-        """Gets the alert_expr_note of this DataPoint.  # noqa: E501
-
-
-        :return: The alert_expr_note of this DataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._alert_expr_note
-
-    @alert_expr_note.setter
-    def alert_expr_note(self, alert_expr_note):
-        """Sets the alert_expr_note of this DataPoint.
-
-
-        :param alert_expr_note: The alert_expr_note of this DataPoint.  # noqa: E501
-        :type: str
-        """
-
-        self._alert_expr_note = alert_expr_note
-
-    @property
-    def data_source_id(self):
-        """Gets the data_source_id of this DataPoint.  # noqa: E501
-
-
-        :return: The data_source_id of this DataPoint.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_source_id
-
-    @data_source_id.setter
-    def data_source_id(self, data_source_id):
-        """Sets the data_source_id of this DataPoint.
-
-
-        :param data_source_id: The data_source_id of this DataPoint.  # noqa: E501
-        :type: int
-        """
-
-        self._data_source_id = data_source_id
-
-    @property
-    def min_value(self):
-        """Gets the min_value of this DataPoint.  # noqa: E501
-
-
-        :return: The min_value of this DataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._min_value
-
-    @min_value.setter
-    def min_value(self, min_value):
-        """Sets the min_value of this DataPoint.
-
-
-        :param min_value: The min_value of this DataPoint.  # noqa: E501
-        :type: str
-        """
-
-        self._min_value = min_value
-
-    @property
-    def alert_body(self):
-        """Gets the alert_body of this DataPoint.  # noqa: E501
-
-
-        :return: The alert_body of this DataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._alert_body
-
-    @alert_body.setter
-    def alert_body(self, alert_body):
-        """Sets the alert_body of this DataPoint.
-
-
-        :param alert_body: The alert_body of this DataPoint.  # noqa: E501
-        :type: str
-        """
-
-        self._alert_body = alert_body
-
-    @property
     def user_param1(self):
         """Gets the user_param1 of this DataPoint.  # noqa: E501
 
@@ -509,111 +574,46 @@ class DataPoint(object):
         self._user_param1 = user_param1
 
     @property
-    def name(self):
-        """Gets the name of this DataPoint.  # noqa: E501
+    def user_param2(self):
+        """Gets the user_param2 of this DataPoint.  # noqa: E501
 
 
-        :return: The name of this DataPoint.  # noqa: E501
+        :return: The user_param2 of this DataPoint.  # noqa: E501
         :rtype: str
         """
-        return self._name
+        return self._user_param2
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this DataPoint.
-
-
-        :param name: The name of this DataPoint.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
-    def alert_subject(self):
-        """Gets the alert_subject of this DataPoint.  # noqa: E501
+    @user_param2.setter
+    def user_param2(self, user_param2):
+        """Sets the user_param2 of this DataPoint.
 
 
-        :return: The alert_subject of this DataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._alert_subject
-
-    @alert_subject.setter
-    def alert_subject(self, alert_subject):
-        """Sets the alert_subject of this DataPoint.
-
-
-        :param alert_subject: The alert_subject of this DataPoint.  # noqa: E501
+        :param user_param2: The user_param2 of this DataPoint.  # noqa: E501
         :type: str
         """
 
-        self._alert_subject = alert_subject
+        self._user_param2 = user_param2
 
     @property
-    def id(self):
-        """Gets the id of this DataPoint.  # noqa: E501
+    def user_param3(self):
+        """Gets the user_param3 of this DataPoint.  # noqa: E501
 
 
-        :return: The id of this DataPoint.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this DataPoint.
-
-
-        :param id: The id of this DataPoint.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def alert_transition_interval(self):
-        """Gets the alert_transition_interval of this DataPoint.  # noqa: E501
-
-
-        :return: The alert_transition_interval of this DataPoint.  # noqa: E501
-        :rtype: int
-        """
-        return self._alert_transition_interval
-
-    @alert_transition_interval.setter
-    def alert_transition_interval(self, alert_transition_interval):
-        """Sets the alert_transition_interval of this DataPoint.
-
-
-        :param alert_transition_interval: The alert_transition_interval of this DataPoint.  # noqa: E501
-        :type: int
-        """
-
-        self._alert_transition_interval = alert_transition_interval
-
-    @property
-    def alert_expr(self):
-        """Gets the alert_expr of this DataPoint.  # noqa: E501
-
-
-        :return: The alert_expr of this DataPoint.  # noqa: E501
+        :return: The user_param3 of this DataPoint.  # noqa: E501
         :rtype: str
         """
-        return self._alert_expr
+        return self._user_param3
 
-    @alert_expr.setter
-    def alert_expr(self, alert_expr):
-        """Sets the alert_expr of this DataPoint.
+    @user_param3.setter
+    def user_param3(self, user_param3):
+        """Sets the user_param3 of this DataPoint.
 
 
-        :param alert_expr: The alert_expr of this DataPoint.  # noqa: E501
+        :param user_param3: The user_param3 of this DataPoint.  # noqa: E501
         :type: str
         """
 
-        self._alert_expr = alert_expr
+        self._user_param3 = user_param3
 
     def to_dict(self):
         """Returns the model properties as a dict"""

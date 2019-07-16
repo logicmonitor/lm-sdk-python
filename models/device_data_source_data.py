@@ -33,57 +33,36 @@ class DeviceDataSourceData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'instances': 'dict(str, RawDataValues)',
         'data_points': 'list[str]',
-        'next_page_params': 'str',
-        'data_source_name': 'str'
+        'data_source_name': 'str',
+        'instances': 'dict(str, RawDataValues)',
+        'next_page_params': 'str'
     }
 
     attribute_map = {
-        'instances': 'instances',
         'data_points': 'dataPoints',
-        'next_page_params': 'nextPageParams',
-        'data_source_name': 'dataSourceName'
+        'data_source_name': 'dataSourceName',
+        'instances': 'instances',
+        'next_page_params': 'nextPageParams'
     }
 
-    def __init__(self, instances=None, data_points=None, next_page_params=None, data_source_name=None):  # noqa: E501
+    def __init__(self, data_points=None, data_source_name=None, instances=None, next_page_params=None):  # noqa: E501
         """DeviceDataSourceData - a model defined in Swagger"""  # noqa: E501
 
-        self._instances = None
         self._data_points = None
-        self._next_page_params = None
         self._data_source_name = None
+        self._instances = None
+        self._next_page_params = None
         self.discriminator = None
 
-        if instances is not None:
-            self.instances = instances
         if data_points is not None:
             self.data_points = data_points
-        if next_page_params is not None:
-            self.next_page_params = next_page_params
         if data_source_name is not None:
             self.data_source_name = data_source_name
-
-    @property
-    def instances(self):
-        """Gets the instances of this DeviceDataSourceData.  # noqa: E501
-
-
-        :return: The instances of this DeviceDataSourceData.  # noqa: E501
-        :rtype: dict(str, RawDataValues)
-        """
-        return self._instances
-
-    @instances.setter
-    def instances(self, instances):
-        """Sets the instances of this DeviceDataSourceData.
-
-
-        :param instances: The instances of this DeviceDataSourceData.  # noqa: E501
-        :type: dict(str, RawDataValues)
-        """
-
-        self._instances = instances
+        if instances is not None:
+            self.instances = instances
+        if next_page_params is not None:
+            self.next_page_params = next_page_params
 
     @property
     def data_points(self):
@@ -107,27 +86,6 @@ class DeviceDataSourceData(object):
         self._data_points = data_points
 
     @property
-    def next_page_params(self):
-        """Gets the next_page_params of this DeviceDataSourceData.  # noqa: E501
-
-
-        :return: The next_page_params of this DeviceDataSourceData.  # noqa: E501
-        :rtype: str
-        """
-        return self._next_page_params
-
-    @next_page_params.setter
-    def next_page_params(self, next_page_params):
-        """Sets the next_page_params of this DeviceDataSourceData.
-
-
-        :param next_page_params: The next_page_params of this DeviceDataSourceData.  # noqa: E501
-        :type: str
-        """
-
-        self._next_page_params = next_page_params
-
-    @property
     def data_source_name(self):
         """Gets the data_source_name of this DeviceDataSourceData.  # noqa: E501
 
@@ -147,6 +105,48 @@ class DeviceDataSourceData(object):
         """
 
         self._data_source_name = data_source_name
+
+    @property
+    def instances(self):
+        """Gets the instances of this DeviceDataSourceData.  # noqa: E501
+
+
+        :return: The instances of this DeviceDataSourceData.  # noqa: E501
+        :rtype: dict(str, RawDataValues)
+        """
+        return self._instances
+
+    @instances.setter
+    def instances(self, instances):
+        """Sets the instances of this DeviceDataSourceData.
+
+
+        :param instances: The instances of this DeviceDataSourceData.  # noqa: E501
+        :type: dict(str, RawDataValues)
+        """
+
+        self._instances = instances
+
+    @property
+    def next_page_params(self):
+        """Gets the next_page_params of this DeviceDataSourceData.  # noqa: E501
+
+
+        :return: The next_page_params of this DeviceDataSourceData.  # noqa: E501
+        :rtype: str
+        """
+        return self._next_page_params
+
+    @next_page_params.setter
+    def next_page_params(self, next_page_params):
+        """Sets the next_page_params of this DeviceDataSourceData.
+
+
+        :param next_page_params: The next_page_params of this DeviceDataSourceData.  # noqa: E501
+        :type: str
+        """
+
+        self._next_page_params = next_page_params
 
     def to_dict(self):
         """Returns the model properties as a dict"""

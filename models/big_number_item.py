@@ -33,95 +33,49 @@ class BigNumberItem(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data_point_name': 'str',
-        'use_comma_separators': 'bool',
         'bottom_label': 'str',
-        'rounding': 'int',
+        'color_thresholds': 'list[ColorThreshold]',
+        'data_point_name': 'str',
         'position': 'int',
         'right_label': 'str',
-        'color_thresholds': 'list[ColorThreshold]'
+        'rounding': 'int',
+        'use_comma_separators': 'bool'
     }
 
     attribute_map = {
-        'data_point_name': 'dataPointName',
-        'use_comma_separators': 'useCommaSeparators',
         'bottom_label': 'bottomLabel',
-        'rounding': 'rounding',
+        'color_thresholds': 'colorThresholds',
+        'data_point_name': 'dataPointName',
         'position': 'position',
         'right_label': 'rightLabel',
-        'color_thresholds': 'colorThresholds'
+        'rounding': 'rounding',
+        'use_comma_separators': 'useCommaSeparators'
     }
 
-    def __init__(self, data_point_name=None, use_comma_separators=None, bottom_label=None, rounding=None, position=None, right_label=None, color_thresholds=None):  # noqa: E501
+    def __init__(self, bottom_label=None, color_thresholds=None, data_point_name=None, position=None, right_label=None, rounding=None, use_comma_separators=None):  # noqa: E501
         """BigNumberItem - a model defined in Swagger"""  # noqa: E501
 
-        self._data_point_name = None
-        self._use_comma_separators = None
         self._bottom_label = None
-        self._rounding = None
+        self._color_thresholds = None
+        self._data_point_name = None
         self._position = None
         self._right_label = None
-        self._color_thresholds = None
+        self._rounding = None
+        self._use_comma_separators = None
         self.discriminator = None
 
-        self.data_point_name = data_point_name
-        self.use_comma_separators = use_comma_separators
         if bottom_label is not None:
             self.bottom_label = bottom_label
-        if rounding is not None:
-            self.rounding = rounding
+        if color_thresholds is not None:
+            self.color_thresholds = color_thresholds
+        self.data_point_name = data_point_name
         if position is not None:
             self.position = position
         if right_label is not None:
             self.right_label = right_label
-        if color_thresholds is not None:
-            self.color_thresholds = color_thresholds
-
-    @property
-    def data_point_name(self):
-        """Gets the data_point_name of this BigNumberItem.  # noqa: E501
-
-
-        :return: The data_point_name of this BigNumberItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_point_name
-
-    @data_point_name.setter
-    def data_point_name(self, data_point_name):
-        """Sets the data_point_name of this BigNumberItem.
-
-
-        :param data_point_name: The data_point_name of this BigNumberItem.  # noqa: E501
-        :type: str
-        """
-        if data_point_name is None:
-            raise ValueError("Invalid value for `data_point_name`, must not be `None`")  # noqa: E501
-
-        self._data_point_name = data_point_name
-
-    @property
-    def use_comma_separators(self):
-        """Gets the use_comma_separators of this BigNumberItem.  # noqa: E501
-
-
-        :return: The use_comma_separators of this BigNumberItem.  # noqa: E501
-        :rtype: bool
-        """
-        return self._use_comma_separators
-
-    @use_comma_separators.setter
-    def use_comma_separators(self, use_comma_separators):
-        """Sets the use_comma_separators of this BigNumberItem.
-
-
-        :param use_comma_separators: The use_comma_separators of this BigNumberItem.  # noqa: E501
-        :type: bool
-        """
-        if use_comma_separators is None:
-            raise ValueError("Invalid value for `use_comma_separators`, must not be `None`")  # noqa: E501
-
-        self._use_comma_separators = use_comma_separators
+        if rounding is not None:
+            self.rounding = rounding
+        self.use_comma_separators = use_comma_separators
 
     @property
     def bottom_label(self):
@@ -145,25 +99,48 @@ class BigNumberItem(object):
         self._bottom_label = bottom_label
 
     @property
-    def rounding(self):
-        """Gets the rounding of this BigNumberItem.  # noqa: E501
+    def color_thresholds(self):
+        """Gets the color_thresholds of this BigNumberItem.  # noqa: E501
 
 
-        :return: The rounding of this BigNumberItem.  # noqa: E501
-        :rtype: int
+        :return: The color_thresholds of this BigNumberItem.  # noqa: E501
+        :rtype: list[ColorThreshold]
         """
-        return self._rounding
+        return self._color_thresholds
 
-    @rounding.setter
-    def rounding(self, rounding):
-        """Sets the rounding of this BigNumberItem.
+    @color_thresholds.setter
+    def color_thresholds(self, color_thresholds):
+        """Sets the color_thresholds of this BigNumberItem.
 
 
-        :param rounding: The rounding of this BigNumberItem.  # noqa: E501
-        :type: int
+        :param color_thresholds: The color_thresholds of this BigNumberItem.  # noqa: E501
+        :type: list[ColorThreshold]
         """
 
-        self._rounding = rounding
+        self._color_thresholds = color_thresholds
+
+    @property
+    def data_point_name(self):
+        """Gets the data_point_name of this BigNumberItem.  # noqa: E501
+
+
+        :return: The data_point_name of this BigNumberItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_point_name
+
+    @data_point_name.setter
+    def data_point_name(self, data_point_name):
+        """Sets the data_point_name of this BigNumberItem.
+
+
+        :param data_point_name: The data_point_name of this BigNumberItem.  # noqa: E501
+        :type: str
+        """
+        if data_point_name is None:
+            raise ValueError("Invalid value for `data_point_name`, must not be `None`")  # noqa: E501
+
+        self._data_point_name = data_point_name
 
     @property
     def position(self):
@@ -208,25 +185,48 @@ class BigNumberItem(object):
         self._right_label = right_label
 
     @property
-    def color_thresholds(self):
-        """Gets the color_thresholds of this BigNumberItem.  # noqa: E501
+    def rounding(self):
+        """Gets the rounding of this BigNumberItem.  # noqa: E501
 
 
-        :return: The color_thresholds of this BigNumberItem.  # noqa: E501
-        :rtype: list[ColorThreshold]
+        :return: The rounding of this BigNumberItem.  # noqa: E501
+        :rtype: int
         """
-        return self._color_thresholds
+        return self._rounding
 
-    @color_thresholds.setter
-    def color_thresholds(self, color_thresholds):
-        """Sets the color_thresholds of this BigNumberItem.
+    @rounding.setter
+    def rounding(self, rounding):
+        """Sets the rounding of this BigNumberItem.
 
 
-        :param color_thresholds: The color_thresholds of this BigNumberItem.  # noqa: E501
-        :type: list[ColorThreshold]
+        :param rounding: The rounding of this BigNumberItem.  # noqa: E501
+        :type: int
         """
 
-        self._color_thresholds = color_thresholds
+        self._rounding = rounding
+
+    @property
+    def use_comma_separators(self):
+        """Gets the use_comma_separators of this BigNumberItem.  # noqa: E501
+
+
+        :return: The use_comma_separators of this BigNumberItem.  # noqa: E501
+        :rtype: bool
+        """
+        return self._use_comma_separators
+
+    @use_comma_separators.setter
+    def use_comma_separators(self, use_comma_separators):
+        """Sets the use_comma_separators of this BigNumberItem.
+
+
+        :param use_comma_separators: The use_comma_separators of this BigNumberItem.  # noqa: E501
+        :type: bool
+        """
+        if use_comma_separators is None:
+            raise ValueError("Invalid value for `use_comma_separators`, must not be `None`")  # noqa: E501
+
+        self._use_comma_separators = use_comma_separators
 
     def to_dict(self):
         """Returns the model properties as a dict"""

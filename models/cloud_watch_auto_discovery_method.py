@@ -35,30 +35,30 @@ class CloudWatchAutoDiscoveryMethod(AutoDiscoveryMethod):
     swagger_types = {
         'name': 'str',
         'cluster_dimension': 'str',
-        'node_dimension': 'str',
-        'namespace': 'str'
+        'namespace': 'str',
+        'node_dimension': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'cluster_dimension': 'clusterDimension',
-        'node_dimension': 'nodeDimension',
-        'namespace': 'namespace'
+        'namespace': 'namespace',
+        'node_dimension': 'nodeDimension'
     }
 
-    def __init__(self, name=None, cluster_dimension=None, node_dimension=None, namespace=None):  # noqa: E501
+    def __init__(self, name=None, cluster_dimension=None, namespace=None, node_dimension=None):  # noqa: E501
         """CloudWatchAutoDiscoveryMethod - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
         self._cluster_dimension = None
-        self._node_dimension = None
         self._namespace = None
+        self._node_dimension = None
         self.discriminator = None
 
         self.name = name
         self.cluster_dimension = cluster_dimension
-        self.node_dimension = node_dimension
         self.namespace = namespace
+        self.node_dimension = node_dimension
 
     @property
     def name(self):
@@ -107,29 +107,6 @@ class CloudWatchAutoDiscoveryMethod(AutoDiscoveryMethod):
         self._cluster_dimension = cluster_dimension
 
     @property
-    def node_dimension(self):
-        """Gets the node_dimension of this CloudWatchAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The node_dimension of this CloudWatchAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._node_dimension
-
-    @node_dimension.setter
-    def node_dimension(self, node_dimension):
-        """Sets the node_dimension of this CloudWatchAutoDiscoveryMethod.
-
-
-        :param node_dimension: The node_dimension of this CloudWatchAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-        if node_dimension is None:
-            raise ValueError("Invalid value for `node_dimension`, must not be `None`")  # noqa: E501
-
-        self._node_dimension = node_dimension
-
-    @property
     def namespace(self):
         """Gets the namespace of this CloudWatchAutoDiscoveryMethod.  # noqa: E501
 
@@ -151,6 +128,29 @@ class CloudWatchAutoDiscoveryMethod(AutoDiscoveryMethod):
             raise ValueError("Invalid value for `namespace`, must not be `None`")  # noqa: E501
 
         self._namespace = namespace
+
+    @property
+    def node_dimension(self):
+        """Gets the node_dimension of this CloudWatchAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The node_dimension of this CloudWatchAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._node_dimension
+
+    @node_dimension.setter
+    def node_dimension(self, node_dimension):
+        """Sets the node_dimension of this CloudWatchAutoDiscoveryMethod.
+
+
+        :param node_dimension: The node_dimension of this CloudWatchAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+        if node_dimension is None:
+            raise ValueError("Invalid value for `node_dimension`, must not be `None`")  # noqa: E501
+
+        self._node_dimension = node_dimension
 
     def to_dict(self):
         """Returns the model properties as a dict"""

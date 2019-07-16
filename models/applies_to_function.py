@@ -32,33 +32,33 @@ class AppliesToFunction(object):
     """
     swagger_types = {
         'code': 'str',
-        'name': 'str',
         'description': 'str',
-        'id': 'int'
+        'id': 'int',
+        'name': 'str'
     }
 
     attribute_map = {
         'code': 'code',
-        'name': 'name',
         'description': 'description',
-        'id': 'id'
+        'id': 'id',
+        'name': 'name'
     }
 
-    def __init__(self, code=None, name=None, description=None, id=None):  # noqa: E501
+    def __init__(self, code=None, description=None, id=None, name=None):  # noqa: E501
         """AppliesToFunction - a model defined in Swagger"""  # noqa: E501
 
         self._code = None
-        self._name = None
         self._description = None
         self._id = None
+        self._name = None
         self.discriminator = None
 
         self.code = code
-        self.name = name
         if description is not None:
             self.description = description
         if id is not None:
             self.id = id
+        self.name = name
 
     @property
     def code(self):
@@ -84,31 +84,6 @@ class AppliesToFunction(object):
             raise ValueError("Invalid value for `code`, must not be `None`")  # noqa: E501
 
         self._code = code
-
-    @property
-    def name(self):
-        """Gets the name of this AppliesToFunction.  # noqa: E501
-
-        The name of the AppliesTo Function  # noqa: E501
-
-        :return: The name of this AppliesToFunction.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this AppliesToFunction.
-
-        The name of the AppliesTo Function  # noqa: E501
-
-        :param name: The name of this AppliesToFunction.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
 
     @property
     def description(self):
@@ -155,6 +130,31 @@ class AppliesToFunction(object):
         """
 
         self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this AppliesToFunction.  # noqa: E501
+
+        The name of the AppliesTo Function  # noqa: E501
+
+        :return: The name of this AppliesToFunction.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this AppliesToFunction.
+
+        The name of the AppliesTo Function  # noqa: E501
+
+        :param name: The name of this AppliesToFunction.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

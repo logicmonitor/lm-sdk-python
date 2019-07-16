@@ -33,135 +33,51 @@ class DeviceDataSourceAssociated(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'instance': 'list[DeviceDataSourceAssociatedInstance]',
-        'display_name': 'str',
-        'name': 'str',
-        'has_more': 'int',
         'description': 'str',
+        'display_name': 'str',
+        'has_active_instance': 'bool',
+        'has_more': 'int',
         'id': 'int',
-        'has_active_instance': 'bool'
+        'instance': 'list[DeviceDataSourceAssociatedInstance]',
+        'name': 'str'
     }
 
     attribute_map = {
-        'instance': 'instance',
-        'display_name': 'displayName',
-        'name': 'name',
-        'has_more': 'hasMore',
         'description': 'description',
+        'display_name': 'displayName',
+        'has_active_instance': 'hasActiveInstance',
+        'has_more': 'hasMore',
         'id': 'id',
-        'has_active_instance': 'hasActiveInstance'
+        'instance': 'instance',
+        'name': 'name'
     }
 
-    def __init__(self, instance=None, display_name=None, name=None, has_more=None, description=None, id=None, has_active_instance=None):  # noqa: E501
+    def __init__(self, description=None, display_name=None, has_active_instance=None, has_more=None, id=None, instance=None, name=None):  # noqa: E501
         """DeviceDataSourceAssociated - a model defined in Swagger"""  # noqa: E501
 
-        self._instance = None
-        self._display_name = None
-        self._name = None
-        self._has_more = None
         self._description = None
-        self._id = None
+        self._display_name = None
         self._has_active_instance = None
+        self._has_more = None
+        self._id = None
+        self._instance = None
+        self._name = None
         self.discriminator = None
 
-        if instance is not None:
-            self.instance = instance
-        if display_name is not None:
-            self.display_name = display_name
-        if name is not None:
-            self.name = name
-        if has_more is not None:
-            self.has_more = has_more
         if description is not None:
             self.description = description
-        if id is not None:
-            self.id = id
+        if display_name is not None:
+            self.display_name = display_name
         if has_active_instance is not None:
             self.has_active_instance = has_active_instance
-
-    @property
-    def instance(self):
-        """Gets the instance of this DeviceDataSourceAssociated.  # noqa: E501
-
-
-        :return: The instance of this DeviceDataSourceAssociated.  # noqa: E501
-        :rtype: list[DeviceDataSourceAssociatedInstance]
-        """
-        return self._instance
-
-    @instance.setter
-    def instance(self, instance):
-        """Sets the instance of this DeviceDataSourceAssociated.
-
-
-        :param instance: The instance of this DeviceDataSourceAssociated.  # noqa: E501
-        :type: list[DeviceDataSourceAssociatedInstance]
-        """
-
-        self._instance = instance
-
-    @property
-    def display_name(self):
-        """Gets the display_name of this DeviceDataSourceAssociated.  # noqa: E501
-
-
-        :return: The display_name of this DeviceDataSourceAssociated.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_name
-
-    @display_name.setter
-    def display_name(self, display_name):
-        """Sets the display_name of this DeviceDataSourceAssociated.
-
-
-        :param display_name: The display_name of this DeviceDataSourceAssociated.  # noqa: E501
-        :type: str
-        """
-
-        self._display_name = display_name
-
-    @property
-    def name(self):
-        """Gets the name of this DeviceDataSourceAssociated.  # noqa: E501
-
-
-        :return: The name of this DeviceDataSourceAssociated.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this DeviceDataSourceAssociated.
-
-
-        :param name: The name of this DeviceDataSourceAssociated.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
-
-    @property
-    def has_more(self):
-        """Gets the has_more of this DeviceDataSourceAssociated.  # noqa: E501
-
-
-        :return: The has_more of this DeviceDataSourceAssociated.  # noqa: E501
-        :rtype: int
-        """
-        return self._has_more
-
-    @has_more.setter
-    def has_more(self, has_more):
-        """Sets the has_more of this DeviceDataSourceAssociated.
-
-
-        :param has_more: The has_more of this DeviceDataSourceAssociated.  # noqa: E501
-        :type: int
-        """
-
-        self._has_more = has_more
+        if has_more is not None:
+            self.has_more = has_more
+        if id is not None:
+            self.id = id
+        if instance is not None:
+            self.instance = instance
+        if name is not None:
+            self.name = name
 
     @property
     def description(self):
@@ -185,25 +101,25 @@ class DeviceDataSourceAssociated(object):
         self._description = description
 
     @property
-    def id(self):
-        """Gets the id of this DeviceDataSourceAssociated.  # noqa: E501
+    def display_name(self):
+        """Gets the display_name of this DeviceDataSourceAssociated.  # noqa: E501
 
 
-        :return: The id of this DeviceDataSourceAssociated.  # noqa: E501
-        :rtype: int
+        :return: The display_name of this DeviceDataSourceAssociated.  # noqa: E501
+        :rtype: str
         """
-        return self._id
+        return self._display_name
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this DeviceDataSourceAssociated.
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this DeviceDataSourceAssociated.
 
 
-        :param id: The id of this DeviceDataSourceAssociated.  # noqa: E501
-        :type: int
+        :param display_name: The display_name of this DeviceDataSourceAssociated.  # noqa: E501
+        :type: str
         """
 
-        self._id = id
+        self._display_name = display_name
 
     @property
     def has_active_instance(self):
@@ -225,6 +141,90 @@ class DeviceDataSourceAssociated(object):
         """
 
         self._has_active_instance = has_active_instance
+
+    @property
+    def has_more(self):
+        """Gets the has_more of this DeviceDataSourceAssociated.  # noqa: E501
+
+
+        :return: The has_more of this DeviceDataSourceAssociated.  # noqa: E501
+        :rtype: int
+        """
+        return self._has_more
+
+    @has_more.setter
+    def has_more(self, has_more):
+        """Sets the has_more of this DeviceDataSourceAssociated.
+
+
+        :param has_more: The has_more of this DeviceDataSourceAssociated.  # noqa: E501
+        :type: int
+        """
+
+        self._has_more = has_more
+
+    @property
+    def id(self):
+        """Gets the id of this DeviceDataSourceAssociated.  # noqa: E501
+
+
+        :return: The id of this DeviceDataSourceAssociated.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this DeviceDataSourceAssociated.
+
+
+        :param id: The id of this DeviceDataSourceAssociated.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def instance(self):
+        """Gets the instance of this DeviceDataSourceAssociated.  # noqa: E501
+
+
+        :return: The instance of this DeviceDataSourceAssociated.  # noqa: E501
+        :rtype: list[DeviceDataSourceAssociatedInstance]
+        """
+        return self._instance
+
+    @instance.setter
+    def instance(self, instance):
+        """Sets the instance of this DeviceDataSourceAssociated.
+
+
+        :param instance: The instance of this DeviceDataSourceAssociated.  # noqa: E501
+        :type: list[DeviceDataSourceAssociatedInstance]
+        """
+
+        self._instance = instance
+
+    @property
+    def name(self):
+        """Gets the name of this DeviceDataSourceAssociated.  # noqa: E501
+
+
+        :return: The name of this DeviceDataSourceAssociated.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this DeviceDataSourceAssociated.
+
+
+        :param name: The name of this DeviceDataSourceAssociated.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

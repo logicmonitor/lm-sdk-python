@@ -33,34 +33,34 @@ class LogicModuleMetadata(object):
     swagger_types = {
         'lm_locator': 'str',
         'namespace': 'str',
-        'registry_version': 'str',
-        'quality': 'str'
+        'quality': 'str',
+        'registry_version': 'str'
     }
 
     attribute_map = {
         'lm_locator': 'lmLocator',
         'namespace': 'namespace',
-        'registry_version': 'registryVersion',
-        'quality': 'quality'
+        'quality': 'quality',
+        'registry_version': 'registryVersion'
     }
 
-    def __init__(self, lm_locator=None, namespace=None, registry_version=None, quality=None):  # noqa: E501
+    def __init__(self, lm_locator=None, namespace=None, quality=None, registry_version=None):  # noqa: E501
         """LogicModuleMetadata - a model defined in Swagger"""  # noqa: E501
 
         self._lm_locator = None
         self._namespace = None
-        self._registry_version = None
         self._quality = None
+        self._registry_version = None
         self.discriminator = None
 
         if lm_locator is not None:
             self.lm_locator = lm_locator
         if namespace is not None:
             self.namespace = namespace
-        if registry_version is not None:
-            self.registry_version = registry_version
         if quality is not None:
             self.quality = quality
+        if registry_version is not None:
+            self.registry_version = registry_version
 
     @property
     def lm_locator(self):
@@ -109,29 +109,6 @@ class LogicModuleMetadata(object):
         self._namespace = namespace
 
     @property
-    def registry_version(self):
-        """Gets the registry_version of this LogicModuleMetadata.  # noqa: E501
-
-        Indicates the specific version of this module  # noqa: E501
-
-        :return: The registry_version of this LogicModuleMetadata.  # noqa: E501
-        :rtype: str
-        """
-        return self._registry_version
-
-    @registry_version.setter
-    def registry_version(self, registry_version):
-        """Sets the registry_version of this LogicModuleMetadata.
-
-        Indicates the specific version of this module  # noqa: E501
-
-        :param registry_version: The registry_version of this LogicModuleMetadata.  # noqa: E501
-        :type: str
-        """
-
-        self._registry_version = registry_version
-
-    @property
     def quality(self):
         """Gets the quality of this LogicModuleMetadata.  # noqa: E501
 
@@ -153,6 +130,29 @@ class LogicModuleMetadata(object):
         """
 
         self._quality = quality
+
+    @property
+    def registry_version(self):
+        """Gets the registry_version of this LogicModuleMetadata.  # noqa: E501
+
+        Indicates the specific version of this module  # noqa: E501
+
+        :return: The registry_version of this LogicModuleMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._registry_version
+
+    @registry_version.setter
+    def registry_version(self, registry_version):
+        """Sets the registry_version of this LogicModuleMetadata.
+
+        Indicates the specific version of this module  # noqa: E501
+
+        :param registry_version: The registry_version of this LogicModuleMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._registry_version = registry_version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

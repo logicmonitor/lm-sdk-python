@@ -31,31 +31,52 @@ class DeviceDataSourceInstanceConfigDiff(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'content': 'str',
         'row_no': 'int',
-        'type': 'str',
-        'content': 'str'
+        'type': 'str'
     }
 
     attribute_map = {
+        'content': 'content',
         'row_no': 'rowNo',
-        'type': 'type',
-        'content': 'content'
+        'type': 'type'
     }
 
-    def __init__(self, row_no=None, type=None, content=None):  # noqa: E501
+    def __init__(self, content=None, row_no=None, type=None):  # noqa: E501
         """DeviceDataSourceInstanceConfigDiff - a model defined in Swagger"""  # noqa: E501
 
+        self._content = None
         self._row_no = None
         self._type = None
-        self._content = None
         self.discriminator = None
 
+        if content is not None:
+            self.content = content
         if row_no is not None:
             self.row_no = row_no
         if type is not None:
             self.type = type
-        if content is not None:
-            self.content = content
+
+    @property
+    def content(self):
+        """Gets the content of this DeviceDataSourceInstanceConfigDiff.  # noqa: E501
+
+
+        :return: The content of this DeviceDataSourceInstanceConfigDiff.  # noqa: E501
+        :rtype: str
+        """
+        return self._content
+
+    @content.setter
+    def content(self, content):
+        """Sets the content of this DeviceDataSourceInstanceConfigDiff.
+
+
+        :param content: The content of this DeviceDataSourceInstanceConfigDiff.  # noqa: E501
+        :type: str
+        """
+
+        self._content = content
 
     @property
     def row_no(self):
@@ -98,27 +119,6 @@ class DeviceDataSourceInstanceConfigDiff(object):
         """
 
         self._type = type
-
-    @property
-    def content(self):
-        """Gets the content of this DeviceDataSourceInstanceConfigDiff.  # noqa: E501
-
-
-        :return: The content of this DeviceDataSourceInstanceConfigDiff.  # noqa: E501
-        :rtype: str
-        """
-        return self._content
-
-    @content.setter
-    def content(self, content):
-        """Sets the content of this DeviceDataSourceInstanceConfigDiff.
-
-
-        :param content: The content of this DeviceDataSourceInstanceConfigDiff.  # noqa: E501
-        :type: str
-        """
-
-        self._content = content
 
     def to_dict(self):
         """Returns the model properties as a dict"""

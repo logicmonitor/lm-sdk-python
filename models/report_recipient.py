@@ -32,33 +32,33 @@ class ReportRecipient(object):
     """
     swagger_types = {
         'addition_info': 'str',
+        'addr': 'str',
         'method': 'str',
-        'type': 'str',
-        'addr': 'str'
+        'type': 'str'
     }
 
     attribute_map = {
         'addition_info': 'additionInfo',
+        'addr': 'addr',
         'method': 'method',
-        'type': 'type',
-        'addr': 'addr'
+        'type': 'type'
     }
 
-    def __init__(self, addition_info=None, method=None, type=None, addr=None):  # noqa: E501
+    def __init__(self, addition_info=None, addr=None, method=None, type=None):  # noqa: E501
         """ReportRecipient - a model defined in Swagger"""  # noqa: E501
 
         self._addition_info = None
+        self._addr = None
         self._method = None
         self._type = None
-        self._addr = None
         self.discriminator = None
 
         if addition_info is not None:
             self.addition_info = addition_info
+        self.addr = addr
         if method is not None:
             self.method = method
         self.type = type
-        self.addr = addr
 
     @property
     def addition_info(self):
@@ -82,6 +82,31 @@ class ReportRecipient(object):
         """
 
         self._addition_info = addition_info
+
+    @property
+    def addr(self):
+        """Gets the addr of this ReportRecipient.  # noqa: E501
+
+        This should be a username if type=admin, or an email address if type=arbitrary  # noqa: E501
+
+        :return: The addr of this ReportRecipient.  # noqa: E501
+        :rtype: str
+        """
+        return self._addr
+
+    @addr.setter
+    def addr(self, addr):
+        """Sets the addr of this ReportRecipient.
+
+        This should be a username if type=admin, or an email address if type=arbitrary  # noqa: E501
+
+        :param addr: The addr of this ReportRecipient.  # noqa: E501
+        :type: str
+        """
+        if addr is None:
+            raise ValueError("Invalid value for `addr`, must not be `None`")  # noqa: E501
+
+        self._addr = addr
 
     @property
     def method(self):
@@ -130,31 +155,6 @@ class ReportRecipient(object):
             raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
 
         self._type = type
-
-    @property
-    def addr(self):
-        """Gets the addr of this ReportRecipient.  # noqa: E501
-
-        This should be a username if type=admin, or an email address if type=arbitrary  # noqa: E501
-
-        :return: The addr of this ReportRecipient.  # noqa: E501
-        :rtype: str
-        """
-        return self._addr
-
-    @addr.setter
-    def addr(self, addr):
-        """Sets the addr of this ReportRecipient.
-
-        This should be a username if type=admin, or an email address if type=arbitrary  # noqa: E501
-
-        :param addr: The addr of this ReportRecipient.  # noqa: E501
-        :type: str
-        """
-        if addr is None:
-            raise ValueError("Invalid value for `addr`, must not be `None`")  # noqa: E501
-
-        self._addr = addr
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,13 +31,13 @@ class WidgetData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
-        'title': 'str'
+        'title': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
-        'type': 'type',
-        'title': 'title'
+        'title': 'title',
+        'type': 'type'
     }
 
     discriminator_value_class_map = {
@@ -57,38 +57,17 @@ class WidgetData(object):
         'bignumber': 'BigNumberWidgetData'
     }
 
-    def __init__(self, type=None, title=None):  # noqa: E501
+    def __init__(self, title=None, type=None):  # noqa: E501
         """WidgetData - a model defined in Swagger"""  # noqa: E501
 
-        self._type = None
         self._title = None
+        self._type = None
         self.discriminator = 'type'
 
-        if type is not None:
-            self.type = type
         if title is not None:
             self.title = title
-
-    @property
-    def type(self):
-        """Gets the type of this WidgetData.  # noqa: E501
-
-
-        :return: The type of this WidgetData.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this WidgetData.
-
-
-        :param type: The type of this WidgetData.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
+        if type is not None:
+            self.type = type
 
     @property
     def title(self):
@@ -110,6 +89,27 @@ class WidgetData(object):
         """
 
         self._title = title
+
+    @property
+    def type(self):
+        """Gets the type of this WidgetData.  # noqa: E501
+
+
+        :return: The type of this WidgetData.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this WidgetData.
+
+
+        :param type: The type of this WidgetData.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

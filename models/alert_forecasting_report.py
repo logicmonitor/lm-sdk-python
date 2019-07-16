@@ -36,363 +36,156 @@ class AlertForecastingReport(ReportBase):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'lastmodify_user_id': 'int',
-        'delivery': 'str',
-        'user_permission': 'str',
-        'last_generate_on': 'int',
-        'report_link_num': 'int',
-        'group_id': 'int',
-        'format': 'str',
-        'description': 'str',
-        'last_generate_size': 'int',
         'custom_report_type_id': 'int',
-        'type': 'str',
-        'last_generate_pages': 'int',
-        'schedule': 'str',
-        'recipients': 'list[ReportRecipient]',
         'custom_report_type_name': 'str',
-        'name': 'str',
+        'delivery': 'str',
+        'description': 'str',
         'enable_view_as_other_user': 'bool',
-        'lastmodify_user_name': 'str',
+        'format': 'str',
+        'group_id': 'int',
         'id': 'int',
+        'last_generate_on': 'int',
+        'last_generate_pages': 'int',
+        'last_generate_size': 'int',
+        'lastmodify_user_id': 'int',
+        'lastmodify_user_name': 'str',
+        'name': 'str',
+        'recipients': 'list[ReportRecipient]',
+        'report_link_num': 'int',
+        'schedule': 'str',
         'schedule_timezone': 'str',
-        'sorted_by': 'int',
+        'type': 'str',
+        'user_permission': 'str',
+        'algorithm': 'str',
+        'columns': 'list[DynamicColumn]',
         'confidence_level': 'int',
-        'hosts_val_type': 'str',
         'date_range': 'str',
         'hosts_val': 'str',
-        'top10_only': 'bool',
-        'columns': 'list[DynamicColumn]',
+        'hosts_val_type': 'str',
         'metrics': 'list[Metric]',
-        'algorithm': 'str'
+        'sorted_by': 'int',
+        'top10_only': 'bool'
     }
 
     attribute_map = {
-        'lastmodify_user_id': 'lastmodifyUserId',
-        'delivery': 'delivery',
-        'user_permission': 'userPermission',
-        'last_generate_on': 'lastGenerateOn',
-        'report_link_num': 'reportLinkNum',
-        'group_id': 'groupId',
-        'format': 'format',
-        'description': 'description',
-        'last_generate_size': 'lastGenerateSize',
         'custom_report_type_id': 'customReportTypeId',
-        'type': 'type',
-        'last_generate_pages': 'lastGeneratePages',
-        'schedule': 'schedule',
-        'recipients': 'recipients',
         'custom_report_type_name': 'customReportTypeName',
-        'name': 'name',
+        'delivery': 'delivery',
+        'description': 'description',
         'enable_view_as_other_user': 'enableViewAsOtherUser',
-        'lastmodify_user_name': 'lastmodifyUserName',
+        'format': 'format',
+        'group_id': 'groupId',
         'id': 'id',
+        'last_generate_on': 'lastGenerateOn',
+        'last_generate_pages': 'lastGeneratePages',
+        'last_generate_size': 'lastGenerateSize',
+        'lastmodify_user_id': 'lastmodifyUserId',
+        'lastmodify_user_name': 'lastmodifyUserName',
+        'name': 'name',
+        'recipients': 'recipients',
+        'report_link_num': 'reportLinkNum',
+        'schedule': 'schedule',
         'schedule_timezone': 'scheduleTimezone',
-        'sorted_by': 'sortedBy',
+        'type': 'type',
+        'user_permission': 'userPermission',
+        'algorithm': 'algorithm',
+        'columns': 'columns',
         'confidence_level': 'confidenceLevel',
-        'hosts_val_type': 'hostsValType',
         'date_range': 'dateRange',
         'hosts_val': 'hostsVal',
-        'top10_only': 'top10Only',
-        'columns': 'columns',
+        'hosts_val_type': 'hostsValType',
         'metrics': 'metrics',
-        'algorithm': 'algorithm'
+        'sorted_by': 'sortedBy',
+        'top10_only': 'top10Only'
     }
 
-    def __init__(self, lastmodify_user_id=None, delivery=None, user_permission=None, last_generate_on=None, report_link_num=None, group_id=None, format=None, description=None, last_generate_size=None, custom_report_type_id=None, type=None, last_generate_pages=None, schedule=None, recipients=None, custom_report_type_name=None, name=None, enable_view_as_other_user=None, lastmodify_user_name=None, id=None, schedule_timezone=None, sorted_by=None, confidence_level=None, hosts_val_type=None, date_range=None, hosts_val=None, top10_only=None, columns=None, metrics=None, algorithm=None):  # noqa: E501
+    def __init__(self, custom_report_type_id=None, custom_report_type_name=None, delivery=None, description=None, enable_view_as_other_user=None, format=None, group_id=None, id=None, last_generate_on=None, last_generate_pages=None, last_generate_size=None, lastmodify_user_id=None, lastmodify_user_name=None, name=None, recipients=None, report_link_num=None, schedule=None, schedule_timezone=None, type=None, user_permission=None, algorithm=None, columns=None, confidence_level=None, date_range=None, hosts_val=None, hosts_val_type=None, metrics=None, sorted_by=None, top10_only=None):  # noqa: E501
         """AlertForecastingReport - a model defined in Swagger"""  # noqa: E501
 
-        self._lastmodify_user_id = None
-        self._delivery = None
-        self._user_permission = None
-        self._last_generate_on = None
-        self._report_link_num = None
-        self._group_id = None
-        self._format = None
-        self._description = None
-        self._last_generate_size = None
         self._custom_report_type_id = None
-        self._type = None
-        self._last_generate_pages = None
-        self._schedule = None
-        self._recipients = None
         self._custom_report_type_name = None
-        self._name = None
+        self._delivery = None
+        self._description = None
         self._enable_view_as_other_user = None
-        self._lastmodify_user_name = None
+        self._format = None
+        self._group_id = None
         self._id = None
+        self._last_generate_on = None
+        self._last_generate_pages = None
+        self._last_generate_size = None
+        self._lastmodify_user_id = None
+        self._lastmodify_user_name = None
+        self._name = None
+        self._recipients = None
+        self._report_link_num = None
+        self._schedule = None
         self._schedule_timezone = None
-        self._sorted_by = None
+        self._type = None
+        self._user_permission = None
+        self._algorithm = None
+        self._columns = None
         self._confidence_level = None
-        self._hosts_val_type = None
         self._date_range = None
         self._hosts_val = None
-        self._top10_only = None
-        self._columns = None
+        self._hosts_val_type = None
         self._metrics = None
-        self._algorithm = None
+        self._sorted_by = None
+        self._top10_only = None
         self.discriminator = None
 
-        if lastmodify_user_id is not None:
-            self.lastmodify_user_id = lastmodify_user_id
-        if delivery is not None:
-            self.delivery = delivery
-        if user_permission is not None:
-            self.user_permission = user_permission
-        if last_generate_on is not None:
-            self.last_generate_on = last_generate_on
-        if report_link_num is not None:
-            self.report_link_num = report_link_num
-        if group_id is not None:
-            self.group_id = group_id
-        if format is not None:
-            self.format = format
-        if description is not None:
-            self.description = description
-        if last_generate_size is not None:
-            self.last_generate_size = last_generate_size
         if custom_report_type_id is not None:
             self.custom_report_type_id = custom_report_type_id
-        self.type = type
-        if last_generate_pages is not None:
-            self.last_generate_pages = last_generate_pages
-        if schedule is not None:
-            self.schedule = schedule
-        if recipients is not None:
-            self.recipients = recipients
         if custom_report_type_name is not None:
             self.custom_report_type_name = custom_report_type_name
-        self.name = name
+        if delivery is not None:
+            self.delivery = delivery
+        if description is not None:
+            self.description = description
         if enable_view_as_other_user is not None:
             self.enable_view_as_other_user = enable_view_as_other_user
-        if lastmodify_user_name is not None:
-            self.lastmodify_user_name = lastmodify_user_name
+        if format is not None:
+            self.format = format
+        if group_id is not None:
+            self.group_id = group_id
         if id is not None:
             self.id = id
+        if last_generate_on is not None:
+            self.last_generate_on = last_generate_on
+        if last_generate_pages is not None:
+            self.last_generate_pages = last_generate_pages
+        if last_generate_size is not None:
+            self.last_generate_size = last_generate_size
+        if lastmodify_user_id is not None:
+            self.lastmodify_user_id = lastmodify_user_id
+        if lastmodify_user_name is not None:
+            self.lastmodify_user_name = lastmodify_user_name
+        self.name = name
+        if recipients is not None:
+            self.recipients = recipients
+        if report_link_num is not None:
+            self.report_link_num = report_link_num
+        if schedule is not None:
+            self.schedule = schedule
         if schedule_timezone is not None:
             self.schedule_timezone = schedule_timezone
-        if sorted_by is not None:
-            self.sorted_by = sorted_by
+        self.type = type
+        if user_permission is not None:
+            self.user_permission = user_permission
+        if algorithm is not None:
+            self.algorithm = algorithm
+        if columns is not None:
+            self.columns = columns
         self.confidence_level = confidence_level
-        self.hosts_val_type = hosts_val_type
         if date_range is not None:
             self.date_range = date_range
         if hosts_val is not None:
             self.hosts_val = hosts_val
+        self.hosts_val_type = hosts_val_type
+        self.metrics = metrics
+        if sorted_by is not None:
+            self.sorted_by = sorted_by
         if top10_only is not None:
             self.top10_only = top10_only
-        if columns is not None:
-            self.columns = columns
-        self.metrics = metrics
-        if algorithm is not None:
-            self.algorithm = algorithm
-
-    @property
-    def lastmodify_user_id(self):
-        """Gets the lastmodify_user_id of this AlertForecastingReport.  # noqa: E501
-
-        The Id of the user that last modified the report  # noqa: E501
-
-        :return: The lastmodify_user_id of this AlertForecastingReport.  # noqa: E501
-        :rtype: int
-        """
-        return self._lastmodify_user_id
-
-    @lastmodify_user_id.setter
-    def lastmodify_user_id(self, lastmodify_user_id):
-        """Sets the lastmodify_user_id of this AlertForecastingReport.
-
-        The Id of the user that last modified the report  # noqa: E501
-
-        :param lastmodify_user_id: The lastmodify_user_id of this AlertForecastingReport.  # noqa: E501
-        :type: int
-        """
-
-        self._lastmodify_user_id = lastmodify_user_id
-
-    @property
-    def delivery(self):
-        """Gets the delivery of this AlertForecastingReport.  # noqa: E501
-
-        Whether or not the report is configured to be delivered via email. Acceptable values are: none, email  # noqa: E501
-
-        :return: The delivery of this AlertForecastingReport.  # noqa: E501
-        :rtype: str
-        """
-        return self._delivery
-
-    @delivery.setter
-    def delivery(self, delivery):
-        """Sets the delivery of this AlertForecastingReport.
-
-        Whether or not the report is configured to be delivered via email. Acceptable values are: none, email  # noqa: E501
-
-        :param delivery: The delivery of this AlertForecastingReport.  # noqa: E501
-        :type: str
-        """
-
-        self._delivery = delivery
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this AlertForecastingReport.  # noqa: E501
-
-        The permissions associated with the user who made the API call  # noqa: E501
-
-        :return: The user_permission of this AlertForecastingReport.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this AlertForecastingReport.
-
-        The permissions associated with the user who made the API call  # noqa: E501
-
-        :param user_permission: The user_permission of this AlertForecastingReport.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
-
-    @property
-    def last_generate_on(self):
-        """Gets the last_generate_on of this AlertForecastingReport.  # noqa: E501
-
-        The time, in epoch format, that the report was last generated  # noqa: E501
-
-        :return: The last_generate_on of this AlertForecastingReport.  # noqa: E501
-        :rtype: int
-        """
-        return self._last_generate_on
-
-    @last_generate_on.setter
-    def last_generate_on(self, last_generate_on):
-        """Sets the last_generate_on of this AlertForecastingReport.
-
-        The time, in epoch format, that the report was last generated  # noqa: E501
-
-        :param last_generate_on: The last_generate_on of this AlertForecastingReport.  # noqa: E501
-        :type: int
-        """
-
-        self._last_generate_on = last_generate_on
-
-    @property
-    def report_link_num(self):
-        """Gets the report_link_num of this AlertForecastingReport.  # noqa: E501
-
-        The number of links associated with the report, where each link corresponds to a generated report  # noqa: E501
-
-        :return: The report_link_num of this AlertForecastingReport.  # noqa: E501
-        :rtype: int
-        """
-        return self._report_link_num
-
-    @report_link_num.setter
-    def report_link_num(self, report_link_num):
-        """Sets the report_link_num of this AlertForecastingReport.
-
-        The number of links associated with the report, where each link corresponds to a generated report  # noqa: E501
-
-        :param report_link_num: The report_link_num of this AlertForecastingReport.  # noqa: E501
-        :type: int
-        """
-
-        self._report_link_num = report_link_num
-
-    @property
-    def group_id(self):
-        """Gets the group_id of this AlertForecastingReport.  # noqa: E501
-
-        The Id of the group the report is in, where Id=0 is the root report group  # noqa: E501
-
-        :return: The group_id of this AlertForecastingReport.  # noqa: E501
-        :rtype: int
-        """
-        return self._group_id
-
-    @group_id.setter
-    def group_id(self, group_id):
-        """Sets the group_id of this AlertForecastingReport.
-
-        The Id of the group the report is in, where Id=0 is the root report group  # noqa: E501
-
-        :param group_id: The group_id of this AlertForecastingReport.  # noqa: E501
-        :type: int
-        """
-
-        self._group_id = group_id
-
-    @property
-    def format(self):
-        """Gets the format of this AlertForecastingReport.  # noqa: E501
-
-        The format of the report. Allowable values are: HTML, PDF, CSV, WORD  # noqa: E501
-
-        :return: The format of this AlertForecastingReport.  # noqa: E501
-        :rtype: str
-        """
-        return self._format
-
-    @format.setter
-    def format(self, format):
-        """Sets the format of this AlertForecastingReport.
-
-        The format of the report. Allowable values are: HTML, PDF, CSV, WORD  # noqa: E501
-
-        :param format: The format of this AlertForecastingReport.  # noqa: E501
-        :type: str
-        """
-
-        self._format = format
-
-    @property
-    def description(self):
-        """Gets the description of this AlertForecastingReport.  # noqa: E501
-
-        The description of the report  # noqa: E501
-
-        :return: The description of this AlertForecastingReport.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this AlertForecastingReport.
-
-        The description of the report  # noqa: E501
-
-        :param description: The description of this AlertForecastingReport.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
-    def last_generate_size(self):
-        """Gets the last_generate_size of this AlertForecastingReport.  # noqa: E501
-
-        The size of the report, in Bytes, the last time it was generated  # noqa: E501
-
-        :return: The last_generate_size of this AlertForecastingReport.  # noqa: E501
-        :rtype: int
-        """
-        return self._last_generate_size
-
-    @last_generate_size.setter
-    def last_generate_size(self, last_generate_size):
-        """Sets the last_generate_size of this AlertForecastingReport.
-
-        The size of the report, in Bytes, the last time it was generated  # noqa: E501
-
-        :param last_generate_size: The last_generate_size of this AlertForecastingReport.  # noqa: E501
-        :type: int
-        """
-
-        self._last_generate_size = last_generate_size
 
     @property
     def custom_report_type_id(self):
@@ -418,29 +211,188 @@ class AlertForecastingReport(ReportBase):
         self._custom_report_type_id = custom_report_type_id
 
     @property
-    def type(self):
-        """Gets the type of this AlertForecastingReport.  # noqa: E501
+    def custom_report_type_name(self):
+        """Gets the custom_report_type_name of this AlertForecastingReport.  # noqa: E501
 
-        The report type. Acceptable values are: Alert,Alert SLA,Alert threshold,Alert trends,Host CPU,Host group inventory,Host inventory,Host metric trends,Interfaces Bandwidth,Netflow device metric,Service Level Agreement,Website Service Overview,Word template,Audit Log,Alert Forecasting,Dashboard,Website SLA,User,Role  # noqa: E501
+        The name of the custom report template  # noqa: E501
 
-        :return: The type of this AlertForecastingReport.  # noqa: E501
+        :return: The custom_report_type_name of this AlertForecastingReport.  # noqa: E501
         :rtype: str
         """
-        return self._type
+        return self._custom_report_type_name
 
-    @type.setter
-    def type(self, type):
-        """Sets the type of this AlertForecastingReport.
+    @custom_report_type_name.setter
+    def custom_report_type_name(self, custom_report_type_name):
+        """Sets the custom_report_type_name of this AlertForecastingReport.
 
-        The report type. Acceptable values are: Alert,Alert SLA,Alert threshold,Alert trends,Host CPU,Host group inventory,Host inventory,Host metric trends,Interfaces Bandwidth,Netflow device metric,Service Level Agreement,Website Service Overview,Word template,Audit Log,Alert Forecasting,Dashboard,Website SLA,User,Role  # noqa: E501
+        The name of the custom report template  # noqa: E501
 
-        :param type: The type of this AlertForecastingReport.  # noqa: E501
+        :param custom_report_type_name: The custom_report_type_name of this AlertForecastingReport.  # noqa: E501
         :type: str
         """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
 
-        self._type = type
+        self._custom_report_type_name = custom_report_type_name
+
+    @property
+    def delivery(self):
+        """Gets the delivery of this AlertForecastingReport.  # noqa: E501
+
+        Whether or not the report is configured to be delivered via email. Acceptable values are: none, email  # noqa: E501
+
+        :return: The delivery of this AlertForecastingReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._delivery
+
+    @delivery.setter
+    def delivery(self, delivery):
+        """Sets the delivery of this AlertForecastingReport.
+
+        Whether or not the report is configured to be delivered via email. Acceptable values are: none, email  # noqa: E501
+
+        :param delivery: The delivery of this AlertForecastingReport.  # noqa: E501
+        :type: str
+        """
+
+        self._delivery = delivery
+
+    @property
+    def description(self):
+        """Gets the description of this AlertForecastingReport.  # noqa: E501
+
+        The description of the report  # noqa: E501
+
+        :return: The description of this AlertForecastingReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this AlertForecastingReport.
+
+        The description of the report  # noqa: E501
+
+        :param description: The description of this AlertForecastingReport.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def enable_view_as_other_user(self):
+        """Gets the enable_view_as_other_user of this AlertForecastingReport.  # noqa: E501
+
+        Whether or not other users are allowed to view the report as the user who last modified the report  # noqa: E501
+
+        :return: The enable_view_as_other_user of this AlertForecastingReport.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_view_as_other_user
+
+    @enable_view_as_other_user.setter
+    def enable_view_as_other_user(self, enable_view_as_other_user):
+        """Sets the enable_view_as_other_user of this AlertForecastingReport.
+
+        Whether or not other users are allowed to view the report as the user who last modified the report  # noqa: E501
+
+        :param enable_view_as_other_user: The enable_view_as_other_user of this AlertForecastingReport.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_view_as_other_user = enable_view_as_other_user
+
+    @property
+    def format(self):
+        """Gets the format of this AlertForecastingReport.  # noqa: E501
+
+        The format of the report. Allowable values are: HTML, PDF, CSV, WORD  # noqa: E501
+
+        :return: The format of this AlertForecastingReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._format
+
+    @format.setter
+    def format(self, format):
+        """Sets the format of this AlertForecastingReport.
+
+        The format of the report. Allowable values are: HTML, PDF, CSV, WORD  # noqa: E501
+
+        :param format: The format of this AlertForecastingReport.  # noqa: E501
+        :type: str
+        """
+
+        self._format = format
+
+    @property
+    def group_id(self):
+        """Gets the group_id of this AlertForecastingReport.  # noqa: E501
+
+        The Id of the group the report is in, where Id=0 is the root report group  # noqa: E501
+
+        :return: The group_id of this AlertForecastingReport.  # noqa: E501
+        :rtype: int
+        """
+        return self._group_id
+
+    @group_id.setter
+    def group_id(self, group_id):
+        """Sets the group_id of this AlertForecastingReport.
+
+        The Id of the group the report is in, where Id=0 is the root report group  # noqa: E501
+
+        :param group_id: The group_id of this AlertForecastingReport.  # noqa: E501
+        :type: int
+        """
+
+        self._group_id = group_id
+
+    @property
+    def id(self):
+        """Gets the id of this AlertForecastingReport.  # noqa: E501
+
+        The id of the report  # noqa: E501
+
+        :return: The id of this AlertForecastingReport.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this AlertForecastingReport.
+
+        The id of the report  # noqa: E501
+
+        :param id: The id of this AlertForecastingReport.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def last_generate_on(self):
+        """Gets the last_generate_on of this AlertForecastingReport.  # noqa: E501
+
+        The time, in epoch format, that the report was last generated  # noqa: E501
+
+        :return: The last_generate_on of this AlertForecastingReport.  # noqa: E501
+        :rtype: int
+        """
+        return self._last_generate_on
+
+    @last_generate_on.setter
+    def last_generate_on(self, last_generate_on):
+        """Sets the last_generate_on of this AlertForecastingReport.
+
+        The time, in epoch format, that the report was last generated  # noqa: E501
+
+        :param last_generate_on: The last_generate_on of this AlertForecastingReport.  # noqa: E501
+        :type: int
+        """
+
+        self._last_generate_on = last_generate_on
 
     @property
     def last_generate_pages(self):
@@ -466,73 +418,73 @@ class AlertForecastingReport(ReportBase):
         self._last_generate_pages = last_generate_pages
 
     @property
-    def schedule(self):
-        """Gets the schedule of this AlertForecastingReport.  # noqa: E501
+    def last_generate_size(self):
+        """Gets the last_generate_size of this AlertForecastingReport.  # noqa: E501
 
-        A cron schedule that indicates when the report will be delivered via email  # noqa: E501
+        The size of the report, in Bytes, the last time it was generated  # noqa: E501
 
-        :return: The schedule of this AlertForecastingReport.  # noqa: E501
+        :return: The last_generate_size of this AlertForecastingReport.  # noqa: E501
+        :rtype: int
+        """
+        return self._last_generate_size
+
+    @last_generate_size.setter
+    def last_generate_size(self, last_generate_size):
+        """Sets the last_generate_size of this AlertForecastingReport.
+
+        The size of the report, in Bytes, the last time it was generated  # noqa: E501
+
+        :param last_generate_size: The last_generate_size of this AlertForecastingReport.  # noqa: E501
+        :type: int
+        """
+
+        self._last_generate_size = last_generate_size
+
+    @property
+    def lastmodify_user_id(self):
+        """Gets the lastmodify_user_id of this AlertForecastingReport.  # noqa: E501
+
+        The Id of the user that last modified the report  # noqa: E501
+
+        :return: The lastmodify_user_id of this AlertForecastingReport.  # noqa: E501
+        :rtype: int
+        """
+        return self._lastmodify_user_id
+
+    @lastmodify_user_id.setter
+    def lastmodify_user_id(self, lastmodify_user_id):
+        """Sets the lastmodify_user_id of this AlertForecastingReport.
+
+        The Id of the user that last modified the report  # noqa: E501
+
+        :param lastmodify_user_id: The lastmodify_user_id of this AlertForecastingReport.  # noqa: E501
+        :type: int
+        """
+
+        self._lastmodify_user_id = lastmodify_user_id
+
+    @property
+    def lastmodify_user_name(self):
+        """Gets the lastmodify_user_name of this AlertForecastingReport.  # noqa: E501
+
+        The username of the user that last modified the report  # noqa: E501
+
+        :return: The lastmodify_user_name of this AlertForecastingReport.  # noqa: E501
         :rtype: str
         """
-        return self._schedule
+        return self._lastmodify_user_name
 
-    @schedule.setter
-    def schedule(self, schedule):
-        """Sets the schedule of this AlertForecastingReport.
+    @lastmodify_user_name.setter
+    def lastmodify_user_name(self, lastmodify_user_name):
+        """Sets the lastmodify_user_name of this AlertForecastingReport.
 
-        A cron schedule that indicates when the report will be delivered via email  # noqa: E501
+        The username of the user that last modified the report  # noqa: E501
 
-        :param schedule: The schedule of this AlertForecastingReport.  # noqa: E501
+        :param lastmodify_user_name: The lastmodify_user_name of this AlertForecastingReport.  # noqa: E501
         :type: str
         """
 
-        self._schedule = schedule
-
-    @property
-    def recipients(self):
-        """Gets the recipients of this AlertForecastingReport.  # noqa: E501
-
-        If the report is configured to be delivered via email, this object provides the recipients that the report will be delivered to  # noqa: E501
-
-        :return: The recipients of this AlertForecastingReport.  # noqa: E501
-        :rtype: list[ReportRecipient]
-        """
-        return self._recipients
-
-    @recipients.setter
-    def recipients(self, recipients):
-        """Sets the recipients of this AlertForecastingReport.
-
-        If the report is configured to be delivered via email, this object provides the recipients that the report will be delivered to  # noqa: E501
-
-        :param recipients: The recipients of this AlertForecastingReport.  # noqa: E501
-        :type: list[ReportRecipient]
-        """
-
-        self._recipients = recipients
-
-    @property
-    def custom_report_type_name(self):
-        """Gets the custom_report_type_name of this AlertForecastingReport.  # noqa: E501
-
-        The name of the custom report template  # noqa: E501
-
-        :return: The custom_report_type_name of this AlertForecastingReport.  # noqa: E501
-        :rtype: str
-        """
-        return self._custom_report_type_name
-
-    @custom_report_type_name.setter
-    def custom_report_type_name(self, custom_report_type_name):
-        """Sets the custom_report_type_name of this AlertForecastingReport.
-
-        The name of the custom report template  # noqa: E501
-
-        :param custom_report_type_name: The custom_report_type_name of this AlertForecastingReport.  # noqa: E501
-        :type: str
-        """
-
-        self._custom_report_type_name = custom_report_type_name
+        self._lastmodify_user_name = lastmodify_user_name
 
     @property
     def name(self):
@@ -560,73 +512,73 @@ class AlertForecastingReport(ReportBase):
         self._name = name
 
     @property
-    def enable_view_as_other_user(self):
-        """Gets the enable_view_as_other_user of this AlertForecastingReport.  # noqa: E501
+    def recipients(self):
+        """Gets the recipients of this AlertForecastingReport.  # noqa: E501
 
-        Whether or not other users are allowed to view the report as the user who last modified the report  # noqa: E501
+        If the report is configured to be delivered via email, this object provides the recipients that the report will be delivered to  # noqa: E501
 
-        :return: The enable_view_as_other_user of this AlertForecastingReport.  # noqa: E501
-        :rtype: bool
+        :return: The recipients of this AlertForecastingReport.  # noqa: E501
+        :rtype: list[ReportRecipient]
         """
-        return self._enable_view_as_other_user
+        return self._recipients
 
-    @enable_view_as_other_user.setter
-    def enable_view_as_other_user(self, enable_view_as_other_user):
-        """Sets the enable_view_as_other_user of this AlertForecastingReport.
+    @recipients.setter
+    def recipients(self, recipients):
+        """Sets the recipients of this AlertForecastingReport.
 
-        Whether or not other users are allowed to view the report as the user who last modified the report  # noqa: E501
+        If the report is configured to be delivered via email, this object provides the recipients that the report will be delivered to  # noqa: E501
 
-        :param enable_view_as_other_user: The enable_view_as_other_user of this AlertForecastingReport.  # noqa: E501
-        :type: bool
+        :param recipients: The recipients of this AlertForecastingReport.  # noqa: E501
+        :type: list[ReportRecipient]
         """
 
-        self._enable_view_as_other_user = enable_view_as_other_user
+        self._recipients = recipients
 
     @property
-    def lastmodify_user_name(self):
-        """Gets the lastmodify_user_name of this AlertForecastingReport.  # noqa: E501
+    def report_link_num(self):
+        """Gets the report_link_num of this AlertForecastingReport.  # noqa: E501
 
-        The username of the user that last modified the report  # noqa: E501
+        The number of links associated with the report, where each link corresponds to a generated report  # noqa: E501
 
-        :return: The lastmodify_user_name of this AlertForecastingReport.  # noqa: E501
-        :rtype: str
-        """
-        return self._lastmodify_user_name
-
-    @lastmodify_user_name.setter
-    def lastmodify_user_name(self, lastmodify_user_name):
-        """Sets the lastmodify_user_name of this AlertForecastingReport.
-
-        The username of the user that last modified the report  # noqa: E501
-
-        :param lastmodify_user_name: The lastmodify_user_name of this AlertForecastingReport.  # noqa: E501
-        :type: str
-        """
-
-        self._lastmodify_user_name = lastmodify_user_name
-
-    @property
-    def id(self):
-        """Gets the id of this AlertForecastingReport.  # noqa: E501
-
-        The id of the report  # noqa: E501
-
-        :return: The id of this AlertForecastingReport.  # noqa: E501
+        :return: The report_link_num of this AlertForecastingReport.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._report_link_num
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this AlertForecastingReport.
+    @report_link_num.setter
+    def report_link_num(self, report_link_num):
+        """Sets the report_link_num of this AlertForecastingReport.
 
-        The id of the report  # noqa: E501
+        The number of links associated with the report, where each link corresponds to a generated report  # noqa: E501
 
-        :param id: The id of this AlertForecastingReport.  # noqa: E501
+        :param report_link_num: The report_link_num of this AlertForecastingReport.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._report_link_num = report_link_num
+
+    @property
+    def schedule(self):
+        """Gets the schedule of this AlertForecastingReport.  # noqa: E501
+
+        A cron schedule that indicates when the report will be delivered via email  # noqa: E501
+
+        :return: The schedule of this AlertForecastingReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._schedule
+
+    @schedule.setter
+    def schedule(self, schedule):
+        """Sets the schedule of this AlertForecastingReport.
+
+        A cron schedule that indicates when the report will be delivered via email  # noqa: E501
+
+        :param schedule: The schedule of this AlertForecastingReport.  # noqa: E501
+        :type: str
+        """
+
+        self._schedule = schedule
 
     @property
     def schedule_timezone(self):
@@ -652,27 +604,98 @@ class AlertForecastingReport(ReportBase):
         self._schedule_timezone = schedule_timezone
 
     @property
-    def sorted_by(self):
-        """Gets the sorted_by of this AlertForecastingReport.  # noqa: E501
+    def type(self):
+        """Gets the type of this AlertForecastingReport.  # noqa: E501
 
-        The sort option for the alert forecast report  # noqa: E501
+        The report type. Acceptable values are: Alert,Alert SLA,Alert threshold,Alert trends,Host CPU,Host group inventory,Host inventory,Host metric trends,Interfaces Bandwidth,Netflow device metric,Service Level Agreement,Website Service Overview,Word template,Audit Log,Alert Forecasting,Dashboard,Website SLA,User,Role  # noqa: E501
 
-        :return: The sorted_by of this AlertForecastingReport.  # noqa: E501
-        :rtype: int
+        :return: The type of this AlertForecastingReport.  # noqa: E501
+        :rtype: str
         """
-        return self._sorted_by
+        return self._type
 
-    @sorted_by.setter
-    def sorted_by(self, sorted_by):
-        """Sets the sorted_by of this AlertForecastingReport.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this AlertForecastingReport.
 
-        The sort option for the alert forecast report  # noqa: E501
+        The report type. Acceptable values are: Alert,Alert SLA,Alert threshold,Alert trends,Host CPU,Host group inventory,Host inventory,Host metric trends,Interfaces Bandwidth,Netflow device metric,Service Level Agreement,Website Service Overview,Word template,Audit Log,Alert Forecasting,Dashboard,Website SLA,User,Role  # noqa: E501
 
-        :param sorted_by: The sorted_by of this AlertForecastingReport.  # noqa: E501
-        :type: int
+        :param type: The type of this AlertForecastingReport.  # noqa: E501
+        :type: str
+        """
+        if type is None:
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+
+        self._type = type
+
+    @property
+    def user_permission(self):
+        """Gets the user_permission of this AlertForecastingReport.  # noqa: E501
+
+        The permissions associated with the user who made the API call  # noqa: E501
+
+        :return: The user_permission of this AlertForecastingReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_permission
+
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this AlertForecastingReport.
+
+        The permissions associated with the user who made the API call  # noqa: E501
+
+        :param user_permission: The user_permission of this AlertForecastingReport.  # noqa: E501
+        :type: str
         """
 
-        self._sorted_by = sorted_by
+        self._user_permission = user_permission
+
+    @property
+    def algorithm(self):
+        """Gets the algorithm of this AlertForecastingReport.  # noqa: E501
+
+        Forecast method for the report. Acceptable values are: Linear, ARIMA  # noqa: E501
+
+        :return: The algorithm of this AlertForecastingReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._algorithm
+
+    @algorithm.setter
+    def algorithm(self, algorithm):
+        """Sets the algorithm of this AlertForecastingReport.
+
+        Forecast method for the report. Acceptable values are: Linear, ARIMA  # noqa: E501
+
+        :param algorithm: The algorithm of this AlertForecastingReport.  # noqa: E501
+        :type: str
+        """
+
+        self._algorithm = algorithm
+
+    @property
+    def columns(self):
+        """Gets the columns of this AlertForecastingReport.  # noqa: E501
+
+        The columns displayed in the report  # noqa: E501
+
+        :return: The columns of this AlertForecastingReport.  # noqa: E501
+        :rtype: list[DynamicColumn]
+        """
+        return self._columns
+
+    @columns.setter
+    def columns(self, columns):
+        """Sets the columns of this AlertForecastingReport.
+
+        The columns displayed in the report  # noqa: E501
+
+        :param columns: The columns of this AlertForecastingReport.  # noqa: E501
+        :type: list[DynamicColumn]
+        """
+
+        self._columns = columns
 
     @property
     def confidence_level(self):
@@ -698,31 +721,6 @@ class AlertForecastingReport(ReportBase):
             raise ValueError("Invalid value for `confidence_level`, must not be `None`")  # noqa: E501
 
         self._confidence_level = confidence_level
-
-    @property
-    def hosts_val_type(self):
-        """Gets the hosts_val_type of this AlertForecastingReport.  # noqa: E501
-
-        The type of the resource selection. Acceptable values are: host, group  # noqa: E501
-
-        :return: The hosts_val_type of this AlertForecastingReport.  # noqa: E501
-        :rtype: str
-        """
-        return self._hosts_val_type
-
-    @hosts_val_type.setter
-    def hosts_val_type(self, hosts_val_type):
-        """Sets the hosts_val_type of this AlertForecastingReport.
-
-        The type of the resource selection. Acceptable values are: host, group  # noqa: E501
-
-        :param hosts_val_type: The hosts_val_type of this AlertForecastingReport.  # noqa: E501
-        :type: str
-        """
-        if hosts_val_type is None:
-            raise ValueError("Invalid value for `hosts_val_type`, must not be `None`")  # noqa: E501
-
-        self._hosts_val_type = hosts_val_type
 
     @property
     def date_range(self):
@@ -771,50 +769,29 @@ class AlertForecastingReport(ReportBase):
         self._hosts_val = hosts_val
 
     @property
-    def top10_only(self):
-        """Gets the top10_only of this AlertForecastingReport.  # noqa: E501
+    def hosts_val_type(self):
+        """Gets the hosts_val_type of this AlertForecastingReport.  # noqa: E501
 
-        true | false false: CPU metrics will be displayed for all selected devices or groups true: CPU metrics will only be displayed for the top ten device or groups  # noqa: E501
+        The type of the resource selection. Acceptable values are: host, group  # noqa: E501
 
-        :return: The top10_only of this AlertForecastingReport.  # noqa: E501
-        :rtype: bool
+        :return: The hosts_val_type of this AlertForecastingReport.  # noqa: E501
+        :rtype: str
         """
-        return self._top10_only
+        return self._hosts_val_type
 
-    @top10_only.setter
-    def top10_only(self, top10_only):
-        """Sets the top10_only of this AlertForecastingReport.
+    @hosts_val_type.setter
+    def hosts_val_type(self, hosts_val_type):
+        """Sets the hosts_val_type of this AlertForecastingReport.
 
-        true | false false: CPU metrics will be displayed for all selected devices or groups true: CPU metrics will only be displayed for the top ten device or groups  # noqa: E501
+        The type of the resource selection. Acceptable values are: host, group  # noqa: E501
 
-        :param top10_only: The top10_only of this AlertForecastingReport.  # noqa: E501
-        :type: bool
+        :param hosts_val_type: The hosts_val_type of this AlertForecastingReport.  # noqa: E501
+        :type: str
         """
+        if hosts_val_type is None:
+            raise ValueError("Invalid value for `hosts_val_type`, must not be `None`")  # noqa: E501
 
-        self._top10_only = top10_only
-
-    @property
-    def columns(self):
-        """Gets the columns of this AlertForecastingReport.  # noqa: E501
-
-        The columns displayed in the report  # noqa: E501
-
-        :return: The columns of this AlertForecastingReport.  # noqa: E501
-        :rtype: list[DynamicColumn]
-        """
-        return self._columns
-
-    @columns.setter
-    def columns(self, columns):
-        """Sets the columns of this AlertForecastingReport.
-
-        The columns displayed in the report  # noqa: E501
-
-        :param columns: The columns of this AlertForecastingReport.  # noqa: E501
-        :type: list[DynamicColumn]
-        """
-
-        self._columns = columns
+        self._hosts_val_type = hosts_val_type
 
     @property
     def metrics(self):
@@ -842,27 +819,50 @@ class AlertForecastingReport(ReportBase):
         self._metrics = metrics
 
     @property
-    def algorithm(self):
-        """Gets the algorithm of this AlertForecastingReport.  # noqa: E501
+    def sorted_by(self):
+        """Gets the sorted_by of this AlertForecastingReport.  # noqa: E501
 
-        Forecast method for the report. Acceptable values are: Linear, ARIMA  # noqa: E501
+        The sort option for the alert forecast report  # noqa: E501
 
-        :return: The algorithm of this AlertForecastingReport.  # noqa: E501
-        :rtype: str
+        :return: The sorted_by of this AlertForecastingReport.  # noqa: E501
+        :rtype: int
         """
-        return self._algorithm
+        return self._sorted_by
 
-    @algorithm.setter
-    def algorithm(self, algorithm):
-        """Sets the algorithm of this AlertForecastingReport.
+    @sorted_by.setter
+    def sorted_by(self, sorted_by):
+        """Sets the sorted_by of this AlertForecastingReport.
 
-        Forecast method for the report. Acceptable values are: Linear, ARIMA  # noqa: E501
+        The sort option for the alert forecast report  # noqa: E501
 
-        :param algorithm: The algorithm of this AlertForecastingReport.  # noqa: E501
-        :type: str
+        :param sorted_by: The sorted_by of this AlertForecastingReport.  # noqa: E501
+        :type: int
         """
 
-        self._algorithm = algorithm
+        self._sorted_by = sorted_by
+
+    @property
+    def top10_only(self):
+        """Gets the top10_only of this AlertForecastingReport.  # noqa: E501
+
+        true | false false: CPU metrics will be displayed for all selected devices or groups true: CPU metrics will only be displayed for the top ten device or groups  # noqa: E501
+
+        :return: The top10_only of this AlertForecastingReport.  # noqa: E501
+        :rtype: bool
+        """
+        return self._top10_only
+
+    @top10_only.setter
+    def top10_only(self, top10_only):
+        """Sets the top10_only of this AlertForecastingReport.
+
+        true | false false: CPU metrics will be displayed for all selected devices or groups true: CPU metrics will only be displayed for the top ten device or groups  # noqa: E501
+
+        :param top10_only: The top10_only of this AlertForecastingReport.  # noqa: E501
+        :type: bool
+        """
+
+        self._top10_only = top10_only
 
     def to_dict(self):
         """Returns the model properties as a dict"""

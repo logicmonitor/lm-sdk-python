@@ -32,35 +32,35 @@ class OverviewGraphDataPoint(object):
     """
     swagger_types = {
         'aggregate_method': 'str',
-        'data_point_name': 'str',
+        'consolidate_func': 'int',
         'data_point_id': 'int',
-        'consolidate_func': 'int'
+        'data_point_name': 'str'
     }
 
     attribute_map = {
         'aggregate_method': 'aggregateMethod',
-        'data_point_name': 'dataPointName',
+        'consolidate_func': 'consolidateFunc',
         'data_point_id': 'dataPointId',
-        'consolidate_func': 'consolidateFunc'
+        'data_point_name': 'dataPointName'
     }
 
-    def __init__(self, aggregate_method=None, data_point_name=None, data_point_id=None, consolidate_func=None):  # noqa: E501
+    def __init__(self, aggregate_method=None, consolidate_func=None, data_point_id=None, data_point_name=None):  # noqa: E501
         """OverviewGraphDataPoint - a model defined in Swagger"""  # noqa: E501
 
         self._aggregate_method = None
-        self._data_point_name = None
-        self._data_point_id = None
         self._consolidate_func = None
+        self._data_point_id = None
+        self._data_point_name = None
         self.discriminator = None
 
         if aggregate_method is not None:
             self.aggregate_method = aggregate_method
-        if data_point_name is not None:
-            self.data_point_name = data_point_name
-        if data_point_id is not None:
-            self.data_point_id = data_point_id
         if consolidate_func is not None:
             self.consolidate_func = consolidate_func
+        if data_point_id is not None:
+            self.data_point_id = data_point_id
+        if data_point_name is not None:
+            self.data_point_name = data_point_name
 
     @property
     def aggregate_method(self):
@@ -84,25 +84,25 @@ class OverviewGraphDataPoint(object):
         self._aggregate_method = aggregate_method
 
     @property
-    def data_point_name(self):
-        """Gets the data_point_name of this OverviewGraphDataPoint.  # noqa: E501
+    def consolidate_func(self):
+        """Gets the consolidate_func of this OverviewGraphDataPoint.  # noqa: E501
 
 
-        :return: The data_point_name of this OverviewGraphDataPoint.  # noqa: E501
-        :rtype: str
+        :return: The consolidate_func of this OverviewGraphDataPoint.  # noqa: E501
+        :rtype: int
         """
-        return self._data_point_name
+        return self._consolidate_func
 
-    @data_point_name.setter
-    def data_point_name(self, data_point_name):
-        """Sets the data_point_name of this OverviewGraphDataPoint.
+    @consolidate_func.setter
+    def consolidate_func(self, consolidate_func):
+        """Sets the consolidate_func of this OverviewGraphDataPoint.
 
 
-        :param data_point_name: The data_point_name of this OverviewGraphDataPoint.  # noqa: E501
-        :type: str
+        :param consolidate_func: The consolidate_func of this OverviewGraphDataPoint.  # noqa: E501
+        :type: int
         """
 
-        self._data_point_name = data_point_name
+        self._consolidate_func = consolidate_func
 
     @property
     def data_point_id(self):
@@ -126,25 +126,25 @@ class OverviewGraphDataPoint(object):
         self._data_point_id = data_point_id
 
     @property
-    def consolidate_func(self):
-        """Gets the consolidate_func of this OverviewGraphDataPoint.  # noqa: E501
+    def data_point_name(self):
+        """Gets the data_point_name of this OverviewGraphDataPoint.  # noqa: E501
 
 
-        :return: The consolidate_func of this OverviewGraphDataPoint.  # noqa: E501
-        :rtype: int
+        :return: The data_point_name of this OverviewGraphDataPoint.  # noqa: E501
+        :rtype: str
         """
-        return self._consolidate_func
+        return self._data_point_name
 
-    @consolidate_func.setter
-    def consolidate_func(self, consolidate_func):
-        """Sets the consolidate_func of this OverviewGraphDataPoint.
+    @data_point_name.setter
+    def data_point_name(self, data_point_name):
+        """Sets the data_point_name of this OverviewGraphDataPoint.
 
 
-        :param consolidate_func: The consolidate_func of this OverviewGraphDataPoint.  # noqa: E501
-        :type: int
+        :param data_point_name: The data_point_name of this OverviewGraphDataPoint.  # noqa: E501
+        :type: str
         """
 
-        self._consolidate_func = consolidate_func
+        self._data_point_name = data_point_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

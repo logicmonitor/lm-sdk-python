@@ -34,153 +34,107 @@ class NOCWidget(Widget):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'last_updated_by': 'str',
-        'user_permission': 'str',
         'dashboard_id': 'int',
-        'name': 'str',
         'description': 'str',
-        'last_updated_on': 'int',
-        'theme': 'str',
-        'interval': 'int',
         'id': 'int',
-        'type': 'str',
+        'interval': 'int',
+        'last_updated_by': 'str',
+        'last_updated_on': 'int',
+        'name': 'str',
+        'theme': 'str',
         'timescale': 'str',
+        'type': 'str',
+        'user_permission': 'str',
         'ack_checked': 'object',
-        'display_error_alert': 'object',
         'display_column': 'int',
-        'display_warn_alert': 'object',
         'display_critical_alert': 'object',
-        'sort_by': 'str',
+        'display_error_alert': 'object',
+        'display_warn_alert': 'object',
+        'items': 'list[NOCItemBase]',
         'sdt_checked': 'object',
-        'items': 'list[NOCItemBase]'
+        'sort_by': 'str'
     }
 
     attribute_map = {
-        'last_updated_by': 'lastUpdatedBy',
-        'user_permission': 'userPermission',
         'dashboard_id': 'dashboardId',
-        'name': 'name',
         'description': 'description',
-        'last_updated_on': 'lastUpdatedOn',
-        'theme': 'theme',
-        'interval': 'interval',
         'id': 'id',
-        'type': 'type',
+        'interval': 'interval',
+        'last_updated_by': 'lastUpdatedBy',
+        'last_updated_on': 'lastUpdatedOn',
+        'name': 'name',
+        'theme': 'theme',
         'timescale': 'timescale',
+        'type': 'type',
+        'user_permission': 'userPermission',
         'ack_checked': 'ackChecked',
-        'display_error_alert': 'displayErrorAlert',
         'display_column': 'displayColumn',
-        'display_warn_alert': 'displayWarnAlert',
         'display_critical_alert': 'displayCriticalAlert',
-        'sort_by': 'sortBy',
+        'display_error_alert': 'displayErrorAlert',
+        'display_warn_alert': 'displayWarnAlert',
+        'items': 'items',
         'sdt_checked': 'sdtChecked',
-        'items': 'items'
+        'sort_by': 'sortBy'
     }
 
-    def __init__(self, last_updated_by=None, user_permission=None, dashboard_id=None, name=None, description=None, last_updated_on=None, theme=None, interval=None, id=None, type=None, timescale=None, ack_checked=None, display_error_alert=None, display_column=None, display_warn_alert=None, display_critical_alert=None, sort_by=None, sdt_checked=None, items=None):  # noqa: E501
+    def __init__(self, dashboard_id=None, description=None, id=None, interval=None, last_updated_by=None, last_updated_on=None, name=None, theme=None, timescale=None, type=None, user_permission=None, ack_checked=None, display_column=None, display_critical_alert=None, display_error_alert=None, display_warn_alert=None, items=None, sdt_checked=None, sort_by=None):  # noqa: E501
         """NOCWidget - a model defined in Swagger"""  # noqa: E501
 
-        self._last_updated_by = None
-        self._user_permission = None
         self._dashboard_id = None
-        self._name = None
         self._description = None
-        self._last_updated_on = None
-        self._theme = None
-        self._interval = None
         self._id = None
-        self._type = None
+        self._interval = None
+        self._last_updated_by = None
+        self._last_updated_on = None
+        self._name = None
+        self._theme = None
         self._timescale = None
+        self._type = None
+        self._user_permission = None
         self._ack_checked = None
-        self._display_error_alert = None
         self._display_column = None
-        self._display_warn_alert = None
         self._display_critical_alert = None
-        self._sort_by = None
-        self._sdt_checked = None
+        self._display_error_alert = None
+        self._display_warn_alert = None
         self._items = None
+        self._sdt_checked = None
+        self._sort_by = None
         self.discriminator = None
 
-        if last_updated_by is not None:
-            self.last_updated_by = last_updated_by
-        if user_permission is not None:
-            self.user_permission = user_permission
         self.dashboard_id = dashboard_id
-        self.name = name
         if description is not None:
             self.description = description
-        if last_updated_on is not None:
-            self.last_updated_on = last_updated_on
-        if theme is not None:
-            self.theme = theme
-        if interval is not None:
-            self.interval = interval
         if id is not None:
             self.id = id
-        self.type = type
+        if interval is not None:
+            self.interval = interval
+        if last_updated_by is not None:
+            self.last_updated_by = last_updated_by
+        if last_updated_on is not None:
+            self.last_updated_on = last_updated_on
+        self.name = name
+        if theme is not None:
+            self.theme = theme
         if timescale is not None:
             self.timescale = timescale
+        self.type = type
+        if user_permission is not None:
+            self.user_permission = user_permission
         if ack_checked is not None:
             self.ack_checked = ack_checked
-        if display_error_alert is not None:
-            self.display_error_alert = display_error_alert
         if display_column is not None:
             self.display_column = display_column
-        if display_warn_alert is not None:
-            self.display_warn_alert = display_warn_alert
         if display_critical_alert is not None:
             self.display_critical_alert = display_critical_alert
-        if sort_by is not None:
-            self.sort_by = sort_by
+        if display_error_alert is not None:
+            self.display_error_alert = display_error_alert
+        if display_warn_alert is not None:
+            self.display_warn_alert = display_warn_alert
+        self.items = items
         if sdt_checked is not None:
             self.sdt_checked = sdt_checked
-        self.items = items
-
-    @property
-    def last_updated_by(self):
-        """Gets the last_updated_by of this NOCWidget.  # noqa: E501
-
-        The user that last updated the widget  # noqa: E501
-
-        :return: The last_updated_by of this NOCWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._last_updated_by
-
-    @last_updated_by.setter
-    def last_updated_by(self, last_updated_by):
-        """Sets the last_updated_by of this NOCWidget.
-
-        The user that last updated the widget  # noqa: E501
-
-        :param last_updated_by: The last_updated_by of this NOCWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._last_updated_by = last_updated_by
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this NOCWidget.  # noqa: E501
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :return: The user_permission of this NOCWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this NOCWidget.
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :param user_permission: The user_permission of this NOCWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
+        if sort_by is not None:
+            self.sort_by = sort_by
 
     @property
     def dashboard_id(self):
@@ -208,31 +162,6 @@ class NOCWidget(Widget):
         self._dashboard_id = dashboard_id
 
     @property
-    def name(self):
-        """Gets the name of this NOCWidget.  # noqa: E501
-
-        The name of the widget  # noqa: E501
-
-        :return: The name of this NOCWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this NOCWidget.
-
-        The name of the widget  # noqa: E501
-
-        :param name: The name of this NOCWidget.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
     def description(self):
         """Gets the description of this NOCWidget.  # noqa: E501
 
@@ -256,50 +185,27 @@ class NOCWidget(Widget):
         self._description = description
 
     @property
-    def last_updated_on(self):
-        """Gets the last_updated_on of this NOCWidget.  # noqa: E501
+    def id(self):
+        """Gets the id of this NOCWidget.  # noqa: E501
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :return: The last_updated_on of this NOCWidget.  # noqa: E501
+        :return: The id of this NOCWidget.  # noqa: E501
         :rtype: int
         """
-        return self._last_updated_on
+        return self._id
 
-    @last_updated_on.setter
-    def last_updated_on(self, last_updated_on):
-        """Sets the last_updated_on of this NOCWidget.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this NOCWidget.
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :param last_updated_on: The last_updated_on of this NOCWidget.  # noqa: E501
+        :param id: The id of this NOCWidget.  # noqa: E501
         :type: int
         """
 
-        self._last_updated_on = last_updated_on
-
-    @property
-    def theme(self):
-        """Gets the theme of this NOCWidget.  # noqa: E501
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :return: The theme of this NOCWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._theme
-
-    @theme.setter
-    def theme(self, theme):
-        """Sets the theme of this NOCWidget.
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :param theme: The theme of this NOCWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._theme = theme
+        self._id = id
 
     @property
     def interval(self):
@@ -325,27 +231,121 @@ class NOCWidget(Widget):
         self._interval = interval
 
     @property
-    def id(self):
-        """Gets the id of this NOCWidget.  # noqa: E501
+    def last_updated_by(self):
+        """Gets the last_updated_by of this NOCWidget.  # noqa: E501
 
-        The Id of the widget  # noqa: E501
+        The user that last updated the widget  # noqa: E501
 
-        :return: The id of this NOCWidget.  # noqa: E501
+        :return: The last_updated_by of this NOCWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_updated_by
+
+    @last_updated_by.setter
+    def last_updated_by(self, last_updated_by):
+        """Sets the last_updated_by of this NOCWidget.
+
+        The user that last updated the widget  # noqa: E501
+
+        :param last_updated_by: The last_updated_by of this NOCWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._last_updated_by = last_updated_by
+
+    @property
+    def last_updated_on(self):
+        """Gets the last_updated_on of this NOCWidget.  # noqa: E501
+
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+
+        :return: The last_updated_on of this NOCWidget.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._last_updated_on
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this NOCWidget.
+    @last_updated_on.setter
+    def last_updated_on(self, last_updated_on):
+        """Sets the last_updated_on of this NOCWidget.
 
-        The Id of the widget  # noqa: E501
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
 
-        :param id: The id of this NOCWidget.  # noqa: E501
+        :param last_updated_on: The last_updated_on of this NOCWidget.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._last_updated_on = last_updated_on
+
+    @property
+    def name(self):
+        """Gets the name of this NOCWidget.  # noqa: E501
+
+        The name of the widget  # noqa: E501
+
+        :return: The name of this NOCWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this NOCWidget.
+
+        The name of the widget  # noqa: E501
+
+        :param name: The name of this NOCWidget.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def theme(self):
+        """Gets the theme of this NOCWidget.  # noqa: E501
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :return: The theme of this NOCWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._theme
+
+    @theme.setter
+    def theme(self, theme):
+        """Sets the theme of this NOCWidget.
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :param theme: The theme of this NOCWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._theme = theme
+
+    @property
+    def timescale(self):
+        """Gets the timescale of this NOCWidget.  # noqa: E501
+
+        The default timescale of the widget  # noqa: E501
+
+        :return: The timescale of this NOCWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._timescale
+
+    @timescale.setter
+    def timescale(self, timescale):
+        """Sets the timescale of this NOCWidget.
+
+        The default timescale of the widget  # noqa: E501
+
+        :param timescale: The timescale of this NOCWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._timescale = timescale
 
     @property
     def type(self):
@@ -373,27 +373,27 @@ class NOCWidget(Widget):
         self._type = type
 
     @property
-    def timescale(self):
-        """Gets the timescale of this NOCWidget.  # noqa: E501
+    def user_permission(self):
+        """Gets the user_permission of this NOCWidget.  # noqa: E501
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :return: The timescale of this NOCWidget.  # noqa: E501
+        :return: The user_permission of this NOCWidget.  # noqa: E501
         :rtype: str
         """
-        return self._timescale
+        return self._user_permission
 
-    @timescale.setter
-    def timescale(self, timescale):
-        """Sets the timescale of this NOCWidget.
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this NOCWidget.
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :param timescale: The timescale of this NOCWidget.  # noqa: E501
+        :param user_permission: The user_permission of this NOCWidget.  # noqa: E501
         :type: str
         """
 
-        self._timescale = timescale
+        self._user_permission = user_permission
 
     @property
     def ack_checked(self):
@@ -419,29 +419,6 @@ class NOCWidget(Widget):
         self._ack_checked = ack_checked
 
     @property
-    def display_error_alert(self):
-        """Gets the display_error_alert of this NOCWidget.  # noqa: E501
-
-        Whether or not error alerts are displayed in the NOC widget, the default value is true  # noqa: E501
-
-        :return: The display_error_alert of this NOCWidget.  # noqa: E501
-        :rtype: object
-        """
-        return self._display_error_alert
-
-    @display_error_alert.setter
-    def display_error_alert(self, display_error_alert):
-        """Sets the display_error_alert of this NOCWidget.
-
-        Whether or not error alerts are displayed in the NOC widget, the default value is true  # noqa: E501
-
-        :param display_error_alert: The display_error_alert of this NOCWidget.  # noqa: E501
-        :type: object
-        """
-
-        self._display_error_alert = display_error_alert
-
-    @property
     def display_column(self):
         """Gets the display_column of this NOCWidget.  # noqa: E501
 
@@ -463,29 +440,6 @@ class NOCWidget(Widget):
         """
 
         self._display_column = display_column
-
-    @property
-    def display_warn_alert(self):
-        """Gets the display_warn_alert of this NOCWidget.  # noqa: E501
-
-        Whether or not warning alerts are displayed in the NOC widget, the default value is true  # noqa: E501
-
-        :return: The display_warn_alert of this NOCWidget.  # noqa: E501
-        :rtype: object
-        """
-        return self._display_warn_alert
-
-    @display_warn_alert.setter
-    def display_warn_alert(self, display_warn_alert):
-        """Sets the display_warn_alert of this NOCWidget.
-
-        Whether or not warning alerts are displayed in the NOC widget, the default value is true  # noqa: E501
-
-        :param display_warn_alert: The display_warn_alert of this NOCWidget.  # noqa: E501
-        :type: object
-        """
-
-        self._display_warn_alert = display_warn_alert
 
     @property
     def display_critical_alert(self):
@@ -511,50 +465,50 @@ class NOCWidget(Widget):
         self._display_critical_alert = display_critical_alert
 
     @property
-    def sort_by(self):
-        """Gets the sort_by of this NOCWidget.  # noqa: E501
+    def display_error_alert(self):
+        """Gets the display_error_alert of this NOCWidget.  # noqa: E501
 
-        How NOC items are sorted  # noqa: E501
+        Whether or not error alerts are displayed in the NOC widget, the default value is true  # noqa: E501
 
-        :return: The sort_by of this NOCWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._sort_by
-
-    @sort_by.setter
-    def sort_by(self, sort_by):
-        """Sets the sort_by of this NOCWidget.
-
-        How NOC items are sorted  # noqa: E501
-
-        :param sort_by: The sort_by of this NOCWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._sort_by = sort_by
-
-    @property
-    def sdt_checked(self):
-        """Gets the sdt_checked of this NOCWidget.  # noqa: E501
-
-        Whether or not SDTs are displayed in the NOC widget, the default value is true  # noqa: E501
-
-        :return: The sdt_checked of this NOCWidget.  # noqa: E501
+        :return: The display_error_alert of this NOCWidget.  # noqa: E501
         :rtype: object
         """
-        return self._sdt_checked
+        return self._display_error_alert
 
-    @sdt_checked.setter
-    def sdt_checked(self, sdt_checked):
-        """Sets the sdt_checked of this NOCWidget.
+    @display_error_alert.setter
+    def display_error_alert(self, display_error_alert):
+        """Sets the display_error_alert of this NOCWidget.
 
-        Whether or not SDTs are displayed in the NOC widget, the default value is true  # noqa: E501
+        Whether or not error alerts are displayed in the NOC widget, the default value is true  # noqa: E501
 
-        :param sdt_checked: The sdt_checked of this NOCWidget.  # noqa: E501
+        :param display_error_alert: The display_error_alert of this NOCWidget.  # noqa: E501
         :type: object
         """
 
-        self._sdt_checked = sdt_checked
+        self._display_error_alert = display_error_alert
+
+    @property
+    def display_warn_alert(self):
+        """Gets the display_warn_alert of this NOCWidget.  # noqa: E501
+
+        Whether or not warning alerts are displayed in the NOC widget, the default value is true  # noqa: E501
+
+        :return: The display_warn_alert of this NOCWidget.  # noqa: E501
+        :rtype: object
+        """
+        return self._display_warn_alert
+
+    @display_warn_alert.setter
+    def display_warn_alert(self, display_warn_alert):
+        """Sets the display_warn_alert of this NOCWidget.
+
+        Whether or not warning alerts are displayed in the NOC widget, the default value is true  # noqa: E501
+
+        :param display_warn_alert: The display_warn_alert of this NOCWidget.  # noqa: E501
+        :type: object
+        """
+
+        self._display_warn_alert = display_warn_alert
 
     @property
     def items(self):
@@ -580,6 +534,52 @@ class NOCWidget(Widget):
             raise ValueError("Invalid value for `items`, must not be `None`")  # noqa: E501
 
         self._items = items
+
+    @property
+    def sdt_checked(self):
+        """Gets the sdt_checked of this NOCWidget.  # noqa: E501
+
+        Whether or not SDTs are displayed in the NOC widget, the default value is true  # noqa: E501
+
+        :return: The sdt_checked of this NOCWidget.  # noqa: E501
+        :rtype: object
+        """
+        return self._sdt_checked
+
+    @sdt_checked.setter
+    def sdt_checked(self, sdt_checked):
+        """Sets the sdt_checked of this NOCWidget.
+
+        Whether or not SDTs are displayed in the NOC widget, the default value is true  # noqa: E501
+
+        :param sdt_checked: The sdt_checked of this NOCWidget.  # noqa: E501
+        :type: object
+        """
+
+        self._sdt_checked = sdt_checked
+
+    @property
+    def sort_by(self):
+        """Gets the sort_by of this NOCWidget.  # noqa: E501
+
+        How NOC items are sorted  # noqa: E501
+
+        :return: The sort_by of this NOCWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._sort_by
+
+    @sort_by.setter
+    def sort_by(self, sort_by):
+        """Sets the sort_by of this NOCWidget.
+
+        How NOC items are sorted  # noqa: E501
+
+        :param sort_by: The sort_by of this NOCWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._sort_by = sort_by
 
     def to_dict(self):
         """Returns the model properties as a dict"""

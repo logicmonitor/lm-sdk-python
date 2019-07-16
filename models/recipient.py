@@ -31,34 +31,78 @@ class Recipient(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'method': 'str',
+        'addr': 'str',
         'contact': 'str',
-        'type': 'str',
-        'addr': 'str'
+        'method': 'str',
+        'type': 'str'
     }
 
     attribute_map = {
-        'method': 'method',
+        'addr': 'addr',
         'contact': 'contact',
-        'type': 'type',
-        'addr': 'addr'
+        'method': 'method',
+        'type': 'type'
     }
 
-    def __init__(self, method=None, contact=None, type=None, addr=None):  # noqa: E501
+    def __init__(self, addr=None, contact=None, method=None, type=None):  # noqa: E501
         """Recipient - a model defined in Swagger"""  # noqa: E501
 
-        self._method = None
-        self._contact = None
-        self._type = None
         self._addr = None
+        self._contact = None
+        self._method = None
+        self._type = None
         self.discriminator = None
 
-        self.method = method
-        if contact is not None:
-            self.contact = contact
-        self.type = type
         if addr is not None:
             self.addr = addr
+        if contact is not None:
+            self.contact = contact
+        self.method = method
+        self.type = type
+
+    @property
+    def addr(self):
+        """Gets the addr of this Recipient.  # noqa: E501
+
+        the user name if method = admin, or the email address if method = arbitrary  # noqa: E501
+
+        :return: The addr of this Recipient.  # noqa: E501
+        :rtype: str
+        """
+        return self._addr
+
+    @addr.setter
+    def addr(self, addr):
+        """Sets the addr of this Recipient.
+
+        the user name if method = admin, or the email address if method = arbitrary  # noqa: E501
+
+        :param addr: The addr of this Recipient.  # noqa: E501
+        :type: str
+        """
+
+        self._addr = addr
+
+    @property
+    def contact(self):
+        """Gets the contact of this Recipient.  # noqa: E501
+
+
+        :return: The contact of this Recipient.  # noqa: E501
+        :rtype: str
+        """
+        return self._contact
+
+    @contact.setter
+    def contact(self, contact):
+        """Sets the contact of this Recipient.
+
+
+        :param contact: The contact of this Recipient.  # noqa: E501
+        :type: str
+        """
+
+        self._contact = contact
 
     @property
     def method(self):
@@ -86,27 +130,6 @@ class Recipient(object):
         self._method = method
 
     @property
-    def contact(self):
-        """Gets the contact of this Recipient.  # noqa: E501
-
-
-        :return: The contact of this Recipient.  # noqa: E501
-        :rtype: str
-        """
-        return self._contact
-
-    @contact.setter
-    def contact(self, contact):
-        """Sets the contact of this Recipient.
-
-
-        :param contact: The contact of this Recipient.  # noqa: E501
-        :type: str
-        """
-
-        self._contact = contact
-
-    @property
     def type(self):
         """Gets the type of this Recipient.  # noqa: E501
 
@@ -130,29 +153,6 @@ class Recipient(object):
             raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
 
         self._type = type
-
-    @property
-    def addr(self):
-        """Gets the addr of this Recipient.  # noqa: E501
-
-        the user name if method = admin, or the email address if method = arbitrary  # noqa: E501
-
-        :return: The addr of this Recipient.  # noqa: E501
-        :rtype: str
-        """
-        return self._addr
-
-    @addr.setter
-    def addr(self, addr):
-        """Sets the addr of this Recipient.
-
-        the user name if method = admin, or the email address if method = arbitrary  # noqa: E501
-
-        :param addr: The addr of this Recipient.  # noqa: E501
-        :type: str
-        """
-
-        self._addr = addr
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,57 +31,36 @@ class TreeNode(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'user_permission': 'str',
         'display_name': 'str',
         'id': 'int',
-        'type': 'str'
+        'type': 'str',
+        'user_permission': 'str'
     }
 
     attribute_map = {
-        'user_permission': 'userPermission',
         'display_name': 'displayName',
         'id': 'id',
-        'type': 'type'
+        'type': 'type',
+        'user_permission': 'userPermission'
     }
 
-    def __init__(self, user_permission=None, display_name=None, id=None, type=None):  # noqa: E501
+    def __init__(self, display_name=None, id=None, type=None, user_permission=None):  # noqa: E501
         """TreeNode - a model defined in Swagger"""  # noqa: E501
 
-        self._user_permission = None
         self._display_name = None
         self._id = None
         self._type = None
+        self._user_permission = None
         self.discriminator = None
 
-        if user_permission is not None:
-            self.user_permission = user_permission
         if display_name is not None:
             self.display_name = display_name
         if id is not None:
             self.id = id
         if type is not None:
             self.type = type
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this TreeNode.  # noqa: E501
-
-
-        :return: The user_permission of this TreeNode.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this TreeNode.
-
-
-        :param user_permission: The user_permission of this TreeNode.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
+        if user_permission is not None:
+            self.user_permission = user_permission
 
     @property
     def display_name(self):
@@ -145,6 +124,27 @@ class TreeNode(object):
         """
 
         self._type = type
+
+    @property
+    def user_permission(self):
+        """Gets the user_permission of this TreeNode.  # noqa: E501
+
+
+        :return: The user_permission of this TreeNode.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_permission
+
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this TreeNode.
+
+
+        :param user_permission: The user_permission of this TreeNode.  # noqa: E501
+        :type: str
+        """
+
+        self._user_permission = user_permission
 
     def to_dict(self):
         """Returns the model properties as a dict"""

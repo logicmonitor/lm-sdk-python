@@ -35,180 +35,96 @@ class DataSourceOverviewGraph(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'base1024': 'bool',
-        'time_scale': 'str',
-        'max_value': 'object',
-        'display_prio': 'int',
         'aggregated': 'bool',
-        'title': 'str',
-        'virtual_data_points': 'list[GraphVirtualDataPoint]',
+        'base1024': 'bool',
+        'data_points': 'list[OverviewGraphDataPoint]',
+        'display_prio': 'int',
+        'height': 'int',
+        'id': 'int',
+        'lines': 'list[GraphLine]',
+        'max_value': 'object',
         'min_value': 'object',
         'name': 'str',
-        'width': 'int',
-        'data_points': 'list[OverviewGraphDataPoint]',
-        'vertical_label': 'str',
-        'id': 'int',
         'rigid': 'bool',
-        'lines': 'list[GraphLine]',
-        'height': 'int'
+        'time_scale': 'str',
+        'title': 'str',
+        'vertical_label': 'str',
+        'virtual_data_points': 'list[GraphVirtualDataPoint]',
+        'width': 'int'
     }
 
     attribute_map = {
-        'base1024': 'base1024',
-        'time_scale': 'timeScale',
-        'max_value': 'maxValue',
-        'display_prio': 'displayPrio',
         'aggregated': 'aggregated',
-        'title': 'title',
-        'virtual_data_points': 'virtualDataPoints',
+        'base1024': 'base1024',
+        'data_points': 'dataPoints',
+        'display_prio': 'displayPrio',
+        'height': 'height',
+        'id': 'id',
+        'lines': 'lines',
+        'max_value': 'maxValue',
         'min_value': 'minValue',
         'name': 'name',
-        'width': 'width',
-        'data_points': 'dataPoints',
-        'vertical_label': 'verticalLabel',
-        'id': 'id',
         'rigid': 'rigid',
-        'lines': 'lines',
-        'height': 'height'
+        'time_scale': 'timeScale',
+        'title': 'title',
+        'vertical_label': 'verticalLabel',
+        'virtual_data_points': 'virtualDataPoints',
+        'width': 'width'
     }
 
-    def __init__(self, base1024=None, time_scale=None, max_value=None, display_prio=None, aggregated=None, title=None, virtual_data_points=None, min_value=None, name=None, width=None, data_points=None, vertical_label=None, id=None, rigid=None, lines=None, height=None):  # noqa: E501
+    def __init__(self, aggregated=None, base1024=None, data_points=None, display_prio=None, height=None, id=None, lines=None, max_value=None, min_value=None, name=None, rigid=None, time_scale=None, title=None, vertical_label=None, virtual_data_points=None, width=None):  # noqa: E501
         """DataSourceOverviewGraph - a model defined in Swagger"""  # noqa: E501
 
-        self._base1024 = None
-        self._time_scale = None
-        self._max_value = None
-        self._display_prio = None
         self._aggregated = None
-        self._title = None
-        self._virtual_data_points = None
+        self._base1024 = None
+        self._data_points = None
+        self._display_prio = None
+        self._height = None
+        self._id = None
+        self._lines = None
+        self._max_value = None
         self._min_value = None
         self._name = None
-        self._width = None
-        self._data_points = None
-        self._vertical_label = None
-        self._id = None
         self._rigid = None
-        self._lines = None
-        self._height = None
+        self._time_scale = None
+        self._title = None
+        self._vertical_label = None
+        self._virtual_data_points = None
+        self._width = None
         self.discriminator = None
 
-        if base1024 is not None:
-            self.base1024 = base1024
-        if time_scale is not None:
-            self.time_scale = time_scale
-        if max_value is not None:
-            self.max_value = max_value
-        if display_prio is not None:
-            self.display_prio = display_prio
         if aggregated is not None:
             self.aggregated = aggregated
-        if title is not None:
-            self.title = title
-        if virtual_data_points is not None:
-            self.virtual_data_points = virtual_data_points
+        if base1024 is not None:
+            self.base1024 = base1024
+        if data_points is not None:
+            self.data_points = data_points
+        if display_prio is not None:
+            self.display_prio = display_prio
+        if height is not None:
+            self.height = height
+        if id is not None:
+            self.id = id
+        if lines is not None:
+            self.lines = lines
+        if max_value is not None:
+            self.max_value = max_value
         if min_value is not None:
             self.min_value = min_value
         if name is not None:
             self.name = name
-        if width is not None:
-            self.width = width
-        if data_points is not None:
-            self.data_points = data_points
-        if vertical_label is not None:
-            self.vertical_label = vertical_label
-        if id is not None:
-            self.id = id
         if rigid is not None:
             self.rigid = rigid
-        if lines is not None:
-            self.lines = lines
-        if height is not None:
-            self.height = height
-
-    @property
-    def base1024(self):
-        """Gets the base1024 of this DataSourceOverviewGraph.  # noqa: E501
-
-
-        :return: The base1024 of this DataSourceOverviewGraph.  # noqa: E501
-        :rtype: bool
-        """
-        return self._base1024
-
-    @base1024.setter
-    def base1024(self, base1024):
-        """Sets the base1024 of this DataSourceOverviewGraph.
-
-
-        :param base1024: The base1024 of this DataSourceOverviewGraph.  # noqa: E501
-        :type: bool
-        """
-
-        self._base1024 = base1024
-
-    @property
-    def time_scale(self):
-        """Gets the time_scale of this DataSourceOverviewGraph.  # noqa: E501
-
-
-        :return: The time_scale of this DataSourceOverviewGraph.  # noqa: E501
-        :rtype: str
-        """
-        return self._time_scale
-
-    @time_scale.setter
-    def time_scale(self, time_scale):
-        """Sets the time_scale of this DataSourceOverviewGraph.
-
-
-        :param time_scale: The time_scale of this DataSourceOverviewGraph.  # noqa: E501
-        :type: str
-        """
-
-        self._time_scale = time_scale
-
-    @property
-    def max_value(self):
-        """Gets the max_value of this DataSourceOverviewGraph.  # noqa: E501
-
-
-        :return: The max_value of this DataSourceOverviewGraph.  # noqa: E501
-        :rtype: object
-        """
-        return self._max_value
-
-    @max_value.setter
-    def max_value(self, max_value):
-        """Sets the max_value of this DataSourceOverviewGraph.
-
-
-        :param max_value: The max_value of this DataSourceOverviewGraph.  # noqa: E501
-        :type: object
-        """
-
-        self._max_value = max_value
-
-    @property
-    def display_prio(self):
-        """Gets the display_prio of this DataSourceOverviewGraph.  # noqa: E501
-
-
-        :return: The display_prio of this DataSourceOverviewGraph.  # noqa: E501
-        :rtype: int
-        """
-        return self._display_prio
-
-    @display_prio.setter
-    def display_prio(self, display_prio):
-        """Sets the display_prio of this DataSourceOverviewGraph.
-
-
-        :param display_prio: The display_prio of this DataSourceOverviewGraph.  # noqa: E501
-        :type: int
-        """
-
-        self._display_prio = display_prio
+        if time_scale is not None:
+            self.time_scale = time_scale
+        if title is not None:
+            self.title = title
+        if vertical_label is not None:
+            self.vertical_label = vertical_label
+        if virtual_data_points is not None:
+            self.virtual_data_points = virtual_data_points
+        if width is not None:
+            self.width = width
 
     @property
     def aggregated(self):
@@ -232,46 +148,151 @@ class DataSourceOverviewGraph(object):
         self._aggregated = aggregated
 
     @property
-    def title(self):
-        """Gets the title of this DataSourceOverviewGraph.  # noqa: E501
+    def base1024(self):
+        """Gets the base1024 of this DataSourceOverviewGraph.  # noqa: E501
 
 
-        :return: The title of this DataSourceOverviewGraph.  # noqa: E501
-        :rtype: str
+        :return: The base1024 of this DataSourceOverviewGraph.  # noqa: E501
+        :rtype: bool
         """
-        return self._title
+        return self._base1024
 
-    @title.setter
-    def title(self, title):
-        """Sets the title of this DataSourceOverviewGraph.
+    @base1024.setter
+    def base1024(self, base1024):
+        """Sets the base1024 of this DataSourceOverviewGraph.
 
 
-        :param title: The title of this DataSourceOverviewGraph.  # noqa: E501
-        :type: str
+        :param base1024: The base1024 of this DataSourceOverviewGraph.  # noqa: E501
+        :type: bool
         """
 
-        self._title = title
+        self._base1024 = base1024
 
     @property
-    def virtual_data_points(self):
-        """Gets the virtual_data_points of this DataSourceOverviewGraph.  # noqa: E501
+    def data_points(self):
+        """Gets the data_points of this DataSourceOverviewGraph.  # noqa: E501
 
 
-        :return: The virtual_data_points of this DataSourceOverviewGraph.  # noqa: E501
-        :rtype: list[GraphVirtualDataPoint]
+        :return: The data_points of this DataSourceOverviewGraph.  # noqa: E501
+        :rtype: list[OverviewGraphDataPoint]
         """
-        return self._virtual_data_points
+        return self._data_points
 
-    @virtual_data_points.setter
-    def virtual_data_points(self, virtual_data_points):
-        """Sets the virtual_data_points of this DataSourceOverviewGraph.
+    @data_points.setter
+    def data_points(self, data_points):
+        """Sets the data_points of this DataSourceOverviewGraph.
 
 
-        :param virtual_data_points: The virtual_data_points of this DataSourceOverviewGraph.  # noqa: E501
-        :type: list[GraphVirtualDataPoint]
+        :param data_points: The data_points of this DataSourceOverviewGraph.  # noqa: E501
+        :type: list[OverviewGraphDataPoint]
         """
 
-        self._virtual_data_points = virtual_data_points
+        self._data_points = data_points
+
+    @property
+    def display_prio(self):
+        """Gets the display_prio of this DataSourceOverviewGraph.  # noqa: E501
+
+
+        :return: The display_prio of this DataSourceOverviewGraph.  # noqa: E501
+        :rtype: int
+        """
+        return self._display_prio
+
+    @display_prio.setter
+    def display_prio(self, display_prio):
+        """Sets the display_prio of this DataSourceOverviewGraph.
+
+
+        :param display_prio: The display_prio of this DataSourceOverviewGraph.  # noqa: E501
+        :type: int
+        """
+
+        self._display_prio = display_prio
+
+    @property
+    def height(self):
+        """Gets the height of this DataSourceOverviewGraph.  # noqa: E501
+
+
+        :return: The height of this DataSourceOverviewGraph.  # noqa: E501
+        :rtype: int
+        """
+        return self._height
+
+    @height.setter
+    def height(self, height):
+        """Sets the height of this DataSourceOverviewGraph.
+
+
+        :param height: The height of this DataSourceOverviewGraph.  # noqa: E501
+        :type: int
+        """
+
+        self._height = height
+
+    @property
+    def id(self):
+        """Gets the id of this DataSourceOverviewGraph.  # noqa: E501
+
+
+        :return: The id of this DataSourceOverviewGraph.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this DataSourceOverviewGraph.
+
+
+        :param id: The id of this DataSourceOverviewGraph.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def lines(self):
+        """Gets the lines of this DataSourceOverviewGraph.  # noqa: E501
+
+
+        :return: The lines of this DataSourceOverviewGraph.  # noqa: E501
+        :rtype: list[GraphLine]
+        """
+        return self._lines
+
+    @lines.setter
+    def lines(self, lines):
+        """Sets the lines of this DataSourceOverviewGraph.
+
+
+        :param lines: The lines of this DataSourceOverviewGraph.  # noqa: E501
+        :type: list[GraphLine]
+        """
+
+        self._lines = lines
+
+    @property
+    def max_value(self):
+        """Gets the max_value of this DataSourceOverviewGraph.  # noqa: E501
+
+
+        :return: The max_value of this DataSourceOverviewGraph.  # noqa: E501
+        :rtype: object
+        """
+        return self._max_value
+
+    @max_value.setter
+    def max_value(self, max_value):
+        """Sets the max_value of this DataSourceOverviewGraph.
+
+
+        :param max_value: The max_value of this DataSourceOverviewGraph.  # noqa: E501
+        :type: object
+        """
+
+        self._max_value = max_value
 
     @property
     def min_value(self):
@@ -316,46 +337,67 @@ class DataSourceOverviewGraph(object):
         self._name = name
 
     @property
-    def width(self):
-        """Gets the width of this DataSourceOverviewGraph.  # noqa: E501
+    def rigid(self):
+        """Gets the rigid of this DataSourceOverviewGraph.  # noqa: E501
 
 
-        :return: The width of this DataSourceOverviewGraph.  # noqa: E501
-        :rtype: int
+        :return: The rigid of this DataSourceOverviewGraph.  # noqa: E501
+        :rtype: bool
         """
-        return self._width
+        return self._rigid
 
-    @width.setter
-    def width(self, width):
-        """Sets the width of this DataSourceOverviewGraph.
+    @rigid.setter
+    def rigid(self, rigid):
+        """Sets the rigid of this DataSourceOverviewGraph.
 
 
-        :param width: The width of this DataSourceOverviewGraph.  # noqa: E501
-        :type: int
+        :param rigid: The rigid of this DataSourceOverviewGraph.  # noqa: E501
+        :type: bool
         """
 
-        self._width = width
+        self._rigid = rigid
 
     @property
-    def data_points(self):
-        """Gets the data_points of this DataSourceOverviewGraph.  # noqa: E501
+    def time_scale(self):
+        """Gets the time_scale of this DataSourceOverviewGraph.  # noqa: E501
 
 
-        :return: The data_points of this DataSourceOverviewGraph.  # noqa: E501
-        :rtype: list[OverviewGraphDataPoint]
+        :return: The time_scale of this DataSourceOverviewGraph.  # noqa: E501
+        :rtype: str
         """
-        return self._data_points
+        return self._time_scale
 
-    @data_points.setter
-    def data_points(self, data_points):
-        """Sets the data_points of this DataSourceOverviewGraph.
+    @time_scale.setter
+    def time_scale(self, time_scale):
+        """Sets the time_scale of this DataSourceOverviewGraph.
 
 
-        :param data_points: The data_points of this DataSourceOverviewGraph.  # noqa: E501
-        :type: list[OverviewGraphDataPoint]
+        :param time_scale: The time_scale of this DataSourceOverviewGraph.  # noqa: E501
+        :type: str
         """
 
-        self._data_points = data_points
+        self._time_scale = time_scale
+
+    @property
+    def title(self):
+        """Gets the title of this DataSourceOverviewGraph.  # noqa: E501
+
+
+        :return: The title of this DataSourceOverviewGraph.  # noqa: E501
+        :rtype: str
+        """
+        return self._title
+
+    @title.setter
+    def title(self, title):
+        """Sets the title of this DataSourceOverviewGraph.
+
+
+        :param title: The title of this DataSourceOverviewGraph.  # noqa: E501
+        :type: str
+        """
+
+        self._title = title
 
     @property
     def vertical_label(self):
@@ -379,88 +421,46 @@ class DataSourceOverviewGraph(object):
         self._vertical_label = vertical_label
 
     @property
-    def id(self):
-        """Gets the id of this DataSourceOverviewGraph.  # noqa: E501
+    def virtual_data_points(self):
+        """Gets the virtual_data_points of this DataSourceOverviewGraph.  # noqa: E501
 
 
-        :return: The id of this DataSourceOverviewGraph.  # noqa: E501
+        :return: The virtual_data_points of this DataSourceOverviewGraph.  # noqa: E501
+        :rtype: list[GraphVirtualDataPoint]
+        """
+        return self._virtual_data_points
+
+    @virtual_data_points.setter
+    def virtual_data_points(self, virtual_data_points):
+        """Sets the virtual_data_points of this DataSourceOverviewGraph.
+
+
+        :param virtual_data_points: The virtual_data_points of this DataSourceOverviewGraph.  # noqa: E501
+        :type: list[GraphVirtualDataPoint]
+        """
+
+        self._virtual_data_points = virtual_data_points
+
+    @property
+    def width(self):
+        """Gets the width of this DataSourceOverviewGraph.  # noqa: E501
+
+
+        :return: The width of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._width
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this DataSourceOverviewGraph.
+    @width.setter
+    def width(self, width):
+        """Sets the width of this DataSourceOverviewGraph.
 
 
-        :param id: The id of this DataSourceOverviewGraph.  # noqa: E501
+        :param width: The width of this DataSourceOverviewGraph.  # noqa: E501
         :type: int
         """
 
-        self._id = id
-
-    @property
-    def rigid(self):
-        """Gets the rigid of this DataSourceOverviewGraph.  # noqa: E501
-
-
-        :return: The rigid of this DataSourceOverviewGraph.  # noqa: E501
-        :rtype: bool
-        """
-        return self._rigid
-
-    @rigid.setter
-    def rigid(self, rigid):
-        """Sets the rigid of this DataSourceOverviewGraph.
-
-
-        :param rigid: The rigid of this DataSourceOverviewGraph.  # noqa: E501
-        :type: bool
-        """
-
-        self._rigid = rigid
-
-    @property
-    def lines(self):
-        """Gets the lines of this DataSourceOverviewGraph.  # noqa: E501
-
-
-        :return: The lines of this DataSourceOverviewGraph.  # noqa: E501
-        :rtype: list[GraphLine]
-        """
-        return self._lines
-
-    @lines.setter
-    def lines(self, lines):
-        """Sets the lines of this DataSourceOverviewGraph.
-
-
-        :param lines: The lines of this DataSourceOverviewGraph.  # noqa: E501
-        :type: list[GraphLine]
-        """
-
-        self._lines = lines
-
-    @property
-    def height(self):
-        """Gets the height of this DataSourceOverviewGraph.  # noqa: E501
-
-
-        :return: The height of this DataSourceOverviewGraph.  # noqa: E501
-        :rtype: int
-        """
-        return self._height
-
-    @height.setter
-    def height(self, height):
-        """Sets the height of this DataSourceOverviewGraph.
-
-
-        :param height: The height of this DataSourceOverviewGraph.  # noqa: E501
-        :type: int
-        """
-
-        self._height = height
+        self._width = width
 
     def to_dict(self):
         """Returns the model properties as a dict"""

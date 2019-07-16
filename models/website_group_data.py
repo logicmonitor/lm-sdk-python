@@ -31,49 +31,24 @@ class WebsiteGroupData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'website_name': 'str',
-        'website_group_name': 'str'
+        'website_group_name': 'str',
+        'website_name': 'str'
     }
 
     attribute_map = {
-        'website_name': 'websiteName',
-        'website_group_name': 'websiteGroupName'
+        'website_group_name': 'websiteGroupName',
+        'website_name': 'websiteName'
     }
 
-    def __init__(self, website_name=None, website_group_name=None):  # noqa: E501
+    def __init__(self, website_group_name=None, website_name=None):  # noqa: E501
         """WebsiteGroupData - a model defined in Swagger"""  # noqa: E501
 
-        self._website_name = None
         self._website_group_name = None
+        self._website_name = None
         self.discriminator = None
 
-        self.website_name = website_name
         self.website_group_name = website_group_name
-
-    @property
-    def website_name(self):
-        """Gets the website_name of this WebsiteGroupData.  # noqa: E501
-
-        The name of the website status should be displayed  # noqa: E501
-
-        :return: The website_name of this WebsiteGroupData.  # noqa: E501
-        :rtype: str
-        """
-        return self._website_name
-
-    @website_name.setter
-    def website_name(self, website_name):
-        """Sets the website_name of this WebsiteGroupData.
-
-        The name of the website status should be displayed  # noqa: E501
-
-        :param website_name: The website_name of this WebsiteGroupData.  # noqa: E501
-        :type: str
-        """
-        if website_name is None:
-            raise ValueError("Invalid value for `website_name`, must not be `None`")  # noqa: E501
-
-        self._website_name = website_name
+        self.website_name = website_name
 
     @property
     def website_group_name(self):
@@ -99,6 +74,31 @@ class WebsiteGroupData(object):
             raise ValueError("Invalid value for `website_group_name`, must not be `None`")  # noqa: E501
 
         self._website_group_name = website_group_name
+
+    @property
+    def website_name(self):
+        """Gets the website_name of this WebsiteGroupData.  # noqa: E501
+
+        The name of the website status should be displayed  # noqa: E501
+
+        :return: The website_name of this WebsiteGroupData.  # noqa: E501
+        :rtype: str
+        """
+        return self._website_name
+
+    @website_name.setter
+    def website_name(self, website_name):
+        """Sets the website_name of this WebsiteGroupData.
+
+        The name of the website status should be displayed  # noqa: E501
+
+        :param website_name: The website_name of this WebsiteGroupData.  # noqa: E501
+        :type: str
+        """
+        if website_name is None:
+            raise ValueError("Invalid value for `website_name`, must not be `None`")  # noqa: E501
+
+        self._website_name = website_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

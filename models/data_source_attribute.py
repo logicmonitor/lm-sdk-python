@@ -31,29 +31,50 @@ class DataSourceAttribute(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
         'comment': 'str',
+        'name': 'str',
         'value': 'str'
     }
 
     attribute_map = {
-        'name': 'name',
         'comment': 'comment',
+        'name': 'name',
         'value': 'value'
     }
 
-    def __init__(self, name=None, comment=None, value=None):  # noqa: E501
+    def __init__(self, comment=None, name=None, value=None):  # noqa: E501
         """DataSourceAttribute - a model defined in Swagger"""  # noqa: E501
 
-        self._name = None
         self._comment = None
+        self._name = None
         self._value = None
         self.discriminator = None
 
-        self.name = name
         if comment is not None:
             self.comment = comment
+        self.name = name
         self.value = value
+
+    @property
+    def comment(self):
+        """Gets the comment of this DataSourceAttribute.  # noqa: E501
+
+
+        :return: The comment of this DataSourceAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._comment
+
+    @comment.setter
+    def comment(self, comment):
+        """Sets the comment of this DataSourceAttribute.
+
+
+        :param comment: The comment of this DataSourceAttribute.  # noqa: E501
+        :type: str
+        """
+
+        self._comment = comment
 
     @property
     def name(self):
@@ -77,27 +98,6 @@ class DataSourceAttribute(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
-
-    @property
-    def comment(self):
-        """Gets the comment of this DataSourceAttribute.  # noqa: E501
-
-
-        :return: The comment of this DataSourceAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._comment
-
-    @comment.setter
-    def comment(self, comment):
-        """Sets the comment of this DataSourceAttribute.
-
-
-        :param comment: The comment of this DataSourceAttribute.  # noqa: E501
-        :type: str
-        """
-
-        self._comment = comment
 
     @property
     def value(self):

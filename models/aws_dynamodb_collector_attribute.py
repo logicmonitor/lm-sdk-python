@@ -34,64 +34,64 @@ class AwsDynamodbCollectorAttribute(CollectorAttribute):
     """
     swagger_types = {
         'name': 'str',
-        'aws_range_value': 'str',
-        'aws_query_range_value': 'str',
-        'aws_dynamodb_attr_type': 'str',
-        'aws_query_range_op': 'str',
-        'aws_key_value': 'str',
         'aws_attribute_name': 'str',
-        'aws_query_index_type': 'str',
+        'aws_dynamodb_attr_type': 'str',
+        'aws_key_value': 'str',
         'aws_query_index_name': 'str',
-        'aws_query_key_value': 'str'
+        'aws_query_index_type': 'str',
+        'aws_query_key_value': 'str',
+        'aws_query_range_op': 'str',
+        'aws_query_range_value': 'str',
+        'aws_range_value': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'aws_range_value': 'awsRangeValue',
-        'aws_query_range_value': 'awsQueryRangeValue',
-        'aws_dynamodb_attr_type': 'awsDynamodbAttrType',
-        'aws_query_range_op': 'awsQueryRangeOp',
-        'aws_key_value': 'awsKeyValue',
         'aws_attribute_name': 'awsAttributeName',
-        'aws_query_index_type': 'awsQueryIndexType',
+        'aws_dynamodb_attr_type': 'awsDynamodbAttrType',
+        'aws_key_value': 'awsKeyValue',
         'aws_query_index_name': 'awsQueryIndexName',
-        'aws_query_key_value': 'awsQueryKeyValue'
+        'aws_query_index_type': 'awsQueryIndexType',
+        'aws_query_key_value': 'awsQueryKeyValue',
+        'aws_query_range_op': 'awsQueryRangeOp',
+        'aws_query_range_value': 'awsQueryRangeValue',
+        'aws_range_value': 'awsRangeValue'
     }
 
-    def __init__(self, name=None, aws_range_value=None, aws_query_range_value=None, aws_dynamodb_attr_type=None, aws_query_range_op=None, aws_key_value=None, aws_attribute_name=None, aws_query_index_type=None, aws_query_index_name=None, aws_query_key_value=None):  # noqa: E501
+    def __init__(self, name=None, aws_attribute_name=None, aws_dynamodb_attr_type=None, aws_key_value=None, aws_query_index_name=None, aws_query_index_type=None, aws_query_key_value=None, aws_query_range_op=None, aws_query_range_value=None, aws_range_value=None):  # noqa: E501
         """AwsDynamodbCollectorAttribute - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._aws_range_value = None
-        self._aws_query_range_value = None
-        self._aws_dynamodb_attr_type = None
-        self._aws_query_range_op = None
-        self._aws_key_value = None
         self._aws_attribute_name = None
-        self._aws_query_index_type = None
+        self._aws_dynamodb_attr_type = None
+        self._aws_key_value = None
         self._aws_query_index_name = None
+        self._aws_query_index_type = None
         self._aws_query_key_value = None
+        self._aws_query_range_op = None
+        self._aws_query_range_value = None
+        self._aws_range_value = None
         self.discriminator = None
 
         self.name = name
-        if aws_range_value is not None:
-            self.aws_range_value = aws_range_value
-        if aws_query_range_value is not None:
-            self.aws_query_range_value = aws_query_range_value
-        if aws_dynamodb_attr_type is not None:
-            self.aws_dynamodb_attr_type = aws_dynamodb_attr_type
-        if aws_query_range_op is not None:
-            self.aws_query_range_op = aws_query_range_op
-        if aws_key_value is not None:
-            self.aws_key_value = aws_key_value
         if aws_attribute_name is not None:
             self.aws_attribute_name = aws_attribute_name
-        if aws_query_index_type is not None:
-            self.aws_query_index_type = aws_query_index_type
+        if aws_dynamodb_attr_type is not None:
+            self.aws_dynamodb_attr_type = aws_dynamodb_attr_type
+        if aws_key_value is not None:
+            self.aws_key_value = aws_key_value
         if aws_query_index_name is not None:
             self.aws_query_index_name = aws_query_index_name
+        if aws_query_index_type is not None:
+            self.aws_query_index_type = aws_query_index_type
         if aws_query_key_value is not None:
             self.aws_query_key_value = aws_query_key_value
+        if aws_query_range_op is not None:
+            self.aws_query_range_op = aws_query_range_op
+        if aws_query_range_value is not None:
+            self.aws_query_range_value = aws_query_range_value
+        if aws_range_value is not None:
+            self.aws_range_value = aws_range_value
 
     @property
     def name(self):
@@ -117,46 +117,25 @@ class AwsDynamodbCollectorAttribute(CollectorAttribute):
         self._name = name
 
     @property
-    def aws_range_value(self):
-        """Gets the aws_range_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
+    def aws_attribute_name(self):
+        """Gets the aws_attribute_name of this AwsDynamodbCollectorAttribute.  # noqa: E501
 
 
-        :return: The aws_range_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
+        :return: The aws_attribute_name of this AwsDynamodbCollectorAttribute.  # noqa: E501
         :rtype: str
         """
-        return self._aws_range_value
+        return self._aws_attribute_name
 
-    @aws_range_value.setter
-    def aws_range_value(self, aws_range_value):
-        """Sets the aws_range_value of this AwsDynamodbCollectorAttribute.
+    @aws_attribute_name.setter
+    def aws_attribute_name(self, aws_attribute_name):
+        """Sets the aws_attribute_name of this AwsDynamodbCollectorAttribute.
 
 
-        :param aws_range_value: The aws_range_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
+        :param aws_attribute_name: The aws_attribute_name of this AwsDynamodbCollectorAttribute.  # noqa: E501
         :type: str
         """
 
-        self._aws_range_value = aws_range_value
-
-    @property
-    def aws_query_range_value(self):
-        """Gets the aws_query_range_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
-
-
-        :return: The aws_query_range_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._aws_query_range_value
-
-    @aws_query_range_value.setter
-    def aws_query_range_value(self, aws_query_range_value):
-        """Sets the aws_query_range_value of this AwsDynamodbCollectorAttribute.
-
-
-        :param aws_query_range_value: The aws_query_range_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
-        :type: str
-        """
-
-        self._aws_query_range_value = aws_query_range_value
+        self._aws_attribute_name = aws_attribute_name
 
     @property
     def aws_dynamodb_attr_type(self):
@@ -180,27 +159,6 @@ class AwsDynamodbCollectorAttribute(CollectorAttribute):
         self._aws_dynamodb_attr_type = aws_dynamodb_attr_type
 
     @property
-    def aws_query_range_op(self):
-        """Gets the aws_query_range_op of this AwsDynamodbCollectorAttribute.  # noqa: E501
-
-
-        :return: The aws_query_range_op of this AwsDynamodbCollectorAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._aws_query_range_op
-
-    @aws_query_range_op.setter
-    def aws_query_range_op(self, aws_query_range_op):
-        """Sets the aws_query_range_op of this AwsDynamodbCollectorAttribute.
-
-
-        :param aws_query_range_op: The aws_query_range_op of this AwsDynamodbCollectorAttribute.  # noqa: E501
-        :type: str
-        """
-
-        self._aws_query_range_op = aws_query_range_op
-
-    @property
     def aws_key_value(self):
         """Gets the aws_key_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
 
@@ -220,48 +178,6 @@ class AwsDynamodbCollectorAttribute(CollectorAttribute):
         """
 
         self._aws_key_value = aws_key_value
-
-    @property
-    def aws_attribute_name(self):
-        """Gets the aws_attribute_name of this AwsDynamodbCollectorAttribute.  # noqa: E501
-
-
-        :return: The aws_attribute_name of this AwsDynamodbCollectorAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._aws_attribute_name
-
-    @aws_attribute_name.setter
-    def aws_attribute_name(self, aws_attribute_name):
-        """Sets the aws_attribute_name of this AwsDynamodbCollectorAttribute.
-
-
-        :param aws_attribute_name: The aws_attribute_name of this AwsDynamodbCollectorAttribute.  # noqa: E501
-        :type: str
-        """
-
-        self._aws_attribute_name = aws_attribute_name
-
-    @property
-    def aws_query_index_type(self):
-        """Gets the aws_query_index_type of this AwsDynamodbCollectorAttribute.  # noqa: E501
-
-
-        :return: The aws_query_index_type of this AwsDynamodbCollectorAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._aws_query_index_type
-
-    @aws_query_index_type.setter
-    def aws_query_index_type(self, aws_query_index_type):
-        """Sets the aws_query_index_type of this AwsDynamodbCollectorAttribute.
-
-
-        :param aws_query_index_type: The aws_query_index_type of this AwsDynamodbCollectorAttribute.  # noqa: E501
-        :type: str
-        """
-
-        self._aws_query_index_type = aws_query_index_type
 
     @property
     def aws_query_index_name(self):
@@ -285,6 +201,27 @@ class AwsDynamodbCollectorAttribute(CollectorAttribute):
         self._aws_query_index_name = aws_query_index_name
 
     @property
+    def aws_query_index_type(self):
+        """Gets the aws_query_index_type of this AwsDynamodbCollectorAttribute.  # noqa: E501
+
+
+        :return: The aws_query_index_type of this AwsDynamodbCollectorAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._aws_query_index_type
+
+    @aws_query_index_type.setter
+    def aws_query_index_type(self, aws_query_index_type):
+        """Sets the aws_query_index_type of this AwsDynamodbCollectorAttribute.
+
+
+        :param aws_query_index_type: The aws_query_index_type of this AwsDynamodbCollectorAttribute.  # noqa: E501
+        :type: str
+        """
+
+        self._aws_query_index_type = aws_query_index_type
+
+    @property
     def aws_query_key_value(self):
         """Gets the aws_query_key_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
 
@@ -304,6 +241,69 @@ class AwsDynamodbCollectorAttribute(CollectorAttribute):
         """
 
         self._aws_query_key_value = aws_query_key_value
+
+    @property
+    def aws_query_range_op(self):
+        """Gets the aws_query_range_op of this AwsDynamodbCollectorAttribute.  # noqa: E501
+
+
+        :return: The aws_query_range_op of this AwsDynamodbCollectorAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._aws_query_range_op
+
+    @aws_query_range_op.setter
+    def aws_query_range_op(self, aws_query_range_op):
+        """Sets the aws_query_range_op of this AwsDynamodbCollectorAttribute.
+
+
+        :param aws_query_range_op: The aws_query_range_op of this AwsDynamodbCollectorAttribute.  # noqa: E501
+        :type: str
+        """
+
+        self._aws_query_range_op = aws_query_range_op
+
+    @property
+    def aws_query_range_value(self):
+        """Gets the aws_query_range_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
+
+
+        :return: The aws_query_range_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._aws_query_range_value
+
+    @aws_query_range_value.setter
+    def aws_query_range_value(self, aws_query_range_value):
+        """Sets the aws_query_range_value of this AwsDynamodbCollectorAttribute.
+
+
+        :param aws_query_range_value: The aws_query_range_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
+        :type: str
+        """
+
+        self._aws_query_range_value = aws_query_range_value
+
+    @property
+    def aws_range_value(self):
+        """Gets the aws_range_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
+
+
+        :return: The aws_range_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._aws_range_value
+
+    @aws_range_value.setter
+    def aws_range_value(self, aws_range_value):
+        """Sets the aws_range_value of this AwsDynamodbCollectorAttribute.
+
+
+        :param aws_range_value: The aws_range_value of this AwsDynamodbCollectorAttribute.  # noqa: E501
+        :type: str
+        """
+
+        self._aws_range_value = aws_range_value
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -35,57 +35,36 @@ class DynamicTableWidgetData(WidgetData):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
         'title': 'str',
+        'type': 'str',
         'column_headers': 'list[ColumnHeader]',
         'rows': 'list[RowData]'
     }
 
     attribute_map = {
-        'type': 'type',
         'title': 'title',
+        'type': 'type',
         'column_headers': 'columnHeaders',
         'rows': 'rows'
     }
 
-    def __init__(self, type=None, title=None, column_headers=None, rows=None):  # noqa: E501
+    def __init__(self, title=None, type=None, column_headers=None, rows=None):  # noqa: E501
         """DynamicTableWidgetData - a model defined in Swagger"""  # noqa: E501
 
-        self._type = None
         self._title = None
+        self._type = None
         self._column_headers = None
         self._rows = None
         self.discriminator = None
 
-        if type is not None:
-            self.type = type
         if title is not None:
             self.title = title
+        if type is not None:
+            self.type = type
         if column_headers is not None:
             self.column_headers = column_headers
         if rows is not None:
             self.rows = rows
-
-    @property
-    def type(self):
-        """Gets the type of this DynamicTableWidgetData.  # noqa: E501
-
-
-        :return: The type of this DynamicTableWidgetData.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this DynamicTableWidgetData.
-
-
-        :param type: The type of this DynamicTableWidgetData.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
 
     @property
     def title(self):
@@ -107,6 +86,27 @@ class DynamicTableWidgetData(WidgetData):
         """
 
         self._title = title
+
+    @property
+    def type(self):
+        """Gets the type of this DynamicTableWidgetData.  # noqa: E501
+
+
+        :return: The type of this DynamicTableWidgetData.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this DynamicTableWidgetData.
+
+
+        :param type: The type of this DynamicTableWidgetData.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def column_headers(self):

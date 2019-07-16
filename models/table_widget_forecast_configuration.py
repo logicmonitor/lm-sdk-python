@@ -31,59 +31,59 @@ class TableWidgetForecastConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'severity': 'str',
+        'algorithm': 'str',
         'confidence': 'int',
-        'time_range': 'str',
-        'algorithm': 'str'
+        'severity': 'str',
+        'time_range': 'str'
     }
 
     attribute_map = {
-        'severity': 'severity',
+        'algorithm': 'algorithm',
         'confidence': 'confidence',
-        'time_range': 'timeRange',
-        'algorithm': 'algorithm'
+        'severity': 'severity',
+        'time_range': 'timeRange'
     }
 
-    def __init__(self, severity=None, confidence=None, time_range=None, algorithm=None):  # noqa: E501
+    def __init__(self, algorithm=None, confidence=None, severity=None, time_range=None):  # noqa: E501
         """TableWidgetForecastConfiguration - a model defined in Swagger"""  # noqa: E501
 
-        self._severity = None
-        self._confidence = None
-        self._time_range = None
         self._algorithm = None
+        self._confidence = None
+        self._severity = None
+        self._time_range = None
         self.discriminator = None
 
-        if severity is not None:
-            self.severity = severity
-        if confidence is not None:
-            self.confidence = confidence
-        if time_range is not None:
-            self.time_range = time_range
         if algorithm is not None:
             self.algorithm = algorithm
+        if confidence is not None:
+            self.confidence = confidence
+        if severity is not None:
+            self.severity = severity
+        if time_range is not None:
+            self.time_range = time_range
 
     @property
-    def severity(self):
-        """Gets the severity of this TableWidgetForecastConfiguration.  # noqa: E501
+    def algorithm(self):
+        """Gets the algorithm of this TableWidgetForecastConfiguration.  # noqa: E501
 
-         The minimum alert severity the forecasting should include, one of warn | error | critical  # noqa: E501
+        Forecast method for the widget :Linear | ARIMA  # noqa: E501
 
-        :return: The severity of this TableWidgetForecastConfiguration.  # noqa: E501
+        :return: The algorithm of this TableWidgetForecastConfiguration.  # noqa: E501
         :rtype: str
         """
-        return self._severity
+        return self._algorithm
 
-    @severity.setter
-    def severity(self, severity):
-        """Sets the severity of this TableWidgetForecastConfiguration.
+    @algorithm.setter
+    def algorithm(self, algorithm):
+        """Sets the algorithm of this TableWidgetForecastConfiguration.
 
-         The minimum alert severity the forecasting should include, one of warn | error | critical  # noqa: E501
+        Forecast method for the widget :Linear | ARIMA  # noqa: E501
 
-        :param severity: The severity of this TableWidgetForecastConfiguration.  # noqa: E501
+        :param algorithm: The algorithm of this TableWidgetForecastConfiguration.  # noqa: E501
         :type: str
         """
 
-        self._severity = severity
+        self._algorithm = algorithm
 
     @property
     def confidence(self):
@@ -109,6 +109,29 @@ class TableWidgetForecastConfiguration(object):
         self._confidence = confidence
 
     @property
+    def severity(self):
+        """Gets the severity of this TableWidgetForecastConfiguration.  # noqa: E501
+
+         The minimum alert severity the forecasting should include, one of warn | error | critical  # noqa: E501
+
+        :return: The severity of this TableWidgetForecastConfiguration.  # noqa: E501
+        :rtype: str
+        """
+        return self._severity
+
+    @severity.setter
+    def severity(self, severity):
+        """Sets the severity of this TableWidgetForecastConfiguration.
+
+         The minimum alert severity the forecasting should include, one of warn | error | critical  # noqa: E501
+
+        :param severity: The severity of this TableWidgetForecastConfiguration.  # noqa: E501
+        :type: str
+        """
+
+        self._severity = severity
+
+    @property
     def time_range(self):
         """Gets the time_range of this TableWidgetForecastConfiguration.  # noqa: E501
 
@@ -130,29 +153,6 @@ class TableWidgetForecastConfiguration(object):
         """
 
         self._time_range = time_range
-
-    @property
-    def algorithm(self):
-        """Gets the algorithm of this TableWidgetForecastConfiguration.  # noqa: E501
-
-        Forecast method for the widget :Linear | ARIMA  # noqa: E501
-
-        :return: The algorithm of this TableWidgetForecastConfiguration.  # noqa: E501
-        :rtype: str
-        """
-        return self._algorithm
-
-    @algorithm.setter
-    def algorithm(self, algorithm):
-        """Sets the algorithm of this TableWidgetForecastConfiguration.
-
-        Forecast method for the widget :Linear | ARIMA  # noqa: E501
-
-        :param algorithm: The algorithm of this TableWidgetForecastConfiguration.  # noqa: E501
-        :type: str
-        """
-
-        self._algorithm = algorithm
 
     def to_dict(self):
         """Returns the model properties as a dict"""

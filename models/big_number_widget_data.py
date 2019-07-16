@@ -34,52 +34,31 @@ class BigNumberWidgetData(WidgetData):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
         'title': 'str',
+        'type': 'str',
         'data': 'list[BigNumberData]'
     }
 
     attribute_map = {
-        'type': 'type',
         'title': 'title',
+        'type': 'type',
         'data': 'data'
     }
 
-    def __init__(self, type=None, title=None, data=None):  # noqa: E501
+    def __init__(self, title=None, type=None, data=None):  # noqa: E501
         """BigNumberWidgetData - a model defined in Swagger"""  # noqa: E501
 
-        self._type = None
         self._title = None
+        self._type = None
         self._data = None
         self.discriminator = None
 
-        if type is not None:
-            self.type = type
         if title is not None:
             self.title = title
+        if type is not None:
+            self.type = type
         if data is not None:
             self.data = data
-
-    @property
-    def type(self):
-        """Gets the type of this BigNumberWidgetData.  # noqa: E501
-
-
-        :return: The type of this BigNumberWidgetData.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this BigNumberWidgetData.
-
-
-        :param type: The type of this BigNumberWidgetData.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
 
     @property
     def title(self):
@@ -101,6 +80,27 @@ class BigNumberWidgetData(WidgetData):
         """
 
         self._title = title
+
+    @property
+    def type(self):
+        """Gets the type of this BigNumberWidgetData.  # noqa: E501
+
+
+        :return: The type of this BigNumberWidgetData.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this BigNumberWidgetData.
+
+
+        :param type: The type of this BigNumberWidgetData.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def data(self):

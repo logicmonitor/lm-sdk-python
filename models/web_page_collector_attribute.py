@@ -34,52 +34,52 @@ class WebPageCollectorAttribute(CollectorAttribute):
     """
     swagger_types = {
         'name': 'str',
-        'request': 'str',
-        'port': 'str',
+        'connect_timeout': 'int',
         'follow_redirect': 'bool',
         'ip': 'str',
+        'port': 'str',
         'read_timeout': 'int',
-        'connect_timeout': 'int',
+        'request': 'str',
         'use_ssl': 'bool'
     }
 
     attribute_map = {
         'name': 'name',
-        'request': 'request',
-        'port': 'port',
+        'connect_timeout': 'connectTimeout',
         'follow_redirect': 'followRedirect',
         'ip': 'ip',
+        'port': 'port',
         'read_timeout': 'readTimeout',
-        'connect_timeout': 'connectTimeout',
+        'request': 'request',
         'use_ssl': 'useSSL'
     }
 
-    def __init__(self, name=None, request=None, port=None, follow_redirect=None, ip=None, read_timeout=None, connect_timeout=None, use_ssl=None):  # noqa: E501
+    def __init__(self, name=None, connect_timeout=None, follow_redirect=None, ip=None, port=None, read_timeout=None, request=None, use_ssl=None):  # noqa: E501
         """WebPageCollectorAttribute - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._request = None
-        self._port = None
+        self._connect_timeout = None
         self._follow_redirect = None
         self._ip = None
+        self._port = None
         self._read_timeout = None
-        self._connect_timeout = None
+        self._request = None
         self._use_ssl = None
         self.discriminator = None
 
         self.name = name
-        if request is not None:
-            self.request = request
-        if port is not None:
-            self.port = port
+        if connect_timeout is not None:
+            self.connect_timeout = connect_timeout
         if follow_redirect is not None:
             self.follow_redirect = follow_redirect
         if ip is not None:
             self.ip = ip
+        if port is not None:
+            self.port = port
         if read_timeout is not None:
             self.read_timeout = read_timeout
-        if connect_timeout is not None:
-            self.connect_timeout = connect_timeout
+        if request is not None:
+            self.request = request
         if use_ssl is not None:
             self.use_ssl = use_ssl
 
@@ -107,46 +107,25 @@ class WebPageCollectorAttribute(CollectorAttribute):
         self._name = name
 
     @property
-    def request(self):
-        """Gets the request of this WebPageCollectorAttribute.  # noqa: E501
+    def connect_timeout(self):
+        """Gets the connect_timeout of this WebPageCollectorAttribute.  # noqa: E501
 
 
-        :return: The request of this WebPageCollectorAttribute.  # noqa: E501
-        :rtype: str
+        :return: The connect_timeout of this WebPageCollectorAttribute.  # noqa: E501
+        :rtype: int
         """
-        return self._request
+        return self._connect_timeout
 
-    @request.setter
-    def request(self, request):
-        """Sets the request of this WebPageCollectorAttribute.
-
-
-        :param request: The request of this WebPageCollectorAttribute.  # noqa: E501
-        :type: str
-        """
-
-        self._request = request
-
-    @property
-    def port(self):
-        """Gets the port of this WebPageCollectorAttribute.  # noqa: E501
+    @connect_timeout.setter
+    def connect_timeout(self, connect_timeout):
+        """Sets the connect_timeout of this WebPageCollectorAttribute.
 
 
-        :return: The port of this WebPageCollectorAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._port
-
-    @port.setter
-    def port(self, port):
-        """Sets the port of this WebPageCollectorAttribute.
-
-
-        :param port: The port of this WebPageCollectorAttribute.  # noqa: E501
-        :type: str
+        :param connect_timeout: The connect_timeout of this WebPageCollectorAttribute.  # noqa: E501
+        :type: int
         """
 
-        self._port = port
+        self._connect_timeout = connect_timeout
 
     @property
     def follow_redirect(self):
@@ -191,6 +170,27 @@ class WebPageCollectorAttribute(CollectorAttribute):
         self._ip = ip
 
     @property
+    def port(self):
+        """Gets the port of this WebPageCollectorAttribute.  # noqa: E501
+
+
+        :return: The port of this WebPageCollectorAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._port
+
+    @port.setter
+    def port(self, port):
+        """Sets the port of this WebPageCollectorAttribute.
+
+
+        :param port: The port of this WebPageCollectorAttribute.  # noqa: E501
+        :type: str
+        """
+
+        self._port = port
+
+    @property
     def read_timeout(self):
         """Gets the read_timeout of this WebPageCollectorAttribute.  # noqa: E501
 
@@ -212,25 +212,25 @@ class WebPageCollectorAttribute(CollectorAttribute):
         self._read_timeout = read_timeout
 
     @property
-    def connect_timeout(self):
-        """Gets the connect_timeout of this WebPageCollectorAttribute.  # noqa: E501
+    def request(self):
+        """Gets the request of this WebPageCollectorAttribute.  # noqa: E501
 
 
-        :return: The connect_timeout of this WebPageCollectorAttribute.  # noqa: E501
-        :rtype: int
+        :return: The request of this WebPageCollectorAttribute.  # noqa: E501
+        :rtype: str
         """
-        return self._connect_timeout
+        return self._request
 
-    @connect_timeout.setter
-    def connect_timeout(self, connect_timeout):
-        """Sets the connect_timeout of this WebPageCollectorAttribute.
+    @request.setter
+    def request(self, request):
+        """Sets the request of this WebPageCollectorAttribute.
 
 
-        :param connect_timeout: The connect_timeout of this WebPageCollectorAttribute.  # noqa: E501
-        :type: int
+        :param request: The request of this WebPageCollectorAttribute.  # noqa: E501
+        :type: str
         """
 
-        self._connect_timeout = connect_timeout
+        self._request = request
 
     @property
     def use_ssl(self):

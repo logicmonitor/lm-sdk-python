@@ -34,62 +34,41 @@ class AlertWidgetData(WidgetData):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
         'title': 'str',
-        'total': 'int',
+        'type': 'str',
+        'items': 'list[Alert]',
         'search_id': 'str',
-        'items': 'list[Alert]'
+        'total': 'int'
     }
 
     attribute_map = {
-        'type': 'type',
         'title': 'title',
-        'total': 'total',
+        'type': 'type',
+        'items': 'items',
         'search_id': 'searchId',
-        'items': 'items'
+        'total': 'total'
     }
 
-    def __init__(self, type=None, title=None, total=None, search_id=None, items=None):  # noqa: E501
+    def __init__(self, title=None, type=None, items=None, search_id=None, total=None):  # noqa: E501
         """AlertWidgetData - a model defined in Swagger"""  # noqa: E501
 
-        self._type = None
         self._title = None
-        self._total = None
-        self._search_id = None
+        self._type = None
         self._items = None
+        self._search_id = None
+        self._total = None
         self.discriminator = None
 
-        if type is not None:
-            self.type = type
         if title is not None:
             self.title = title
-        if total is not None:
-            self.total = total
-        if search_id is not None:
-            self.search_id = search_id
+        if type is not None:
+            self.type = type
         if items is not None:
             self.items = items
-
-    @property
-    def type(self):
-        """Gets the type of this AlertWidgetData.  # noqa: E501
-
-
-        :return: The type of this AlertWidgetData.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this AlertWidgetData.
-
-
-        :param type: The type of this AlertWidgetData.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
+        if search_id is not None:
+            self.search_id = search_id
+        if total is not None:
+            self.total = total
 
     @property
     def title(self):
@@ -113,25 +92,46 @@ class AlertWidgetData(WidgetData):
         self._title = title
 
     @property
-    def total(self):
-        """Gets the total of this AlertWidgetData.  # noqa: E501
+    def type(self):
+        """Gets the type of this AlertWidgetData.  # noqa: E501
 
 
-        :return: The total of this AlertWidgetData.  # noqa: E501
-        :rtype: int
+        :return: The type of this AlertWidgetData.  # noqa: E501
+        :rtype: str
         """
-        return self._total
+        return self._type
 
-    @total.setter
-    def total(self, total):
-        """Sets the total of this AlertWidgetData.
+    @type.setter
+    def type(self, type):
+        """Sets the type of this AlertWidgetData.
 
 
-        :param total: The total of this AlertWidgetData.  # noqa: E501
-        :type: int
+        :param type: The type of this AlertWidgetData.  # noqa: E501
+        :type: str
         """
 
-        self._total = total
+        self._type = type
+
+    @property
+    def items(self):
+        """Gets the items of this AlertWidgetData.  # noqa: E501
+
+
+        :return: The items of this AlertWidgetData.  # noqa: E501
+        :rtype: list[Alert]
+        """
+        return self._items
+
+    @items.setter
+    def items(self, items):
+        """Sets the items of this AlertWidgetData.
+
+
+        :param items: The items of this AlertWidgetData.  # noqa: E501
+        :type: list[Alert]
+        """
+
+        self._items = items
 
     @property
     def search_id(self):
@@ -155,25 +155,25 @@ class AlertWidgetData(WidgetData):
         self._search_id = search_id
 
     @property
-    def items(self):
-        """Gets the items of this AlertWidgetData.  # noqa: E501
+    def total(self):
+        """Gets the total of this AlertWidgetData.  # noqa: E501
 
 
-        :return: The items of this AlertWidgetData.  # noqa: E501
-        :rtype: list[Alert]
+        :return: The total of this AlertWidgetData.  # noqa: E501
+        :rtype: int
         """
-        return self._items
+        return self._total
 
-    @items.setter
-    def items(self, items):
-        """Sets the items of this AlertWidgetData.
+    @total.setter
+    def total(self, total):
+        """Sets the total of this AlertWidgetData.
 
 
-        :param items: The items of this AlertWidgetData.  # noqa: E501
-        :type: list[Alert]
+        :param total: The total of this AlertWidgetData.  # noqa: E501
+        :type: int
         """
 
-        self._items = items
+        self._total = total
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,88 +31,46 @@ class WebsiteCollectorInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'hostname': 'str',
-        'collector_group_name': 'str',
         'collector_group_id': 'int',
+        'collector_group_name': 'str',
         'description': 'str',
+        'hostname': 'str',
         'id': 'int',
         'status': 'str'
     }
 
     attribute_map = {
-        'hostname': 'hostname',
-        'collector_group_name': 'collectorGroupName',
         'collector_group_id': 'collectorGroupId',
+        'collector_group_name': 'collectorGroupName',
         'description': 'description',
+        'hostname': 'hostname',
         'id': 'id',
         'status': 'status'
     }
 
-    def __init__(self, hostname=None, collector_group_name=None, collector_group_id=None, description=None, id=None, status=None):  # noqa: E501
+    def __init__(self, collector_group_id=None, collector_group_name=None, description=None, hostname=None, id=None, status=None):  # noqa: E501
         """WebsiteCollectorInfo - a model defined in Swagger"""  # noqa: E501
 
-        self._hostname = None
-        self._collector_group_name = None
         self._collector_group_id = None
+        self._collector_group_name = None
         self._description = None
+        self._hostname = None
         self._id = None
         self._status = None
         self.discriminator = None
 
-        if hostname is not None:
-            self.hostname = hostname
-        if collector_group_name is not None:
-            self.collector_group_name = collector_group_name
         if collector_group_id is not None:
             self.collector_group_id = collector_group_id
+        if collector_group_name is not None:
+            self.collector_group_name = collector_group_name
         if description is not None:
             self.description = description
+        if hostname is not None:
+            self.hostname = hostname
         if id is not None:
             self.id = id
         if status is not None:
             self.status = status
-
-    @property
-    def hostname(self):
-        """Gets the hostname of this WebsiteCollectorInfo.  # noqa: E501
-
-
-        :return: The hostname of this WebsiteCollectorInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._hostname
-
-    @hostname.setter
-    def hostname(self, hostname):
-        """Sets the hostname of this WebsiteCollectorInfo.
-
-
-        :param hostname: The hostname of this WebsiteCollectorInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._hostname = hostname
-
-    @property
-    def collector_group_name(self):
-        """Gets the collector_group_name of this WebsiteCollectorInfo.  # noqa: E501
-
-
-        :return: The collector_group_name of this WebsiteCollectorInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._collector_group_name
-
-    @collector_group_name.setter
-    def collector_group_name(self, collector_group_name):
-        """Sets the collector_group_name of this WebsiteCollectorInfo.
-
-
-        :param collector_group_name: The collector_group_name of this WebsiteCollectorInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._collector_group_name = collector_group_name
 
     @property
     def collector_group_id(self):
@@ -136,6 +94,27 @@ class WebsiteCollectorInfo(object):
         self._collector_group_id = collector_group_id
 
     @property
+    def collector_group_name(self):
+        """Gets the collector_group_name of this WebsiteCollectorInfo.  # noqa: E501
+
+
+        :return: The collector_group_name of this WebsiteCollectorInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._collector_group_name
+
+    @collector_group_name.setter
+    def collector_group_name(self, collector_group_name):
+        """Sets the collector_group_name of this WebsiteCollectorInfo.
+
+
+        :param collector_group_name: The collector_group_name of this WebsiteCollectorInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._collector_group_name = collector_group_name
+
+    @property
     def description(self):
         """Gets the description of this WebsiteCollectorInfo.  # noqa: E501
 
@@ -155,6 +134,27 @@ class WebsiteCollectorInfo(object):
         """
 
         self._description = description
+
+    @property
+    def hostname(self):
+        """Gets the hostname of this WebsiteCollectorInfo.  # noqa: E501
+
+
+        :return: The hostname of this WebsiteCollectorInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._hostname
+
+    @hostname.setter
+    def hostname(self, hostname):
+        """Sets the hostname of this WebsiteCollectorInfo.
+
+
+        :param hostname: The hostname of this WebsiteCollectorInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._hostname = hostname
 
     @property
     def id(self):

@@ -208,6 +208,7 @@ from logicmonitor_sdk.models.tree_node import TreeNode
 from logicmonitor_sdk.models.unmonitored_device_pagination_response import UnmonitoredDevicePaginationResponse
 from logicmonitor_sdk.models.unmonitored_devices import UnmonitoredDevices
 from logicmonitor_sdk.models.update_reason import UpdateReason
+from logicmonitor_sdk.models.usage import Usage
 from logicmonitor_sdk.models.user_filter import UserFilter
 from logicmonitor_sdk.models.virtual_data_point import VirtualDataPoint
 from logicmonitor_sdk.models.web_check_step import WebCheckStep

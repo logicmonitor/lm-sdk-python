@@ -32,28 +32,28 @@ class GenerateReportResult(object):
     """
     swagger_types = {
         'report_id': 'int',
-        'task_id': 'int',
-        'resulturl': 'str'
+        'resulturl': 'str',
+        'task_id': 'int'
     }
 
     attribute_map = {
         'report_id': 'reportId',
-        'task_id': 'taskId',
-        'resulturl': 'resulturl'
+        'resulturl': 'resulturl',
+        'task_id': 'taskId'
     }
 
-    def __init__(self, report_id=None, task_id=None, resulturl=None):  # noqa: E501
+    def __init__(self, report_id=None, resulturl=None, task_id=None):  # noqa: E501
         """GenerateReportResult - a model defined in Swagger"""  # noqa: E501
 
         self._report_id = None
-        self._task_id = None
         self._resulturl = None
+        self._task_id = None
         self.discriminator = None
 
         self.report_id = report_id
-        self.task_id = task_id
         if resulturl is not None:
             self.resulturl = resulturl
+        self.task_id = task_id
 
     @property
     def report_id(self):
@@ -81,6 +81,29 @@ class GenerateReportResult(object):
         self._report_id = report_id
 
     @property
+    def resulturl(self):
+        """Gets the resulturl of this GenerateReportResult.  # noqa: E501
+
+        The url of the generated report  # noqa: E501
+
+        :return: The resulturl of this GenerateReportResult.  # noqa: E501
+        :rtype: str
+        """
+        return self._resulturl
+
+    @resulturl.setter
+    def resulturl(self, resulturl):
+        """Sets the resulturl of this GenerateReportResult.
+
+        The url of the generated report  # noqa: E501
+
+        :param resulturl: The resulturl of this GenerateReportResult.  # noqa: E501
+        :type: str
+        """
+
+        self._resulturl = resulturl
+
+    @property
     def task_id(self):
         """Gets the task_id of this GenerateReportResult.  # noqa: E501
 
@@ -104,29 +127,6 @@ class GenerateReportResult(object):
             raise ValueError("Invalid value for `task_id`, must not be `None`")  # noqa: E501
 
         self._task_id = task_id
-
-    @property
-    def resulturl(self):
-        """Gets the resulturl of this GenerateReportResult.  # noqa: E501
-
-        The url of the generated report  # noqa: E501
-
-        :return: The resulturl of this GenerateReportResult.  # noqa: E501
-        :rtype: str
-        """
-        return self._resulturl
-
-    @resulturl.setter
-    def resulturl(self, resulturl):
-        """Sets the resulturl of this GenerateReportResult.
-
-        The url of the generated report  # noqa: E501
-
-        :param resulturl: The resulturl of this GenerateReportResult.  # noqa: E501
-        :type: str
-        """
-
-        self._resulturl = resulturl
 
     def to_dict(self):
         """Returns the model properties as a dict"""

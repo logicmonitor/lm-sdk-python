@@ -31,47 +31,26 @@ class PropertyMatchRule(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'underscore': 'bool',
-        'case_insensitive': 'bool'
+        'case_insensitive': 'bool',
+        'underscore': 'bool'
     }
 
     attribute_map = {
-        'underscore': 'underscore',
-        'case_insensitive': 'caseInsensitive'
+        'case_insensitive': 'caseInsensitive',
+        'underscore': 'underscore'
     }
 
-    def __init__(self, underscore=None, case_insensitive=None):  # noqa: E501
+    def __init__(self, case_insensitive=None, underscore=None):  # noqa: E501
         """PropertyMatchRule - a model defined in Swagger"""  # noqa: E501
 
-        self._underscore = None
         self._case_insensitive = None
+        self._underscore = None
         self.discriminator = None
 
-        if underscore is not None:
-            self.underscore = underscore
         if case_insensitive is not None:
             self.case_insensitive = case_insensitive
-
-    @property
-    def underscore(self):
-        """Gets the underscore of this PropertyMatchRule.  # noqa: E501
-
-
-        :return: The underscore of this PropertyMatchRule.  # noqa: E501
-        :rtype: bool
-        """
-        return self._underscore
-
-    @underscore.setter
-    def underscore(self, underscore):
-        """Sets the underscore of this PropertyMatchRule.
-
-
-        :param underscore: The underscore of this PropertyMatchRule.  # noqa: E501
-        :type: bool
-        """
-
-        self._underscore = underscore
+        if underscore is not None:
+            self.underscore = underscore
 
     @property
     def case_insensitive(self):
@@ -93,6 +72,27 @@ class PropertyMatchRule(object):
         """
 
         self._case_insensitive = case_insensitive
+
+    @property
+    def underscore(self):
+        """Gets the underscore of this PropertyMatchRule.  # noqa: E501
+
+
+        :return: The underscore of this PropertyMatchRule.  # noqa: E501
+        :rtype: bool
+        """
+        return self._underscore
+
+    @underscore.setter
+    def underscore(self, underscore):
+        """Sets the underscore of this PropertyMatchRule.
+
+
+        :param underscore: The underscore of this PropertyMatchRule.  # noqa: E501
+        :type: bool
+        """
+
+        self._underscore = underscore
 
     def to_dict(self):
         """Returns the model properties as a dict"""

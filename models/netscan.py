@@ -34,41 +34,41 @@ class Netscan(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'creator': 'str',
-        'collector_group_name': 'str',
-        'method': 'str',
-        'collector_group': 'int',
-        'description': 'str',
-        'next_start': 'str',
-        'duplicate': 'ExcludeDuplicateIps',
-        'version': 'int',
         'collector': 'int',
-        'schedule': 'RestSchedule',
         'collector_description': 'str',
-        'name': 'str',
-        'next_start_epoch': 'int',
+        'collector_group': 'int',
+        'collector_group_name': 'str',
+        'creator': 'str',
+        'description': 'str',
+        'duplicate': 'ExcludeDuplicateIps',
+        'group': 'str',
         'id': 'int',
+        'method': 'str',
+        'name': 'str',
+        'next_start': 'str',
+        'next_start_epoch': 'int',
         'nsg_id': 'int',
-        'group': 'str'
+        'schedule': 'RestSchedule',
+        'version': 'int'
     }
 
     attribute_map = {
-        'creator': 'creator',
-        'collector_group_name': 'collectorGroupName',
-        'method': 'method',
-        'collector_group': 'collectorGroup',
-        'description': 'description',
-        'next_start': 'nextStart',
-        'duplicate': 'duplicate',
-        'version': 'version',
         'collector': 'collector',
-        'schedule': 'schedule',
         'collector_description': 'collectorDescription',
-        'name': 'name',
-        'next_start_epoch': 'nextStartEpoch',
+        'collector_group': 'collectorGroup',
+        'collector_group_name': 'collectorGroupName',
+        'creator': 'creator',
+        'description': 'description',
+        'duplicate': 'duplicate',
+        'group': 'group',
         'id': 'id',
+        'method': 'method',
+        'name': 'name',
+        'next_start': 'nextStart',
+        'next_start_epoch': 'nextStartEpoch',
         'nsg_id': 'nsgId',
-        'group': 'group'
+        'schedule': 'schedule',
+        'version': 'version'
     }
 
     discriminator_value_class_map = {
@@ -80,243 +80,55 @@ class Netscan(object):
         'aws': 'AWSNetscan'
     }
 
-    def __init__(self, creator=None, collector_group_name=None, method=None, collector_group=None, description=None, next_start=None, duplicate=None, version=None, collector=None, schedule=None, collector_description=None, name=None, next_start_epoch=None, id=None, nsg_id=None, group=None):  # noqa: E501
+    def __init__(self, collector=None, collector_description=None, collector_group=None, collector_group_name=None, creator=None, description=None, duplicate=None, group=None, id=None, method=None, name=None, next_start=None, next_start_epoch=None, nsg_id=None, schedule=None, version=None):  # noqa: E501
         """Netscan - a model defined in Swagger"""  # noqa: E501
 
-        self._creator = None
-        self._collector_group_name = None
-        self._method = None
-        self._collector_group = None
-        self._description = None
-        self._next_start = None
-        self._duplicate = None
-        self._version = None
         self._collector = None
-        self._schedule = None
         self._collector_description = None
-        self._name = None
-        self._next_start_epoch = None
-        self._id = None
-        self._nsg_id = None
+        self._collector_group = None
+        self._collector_group_name = None
+        self._creator = None
+        self._description = None
+        self._duplicate = None
         self._group = None
+        self._id = None
+        self._method = None
+        self._name = None
+        self._next_start = None
+        self._next_start_epoch = None
+        self._nsg_id = None
+        self._schedule = None
+        self._version = None
         self.discriminator = 'method'
 
-        if creator is not None:
-            self.creator = creator
-        if collector_group_name is not None:
-            self.collector_group_name = collector_group_name
-        self.method = method
-        if collector_group is not None:
-            self.collector_group = collector_group
-        if description is not None:
-            self.description = description
-        if next_start is not None:
-            self.next_start = next_start
-        self.duplicate = duplicate
-        if version is not None:
-            self.version = version
         self.collector = collector
-        if schedule is not None:
-            self.schedule = schedule
         if collector_description is not None:
             self.collector_description = collector_description
-        self.name = name
-        if next_start_epoch is not None:
-            self.next_start_epoch = next_start_epoch
-        if id is not None:
-            self.id = id
-        if nsg_id is not None:
-            self.nsg_id = nsg_id
+        if collector_group is not None:
+            self.collector_group = collector_group
+        if collector_group_name is not None:
+            self.collector_group_name = collector_group_name
+        if creator is not None:
+            self.creator = creator
+        if description is not None:
+            self.description = description
+        self.duplicate = duplicate
         if group is not None:
             self.group = group
-
-    @property
-    def creator(self):
-        """Gets the creator of this Netscan.  # noqa: E501
-
-        The user that created the policy  # noqa: E501
-
-        :return: The creator of this Netscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._creator
-
-    @creator.setter
-    def creator(self, creator):
-        """Sets the creator of this Netscan.
-
-        The user that created the policy  # noqa: E501
-
-        :param creator: The creator of this Netscan.  # noqa: E501
-        :type: str
-        """
-
-        self._creator = creator
-
-    @property
-    def collector_group_name(self):
-        """Gets the collector_group_name of this Netscan.  # noqa: E501
-
-        The name of the group of the Collector associated with this Netscan  # noqa: E501
-
-        :return: The collector_group_name of this Netscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._collector_group_name
-
-    @collector_group_name.setter
-    def collector_group_name(self, collector_group_name):
-        """Sets the collector_group_name of this Netscan.
-
-        The name of the group of the Collector associated with this Netscan  # noqa: E501
-
-        :param collector_group_name: The collector_group_name of this Netscan.  # noqa: E501
-        :type: str
-        """
-
-        self._collector_group_name = collector_group_name
-
-    @property
-    def method(self):
-        """Gets the method of this Netscan.  # noqa: E501
-
-        The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), and script  # noqa: E501
-
-        :return: The method of this Netscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._method
-
-    @method.setter
-    def method(self, method):
-        """Sets the method of this Netscan.
-
-        The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), and script  # noqa: E501
-
-        :param method: The method of this Netscan.  # noqa: E501
-        :type: str
-        """
-        if method is None:
-            raise ValueError("Invalid value for `method`, must not be `None`")  # noqa: E501
-
-        self._method = method
-
-    @property
-    def collector_group(self):
-        """Gets the collector_group of this Netscan.  # noqa: E501
-
-        The ID of the group of the Collector associated with this Netscan  # noqa: E501
-
-        :return: The collector_group of this Netscan.  # noqa: E501
-        :rtype: int
-        """
-        return self._collector_group
-
-    @collector_group.setter
-    def collector_group(self, collector_group):
-        """Sets the collector_group of this Netscan.
-
-        The ID of the group of the Collector associated with this Netscan  # noqa: E501
-
-        :param collector_group: The collector_group of this Netscan.  # noqa: E501
-        :type: int
-        """
-
-        self._collector_group = collector_group
-
-    @property
-    def description(self):
-        """Gets the description of this Netscan.  # noqa: E501
-
-        The description of the Netscan Policy  # noqa: E501
-
-        :return: The description of this Netscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Netscan.
-
-        The description of the Netscan Policy  # noqa: E501
-
-        :param description: The description of this Netscan.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
-    def next_start(self):
-        """Gets the next_start of this Netscan.  # noqa: E501
-
-        The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule  # noqa: E501
-
-        :return: The next_start of this Netscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._next_start
-
-    @next_start.setter
-    def next_start(self, next_start):
-        """Sets the next_start of this Netscan.
-
-        The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule  # noqa: E501
-
-        :param next_start: The next_start of this Netscan.  # noqa: E501
-        :type: str
-        """
-
-        self._next_start = next_start
-
-    @property
-    def duplicate(self):
-        """Gets the duplicate of this Netscan.  # noqa: E501
-
-        Information that determines how duplicate discovered devices should be handled  # noqa: E501
-
-        :return: The duplicate of this Netscan.  # noqa: E501
-        :rtype: ExcludeDuplicateIps
-        """
-        return self._duplicate
-
-    @duplicate.setter
-    def duplicate(self, duplicate):
-        """Sets the duplicate of this Netscan.
-
-        Information that determines how duplicate discovered devices should be handled  # noqa: E501
-
-        :param duplicate: The duplicate of this Netscan.  # noqa: E501
-        :type: ExcludeDuplicateIps
-        """
-        if duplicate is None:
-            raise ValueError("Invalid value for `duplicate`, must not be `None`")  # noqa: E501
-
-        self._duplicate = duplicate
-
-    @property
-    def version(self):
-        """Gets the version of this Netscan.  # noqa: E501
-
-        The Id of the device  # noqa: E501
-
-        :return: The version of this Netscan.  # noqa: E501
-        :rtype: int
-        """
-        return self._version
-
-    @version.setter
-    def version(self, version):
-        """Sets the version of this Netscan.
-
-        The Id of the device  # noqa: E501
-
-        :param version: The version of this Netscan.  # noqa: E501
-        :type: int
-        """
-
-        self._version = version
+        if id is not None:
+            self.id = id
+        self.method = method
+        self.name = name
+        if next_start is not None:
+            self.next_start = next_start
+        if next_start_epoch is not None:
+            self.next_start_epoch = next_start_epoch
+        if nsg_id is not None:
+            self.nsg_id = nsg_id
+        if schedule is not None:
+            self.schedule = schedule
+        if version is not None:
+            self.version = version
 
     @property
     def collector(self):
@@ -344,29 +156,6 @@ class Netscan(object):
         self._collector = collector
 
     @property
-    def schedule(self):
-        """Gets the schedule of this Netscan.  # noqa: E501
-
-        Information related to the recurring execution schedule for the Netscan Policy  # noqa: E501
-
-        :return: The schedule of this Netscan.  # noqa: E501
-        :rtype: RestSchedule
-        """
-        return self._schedule
-
-    @schedule.setter
-    def schedule(self, schedule):
-        """Sets the schedule of this Netscan.
-
-        Information related to the recurring execution schedule for the Netscan Policy  # noqa: E501
-
-        :param schedule: The schedule of this Netscan.  # noqa: E501
-        :type: RestSchedule
-        """
-
-        self._schedule = schedule
-
-    @property
     def collector_description(self):
         """Gets the collector_description of this Netscan.  # noqa: E501
 
@@ -388,6 +177,194 @@ class Netscan(object):
         """
 
         self._collector_description = collector_description
+
+    @property
+    def collector_group(self):
+        """Gets the collector_group of this Netscan.  # noqa: E501
+
+        The ID of the group of the Collector associated with this Netscan  # noqa: E501
+
+        :return: The collector_group of this Netscan.  # noqa: E501
+        :rtype: int
+        """
+        return self._collector_group
+
+    @collector_group.setter
+    def collector_group(self, collector_group):
+        """Sets the collector_group of this Netscan.
+
+        The ID of the group of the Collector associated with this Netscan  # noqa: E501
+
+        :param collector_group: The collector_group of this Netscan.  # noqa: E501
+        :type: int
+        """
+
+        self._collector_group = collector_group
+
+    @property
+    def collector_group_name(self):
+        """Gets the collector_group_name of this Netscan.  # noqa: E501
+
+        The name of the group of the Collector associated with this Netscan  # noqa: E501
+
+        :return: The collector_group_name of this Netscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._collector_group_name
+
+    @collector_group_name.setter
+    def collector_group_name(self, collector_group_name):
+        """Sets the collector_group_name of this Netscan.
+
+        The name of the group of the Collector associated with this Netscan  # noqa: E501
+
+        :param collector_group_name: The collector_group_name of this Netscan.  # noqa: E501
+        :type: str
+        """
+
+        self._collector_group_name = collector_group_name
+
+    @property
+    def creator(self):
+        """Gets the creator of this Netscan.  # noqa: E501
+
+        The user that created the policy  # noqa: E501
+
+        :return: The creator of this Netscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._creator
+
+    @creator.setter
+    def creator(self, creator):
+        """Sets the creator of this Netscan.
+
+        The user that created the policy  # noqa: E501
+
+        :param creator: The creator of this Netscan.  # noqa: E501
+        :type: str
+        """
+
+        self._creator = creator
+
+    @property
+    def description(self):
+        """Gets the description of this Netscan.  # noqa: E501
+
+        The description of the Netscan Policy  # noqa: E501
+
+        :return: The description of this Netscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Netscan.
+
+        The description of the Netscan Policy  # noqa: E501
+
+        :param description: The description of this Netscan.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def duplicate(self):
+        """Gets the duplicate of this Netscan.  # noqa: E501
+
+        Information that determines how duplicate discovered devices should be handled  # noqa: E501
+
+        :return: The duplicate of this Netscan.  # noqa: E501
+        :rtype: ExcludeDuplicateIps
+        """
+        return self._duplicate
+
+    @duplicate.setter
+    def duplicate(self, duplicate):
+        """Sets the duplicate of this Netscan.
+
+        Information that determines how duplicate discovered devices should be handled  # noqa: E501
+
+        :param duplicate: The duplicate of this Netscan.  # noqa: E501
+        :type: ExcludeDuplicateIps
+        """
+        if duplicate is None:
+            raise ValueError("Invalid value for `duplicate`, must not be `None`")  # noqa: E501
+
+        self._duplicate = duplicate
+
+    @property
+    def group(self):
+        """Gets the group of this Netscan.  # noqa: E501
+
+        The group the Netscan policy should belong to  # noqa: E501
+
+        :return: The group of this Netscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._group
+
+    @group.setter
+    def group(self, group):
+        """Sets the group of this Netscan.
+
+        The group the Netscan policy should belong to  # noqa: E501
+
+        :param group: The group of this Netscan.  # noqa: E501
+        :type: str
+        """
+
+        self._group = group
+
+    @property
+    def id(self):
+        """Gets the id of this Netscan.  # noqa: E501
+
+        The ID of the Netscan Policy  # noqa: E501
+
+        :return: The id of this Netscan.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Netscan.
+
+        The ID of the Netscan Policy  # noqa: E501
+
+        :param id: The id of this Netscan.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def method(self):
+        """Gets the method of this Netscan.  # noqa: E501
+
+        The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), and script  # noqa: E501
+
+        :return: The method of this Netscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._method
+
+    @method.setter
+    def method(self, method):
+        """Sets the method of this Netscan.
+
+        The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), and script  # noqa: E501
+
+        :param method: The method of this Netscan.  # noqa: E501
+        :type: str
+        """
+        if method is None:
+            raise ValueError("Invalid value for `method`, must not be `None`")  # noqa: E501
+
+        self._method = method
 
     @property
     def name(self):
@@ -415,6 +392,29 @@ class Netscan(object):
         self._name = name
 
     @property
+    def next_start(self):
+        """Gets the next_start of this Netscan.  # noqa: E501
+
+        The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule  # noqa: E501
+
+        :return: The next_start of this Netscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._next_start
+
+    @next_start.setter
+    def next_start(self, next_start):
+        """Sets the next_start of this Netscan.
+
+        The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule  # noqa: E501
+
+        :param next_start: The next_start of this Netscan.  # noqa: E501
+        :type: str
+        """
+
+        self._next_start = next_start
+
+    @property
     def next_start_epoch(self):
         """Gets the next_start_epoch of this Netscan.  # noqa: E501
 
@@ -436,29 +436,6 @@ class Netscan(object):
         """
 
         self._next_start_epoch = next_start_epoch
-
-    @property
-    def id(self):
-        """Gets the id of this Netscan.  # noqa: E501
-
-        The ID of the Netscan Policy  # noqa: E501
-
-        :return: The id of this Netscan.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this Netscan.
-
-        The ID of the Netscan Policy  # noqa: E501
-
-        :param id: The id of this Netscan.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
 
     @property
     def nsg_id(self):
@@ -484,27 +461,50 @@ class Netscan(object):
         self._nsg_id = nsg_id
 
     @property
-    def group(self):
-        """Gets the group of this Netscan.  # noqa: E501
+    def schedule(self):
+        """Gets the schedule of this Netscan.  # noqa: E501
 
-        The group the Netscan policy should belong to  # noqa: E501
+        Information related to the recurring execution schedule for the Netscan Policy  # noqa: E501
 
-        :return: The group of this Netscan.  # noqa: E501
-        :rtype: str
+        :return: The schedule of this Netscan.  # noqa: E501
+        :rtype: RestSchedule
         """
-        return self._group
+        return self._schedule
 
-    @group.setter
-    def group(self, group):
-        """Sets the group of this Netscan.
+    @schedule.setter
+    def schedule(self, schedule):
+        """Sets the schedule of this Netscan.
 
-        The group the Netscan policy should belong to  # noqa: E501
+        Information related to the recurring execution schedule for the Netscan Policy  # noqa: E501
 
-        :param group: The group of this Netscan.  # noqa: E501
-        :type: str
+        :param schedule: The schedule of this Netscan.  # noqa: E501
+        :type: RestSchedule
         """
 
-        self._group = group
+        self._schedule = schedule
+
+    @property
+    def version(self):
+        """Gets the version of this Netscan.  # noqa: E501
+
+        The Id of the device  # noqa: E501
+
+        :return: The version of this Netscan.  # noqa: E501
+        :rtype: int
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this Netscan.
+
+        The Id of the device  # noqa: E501
+
+        :param version: The version of this Netscan.  # noqa: E501
+        :type: int
+        """
+
+        self._version = version
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

@@ -33,52 +33,52 @@ class DeviceDatasourceInstancePaginationResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'total': 'int',
+        'items': 'list[DeviceDataSourceInstance]',
         'search_id': 'str',
-        'items': 'list[DeviceDataSourceInstance]'
+        'total': 'int'
     }
 
     attribute_map = {
-        'total': 'total',
+        'items': 'items',
         'search_id': 'searchId',
-        'items': 'items'
+        'total': 'total'
     }
 
-    def __init__(self, total=None, search_id=None, items=None):  # noqa: E501
+    def __init__(self, items=None, search_id=None, total=None):  # noqa: E501
         """DeviceDatasourceInstancePaginationResponse - a model defined in Swagger"""  # noqa: E501
 
-        self._total = None
-        self._search_id = None
         self._items = None
+        self._search_id = None
+        self._total = None
         self.discriminator = None
 
-        if total is not None:
-            self.total = total
-        if search_id is not None:
-            self.search_id = search_id
         if items is not None:
             self.items = items
+        if search_id is not None:
+            self.search_id = search_id
+        if total is not None:
+            self.total = total
 
     @property
-    def total(self):
-        """Gets the total of this DeviceDatasourceInstancePaginationResponse.  # noqa: E501
+    def items(self):
+        """Gets the items of this DeviceDatasourceInstancePaginationResponse.  # noqa: E501
 
 
-        :return: The total of this DeviceDatasourceInstancePaginationResponse.  # noqa: E501
-        :rtype: int
+        :return: The items of this DeviceDatasourceInstancePaginationResponse.  # noqa: E501
+        :rtype: list[DeviceDataSourceInstance]
         """
-        return self._total
+        return self._items
 
-    @total.setter
-    def total(self, total):
-        """Sets the total of this DeviceDatasourceInstancePaginationResponse.
+    @items.setter
+    def items(self, items):
+        """Sets the items of this DeviceDatasourceInstancePaginationResponse.
 
 
-        :param total: The total of this DeviceDatasourceInstancePaginationResponse.  # noqa: E501
-        :type: int
+        :param items: The items of this DeviceDatasourceInstancePaginationResponse.  # noqa: E501
+        :type: list[DeviceDataSourceInstance]
         """
 
-        self._total = total
+        self._items = items
 
     @property
     def search_id(self):
@@ -102,25 +102,25 @@ class DeviceDatasourceInstancePaginationResponse(object):
         self._search_id = search_id
 
     @property
-    def items(self):
-        """Gets the items of this DeviceDatasourceInstancePaginationResponse.  # noqa: E501
+    def total(self):
+        """Gets the total of this DeviceDatasourceInstancePaginationResponse.  # noqa: E501
 
 
-        :return: The items of this DeviceDatasourceInstancePaginationResponse.  # noqa: E501
-        :rtype: list[DeviceDataSourceInstance]
+        :return: The total of this DeviceDatasourceInstancePaginationResponse.  # noqa: E501
+        :rtype: int
         """
-        return self._items
+        return self._total
 
-    @items.setter
-    def items(self, items):
-        """Sets the items of this DeviceDatasourceInstancePaginationResponse.
+    @total.setter
+    def total(self, total):
+        """Sets the total of this DeviceDatasourceInstancePaginationResponse.
 
 
-        :param items: The items of this DeviceDatasourceInstancePaginationResponse.  # noqa: E501
-        :type: list[DeviceDataSourceInstance]
+        :param total: The total of this DeviceDatasourceInstancePaginationResponse.  # noqa: E501
+        :type: int
         """
 
-        self._items = items
+        self._total = total
 
     def to_dict(self):
         """Returns the model properties as a dict"""

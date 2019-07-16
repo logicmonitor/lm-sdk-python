@@ -31,47 +31,26 @@ class AzureAccountTestResult(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'no_permission_services': 'object',
-        'detail_link': 'object'
+        'detail_link': 'object',
+        'no_permission_services': 'object'
     }
 
     attribute_map = {
-        'no_permission_services': 'noPermissionServices',
-        'detail_link': 'detailLink'
+        'detail_link': 'detailLink',
+        'no_permission_services': 'noPermissionServices'
     }
 
-    def __init__(self, no_permission_services=None, detail_link=None):  # noqa: E501
+    def __init__(self, detail_link=None, no_permission_services=None):  # noqa: E501
         """AzureAccountTestResult - a model defined in Swagger"""  # noqa: E501
 
-        self._no_permission_services = None
         self._detail_link = None
+        self._no_permission_services = None
         self.discriminator = None
 
-        if no_permission_services is not None:
-            self.no_permission_services = no_permission_services
         if detail_link is not None:
             self.detail_link = detail_link
-
-    @property
-    def no_permission_services(self):
-        """Gets the no_permission_services of this AzureAccountTestResult.  # noqa: E501
-
-
-        :return: The no_permission_services of this AzureAccountTestResult.  # noqa: E501
-        :rtype: object
-        """
-        return self._no_permission_services
-
-    @no_permission_services.setter
-    def no_permission_services(self, no_permission_services):
-        """Sets the no_permission_services of this AzureAccountTestResult.
-
-
-        :param no_permission_services: The no_permission_services of this AzureAccountTestResult.  # noqa: E501
-        :type: object
-        """
-
-        self._no_permission_services = no_permission_services
+        if no_permission_services is not None:
+            self.no_permission_services = no_permission_services
 
     @property
     def detail_link(self):
@@ -93,6 +72,27 @@ class AzureAccountTestResult(object):
         """
 
         self._detail_link = detail_link
+
+    @property
+    def no_permission_services(self):
+        """Gets the no_permission_services of this AzureAccountTestResult.  # noqa: E501
+
+
+        :return: The no_permission_services of this AzureAccountTestResult.  # noqa: E501
+        :rtype: object
+        """
+        return self._no_permission_services
+
+    @no_permission_services.setter
+    def no_permission_services(self, no_permission_services):
+        """Sets the no_permission_services of this AzureAccountTestResult.
+
+
+        :param no_permission_services: The no_permission_services of this AzureAccountTestResult.  # noqa: E501
+        :type: object
+        """
+
+        self._no_permission_services = no_permission_services
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,54 +31,31 @@ class EC2NetscanPolicyCredential(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'device_group_id': 'int',
         'custom': 'dict(str, str)',
+        'device_group_id': 'int',
         'device_group_name': 'str'
     }
 
     attribute_map = {
-        'device_group_id': 'deviceGroupId',
         'custom': 'custom',
+        'device_group_id': 'deviceGroupId',
         'device_group_name': 'deviceGroupName'
     }
 
-    def __init__(self, device_group_id=None, custom=None, device_group_name=None):  # noqa: E501
+    def __init__(self, custom=None, device_group_id=None, device_group_name=None):  # noqa: E501
         """EC2NetscanPolicyCredential - a model defined in Swagger"""  # noqa: E501
 
-        self._device_group_id = None
         self._custom = None
+        self._device_group_id = None
         self._device_group_name = None
         self.discriminator = None
 
-        if device_group_id is not None:
-            self.device_group_id = device_group_id
         if custom is not None:
             self.custom = custom
+        if device_group_id is not None:
+            self.device_group_id = device_group_id
         if device_group_name is not None:
             self.device_group_name = device_group_name
-
-    @property
-    def device_group_id(self):
-        """Gets the device_group_id of this EC2NetscanPolicyCredential.  # noqa: E501
-
-        The ID of the device group that credentials should be inherited from, for this scan  # noqa: E501
-
-        :return: The device_group_id of this EC2NetscanPolicyCredential.  # noqa: E501
-        :rtype: int
-        """
-        return self._device_group_id
-
-    @device_group_id.setter
-    def device_group_id(self, device_group_id):
-        """Sets the device_group_id of this EC2NetscanPolicyCredential.
-
-        The ID of the device group that credentials should be inherited from, for this scan  # noqa: E501
-
-        :param device_group_id: The device_group_id of this EC2NetscanPolicyCredential.  # noqa: E501
-        :type: int
-        """
-
-        self._device_group_id = device_group_id
 
     @property
     def custom(self):
@@ -102,6 +79,29 @@ class EC2NetscanPolicyCredential(object):
         """
 
         self._custom = custom
+
+    @property
+    def device_group_id(self):
+        """Gets the device_group_id of this EC2NetscanPolicyCredential.  # noqa: E501
+
+        The ID of the device group that credentials should be inherited from, for this scan  # noqa: E501
+
+        :return: The device_group_id of this EC2NetscanPolicyCredential.  # noqa: E501
+        :rtype: int
+        """
+        return self._device_group_id
+
+    @device_group_id.setter
+    def device_group_id(self, device_group_id):
+        """Sets the device_group_id of this EC2NetscanPolicyCredential.
+
+        The ID of the device group that credentials should be inherited from, for this scan  # noqa: E501
+
+        :param device_group_id: The device_group_id of this EC2NetscanPolicyCredential.  # noqa: E501
+        :type: int
+        """
+
+        self._device_group_id = device_group_id
 
     @property
     def device_group_name(self):

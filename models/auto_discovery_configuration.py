@@ -34,97 +34,55 @@ class AutoDiscoveryConfiguration(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'persistent_instance': 'bool',
-        'schedule_interval': 'int',
         'delete_inactive_instance': 'bool',
-        'method': 'AutoDiscoveryMethod',
+        'disable_instance': 'bool',
+        'filters': 'list[AutoDiscoveryFilter]',
         'instance_auto_group_method': 'str',
         'instance_auto_group_method_params': 'str',
-        'filters': 'list[AutoDiscoveryFilter]',
-        'disable_instance': 'bool'
+        'method': 'AutoDiscoveryMethod',
+        'persistent_instance': 'bool',
+        'schedule_interval': 'int'
     }
 
     attribute_map = {
-        'persistent_instance': 'persistentInstance',
-        'schedule_interval': 'scheduleInterval',
         'delete_inactive_instance': 'deleteInactiveInstance',
-        'method': 'method',
+        'disable_instance': 'disableInstance',
+        'filters': 'filters',
         'instance_auto_group_method': 'instanceAutoGroupMethod',
         'instance_auto_group_method_params': 'instanceAutoGroupMethodParams',
-        'filters': 'filters',
-        'disable_instance': 'disableInstance'
+        'method': 'method',
+        'persistent_instance': 'persistentInstance',
+        'schedule_interval': 'scheduleInterval'
     }
 
-    def __init__(self, persistent_instance=None, schedule_interval=None, delete_inactive_instance=None, method=None, instance_auto_group_method=None, instance_auto_group_method_params=None, filters=None, disable_instance=None):  # noqa: E501
+    def __init__(self, delete_inactive_instance=None, disable_instance=None, filters=None, instance_auto_group_method=None, instance_auto_group_method_params=None, method=None, persistent_instance=None, schedule_interval=None):  # noqa: E501
         """AutoDiscoveryConfiguration - a model defined in Swagger"""  # noqa: E501
 
-        self._persistent_instance = None
-        self._schedule_interval = None
         self._delete_inactive_instance = None
-        self._method = None
+        self._disable_instance = None
+        self._filters = None
         self._instance_auto_group_method = None
         self._instance_auto_group_method_params = None
-        self._filters = None
-        self._disable_instance = None
+        self._method = None
+        self._persistent_instance = None
+        self._schedule_interval = None
         self.discriminator = None
 
-        if persistent_instance is not None:
-            self.persistent_instance = persistent_instance
-        if schedule_interval is not None:
-            self.schedule_interval = schedule_interval
         if delete_inactive_instance is not None:
             self.delete_inactive_instance = delete_inactive_instance
-        self.method = method
+        if disable_instance is not None:
+            self.disable_instance = disable_instance
+        if filters is not None:
+            self.filters = filters
         if instance_auto_group_method is not None:
             self.instance_auto_group_method = instance_auto_group_method
         if instance_auto_group_method_params is not None:
             self.instance_auto_group_method_params = instance_auto_group_method_params
-        if filters is not None:
-            self.filters = filters
-        if disable_instance is not None:
-            self.disable_instance = disable_instance
-
-    @property
-    def persistent_instance(self):
-        """Gets the persistent_instance of this AutoDiscoveryConfiguration.  # noqa: E501
-
-
-        :return: The persistent_instance of this AutoDiscoveryConfiguration.  # noqa: E501
-        :rtype: bool
-        """
-        return self._persistent_instance
-
-    @persistent_instance.setter
-    def persistent_instance(self, persistent_instance):
-        """Sets the persistent_instance of this AutoDiscoveryConfiguration.
-
-
-        :param persistent_instance: The persistent_instance of this AutoDiscoveryConfiguration.  # noqa: E501
-        :type: bool
-        """
-
-        self._persistent_instance = persistent_instance
-
-    @property
-    def schedule_interval(self):
-        """Gets the schedule_interval of this AutoDiscoveryConfiguration.  # noqa: E501
-
-
-        :return: The schedule_interval of this AutoDiscoveryConfiguration.  # noqa: E501
-        :rtype: int
-        """
-        return self._schedule_interval
-
-    @schedule_interval.setter
-    def schedule_interval(self, schedule_interval):
-        """Sets the schedule_interval of this AutoDiscoveryConfiguration.
-
-
-        :param schedule_interval: The schedule_interval of this AutoDiscoveryConfiguration.  # noqa: E501
-        :type: int
-        """
-
-        self._schedule_interval = schedule_interval
+        self.method = method
+        if persistent_instance is not None:
+            self.persistent_instance = persistent_instance
+        if schedule_interval is not None:
+            self.schedule_interval = schedule_interval
 
     @property
     def delete_inactive_instance(self):
@@ -148,27 +106,46 @@ class AutoDiscoveryConfiguration(object):
         self._delete_inactive_instance = delete_inactive_instance
 
     @property
-    def method(self):
-        """Gets the method of this AutoDiscoveryConfiguration.  # noqa: E501
+    def disable_instance(self):
+        """Gets the disable_instance of this AutoDiscoveryConfiguration.  # noqa: E501
 
 
-        :return: The method of this AutoDiscoveryConfiguration.  # noqa: E501
-        :rtype: AutoDiscoveryMethod
+        :return: The disable_instance of this AutoDiscoveryConfiguration.  # noqa: E501
+        :rtype: bool
         """
-        return self._method
+        return self._disable_instance
 
-    @method.setter
-    def method(self, method):
-        """Sets the method of this AutoDiscoveryConfiguration.
+    @disable_instance.setter
+    def disable_instance(self, disable_instance):
+        """Sets the disable_instance of this AutoDiscoveryConfiguration.
 
 
-        :param method: The method of this AutoDiscoveryConfiguration.  # noqa: E501
-        :type: AutoDiscoveryMethod
+        :param disable_instance: The disable_instance of this AutoDiscoveryConfiguration.  # noqa: E501
+        :type: bool
         """
-        if method is None:
-            raise ValueError("Invalid value for `method`, must not be `None`")  # noqa: E501
 
-        self._method = method
+        self._disable_instance = disable_instance
+
+    @property
+    def filters(self):
+        """Gets the filters of this AutoDiscoveryConfiguration.  # noqa: E501
+
+
+        :return: The filters of this AutoDiscoveryConfiguration.  # noqa: E501
+        :rtype: list[AutoDiscoveryFilter]
+        """
+        return self._filters
+
+    @filters.setter
+    def filters(self, filters):
+        """Sets the filters of this AutoDiscoveryConfiguration.
+
+
+        :param filters: The filters of this AutoDiscoveryConfiguration.  # noqa: E501
+        :type: list[AutoDiscoveryFilter]
+        """
+
+        self._filters = filters
 
     @property
     def instance_auto_group_method(self):
@@ -213,46 +190,69 @@ class AutoDiscoveryConfiguration(object):
         self._instance_auto_group_method_params = instance_auto_group_method_params
 
     @property
-    def filters(self):
-        """Gets the filters of this AutoDiscoveryConfiguration.  # noqa: E501
+    def method(self):
+        """Gets the method of this AutoDiscoveryConfiguration.  # noqa: E501
 
 
-        :return: The filters of this AutoDiscoveryConfiguration.  # noqa: E501
-        :rtype: list[AutoDiscoveryFilter]
+        :return: The method of this AutoDiscoveryConfiguration.  # noqa: E501
+        :rtype: AutoDiscoveryMethod
         """
-        return self._filters
+        return self._method
 
-    @filters.setter
-    def filters(self, filters):
-        """Sets the filters of this AutoDiscoveryConfiguration.
+    @method.setter
+    def method(self, method):
+        """Sets the method of this AutoDiscoveryConfiguration.
 
 
-        :param filters: The filters of this AutoDiscoveryConfiguration.  # noqa: E501
-        :type: list[AutoDiscoveryFilter]
+        :param method: The method of this AutoDiscoveryConfiguration.  # noqa: E501
+        :type: AutoDiscoveryMethod
         """
+        if method is None:
+            raise ValueError("Invalid value for `method`, must not be `None`")  # noqa: E501
 
-        self._filters = filters
+        self._method = method
 
     @property
-    def disable_instance(self):
-        """Gets the disable_instance of this AutoDiscoveryConfiguration.  # noqa: E501
+    def persistent_instance(self):
+        """Gets the persistent_instance of this AutoDiscoveryConfiguration.  # noqa: E501
 
 
-        :return: The disable_instance of this AutoDiscoveryConfiguration.  # noqa: E501
+        :return: The persistent_instance of this AutoDiscoveryConfiguration.  # noqa: E501
         :rtype: bool
         """
-        return self._disable_instance
+        return self._persistent_instance
 
-    @disable_instance.setter
-    def disable_instance(self, disable_instance):
-        """Sets the disable_instance of this AutoDiscoveryConfiguration.
+    @persistent_instance.setter
+    def persistent_instance(self, persistent_instance):
+        """Sets the persistent_instance of this AutoDiscoveryConfiguration.
 
 
-        :param disable_instance: The disable_instance of this AutoDiscoveryConfiguration.  # noqa: E501
+        :param persistent_instance: The persistent_instance of this AutoDiscoveryConfiguration.  # noqa: E501
         :type: bool
         """
 
-        self._disable_instance = disable_instance
+        self._persistent_instance = persistent_instance
+
+    @property
+    def schedule_interval(self):
+        """Gets the schedule_interval of this AutoDiscoveryConfiguration.  # noqa: E501
+
+
+        :return: The schedule_interval of this AutoDiscoveryConfiguration.  # noqa: E501
+        :rtype: int
+        """
+        return self._schedule_interval
+
+    @schedule_interval.setter
+    def schedule_interval(self, schedule_interval):
+        """Sets the schedule_interval of this AutoDiscoveryConfiguration.
+
+
+        :param schedule_interval: The schedule_interval of this AutoDiscoveryConfiguration.  # noqa: E501
+        :type: int
+        """
+
+        self._schedule_interval = schedule_interval
 
     def to_dict(self):
         """Returns the model properties as a dict"""

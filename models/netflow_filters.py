@@ -31,124 +31,82 @@ class NetflowFilters(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'node_b': 'str',
-        'protocol': 'str',
-        'top': 'int',
+        'direction': 'str',
         'if_idx': 'int',
         'if_name': 'str',
-        'qos_type': 'str',
-        'ports': 'str',
         'node_a': 'str',
-        'direction': 'str'
+        'node_b': 'str',
+        'ports': 'str',
+        'protocol': 'str',
+        'qos_type': 'str',
+        'top': 'int'
     }
 
     attribute_map = {
-        'node_b': 'nodeB',
-        'protocol': 'protocol',
-        'top': 'top',
+        'direction': 'direction',
         'if_idx': 'ifIdx',
         'if_name': 'ifName',
-        'qos_type': 'qosType',
-        'ports': 'ports',
         'node_a': 'nodeA',
-        'direction': 'direction'
+        'node_b': 'nodeB',
+        'ports': 'ports',
+        'protocol': 'protocol',
+        'qos_type': 'qosType',
+        'top': 'top'
     }
 
-    def __init__(self, node_b=None, protocol=None, top=None, if_idx=None, if_name=None, qos_type=None, ports=None, node_a=None, direction=None):  # noqa: E501
+    def __init__(self, direction=None, if_idx=None, if_name=None, node_a=None, node_b=None, ports=None, protocol=None, qos_type=None, top=None):  # noqa: E501
         """NetflowFilters - a model defined in Swagger"""  # noqa: E501
 
-        self._node_b = None
-        self._protocol = None
-        self._top = None
+        self._direction = None
         self._if_idx = None
         self._if_name = None
-        self._qos_type = None
-        self._ports = None
         self._node_a = None
-        self._direction = None
+        self._node_b = None
+        self._ports = None
+        self._protocol = None
+        self._qos_type = None
+        self._top = None
         self.discriminator = None
 
-        if node_b is not None:
-            self.node_b = node_b
-        if protocol is not None:
-            self.protocol = protocol
-        if top is not None:
-            self.top = top
+        if direction is not None:
+            self.direction = direction
         if if_idx is not None:
             self.if_idx = if_idx
         if if_name is not None:
             self.if_name = if_name
-        if qos_type is not None:
-            self.qos_type = qos_type
-        if ports is not None:
-            self.ports = ports
         if node_a is not None:
             self.node_a = node_a
-        if direction is not None:
-            self.direction = direction
+        if node_b is not None:
+            self.node_b = node_b
+        if ports is not None:
+            self.ports = ports
+        if protocol is not None:
+            self.protocol = protocol
+        if qos_type is not None:
+            self.qos_type = qos_type
+        if top is not None:
+            self.top = top
 
     @property
-    def node_b(self):
-        """Gets the node_b of this NetflowFilters.  # noqa: E501
+    def direction(self):
+        """Gets the direction of this NetflowFilters.  # noqa: E501
 
 
-        :return: The node_b of this NetflowFilters.  # noqa: E501
+        :return: The direction of this NetflowFilters.  # noqa: E501
         :rtype: str
         """
-        return self._node_b
+        return self._direction
 
-    @node_b.setter
-    def node_b(self, node_b):
-        """Sets the node_b of this NetflowFilters.
+    @direction.setter
+    def direction(self, direction):
+        """Sets the direction of this NetflowFilters.
 
 
-        :param node_b: The node_b of this NetflowFilters.  # noqa: E501
+        :param direction: The direction of this NetflowFilters.  # noqa: E501
         :type: str
         """
 
-        self._node_b = node_b
-
-    @property
-    def protocol(self):
-        """Gets the protocol of this NetflowFilters.  # noqa: E501
-
-
-        :return: The protocol of this NetflowFilters.  # noqa: E501
-        :rtype: str
-        """
-        return self._protocol
-
-    @protocol.setter
-    def protocol(self, protocol):
-        """Sets the protocol of this NetflowFilters.
-
-
-        :param protocol: The protocol of this NetflowFilters.  # noqa: E501
-        :type: str
-        """
-
-        self._protocol = protocol
-
-    @property
-    def top(self):
-        """Gets the top of this NetflowFilters.  # noqa: E501
-
-
-        :return: The top of this NetflowFilters.  # noqa: E501
-        :rtype: int
-        """
-        return self._top
-
-    @top.setter
-    def top(self, top):
-        """Sets the top of this NetflowFilters.
-
-
-        :param top: The top of this NetflowFilters.  # noqa: E501
-        :type: int
-        """
-
-        self._top = top
+        self._direction = direction
 
     @property
     def if_idx(self):
@@ -193,25 +151,46 @@ class NetflowFilters(object):
         self._if_name = if_name
 
     @property
-    def qos_type(self):
-        """Gets the qos_type of this NetflowFilters.  # noqa: E501
+    def node_a(self):
+        """Gets the node_a of this NetflowFilters.  # noqa: E501
 
 
-        :return: The qos_type of this NetflowFilters.  # noqa: E501
+        :return: The node_a of this NetflowFilters.  # noqa: E501
         :rtype: str
         """
-        return self._qos_type
+        return self._node_a
 
-    @qos_type.setter
-    def qos_type(self, qos_type):
-        """Sets the qos_type of this NetflowFilters.
+    @node_a.setter
+    def node_a(self, node_a):
+        """Sets the node_a of this NetflowFilters.
 
 
-        :param qos_type: The qos_type of this NetflowFilters.  # noqa: E501
+        :param node_a: The node_a of this NetflowFilters.  # noqa: E501
         :type: str
         """
 
-        self._qos_type = qos_type
+        self._node_a = node_a
+
+    @property
+    def node_b(self):
+        """Gets the node_b of this NetflowFilters.  # noqa: E501
+
+
+        :return: The node_b of this NetflowFilters.  # noqa: E501
+        :rtype: str
+        """
+        return self._node_b
+
+    @node_b.setter
+    def node_b(self, node_b):
+        """Sets the node_b of this NetflowFilters.
+
+
+        :param node_b: The node_b of this NetflowFilters.  # noqa: E501
+        :type: str
+        """
+
+        self._node_b = node_b
 
     @property
     def ports(self):
@@ -235,46 +214,67 @@ class NetflowFilters(object):
         self._ports = ports
 
     @property
-    def node_a(self):
-        """Gets the node_a of this NetflowFilters.  # noqa: E501
+    def protocol(self):
+        """Gets the protocol of this NetflowFilters.  # noqa: E501
 
 
-        :return: The node_a of this NetflowFilters.  # noqa: E501
+        :return: The protocol of this NetflowFilters.  # noqa: E501
         :rtype: str
         """
-        return self._node_a
+        return self._protocol
 
-    @node_a.setter
-    def node_a(self, node_a):
-        """Sets the node_a of this NetflowFilters.
+    @protocol.setter
+    def protocol(self, protocol):
+        """Sets the protocol of this NetflowFilters.
 
 
-        :param node_a: The node_a of this NetflowFilters.  # noqa: E501
+        :param protocol: The protocol of this NetflowFilters.  # noqa: E501
         :type: str
         """
 
-        self._node_a = node_a
+        self._protocol = protocol
 
     @property
-    def direction(self):
-        """Gets the direction of this NetflowFilters.  # noqa: E501
+    def qos_type(self):
+        """Gets the qos_type of this NetflowFilters.  # noqa: E501
 
 
-        :return: The direction of this NetflowFilters.  # noqa: E501
+        :return: The qos_type of this NetflowFilters.  # noqa: E501
         :rtype: str
         """
-        return self._direction
+        return self._qos_type
 
-    @direction.setter
-    def direction(self, direction):
-        """Sets the direction of this NetflowFilters.
+    @qos_type.setter
+    def qos_type(self, qos_type):
+        """Sets the qos_type of this NetflowFilters.
 
 
-        :param direction: The direction of this NetflowFilters.  # noqa: E501
+        :param qos_type: The qos_type of this NetflowFilters.  # noqa: E501
         :type: str
         """
 
-        self._direction = direction
+        self._qos_type = qos_type
+
+    @property
+    def top(self):
+        """Gets the top of this NetflowFilters.  # noqa: E501
+
+
+        :return: The top of this NetflowFilters.  # noqa: E501
+        :rtype: int
+        """
+        return self._top
+
+    @top.setter
+    def top(self, top):
+        """Sets the top of this NetflowFilters.
+
+
+        :param top: The top of this NetflowFilters.  # noqa: E501
+        :type: int
+        """
+
+        self._top = top
 
     def to_dict(self):
         """Returns the model properties as a dict"""

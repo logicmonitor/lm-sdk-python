@@ -34,40 +34,40 @@ class NetflowBandwidth(NetflowDataBase):
     """
     swagger_types = {
         'data_type': 'str',
+        'device_display_name': 'str',
         'receive': 'float',
-        'usage': 'float',
         'send': 'float',
-        'device_display_name': 'str'
+        'usage': 'float'
     }
 
     attribute_map = {
         'data_type': 'dataType',
+        'device_display_name': 'deviceDisplayName',
         'receive': 'receive',
-        'usage': 'usage',
         'send': 'send',
-        'device_display_name': 'deviceDisplayName'
+        'usage': 'usage'
     }
 
-    def __init__(self, data_type=None, receive=None, usage=None, send=None, device_display_name=None):  # noqa: E501
+    def __init__(self, data_type=None, device_display_name=None, receive=None, send=None, usage=None):  # noqa: E501
         """NetflowBandwidth - a model defined in Swagger"""  # noqa: E501
 
         self._data_type = None
-        self._receive = None
-        self._usage = None
-        self._send = None
         self._device_display_name = None
+        self._receive = None
+        self._send = None
+        self._usage = None
         self.discriminator = None
 
         if data_type is not None:
             self.data_type = data_type
-        if receive is not None:
-            self.receive = receive
-        if usage is not None:
-            self.usage = usage
-        if send is not None:
-            self.send = send
         if device_display_name is not None:
             self.device_display_name = device_display_name
+        if receive is not None:
+            self.receive = receive
+        if send is not None:
+            self.send = send
+        if usage is not None:
+            self.usage = usage
 
     @property
     def data_type(self):
@@ -91,6 +91,27 @@ class NetflowBandwidth(NetflowDataBase):
         self._data_type = data_type
 
     @property
+    def device_display_name(self):
+        """Gets the device_display_name of this NetflowBandwidth.  # noqa: E501
+
+
+        :return: The device_display_name of this NetflowBandwidth.  # noqa: E501
+        :rtype: str
+        """
+        return self._device_display_name
+
+    @device_display_name.setter
+    def device_display_name(self, device_display_name):
+        """Sets the device_display_name of this NetflowBandwidth.
+
+
+        :param device_display_name: The device_display_name of this NetflowBandwidth.  # noqa: E501
+        :type: str
+        """
+
+        self._device_display_name = device_display_name
+
+    @property
     def receive(self):
         """Gets the receive of this NetflowBandwidth.  # noqa: E501
 
@@ -110,27 +131,6 @@ class NetflowBandwidth(NetflowDataBase):
         """
 
         self._receive = receive
-
-    @property
-    def usage(self):
-        """Gets the usage of this NetflowBandwidth.  # noqa: E501
-
-
-        :return: The usage of this NetflowBandwidth.  # noqa: E501
-        :rtype: float
-        """
-        return self._usage
-
-    @usage.setter
-    def usage(self, usage):
-        """Sets the usage of this NetflowBandwidth.
-
-
-        :param usage: The usage of this NetflowBandwidth.  # noqa: E501
-        :type: float
-        """
-
-        self._usage = usage
 
     @property
     def send(self):
@@ -154,25 +154,25 @@ class NetflowBandwidth(NetflowDataBase):
         self._send = send
 
     @property
-    def device_display_name(self):
-        """Gets the device_display_name of this NetflowBandwidth.  # noqa: E501
+    def usage(self):
+        """Gets the usage of this NetflowBandwidth.  # noqa: E501
 
 
-        :return: The device_display_name of this NetflowBandwidth.  # noqa: E501
-        :rtype: str
+        :return: The usage of this NetflowBandwidth.  # noqa: E501
+        :rtype: float
         """
-        return self._device_display_name
+        return self._usage
 
-    @device_display_name.setter
-    def device_display_name(self, device_display_name):
-        """Sets the device_display_name of this NetflowBandwidth.
+    @usage.setter
+    def usage(self, usage):
+        """Sets the usage of this NetflowBandwidth.
 
 
-        :param device_display_name: The device_display_name of this NetflowBandwidth.  # noqa: E501
-        :type: str
+        :param usage: The usage of this NetflowBandwidth.  # noqa: E501
+        :type: float
         """
 
-        self._device_display_name = device_display_name
+        self._usage = usage
 
     def to_dict(self):
         """Returns the model properties as a dict"""

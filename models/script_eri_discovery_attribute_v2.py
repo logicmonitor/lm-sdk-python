@@ -31,71 +31,50 @@ class ScriptERIDiscoveryAttributeV2(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'win_script': 'str',
         'groovy_script': 'str',
-        'name': 'str',
-        'type': 'str',
         'linux_cmdline': 'str',
         'linux_script': 'str',
-        'win_cmdline': 'str'
+        'name': 'str',
+        'type': 'str',
+        'win_cmdline': 'str',
+        'win_script': 'str'
     }
 
     attribute_map = {
-        'win_script': 'winScript',
         'groovy_script': 'groovyScript',
-        'name': 'name',
-        'type': 'type',
         'linux_cmdline': 'linuxCmdline',
         'linux_script': 'linuxScript',
-        'win_cmdline': 'winCmdline'
+        'name': 'name',
+        'type': 'type',
+        'win_cmdline': 'winCmdline',
+        'win_script': 'winScript'
     }
 
-    def __init__(self, win_script=None, groovy_script=None, name=None, type=None, linux_cmdline=None, linux_script=None, win_cmdline=None):  # noqa: E501
+    def __init__(self, groovy_script=None, linux_cmdline=None, linux_script=None, name=None, type=None, win_cmdline=None, win_script=None):  # noqa: E501
         """ScriptERIDiscoveryAttributeV2 - a model defined in Swagger"""  # noqa: E501
 
-        self._win_script = None
         self._groovy_script = None
-        self._name = None
-        self._type = None
         self._linux_cmdline = None
         self._linux_script = None
+        self._name = None
+        self._type = None
         self._win_cmdline = None
+        self._win_script = None
         self.discriminator = None
 
-        if win_script is not None:
-            self.win_script = win_script
         if groovy_script is not None:
             self.groovy_script = groovy_script
-        self.name = name
-        if type is not None:
-            self.type = type
         if linux_cmdline is not None:
             self.linux_cmdline = linux_cmdline
         if linux_script is not None:
             self.linux_script = linux_script
+        self.name = name
+        if type is not None:
+            self.type = type
         if win_cmdline is not None:
             self.win_cmdline = win_cmdline
-
-    @property
-    def win_script(self):
-        """Gets the win_script of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
-
-
-        :return: The win_script of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
-        :rtype: str
-        """
-        return self._win_script
-
-    @win_script.setter
-    def win_script(self, win_script):
-        """Sets the win_script of this ScriptERIDiscoveryAttributeV2.
-
-
-        :param win_script: The win_script of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
-        :type: str
-        """
-
-        self._win_script = win_script
+        if win_script is not None:
+            self.win_script = win_script
 
     @property
     def groovy_script(self):
@@ -117,6 +96,48 @@ class ScriptERIDiscoveryAttributeV2(object):
         """
 
         self._groovy_script = groovy_script
+
+    @property
+    def linux_cmdline(self):
+        """Gets the linux_cmdline of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
+
+
+        :return: The linux_cmdline of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
+        :rtype: str
+        """
+        return self._linux_cmdline
+
+    @linux_cmdline.setter
+    def linux_cmdline(self, linux_cmdline):
+        """Sets the linux_cmdline of this ScriptERIDiscoveryAttributeV2.
+
+
+        :param linux_cmdline: The linux_cmdline of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
+        :type: str
+        """
+
+        self._linux_cmdline = linux_cmdline
+
+    @property
+    def linux_script(self):
+        """Gets the linux_script of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
+
+
+        :return: The linux_script of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
+        :rtype: str
+        """
+        return self._linux_script
+
+    @linux_script.setter
+    def linux_script(self, linux_script):
+        """Sets the linux_script of this ScriptERIDiscoveryAttributeV2.
+
+
+        :param linux_script: The linux_script of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
+        :type: str
+        """
+
+        self._linux_script = linux_script
 
     @property
     def name(self):
@@ -163,48 +184,6 @@ class ScriptERIDiscoveryAttributeV2(object):
         self._type = type
 
     @property
-    def linux_cmdline(self):
-        """Gets the linux_cmdline of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
-
-
-        :return: The linux_cmdline of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
-        :rtype: str
-        """
-        return self._linux_cmdline
-
-    @linux_cmdline.setter
-    def linux_cmdline(self, linux_cmdline):
-        """Sets the linux_cmdline of this ScriptERIDiscoveryAttributeV2.
-
-
-        :param linux_cmdline: The linux_cmdline of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
-        :type: str
-        """
-
-        self._linux_cmdline = linux_cmdline
-
-    @property
-    def linux_script(self):
-        """Gets the linux_script of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
-
-
-        :return: The linux_script of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
-        :rtype: str
-        """
-        return self._linux_script
-
-    @linux_script.setter
-    def linux_script(self, linux_script):
-        """Sets the linux_script of this ScriptERIDiscoveryAttributeV2.
-
-
-        :param linux_script: The linux_script of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
-        :type: str
-        """
-
-        self._linux_script = linux_script
-
-    @property
     def win_cmdline(self):
         """Gets the win_cmdline of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
 
@@ -224,6 +203,27 @@ class ScriptERIDiscoveryAttributeV2(object):
         """
 
         self._win_cmdline = win_cmdline
+
+    @property
+    def win_script(self):
+        """Gets the win_script of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
+
+
+        :return: The win_script of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
+        :rtype: str
+        """
+        return self._win_script
+
+    @win_script.setter
+    def win_script(self, win_script):
+        """Sets the win_script of this ScriptERIDiscoveryAttributeV2.
+
+
+        :param win_script: The win_script of this ScriptERIDiscoveryAttributeV2.  # noqa: E501
+        :type: str
+        """
+
+        self._win_script = win_script
 
     def to_dict(self):
         """Returns the model properties as a dict"""

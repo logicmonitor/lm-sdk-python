@@ -35,48 +35,48 @@ class BatchScriptCollectorAttribute(CollectorAttribute):
     swagger_types = {
         'name': 'str',
         'groovy_script': 'str',
-        'script_type': 'str',
-        'windows_script': 'str',
         'linux_cmdline': 'str',
         'linux_script': 'str',
-        'windows_cmdline': 'str'
+        'script_type': 'str',
+        'windows_cmdline': 'str',
+        'windows_script': 'str'
     }
 
     attribute_map = {
         'name': 'name',
         'groovy_script': 'groovyScript',
-        'script_type': 'scriptType',
-        'windows_script': 'windowsScript',
         'linux_cmdline': 'linuxCmdline',
         'linux_script': 'linuxScript',
-        'windows_cmdline': 'windowsCmdline'
+        'script_type': 'scriptType',
+        'windows_cmdline': 'windowsCmdline',
+        'windows_script': 'windowsScript'
     }
 
-    def __init__(self, name=None, groovy_script=None, script_type=None, windows_script=None, linux_cmdline=None, linux_script=None, windows_cmdline=None):  # noqa: E501
+    def __init__(self, name=None, groovy_script=None, linux_cmdline=None, linux_script=None, script_type=None, windows_cmdline=None, windows_script=None):  # noqa: E501
         """BatchScriptCollectorAttribute - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
         self._groovy_script = None
-        self._script_type = None
-        self._windows_script = None
         self._linux_cmdline = None
         self._linux_script = None
+        self._script_type = None
         self._windows_cmdline = None
+        self._windows_script = None
         self.discriminator = None
 
         self.name = name
         if groovy_script is not None:
             self.groovy_script = groovy_script
-        if script_type is not None:
-            self.script_type = script_type
-        if windows_script is not None:
-            self.windows_script = windows_script
         if linux_cmdline is not None:
             self.linux_cmdline = linux_cmdline
         if linux_script is not None:
             self.linux_script = linux_script
+        if script_type is not None:
+            self.script_type = script_type
         if windows_cmdline is not None:
             self.windows_cmdline = windows_cmdline
+        if windows_script is not None:
+            self.windows_script = windows_script
 
     @property
     def name(self):
@@ -123,48 +123,6 @@ class BatchScriptCollectorAttribute(CollectorAttribute):
         self._groovy_script = groovy_script
 
     @property
-    def script_type(self):
-        """Gets the script_type of this BatchScriptCollectorAttribute.  # noqa: E501
-
-
-        :return: The script_type of this BatchScriptCollectorAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._script_type
-
-    @script_type.setter
-    def script_type(self, script_type):
-        """Sets the script_type of this BatchScriptCollectorAttribute.
-
-
-        :param script_type: The script_type of this BatchScriptCollectorAttribute.  # noqa: E501
-        :type: str
-        """
-
-        self._script_type = script_type
-
-    @property
-    def windows_script(self):
-        """Gets the windows_script of this BatchScriptCollectorAttribute.  # noqa: E501
-
-
-        :return: The windows_script of this BatchScriptCollectorAttribute.  # noqa: E501
-        :rtype: str
-        """
-        return self._windows_script
-
-    @windows_script.setter
-    def windows_script(self, windows_script):
-        """Sets the windows_script of this BatchScriptCollectorAttribute.
-
-
-        :param windows_script: The windows_script of this BatchScriptCollectorAttribute.  # noqa: E501
-        :type: str
-        """
-
-        self._windows_script = windows_script
-
-    @property
     def linux_cmdline(self):
         """Gets the linux_cmdline of this BatchScriptCollectorAttribute.  # noqa: E501
 
@@ -207,6 +165,27 @@ class BatchScriptCollectorAttribute(CollectorAttribute):
         self._linux_script = linux_script
 
     @property
+    def script_type(self):
+        """Gets the script_type of this BatchScriptCollectorAttribute.  # noqa: E501
+
+
+        :return: The script_type of this BatchScriptCollectorAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._script_type
+
+    @script_type.setter
+    def script_type(self, script_type):
+        """Sets the script_type of this BatchScriptCollectorAttribute.
+
+
+        :param script_type: The script_type of this BatchScriptCollectorAttribute.  # noqa: E501
+        :type: str
+        """
+
+        self._script_type = script_type
+
+    @property
     def windows_cmdline(self):
         """Gets the windows_cmdline of this BatchScriptCollectorAttribute.  # noqa: E501
 
@@ -226,6 +205,27 @@ class BatchScriptCollectorAttribute(CollectorAttribute):
         """
 
         self._windows_cmdline = windows_cmdline
+
+    @property
+    def windows_script(self):
+        """Gets the windows_script of this BatchScriptCollectorAttribute.  # noqa: E501
+
+
+        :return: The windows_script of this BatchScriptCollectorAttribute.  # noqa: E501
+        :rtype: str
+        """
+        return self._windows_script
+
+    @windows_script.setter
+    def windows_script(self, windows_script):
+        """Sets the windows_script of this BatchScriptCollectorAttribute.
+
+
+        :param windows_script: The windows_script of this BatchScriptCollectorAttribute.  # noqa: E501
+        :type: str
+        """
+
+        self._windows_script = windows_script
 
     def to_dict(self):
         """Returns the model properties as a dict"""

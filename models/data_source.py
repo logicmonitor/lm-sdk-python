@@ -36,220 +36,111 @@ class DataSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'collector_attribute': 'CollectorAttribute',
-        'auto_discovery_config': 'AutoDiscoveryConfiguration',
-        'eri_discovery_config': 'ScriptERIDiscoveryAttributeV2',
-        'display_name': 'str',
-        'description': 'str',
         'applies_to': 'str',
-        'enable_auto_discovery': 'bool',
-        'technology': 'str',
-        'version': 'int',
-        'tags': 'str',
         'audit_version': 'int',
-        'has_multi_instances': 'bool',
-        'collect_method': 'str',
-        'eri_discovery_interval': 'int',
-        'enable_eri_discovery': 'bool',
+        'auto_discovery_config': 'AutoDiscoveryConfiguration',
         'collect_interval': 'int',
-        'name': 'str',
+        'collect_method': 'str',
+        'collector_attribute': 'CollectorAttribute',
         'data_points': 'list[DataPoint]',
+        'description': 'str',
+        'display_name': 'str',
+        'enable_auto_discovery': 'bool',
+        'enable_eri_discovery': 'bool',
+        'eri_discovery_config': 'ScriptERIDiscoveryAttributeV2',
+        'eri_discovery_interval': 'int',
+        'group': 'str',
+        'has_multi_instances': 'bool',
         'id': 'int',
-        'group': 'str'
+        'name': 'str',
+        'tags': 'str',
+        'technology': 'str',
+        'version': 'int'
     }
 
     attribute_map = {
-        'collector_attribute': 'collectorAttribute',
-        'auto_discovery_config': 'autoDiscoveryConfig',
-        'eri_discovery_config': 'eriDiscoveryConfig',
-        'display_name': 'displayName',
-        'description': 'description',
         'applies_to': 'appliesTo',
-        'enable_auto_discovery': 'enableAutoDiscovery',
-        'technology': 'technology',
-        'version': 'version',
-        'tags': 'tags',
         'audit_version': 'auditVersion',
-        'has_multi_instances': 'hasMultiInstances',
-        'collect_method': 'collectMethod',
-        'eri_discovery_interval': 'eriDiscoveryInterval',
-        'enable_eri_discovery': 'enableEriDiscovery',
+        'auto_discovery_config': 'autoDiscoveryConfig',
         'collect_interval': 'collectInterval',
-        'name': 'name',
+        'collect_method': 'collectMethod',
+        'collector_attribute': 'collectorAttribute',
         'data_points': 'dataPoints',
+        'description': 'description',
+        'display_name': 'displayName',
+        'enable_auto_discovery': 'enableAutoDiscovery',
+        'enable_eri_discovery': 'enableEriDiscovery',
+        'eri_discovery_config': 'eriDiscoveryConfig',
+        'eri_discovery_interval': 'eriDiscoveryInterval',
+        'group': 'group',
+        'has_multi_instances': 'hasMultiInstances',
         'id': 'id',
-        'group': 'group'
+        'name': 'name',
+        'tags': 'tags',
+        'technology': 'technology',
+        'version': 'version'
     }
 
-    def __init__(self, collector_attribute=None, auto_discovery_config=None, eri_discovery_config=None, display_name=None, description=None, applies_to=None, enable_auto_discovery=None, technology=None, version=None, tags=None, audit_version=None, has_multi_instances=None, collect_method=None, eri_discovery_interval=None, enable_eri_discovery=None, collect_interval=None, name=None, data_points=None, id=None, group=None):  # noqa: E501
+    def __init__(self, applies_to=None, audit_version=None, auto_discovery_config=None, collect_interval=None, collect_method=None, collector_attribute=None, data_points=None, description=None, display_name=None, enable_auto_discovery=None, enable_eri_discovery=None, eri_discovery_config=None, eri_discovery_interval=None, group=None, has_multi_instances=None, id=None, name=None, tags=None, technology=None, version=None):  # noqa: E501
         """DataSource - a model defined in Swagger"""  # noqa: E501
 
-        self._collector_attribute = None
-        self._auto_discovery_config = None
-        self._eri_discovery_config = None
-        self._display_name = None
-        self._description = None
         self._applies_to = None
+        self._audit_version = None
+        self._auto_discovery_config = None
+        self._collect_interval = None
+        self._collect_method = None
+        self._collector_attribute = None
+        self._data_points = None
+        self._description = None
+        self._display_name = None
         self._enable_auto_discovery = None
+        self._enable_eri_discovery = None
+        self._eri_discovery_config = None
+        self._eri_discovery_interval = None
+        self._group = None
+        self._has_multi_instances = None
+        self._id = None
+        self._name = None
+        self._tags = None
         self._technology = None
         self._version = None
-        self._tags = None
-        self._audit_version = None
-        self._has_multi_instances = None
-        self._collect_method = None
-        self._eri_discovery_interval = None
-        self._enable_eri_discovery = None
-        self._collect_interval = None
-        self._name = None
-        self._data_points = None
-        self._id = None
-        self._group = None
         self.discriminator = None
 
-        self.collector_attribute = collector_attribute
-        if auto_discovery_config is not None:
-            self.auto_discovery_config = auto_discovery_config
-        if eri_discovery_config is not None:
-            self.eri_discovery_config = eri_discovery_config
-        if display_name is not None:
-            self.display_name = display_name
-        if description is not None:
-            self.description = description
         if applies_to is not None:
             self.applies_to = applies_to
+        if audit_version is not None:
+            self.audit_version = audit_version
+        if auto_discovery_config is not None:
+            self.auto_discovery_config = auto_discovery_config
+        self.collect_interval = collect_interval
+        self.collect_method = collect_method
+        self.collector_attribute = collector_attribute
+        if data_points is not None:
+            self.data_points = data_points
+        if description is not None:
+            self.description = description
+        if display_name is not None:
+            self.display_name = display_name
         if enable_auto_discovery is not None:
             self.enable_auto_discovery = enable_auto_discovery
+        if enable_eri_discovery is not None:
+            self.enable_eri_discovery = enable_eri_discovery
+        if eri_discovery_config is not None:
+            self.eri_discovery_config = eri_discovery_config
+        if eri_discovery_interval is not None:
+            self.eri_discovery_interval = eri_discovery_interval
+        if group is not None:
+            self.group = group
+        if has_multi_instances is not None:
+            self.has_multi_instances = has_multi_instances
+        self.id = id
+        self.name = name
+        if tags is not None:
+            self.tags = tags
         if technology is not None:
             self.technology = technology
         if version is not None:
             self.version = version
-        if tags is not None:
-            self.tags = tags
-        if audit_version is not None:
-            self.audit_version = audit_version
-        if has_multi_instances is not None:
-            self.has_multi_instances = has_multi_instances
-        self.collect_method = collect_method
-        if eri_discovery_interval is not None:
-            self.eri_discovery_interval = eri_discovery_interval
-        if enable_eri_discovery is not None:
-            self.enable_eri_discovery = enable_eri_discovery
-        self.collect_interval = collect_interval
-        self.name = name
-        if data_points is not None:
-            self.data_points = data_points
-        self.id = id
-        if group is not None:
-            self.group = group
-
-    @property
-    def collector_attribute(self):
-        """Gets the collector_attribute of this DataSource.  # noqa: E501
-
-
-        :return: The collector_attribute of this DataSource.  # noqa: E501
-        :rtype: CollectorAttribute
-        """
-        return self._collector_attribute
-
-    @collector_attribute.setter
-    def collector_attribute(self, collector_attribute):
-        """Sets the collector_attribute of this DataSource.
-
-
-        :param collector_attribute: The collector_attribute of this DataSource.  # noqa: E501
-        :type: CollectorAttribute
-        """
-        if collector_attribute is None:
-            raise ValueError("Invalid value for `collector_attribute`, must not be `None`")  # noqa: E501
-
-        self._collector_attribute = collector_attribute
-
-    @property
-    def auto_discovery_config(self):
-        """Gets the auto_discovery_config of this DataSource.  # noqa: E501
-
-
-        :return: The auto_discovery_config of this DataSource.  # noqa: E501
-        :rtype: AutoDiscoveryConfiguration
-        """
-        return self._auto_discovery_config
-
-    @auto_discovery_config.setter
-    def auto_discovery_config(self, auto_discovery_config):
-        """Sets the auto_discovery_config of this DataSource.
-
-
-        :param auto_discovery_config: The auto_discovery_config of this DataSource.  # noqa: E501
-        :type: AutoDiscoveryConfiguration
-        """
-
-        self._auto_discovery_config = auto_discovery_config
-
-    @property
-    def eri_discovery_config(self):
-        """Gets the eri_discovery_config of this DataSource.  # noqa: E501
-
-
-        :return: The eri_discovery_config of this DataSource.  # noqa: E501
-        :rtype: ScriptERIDiscoveryAttributeV2
-        """
-        return self._eri_discovery_config
-
-    @eri_discovery_config.setter
-    def eri_discovery_config(self, eri_discovery_config):
-        """Sets the eri_discovery_config of this DataSource.
-
-
-        :param eri_discovery_config: The eri_discovery_config of this DataSource.  # noqa: E501
-        :type: ScriptERIDiscoveryAttributeV2
-        """
-
-        self._eri_discovery_config = eri_discovery_config
-
-    @property
-    def display_name(self):
-        """Gets the display_name of this DataSource.  # noqa: E501
-
-
-        :return: The display_name of this DataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._display_name
-
-    @display_name.setter
-    def display_name(self, display_name):
-        """Sets the display_name of this DataSource.
-
-
-        :param display_name: The display_name of this DataSource.  # noqa: E501
-        :type: str
-        """
-
-        self._display_name = display_name
-
-    @property
-    def description(self):
-        """Gets the description of this DataSource.  # noqa: E501
-
-        The description for the LMModule  # noqa: E501
-
-        :return: The description of this DataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this DataSource.
-
-        The description for the LMModule  # noqa: E501
-
-        :param description: The description of this DataSource.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
 
     @property
     def applies_to(self):
@@ -275,6 +166,182 @@ class DataSource(object):
         self._applies_to = applies_to
 
     @property
+    def audit_version(self):
+        """Gets the audit_version of this DataSource.  # noqa: E501
+
+
+        :return: The audit_version of this DataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._audit_version
+
+    @audit_version.setter
+    def audit_version(self, audit_version):
+        """Sets the audit_version of this DataSource.
+
+
+        :param audit_version: The audit_version of this DataSource.  # noqa: E501
+        :type: int
+        """
+
+        self._audit_version = audit_version
+
+    @property
+    def auto_discovery_config(self):
+        """Gets the auto_discovery_config of this DataSource.  # noqa: E501
+
+
+        :return: The auto_discovery_config of this DataSource.  # noqa: E501
+        :rtype: AutoDiscoveryConfiguration
+        """
+        return self._auto_discovery_config
+
+    @auto_discovery_config.setter
+    def auto_discovery_config(self, auto_discovery_config):
+        """Sets the auto_discovery_config of this DataSource.
+
+
+        :param auto_discovery_config: The auto_discovery_config of this DataSource.  # noqa: E501
+        :type: AutoDiscoveryConfiguration
+        """
+
+        self._auto_discovery_config = auto_discovery_config
+
+    @property
+    def collect_interval(self):
+        """Gets the collect_interval of this DataSource.  # noqa: E501
+
+
+        :return: The collect_interval of this DataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._collect_interval
+
+    @collect_interval.setter
+    def collect_interval(self, collect_interval):
+        """Sets the collect_interval of this DataSource.
+
+
+        :param collect_interval: The collect_interval of this DataSource.  # noqa: E501
+        :type: int
+        """
+        if collect_interval is None:
+            raise ValueError("Invalid value for `collect_interval`, must not be `None`")  # noqa: E501
+
+        self._collect_interval = collect_interval
+
+    @property
+    def collect_method(self):
+        """Gets the collect_method of this DataSource.  # noqa: E501
+
+
+        :return: The collect_method of this DataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._collect_method
+
+    @collect_method.setter
+    def collect_method(self, collect_method):
+        """Sets the collect_method of this DataSource.
+
+
+        :param collect_method: The collect_method of this DataSource.  # noqa: E501
+        :type: str
+        """
+        if collect_method is None:
+            raise ValueError("Invalid value for `collect_method`, must not be `None`")  # noqa: E501
+
+        self._collect_method = collect_method
+
+    @property
+    def collector_attribute(self):
+        """Gets the collector_attribute of this DataSource.  # noqa: E501
+
+
+        :return: The collector_attribute of this DataSource.  # noqa: E501
+        :rtype: CollectorAttribute
+        """
+        return self._collector_attribute
+
+    @collector_attribute.setter
+    def collector_attribute(self, collector_attribute):
+        """Sets the collector_attribute of this DataSource.
+
+
+        :param collector_attribute: The collector_attribute of this DataSource.  # noqa: E501
+        :type: CollectorAttribute
+        """
+        if collector_attribute is None:
+            raise ValueError("Invalid value for `collector_attribute`, must not be `None`")  # noqa: E501
+
+        self._collector_attribute = collector_attribute
+
+    @property
+    def data_points(self):
+        """Gets the data_points of this DataSource.  # noqa: E501
+
+
+        :return: The data_points of this DataSource.  # noqa: E501
+        :rtype: list[DataPoint]
+        """
+        return self._data_points
+
+    @data_points.setter
+    def data_points(self, data_points):
+        """Sets the data_points of this DataSource.
+
+
+        :param data_points: The data_points of this DataSource.  # noqa: E501
+        :type: list[DataPoint]
+        """
+
+        self._data_points = data_points
+
+    @property
+    def description(self):
+        """Gets the description of this DataSource.  # noqa: E501
+
+        The description for the LMModule  # noqa: E501
+
+        :return: The description of this DataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this DataSource.
+
+        The description for the LMModule  # noqa: E501
+
+        :param description: The description of this DataSource.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def display_name(self):
+        """Gets the display_name of this DataSource.  # noqa: E501
+
+
+        :return: The display_name of this DataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._display_name
+
+    @display_name.setter
+    def display_name(self, display_name):
+        """Sets the display_name of this DataSource.
+
+
+        :param display_name: The display_name of this DataSource.  # noqa: E501
+        :type: str
+        """
+
+        self._display_name = display_name
+
+    @property
     def enable_auto_discovery(self):
         """Gets the enable_auto_discovery of this DataSource.  # noqa: E501
 
@@ -294,6 +361,184 @@ class DataSource(object):
         """
 
         self._enable_auto_discovery = enable_auto_discovery
+
+    @property
+    def enable_eri_discovery(self):
+        """Gets the enable_eri_discovery of this DataSource.  # noqa: E501
+
+
+        :return: The enable_eri_discovery of this DataSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_eri_discovery
+
+    @enable_eri_discovery.setter
+    def enable_eri_discovery(self, enable_eri_discovery):
+        """Sets the enable_eri_discovery of this DataSource.
+
+
+        :param enable_eri_discovery: The enable_eri_discovery of this DataSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_eri_discovery = enable_eri_discovery
+
+    @property
+    def eri_discovery_config(self):
+        """Gets the eri_discovery_config of this DataSource.  # noqa: E501
+
+
+        :return: The eri_discovery_config of this DataSource.  # noqa: E501
+        :rtype: ScriptERIDiscoveryAttributeV2
+        """
+        return self._eri_discovery_config
+
+    @eri_discovery_config.setter
+    def eri_discovery_config(self, eri_discovery_config):
+        """Sets the eri_discovery_config of this DataSource.
+
+
+        :param eri_discovery_config: The eri_discovery_config of this DataSource.  # noqa: E501
+        :type: ScriptERIDiscoveryAttributeV2
+        """
+
+        self._eri_discovery_config = eri_discovery_config
+
+    @property
+    def eri_discovery_interval(self):
+        """Gets the eri_discovery_interval of this DataSource.  # noqa: E501
+
+
+        :return: The eri_discovery_interval of this DataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._eri_discovery_interval
+
+    @eri_discovery_interval.setter
+    def eri_discovery_interval(self, eri_discovery_interval):
+        """Sets the eri_discovery_interval of this DataSource.
+
+
+        :param eri_discovery_interval: The eri_discovery_interval of this DataSource.  # noqa: E501
+        :type: int
+        """
+
+        self._eri_discovery_interval = eri_discovery_interval
+
+    @property
+    def group(self):
+        """Gets the group of this DataSource.  # noqa: E501
+
+        The group the LMModule is in  # noqa: E501
+
+        :return: The group of this DataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._group
+
+    @group.setter
+    def group(self, group):
+        """Sets the group of this DataSource.
+
+        The group the LMModule is in  # noqa: E501
+
+        :param group: The group of this DataSource.  # noqa: E501
+        :type: str
+        """
+
+        self._group = group
+
+    @property
+    def has_multi_instances(self):
+        """Gets the has_multi_instances of this DataSource.  # noqa: E501
+
+
+        :return: The has_multi_instances of this DataSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._has_multi_instances
+
+    @has_multi_instances.setter
+    def has_multi_instances(self, has_multi_instances):
+        """Sets the has_multi_instances of this DataSource.
+
+
+        :param has_multi_instances: The has_multi_instances of this DataSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._has_multi_instances = has_multi_instances
+
+    @property
+    def id(self):
+        """Gets the id of this DataSource.  # noqa: E501
+
+        The ID of the LMModule  # noqa: E501
+
+        :return: The id of this DataSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this DataSource.
+
+        The ID of the LMModule  # noqa: E501
+
+        :param id: The id of this DataSource.  # noqa: E501
+        :type: int
+        """
+        if id is None:
+            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
+
+        self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this DataSource.  # noqa: E501
+
+
+        :return: The name of this DataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this DataSource.
+
+
+        :param name: The name of this DataSource.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def tags(self):
+        """Gets the tags of this DataSource.  # noqa: E501
+
+        The Tags for the LMModule  # noqa: E501
+
+        :return: The tags of this DataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._tags
+
+    @tags.setter
+    def tags(self, tags):
+        """Sets the tags of this DataSource.
+
+        The Tags for the LMModule  # noqa: E501
+
+        :param tags: The tags of this DataSource.  # noqa: E501
+        :type: str
+        """
+
+        self._tags = tags
 
     @property
     def technology(self):
@@ -338,251 +583,6 @@ class DataSource(object):
         """
 
         self._version = version
-
-    @property
-    def tags(self):
-        """Gets the tags of this DataSource.  # noqa: E501
-
-        The Tags for the LMModule  # noqa: E501
-
-        :return: The tags of this DataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._tags
-
-    @tags.setter
-    def tags(self, tags):
-        """Sets the tags of this DataSource.
-
-        The Tags for the LMModule  # noqa: E501
-
-        :param tags: The tags of this DataSource.  # noqa: E501
-        :type: str
-        """
-
-        self._tags = tags
-
-    @property
-    def audit_version(self):
-        """Gets the audit_version of this DataSource.  # noqa: E501
-
-
-        :return: The audit_version of this DataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._audit_version
-
-    @audit_version.setter
-    def audit_version(self, audit_version):
-        """Sets the audit_version of this DataSource.
-
-
-        :param audit_version: The audit_version of this DataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._audit_version = audit_version
-
-    @property
-    def has_multi_instances(self):
-        """Gets the has_multi_instances of this DataSource.  # noqa: E501
-
-
-        :return: The has_multi_instances of this DataSource.  # noqa: E501
-        :rtype: bool
-        """
-        return self._has_multi_instances
-
-    @has_multi_instances.setter
-    def has_multi_instances(self, has_multi_instances):
-        """Sets the has_multi_instances of this DataSource.
-
-
-        :param has_multi_instances: The has_multi_instances of this DataSource.  # noqa: E501
-        :type: bool
-        """
-
-        self._has_multi_instances = has_multi_instances
-
-    @property
-    def collect_method(self):
-        """Gets the collect_method of this DataSource.  # noqa: E501
-
-
-        :return: The collect_method of this DataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._collect_method
-
-    @collect_method.setter
-    def collect_method(self, collect_method):
-        """Sets the collect_method of this DataSource.
-
-
-        :param collect_method: The collect_method of this DataSource.  # noqa: E501
-        :type: str
-        """
-        if collect_method is None:
-            raise ValueError("Invalid value for `collect_method`, must not be `None`")  # noqa: E501
-
-        self._collect_method = collect_method
-
-    @property
-    def eri_discovery_interval(self):
-        """Gets the eri_discovery_interval of this DataSource.  # noqa: E501
-
-
-        :return: The eri_discovery_interval of this DataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._eri_discovery_interval
-
-    @eri_discovery_interval.setter
-    def eri_discovery_interval(self, eri_discovery_interval):
-        """Sets the eri_discovery_interval of this DataSource.
-
-
-        :param eri_discovery_interval: The eri_discovery_interval of this DataSource.  # noqa: E501
-        :type: int
-        """
-
-        self._eri_discovery_interval = eri_discovery_interval
-
-    @property
-    def enable_eri_discovery(self):
-        """Gets the enable_eri_discovery of this DataSource.  # noqa: E501
-
-
-        :return: The enable_eri_discovery of this DataSource.  # noqa: E501
-        :rtype: bool
-        """
-        return self._enable_eri_discovery
-
-    @enable_eri_discovery.setter
-    def enable_eri_discovery(self, enable_eri_discovery):
-        """Sets the enable_eri_discovery of this DataSource.
-
-
-        :param enable_eri_discovery: The enable_eri_discovery of this DataSource.  # noqa: E501
-        :type: bool
-        """
-
-        self._enable_eri_discovery = enable_eri_discovery
-
-    @property
-    def collect_interval(self):
-        """Gets the collect_interval of this DataSource.  # noqa: E501
-
-
-        :return: The collect_interval of this DataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._collect_interval
-
-    @collect_interval.setter
-    def collect_interval(self, collect_interval):
-        """Sets the collect_interval of this DataSource.
-
-
-        :param collect_interval: The collect_interval of this DataSource.  # noqa: E501
-        :type: int
-        """
-        if collect_interval is None:
-            raise ValueError("Invalid value for `collect_interval`, must not be `None`")  # noqa: E501
-
-        self._collect_interval = collect_interval
-
-    @property
-    def name(self):
-        """Gets the name of this DataSource.  # noqa: E501
-
-
-        :return: The name of this DataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this DataSource.
-
-
-        :param name: The name of this DataSource.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
-    def data_points(self):
-        """Gets the data_points of this DataSource.  # noqa: E501
-
-
-        :return: The data_points of this DataSource.  # noqa: E501
-        :rtype: list[DataPoint]
-        """
-        return self._data_points
-
-    @data_points.setter
-    def data_points(self, data_points):
-        """Sets the data_points of this DataSource.
-
-
-        :param data_points: The data_points of this DataSource.  # noqa: E501
-        :type: list[DataPoint]
-        """
-
-        self._data_points = data_points
-
-    @property
-    def id(self):
-        """Gets the id of this DataSource.  # noqa: E501
-
-        The ID of the LMModule  # noqa: E501
-
-        :return: The id of this DataSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this DataSource.
-
-        The ID of the LMModule  # noqa: E501
-
-        :param id: The id of this DataSource.  # noqa: E501
-        :type: int
-        """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
-
-        self._id = id
-
-    @property
-    def group(self):
-        """Gets the group of this DataSource.  # noqa: E501
-
-        The group the LMModule is in  # noqa: E501
-
-        :return: The group of this DataSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._group
-
-    @group.setter
-    def group(self, group):
-        """Sets the group of this DataSource.
-
-        The group the LMModule is in  # noqa: E501
-
-        :param group: The group of this DataSource.  # noqa: E501
-        :type: str
-        """
-
-        self._group = group
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,41 +34,41 @@ class HttpAutoDiscoveryMethod(AutoDiscoveryMethod):
     """
     swagger_types = {
         'name': 'str',
-        'regex': 'str',
         'case_sensitive': 'bool',
         'follow_redirect': 'bool',
         'ports': 'str',
+        'regex': 'str',
         'uri': 'str',
         'use_ssl': 'bool'
     }
 
     attribute_map = {
         'name': 'name',
-        'regex': 'regex',
         'case_sensitive': 'caseSensitive',
         'follow_redirect': 'followRedirect',
         'ports': 'ports',
+        'regex': 'regex',
         'uri': 'uri',
         'use_ssl': 'useSSL'
     }
 
-    def __init__(self, name=None, regex=None, case_sensitive=None, follow_redirect=None, ports=None, uri=None, use_ssl=None):  # noqa: E501
+    def __init__(self, name=None, case_sensitive=None, follow_redirect=None, ports=None, regex=None, uri=None, use_ssl=None):  # noqa: E501
         """HttpAutoDiscoveryMethod - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._regex = None
         self._case_sensitive = None
         self._follow_redirect = None
         self._ports = None
+        self._regex = None
         self._uri = None
         self._use_ssl = None
         self.discriminator = None
 
         self.name = name
-        self.regex = regex
         self.case_sensitive = case_sensitive
         self.follow_redirect = follow_redirect
         self.ports = ports
+        self.regex = regex
         self.uri = uri
         self.use_ssl = use_ssl
 
@@ -94,29 +94,6 @@ class HttpAutoDiscoveryMethod(AutoDiscoveryMethod):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
-
-    @property
-    def regex(self):
-        """Gets the regex of this HttpAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The regex of this HttpAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._regex
-
-    @regex.setter
-    def regex(self, regex):
-        """Sets the regex of this HttpAutoDiscoveryMethod.
-
-
-        :param regex: The regex of this HttpAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-        if regex is None:
-            raise ValueError("Invalid value for `regex`, must not be `None`")  # noqa: E501
-
-        self._regex = regex
 
     @property
     def case_sensitive(self):
@@ -186,6 +163,29 @@ class HttpAutoDiscoveryMethod(AutoDiscoveryMethod):
             raise ValueError("Invalid value for `ports`, must not be `None`")  # noqa: E501
 
         self._ports = ports
+
+    @property
+    def regex(self):
+        """Gets the regex of this HttpAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The regex of this HttpAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._regex
+
+    @regex.setter
+    def regex(self, regex):
+        """Sets the regex of this HttpAutoDiscoveryMethod.
+
+
+        :param regex: The regex of this HttpAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+        if regex is None:
+            raise ValueError("Invalid value for `regex`, must not be `None`")  # noqa: E501
+
+        self._regex = regex
 
     @property
     def uri(self):

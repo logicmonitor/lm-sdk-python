@@ -34,45 +34,114 @@ class OpsNote(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'note': 'str',
         'created_by': 'str',
-        'scopes': 'list[OpsNoteScope]',
-        'id': 'str',
         'happen_on_in_sec': 'int',
+        'id': 'str',
+        'note': 'str',
+        'scopes': 'list[OpsNoteScope]',
         'tags': 'list[OpsNoteTagBase]'
     }
 
     attribute_map = {
-        'note': 'note',
         'created_by': 'createdBy',
-        'scopes': 'scopes',
-        'id': 'id',
         'happen_on_in_sec': 'happenOnInSec',
+        'id': 'id',
+        'note': 'note',
+        'scopes': 'scopes',
         'tags': 'tags'
     }
 
-    def __init__(self, note=None, created_by=None, scopes=None, id=None, happen_on_in_sec=None, tags=None):  # noqa: E501
+    def __init__(self, created_by=None, happen_on_in_sec=None, id=None, note=None, scopes=None, tags=None):  # noqa: E501
         """OpsNote - a model defined in Swagger"""  # noqa: E501
 
-        self._note = None
         self._created_by = None
-        self._scopes = None
-        self._id = None
         self._happen_on_in_sec = None
+        self._id = None
+        self._note = None
+        self._scopes = None
         self._tags = None
         self.discriminator = None
 
-        self.note = note
         if created_by is not None:
             self.created_by = created_by
-        if scopes is not None:
-            self.scopes = scopes
-        if id is not None:
-            self.id = id
         if happen_on_in_sec is not None:
             self.happen_on_in_sec = happen_on_in_sec
+        if id is not None:
+            self.id = id
+        self.note = note
+        if scopes is not None:
+            self.scopes = scopes
         if tags is not None:
             self.tags = tags
+
+    @property
+    def created_by(self):
+        """Gets the created_by of this OpsNote.  # noqa: E501
+
+        The user that created the Ops Note  # noqa: E501
+
+        :return: The created_by of this OpsNote.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_by
+
+    @created_by.setter
+    def created_by(self, created_by):
+        """Sets the created_by of this OpsNote.
+
+        The user that created the Ops Note  # noqa: E501
+
+        :param created_by: The created_by of this OpsNote.  # noqa: E501
+        :type: str
+        """
+
+        self._created_by = created_by
+
+    @property
+    def happen_on_in_sec(self):
+        """Gets the happen_on_in_sec of this OpsNote.  # noqa: E501
+
+        The date and time associated with the note, in epoch seconds format  # noqa: E501
+
+        :return: The happen_on_in_sec of this OpsNote.  # noqa: E501
+        :rtype: int
+        """
+        return self._happen_on_in_sec
+
+    @happen_on_in_sec.setter
+    def happen_on_in_sec(self, happen_on_in_sec):
+        """Sets the happen_on_in_sec of this OpsNote.
+
+        The date and time associated with the note, in epoch seconds format  # noqa: E501
+
+        :param happen_on_in_sec: The happen_on_in_sec of this OpsNote.  # noqa: E501
+        :type: int
+        """
+
+        self._happen_on_in_sec = happen_on_in_sec
+
+    @property
+    def id(self):
+        """Gets the id of this OpsNote.  # noqa: E501
+
+        The id associated with the Ops Note  # noqa: E501
+
+        :return: The id of this OpsNote.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this OpsNote.
+
+        The id associated with the Ops Note  # noqa: E501
+
+        :param id: The id of this OpsNote.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def note(self):
@@ -100,29 +169,6 @@ class OpsNote(object):
         self._note = note
 
     @property
-    def created_by(self):
-        """Gets the created_by of this OpsNote.  # noqa: E501
-
-        The user that created the Ops Note  # noqa: E501
-
-        :return: The created_by of this OpsNote.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_by
-
-    @created_by.setter
-    def created_by(self, created_by):
-        """Sets the created_by of this OpsNote.
-
-        The user that created the Ops Note  # noqa: E501
-
-        :param created_by: The created_by of this OpsNote.  # noqa: E501
-        :type: str
-        """
-
-        self._created_by = created_by
-
-    @property
     def scopes(self):
         """Gets the scopes of this OpsNote.  # noqa: E501
 
@@ -144,52 +190,6 @@ class OpsNote(object):
         """
 
         self._scopes = scopes
-
-    @property
-    def id(self):
-        """Gets the id of this OpsNote.  # noqa: E501
-
-        The id associated with the Ops Note  # noqa: E501
-
-        :return: The id of this OpsNote.  # noqa: E501
-        :rtype: str
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this OpsNote.
-
-        The id associated with the Ops Note  # noqa: E501
-
-        :param id: The id of this OpsNote.  # noqa: E501
-        :type: str
-        """
-
-        self._id = id
-
-    @property
-    def happen_on_in_sec(self):
-        """Gets the happen_on_in_sec of this OpsNote.  # noqa: E501
-
-        The date and time associated with the note, in epoch seconds format  # noqa: E501
-
-        :return: The happen_on_in_sec of this OpsNote.  # noqa: E501
-        :rtype: int
-        """
-        return self._happen_on_in_sec
-
-    @happen_on_in_sec.setter
-    def happen_on_in_sec(self, happen_on_in_sec):
-        """Sets the happen_on_in_sec of this OpsNote.
-
-        The date and time associated with the note, in epoch seconds format  # noqa: E501
-
-        :param happen_on_in_sec: The happen_on_in_sec of this OpsNote.  # noqa: E501
-        :type: int
-        """
-
-        self._happen_on_in_sec = happen_on_in_sec
 
     @property
     def tags(self):

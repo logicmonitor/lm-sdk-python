@@ -31,83 +31,41 @@ class DeviceGroupAlertThresholdInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'user_permission': 'str',
-        'group_id': 'int',
         'alert_enabled': 'bool',
+        'alert_expr': 'str',
         'group_full_path': 'str',
-        'alert_expr': 'str'
+        'group_id': 'int',
+        'user_permission': 'str'
     }
 
     attribute_map = {
-        'user_permission': 'userPermission',
-        'group_id': 'groupId',
         'alert_enabled': 'alertEnabled',
+        'alert_expr': 'alertExpr',
         'group_full_path': 'groupFullPath',
-        'alert_expr': 'alertExpr'
+        'group_id': 'groupId',
+        'user_permission': 'userPermission'
     }
 
-    def __init__(self, user_permission=None, group_id=None, alert_enabled=None, group_full_path=None, alert_expr=None):  # noqa: E501
+    def __init__(self, alert_enabled=None, alert_expr=None, group_full_path=None, group_id=None, user_permission=None):  # noqa: E501
         """DeviceGroupAlertThresholdInfo - a model defined in Swagger"""  # noqa: E501
 
-        self._user_permission = None
-        self._group_id = None
         self._alert_enabled = None
-        self._group_full_path = None
         self._alert_expr = None
+        self._group_full_path = None
+        self._group_id = None
+        self._user_permission = None
         self.discriminator = None
 
-        if user_permission is not None:
-            self.user_permission = user_permission
-        if group_id is not None:
-            self.group_id = group_id
         if alert_enabled is not None:
             self.alert_enabled = alert_enabled
-        if group_full_path is not None:
-            self.group_full_path = group_full_path
         if alert_expr is not None:
             self.alert_expr = alert_expr
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this DeviceGroupAlertThresholdInfo.  # noqa: E501
-
-
-        :return: The user_permission of this DeviceGroupAlertThresholdInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this DeviceGroupAlertThresholdInfo.
-
-
-        :param user_permission: The user_permission of this DeviceGroupAlertThresholdInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
-
-    @property
-    def group_id(self):
-        """Gets the group_id of this DeviceGroupAlertThresholdInfo.  # noqa: E501
-
-
-        :return: The group_id of this DeviceGroupAlertThresholdInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._group_id
-
-    @group_id.setter
-    def group_id(self, group_id):
-        """Sets the group_id of this DeviceGroupAlertThresholdInfo.
-
-
-        :param group_id: The group_id of this DeviceGroupAlertThresholdInfo.  # noqa: E501
-        :type: int
-        """
-
-        self._group_id = group_id
+        if group_full_path is not None:
+            self.group_full_path = group_full_path
+        if group_id is not None:
+            self.group_id = group_id
+        if user_permission is not None:
+            self.user_permission = user_permission
 
     @property
     def alert_enabled(self):
@@ -131,6 +89,27 @@ class DeviceGroupAlertThresholdInfo(object):
         self._alert_enabled = alert_enabled
 
     @property
+    def alert_expr(self):
+        """Gets the alert_expr of this DeviceGroupAlertThresholdInfo.  # noqa: E501
+
+
+        :return: The alert_expr of this DeviceGroupAlertThresholdInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_expr
+
+    @alert_expr.setter
+    def alert_expr(self, alert_expr):
+        """Sets the alert_expr of this DeviceGroupAlertThresholdInfo.
+
+
+        :param alert_expr: The alert_expr of this DeviceGroupAlertThresholdInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_expr = alert_expr
+
+    @property
     def group_full_path(self):
         """Gets the group_full_path of this DeviceGroupAlertThresholdInfo.  # noqa: E501
 
@@ -152,25 +131,46 @@ class DeviceGroupAlertThresholdInfo(object):
         self._group_full_path = group_full_path
 
     @property
-    def alert_expr(self):
-        """Gets the alert_expr of this DeviceGroupAlertThresholdInfo.  # noqa: E501
+    def group_id(self):
+        """Gets the group_id of this DeviceGroupAlertThresholdInfo.  # noqa: E501
 
 
-        :return: The alert_expr of this DeviceGroupAlertThresholdInfo.  # noqa: E501
+        :return: The group_id of this DeviceGroupAlertThresholdInfo.  # noqa: E501
+        :rtype: int
+        """
+        return self._group_id
+
+    @group_id.setter
+    def group_id(self, group_id):
+        """Sets the group_id of this DeviceGroupAlertThresholdInfo.
+
+
+        :param group_id: The group_id of this DeviceGroupAlertThresholdInfo.  # noqa: E501
+        :type: int
+        """
+
+        self._group_id = group_id
+
+    @property
+    def user_permission(self):
+        """Gets the user_permission of this DeviceGroupAlertThresholdInfo.  # noqa: E501
+
+
+        :return: The user_permission of this DeviceGroupAlertThresholdInfo.  # noqa: E501
         :rtype: str
         """
-        return self._alert_expr
+        return self._user_permission
 
-    @alert_expr.setter
-    def alert_expr(self, alert_expr):
-        """Sets the alert_expr of this DeviceGroupAlertThresholdInfo.
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this DeviceGroupAlertThresholdInfo.
 
 
-        :param alert_expr: The alert_expr of this DeviceGroupAlertThresholdInfo.  # noqa: E501
+        :param user_permission: The user_permission of this DeviceGroupAlertThresholdInfo.  # noqa: E501
         :type: str
         """
 
-        self._alert_expr = alert_expr
+        self._user_permission = user_permission
 
     def to_dict(self):
         """Returns the model properties as a dict"""

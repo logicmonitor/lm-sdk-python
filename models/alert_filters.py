@@ -31,283 +31,76 @@ class AlertFilters(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'severity': 'str',
-        'sdted': 'str',
-        'chain': 'str',
-        'instance': 'str',
-        'data_point': 'str',
-        'host': 'str',
-        'rule': 'str',
-        'keyword': 'str',
-        'data_source': 'str',
         'acked': 'str',
+        'chain': 'str',
         'cleared': 'str',
-        'group': 'str'
+        'data_point': 'str',
+        'data_source': 'str',
+        'group': 'str',
+        'host': 'str',
+        'instance': 'str',
+        'keyword': 'str',
+        'rule': 'str',
+        'sdted': 'str',
+        'severity': 'str'
     }
 
     attribute_map = {
-        'severity': 'severity',
-        'sdted': 'sdted',
-        'chain': 'chain',
-        'instance': 'instance',
-        'data_point': 'dataPoint',
-        'host': 'host',
-        'rule': 'rule',
-        'keyword': 'keyword',
-        'data_source': 'dataSource',
         'acked': 'acked',
+        'chain': 'chain',
         'cleared': 'cleared',
-        'group': 'group'
+        'data_point': 'dataPoint',
+        'data_source': 'dataSource',
+        'group': 'group',
+        'host': 'host',
+        'instance': 'instance',
+        'keyword': 'keyword',
+        'rule': 'rule',
+        'sdted': 'sdted',
+        'severity': 'severity'
     }
 
-    def __init__(self, severity=None, sdted=None, chain=None, instance=None, data_point=None, host=None, rule=None, keyword=None, data_source=None, acked=None, cleared=None, group=None):  # noqa: E501
+    def __init__(self, acked=None, chain=None, cleared=None, data_point=None, data_source=None, group=None, host=None, instance=None, keyword=None, rule=None, sdted=None, severity=None):  # noqa: E501
         """AlertFilters - a model defined in Swagger"""  # noqa: E501
 
-        self._severity = None
-        self._sdted = None
-        self._chain = None
-        self._instance = None
-        self._data_point = None
-        self._host = None
-        self._rule = None
-        self._keyword = None
-        self._data_source = None
         self._acked = None
+        self._chain = None
         self._cleared = None
+        self._data_point = None
+        self._data_source = None
         self._group = None
+        self._host = None
+        self._instance = None
+        self._keyword = None
+        self._rule = None
+        self._sdted = None
+        self._severity = None
         self.discriminator = None
 
-        if severity is not None:
-            self.severity = severity
-        if sdted is not None:
-            self.sdted = sdted
-        if chain is not None:
-            self.chain = chain
-        if instance is not None:
-            self.instance = instance
-        if data_point is not None:
-            self.data_point = data_point
-        if host is not None:
-            self.host = host
-        if rule is not None:
-            self.rule = rule
-        if keyword is not None:
-            self.keyword = keyword
-        if data_source is not None:
-            self.data_source = data_source
         if acked is not None:
             self.acked = acked
+        if chain is not None:
+            self.chain = chain
         if cleared is not None:
             self.cleared = cleared
+        if data_point is not None:
+            self.data_point = data_point
+        if data_source is not None:
+            self.data_source = data_source
         if group is not None:
             self.group = group
-
-    @property
-    def severity(self):
-        """Gets the severity of this AlertFilters.  # noqa: E501
-
-        Displayed alerts must have a severity that satisfies this criteria. Multiple severities are separated by commas  # noqa: E501
-
-        :return: The severity of this AlertFilters.  # noqa: E501
-        :rtype: str
-        """
-        return self._severity
-
-    @severity.setter
-    def severity(self, severity):
-        """Sets the severity of this AlertFilters.
-
-        Displayed alerts must have a severity that satisfies this criteria. Multiple severities are separated by commas  # noqa: E501
-
-        :param severity: The severity of this AlertFilters.  # noqa: E501
-        :type: str
-        """
-
-        self._severity = severity
-
-    @property
-    def sdted(self):
-        """Gets the sdted of this AlertFilters.  # noqa: E501
-
-        Displayed alerts must have an SDT status that meets this criteria  # noqa: E501
-
-        :return: The sdted of this AlertFilters.  # noqa: E501
-        :rtype: str
-        """
-        return self._sdted
-
-    @sdted.setter
-    def sdted(self, sdted):
-        """Sets the sdted of this AlertFilters.
-
-        Displayed alerts must have an SDT status that meets this criteria  # noqa: E501
-
-        :param sdted: The sdted of this AlertFilters.  # noqa: E501
-        :type: str
-        """
-
-        self._sdted = sdted
-
-    @property
-    def chain(self):
-        """Gets the chain of this AlertFilters.  # noqa: E501
-
-        Displayed alerts must be routed to an escalation chain that satisfies this filter. Glob is accepted, and * and an empty string both match all escalation chains  # noqa: E501
-
-        :return: The chain of this AlertFilters.  # noqa: E501
-        :rtype: str
-        """
-        return self._chain
-
-    @chain.setter
-    def chain(self, chain):
-        """Sets the chain of this AlertFilters.
-
-        Displayed alerts must be routed to an escalation chain that satisfies this filter. Glob is accepted, and * and an empty string both match all escalation chains  # noqa: E501
-
-        :param chain: The chain of this AlertFilters.  # noqa: E501
-        :type: str
-        """
-
-        self._chain = chain
-
-    @property
-    def instance(self):
-        """Gets the instance of this AlertFilters.  # noqa: E501
-
-        Displayed alerts must be associated with instances that meet this filter criteria. Glob is accepted, and * and an empty string both match all instances  # noqa: E501
-
-        :return: The instance of this AlertFilters.  # noqa: E501
-        :rtype: str
-        """
-        return self._instance
-
-    @instance.setter
-    def instance(self, instance):
-        """Sets the instance of this AlertFilters.
-
-        Displayed alerts must be associated with instances that meet this filter criteria. Glob is accepted, and * and an empty string both match all instances  # noqa: E501
-
-        :param instance: The instance of this AlertFilters.  # noqa: E501
-        :type: str
-        """
-
-        self._instance = instance
-
-    @property
-    def data_point(self):
-        """Gets the data_point of this AlertFilters.  # noqa: E501
-
-        Displayed alerts must be associated with datapoints that meet this filter criteria. Glob is accepted, and * and an empty string both match all datapoints  # noqa: E501
-
-        :return: The data_point of this AlertFilters.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_point
-
-    @data_point.setter
-    def data_point(self, data_point):
-        """Sets the data_point of this AlertFilters.
-
-        Displayed alerts must be associated with datapoints that meet this filter criteria. Glob is accepted, and * and an empty string both match all datapoints  # noqa: E501
-
-        :param data_point: The data_point of this AlertFilters.  # noqa: E501
-        :type: str
-        """
-
-        self._data_point = data_point
-
-    @property
-    def host(self):
-        """Gets the host of this AlertFilters.  # noqa: E501
-
-        Displayed alerts must be associated with devices that meet this filter criteria. Glob is accepted, and * and an empty string both indicate all devices  # noqa: E501
-
-        :return: The host of this AlertFilters.  # noqa: E501
-        :rtype: str
-        """
-        return self._host
-
-    @host.setter
-    def host(self, host):
-        """Sets the host of this AlertFilters.
-
-        Displayed alerts must be associated with devices that meet this filter criteria. Glob is accepted, and * and an empty string both indicate all devices  # noqa: E501
-
-        :param host: The host of this AlertFilters.  # noqa: E501
-        :type: str
-        """
-
-        self._host = host
-
-    @property
-    def rule(self):
-        """Gets the rule of this AlertFilters.  # noqa: E501
-
-        Displayed alerts must match a rule that satisfies this filter. Glob is accepted, and * and an empty string both match all rules  # noqa: E501
-
-        :return: The rule of this AlertFilters.  # noqa: E501
-        :rtype: str
-        """
-        return self._rule
-
-    @rule.setter
-    def rule(self, rule):
-        """Sets the rule of this AlertFilters.
-
-        Displayed alerts must match a rule that satisfies this filter. Glob is accepted, and * and an empty string both match all rules  # noqa: E501
-
-        :param rule: The rule of this AlertFilters.  # noqa: E501
-        :type: str
-        """
-
-        self._rule = rule
-
-    @property
-    def keyword(self):
-        """Gets the keyword of this AlertFilters.  # noqa: E501
-
-        The key word for free search  # noqa: E501
-
-        :return: The keyword of this AlertFilters.  # noqa: E501
-        :rtype: str
-        """
-        return self._keyword
-
-    @keyword.setter
-    def keyword(self, keyword):
-        """Sets the keyword of this AlertFilters.
-
-        The key word for free search  # noqa: E501
-
-        :param keyword: The keyword of this AlertFilters.  # noqa: E501
-        :type: str
-        """
-
-        self._keyword = keyword
-
-    @property
-    def data_source(self):
-        """Gets the data_source of this AlertFilters.  # noqa: E501
-
-        Displayed alerts must be associated with datasources that meet this filter criteria. Glob is accepted, and * and an empty string both indicate all datasources  # noqa: E501
-
-        :return: The data_source of this AlertFilters.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_source
-
-    @data_source.setter
-    def data_source(self, data_source):
-        """Sets the data_source of this AlertFilters.
-
-        Displayed alerts must be associated with datasources that meet this filter criteria. Glob is accepted, and * and an empty string both indicate all datasources  # noqa: E501
-
-        :param data_source: The data_source of this AlertFilters.  # noqa: E501
-        :type: str
-        """
-
-        self._data_source = data_source
+        if host is not None:
+            self.host = host
+        if instance is not None:
+            self.instance = instance
+        if keyword is not None:
+            self.keyword = keyword
+        if rule is not None:
+            self.rule = rule
+        if sdted is not None:
+            self.sdted = sdted
+        if severity is not None:
+            self.severity = severity
 
     @property
     def acked(self):
@@ -333,6 +126,29 @@ class AlertFilters(object):
         self._acked = acked
 
     @property
+    def chain(self):
+        """Gets the chain of this AlertFilters.  # noqa: E501
+
+        Displayed alerts must be routed to an escalation chain that satisfies this filter. Glob is accepted, and * and an empty string both match all escalation chains  # noqa: E501
+
+        :return: The chain of this AlertFilters.  # noqa: E501
+        :rtype: str
+        """
+        return self._chain
+
+    @chain.setter
+    def chain(self, chain):
+        """Sets the chain of this AlertFilters.
+
+        Displayed alerts must be routed to an escalation chain that satisfies this filter. Glob is accepted, and * and an empty string both match all escalation chains  # noqa: E501
+
+        :param chain: The chain of this AlertFilters.  # noqa: E501
+        :type: str
+        """
+
+        self._chain = chain
+
+    @property
     def cleared(self):
         """Gets the cleared of this AlertFilters.  # noqa: E501
 
@@ -356,6 +172,52 @@ class AlertFilters(object):
         self._cleared = cleared
 
     @property
+    def data_point(self):
+        """Gets the data_point of this AlertFilters.  # noqa: E501
+
+        Displayed alerts must be associated with datapoints that meet this filter criteria. Glob is accepted, and * and an empty string both match all datapoints  # noqa: E501
+
+        :return: The data_point of this AlertFilters.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_point
+
+    @data_point.setter
+    def data_point(self, data_point):
+        """Sets the data_point of this AlertFilters.
+
+        Displayed alerts must be associated with datapoints that meet this filter criteria. Glob is accepted, and * and an empty string both match all datapoints  # noqa: E501
+
+        :param data_point: The data_point of this AlertFilters.  # noqa: E501
+        :type: str
+        """
+
+        self._data_point = data_point
+
+    @property
+    def data_source(self):
+        """Gets the data_source of this AlertFilters.  # noqa: E501
+
+        Displayed alerts must be associated with datasources that meet this filter criteria. Glob is accepted, and * and an empty string both indicate all datasources  # noqa: E501
+
+        :return: The data_source of this AlertFilters.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_source
+
+    @data_source.setter
+    def data_source(self, data_source):
+        """Sets the data_source of this AlertFilters.
+
+        Displayed alerts must be associated with datasources that meet this filter criteria. Glob is accepted, and * and an empty string both indicate all datasources  # noqa: E501
+
+        :param data_source: The data_source of this AlertFilters.  # noqa: E501
+        :type: str
+        """
+
+        self._data_source = data_source
+
+    @property
     def group(self):
         """Gets the group of this AlertFilters.  # noqa: E501
 
@@ -377,6 +239,144 @@ class AlertFilters(object):
         """
 
         self._group = group
+
+    @property
+    def host(self):
+        """Gets the host of this AlertFilters.  # noqa: E501
+
+        Displayed alerts must be associated with devices that meet this filter criteria. Glob is accepted, and * and an empty string both indicate all devices  # noqa: E501
+
+        :return: The host of this AlertFilters.  # noqa: E501
+        :rtype: str
+        """
+        return self._host
+
+    @host.setter
+    def host(self, host):
+        """Sets the host of this AlertFilters.
+
+        Displayed alerts must be associated with devices that meet this filter criteria. Glob is accepted, and * and an empty string both indicate all devices  # noqa: E501
+
+        :param host: The host of this AlertFilters.  # noqa: E501
+        :type: str
+        """
+
+        self._host = host
+
+    @property
+    def instance(self):
+        """Gets the instance of this AlertFilters.  # noqa: E501
+
+        Displayed alerts must be associated with instances that meet this filter criteria. Glob is accepted, and * and an empty string both match all instances  # noqa: E501
+
+        :return: The instance of this AlertFilters.  # noqa: E501
+        :rtype: str
+        """
+        return self._instance
+
+    @instance.setter
+    def instance(self, instance):
+        """Sets the instance of this AlertFilters.
+
+        Displayed alerts must be associated with instances that meet this filter criteria. Glob is accepted, and * and an empty string both match all instances  # noqa: E501
+
+        :param instance: The instance of this AlertFilters.  # noqa: E501
+        :type: str
+        """
+
+        self._instance = instance
+
+    @property
+    def keyword(self):
+        """Gets the keyword of this AlertFilters.  # noqa: E501
+
+        The key word for free search  # noqa: E501
+
+        :return: The keyword of this AlertFilters.  # noqa: E501
+        :rtype: str
+        """
+        return self._keyword
+
+    @keyword.setter
+    def keyword(self, keyword):
+        """Sets the keyword of this AlertFilters.
+
+        The key word for free search  # noqa: E501
+
+        :param keyword: The keyword of this AlertFilters.  # noqa: E501
+        :type: str
+        """
+
+        self._keyword = keyword
+
+    @property
+    def rule(self):
+        """Gets the rule of this AlertFilters.  # noqa: E501
+
+        Displayed alerts must match a rule that satisfies this filter. Glob is accepted, and * and an empty string both match all rules  # noqa: E501
+
+        :return: The rule of this AlertFilters.  # noqa: E501
+        :rtype: str
+        """
+        return self._rule
+
+    @rule.setter
+    def rule(self, rule):
+        """Sets the rule of this AlertFilters.
+
+        Displayed alerts must match a rule that satisfies this filter. Glob is accepted, and * and an empty string both match all rules  # noqa: E501
+
+        :param rule: The rule of this AlertFilters.  # noqa: E501
+        :type: str
+        """
+
+        self._rule = rule
+
+    @property
+    def sdted(self):
+        """Gets the sdted of this AlertFilters.  # noqa: E501
+
+        Displayed alerts must have an SDT status that meets this criteria  # noqa: E501
+
+        :return: The sdted of this AlertFilters.  # noqa: E501
+        :rtype: str
+        """
+        return self._sdted
+
+    @sdted.setter
+    def sdted(self, sdted):
+        """Sets the sdted of this AlertFilters.
+
+        Displayed alerts must have an SDT status that meets this criteria  # noqa: E501
+
+        :param sdted: The sdted of this AlertFilters.  # noqa: E501
+        :type: str
+        """
+
+        self._sdted = sdted
+
+    @property
+    def severity(self):
+        """Gets the severity of this AlertFilters.  # noqa: E501
+
+        Displayed alerts must have a severity that satisfies this criteria. Multiple severities are separated by commas  # noqa: E501
+
+        :return: The severity of this AlertFilters.  # noqa: E501
+        :rtype: str
+        """
+        return self._severity
+
+    @severity.setter
+    def severity(self, severity):
+        """Sets the severity of this AlertFilters.
+
+        Displayed alerts must have a severity that satisfies this criteria. Multiple severities are separated by commas  # noqa: E501
+
+        :param severity: The severity of this AlertFilters.  # noqa: E501
+        :type: str
+        """
+
+        self._severity = severity
 
     def to_dict(self):
         """Returns the model properties as a dict"""

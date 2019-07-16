@@ -31,59 +31,59 @@ class Debug(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'output': 'str',
-        'cmdline': 'str',
         'cmd_context': 'str',
+        'cmdline': 'str',
+        'output': 'str',
         'session_id': 'str'
     }
 
     attribute_map = {
-        'output': 'output',
-        'cmdline': 'cmdline',
         'cmd_context': 'cmdContext',
+        'cmdline': 'cmdline',
+        'output': 'output',
         'session_id': 'sessionId'
     }
 
-    def __init__(self, output=None, cmdline=None, cmd_context=None, session_id=None):  # noqa: E501
+    def __init__(self, cmd_context=None, cmdline=None, output=None, session_id=None):  # noqa: E501
         """Debug - a model defined in Swagger"""  # noqa: E501
 
-        self._output = None
-        self._cmdline = None
         self._cmd_context = None
+        self._cmdline = None
+        self._output = None
         self._session_id = None
         self.discriminator = None
 
-        if output is not None:
-            self.output = output
-        if cmdline is not None:
-            self.cmdline = cmdline
         if cmd_context is not None:
             self.cmd_context = cmd_context
+        if cmdline is not None:
+            self.cmdline = cmdline
+        if output is not None:
+            self.output = output
         if session_id is not None:
             self.session_id = session_id
 
     @property
-    def output(self):
-        """Gets the output of this Debug.  # noqa: E501
+    def cmd_context(self):
+        """Gets the cmd_context of this Debug.  # noqa: E501
 
-        The value of the debug command  # noqa: E501
+        The session prefix name  # noqa: E501
 
-        :return: The output of this Debug.  # noqa: E501
+        :return: The cmd_context of this Debug.  # noqa: E501
         :rtype: str
         """
-        return self._output
+        return self._cmd_context
 
-    @output.setter
-    def output(self, output):
-        """Sets the output of this Debug.
+    @cmd_context.setter
+    def cmd_context(self, cmd_context):
+        """Sets the cmd_context of this Debug.
 
-        The value of the debug command  # noqa: E501
+        The session prefix name  # noqa: E501
 
-        :param output: The output of this Debug.  # noqa: E501
+        :param cmd_context: The cmd_context of this Debug.  # noqa: E501
         :type: str
         """
 
-        self._output = output
+        self._cmd_context = cmd_context
 
     @property
     def cmdline(self):
@@ -109,27 +109,27 @@ class Debug(object):
         self._cmdline = cmdline
 
     @property
-    def cmd_context(self):
-        """Gets the cmd_context of this Debug.  # noqa: E501
+    def output(self):
+        """Gets the output of this Debug.  # noqa: E501
 
-        The session prefix name  # noqa: E501
+        The value of the debug command  # noqa: E501
 
-        :return: The cmd_context of this Debug.  # noqa: E501
+        :return: The output of this Debug.  # noqa: E501
         :rtype: str
         """
-        return self._cmd_context
+        return self._output
 
-    @cmd_context.setter
-    def cmd_context(self, cmd_context):
-        """Sets the cmd_context of this Debug.
+    @output.setter
+    def output(self, output):
+        """Sets the output of this Debug.
 
-        The session prefix name  # noqa: E501
+        The value of the debug command  # noqa: E501
 
-        :param cmd_context: The cmd_context of this Debug.  # noqa: E501
+        :param output: The output of this Debug.  # noqa: E501
         :type: str
         """
 
-        self._cmd_context = cmd_context
+        self._output = output
 
     @property
     def session_id(self):

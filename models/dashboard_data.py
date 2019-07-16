@@ -31,57 +31,57 @@ class DashboardData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'user_permission': 'str',
+        'id': 'int',
         'name': 'str',
         'sharable': 'bool',
-        'id': 'int'
+        'user_permission': 'str'
     }
 
     attribute_map = {
-        'user_permission': 'userPermission',
+        'id': 'id',
         'name': 'name',
         'sharable': 'sharable',
-        'id': 'id'
+        'user_permission': 'userPermission'
     }
 
-    def __init__(self, user_permission=None, name=None, sharable=None, id=None):  # noqa: E501
+    def __init__(self, id=None, name=None, sharable=None, user_permission=None):  # noqa: E501
         """DashboardData - a model defined in Swagger"""  # noqa: E501
 
-        self._user_permission = None
+        self._id = None
         self._name = None
         self._sharable = None
-        self._id = None
+        self._user_permission = None
         self.discriminator = None
 
-        if user_permission is not None:
-            self.user_permission = user_permission
+        if id is not None:
+            self.id = id
         if name is not None:
             self.name = name
         if sharable is not None:
             self.sharable = sharable
-        if id is not None:
-            self.id = id
+        if user_permission is not None:
+            self.user_permission = user_permission
 
     @property
-    def user_permission(self):
-        """Gets the user_permission of this DashboardData.  # noqa: E501
+    def id(self):
+        """Gets the id of this DashboardData.  # noqa: E501
 
 
-        :return: The user_permission of this DashboardData.  # noqa: E501
-        :rtype: str
+        :return: The id of this DashboardData.  # noqa: E501
+        :rtype: int
         """
-        return self._user_permission
+        return self._id
 
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this DashboardData.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this DashboardData.
 
 
-        :param user_permission: The user_permission of this DashboardData.  # noqa: E501
-        :type: str
+        :param id: The id of this DashboardData.  # noqa: E501
+        :type: int
         """
 
-        self._user_permission = user_permission
+        self._id = id
 
     @property
     def name(self):
@@ -126,25 +126,25 @@ class DashboardData(object):
         self._sharable = sharable
 
     @property
-    def id(self):
-        """Gets the id of this DashboardData.  # noqa: E501
+    def user_permission(self):
+        """Gets the user_permission of this DashboardData.  # noqa: E501
 
 
-        :return: The id of this DashboardData.  # noqa: E501
-        :rtype: int
+        :return: The user_permission of this DashboardData.  # noqa: E501
+        :rtype: str
         """
-        return self._id
+        return self._user_permission
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this DashboardData.
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this DashboardData.
 
 
-        :param id: The id of this DashboardData.  # noqa: E501
-        :type: int
+        :param user_permission: The user_permission of this DashboardData.  # noqa: E501
+        :type: str
         """
 
-        self._id = id
+        self._user_permission = user_permission
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -34,43 +34,43 @@ class TableWidgetColumn(object):
     """
     swagger_types = {
         'alternate_data_points': 'list[TableWidgetDataPoint]',
-        'rpn': 'str',
-        'data_point': 'TableWidgetDataPoint',
         'column_name': 'str',
+        'data_point': 'TableWidgetDataPoint',
         'enable_forecast': 'bool',
-        'rounding_decimal': 'int'
+        'rounding_decimal': 'int',
+        'rpn': 'str'
     }
 
     attribute_map = {
         'alternate_data_points': 'alternateDataPoints',
-        'rpn': 'rpn',
-        'data_point': 'dataPoint',
         'column_name': 'columnName',
+        'data_point': 'dataPoint',
         'enable_forecast': 'enableForecast',
-        'rounding_decimal': 'roundingDecimal'
+        'rounding_decimal': 'roundingDecimal',
+        'rpn': 'rpn'
     }
 
-    def __init__(self, alternate_data_points=None, rpn=None, data_point=None, column_name=None, enable_forecast=None, rounding_decimal=None):  # noqa: E501
+    def __init__(self, alternate_data_points=None, column_name=None, data_point=None, enable_forecast=None, rounding_decimal=None, rpn=None):  # noqa: E501
         """TableWidgetColumn - a model defined in Swagger"""  # noqa: E501
 
         self._alternate_data_points = None
-        self._rpn = None
-        self._data_point = None
         self._column_name = None
+        self._data_point = None
         self._enable_forecast = None
         self._rounding_decimal = None
+        self._rpn = None
         self.discriminator = None
 
         if alternate_data_points is not None:
             self.alternate_data_points = alternate_data_points
-        if rpn is not None:
-            self.rpn = rpn
-        self.data_point = data_point
         self.column_name = column_name
+        self.data_point = data_point
         if enable_forecast is not None:
             self.enable_forecast = enable_forecast
         if rounding_decimal is not None:
             self.rounding_decimal = rounding_decimal
+        if rpn is not None:
+            self.rpn = rpn
 
     @property
     def alternate_data_points(self):
@@ -94,25 +94,27 @@ class TableWidgetColumn(object):
         self._alternate_data_points = alternate_data_points
 
     @property
-    def rpn(self):
-        """Gets the rpn of this TableWidgetColumn.  # noqa: E501
+    def column_name(self):
+        """Gets the column_name of this TableWidgetColumn.  # noqa: E501
 
 
-        :return: The rpn of this TableWidgetColumn.  # noqa: E501
+        :return: The column_name of this TableWidgetColumn.  # noqa: E501
         :rtype: str
         """
-        return self._rpn
+        return self._column_name
 
-    @rpn.setter
-    def rpn(self, rpn):
-        """Sets the rpn of this TableWidgetColumn.
+    @column_name.setter
+    def column_name(self, column_name):
+        """Sets the column_name of this TableWidgetColumn.
 
 
-        :param rpn: The rpn of this TableWidgetColumn.  # noqa: E501
+        :param column_name: The column_name of this TableWidgetColumn.  # noqa: E501
         :type: str
         """
+        if column_name is None:
+            raise ValueError("Invalid value for `column_name`, must not be `None`")  # noqa: E501
 
-        self._rpn = rpn
+        self._column_name = column_name
 
     @property
     def data_point(self):
@@ -136,29 +138,6 @@ class TableWidgetColumn(object):
             raise ValueError("Invalid value for `data_point`, must not be `None`")  # noqa: E501
 
         self._data_point = data_point
-
-    @property
-    def column_name(self):
-        """Gets the column_name of this TableWidgetColumn.  # noqa: E501
-
-
-        :return: The column_name of this TableWidgetColumn.  # noqa: E501
-        :rtype: str
-        """
-        return self._column_name
-
-    @column_name.setter
-    def column_name(self, column_name):
-        """Sets the column_name of this TableWidgetColumn.
-
-
-        :param column_name: The column_name of this TableWidgetColumn.  # noqa: E501
-        :type: str
-        """
-        if column_name is None:
-            raise ValueError("Invalid value for `column_name`, must not be `None`")  # noqa: E501
-
-        self._column_name = column_name
 
     @property
     def enable_forecast(self):
@@ -201,6 +180,27 @@ class TableWidgetColumn(object):
         """
 
         self._rounding_decimal = rounding_decimal
+
+    @property
+    def rpn(self):
+        """Gets the rpn of this TableWidgetColumn.  # noqa: E501
+
+
+        :return: The rpn of this TableWidgetColumn.  # noqa: E501
+        :rtype: str
+        """
+        return self._rpn
+
+    @rpn.setter
+    def rpn(self, rpn):
+        """Sets the rpn of this TableWidgetColumn.
+
+
+        :param rpn: The rpn of this TableWidgetColumn.  # noqa: E501
+        :type: str
+        """
+
+        self._rpn = rpn
 
     def to_dict(self):
         """Returns the model properties as a dict"""

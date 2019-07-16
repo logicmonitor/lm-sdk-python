@@ -31,52 +31,52 @@ class SlaMetric(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'website_name': 'str',
+        'exclude_sdt': 'bool',
         'group_name': 'str',
-        'exclude_sdt': 'bool'
+        'website_name': 'str'
     }
 
     attribute_map = {
-        'website_name': 'websiteName',
+        'exclude_sdt': 'excludeSDT',
         'group_name': 'groupName',
-        'exclude_sdt': 'excludeSDT'
+        'website_name': 'websiteName'
     }
 
-    def __init__(self, website_name=None, group_name=None, exclude_sdt=None):  # noqa: E501
+    def __init__(self, exclude_sdt=None, group_name=None, website_name=None):  # noqa: E501
         """SlaMetric - a model defined in Swagger"""  # noqa: E501
 
-        self._website_name = None
-        self._group_name = None
         self._exclude_sdt = None
+        self._group_name = None
+        self._website_name = None
         self.discriminator = None
 
-        if website_name is not None:
-            self.website_name = website_name
-        if group_name is not None:
-            self.group_name = group_name
         if exclude_sdt is not None:
             self.exclude_sdt = exclude_sdt
+        if group_name is not None:
+            self.group_name = group_name
+        if website_name is not None:
+            self.website_name = website_name
 
     @property
-    def website_name(self):
-        """Gets the website_name of this SlaMetric.  # noqa: E501
+    def exclude_sdt(self):
+        """Gets the exclude_sdt of this SlaMetric.  # noqa: E501
 
 
-        :return: The website_name of this SlaMetric.  # noqa: E501
-        :rtype: str
+        :return: The exclude_sdt of this SlaMetric.  # noqa: E501
+        :rtype: bool
         """
-        return self._website_name
+        return self._exclude_sdt
 
-    @website_name.setter
-    def website_name(self, website_name):
-        """Sets the website_name of this SlaMetric.
+    @exclude_sdt.setter
+    def exclude_sdt(self, exclude_sdt):
+        """Sets the exclude_sdt of this SlaMetric.
 
 
-        :param website_name: The website_name of this SlaMetric.  # noqa: E501
-        :type: str
+        :param exclude_sdt: The exclude_sdt of this SlaMetric.  # noqa: E501
+        :type: bool
         """
 
-        self._website_name = website_name
+        self._exclude_sdt = exclude_sdt
 
     @property
     def group_name(self):
@@ -100,25 +100,25 @@ class SlaMetric(object):
         self._group_name = group_name
 
     @property
-    def exclude_sdt(self):
-        """Gets the exclude_sdt of this SlaMetric.  # noqa: E501
+    def website_name(self):
+        """Gets the website_name of this SlaMetric.  # noqa: E501
 
 
-        :return: The exclude_sdt of this SlaMetric.  # noqa: E501
-        :rtype: bool
+        :return: The website_name of this SlaMetric.  # noqa: E501
+        :rtype: str
         """
-        return self._exclude_sdt
+        return self._website_name
 
-    @exclude_sdt.setter
-    def exclude_sdt(self, exclude_sdt):
-        """Sets the exclude_sdt of this SlaMetric.
+    @website_name.setter
+    def website_name(self, website_name):
+        """Sets the website_name of this SlaMetric.
 
 
-        :param exclude_sdt: The exclude_sdt of this SlaMetric.  # noqa: E501
-        :type: bool
+        :param website_name: The website_name of this SlaMetric.  # noqa: E501
+        :type: str
         """
 
-        self._exclude_sdt = exclude_sdt
+        self._website_name = website_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -31,54 +31,54 @@ class GenerateReportRequest(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'with_admin_id': 'int',
+        'receive_emails': 'str',
         'report_id': 'int',
-        'receive_emails': 'str'
+        'with_admin_id': 'int'
     }
 
     attribute_map = {
-        'with_admin_id': 'withAdminId',
+        'receive_emails': 'receiveEmails',
         'report_id': 'reportId',
-        'receive_emails': 'receiveEmails'
+        'with_admin_id': 'withAdminId'
     }
 
-    def __init__(self, with_admin_id=None, report_id=None, receive_emails=None):  # noqa: E501
+    def __init__(self, receive_emails=None, report_id=None, with_admin_id=None):  # noqa: E501
         """GenerateReportRequest - a model defined in Swagger"""  # noqa: E501
 
-        self._with_admin_id = None
-        self._report_id = None
         self._receive_emails = None
+        self._report_id = None
+        self._with_admin_id = None
         self.discriminator = None
 
-        if with_admin_id is not None:
-            self.with_admin_id = with_admin_id
-        if report_id is not None:
-            self.report_id = report_id
         if receive_emails is not None:
             self.receive_emails = receive_emails
+        if report_id is not None:
+            self.report_id = report_id
+        if with_admin_id is not None:
+            self.with_admin_id = with_admin_id
 
     @property
-    def with_admin_id(self):
-        """Gets the with_admin_id of this GenerateReportRequest.  # noqa: E501
+    def receive_emails(self):
+        """Gets the receive_emails of this GenerateReportRequest.  # noqa: E501
 
-        Generate the report with the admin. 0 mean current user  # noqa: E501
+        The email addresses that LogicMonitor should send the report to, separated by commas  # noqa: E501
 
-        :return: The with_admin_id of this GenerateReportRequest.  # noqa: E501
-        :rtype: int
+        :return: The receive_emails of this GenerateReportRequest.  # noqa: E501
+        :rtype: str
         """
-        return self._with_admin_id
+        return self._receive_emails
 
-    @with_admin_id.setter
-    def with_admin_id(self, with_admin_id):
-        """Sets the with_admin_id of this GenerateReportRequest.
+    @receive_emails.setter
+    def receive_emails(self, receive_emails):
+        """Sets the receive_emails of this GenerateReportRequest.
 
-        Generate the report with the admin. 0 mean current user  # noqa: E501
+        The email addresses that LogicMonitor should send the report to, separated by commas  # noqa: E501
 
-        :param with_admin_id: The with_admin_id of this GenerateReportRequest.  # noqa: E501
-        :type: int
+        :param receive_emails: The receive_emails of this GenerateReportRequest.  # noqa: E501
+        :type: str
         """
 
-        self._with_admin_id = with_admin_id
+        self._receive_emails = receive_emails
 
     @property
     def report_id(self):
@@ -104,27 +104,27 @@ class GenerateReportRequest(object):
         self._report_id = report_id
 
     @property
-    def receive_emails(self):
-        """Gets the receive_emails of this GenerateReportRequest.  # noqa: E501
+    def with_admin_id(self):
+        """Gets the with_admin_id of this GenerateReportRequest.  # noqa: E501
 
-        The email addresses that LogicMonitor should send the report to, separated by commas  # noqa: E501
+        Generate the report with the admin. 0 mean current user  # noqa: E501
 
-        :return: The receive_emails of this GenerateReportRequest.  # noqa: E501
-        :rtype: str
+        :return: The with_admin_id of this GenerateReportRequest.  # noqa: E501
+        :rtype: int
         """
-        return self._receive_emails
+        return self._with_admin_id
 
-    @receive_emails.setter
-    def receive_emails(self, receive_emails):
-        """Sets the receive_emails of this GenerateReportRequest.
+    @with_admin_id.setter
+    def with_admin_id(self, with_admin_id):
+        """Sets the with_admin_id of this GenerateReportRequest.
 
-        The email addresses that LogicMonitor should send the report to, separated by commas  # noqa: E501
+        Generate the report with the admin. 0 mean current user  # noqa: E501
 
-        :param receive_emails: The receive_emails of this GenerateReportRequest.  # noqa: E501
-        :type: str
+        :param with_admin_id: The with_admin_id of this GenerateReportRequest.  # noqa: E501
+        :type: int
         """
 
-        self._receive_emails = receive_emails
+        self._with_admin_id = with_admin_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

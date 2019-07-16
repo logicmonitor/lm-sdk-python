@@ -34,80 +34,80 @@ class NetflowApplication(NetflowDataBase):
     """
     swagger_types = {
         'data_type': 'str',
+        'ip': 'str',
+        'client_count': 'int',
+        'destination_m_bytes': 'float',
+        'dns': 'str',
         'first_epoch_in_sec': 'int',
-        'protocol': 'str',
-        'source_m_bytes': 'float',
+        'flow_count': 'int',
+        'last_epoch_in_sec': 'int',
         'percent_usage': 'float',
         'port': 'int',
-        'last_epoch_in_sec': 'int',
-        'destination_m_bytes': 'float',
-        'ip': 'str',
-        'usage': 'float',
-        'dns': 'str',
-        'flow_count': 'int',
-        'client_count': 'int'
+        'protocol': 'str',
+        'source_m_bytes': 'float',
+        'usage': 'float'
     }
 
     attribute_map = {
         'data_type': 'dataType',
+        'ip': 'IP',
+        'client_count': 'clientCount',
+        'destination_m_bytes': 'destinationMBytes',
+        'dns': 'dns',
         'first_epoch_in_sec': 'firstEpochInSec',
-        'protocol': 'protocol',
-        'source_m_bytes': 'sourceMBytes',
+        'flow_count': 'flowCount',
+        'last_epoch_in_sec': 'lastEpochInSec',
         'percent_usage': 'percentUsage',
         'port': 'port',
-        'last_epoch_in_sec': 'lastEpochInSec',
-        'destination_m_bytes': 'destinationMBytes',
-        'ip': 'IP',
-        'usage': 'usage',
-        'dns': 'dns',
-        'flow_count': 'flowCount',
-        'client_count': 'clientCount'
+        'protocol': 'protocol',
+        'source_m_bytes': 'sourceMBytes',
+        'usage': 'usage'
     }
 
-    def __init__(self, data_type=None, first_epoch_in_sec=None, protocol=None, source_m_bytes=None, percent_usage=None, port=None, last_epoch_in_sec=None, destination_m_bytes=None, ip=None, usage=None, dns=None, flow_count=None, client_count=None):  # noqa: E501
+    def __init__(self, data_type=None, ip=None, client_count=None, destination_m_bytes=None, dns=None, first_epoch_in_sec=None, flow_count=None, last_epoch_in_sec=None, percent_usage=None, port=None, protocol=None, source_m_bytes=None, usage=None):  # noqa: E501
         """NetflowApplication - a model defined in Swagger"""  # noqa: E501
 
         self._data_type = None
+        self._ip = None
+        self._client_count = None
+        self._destination_m_bytes = None
+        self._dns = None
         self._first_epoch_in_sec = None
-        self._protocol = None
-        self._source_m_bytes = None
+        self._flow_count = None
+        self._last_epoch_in_sec = None
         self._percent_usage = None
         self._port = None
-        self._last_epoch_in_sec = None
-        self._destination_m_bytes = None
-        self._ip = None
+        self._protocol = None
+        self._source_m_bytes = None
         self._usage = None
-        self._dns = None
-        self._flow_count = None
-        self._client_count = None
         self.discriminator = None
 
         if data_type is not None:
             self.data_type = data_type
+        if ip is not None:
+            self.ip = ip
+        if client_count is not None:
+            self.client_count = client_count
+        if destination_m_bytes is not None:
+            self.destination_m_bytes = destination_m_bytes
+        if dns is not None:
+            self.dns = dns
         if first_epoch_in_sec is not None:
             self.first_epoch_in_sec = first_epoch_in_sec
-        if protocol is not None:
-            self.protocol = protocol
-        if source_m_bytes is not None:
-            self.source_m_bytes = source_m_bytes
+        if flow_count is not None:
+            self.flow_count = flow_count
+        if last_epoch_in_sec is not None:
+            self.last_epoch_in_sec = last_epoch_in_sec
         if percent_usage is not None:
             self.percent_usage = percent_usage
         if port is not None:
             self.port = port
-        if last_epoch_in_sec is not None:
-            self.last_epoch_in_sec = last_epoch_in_sec
-        if destination_m_bytes is not None:
-            self.destination_m_bytes = destination_m_bytes
-        if ip is not None:
-            self.ip = ip
+        if protocol is not None:
+            self.protocol = protocol
+        if source_m_bytes is not None:
+            self.source_m_bytes = source_m_bytes
         if usage is not None:
             self.usage = usage
-        if dns is not None:
-            self.dns = dns
-        if flow_count is not None:
-            self.flow_count = flow_count
-        if client_count is not None:
-            self.client_count = client_count
 
     @property
     def data_type(self):
@@ -131,6 +131,90 @@ class NetflowApplication(NetflowDataBase):
         self._data_type = data_type
 
     @property
+    def ip(self):
+        """Gets the ip of this NetflowApplication.  # noqa: E501
+
+
+        :return: The ip of this NetflowApplication.  # noqa: E501
+        :rtype: str
+        """
+        return self._ip
+
+    @ip.setter
+    def ip(self, ip):
+        """Sets the ip of this NetflowApplication.
+
+
+        :param ip: The ip of this NetflowApplication.  # noqa: E501
+        :type: str
+        """
+
+        self._ip = ip
+
+    @property
+    def client_count(self):
+        """Gets the client_count of this NetflowApplication.  # noqa: E501
+
+
+        :return: The client_count of this NetflowApplication.  # noqa: E501
+        :rtype: int
+        """
+        return self._client_count
+
+    @client_count.setter
+    def client_count(self, client_count):
+        """Sets the client_count of this NetflowApplication.
+
+
+        :param client_count: The client_count of this NetflowApplication.  # noqa: E501
+        :type: int
+        """
+
+        self._client_count = client_count
+
+    @property
+    def destination_m_bytes(self):
+        """Gets the destination_m_bytes of this NetflowApplication.  # noqa: E501
+
+
+        :return: The destination_m_bytes of this NetflowApplication.  # noqa: E501
+        :rtype: float
+        """
+        return self._destination_m_bytes
+
+    @destination_m_bytes.setter
+    def destination_m_bytes(self, destination_m_bytes):
+        """Sets the destination_m_bytes of this NetflowApplication.
+
+
+        :param destination_m_bytes: The destination_m_bytes of this NetflowApplication.  # noqa: E501
+        :type: float
+        """
+
+        self._destination_m_bytes = destination_m_bytes
+
+    @property
+    def dns(self):
+        """Gets the dns of this NetflowApplication.  # noqa: E501
+
+
+        :return: The dns of this NetflowApplication.  # noqa: E501
+        :rtype: str
+        """
+        return self._dns
+
+    @dns.setter
+    def dns(self, dns):
+        """Sets the dns of this NetflowApplication.
+
+
+        :param dns: The dns of this NetflowApplication.  # noqa: E501
+        :type: str
+        """
+
+        self._dns = dns
+
+    @property
     def first_epoch_in_sec(self):
         """Gets the first_epoch_in_sec of this NetflowApplication.  # noqa: E501
 
@@ -152,46 +236,46 @@ class NetflowApplication(NetflowDataBase):
         self._first_epoch_in_sec = first_epoch_in_sec
 
     @property
-    def protocol(self):
-        """Gets the protocol of this NetflowApplication.  # noqa: E501
+    def flow_count(self):
+        """Gets the flow_count of this NetflowApplication.  # noqa: E501
 
 
-        :return: The protocol of this NetflowApplication.  # noqa: E501
-        :rtype: str
+        :return: The flow_count of this NetflowApplication.  # noqa: E501
+        :rtype: int
         """
-        return self._protocol
+        return self._flow_count
 
-    @protocol.setter
-    def protocol(self, protocol):
-        """Sets the protocol of this NetflowApplication.
+    @flow_count.setter
+    def flow_count(self, flow_count):
+        """Sets the flow_count of this NetflowApplication.
 
 
-        :param protocol: The protocol of this NetflowApplication.  # noqa: E501
-        :type: str
+        :param flow_count: The flow_count of this NetflowApplication.  # noqa: E501
+        :type: int
         """
 
-        self._protocol = protocol
+        self._flow_count = flow_count
 
     @property
-    def source_m_bytes(self):
-        """Gets the source_m_bytes of this NetflowApplication.  # noqa: E501
+    def last_epoch_in_sec(self):
+        """Gets the last_epoch_in_sec of this NetflowApplication.  # noqa: E501
 
 
-        :return: The source_m_bytes of this NetflowApplication.  # noqa: E501
-        :rtype: float
+        :return: The last_epoch_in_sec of this NetflowApplication.  # noqa: E501
+        :rtype: int
         """
-        return self._source_m_bytes
+        return self._last_epoch_in_sec
 
-    @source_m_bytes.setter
-    def source_m_bytes(self, source_m_bytes):
-        """Sets the source_m_bytes of this NetflowApplication.
+    @last_epoch_in_sec.setter
+    def last_epoch_in_sec(self, last_epoch_in_sec):
+        """Sets the last_epoch_in_sec of this NetflowApplication.
 
 
-        :param source_m_bytes: The source_m_bytes of this NetflowApplication.  # noqa: E501
-        :type: float
+        :param last_epoch_in_sec: The last_epoch_in_sec of this NetflowApplication.  # noqa: E501
+        :type: int
         """
 
-        self._source_m_bytes = source_m_bytes
+        self._last_epoch_in_sec = last_epoch_in_sec
 
     @property
     def percent_usage(self):
@@ -236,67 +320,46 @@ class NetflowApplication(NetflowDataBase):
         self._port = port
 
     @property
-    def last_epoch_in_sec(self):
-        """Gets the last_epoch_in_sec of this NetflowApplication.  # noqa: E501
+    def protocol(self):
+        """Gets the protocol of this NetflowApplication.  # noqa: E501
 
 
-        :return: The last_epoch_in_sec of this NetflowApplication.  # noqa: E501
-        :rtype: int
-        """
-        return self._last_epoch_in_sec
-
-    @last_epoch_in_sec.setter
-    def last_epoch_in_sec(self, last_epoch_in_sec):
-        """Sets the last_epoch_in_sec of this NetflowApplication.
-
-
-        :param last_epoch_in_sec: The last_epoch_in_sec of this NetflowApplication.  # noqa: E501
-        :type: int
-        """
-
-        self._last_epoch_in_sec = last_epoch_in_sec
-
-    @property
-    def destination_m_bytes(self):
-        """Gets the destination_m_bytes of this NetflowApplication.  # noqa: E501
-
-
-        :return: The destination_m_bytes of this NetflowApplication.  # noqa: E501
-        :rtype: float
-        """
-        return self._destination_m_bytes
-
-    @destination_m_bytes.setter
-    def destination_m_bytes(self, destination_m_bytes):
-        """Sets the destination_m_bytes of this NetflowApplication.
-
-
-        :param destination_m_bytes: The destination_m_bytes of this NetflowApplication.  # noqa: E501
-        :type: float
-        """
-
-        self._destination_m_bytes = destination_m_bytes
-
-    @property
-    def ip(self):
-        """Gets the ip of this NetflowApplication.  # noqa: E501
-
-
-        :return: The ip of this NetflowApplication.  # noqa: E501
+        :return: The protocol of this NetflowApplication.  # noqa: E501
         :rtype: str
         """
-        return self._ip
+        return self._protocol
 
-    @ip.setter
-    def ip(self, ip):
-        """Sets the ip of this NetflowApplication.
+    @protocol.setter
+    def protocol(self, protocol):
+        """Sets the protocol of this NetflowApplication.
 
 
-        :param ip: The ip of this NetflowApplication.  # noqa: E501
+        :param protocol: The protocol of this NetflowApplication.  # noqa: E501
         :type: str
         """
 
-        self._ip = ip
+        self._protocol = protocol
+
+    @property
+    def source_m_bytes(self):
+        """Gets the source_m_bytes of this NetflowApplication.  # noqa: E501
+
+
+        :return: The source_m_bytes of this NetflowApplication.  # noqa: E501
+        :rtype: float
+        """
+        return self._source_m_bytes
+
+    @source_m_bytes.setter
+    def source_m_bytes(self, source_m_bytes):
+        """Sets the source_m_bytes of this NetflowApplication.
+
+
+        :param source_m_bytes: The source_m_bytes of this NetflowApplication.  # noqa: E501
+        :type: float
+        """
+
+        self._source_m_bytes = source_m_bytes
 
     @property
     def usage(self):
@@ -318,69 +381,6 @@ class NetflowApplication(NetflowDataBase):
         """
 
         self._usage = usage
-
-    @property
-    def dns(self):
-        """Gets the dns of this NetflowApplication.  # noqa: E501
-
-
-        :return: The dns of this NetflowApplication.  # noqa: E501
-        :rtype: str
-        """
-        return self._dns
-
-    @dns.setter
-    def dns(self, dns):
-        """Sets the dns of this NetflowApplication.
-
-
-        :param dns: The dns of this NetflowApplication.  # noqa: E501
-        :type: str
-        """
-
-        self._dns = dns
-
-    @property
-    def flow_count(self):
-        """Gets the flow_count of this NetflowApplication.  # noqa: E501
-
-
-        :return: The flow_count of this NetflowApplication.  # noqa: E501
-        :rtype: int
-        """
-        return self._flow_count
-
-    @flow_count.setter
-    def flow_count(self, flow_count):
-        """Sets the flow_count of this NetflowApplication.
-
-
-        :param flow_count: The flow_count of this NetflowApplication.  # noqa: E501
-        :type: int
-        """
-
-        self._flow_count = flow_count
-
-    @property
-    def client_count(self):
-        """Gets the client_count of this NetflowApplication.  # noqa: E501
-
-
-        :return: The client_count of this NetflowApplication.  # noqa: E501
-        :rtype: int
-        """
-        return self._client_count
-
-    @client_count.setter
-    def client_count(self, client_count):
-        """Sets the client_count of this NetflowApplication.
-
-
-        :param client_count: The client_count of this NetflowApplication.  # noqa: E501
-        :type: int
-        """
-
-        self._client_count = client_count
 
     def to_dict(self):
         """Returns the model properties as a dict"""

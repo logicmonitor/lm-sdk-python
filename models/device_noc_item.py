@@ -35,47 +35,47 @@ class DeviceNOCItem(NOCItemBase):
     swagger_types = {
         'type': 'str',
         'data_point_name': 'str',
-        'instance_name': 'str',
-        'name': 'str',
         'data_source_display_name': 'str',
-        'group_by': 'str',
+        'device_display_name': 'str',
         'device_group_full_path': 'str',
-        'device_display_name': 'str'
+        'group_by': 'str',
+        'instance_name': 'str',
+        'name': 'str'
     }
 
     attribute_map = {
         'type': 'type',
         'data_point_name': 'dataPointName',
-        'instance_name': 'instanceName',
-        'name': 'name',
         'data_source_display_name': 'dataSourceDisplayName',
-        'group_by': 'groupBy',
+        'device_display_name': 'deviceDisplayName',
         'device_group_full_path': 'deviceGroupFullPath',
-        'device_display_name': 'deviceDisplayName'
+        'group_by': 'groupBy',
+        'instance_name': 'instanceName',
+        'name': 'name'
     }
 
-    def __init__(self, type=None, data_point_name=None, instance_name=None, name=None, data_source_display_name=None, group_by=None, device_group_full_path=None, device_display_name=None):  # noqa: E501
+    def __init__(self, type=None, data_point_name=None, data_source_display_name=None, device_display_name=None, device_group_full_path=None, group_by=None, instance_name=None, name=None):  # noqa: E501
         """DeviceNOCItem - a model defined in Swagger"""  # noqa: E501
 
         self._type = None
         self._data_point_name = None
+        self._data_source_display_name = None
+        self._device_display_name = None
+        self._device_group_full_path = None
+        self._group_by = None
         self._instance_name = None
         self._name = None
-        self._data_source_display_name = None
-        self._group_by = None
-        self._device_group_full_path = None
-        self._device_display_name = None
         self.discriminator = None
 
         self.type = type
         self.data_point_name = data_point_name
-        self.instance_name = instance_name
-        self.name = name
         self.data_source_display_name = data_source_display_name
+        self.device_display_name = device_display_name
+        self.device_group_full_path = device_group_full_path
         if group_by is not None:
             self.group_by = group_by
-        self.device_group_full_path = device_group_full_path
-        self.device_display_name = device_display_name
+        self.instance_name = instance_name
+        self.name = name
 
     @property
     def type(self):
@@ -124,6 +124,96 @@ class DeviceNOCItem(NOCItemBase):
         self._data_point_name = data_point_name
 
     @property
+    def data_source_display_name(self):
+        """Gets the data_source_display_name of this DeviceNOCItem.  # noqa: E501
+
+
+        :return: The data_source_display_name of this DeviceNOCItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_source_display_name
+
+    @data_source_display_name.setter
+    def data_source_display_name(self, data_source_display_name):
+        """Sets the data_source_display_name of this DeviceNOCItem.
+
+
+        :param data_source_display_name: The data_source_display_name of this DeviceNOCItem.  # noqa: E501
+        :type: str
+        """
+        if data_source_display_name is None:
+            raise ValueError("Invalid value for `data_source_display_name`, must not be `None`")  # noqa: E501
+
+        self._data_source_display_name = data_source_display_name
+
+    @property
+    def device_display_name(self):
+        """Gets the device_display_name of this DeviceNOCItem.  # noqa: E501
+
+
+        :return: The device_display_name of this DeviceNOCItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._device_display_name
+
+    @device_display_name.setter
+    def device_display_name(self, device_display_name):
+        """Sets the device_display_name of this DeviceNOCItem.
+
+
+        :param device_display_name: The device_display_name of this DeviceNOCItem.  # noqa: E501
+        :type: str
+        """
+        if device_display_name is None:
+            raise ValueError("Invalid value for `device_display_name`, must not be `None`")  # noqa: E501
+
+        self._device_display_name = device_display_name
+
+    @property
+    def device_group_full_path(self):
+        """Gets the device_group_full_path of this DeviceNOCItem.  # noqa: E501
+
+
+        :return: The device_group_full_path of this DeviceNOCItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._device_group_full_path
+
+    @device_group_full_path.setter
+    def device_group_full_path(self, device_group_full_path):
+        """Sets the device_group_full_path of this DeviceNOCItem.
+
+
+        :param device_group_full_path: The device_group_full_path of this DeviceNOCItem.  # noqa: E501
+        :type: str
+        """
+        if device_group_full_path is None:
+            raise ValueError("Invalid value for `device_group_full_path`, must not be `None`")  # noqa: E501
+
+        self._device_group_full_path = device_group_full_path
+
+    @property
+    def group_by(self):
+        """Gets the group_by of this DeviceNOCItem.  # noqa: E501
+
+
+        :return: The group_by of this DeviceNOCItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._group_by
+
+    @group_by.setter
+    def group_by(self, group_by):
+        """Sets the group_by of this DeviceNOCItem.
+
+
+        :param group_by: The group_by of this DeviceNOCItem.  # noqa: E501
+        :type: str
+        """
+
+        self._group_by = group_by
+
+    @property
     def instance_name(self):
         """Gets the instance_name of this DeviceNOCItem.  # noqa: E501
 
@@ -168,96 +258,6 @@ class DeviceNOCItem(NOCItemBase):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
-
-    @property
-    def data_source_display_name(self):
-        """Gets the data_source_display_name of this DeviceNOCItem.  # noqa: E501
-
-
-        :return: The data_source_display_name of this DeviceNOCItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_source_display_name
-
-    @data_source_display_name.setter
-    def data_source_display_name(self, data_source_display_name):
-        """Sets the data_source_display_name of this DeviceNOCItem.
-
-
-        :param data_source_display_name: The data_source_display_name of this DeviceNOCItem.  # noqa: E501
-        :type: str
-        """
-        if data_source_display_name is None:
-            raise ValueError("Invalid value for `data_source_display_name`, must not be `None`")  # noqa: E501
-
-        self._data_source_display_name = data_source_display_name
-
-    @property
-    def group_by(self):
-        """Gets the group_by of this DeviceNOCItem.  # noqa: E501
-
-
-        :return: The group_by of this DeviceNOCItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._group_by
-
-    @group_by.setter
-    def group_by(self, group_by):
-        """Sets the group_by of this DeviceNOCItem.
-
-
-        :param group_by: The group_by of this DeviceNOCItem.  # noqa: E501
-        :type: str
-        """
-
-        self._group_by = group_by
-
-    @property
-    def device_group_full_path(self):
-        """Gets the device_group_full_path of this DeviceNOCItem.  # noqa: E501
-
-
-        :return: The device_group_full_path of this DeviceNOCItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._device_group_full_path
-
-    @device_group_full_path.setter
-    def device_group_full_path(self, device_group_full_path):
-        """Sets the device_group_full_path of this DeviceNOCItem.
-
-
-        :param device_group_full_path: The device_group_full_path of this DeviceNOCItem.  # noqa: E501
-        :type: str
-        """
-        if device_group_full_path is None:
-            raise ValueError("Invalid value for `device_group_full_path`, must not be `None`")  # noqa: E501
-
-        self._device_group_full_path = device_group_full_path
-
-    @property
-    def device_display_name(self):
-        """Gets the device_display_name of this DeviceNOCItem.  # noqa: E501
-
-
-        :return: The device_display_name of this DeviceNOCItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._device_display_name
-
-    @device_display_name.setter
-    def device_display_name(self, device_display_name):
-        """Sets the device_display_name of this DeviceNOCItem.
-
-
-        :param device_display_name: The device_display_name of this DeviceNOCItem.  # noqa: E501
-        :type: str
-        """
-        if device_display_name is None:
-            raise ValueError("Invalid value for `device_display_name`, must not be `None`")  # noqa: E501
-
-        self._device_display_name = device_display_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

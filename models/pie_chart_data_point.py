@@ -31,218 +31,88 @@ class PieChartDataPoint(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data_source_id': 'int',
-        'data_point_name': 'str',
-        'top10': 'bool',
-        'data_point_id': 'int',
-        'instance_name': 'str',
-        'data_source_full_name': 'str',
-        'name': 'str',
+        'aggregate': 'bool',
         'aggregate_function': 'str',
-        'device_group_full_path': 'str',
+        'data_point_id': 'int',
+        'data_point_name': 'str',
+        'data_source_full_name': 'str',
+        'data_source_id': 'int',
         'device_display_name': 'str',
-        'aggregate': 'bool'
+        'device_group_full_path': 'str',
+        'instance_name': 'str',
+        'name': 'str',
+        'top10': 'bool'
     }
 
     attribute_map = {
-        'data_source_id': 'dataSourceId',
-        'data_point_name': 'dataPointName',
-        'top10': 'top10',
-        'data_point_id': 'dataPointId',
-        'instance_name': 'instanceName',
-        'data_source_full_name': 'dataSourceFullName',
-        'name': 'name',
+        'aggregate': 'aggregate',
         'aggregate_function': 'aggregateFunction',
-        'device_group_full_path': 'deviceGroupFullPath',
+        'data_point_id': 'dataPointId',
+        'data_point_name': 'dataPointName',
+        'data_source_full_name': 'dataSourceFullName',
+        'data_source_id': 'dataSourceId',
         'device_display_name': 'deviceDisplayName',
-        'aggregate': 'aggregate'
+        'device_group_full_path': 'deviceGroupFullPath',
+        'instance_name': 'instanceName',
+        'name': 'name',
+        'top10': 'top10'
     }
 
-    def __init__(self, data_source_id=None, data_point_name=None, top10=None, data_point_id=None, instance_name=None, data_source_full_name=None, name=None, aggregate_function=None, device_group_full_path=None, device_display_name=None, aggregate=None):  # noqa: E501
+    def __init__(self, aggregate=None, aggregate_function=None, data_point_id=None, data_point_name=None, data_source_full_name=None, data_source_id=None, device_display_name=None, device_group_full_path=None, instance_name=None, name=None, top10=None):  # noqa: E501
         """PieChartDataPoint - a model defined in Swagger"""  # noqa: E501
 
-        self._data_source_id = None
-        self._data_point_name = None
-        self._top10 = None
-        self._data_point_id = None
-        self._instance_name = None
-        self._data_source_full_name = None
-        self._name = None
-        self._aggregate_function = None
-        self._device_group_full_path = None
-        self._device_display_name = None
         self._aggregate = None
+        self._aggregate_function = None
+        self._data_point_id = None
+        self._data_point_name = None
+        self._data_source_full_name = None
+        self._data_source_id = None
+        self._device_display_name = None
+        self._device_group_full_path = None
+        self._instance_name = None
+        self._name = None
+        self._top10 = None
         self.discriminator = None
 
-        if data_source_id is not None:
-            self.data_source_id = data_source_id
-        if data_point_name is not None:
-            self.data_point_name = data_point_name
-        if top10 is not None:
-            self.top10 = top10
-        if data_point_id is not None:
-            self.data_point_id = data_point_id
-        self.instance_name = instance_name
-        if data_source_full_name is not None:
-            self.data_source_full_name = data_source_full_name
-        self.name = name
-        if aggregate_function is not None:
-            self.aggregate_function = aggregate_function
-        self.device_group_full_path = device_group_full_path
-        self.device_display_name = device_display_name
         if aggregate is not None:
             self.aggregate = aggregate
+        if aggregate_function is not None:
+            self.aggregate_function = aggregate_function
+        if data_point_id is not None:
+            self.data_point_id = data_point_id
+        if data_point_name is not None:
+            self.data_point_name = data_point_name
+        if data_source_full_name is not None:
+            self.data_source_full_name = data_source_full_name
+        if data_source_id is not None:
+            self.data_source_id = data_source_id
+        self.device_display_name = device_display_name
+        self.device_group_full_path = device_group_full_path
+        self.instance_name = instance_name
+        self.name = name
+        if top10 is not None:
+            self.top10 = top10
 
     @property
-    def data_source_id(self):
-        """Gets the data_source_id of this PieChartDataPoint.  # noqa: E501
+    def aggregate(self):
+        """Gets the aggregate of this PieChartDataPoint.  # noqa: E501
 
 
-        :return: The data_source_id of this PieChartDataPoint.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_source_id
-
-    @data_source_id.setter
-    def data_source_id(self, data_source_id):
-        """Sets the data_source_id of this PieChartDataPoint.
-
-
-        :param data_source_id: The data_source_id of this PieChartDataPoint.  # noqa: E501
-        :type: int
-        """
-
-        self._data_source_id = data_source_id
-
-    @property
-    def data_point_name(self):
-        """Gets the data_point_name of this PieChartDataPoint.  # noqa: E501
-
-
-        :return: The data_point_name of this PieChartDataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_point_name
-
-    @data_point_name.setter
-    def data_point_name(self, data_point_name):
-        """Sets the data_point_name of this PieChartDataPoint.
-
-
-        :param data_point_name: The data_point_name of this PieChartDataPoint.  # noqa: E501
-        :type: str
-        """
-
-        self._data_point_name = data_point_name
-
-    @property
-    def top10(self):
-        """Gets the top10 of this PieChartDataPoint.  # noqa: E501
-
-
-        :return: The top10 of this PieChartDataPoint.  # noqa: E501
+        :return: The aggregate of this PieChartDataPoint.  # noqa: E501
         :rtype: bool
         """
-        return self._top10
+        return self._aggregate
 
-    @top10.setter
-    def top10(self, top10):
-        """Sets the top10 of this PieChartDataPoint.
+    @aggregate.setter
+    def aggregate(self, aggregate):
+        """Sets the aggregate of this PieChartDataPoint.
 
 
-        :param top10: The top10 of this PieChartDataPoint.  # noqa: E501
+        :param aggregate: The aggregate of this PieChartDataPoint.  # noqa: E501
         :type: bool
         """
 
-        self._top10 = top10
-
-    @property
-    def data_point_id(self):
-        """Gets the data_point_id of this PieChartDataPoint.  # noqa: E501
-
-
-        :return: The data_point_id of this PieChartDataPoint.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_point_id
-
-    @data_point_id.setter
-    def data_point_id(self, data_point_id):
-        """Sets the data_point_id of this PieChartDataPoint.
-
-
-        :param data_point_id: The data_point_id of this PieChartDataPoint.  # noqa: E501
-        :type: int
-        """
-
-        self._data_point_id = data_point_id
-
-    @property
-    def instance_name(self):
-        """Gets the instance_name of this PieChartDataPoint.  # noqa: E501
-
-
-        :return: The instance_name of this PieChartDataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._instance_name
-
-    @instance_name.setter
-    def instance_name(self, instance_name):
-        """Sets the instance_name of this PieChartDataPoint.
-
-
-        :param instance_name: The instance_name of this PieChartDataPoint.  # noqa: E501
-        :type: str
-        """
-        if instance_name is None:
-            raise ValueError("Invalid value for `instance_name`, must not be `None`")  # noqa: E501
-
-        self._instance_name = instance_name
-
-    @property
-    def data_source_full_name(self):
-        """Gets the data_source_full_name of this PieChartDataPoint.  # noqa: E501
-
-
-        :return: The data_source_full_name of this PieChartDataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_source_full_name
-
-    @data_source_full_name.setter
-    def data_source_full_name(self, data_source_full_name):
-        """Sets the data_source_full_name of this PieChartDataPoint.
-
-
-        :param data_source_full_name: The data_source_full_name of this PieChartDataPoint.  # noqa: E501
-        :type: str
-        """
-
-        self._data_source_full_name = data_source_full_name
-
-    @property
-    def name(self):
-        """Gets the name of this PieChartDataPoint.  # noqa: E501
-
-
-        :return: The name of this PieChartDataPoint.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this PieChartDataPoint.
-
-
-        :param name: The name of this PieChartDataPoint.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
+        self._aggregate = aggregate
 
     @property
     def aggregate_function(self):
@@ -266,27 +136,88 @@ class PieChartDataPoint(object):
         self._aggregate_function = aggregate_function
 
     @property
-    def device_group_full_path(self):
-        """Gets the device_group_full_path of this PieChartDataPoint.  # noqa: E501
+    def data_point_id(self):
+        """Gets the data_point_id of this PieChartDataPoint.  # noqa: E501
 
 
-        :return: The device_group_full_path of this PieChartDataPoint.  # noqa: E501
+        :return: The data_point_id of this PieChartDataPoint.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_point_id
+
+    @data_point_id.setter
+    def data_point_id(self, data_point_id):
+        """Sets the data_point_id of this PieChartDataPoint.
+
+
+        :param data_point_id: The data_point_id of this PieChartDataPoint.  # noqa: E501
+        :type: int
+        """
+
+        self._data_point_id = data_point_id
+
+    @property
+    def data_point_name(self):
+        """Gets the data_point_name of this PieChartDataPoint.  # noqa: E501
+
+
+        :return: The data_point_name of this PieChartDataPoint.  # noqa: E501
         :rtype: str
         """
-        return self._device_group_full_path
+        return self._data_point_name
 
-    @device_group_full_path.setter
-    def device_group_full_path(self, device_group_full_path):
-        """Sets the device_group_full_path of this PieChartDataPoint.
+    @data_point_name.setter
+    def data_point_name(self, data_point_name):
+        """Sets the data_point_name of this PieChartDataPoint.
 
 
-        :param device_group_full_path: The device_group_full_path of this PieChartDataPoint.  # noqa: E501
+        :param data_point_name: The data_point_name of this PieChartDataPoint.  # noqa: E501
         :type: str
         """
-        if device_group_full_path is None:
-            raise ValueError("Invalid value for `device_group_full_path`, must not be `None`")  # noqa: E501
 
-        self._device_group_full_path = device_group_full_path
+        self._data_point_name = data_point_name
+
+    @property
+    def data_source_full_name(self):
+        """Gets the data_source_full_name of this PieChartDataPoint.  # noqa: E501
+
+
+        :return: The data_source_full_name of this PieChartDataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_source_full_name
+
+    @data_source_full_name.setter
+    def data_source_full_name(self, data_source_full_name):
+        """Sets the data_source_full_name of this PieChartDataPoint.
+
+
+        :param data_source_full_name: The data_source_full_name of this PieChartDataPoint.  # noqa: E501
+        :type: str
+        """
+
+        self._data_source_full_name = data_source_full_name
+
+    @property
+    def data_source_id(self):
+        """Gets the data_source_id of this PieChartDataPoint.  # noqa: E501
+
+
+        :return: The data_source_id of this PieChartDataPoint.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_source_id
+
+    @data_source_id.setter
+    def data_source_id(self, data_source_id):
+        """Sets the data_source_id of this PieChartDataPoint.
+
+
+        :param data_source_id: The data_source_id of this PieChartDataPoint.  # noqa: E501
+        :type: int
+        """
+
+        self._data_source_id = data_source_id
 
     @property
     def device_display_name(self):
@@ -312,25 +243,94 @@ class PieChartDataPoint(object):
         self._device_display_name = device_display_name
 
     @property
-    def aggregate(self):
-        """Gets the aggregate of this PieChartDataPoint.  # noqa: E501
+    def device_group_full_path(self):
+        """Gets the device_group_full_path of this PieChartDataPoint.  # noqa: E501
 
 
-        :return: The aggregate of this PieChartDataPoint.  # noqa: E501
+        :return: The device_group_full_path of this PieChartDataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._device_group_full_path
+
+    @device_group_full_path.setter
+    def device_group_full_path(self, device_group_full_path):
+        """Sets the device_group_full_path of this PieChartDataPoint.
+
+
+        :param device_group_full_path: The device_group_full_path of this PieChartDataPoint.  # noqa: E501
+        :type: str
+        """
+        if device_group_full_path is None:
+            raise ValueError("Invalid value for `device_group_full_path`, must not be `None`")  # noqa: E501
+
+        self._device_group_full_path = device_group_full_path
+
+    @property
+    def instance_name(self):
+        """Gets the instance_name of this PieChartDataPoint.  # noqa: E501
+
+
+        :return: The instance_name of this PieChartDataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._instance_name
+
+    @instance_name.setter
+    def instance_name(self, instance_name):
+        """Sets the instance_name of this PieChartDataPoint.
+
+
+        :param instance_name: The instance_name of this PieChartDataPoint.  # noqa: E501
+        :type: str
+        """
+        if instance_name is None:
+            raise ValueError("Invalid value for `instance_name`, must not be `None`")  # noqa: E501
+
+        self._instance_name = instance_name
+
+    @property
+    def name(self):
+        """Gets the name of this PieChartDataPoint.  # noqa: E501
+
+
+        :return: The name of this PieChartDataPoint.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this PieChartDataPoint.
+
+
+        :param name: The name of this PieChartDataPoint.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def top10(self):
+        """Gets the top10 of this PieChartDataPoint.  # noqa: E501
+
+
+        :return: The top10 of this PieChartDataPoint.  # noqa: E501
         :rtype: bool
         """
-        return self._aggregate
+        return self._top10
 
-    @aggregate.setter
-    def aggregate(self, aggregate):
-        """Sets the aggregate of this PieChartDataPoint.
+    @top10.setter
+    def top10(self, top10):
+        """Sets the top10 of this PieChartDataPoint.
 
 
-        :param aggregate: The aggregate of this PieChartDataPoint.  # noqa: E501
+        :param top10: The top10 of this PieChartDataPoint.  # noqa: E501
         :type: bool
         """
 
-        self._aggregate = aggregate
+        self._top10 = top10
 
     def to_dict(self):
         """Returns the model properties as a dict"""

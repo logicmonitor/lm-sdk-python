@@ -101,7 +101,8 @@ Method | HTTP request | Description
 [**get_device_datasource_by_id**](LMApi.md#get_device_datasource_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{id} | get device datasource 
 [**get_device_datasource_data_by_id**](LMApi.md#get_device_datasource_data_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{id}/data | get device datasource data 
 [**get_device_datasource_instance_alert_setting_by_id**](LMApi.md#get_device_datasource_instance_alert_setting_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/alertsettings/{id} | get device instance alert setting
-[**get_device_datasource_instance_alert_setting_list**](LMApi.md#get_device_datasource_instance_alert_setting_list) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/alertsettings | get a list of alert settings for a device
+[**get_device_datasource_instance_alert_setting_list_of_device**](LMApi.md#get_device_datasource_instance_alert_setting_list_of_device) | **GET** /device/devices/{deviceId}/alertsettings | get a list of alert settings for a device
+[**get_device_datasource_instance_alert_setting_list_of_dsi**](LMApi.md#get_device_datasource_instance_alert_setting_list_of_dsi) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/alertsettings | get a list of alert settings for a device datasource instance
 [**get_device_datasource_instance_by_id**](LMApi.md#get_device_datasource_instance_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id} | get device instance 
 [**get_device_datasource_instance_data**](LMApi.md#get_device_datasource_instance_data) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}/data | get device instance data
 [**get_device_datasource_instance_graph_data**](LMApi.md#get_device_datasource_instance_graph_data) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}/graphs/{graphId}/data | get device instance graph data 
@@ -122,6 +123,7 @@ Method | HTTP request | Description
 [**get_device_group_property_list**](LMApi.md#get_device_group_property_list) | **GET** /device/groups/{gid}/properties | get device group properties
 [**get_device_group_sdt_list**](LMApi.md#get_device_group_sdt_list) | **GET** /device/groups/{id}/sdts | get device group SDTs
 [**get_device_instance_graph_data_only_by_instance_id**](LMApi.md#get_device_instance_graph_data_only_by_instance_id) | **GET** /device/devicedatasourceinstances/{instanceId}/graphs/{graphId}/data | get device instance data
+[**get_device_instance_list**](LMApi.md#get_device_instance_list) | **GET** /device/devices/{id}/instances | get device instance list
 [**get_device_list**](LMApi.md#get_device_list) | **GET** /device/devices | get device list
 [**get_device_property_by_name**](LMApi.md#get_device_property_by_name) | **GET** /device/devices/{deviceId}/properties/{name} | get device property by name
 [**get_device_property_list**](LMApi.md#get_device_property_list) | **GET** /device/devices/{deviceId}/properties | get device properties
@@ -131,6 +133,7 @@ Method | HTTP request | Description
 [**get_immediate_device_list_by_device_group_id**](LMApi.md#get_immediate_device_list_by_device_group_id) | **GET** /device/groups/{id}/devices | get immediate devices under group
 [**get_immediate_website_list_by_website_group_id**](LMApi.md#get_immediate_website_list_by_website_group_id) | **GET** /website/groups/{id}/websites | get a list of websites for a group
 [**get_logic_module_metadata**](LMApi.md#get_logic_module_metadata) | **GET** /setting/registry/metadata/{lmType}/{lmId} | get logic module metadata
+[**get_metrics_usage**](LMApi.md#get_metrics_usage) | **GET** /metrics/usage | get metrics usage
 [**get_netflow_endpoint_list**](LMApi.md#get_netflow_endpoint_list) | **GET** /device/devices/{id}/endpoints | get netflow endpoint list
 [**get_netflow_flow_list**](LMApi.md#get_netflow_flow_list) | **GET** /device/devices/{id}/flows | get netflow flow list
 [**get_netflow_port_list**](LMApi.md#get_netflow_port_list) | **GET** /device/devices/{id}/ports | get netflow port list
@@ -5670,7 +5673,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_datasource_data_by_id**
-> DeviceDataSourceData get_device_datasource_data_by_id(device_id, id, period=period, start=start, end=end, datapoints=datapoints, format=format)
+> DeviceDataSourceData get_device_datasource_data_by_id(device_id, id, period=period, start=start, end=end, datapoints=datapoints, format=format, aggregate=aggregate)
 
 get device datasource data 
 
@@ -5699,10 +5702,11 @@ start = 0 # int |  (optional) (default to 0)
 end = 0 # int |  (optional) (default to 0)
 datapoints = 'datapoints_example' # str |  (optional)
 format = 'json' # str |  (optional) (default to json)
+aggregate = 'none' # str | the aggregate option (optional) (default to none)
 
 try:
     # get device datasource data 
-    api_response = api_instance.get_device_datasource_data_by_id(device_id, id, period=period, start=start, end=end, datapoints=datapoints, format=format)
+    api_response = api_instance.get_device_datasource_data_by_id(device_id, id, period=period, start=start, end=end, datapoints=datapoints, format=format, aggregate=aggregate)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_device_datasource_data_by_id: %s\n" % e)
@@ -5719,6 +5723,7 @@ Name | Type | Description  | Notes
  **end** | **int**|  | [optional] [default to 0]
  **datapoints** | **str**|  | [optional] 
  **format** | **str**|  | [optional] [default to json]
+ **aggregate** | **str**| the aggregate option | [optional] [default to none]
 
 ### Return type
 
@@ -5797,8 +5802,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_device_datasource_instance_alert_setting_list**
-> DeviceDataSourceInstanceAlertSettingPaginationResponse get_device_datasource_instance_alert_setting_list(device_id, hds_id, instance_id)
+# **get_device_datasource_instance_alert_setting_list_of_device**
+> DeviceDataSourceInstanceAlertSettingPaginationResponse get_device_datasource_instance_alert_setting_list_of_device(device_id, start=start, end=end, netflow_filter=netflow_filter, size=size, offset=offset)
 
 get a list of alert settings for a device
 
@@ -5821,15 +5826,81 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
-hds_id = 56 # int | Device-DataSource ID
-instance_id = 56 # int | 
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
+netflow_filter = 'netflow_filter_example' # str |  (optional)
+size = 50 # int |  (optional) (default to 50)
+offset = 0 # int |  (optional) (default to 0)
 
 try:
     # get a list of alert settings for a device
-    api_response = api_instance.get_device_datasource_instance_alert_setting_list(device_id, hds_id, instance_id)
+    api_response = api_instance.get_device_datasource_instance_alert_setting_list_of_device(device_id, start=start, end=end, netflow_filter=netflow_filter, size=size, offset=offset)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LMApi->get_device_datasource_instance_alert_setting_list: %s\n" % e)
+    print("Exception when calling LMApi->get_device_datasource_instance_alert_setting_list_of_device: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_id** | **int**|  | 
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
+ **netflow_filter** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] [default to 50]
+ **offset** | **int**|  | [optional] [default to 0]
+
+### Return type
+
+[**DeviceDataSourceInstanceAlertSettingPaginationResponse**](DeviceDataSourceInstanceAlertSettingPaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_device_datasource_instance_alert_setting_list_of_dsi**
+> DeviceDataSourceInstanceAlertSettingPaginationResponse get_device_datasource_instance_alert_setting_list_of_dsi(device_id, hds_id, instance_id, size=size, offset=offset)
+
+get a list of alert settings for a device datasource instance
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+device_id = 56 # int | 
+hds_id = 56 # int | Device-DataSource ID
+instance_id = 56 # int | 
+size = 50 # int |  (optional) (default to 50)
+offset = 0 # int |  (optional) (default to 0)
+
+try:
+    # get a list of alert settings for a device datasource instance
+    api_response = api_instance.get_device_datasource_instance_alert_setting_list_of_dsi(device_id, hds_id, instance_id, size=size, offset=offset)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_device_datasource_instance_alert_setting_list_of_dsi: %s\n" % e)
 ```
 
 ### Parameters
@@ -5839,6 +5910,8 @@ Name | Type | Description  | Notes
  **device_id** | **int**|  | 
  **hds_id** | **int**| Device-DataSource ID | 
  **instance_id** | **int**|  | 
+ **size** | **int**|  | [optional] [default to 50]
+ **offset** | **int**|  | [optional] [default to 0]
 
 ### Return type
 
@@ -7089,6 +7162,74 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_device_instance_list**
+> DeviceDatasourceInstancePaginationResponse get_device_instance_list(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+
+get device instance list
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
+netflow_filter = 'netflow_filter_example' # str |  (optional)
+fields = 'fields_example' # str |  (optional)
+size = 50 # int |  (optional) (default to 50)
+offset = 0 # int |  (optional) (default to 0)
+filter = 'filter_example' # str |  (optional)
+
+try:
+    # get device instance list
+    api_response = api_instance.get_device_instance_list(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_device_instance_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
+ **netflow_filter** | **str**|  | [optional] 
+ **fields** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] [default to 50]
+ **offset** | **int**|  | [optional] [default to 0]
+ **filter** | **str**|  | [optional] 
+
+### Return type
+
+[**DeviceDatasourceInstancePaginationResponse**](DeviceDatasourceInstancePaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_device_list**
 > DevicePaginationResponse get_device_list(start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
 
@@ -7621,6 +7762,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LogicModuleMetadata**](LogicModuleMetadata.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_metrics_usage**
+> Usage get_metrics_usage()
+
+get metrics usage
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+
+try:
+    # get metrics usage
+    api_response = api_instance.get_metrics_usage()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_metrics_usage: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**Usage**](Usage.md)
 
 ### Authorization
 
@@ -9334,7 +9525,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_website_checkpoint_data_by_id**
-> WebsiteCheckpointRawData get_website_checkpoint_data_by_id(srv_id, check_id, period=period, start=start, end=end, datapoints=datapoints, format=format)
+> WebsiteCheckpointRawData get_website_checkpoint_data_by_id(srv_id, check_id, period=period, start=start, end=end, datapoints=datapoints, format=format, aggregate=aggregate)
 
 get data for a website checkpoint
 
@@ -9363,10 +9554,11 @@ start = 0 # int |  (optional) (default to 0)
 end = 0 # int |  (optional) (default to 0)
 datapoints = 'datapoints_example' # str |  (optional)
 format = 'json' # str |  (optional) (default to json)
+aggregate = 'none' # str | the aggregate option (optional) (default to none)
 
 try:
     # get data for a website checkpoint
-    api_response = api_instance.get_website_checkpoint_data_by_id(srv_id, check_id, period=period, start=start, end=end, datapoints=datapoints, format=format)
+    api_response = api_instance.get_website_checkpoint_data_by_id(srv_id, check_id, period=period, start=start, end=end, datapoints=datapoints, format=format, aggregate=aggregate)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_website_checkpoint_data_by_id: %s\n" % e)
@@ -9383,6 +9575,7 @@ Name | Type | Description  | Notes
  **end** | **int**|  | [optional] [default to 0]
  **datapoints** | **str**|  | [optional] 
  **format** | **str**|  | [optional] [default to json]
+ **aggregate** | **str**| the aggregate option | [optional] [default to none]
 
 ### Return type
 

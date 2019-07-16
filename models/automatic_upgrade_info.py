@@ -31,61 +31,82 @@ class AutomaticUpgradeInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'day_of_week': 'str',
-        'hour': 'int',
         'created_by': 'str',
-        'level': 'str',
-        'timezone': 'str',
+        'day_of_week': 'str',
         'description': 'str',
+        'hour': 'int',
+        'level': 'str',
+        'minute': 'int',
         'occurrence': 'str',
+        'timezone': 'str',
         'type': 'str',
-        'version': 'str',
-        'minute': 'int'
+        'version': 'str'
     }
 
     attribute_map = {
-        'day_of_week': 'dayOfWeek',
-        'hour': 'hour',
         'created_by': 'createdBy',
-        'level': 'level',
-        'timezone': 'timezone',
+        'day_of_week': 'dayOfWeek',
         'description': 'description',
+        'hour': 'hour',
+        'level': 'level',
+        'minute': 'minute',
         'occurrence': 'occurrence',
+        'timezone': 'timezone',
         'type': 'type',
-        'version': 'version',
-        'minute': 'minute'
+        'version': 'version'
     }
 
-    def __init__(self, day_of_week=None, hour=None, created_by=None, level=None, timezone=None, description=None, occurrence=None, type=None, version=None, minute=None):  # noqa: E501
+    def __init__(self, created_by=None, day_of_week=None, description=None, hour=None, level=None, minute=None, occurrence=None, timezone=None, type=None, version=None):  # noqa: E501
         """AutomaticUpgradeInfo - a model defined in Swagger"""  # noqa: E501
 
-        self._day_of_week = None
-        self._hour = None
         self._created_by = None
-        self._level = None
-        self._timezone = None
+        self._day_of_week = None
         self._description = None
+        self._hour = None
+        self._level = None
+        self._minute = None
         self._occurrence = None
+        self._timezone = None
         self._type = None
         self._version = None
-        self._minute = None
         self.discriminator = None
 
-        self.day_of_week = day_of_week
-        self.hour = hour
         if created_by is not None:
             self.created_by = created_by
-        if level is not None:
-            self.level = level
-        if timezone is not None:
-            self.timezone = timezone
+        self.day_of_week = day_of_week
         if description is not None:
             self.description = description
+        self.hour = hour
+        if level is not None:
+            self.level = level
+        self.minute = minute
         self.occurrence = occurrence
+        if timezone is not None:
+            self.timezone = timezone
         if type is not None:
             self.type = type
         self.version = version
-        self.minute = minute
+
+    @property
+    def created_by(self):
+        """Gets the created_by of this AutomaticUpgradeInfo.  # noqa: E501
+
+
+        :return: The created_by of this AutomaticUpgradeInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._created_by
+
+    @created_by.setter
+    def created_by(self, created_by):
+        """Sets the created_by of this AutomaticUpgradeInfo.
+
+
+        :param created_by: The created_by of this AutomaticUpgradeInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._created_by = created_by
 
     @property
     def day_of_week(self):
@@ -111,6 +132,27 @@ class AutomaticUpgradeInfo(object):
         self._day_of_week = day_of_week
 
     @property
+    def description(self):
+        """Gets the description of this AutomaticUpgradeInfo.  # noqa: E501
+
+
+        :return: The description of this AutomaticUpgradeInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this AutomaticUpgradeInfo.
+
+
+        :param description: The description of this AutomaticUpgradeInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
     def hour(self):
         """Gets the hour of this AutomaticUpgradeInfo.  # noqa: E501
 
@@ -134,27 +176,6 @@ class AutomaticUpgradeInfo(object):
         self._hour = hour
 
     @property
-    def created_by(self):
-        """Gets the created_by of this AutomaticUpgradeInfo.  # noqa: E501
-
-
-        :return: The created_by of this AutomaticUpgradeInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._created_by
-
-    @created_by.setter
-    def created_by(self, created_by):
-        """Sets the created_by of this AutomaticUpgradeInfo.
-
-
-        :param created_by: The created_by of this AutomaticUpgradeInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._created_by = created_by
-
-    @property
     def level(self):
         """Gets the level of this AutomaticUpgradeInfo.  # noqa: E501
 
@@ -176,46 +197,27 @@ class AutomaticUpgradeInfo(object):
         self._level = level
 
     @property
-    def timezone(self):
-        """Gets the timezone of this AutomaticUpgradeInfo.  # noqa: E501
+    def minute(self):
+        """Gets the minute of this AutomaticUpgradeInfo.  # noqa: E501
 
 
-        :return: The timezone of this AutomaticUpgradeInfo.  # noqa: E501
-        :rtype: str
+        :return: The minute of this AutomaticUpgradeInfo.  # noqa: E501
+        :rtype: int
         """
-        return self._timezone
+        return self._minute
 
-    @timezone.setter
-    def timezone(self, timezone):
-        """Sets the timezone of this AutomaticUpgradeInfo.
+    @minute.setter
+    def minute(self, minute):
+        """Sets the minute of this AutomaticUpgradeInfo.
 
 
-        :param timezone: The timezone of this AutomaticUpgradeInfo.  # noqa: E501
-        :type: str
+        :param minute: The minute of this AutomaticUpgradeInfo.  # noqa: E501
+        :type: int
         """
+        if minute is None:
+            raise ValueError("Invalid value for `minute`, must not be `None`")  # noqa: E501
 
-        self._timezone = timezone
-
-    @property
-    def description(self):
-        """Gets the description of this AutomaticUpgradeInfo.  # noqa: E501
-
-
-        :return: The description of this AutomaticUpgradeInfo.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this AutomaticUpgradeInfo.
-
-
-        :param description: The description of this AutomaticUpgradeInfo.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
+        self._minute = minute
 
     @property
     def occurrence(self):
@@ -239,6 +241,27 @@ class AutomaticUpgradeInfo(object):
             raise ValueError("Invalid value for `occurrence`, must not be `None`")  # noqa: E501
 
         self._occurrence = occurrence
+
+    @property
+    def timezone(self):
+        """Gets the timezone of this AutomaticUpgradeInfo.  # noqa: E501
+
+
+        :return: The timezone of this AutomaticUpgradeInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._timezone
+
+    @timezone.setter
+    def timezone(self, timezone):
+        """Sets the timezone of this AutomaticUpgradeInfo.
+
+
+        :param timezone: The timezone of this AutomaticUpgradeInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._timezone = timezone
 
     @property
     def type(self):
@@ -283,29 +306,6 @@ class AutomaticUpgradeInfo(object):
             raise ValueError("Invalid value for `version`, must not be `None`")  # noqa: E501
 
         self._version = version
-
-    @property
-    def minute(self):
-        """Gets the minute of this AutomaticUpgradeInfo.  # noqa: E501
-
-
-        :return: The minute of this AutomaticUpgradeInfo.  # noqa: E501
-        :rtype: int
-        """
-        return self._minute
-
-    @minute.setter
-    def minute(self, minute):
-        """Sets the minute of this AutomaticUpgradeInfo.
-
-
-        :param minute: The minute of this AutomaticUpgradeInfo.  # noqa: E501
-        :type: int
-        """
-        if minute is None:
-            raise ValueError("Invalid value for `minute`, must not be `None`")  # noqa: E501
-
-        self._minute = minute
 
     def to_dict(self):
         """Returns the model properties as a dict"""

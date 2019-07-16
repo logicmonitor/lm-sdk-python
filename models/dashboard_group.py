@@ -34,98 +34,121 @@ class DashboardGroup(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'template': 'object',
-        'full_path': 'str',
-        'user_permission': 'str',
-        'widget_tokens': 'list[WidgetToken]',
-        'name': 'str',
-        'num_of_direct_sub_groups': 'int',
-        'num_of_dashboards': 'int',
-        'description': 'str',
-        'id': 'int',
         'dashboards': 'list[DashboardData]',
+        'description': 'str',
+        'full_path': 'str',
+        'id': 'int',
+        'name': 'str',
+        'num_of_dashboards': 'int',
+        'num_of_direct_dashboards': 'int',
+        'num_of_direct_sub_groups': 'int',
         'parent_id': 'int',
-        'num_of_direct_dashboards': 'int'
+        'template': 'object',
+        'user_permission': 'str',
+        'widget_tokens': 'list[WidgetToken]'
     }
 
     attribute_map = {
-        'template': 'template',
-        'full_path': 'fullPath',
-        'user_permission': 'userPermission',
-        'widget_tokens': 'widgetTokens',
-        'name': 'name',
-        'num_of_direct_sub_groups': 'numOfDirectSubGroups',
-        'num_of_dashboards': 'numOfDashboards',
-        'description': 'description',
-        'id': 'id',
         'dashboards': 'dashboards',
+        'description': 'description',
+        'full_path': 'fullPath',
+        'id': 'id',
+        'name': 'name',
+        'num_of_dashboards': 'numOfDashboards',
+        'num_of_direct_dashboards': 'numOfDirectDashboards',
+        'num_of_direct_sub_groups': 'numOfDirectSubGroups',
         'parent_id': 'parentId',
-        'num_of_direct_dashboards': 'numOfDirectDashboards'
+        'template': 'template',
+        'user_permission': 'userPermission',
+        'widget_tokens': 'widgetTokens'
     }
 
-    def __init__(self, template=None, full_path=None, user_permission=None, widget_tokens=None, name=None, num_of_direct_sub_groups=None, num_of_dashboards=None, description=None, id=None, dashboards=None, parent_id=None, num_of_direct_dashboards=None):  # noqa: E501
+    def __init__(self, dashboards=None, description=None, full_path=None, id=None, name=None, num_of_dashboards=None, num_of_direct_dashboards=None, num_of_direct_sub_groups=None, parent_id=None, template=None, user_permission=None, widget_tokens=None):  # noqa: E501
         """DashboardGroup - a model defined in Swagger"""  # noqa: E501
 
-        self._template = None
+        self._dashboards = None
+        self._description = None
         self._full_path = None
+        self._id = None
+        self._name = None
+        self._num_of_dashboards = None
+        self._num_of_direct_dashboards = None
+        self._num_of_direct_sub_groups = None
+        self._parent_id = None
+        self._template = None
         self._user_permission = None
         self._widget_tokens = None
-        self._name = None
-        self._num_of_direct_sub_groups = None
-        self._num_of_dashboards = None
-        self._description = None
-        self._id = None
-        self._dashboards = None
-        self._parent_id = None
-        self._num_of_direct_dashboards = None
         self.discriminator = None
 
-        if template is not None:
-            self.template = template
+        if dashboards is not None:
+            self.dashboards = dashboards
+        if description is not None:
+            self.description = description
         if full_path is not None:
             self.full_path = full_path
+        if id is not None:
+            self.id = id
+        self.name = name
+        if num_of_dashboards is not None:
+            self.num_of_dashboards = num_of_dashboards
+        if num_of_direct_dashboards is not None:
+            self.num_of_direct_dashboards = num_of_direct_dashboards
+        if num_of_direct_sub_groups is not None:
+            self.num_of_direct_sub_groups = num_of_direct_sub_groups
+        if parent_id is not None:
+            self.parent_id = parent_id
+        if template is not None:
+            self.template = template
         if user_permission is not None:
             self.user_permission = user_permission
         if widget_tokens is not None:
             self.widget_tokens = widget_tokens
-        self.name = name
-        if num_of_direct_sub_groups is not None:
-            self.num_of_direct_sub_groups = num_of_direct_sub_groups
-        if num_of_dashboards is not None:
-            self.num_of_dashboards = num_of_dashboards
-        if description is not None:
-            self.description = description
-        if id is not None:
-            self.id = id
-        if dashboards is not None:
-            self.dashboards = dashboards
-        if parent_id is not None:
-            self.parent_id = parent_id
-        if num_of_direct_dashboards is not None:
-            self.num_of_direct_dashboards = num_of_direct_dashboards
 
     @property
-    def template(self):
-        """Gets the template of this DashboardGroup.  # noqa: E501
+    def dashboards(self):
+        """Gets the dashboards of this DashboardGroup.  # noqa: E501
 
-        The template which is used for import dashboard group  # noqa: E501
+        The dashboards that belong to the group  # noqa: E501
 
-        :return: The template of this DashboardGroup.  # noqa: E501
-        :rtype: object
+        :return: The dashboards of this DashboardGroup.  # noqa: E501
+        :rtype: list[DashboardData]
         """
-        return self._template
+        return self._dashboards
 
-    @template.setter
-    def template(self, template):
-        """Sets the template of this DashboardGroup.
+    @dashboards.setter
+    def dashboards(self, dashboards):
+        """Sets the dashboards of this DashboardGroup.
 
-        The template which is used for import dashboard group  # noqa: E501
+        The dashboards that belong to the group  # noqa: E501
 
-        :param template: The template of this DashboardGroup.  # noqa: E501
-        :type: object
+        :param dashboards: The dashboards of this DashboardGroup.  # noqa: E501
+        :type: list[DashboardData]
         """
 
-        self._template = template
+        self._dashboards = dashboards
+
+    @property
+    def description(self):
+        """Gets the description of this DashboardGroup.  # noqa: E501
+
+        This is a description of the dashboard group  # noqa: E501
+
+        :return: The description of this DashboardGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this DashboardGroup.
+
+        This is a description of the dashboard group  # noqa: E501
+
+        :param description: The description of this DashboardGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def full_path(self):
@@ -149,6 +172,169 @@ class DashboardGroup(object):
         """
 
         self._full_path = full_path
+
+    @property
+    def id(self):
+        """Gets the id of this DashboardGroup.  # noqa: E501
+
+        The Id of the dashboard group   # noqa: E501
+
+        :return: The id of this DashboardGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this DashboardGroup.
+
+        The Id of the dashboard group   # noqa: E501
+
+        :param id: The id of this DashboardGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this DashboardGroup.  # noqa: E501
+
+        The name of the dashboard group  # noqa: E501
+
+        :return: The name of this DashboardGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this DashboardGroup.
+
+        The name of the dashboard group  # noqa: E501
+
+        :param name: The name of this DashboardGroup.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def num_of_dashboards(self):
+        """Gets the num_of_dashboards of this DashboardGroup.  # noqa: E501
+
+        The number of dashboards that belong to the Dashboard Group and any sub-groups  # noqa: E501
+
+        :return: The num_of_dashboards of this DashboardGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._num_of_dashboards
+
+    @num_of_dashboards.setter
+    def num_of_dashboards(self, num_of_dashboards):
+        """Sets the num_of_dashboards of this DashboardGroup.
+
+        The number of dashboards that belong to the Dashboard Group and any sub-groups  # noqa: E501
+
+        :param num_of_dashboards: The num_of_dashboards of this DashboardGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._num_of_dashboards = num_of_dashboards
+
+    @property
+    def num_of_direct_dashboards(self):
+        """Gets the num_of_direct_dashboards of this DashboardGroup.  # noqa: E501
+
+        The number of dashboards that belong directly to the Dashboard Group  # noqa: E501
+
+        :return: The num_of_direct_dashboards of this DashboardGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._num_of_direct_dashboards
+
+    @num_of_direct_dashboards.setter
+    def num_of_direct_dashboards(self, num_of_direct_dashboards):
+        """Sets the num_of_direct_dashboards of this DashboardGroup.
+
+        The number of dashboards that belong directly to the Dashboard Group  # noqa: E501
+
+        :param num_of_direct_dashboards: The num_of_direct_dashboards of this DashboardGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._num_of_direct_dashboards = num_of_direct_dashboards
+
+    @property
+    def num_of_direct_sub_groups(self):
+        """Gets the num_of_direct_sub_groups of this DashboardGroup.  # noqa: E501
+
+        The number of groups directly under the Dashboard Group  # noqa: E501
+
+        :return: The num_of_direct_sub_groups of this DashboardGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._num_of_direct_sub_groups
+
+    @num_of_direct_sub_groups.setter
+    def num_of_direct_sub_groups(self, num_of_direct_sub_groups):
+        """Sets the num_of_direct_sub_groups of this DashboardGroup.
+
+        The number of groups directly under the Dashboard Group  # noqa: E501
+
+        :param num_of_direct_sub_groups: The num_of_direct_sub_groups of this DashboardGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._num_of_direct_sub_groups = num_of_direct_sub_groups
+
+    @property
+    def parent_id(self):
+        """Gets the parent_id of this DashboardGroup.  # noqa: E501
+
+        The Id of the parent dashboard group  # noqa: E501
+
+        :return: The parent_id of this DashboardGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._parent_id
+
+    @parent_id.setter
+    def parent_id(self, parent_id):
+        """Sets the parent_id of this DashboardGroup.
+
+        The Id of the parent dashboard group  # noqa: E501
+
+        :param parent_id: The parent_id of this DashboardGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._parent_id = parent_id
+
+    @property
+    def template(self):
+        """Gets the template of this DashboardGroup.  # noqa: E501
+
+        The template which is used for import dashboard group  # noqa: E501
+
+        :return: The template of this DashboardGroup.  # noqa: E501
+        :rtype: object
+        """
+        return self._template
+
+    @template.setter
+    def template(self, template):
+        """Sets the template of this DashboardGroup.
+
+        The template which is used for import dashboard group  # noqa: E501
+
+        :param template: The template of this DashboardGroup.  # noqa: E501
+        :type: object
+        """
+
+        self._template = template
 
     @property
     def user_permission(self):
@@ -195,192 +381,6 @@ class DashboardGroup(object):
         """
 
         self._widget_tokens = widget_tokens
-
-    @property
-    def name(self):
-        """Gets the name of this DashboardGroup.  # noqa: E501
-
-        The name of the dashboard group  # noqa: E501
-
-        :return: The name of this DashboardGroup.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this DashboardGroup.
-
-        The name of the dashboard group  # noqa: E501
-
-        :param name: The name of this DashboardGroup.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
-    def num_of_direct_sub_groups(self):
-        """Gets the num_of_direct_sub_groups of this DashboardGroup.  # noqa: E501
-
-        The number of groups directly under the Dashboard Group  # noqa: E501
-
-        :return: The num_of_direct_sub_groups of this DashboardGroup.  # noqa: E501
-        :rtype: int
-        """
-        return self._num_of_direct_sub_groups
-
-    @num_of_direct_sub_groups.setter
-    def num_of_direct_sub_groups(self, num_of_direct_sub_groups):
-        """Sets the num_of_direct_sub_groups of this DashboardGroup.
-
-        The number of groups directly under the Dashboard Group  # noqa: E501
-
-        :param num_of_direct_sub_groups: The num_of_direct_sub_groups of this DashboardGroup.  # noqa: E501
-        :type: int
-        """
-
-        self._num_of_direct_sub_groups = num_of_direct_sub_groups
-
-    @property
-    def num_of_dashboards(self):
-        """Gets the num_of_dashboards of this DashboardGroup.  # noqa: E501
-
-        The number of dashboards that belong to the Dashboard Group and any sub-groups  # noqa: E501
-
-        :return: The num_of_dashboards of this DashboardGroup.  # noqa: E501
-        :rtype: int
-        """
-        return self._num_of_dashboards
-
-    @num_of_dashboards.setter
-    def num_of_dashboards(self, num_of_dashboards):
-        """Sets the num_of_dashboards of this DashboardGroup.
-
-        The number of dashboards that belong to the Dashboard Group and any sub-groups  # noqa: E501
-
-        :param num_of_dashboards: The num_of_dashboards of this DashboardGroup.  # noqa: E501
-        :type: int
-        """
-
-        self._num_of_dashboards = num_of_dashboards
-
-    @property
-    def description(self):
-        """Gets the description of this DashboardGroup.  # noqa: E501
-
-        This is a description of the dashboard group  # noqa: E501
-
-        :return: The description of this DashboardGroup.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this DashboardGroup.
-
-        This is a description of the dashboard group  # noqa: E501
-
-        :param description: The description of this DashboardGroup.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
-    def id(self):
-        """Gets the id of this DashboardGroup.  # noqa: E501
-
-        The Id of the dashboard group   # noqa: E501
-
-        :return: The id of this DashboardGroup.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this DashboardGroup.
-
-        The Id of the dashboard group   # noqa: E501
-
-        :param id: The id of this DashboardGroup.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def dashboards(self):
-        """Gets the dashboards of this DashboardGroup.  # noqa: E501
-
-        The dashboards that belong to the group  # noqa: E501
-
-        :return: The dashboards of this DashboardGroup.  # noqa: E501
-        :rtype: list[DashboardData]
-        """
-        return self._dashboards
-
-    @dashboards.setter
-    def dashboards(self, dashboards):
-        """Sets the dashboards of this DashboardGroup.
-
-        The dashboards that belong to the group  # noqa: E501
-
-        :param dashboards: The dashboards of this DashboardGroup.  # noqa: E501
-        :type: list[DashboardData]
-        """
-
-        self._dashboards = dashboards
-
-    @property
-    def parent_id(self):
-        """Gets the parent_id of this DashboardGroup.  # noqa: E501
-
-        The Id of the parent dashboard group  # noqa: E501
-
-        :return: The parent_id of this DashboardGroup.  # noqa: E501
-        :rtype: int
-        """
-        return self._parent_id
-
-    @parent_id.setter
-    def parent_id(self, parent_id):
-        """Sets the parent_id of this DashboardGroup.
-
-        The Id of the parent dashboard group  # noqa: E501
-
-        :param parent_id: The parent_id of this DashboardGroup.  # noqa: E501
-        :type: int
-        """
-
-        self._parent_id = parent_id
-
-    @property
-    def num_of_direct_dashboards(self):
-        """Gets the num_of_direct_dashboards of this DashboardGroup.  # noqa: E501
-
-        The number of dashboards that belong directly to the Dashboard Group  # noqa: E501
-
-        :return: The num_of_direct_dashboards of this DashboardGroup.  # noqa: E501
-        :rtype: int
-        """
-        return self._num_of_direct_dashboards
-
-    @num_of_direct_dashboards.setter
-    def num_of_direct_dashboards(self, num_of_direct_dashboards):
-        """Sets the num_of_direct_dashboards of this DashboardGroup.
-
-        The number of dashboards that belong directly to the Dashboard Group  # noqa: E501
-
-        :param num_of_direct_dashboards: The num_of_direct_dashboards of this DashboardGroup.  # noqa: E501
-        :type: int
-        """
-
-        self._num_of_direct_dashboards = num_of_direct_dashboards
 
     def to_dict(self):
         """Returns the model properties as a dict"""

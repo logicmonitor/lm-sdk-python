@@ -31,41 +31,83 @@ class GraphOpsNoteScope(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'device_group_ids': 'list[int]',
+        'device_id': 'int',
         'service_group_ids': 'list[int]',
         'service_id': 'int',
-        'type': 'str',
-        'device_group_ids': 'list[int]',
-        'device_id': 'int'
+        'type': 'str'
     }
 
     attribute_map = {
+        'device_group_ids': 'deviceGroupIds',
+        'device_id': 'deviceId',
         'service_group_ids': 'serviceGroupIds',
         'service_id': 'serviceId',
-        'type': 'type',
-        'device_group_ids': 'deviceGroupIds',
-        'device_id': 'deviceId'
+        'type': 'type'
     }
 
-    def __init__(self, service_group_ids=None, service_id=None, type=None, device_group_ids=None, device_id=None):  # noqa: E501
+    def __init__(self, device_group_ids=None, device_id=None, service_group_ids=None, service_id=None, type=None):  # noqa: E501
         """GraphOpsNoteScope - a model defined in Swagger"""  # noqa: E501
 
+        self._device_group_ids = None
+        self._device_id = None
         self._service_group_ids = None
         self._service_id = None
         self._type = None
-        self._device_group_ids = None
-        self._device_id = None
         self.discriminator = None
 
+        if device_group_ids is not None:
+            self.device_group_ids = device_group_ids
+        if device_id is not None:
+            self.device_id = device_id
         if service_group_ids is not None:
             self.service_group_ids = service_group_ids
         if service_id is not None:
             self.service_id = service_id
         if type is not None:
             self.type = type
-        if device_group_ids is not None:
-            self.device_group_ids = device_group_ids
-        if device_id is not None:
-            self.device_id = device_id
+
+    @property
+    def device_group_ids(self):
+        """Gets the device_group_ids of this GraphOpsNoteScope.  # noqa: E501
+
+
+        :return: The device_group_ids of this GraphOpsNoteScope.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._device_group_ids
+
+    @device_group_ids.setter
+    def device_group_ids(self, device_group_ids):
+        """Sets the device_group_ids of this GraphOpsNoteScope.
+
+
+        :param device_group_ids: The device_group_ids of this GraphOpsNoteScope.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._device_group_ids = device_group_ids
+
+    @property
+    def device_id(self):
+        """Gets the device_id of this GraphOpsNoteScope.  # noqa: E501
+
+
+        :return: The device_id of this GraphOpsNoteScope.  # noqa: E501
+        :rtype: int
+        """
+        return self._device_id
+
+    @device_id.setter
+    def device_id(self, device_id):
+        """Sets the device_id of this GraphOpsNoteScope.
+
+
+        :param device_id: The device_id of this GraphOpsNoteScope.  # noqa: E501
+        :type: int
+        """
+
+        self._device_id = device_id
 
     @property
     def service_group_ids(self):
@@ -129,48 +171,6 @@ class GraphOpsNoteScope(object):
         """
 
         self._type = type
-
-    @property
-    def device_group_ids(self):
-        """Gets the device_group_ids of this GraphOpsNoteScope.  # noqa: E501
-
-
-        :return: The device_group_ids of this GraphOpsNoteScope.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._device_group_ids
-
-    @device_group_ids.setter
-    def device_group_ids(self, device_group_ids):
-        """Sets the device_group_ids of this GraphOpsNoteScope.
-
-
-        :param device_group_ids: The device_group_ids of this GraphOpsNoteScope.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._device_group_ids = device_group_ids
-
-    @property
-    def device_id(self):
-        """Gets the device_id of this GraphOpsNoteScope.  # noqa: E501
-
-
-        :return: The device_id of this GraphOpsNoteScope.  # noqa: E501
-        :rtype: int
-        """
-        return self._device_id
-
-    @device_id.setter
-    def device_id(self, device_id):
-        """Sets the device_id of this GraphOpsNoteScope.
-
-
-        :param device_id: The device_id of this GraphOpsNoteScope.  # noqa: E501
-        :type: int
-        """
-
-        self._device_id = device_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

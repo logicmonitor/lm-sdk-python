@@ -36,146 +36,100 @@ class DynamicTableWidget(Widget):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'last_updated_by': 'str',
-        'user_permission': 'str',
         'dashboard_id': 'int',
-        'name': 'str',
         'description': 'str',
-        'last_updated_on': 'int',
-        'theme': 'str',
-        'interval': 'int',
         'id': 'int',
-        'type': 'str',
+        'interval': 'int',
+        'last_updated_by': 'str',
+        'last_updated_on': 'int',
+        'name': 'str',
+        'theme': 'str',
         'timescale': 'str',
-        'data_source_id': 'int',
-        'top_x': 'int',
-        'data_source_full_name': 'str',
+        'type': 'str',
+        'user_permission': 'str',
         'columns': 'list[DynamicTableWidgetColumn]',
-        'sort_order': 'str',
+        'data_source_full_name': 'str',
+        'data_source_id': 'int',
         'forecast': 'TableWidgetForecastConfiguration',
-        'rows': 'list[DynamicTableWidgetRow]'
+        'rows': 'list[DynamicTableWidgetRow]',
+        'sort_order': 'str',
+        'top_x': 'int'
     }
 
     attribute_map = {
-        'last_updated_by': 'lastUpdatedBy',
-        'user_permission': 'userPermission',
         'dashboard_id': 'dashboardId',
-        'name': 'name',
         'description': 'description',
-        'last_updated_on': 'lastUpdatedOn',
-        'theme': 'theme',
-        'interval': 'interval',
         'id': 'id',
-        'type': 'type',
+        'interval': 'interval',
+        'last_updated_by': 'lastUpdatedBy',
+        'last_updated_on': 'lastUpdatedOn',
+        'name': 'name',
+        'theme': 'theme',
         'timescale': 'timescale',
-        'data_source_id': 'dataSourceId',
-        'top_x': 'topX',
-        'data_source_full_name': 'dataSourceFullName',
+        'type': 'type',
+        'user_permission': 'userPermission',
         'columns': 'columns',
-        'sort_order': 'sortOrder',
+        'data_source_full_name': 'dataSourceFullName',
+        'data_source_id': 'dataSourceId',
         'forecast': 'forecast',
-        'rows': 'rows'
+        'rows': 'rows',
+        'sort_order': 'sortOrder',
+        'top_x': 'topX'
     }
 
-    def __init__(self, last_updated_by=None, user_permission=None, dashboard_id=None, name=None, description=None, last_updated_on=None, theme=None, interval=None, id=None, type=None, timescale=None, data_source_id=None, top_x=None, data_source_full_name=None, columns=None, sort_order=None, forecast=None, rows=None):  # noqa: E501
+    def __init__(self, dashboard_id=None, description=None, id=None, interval=None, last_updated_by=None, last_updated_on=None, name=None, theme=None, timescale=None, type=None, user_permission=None, columns=None, data_source_full_name=None, data_source_id=None, forecast=None, rows=None, sort_order=None, top_x=None):  # noqa: E501
         """DynamicTableWidget - a model defined in Swagger"""  # noqa: E501
 
-        self._last_updated_by = None
-        self._user_permission = None
         self._dashboard_id = None
-        self._name = None
         self._description = None
-        self._last_updated_on = None
-        self._theme = None
-        self._interval = None
         self._id = None
-        self._type = None
+        self._interval = None
+        self._last_updated_by = None
+        self._last_updated_on = None
+        self._name = None
+        self._theme = None
         self._timescale = None
-        self._data_source_id = None
-        self._top_x = None
-        self._data_source_full_name = None
+        self._type = None
+        self._user_permission = None
         self._columns = None
-        self._sort_order = None
+        self._data_source_full_name = None
+        self._data_source_id = None
         self._forecast = None
         self._rows = None
+        self._sort_order = None
+        self._top_x = None
         self.discriminator = None
 
-        if last_updated_by is not None:
-            self.last_updated_by = last_updated_by
-        if user_permission is not None:
-            self.user_permission = user_permission
         self.dashboard_id = dashboard_id
-        self.name = name
         if description is not None:
             self.description = description
-        if last_updated_on is not None:
-            self.last_updated_on = last_updated_on
-        if theme is not None:
-            self.theme = theme
-        if interval is not None:
-            self.interval = interval
         if id is not None:
             self.id = id
-        self.type = type
+        if interval is not None:
+            self.interval = interval
+        if last_updated_by is not None:
+            self.last_updated_by = last_updated_by
+        if last_updated_on is not None:
+            self.last_updated_on = last_updated_on
+        self.name = name
+        if theme is not None:
+            self.theme = theme
         if timescale is not None:
             self.timescale = timescale
-        self.data_source_id = data_source_id
-        if top_x is not None:
-            self.top_x = top_x
+        self.type = type
+        if user_permission is not None:
+            self.user_permission = user_permission
+        self.columns = columns
         if data_source_full_name is not None:
             self.data_source_full_name = data_source_full_name
-        self.columns = columns
-        if sort_order is not None:
-            self.sort_order = sort_order
+        self.data_source_id = data_source_id
         if forecast is not None:
             self.forecast = forecast
         self.rows = rows
-
-    @property
-    def last_updated_by(self):
-        """Gets the last_updated_by of this DynamicTableWidget.  # noqa: E501
-
-        The user that last updated the widget  # noqa: E501
-
-        :return: The last_updated_by of this DynamicTableWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._last_updated_by
-
-    @last_updated_by.setter
-    def last_updated_by(self, last_updated_by):
-        """Sets the last_updated_by of this DynamicTableWidget.
-
-        The user that last updated the widget  # noqa: E501
-
-        :param last_updated_by: The last_updated_by of this DynamicTableWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._last_updated_by = last_updated_by
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this DynamicTableWidget.  # noqa: E501
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :return: The user_permission of this DynamicTableWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this DynamicTableWidget.
-
-        The permission level of the user who last modified the widget  # noqa: E501
-
-        :param user_permission: The user_permission of this DynamicTableWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
+        if sort_order is not None:
+            self.sort_order = sort_order
+        if top_x is not None:
+            self.top_x = top_x
 
     @property
     def dashboard_id(self):
@@ -203,31 +157,6 @@ class DynamicTableWidget(Widget):
         self._dashboard_id = dashboard_id
 
     @property
-    def name(self):
-        """Gets the name of this DynamicTableWidget.  # noqa: E501
-
-        The name of the widget  # noqa: E501
-
-        :return: The name of this DynamicTableWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this DynamicTableWidget.
-
-        The name of the widget  # noqa: E501
-
-        :param name: The name of this DynamicTableWidget.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
     def description(self):
         """Gets the description of this DynamicTableWidget.  # noqa: E501
 
@@ -251,50 +180,27 @@ class DynamicTableWidget(Widget):
         self._description = description
 
     @property
-    def last_updated_on(self):
-        """Gets the last_updated_on of this DynamicTableWidget.  # noqa: E501
+    def id(self):
+        """Gets the id of this DynamicTableWidget.  # noqa: E501
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :return: The last_updated_on of this DynamicTableWidget.  # noqa: E501
+        :return: The id of this DynamicTableWidget.  # noqa: E501
         :rtype: int
         """
-        return self._last_updated_on
+        return self._id
 
-    @last_updated_on.setter
-    def last_updated_on(self, last_updated_on):
-        """Sets the last_updated_on of this DynamicTableWidget.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this DynamicTableWidget.
 
-        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+        The Id of the widget  # noqa: E501
 
-        :param last_updated_on: The last_updated_on of this DynamicTableWidget.  # noqa: E501
+        :param id: The id of this DynamicTableWidget.  # noqa: E501
         :type: int
         """
 
-        self._last_updated_on = last_updated_on
-
-    @property
-    def theme(self):
-        """Gets the theme of this DynamicTableWidget.  # noqa: E501
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :return: The theme of this DynamicTableWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._theme
-
-    @theme.setter
-    def theme(self, theme):
-        """Sets the theme of this DynamicTableWidget.
-
-        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
-
-        :param theme: The theme of this DynamicTableWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._theme = theme
+        self._id = id
 
     @property
     def interval(self):
@@ -320,27 +226,121 @@ class DynamicTableWidget(Widget):
         self._interval = interval
 
     @property
-    def id(self):
-        """Gets the id of this DynamicTableWidget.  # noqa: E501
+    def last_updated_by(self):
+        """Gets the last_updated_by of this DynamicTableWidget.  # noqa: E501
 
-        The Id of the widget  # noqa: E501
+        The user that last updated the widget  # noqa: E501
 
-        :return: The id of this DynamicTableWidget.  # noqa: E501
+        :return: The last_updated_by of this DynamicTableWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_updated_by
+
+    @last_updated_by.setter
+    def last_updated_by(self, last_updated_by):
+        """Sets the last_updated_by of this DynamicTableWidget.
+
+        The user that last updated the widget  # noqa: E501
+
+        :param last_updated_by: The last_updated_by of this DynamicTableWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._last_updated_by = last_updated_by
+
+    @property
+    def last_updated_on(self):
+        """Gets the last_updated_on of this DynamicTableWidget.  # noqa: E501
+
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
+
+        :return: The last_updated_on of this DynamicTableWidget.  # noqa: E501
         :rtype: int
         """
-        return self._id
+        return self._last_updated_on
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this DynamicTableWidget.
+    @last_updated_on.setter
+    def last_updated_on(self, last_updated_on):
+        """Sets the last_updated_on of this DynamicTableWidget.
 
-        The Id of the widget  # noqa: E501
+        The time that corresponds to when the widget was last updated, in epoch format  # noqa: E501
 
-        :param id: The id of this DynamicTableWidget.  # noqa: E501
+        :param last_updated_on: The last_updated_on of this DynamicTableWidget.  # noqa: E501
         :type: int
         """
 
-        self._id = id
+        self._last_updated_on = last_updated_on
+
+    @property
+    def name(self):
+        """Gets the name of this DynamicTableWidget.  # noqa: E501
+
+        The name of the widget  # noqa: E501
+
+        :return: The name of this DynamicTableWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this DynamicTableWidget.
+
+        The name of the widget  # noqa: E501
+
+        :param name: The name of this DynamicTableWidget.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def theme(self):
+        """Gets the theme of this DynamicTableWidget.  # noqa: E501
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :return: The theme of this DynamicTableWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._theme
+
+    @theme.setter
+    def theme(self, theme):
+        """Sets the theme of this DynamicTableWidget.
+
+        The color scheme of the widget. Options are: borderPurple | borderGray | borderBlue | solidPurple | solidGray | solidBlue | simplePurple | simpleBlue | simpleGray | newBorderGray | newBorderBlue | newBorderDarkBlue | newSolidGray | newSolidBlue | newSolidDarkBlue | newSimpleGray | newSimpleBlue |newSimpleDarkBlue  # noqa: E501
+
+        :param theme: The theme of this DynamicTableWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._theme = theme
+
+    @property
+    def timescale(self):
+        """Gets the timescale of this DynamicTableWidget.  # noqa: E501
+
+        The default timescale of the widget  # noqa: E501
+
+        :return: The timescale of this DynamicTableWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._timescale
+
+    @timescale.setter
+    def timescale(self, timescale):
+        """Sets the timescale of this DynamicTableWidget.
+
+        The default timescale of the widget  # noqa: E501
+
+        :param timescale: The timescale of this DynamicTableWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._timescale = timescale
 
     @property
     def type(self):
@@ -368,96 +368,27 @@ class DynamicTableWidget(Widget):
         self._type = type
 
     @property
-    def timescale(self):
-        """Gets the timescale of this DynamicTableWidget.  # noqa: E501
+    def user_permission(self):
+        """Gets the user_permission of this DynamicTableWidget.  # noqa: E501
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :return: The timescale of this DynamicTableWidget.  # noqa: E501
+        :return: The user_permission of this DynamicTableWidget.  # noqa: E501
         :rtype: str
         """
-        return self._timescale
+        return self._user_permission
 
-    @timescale.setter
-    def timescale(self, timescale):
-        """Sets the timescale of this DynamicTableWidget.
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this DynamicTableWidget.
 
-        The default timescale of the widget  # noqa: E501
+        The permission level of the user who last modified the widget  # noqa: E501
 
-        :param timescale: The timescale of this DynamicTableWidget.  # noqa: E501
+        :param user_permission: The user_permission of this DynamicTableWidget.  # noqa: E501
         :type: str
         """
 
-        self._timescale = timescale
-
-    @property
-    def data_source_id(self):
-        """Gets the data_source_id of this DynamicTableWidget.  # noqa: E501
-
-        The id of the selected datasource  # noqa: E501
-
-        :return: The data_source_id of this DynamicTableWidget.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_source_id
-
-    @data_source_id.setter
-    def data_source_id(self, data_source_id):
-        """Sets the data_source_id of this DynamicTableWidget.
-
-        The id of the selected datasource  # noqa: E501
-
-        :param data_source_id: The data_source_id of this DynamicTableWidget.  # noqa: E501
-        :type: int
-        """
-        if data_source_id is None:
-            raise ValueError("Invalid value for `data_source_id`, must not be `None`")  # noqa: E501
-
-        self._data_source_id = data_source_id
-
-    @property
-    def top_x(self):
-        """Gets the top_x of this DynamicTableWidget.  # noqa: E501
-
-
-        :return: The top_x of this DynamicTableWidget.  # noqa: E501
-        :rtype: int
-        """
-        return self._top_x
-
-    @top_x.setter
-    def top_x(self, top_x):
-        """Sets the top_x of this DynamicTableWidget.
-
-
-        :param top_x: The top_x of this DynamicTableWidget.  # noqa: E501
-        :type: int
-        """
-
-        self._top_x = top_x
-
-    @property
-    def data_source_full_name(self):
-        """Gets the data_source_full_name of this DynamicTableWidget.  # noqa: E501
-
-        The full name of the selected datasource  # noqa: E501
-
-        :return: The data_source_full_name of this DynamicTableWidget.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_source_full_name
-
-    @data_source_full_name.setter
-    def data_source_full_name(self, data_source_full_name):
-        """Sets the data_source_full_name of this DynamicTableWidget.
-
-        The full name of the selected datasource  # noqa: E501
-
-        :param data_source_full_name: The data_source_full_name of this DynamicTableWidget.  # noqa: E501
-        :type: str
-        """
-
-        self._data_source_full_name = data_source_full_name
+        self._user_permission = user_permission
 
     @property
     def columns(self):
@@ -483,25 +414,52 @@ class DynamicTableWidget(Widget):
         self._columns = columns
 
     @property
-    def sort_order(self):
-        """Gets the sort_order of this DynamicTableWidget.  # noqa: E501
+    def data_source_full_name(self):
+        """Gets the data_source_full_name of this DynamicTableWidget.  # noqa: E501
 
+        The full name of the selected datasource  # noqa: E501
 
-        :return: The sort_order of this DynamicTableWidget.  # noqa: E501
+        :return: The data_source_full_name of this DynamicTableWidget.  # noqa: E501
         :rtype: str
         """
-        return self._sort_order
+        return self._data_source_full_name
 
-    @sort_order.setter
-    def sort_order(self, sort_order):
-        """Sets the sort_order of this DynamicTableWidget.
+    @data_source_full_name.setter
+    def data_source_full_name(self, data_source_full_name):
+        """Sets the data_source_full_name of this DynamicTableWidget.
 
+        The full name of the selected datasource  # noqa: E501
 
-        :param sort_order: The sort_order of this DynamicTableWidget.  # noqa: E501
+        :param data_source_full_name: The data_source_full_name of this DynamicTableWidget.  # noqa: E501
         :type: str
         """
 
-        self._sort_order = sort_order
+        self._data_source_full_name = data_source_full_name
+
+    @property
+    def data_source_id(self):
+        """Gets the data_source_id of this DynamicTableWidget.  # noqa: E501
+
+        The id of the selected datasource  # noqa: E501
+
+        :return: The data_source_id of this DynamicTableWidget.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_source_id
+
+    @data_source_id.setter
+    def data_source_id(self, data_source_id):
+        """Sets the data_source_id of this DynamicTableWidget.
+
+        The id of the selected datasource  # noqa: E501
+
+        :param data_source_id: The data_source_id of this DynamicTableWidget.  # noqa: E501
+        :type: int
+        """
+        if data_source_id is None:
+            raise ValueError("Invalid value for `data_source_id`, must not be `None`")  # noqa: E501
+
+        self._data_source_id = data_source_id
 
     @property
     def forecast(self):
@@ -546,6 +504,48 @@ class DynamicTableWidget(Widget):
             raise ValueError("Invalid value for `rows`, must not be `None`")  # noqa: E501
 
         self._rows = rows
+
+    @property
+    def sort_order(self):
+        """Gets the sort_order of this DynamicTableWidget.  # noqa: E501
+
+
+        :return: The sort_order of this DynamicTableWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._sort_order
+
+    @sort_order.setter
+    def sort_order(self, sort_order):
+        """Sets the sort_order of this DynamicTableWidget.
+
+
+        :param sort_order: The sort_order of this DynamicTableWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._sort_order = sort_order
+
+    @property
+    def top_x(self):
+        """Gets the top_x of this DynamicTableWidget.  # noqa: E501
+
+
+        :return: The top_x of this DynamicTableWidget.  # noqa: E501
+        :rtype: int
+        """
+        return self._top_x
+
+    @top_x.setter
+    def top_x(self, top_x):
+        """Sets the top_x of this DynamicTableWidget.
+
+
+        :param top_x: The top_x of this DynamicTableWidget.  # noqa: E501
+        :type: int
+        """
+
+        self._top_x = top_x
 
     def to_dict(self):
         """Returns the model properties as a dict"""

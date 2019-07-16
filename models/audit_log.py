@@ -31,120 +31,51 @@ class AuditLog(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'happened_on_local': 'str',
-        'ip': 'str',
-        'happened_on': 'int',
         'description': 'str',
+        'happened_on': 'int',
+        'happened_on_local': 'str',
         'id': 'str',
+        'ip': 'str',
         'session_id': 'str',
         'username': 'str'
     }
 
     attribute_map = {
-        'happened_on_local': 'happenedOnLocal',
-        'ip': 'ip',
-        'happened_on': 'happenedOn',
         'description': 'description',
+        'happened_on': 'happenedOn',
+        'happened_on_local': 'happenedOnLocal',
         'id': 'id',
+        'ip': 'ip',
         'session_id': 'sessionId',
         'username': 'username'
     }
 
-    def __init__(self, happened_on_local=None, ip=None, happened_on=None, description=None, id=None, session_id=None, username=None):  # noqa: E501
+    def __init__(self, description=None, happened_on=None, happened_on_local=None, id=None, ip=None, session_id=None, username=None):  # noqa: E501
         """AuditLog - a model defined in Swagger"""  # noqa: E501
 
-        self._happened_on_local = None
-        self._ip = None
-        self._happened_on = None
         self._description = None
+        self._happened_on = None
+        self._happened_on_local = None
         self._id = None
+        self._ip = None
         self._session_id = None
         self._username = None
         self.discriminator = None
 
-        if happened_on_local is not None:
-            self.happened_on_local = happened_on_local
-        if ip is not None:
-            self.ip = ip
-        if happened_on is not None:
-            self.happened_on = happened_on
         if description is not None:
             self.description = description
+        if happened_on is not None:
+            self.happened_on = happened_on
+        if happened_on_local is not None:
+            self.happened_on_local = happened_on_local
         if id is not None:
             self.id = id
+        if ip is not None:
+            self.ip = ip
         if session_id is not None:
             self.session_id = session_id
         if username is not None:
             self.username = username
-
-    @property
-    def happened_on_local(self):
-        """Gets the happened_on_local of this AuditLog.  # noqa: E501
-
-        The date and time that the action recorded in the access log entry occured  # noqa: E501
-
-        :return: The happened_on_local of this AuditLog.  # noqa: E501
-        :rtype: str
-        """
-        return self._happened_on_local
-
-    @happened_on_local.setter
-    def happened_on_local(self, happened_on_local):
-        """Sets the happened_on_local of this AuditLog.
-
-        The date and time that the action recorded in the access log entry occured  # noqa: E501
-
-        :param happened_on_local: The happened_on_local of this AuditLog.  # noqa: E501
-        :type: str
-        """
-
-        self._happened_on_local = happened_on_local
-
-    @property
-    def ip(self):
-        """Gets the ip of this AuditLog.  # noqa: E501
-
-        The IP address that the action was performed from  # noqa: E501
-
-        :return: The ip of this AuditLog.  # noqa: E501
-        :rtype: str
-        """
-        return self._ip
-
-    @ip.setter
-    def ip(self, ip):
-        """Sets the ip of this AuditLog.
-
-        The IP address that the action was performed from  # noqa: E501
-
-        :param ip: The ip of this AuditLog.  # noqa: E501
-        :type: str
-        """
-
-        self._ip = ip
-
-    @property
-    def happened_on(self):
-        """Gets the happened_on of this AuditLog.  # noqa: E501
-
-        The time, in epoch seconds, that the action recorded in the access log entry occurred  # noqa: E501
-
-        :return: The happened_on of this AuditLog.  # noqa: E501
-        :rtype: int
-        """
-        return self._happened_on
-
-    @happened_on.setter
-    def happened_on(self, happened_on):
-        """Sets the happened_on of this AuditLog.
-
-        The time, in epoch seconds, that the action recorded in the access log entry occurred  # noqa: E501
-
-        :param happened_on: The happened_on of this AuditLog.  # noqa: E501
-        :type: int
-        """
-
-        self._happened_on = happened_on
 
     @property
     def description(self):
@@ -170,6 +101,52 @@ class AuditLog(object):
         self._description = description
 
     @property
+    def happened_on(self):
+        """Gets the happened_on of this AuditLog.  # noqa: E501
+
+        The time, in epoch seconds, that the action recorded in the access log entry occurred  # noqa: E501
+
+        :return: The happened_on of this AuditLog.  # noqa: E501
+        :rtype: int
+        """
+        return self._happened_on
+
+    @happened_on.setter
+    def happened_on(self, happened_on):
+        """Sets the happened_on of this AuditLog.
+
+        The time, in epoch seconds, that the action recorded in the access log entry occurred  # noqa: E501
+
+        :param happened_on: The happened_on of this AuditLog.  # noqa: E501
+        :type: int
+        """
+
+        self._happened_on = happened_on
+
+    @property
+    def happened_on_local(self):
+        """Gets the happened_on_local of this AuditLog.  # noqa: E501
+
+        The date and time that the action recorded in the access log entry occured  # noqa: E501
+
+        :return: The happened_on_local of this AuditLog.  # noqa: E501
+        :rtype: str
+        """
+        return self._happened_on_local
+
+    @happened_on_local.setter
+    def happened_on_local(self, happened_on_local):
+        """Sets the happened_on_local of this AuditLog.
+
+        The date and time that the action recorded in the access log entry occured  # noqa: E501
+
+        :param happened_on_local: The happened_on_local of this AuditLog.  # noqa: E501
+        :type: str
+        """
+
+        self._happened_on_local = happened_on_local
+
+    @property
     def id(self):
         """Gets the id of this AuditLog.  # noqa: E501
 
@@ -191,6 +168,29 @@ class AuditLog(object):
         """
 
         self._id = id
+
+    @property
+    def ip(self):
+        """Gets the ip of this AuditLog.  # noqa: E501
+
+        The IP address that the action was performed from  # noqa: E501
+
+        :return: The ip of this AuditLog.  # noqa: E501
+        :rtype: str
+        """
+        return self._ip
+
+    @ip.setter
+    def ip(self, ip):
+        """Sets the ip of this AuditLog.
+
+        The IP address that the action was performed from  # noqa: E501
+
+        :param ip: The ip of this AuditLog.  # noqa: E501
+        :type: str
+        """
+
+        self._ip = ip
 
     @property
     def session_id(self):

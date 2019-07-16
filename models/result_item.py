@@ -32,30 +32,30 @@ class ResultItem(object):
     """
     swagger_types = {
         'bottom_label': 'str',
-        'value': 'str',
-        'color_level': 'int'
+        'color_level': 'int',
+        'value': 'str'
     }
 
     attribute_map = {
         'bottom_label': 'bottomLabel',
-        'value': 'value',
-        'color_level': 'colorLevel'
+        'color_level': 'colorLevel',
+        'value': 'value'
     }
 
-    def __init__(self, bottom_label=None, value=None, color_level=None):  # noqa: E501
+    def __init__(self, bottom_label=None, color_level=None, value=None):  # noqa: E501
         """ResultItem - a model defined in Swagger"""  # noqa: E501
 
         self._bottom_label = None
-        self._value = None
         self._color_level = None
+        self._value = None
         self.discriminator = None
 
         if bottom_label is not None:
             self.bottom_label = bottom_label
-        if value is not None:
-            self.value = value
         if color_level is not None:
             self.color_level = color_level
+        if value is not None:
+            self.value = value
 
     @property
     def bottom_label(self):
@@ -79,27 +79,6 @@ class ResultItem(object):
         self._bottom_label = bottom_label
 
     @property
-    def value(self):
-        """Gets the value of this ResultItem.  # noqa: E501
-
-
-        :return: The value of this ResultItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._value
-
-    @value.setter
-    def value(self, value):
-        """Sets the value of this ResultItem.
-
-
-        :param value: The value of this ResultItem.  # noqa: E501
-        :type: str
-        """
-
-        self._value = value
-
-    @property
     def color_level(self):
         """Gets the color_level of this ResultItem.  # noqa: E501
 
@@ -119,6 +98,27 @@ class ResultItem(object):
         """
 
         self._color_level = color_level
+
+    @property
+    def value(self):
+        """Gets the value of this ResultItem.  # noqa: E501
+
+
+        :return: The value of this ResultItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._value
+
+    @value.setter
+    def value(self, value):
+        """Sets the value of this ResultItem.
+
+
+        :param value: The value of this ResultItem.  # noqa: E501
+        :type: str
+        """
+
+        self._value = value
 
     def to_dict(self):
         """Returns the model properties as a dict"""

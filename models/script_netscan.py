@@ -35,334 +35,146 @@ class ScriptNetscan(Netscan):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'creator': 'str',
-        'collector_group_name': 'str',
-        'method': 'str',
-        'collector_group': 'int',
-        'description': 'str',
-        'next_start': 'str',
-        'duplicate': 'ExcludeDuplicateIps',
-        'version': 'int',
         'collector': 'int',
-        'schedule': 'RestSchedule',
         'collector_description': 'str',
-        'name': 'str',
-        'next_start_epoch': 'int',
-        'id': 'int',
-        'nsg_id': 'int',
+        'collector_group': 'int',
+        'collector_group_name': 'str',
+        'creator': 'str',
+        'description': 'str',
+        'duplicate': 'ExcludeDuplicateIps',
         'group': 'str',
-        'script_path': 'str',
-        'default_group_full_path': 'str',
+        'id': 'int',
+        'method': 'str',
+        'name': 'str',
+        'next_start': 'str',
+        'next_start_epoch': 'int',
+        'nsg_id': 'int',
+        'schedule': 'RestSchedule',
+        'version': 'int',
         'default_group': 'int',
+        'default_group_full_path': 'str',
         'groovy_script': 'str',
-        'linux_script_params': 'str',
-        'script_type': 'str',
         'groovy_script_params': 'str',
-        'windows_script': 'str',
-        'windows_script_params': 'str',
+        'linux_script': 'str',
+        'linux_script_params': 'str',
         'script_params': 'str',
-        'linux_script': 'str'
+        'script_path': 'str',
+        'script_type': 'str',
+        'windows_script': 'str',
+        'windows_script_params': 'str'
     }
 
     attribute_map = {
-        'creator': 'creator',
-        'collector_group_name': 'collectorGroupName',
-        'method': 'method',
-        'collector_group': 'collectorGroup',
-        'description': 'description',
-        'next_start': 'nextStart',
-        'duplicate': 'duplicate',
-        'version': 'version',
         'collector': 'collector',
-        'schedule': 'schedule',
         'collector_description': 'collectorDescription',
-        'name': 'name',
-        'next_start_epoch': 'nextStartEpoch',
-        'id': 'id',
-        'nsg_id': 'nsgId',
+        'collector_group': 'collectorGroup',
+        'collector_group_name': 'collectorGroupName',
+        'creator': 'creator',
+        'description': 'description',
+        'duplicate': 'duplicate',
         'group': 'group',
-        'script_path': 'scriptPath',
-        'default_group_full_path': 'defaultGroupFullPath',
+        'id': 'id',
+        'method': 'method',
+        'name': 'name',
+        'next_start': 'nextStart',
+        'next_start_epoch': 'nextStartEpoch',
+        'nsg_id': 'nsgId',
+        'schedule': 'schedule',
+        'version': 'version',
         'default_group': 'defaultGroup',
+        'default_group_full_path': 'defaultGroupFullPath',
         'groovy_script': 'groovyScript',
-        'linux_script_params': 'linuxScriptParams',
-        'script_type': 'scriptType',
         'groovy_script_params': 'groovyScriptParams',
-        'windows_script': 'windowsScript',
-        'windows_script_params': 'windowsScriptParams',
+        'linux_script': 'linuxScript',
+        'linux_script_params': 'linuxScriptParams',
         'script_params': 'scriptParams',
-        'linux_script': 'linuxScript'
+        'script_path': 'scriptPath',
+        'script_type': 'scriptType',
+        'windows_script': 'windowsScript',
+        'windows_script_params': 'windowsScriptParams'
     }
 
-    def __init__(self, creator=None, collector_group_name=None, method=None, collector_group=None, description=None, next_start=None, duplicate=None, version=None, collector=None, schedule=None, collector_description=None, name=None, next_start_epoch=None, id=None, nsg_id=None, group=None, script_path=None, default_group_full_path=None, default_group=None, groovy_script=None, linux_script_params=None, script_type=None, groovy_script_params=None, windows_script=None, windows_script_params=None, script_params=None, linux_script=None):  # noqa: E501
+    def __init__(self, collector=None, collector_description=None, collector_group=None, collector_group_name=None, creator=None, description=None, duplicate=None, group=None, id=None, method=None, name=None, next_start=None, next_start_epoch=None, nsg_id=None, schedule=None, version=None, default_group=None, default_group_full_path=None, groovy_script=None, groovy_script_params=None, linux_script=None, linux_script_params=None, script_params=None, script_path=None, script_type=None, windows_script=None, windows_script_params=None):  # noqa: E501
         """ScriptNetscan - a model defined in Swagger"""  # noqa: E501
 
-        self._creator = None
-        self._collector_group_name = None
-        self._method = None
-        self._collector_group = None
-        self._description = None
-        self._next_start = None
-        self._duplicate = None
-        self._version = None
         self._collector = None
-        self._schedule = None
         self._collector_description = None
-        self._name = None
-        self._next_start_epoch = None
-        self._id = None
-        self._nsg_id = None
+        self._collector_group = None
+        self._collector_group_name = None
+        self._creator = None
+        self._description = None
+        self._duplicate = None
         self._group = None
-        self._script_path = None
-        self._default_group_full_path = None
+        self._id = None
+        self._method = None
+        self._name = None
+        self._next_start = None
+        self._next_start_epoch = None
+        self._nsg_id = None
+        self._schedule = None
+        self._version = None
         self._default_group = None
+        self._default_group_full_path = None
         self._groovy_script = None
-        self._linux_script_params = None
-        self._script_type = None
         self._groovy_script_params = None
+        self._linux_script = None
+        self._linux_script_params = None
+        self._script_params = None
+        self._script_path = None
+        self._script_type = None
         self._windows_script = None
         self._windows_script_params = None
-        self._script_params = None
-        self._linux_script = None
         self.discriminator = None
 
-        if creator is not None:
-            self.creator = creator
-        if collector_group_name is not None:
-            self.collector_group_name = collector_group_name
-        self.method = method
-        if collector_group is not None:
-            self.collector_group = collector_group
-        if description is not None:
-            self.description = description
-        if next_start is not None:
-            self.next_start = next_start
-        self.duplicate = duplicate
-        if version is not None:
-            self.version = version
         self.collector = collector
-        if schedule is not None:
-            self.schedule = schedule
         if collector_description is not None:
             self.collector_description = collector_description
-        self.name = name
-        if next_start_epoch is not None:
-            self.next_start_epoch = next_start_epoch
-        if id is not None:
-            self.id = id
-        if nsg_id is not None:
-            self.nsg_id = nsg_id
+        if collector_group is not None:
+            self.collector_group = collector_group
+        if collector_group_name is not None:
+            self.collector_group_name = collector_group_name
+        if creator is not None:
+            self.creator = creator
+        if description is not None:
+            self.description = description
+        self.duplicate = duplicate
         if group is not None:
             self.group = group
-        if script_path is not None:
-            self.script_path = script_path
-        if default_group_full_path is not None:
-            self.default_group_full_path = default_group_full_path
+        if id is not None:
+            self.id = id
+        self.method = method
+        self.name = name
+        if next_start is not None:
+            self.next_start = next_start
+        if next_start_epoch is not None:
+            self.next_start_epoch = next_start_epoch
+        if nsg_id is not None:
+            self.nsg_id = nsg_id
+        if schedule is not None:
+            self.schedule = schedule
+        if version is not None:
+            self.version = version
         if default_group is not None:
             self.default_group = default_group
+        if default_group_full_path is not None:
+            self.default_group_full_path = default_group_full_path
         if groovy_script is not None:
             self.groovy_script = groovy_script
-        if linux_script_params is not None:
-            self.linux_script_params = linux_script_params
-        self.script_type = script_type
         if groovy_script_params is not None:
             self.groovy_script_params = groovy_script_params
+        if linux_script is not None:
+            self.linux_script = linux_script
+        if linux_script_params is not None:
+            self.linux_script_params = linux_script_params
+        if script_params is not None:
+            self.script_params = script_params
+        if script_path is not None:
+            self.script_path = script_path
+        self.script_type = script_type
         if windows_script is not None:
             self.windows_script = windows_script
         if windows_script_params is not None:
             self.windows_script_params = windows_script_params
-        if script_params is not None:
-            self.script_params = script_params
-        if linux_script is not None:
-            self.linux_script = linux_script
-
-    @property
-    def creator(self):
-        """Gets the creator of this ScriptNetscan.  # noqa: E501
-
-        The user that created the policy  # noqa: E501
-
-        :return: The creator of this ScriptNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._creator
-
-    @creator.setter
-    def creator(self, creator):
-        """Sets the creator of this ScriptNetscan.
-
-        The user that created the policy  # noqa: E501
-
-        :param creator: The creator of this ScriptNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._creator = creator
-
-    @property
-    def collector_group_name(self):
-        """Gets the collector_group_name of this ScriptNetscan.  # noqa: E501
-
-        The name of the group of the Collector associated with this Netscan  # noqa: E501
-
-        :return: The collector_group_name of this ScriptNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._collector_group_name
-
-    @collector_group_name.setter
-    def collector_group_name(self, collector_group_name):
-        """Sets the collector_group_name of this ScriptNetscan.
-
-        The name of the group of the Collector associated with this Netscan  # noqa: E501
-
-        :param collector_group_name: The collector_group_name of this ScriptNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._collector_group_name = collector_group_name
-
-    @property
-    def method(self):
-        """Gets the method of this ScriptNetscan.  # noqa: E501
-
-        The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), and script  # noqa: E501
-
-        :return: The method of this ScriptNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._method
-
-    @method.setter
-    def method(self, method):
-        """Sets the method of this ScriptNetscan.
-
-        The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), and script  # noqa: E501
-
-        :param method: The method of this ScriptNetscan.  # noqa: E501
-        :type: str
-        """
-        if method is None:
-            raise ValueError("Invalid value for `method`, must not be `None`")  # noqa: E501
-
-        self._method = method
-
-    @property
-    def collector_group(self):
-        """Gets the collector_group of this ScriptNetscan.  # noqa: E501
-
-        The ID of the group of the Collector associated with this Netscan  # noqa: E501
-
-        :return: The collector_group of this ScriptNetscan.  # noqa: E501
-        :rtype: int
-        """
-        return self._collector_group
-
-    @collector_group.setter
-    def collector_group(self, collector_group):
-        """Sets the collector_group of this ScriptNetscan.
-
-        The ID of the group of the Collector associated with this Netscan  # noqa: E501
-
-        :param collector_group: The collector_group of this ScriptNetscan.  # noqa: E501
-        :type: int
-        """
-
-        self._collector_group = collector_group
-
-    @property
-    def description(self):
-        """Gets the description of this ScriptNetscan.  # noqa: E501
-
-        The description of the Netscan Policy  # noqa: E501
-
-        :return: The description of this ScriptNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this ScriptNetscan.
-
-        The description of the Netscan Policy  # noqa: E501
-
-        :param description: The description of this ScriptNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
-
-    @property
-    def next_start(self):
-        """Gets the next_start of this ScriptNetscan.  # noqa: E501
-
-        The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule  # noqa: E501
-
-        :return: The next_start of this ScriptNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._next_start
-
-    @next_start.setter
-    def next_start(self, next_start):
-        """Sets the next_start of this ScriptNetscan.
-
-        The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule  # noqa: E501
-
-        :param next_start: The next_start of this ScriptNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._next_start = next_start
-
-    @property
-    def duplicate(self):
-        """Gets the duplicate of this ScriptNetscan.  # noqa: E501
-
-        Information that determines how duplicate discovered devices should be handled  # noqa: E501
-
-        :return: The duplicate of this ScriptNetscan.  # noqa: E501
-        :rtype: ExcludeDuplicateIps
-        """
-        return self._duplicate
-
-    @duplicate.setter
-    def duplicate(self, duplicate):
-        """Sets the duplicate of this ScriptNetscan.
-
-        Information that determines how duplicate discovered devices should be handled  # noqa: E501
-
-        :param duplicate: The duplicate of this ScriptNetscan.  # noqa: E501
-        :type: ExcludeDuplicateIps
-        """
-        if duplicate is None:
-            raise ValueError("Invalid value for `duplicate`, must not be `None`")  # noqa: E501
-
-        self._duplicate = duplicate
-
-    @property
-    def version(self):
-        """Gets the version of this ScriptNetscan.  # noqa: E501
-
-        The Id of the device  # noqa: E501
-
-        :return: The version of this ScriptNetscan.  # noqa: E501
-        :rtype: int
-        """
-        return self._version
-
-    @version.setter
-    def version(self, version):
-        """Sets the version of this ScriptNetscan.
-
-        The Id of the device  # noqa: E501
-
-        :param version: The version of this ScriptNetscan.  # noqa: E501
-        :type: int
-        """
-
-        self._version = version
 
     @property
     def collector(self):
@@ -390,29 +202,6 @@ class ScriptNetscan(Netscan):
         self._collector = collector
 
     @property
-    def schedule(self):
-        """Gets the schedule of this ScriptNetscan.  # noqa: E501
-
-        Information related to the recurring execution schedule for the Netscan Policy  # noqa: E501
-
-        :return: The schedule of this ScriptNetscan.  # noqa: E501
-        :rtype: RestSchedule
-        """
-        return self._schedule
-
-    @schedule.setter
-    def schedule(self, schedule):
-        """Sets the schedule of this ScriptNetscan.
-
-        Information related to the recurring execution schedule for the Netscan Policy  # noqa: E501
-
-        :param schedule: The schedule of this ScriptNetscan.  # noqa: E501
-        :type: RestSchedule
-        """
-
-        self._schedule = schedule
-
-    @property
     def collector_description(self):
         """Gets the collector_description of this ScriptNetscan.  # noqa: E501
 
@@ -434,6 +223,194 @@ class ScriptNetscan(Netscan):
         """
 
         self._collector_description = collector_description
+
+    @property
+    def collector_group(self):
+        """Gets the collector_group of this ScriptNetscan.  # noqa: E501
+
+        The ID of the group of the Collector associated with this Netscan  # noqa: E501
+
+        :return: The collector_group of this ScriptNetscan.  # noqa: E501
+        :rtype: int
+        """
+        return self._collector_group
+
+    @collector_group.setter
+    def collector_group(self, collector_group):
+        """Sets the collector_group of this ScriptNetscan.
+
+        The ID of the group of the Collector associated with this Netscan  # noqa: E501
+
+        :param collector_group: The collector_group of this ScriptNetscan.  # noqa: E501
+        :type: int
+        """
+
+        self._collector_group = collector_group
+
+    @property
+    def collector_group_name(self):
+        """Gets the collector_group_name of this ScriptNetscan.  # noqa: E501
+
+        The name of the group of the Collector associated with this Netscan  # noqa: E501
+
+        :return: The collector_group_name of this ScriptNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._collector_group_name
+
+    @collector_group_name.setter
+    def collector_group_name(self, collector_group_name):
+        """Sets the collector_group_name of this ScriptNetscan.
+
+        The name of the group of the Collector associated with this Netscan  # noqa: E501
+
+        :param collector_group_name: The collector_group_name of this ScriptNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._collector_group_name = collector_group_name
+
+    @property
+    def creator(self):
+        """Gets the creator of this ScriptNetscan.  # noqa: E501
+
+        The user that created the policy  # noqa: E501
+
+        :return: The creator of this ScriptNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._creator
+
+    @creator.setter
+    def creator(self, creator):
+        """Sets the creator of this ScriptNetscan.
+
+        The user that created the policy  # noqa: E501
+
+        :param creator: The creator of this ScriptNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._creator = creator
+
+    @property
+    def description(self):
+        """Gets the description of this ScriptNetscan.  # noqa: E501
+
+        The description of the Netscan Policy  # noqa: E501
+
+        :return: The description of this ScriptNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this ScriptNetscan.
+
+        The description of the Netscan Policy  # noqa: E501
+
+        :param description: The description of this ScriptNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def duplicate(self):
+        """Gets the duplicate of this ScriptNetscan.  # noqa: E501
+
+        Information that determines how duplicate discovered devices should be handled  # noqa: E501
+
+        :return: The duplicate of this ScriptNetscan.  # noqa: E501
+        :rtype: ExcludeDuplicateIps
+        """
+        return self._duplicate
+
+    @duplicate.setter
+    def duplicate(self, duplicate):
+        """Sets the duplicate of this ScriptNetscan.
+
+        Information that determines how duplicate discovered devices should be handled  # noqa: E501
+
+        :param duplicate: The duplicate of this ScriptNetscan.  # noqa: E501
+        :type: ExcludeDuplicateIps
+        """
+        if duplicate is None:
+            raise ValueError("Invalid value for `duplicate`, must not be `None`")  # noqa: E501
+
+        self._duplicate = duplicate
+
+    @property
+    def group(self):
+        """Gets the group of this ScriptNetscan.  # noqa: E501
+
+        The group the Netscan policy should belong to  # noqa: E501
+
+        :return: The group of this ScriptNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._group
+
+    @group.setter
+    def group(self, group):
+        """Sets the group of this ScriptNetscan.
+
+        The group the Netscan policy should belong to  # noqa: E501
+
+        :param group: The group of this ScriptNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._group = group
+
+    @property
+    def id(self):
+        """Gets the id of this ScriptNetscan.  # noqa: E501
+
+        The ID of the Netscan Policy  # noqa: E501
+
+        :return: The id of this ScriptNetscan.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this ScriptNetscan.
+
+        The ID of the Netscan Policy  # noqa: E501
+
+        :param id: The id of this ScriptNetscan.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def method(self):
+        """Gets the method of this ScriptNetscan.  # noqa: E501
+
+        The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), and script  # noqa: E501
+
+        :return: The method of this ScriptNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._method
+
+    @method.setter
+    def method(self, method):
+        """Sets the method of this ScriptNetscan.
+
+        The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), and script  # noqa: E501
+
+        :param method: The method of this ScriptNetscan.  # noqa: E501
+        :type: str
+        """
+        if method is None:
+            raise ValueError("Invalid value for `method`, must not be `None`")  # noqa: E501
+
+        self._method = method
 
     @property
     def name(self):
@@ -461,6 +438,29 @@ class ScriptNetscan(Netscan):
         self._name = name
 
     @property
+    def next_start(self):
+        """Gets the next_start of this ScriptNetscan.  # noqa: E501
+
+        The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule  # noqa: E501
+
+        :return: The next_start of this ScriptNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._next_start
+
+    @next_start.setter
+    def next_start(self, next_start):
+        """Sets the next_start of this ScriptNetscan.
+
+        The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule  # noqa: E501
+
+        :param next_start: The next_start of this ScriptNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._next_start = next_start
+
+    @property
     def next_start_epoch(self):
         """Gets the next_start_epoch of this ScriptNetscan.  # noqa: E501
 
@@ -482,29 +482,6 @@ class ScriptNetscan(Netscan):
         """
 
         self._next_start_epoch = next_start_epoch
-
-    @property
-    def id(self):
-        """Gets the id of this ScriptNetscan.  # noqa: E501
-
-        The ID of the Netscan Policy  # noqa: E501
-
-        :return: The id of this ScriptNetscan.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this ScriptNetscan.
-
-        The ID of the Netscan Policy  # noqa: E501
-
-        :param id: The id of this ScriptNetscan.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
 
     @property
     def nsg_id(self):
@@ -530,73 +507,50 @@ class ScriptNetscan(Netscan):
         self._nsg_id = nsg_id
 
     @property
-    def group(self):
-        """Gets the group of this ScriptNetscan.  # noqa: E501
+    def schedule(self):
+        """Gets the schedule of this ScriptNetscan.  # noqa: E501
 
-        The group the Netscan policy should belong to  # noqa: E501
+        Information related to the recurring execution schedule for the Netscan Policy  # noqa: E501
 
-        :return: The group of this ScriptNetscan.  # noqa: E501
-        :rtype: str
+        :return: The schedule of this ScriptNetscan.  # noqa: E501
+        :rtype: RestSchedule
         """
-        return self._group
+        return self._schedule
 
-    @group.setter
-    def group(self, group):
-        """Sets the group of this ScriptNetscan.
+    @schedule.setter
+    def schedule(self, schedule):
+        """Sets the schedule of this ScriptNetscan.
 
-        The group the Netscan policy should belong to  # noqa: E501
+        Information related to the recurring execution schedule for the Netscan Policy  # noqa: E501
 
-        :param group: The group of this ScriptNetscan.  # noqa: E501
-        :type: str
+        :param schedule: The schedule of this ScriptNetscan.  # noqa: E501
+        :type: RestSchedule
         """
 
-        self._group = group
+        self._schedule = schedule
 
     @property
-    def script_path(self):
-        """Gets the script_path of this ScriptNetscan.  # noqa: E501
+    def version(self):
+        """Gets the version of this ScriptNetscan.  # noqa: E501
 
-        The script path for an external script  # noqa: E501
+        The Id of the device  # noqa: E501
 
-        :return: The script_path of this ScriptNetscan.  # noqa: E501
-        :rtype: str
+        :return: The version of this ScriptNetscan.  # noqa: E501
+        :rtype: int
         """
-        return self._script_path
+        return self._version
 
-    @script_path.setter
-    def script_path(self, script_path):
-        """Sets the script_path of this ScriptNetscan.
+    @version.setter
+    def version(self, version):
+        """Sets the version of this ScriptNetscan.
 
-        The script path for an external script  # noqa: E501
+        The Id of the device  # noqa: E501
 
-        :param script_path: The script_path of this ScriptNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._script_path = script_path
-
-    @property
-    def default_group_full_path(self):
-        """Gets the default_group_full_path of this ScriptNetscan.  # noqa: E501
-
-        The full path of the default group to add discovered devices to  # noqa: E501
-
-        :return: The default_group_full_path of this ScriptNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._default_group_full_path
-
-    @default_group_full_path.setter
-    def default_group_full_path(self, default_group_full_path):
-        """Sets the default_group_full_path of this ScriptNetscan.
-
-        The full path of the default group to add discovered devices to  # noqa: E501
-
-        :param default_group_full_path: The default_group_full_path of this ScriptNetscan.  # noqa: E501
-        :type: str
+        :param version: The version of this ScriptNetscan.  # noqa: E501
+        :type: int
         """
 
-        self._default_group_full_path = default_group_full_path
+        self._version = version
 
     @property
     def default_group(self):
@@ -622,6 +576,29 @@ class ScriptNetscan(Netscan):
         self._default_group = default_group
 
     @property
+    def default_group_full_path(self):
+        """Gets the default_group_full_path of this ScriptNetscan.  # noqa: E501
+
+        The full path of the default group to add discovered devices to  # noqa: E501
+
+        :return: The default_group_full_path of this ScriptNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_group_full_path
+
+    @default_group_full_path.setter
+    def default_group_full_path(self, default_group_full_path):
+        """Sets the default_group_full_path of this ScriptNetscan.
+
+        The full path of the default group to add discovered devices to  # noqa: E501
+
+        :param default_group_full_path: The default_group_full_path of this ScriptNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._default_group_full_path = default_group_full_path
+
+    @property
     def groovy_script(self):
         """Gets the groovy_script of this ScriptNetscan.  # noqa: E501
 
@@ -645,6 +622,50 @@ class ScriptNetscan(Netscan):
         self._groovy_script = groovy_script
 
     @property
+    def groovy_script_params(self):
+        """Gets the groovy_script_params of this ScriptNetscan.  # noqa: E501
+
+        For embedded script scans, the groovy script parameters  # noqa: E501
+
+        :return: The groovy_script_params of this ScriptNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._groovy_script_params
+
+    @groovy_script_params.setter
+    def groovy_script_params(self, groovy_script_params):
+        """Sets the groovy_script_params of this ScriptNetscan.
+
+        For embedded script scans, the groovy script parameters  # noqa: E501
+
+        :param groovy_script_params: The groovy_script_params of this ScriptNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._groovy_script_params = groovy_script_params
+
+    @property
+    def linux_script(self):
+        """Gets the linux_script of this ScriptNetscan.  # noqa: E501
+
+
+        :return: The linux_script of this ScriptNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._linux_script
+
+    @linux_script.setter
+    def linux_script(self, linux_script):
+        """Sets the linux_script of this ScriptNetscan.
+
+
+        :param linux_script: The linux_script of this ScriptNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._linux_script = linux_script
+
+    @property
     def linux_script_params(self):
         """Gets the linux_script_params of this ScriptNetscan.  # noqa: E501
 
@@ -664,6 +685,52 @@ class ScriptNetscan(Netscan):
         """
 
         self._linux_script_params = linux_script_params
+
+    @property
+    def script_params(self):
+        """Gets the script_params of this ScriptNetscan.  # noqa: E501
+
+        The parameters for an external script  # noqa: E501
+
+        :return: The script_params of this ScriptNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._script_params
+
+    @script_params.setter
+    def script_params(self, script_params):
+        """Sets the script_params of this ScriptNetscan.
+
+        The parameters for an external script  # noqa: E501
+
+        :param script_params: The script_params of this ScriptNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._script_params = script_params
+
+    @property
+    def script_path(self):
+        """Gets the script_path of this ScriptNetscan.  # noqa: E501
+
+        The script path for an external script  # noqa: E501
+
+        :return: The script_path of this ScriptNetscan.  # noqa: E501
+        :rtype: str
+        """
+        return self._script_path
+
+    @script_path.setter
+    def script_path(self, script_path):
+        """Sets the script_path of this ScriptNetscan.
+
+        The script path for an external script  # noqa: E501
+
+        :param script_path: The script_path of this ScriptNetscan.  # noqa: E501
+        :type: str
+        """
+
+        self._script_path = script_path
 
     @property
     def script_type(self):
@@ -689,29 +756,6 @@ class ScriptNetscan(Netscan):
             raise ValueError("Invalid value for `script_type`, must not be `None`")  # noqa: E501
 
         self._script_type = script_type
-
-    @property
-    def groovy_script_params(self):
-        """Gets the groovy_script_params of this ScriptNetscan.  # noqa: E501
-
-        For embedded script scans, the groovy script parameters  # noqa: E501
-
-        :return: The groovy_script_params of this ScriptNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._groovy_script_params
-
-    @groovy_script_params.setter
-    def groovy_script_params(self, groovy_script_params):
-        """Sets the groovy_script_params of this ScriptNetscan.
-
-        For embedded script scans, the groovy script parameters  # noqa: E501
-
-        :param groovy_script_params: The groovy_script_params of this ScriptNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._groovy_script_params = groovy_script_params
 
     @property
     def windows_script(self):
@@ -754,50 +798,6 @@ class ScriptNetscan(Netscan):
         """
 
         self._windows_script_params = windows_script_params
-
-    @property
-    def script_params(self):
-        """Gets the script_params of this ScriptNetscan.  # noqa: E501
-
-        The parameters for an external script  # noqa: E501
-
-        :return: The script_params of this ScriptNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._script_params
-
-    @script_params.setter
-    def script_params(self, script_params):
-        """Sets the script_params of this ScriptNetscan.
-
-        The parameters for an external script  # noqa: E501
-
-        :param script_params: The script_params of this ScriptNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._script_params = script_params
-
-    @property
-    def linux_script(self):
-        """Gets the linux_script of this ScriptNetscan.  # noqa: E501
-
-
-        :return: The linux_script of this ScriptNetscan.  # noqa: E501
-        :rtype: str
-        """
-        return self._linux_script
-
-    @linux_script.setter
-    def linux_script(self, linux_script):
-        """Sets the linux_script of this ScriptNetscan.
-
-
-        :param linux_script: The linux_script of this ScriptNetscan.  # noqa: E501
-        :type: str
-        """
-
-        self._linux_script = linux_script
 
     def to_dict(self):
         """Returns the model properties as a dict"""

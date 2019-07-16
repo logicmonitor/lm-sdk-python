@@ -32,43 +32,43 @@ class GraphLine(object):
     """
     swagger_types = {
         'color_name': 'str',
-        'data_point_name': 'str',
         'data_point_id': 'int',
-        'legend': 'str',
+        'data_point_name': 'str',
         'is_virtual_data_point': 'bool',
+        'legend': 'str',
         'type': 'int'
     }
 
     attribute_map = {
         'color_name': 'colorName',
-        'data_point_name': 'dataPointName',
         'data_point_id': 'dataPointId',
-        'legend': 'legend',
+        'data_point_name': 'dataPointName',
         'is_virtual_data_point': 'isVirtualDataPoint',
+        'legend': 'legend',
         'type': 'type'
     }
 
-    def __init__(self, color_name=None, data_point_name=None, data_point_id=None, legend=None, is_virtual_data_point=None, type=None):  # noqa: E501
+    def __init__(self, color_name=None, data_point_id=None, data_point_name=None, is_virtual_data_point=None, legend=None, type=None):  # noqa: E501
         """GraphLine - a model defined in Swagger"""  # noqa: E501
 
         self._color_name = None
-        self._data_point_name = None
         self._data_point_id = None
-        self._legend = None
+        self._data_point_name = None
         self._is_virtual_data_point = None
+        self._legend = None
         self._type = None
         self.discriminator = None
 
         if color_name is not None:
             self.color_name = color_name
-        if data_point_name is not None:
-            self.data_point_name = data_point_name
         if data_point_id is not None:
             self.data_point_id = data_point_id
-        if legend is not None:
-            self.legend = legend
+        if data_point_name is not None:
+            self.data_point_name = data_point_name
         if is_virtual_data_point is not None:
             self.is_virtual_data_point = is_virtual_data_point
+        if legend is not None:
+            self.legend = legend
         if type is not None:
             self.type = type
 
@@ -94,27 +94,6 @@ class GraphLine(object):
         self._color_name = color_name
 
     @property
-    def data_point_name(self):
-        """Gets the data_point_name of this GraphLine.  # noqa: E501
-
-
-        :return: The data_point_name of this GraphLine.  # noqa: E501
-        :rtype: str
-        """
-        return self._data_point_name
-
-    @data_point_name.setter
-    def data_point_name(self, data_point_name):
-        """Sets the data_point_name of this GraphLine.
-
-
-        :param data_point_name: The data_point_name of this GraphLine.  # noqa: E501
-        :type: str
-        """
-
-        self._data_point_name = data_point_name
-
-    @property
     def data_point_id(self):
         """Gets the data_point_id of this GraphLine.  # noqa: E501
 
@@ -136,25 +115,25 @@ class GraphLine(object):
         self._data_point_id = data_point_id
 
     @property
-    def legend(self):
-        """Gets the legend of this GraphLine.  # noqa: E501
+    def data_point_name(self):
+        """Gets the data_point_name of this GraphLine.  # noqa: E501
 
 
-        :return: The legend of this GraphLine.  # noqa: E501
+        :return: The data_point_name of this GraphLine.  # noqa: E501
         :rtype: str
         """
-        return self._legend
+        return self._data_point_name
 
-    @legend.setter
-    def legend(self, legend):
-        """Sets the legend of this GraphLine.
+    @data_point_name.setter
+    def data_point_name(self, data_point_name):
+        """Sets the data_point_name of this GraphLine.
 
 
-        :param legend: The legend of this GraphLine.  # noqa: E501
+        :param data_point_name: The data_point_name of this GraphLine.  # noqa: E501
         :type: str
         """
 
-        self._legend = legend
+        self._data_point_name = data_point_name
 
     @property
     def is_virtual_data_point(self):
@@ -176,6 +155,27 @@ class GraphLine(object):
         """
 
         self._is_virtual_data_point = is_virtual_data_point
+
+    @property
+    def legend(self):
+        """Gets the legend of this GraphLine.  # noqa: E501
+
+
+        :return: The legend of this GraphLine.  # noqa: E501
+        :rtype: str
+        """
+        return self._legend
+
+    @legend.setter
+    def legend(self, legend):
+        """Sets the legend of this GraphLine.
+
+
+        :param legend: The legend of this GraphLine.  # noqa: E501
+        :type: str
+        """
+
+        self._legend = legend
 
     @property
     def type(self):

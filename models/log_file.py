@@ -33,110 +33,41 @@ class LogFile(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'path': 'str',
-        'excludes': 'list[str]',
-        'use_glob': 'bool',
         'encoding': 'str',
-        'matches': 'list[MatchPattern]'
+        'excludes': 'list[str]',
+        'matches': 'list[MatchPattern]',
+        'path': 'str',
+        'use_glob': 'bool'
     }
 
     attribute_map = {
-        'path': 'path',
-        'excludes': 'excludes',
-        'use_glob': 'useGlob',
         'encoding': 'encoding',
-        'matches': 'matches'
+        'excludes': 'excludes',
+        'matches': 'matches',
+        'path': 'path',
+        'use_glob': 'useGlob'
     }
 
-    def __init__(self, path=None, excludes=None, use_glob=None, encoding=None, matches=None):  # noqa: E501
+    def __init__(self, encoding=None, excludes=None, matches=None, path=None, use_glob=None):  # noqa: E501
         """LogFile - a model defined in Swagger"""  # noqa: E501
 
-        self._path = None
-        self._excludes = None
-        self._use_glob = None
         self._encoding = None
+        self._excludes = None
         self._matches = None
+        self._path = None
+        self._use_glob = None
         self.discriminator = None
 
-        if path is not None:
-            self.path = path
-        if excludes is not None:
-            self.excludes = excludes
-        if use_glob is not None:
-            self.use_glob = use_glob
         if encoding is not None:
             self.encoding = encoding
+        if excludes is not None:
+            self.excludes = excludes
         if matches is not None:
             self.matches = matches
-
-    @property
-    def path(self):
-        """Gets the path of this LogFile.  # noqa: E501
-
-        The path of the log file to monitor  # noqa: E501
-
-        :return: The path of this LogFile.  # noqa: E501
-        :rtype: str
-        """
-        return self._path
-
-    @path.setter
-    def path(self, path):
-        """Sets the path of this LogFile.
-
-        The path of the log file to monitor  # noqa: E501
-
-        :param path: The path of this LogFile.  # noqa: E501
-        :type: str
-        """
-
-        self._path = path
-
-    @property
-    def excludes(self):
-        """Gets the excludes of this LogFile.  # noqa: E501
-
-        The regex or plain text to look for in the file and not trigger alert if found  # noqa: E501
-
-        :return: The excludes of this LogFile.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._excludes
-
-    @excludes.setter
-    def excludes(self, excludes):
-        """Sets the excludes of this LogFile.
-
-        The regex or plain text to look for in the file and not trigger alert if found  # noqa: E501
-
-        :param excludes: The excludes of this LogFile.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._excludes = excludes
-
-    @property
-    def use_glob(self):
-        """Gets the use_glob of this LogFile.  # noqa: E501
-
-        Whether or not glob is used in the path  # noqa: E501
-
-        :return: The use_glob of this LogFile.  # noqa: E501
-        :rtype: bool
-        """
-        return self._use_glob
-
-    @use_glob.setter
-    def use_glob(self, use_glob):
-        """Sets the use_glob of this LogFile.
-
-        Whether or not glob is used in the path  # noqa: E501
-
-        :param use_glob: The use_glob of this LogFile.  # noqa: E501
-        :type: bool
-        """
-
-        self._use_glob = use_glob
+        if path is not None:
+            self.path = path
+        if use_glob is not None:
+            self.use_glob = use_glob
 
     @property
     def encoding(self):
@@ -162,6 +93,29 @@ class LogFile(object):
         self._encoding = encoding
 
     @property
+    def excludes(self):
+        """Gets the excludes of this LogFile.  # noqa: E501
+
+        The regex or plain text to look for in the file and not trigger alert if found  # noqa: E501
+
+        :return: The excludes of this LogFile.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._excludes
+
+    @excludes.setter
+    def excludes(self, excludes):
+        """Sets the excludes of this LogFile.
+
+        The regex or plain text to look for in the file and not trigger alert if found  # noqa: E501
+
+        :param excludes: The excludes of this LogFile.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._excludes = excludes
+
+    @property
     def matches(self):
         """Gets the matches of this LogFile.  # noqa: E501
 
@@ -181,6 +135,52 @@ class LogFile(object):
         """
 
         self._matches = matches
+
+    @property
+    def path(self):
+        """Gets the path of this LogFile.  # noqa: E501
+
+        The path of the log file to monitor  # noqa: E501
+
+        :return: The path of this LogFile.  # noqa: E501
+        :rtype: str
+        """
+        return self._path
+
+    @path.setter
+    def path(self, path):
+        """Sets the path of this LogFile.
+
+        The path of the log file to monitor  # noqa: E501
+
+        :param path: The path of this LogFile.  # noqa: E501
+        :type: str
+        """
+
+        self._path = path
+
+    @property
+    def use_glob(self):
+        """Gets the use_glob of this LogFile.  # noqa: E501
+
+        Whether or not glob is used in the path  # noqa: E501
+
+        :return: The use_glob of this LogFile.  # noqa: E501
+        :rtype: bool
+        """
+        return self._use_glob
+
+    @use_glob.setter
+    def use_glob(self, use_glob):
+        """Sets the use_glob of this LogFile.
+
+        Whether or not glob is used in the path  # noqa: E501
+
+        :param use_glob: The use_glob of this LogFile.  # noqa: E501
+        :type: bool
+        """
+
+        self._use_glob = use_glob
 
     def to_dict(self):
         """Returns the model properties as a dict"""

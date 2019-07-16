@@ -33,57 +33,36 @@ class WebsiteSLAWidgetData(WidgetData):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'type': 'str',
         'title': 'str',
+        'type': 'str',
         'availability': 'float',
         'color_level': 'int'
     }
 
     attribute_map = {
-        'type': 'type',
         'title': 'title',
+        'type': 'type',
         'availability': 'availability',
         'color_level': 'colorLevel'
     }
 
-    def __init__(self, type=None, title=None, availability=None, color_level=None):  # noqa: E501
+    def __init__(self, title=None, type=None, availability=None, color_level=None):  # noqa: E501
         """WebsiteSLAWidgetData - a model defined in Swagger"""  # noqa: E501
 
-        self._type = None
         self._title = None
+        self._type = None
         self._availability = None
         self._color_level = None
         self.discriminator = None
 
-        if type is not None:
-            self.type = type
         if title is not None:
             self.title = title
+        if type is not None:
+            self.type = type
         if availability is not None:
             self.availability = availability
         if color_level is not None:
             self.color_level = color_level
-
-    @property
-    def type(self):
-        """Gets the type of this WebsiteSLAWidgetData.  # noqa: E501
-
-
-        :return: The type of this WebsiteSLAWidgetData.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this WebsiteSLAWidgetData.
-
-
-        :param type: The type of this WebsiteSLAWidgetData.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
 
     @property
     def title(self):
@@ -105,6 +84,27 @@ class WebsiteSLAWidgetData(WidgetData):
         """
 
         self._title = title
+
+    @property
+    def type(self):
+        """Gets the type of this WebsiteSLAWidgetData.  # noqa: E501
+
+
+        :return: The type of this WebsiteSLAWidgetData.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this WebsiteSLAWidgetData.
+
+
+        :param type: The type of this WebsiteSLAWidgetData.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def availability(self):

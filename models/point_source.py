@@ -31,35 +31,83 @@ class PointSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'has_location': 'bool',
-        'type': 'str',
+        'device_display_name': 'str',
         'device_group_full_path': 'str',
-        'device_display_name': 'str'
+        'has_location': 'bool',
+        'type': 'str'
     }
 
     attribute_map = {
-        'has_location': 'hasLocation',
-        'type': 'type',
+        'device_display_name': 'deviceDisplayName',
         'device_group_full_path': 'deviceGroupFullPath',
-        'device_display_name': 'deviceDisplayName'
+        'has_location': 'hasLocation',
+        'type': 'type'
     }
 
-    def __init__(self, has_location=None, type=None, device_group_full_path=None, device_display_name=None):  # noqa: E501
+    def __init__(self, device_display_name=None, device_group_full_path=None, has_location=None, type=None):  # noqa: E501
         """PointSource - a model defined in Swagger"""  # noqa: E501
 
+        self._device_display_name = None
+        self._device_group_full_path = None
         self._has_location = None
         self._type = None
-        self._device_group_full_path = None
-        self._device_display_name = None
         self.discriminator = None
 
+        if device_display_name is not None:
+            self.device_display_name = device_display_name
+        self.device_group_full_path = device_group_full_path
         if has_location is not None:
             self.has_location = has_location
         if type is not None:
             self.type = type
-        self.device_group_full_path = device_group_full_path
-        if device_display_name is not None:
-            self.device_display_name = device_display_name
+
+    @property
+    def device_display_name(self):
+        """Gets the device_display_name of this PointSource.  # noqa: E501
+
+        The display name of the device the map point represents (if type=device). This field supports Glob (*)  # noqa: E501
+
+        :return: The device_display_name of this PointSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._device_display_name
+
+    @device_display_name.setter
+    def device_display_name(self, device_display_name):
+        """Sets the device_display_name of this PointSource.
+
+        The display name of the device the map point represents (if type=device). This field supports Glob (*)  # noqa: E501
+
+        :param device_display_name: The device_display_name of this PointSource.  # noqa: E501
+        :type: str
+        """
+
+        self._device_display_name = device_display_name
+
+    @property
+    def device_group_full_path(self):
+        """Gets the device_group_full_path of this PointSource.  # noqa: E501
+
+        The full path of the device group associated with the map point. This may be the group the map point represents, or the group of the device that the map point represents  # noqa: E501
+
+        :return: The device_group_full_path of this PointSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._device_group_full_path
+
+    @device_group_full_path.setter
+    def device_group_full_path(self, device_group_full_path):
+        """Sets the device_group_full_path of this PointSource.
+
+        The full path of the device group associated with the map point. This may be the group the map point represents, or the group of the device that the map point represents  # noqa: E501
+
+        :param device_group_full_path: The device_group_full_path of this PointSource.  # noqa: E501
+        :type: str
+        """
+        if device_group_full_path is None:
+            raise ValueError("Invalid value for `device_group_full_path`, must not be `None`")  # noqa: E501
+
+        self._device_group_full_path = device_group_full_path
 
     @property
     def has_location(self):
@@ -106,54 +154,6 @@ class PointSource(object):
         """
 
         self._type = type
-
-    @property
-    def device_group_full_path(self):
-        """Gets the device_group_full_path of this PointSource.  # noqa: E501
-
-        The full path of the device group associated with the map point. This may be the group the map point represents, or the group of the device that the map point represents  # noqa: E501
-
-        :return: The device_group_full_path of this PointSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._device_group_full_path
-
-    @device_group_full_path.setter
-    def device_group_full_path(self, device_group_full_path):
-        """Sets the device_group_full_path of this PointSource.
-
-        The full path of the device group associated with the map point. This may be the group the map point represents, or the group of the device that the map point represents  # noqa: E501
-
-        :param device_group_full_path: The device_group_full_path of this PointSource.  # noqa: E501
-        :type: str
-        """
-        if device_group_full_path is None:
-            raise ValueError("Invalid value for `device_group_full_path`, must not be `None`")  # noqa: E501
-
-        self._device_group_full_path = device_group_full_path
-
-    @property
-    def device_display_name(self):
-        """Gets the device_display_name of this PointSource.  # noqa: E501
-
-        The display name of the device the map point represents (if type=device). This field supports Glob (*)  # noqa: E501
-
-        :return: The device_display_name of this PointSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._device_display_name
-
-    @device_display_name.setter
-    def device_display_name(self, device_display_name):
-        """Sets the device_display_name of this PointSource.
-
-        The display name of the device the map point represents (if type=device). This field supports Glob (*)  # noqa: E501
-
-        :param device_display_name: The device_display_name of this PointSource.  # noqa: E501
-        :type: str
-        """
-
-        self._device_display_name = device_display_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

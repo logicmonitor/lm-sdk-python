@@ -31,96 +31,71 @@ class DeviceDataSourceInstanceGroup(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'device_data_source_id': 'int',
-        'name': 'str',
-        'description': 'str',
         'create_on': 'int',
-        'id': 'int',
+        'description': 'str',
+        'device_data_source_id': 'int',
+        'device_display_name': 'str',
         'device_id': 'int',
-        'device_display_name': 'str'
+        'id': 'int',
+        'name': 'str'
     }
 
     attribute_map = {
-        'device_data_source_id': 'deviceDataSourceId',
-        'name': 'name',
-        'description': 'description',
         'create_on': 'createOn',
-        'id': 'id',
+        'description': 'description',
+        'device_data_source_id': 'deviceDataSourceId',
+        'device_display_name': 'deviceDisplayName',
         'device_id': 'deviceId',
-        'device_display_name': 'deviceDisplayName'
+        'id': 'id',
+        'name': 'name'
     }
 
-    def __init__(self, device_data_source_id=None, name=None, description=None, create_on=None, id=None, device_id=None, device_display_name=None):  # noqa: E501
+    def __init__(self, create_on=None, description=None, device_data_source_id=None, device_display_name=None, device_id=None, id=None, name=None):  # noqa: E501
         """DeviceDataSourceInstanceGroup - a model defined in Swagger"""  # noqa: E501
 
-        self._device_data_source_id = None
-        self._name = None
-        self._description = None
         self._create_on = None
-        self._id = None
-        self._device_id = None
+        self._description = None
+        self._device_data_source_id = None
         self._device_display_name = None
+        self._device_id = None
+        self._id = None
+        self._name = None
         self.discriminator = None
 
-        if device_data_source_id is not None:
-            self.device_data_source_id = device_data_source_id
-        self.name = name
-        if description is not None:
-            self.description = description
         if create_on is not None:
             self.create_on = create_on
-        if id is not None:
-            self.id = id
-        if device_id is not None:
-            self.device_id = device_id
+        if description is not None:
+            self.description = description
+        if device_data_source_id is not None:
+            self.device_data_source_id = device_data_source_id
         if device_display_name is not None:
             self.device_display_name = device_display_name
+        if device_id is not None:
+            self.device_id = device_id
+        if id is not None:
+            self.id = id
+        self.name = name
 
     @property
-    def device_data_source_id(self):
-        """Gets the device_data_source_id of this DeviceDataSourceInstanceGroup.  # noqa: E501
+    def create_on(self):
+        """Gets the create_on of this DeviceDataSourceInstanceGroup.  # noqa: E501
 
 
-        :return: The device_data_source_id of this DeviceDataSourceInstanceGroup.  # noqa: E501
+        :return: The create_on of this DeviceDataSourceInstanceGroup.  # noqa: E501
         :rtype: int
         """
-        return self._device_data_source_id
+        return self._create_on
 
-    @device_data_source_id.setter
-    def device_data_source_id(self, device_data_source_id):
-        """Sets the device_data_source_id of this DeviceDataSourceInstanceGroup.
+    @create_on.setter
+    def create_on(self, create_on):
+        """Sets the create_on of this DeviceDataSourceInstanceGroup.
 
 
-        :param device_data_source_id: The device_data_source_id of this DeviceDataSourceInstanceGroup.  # noqa: E501
+        :param create_on: The create_on of this DeviceDataSourceInstanceGroup.  # noqa: E501
         :type: int
         """
 
-        self._device_data_source_id = device_data_source_id
-
-    @property
-    def name(self):
-        """Gets the name of this DeviceDataSourceInstanceGroup.  # noqa: E501
-
-        Name of the datasource instance group  # noqa: E501
-
-        :return: The name of this DeviceDataSourceInstanceGroup.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this DeviceDataSourceInstanceGroup.
-
-        Name of the datasource instance group  # noqa: E501
-
-        :param name: The name of this DeviceDataSourceInstanceGroup.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
+        self._create_on = create_on
 
     @property
     def description(self):
@@ -146,46 +121,46 @@ class DeviceDataSourceInstanceGroup(object):
         self._description = description
 
     @property
-    def create_on(self):
-        """Gets the create_on of this DeviceDataSourceInstanceGroup.  # noqa: E501
+    def device_data_source_id(self):
+        """Gets the device_data_source_id of this DeviceDataSourceInstanceGroup.  # noqa: E501
 
 
-        :return: The create_on of this DeviceDataSourceInstanceGroup.  # noqa: E501
+        :return: The device_data_source_id of this DeviceDataSourceInstanceGroup.  # noqa: E501
         :rtype: int
         """
-        return self._create_on
+        return self._device_data_source_id
 
-    @create_on.setter
-    def create_on(self, create_on):
-        """Sets the create_on of this DeviceDataSourceInstanceGroup.
+    @device_data_source_id.setter
+    def device_data_source_id(self, device_data_source_id):
+        """Sets the device_data_source_id of this DeviceDataSourceInstanceGroup.
 
 
-        :param create_on: The create_on of this DeviceDataSourceInstanceGroup.  # noqa: E501
+        :param device_data_source_id: The device_data_source_id of this DeviceDataSourceInstanceGroup.  # noqa: E501
         :type: int
         """
 
-        self._create_on = create_on
+        self._device_data_source_id = device_data_source_id
 
     @property
-    def id(self):
-        """Gets the id of this DeviceDataSourceInstanceGroup.  # noqa: E501
+    def device_display_name(self):
+        """Gets the device_display_name of this DeviceDataSourceInstanceGroup.  # noqa: E501
 
 
-        :return: The id of this DeviceDataSourceInstanceGroup.  # noqa: E501
-        :rtype: int
+        :return: The device_display_name of this DeviceDataSourceInstanceGroup.  # noqa: E501
+        :rtype: str
         """
-        return self._id
+        return self._device_display_name
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this DeviceDataSourceInstanceGroup.
+    @device_display_name.setter
+    def device_display_name(self, device_display_name):
+        """Sets the device_display_name of this DeviceDataSourceInstanceGroup.
 
 
-        :param id: The id of this DeviceDataSourceInstanceGroup.  # noqa: E501
-        :type: int
+        :param device_display_name: The device_display_name of this DeviceDataSourceInstanceGroup.  # noqa: E501
+        :type: str
         """
 
-        self._id = id
+        self._device_display_name = device_display_name
 
     @property
     def device_id(self):
@@ -209,25 +184,50 @@ class DeviceDataSourceInstanceGroup(object):
         self._device_id = device_id
 
     @property
-    def device_display_name(self):
-        """Gets the device_display_name of this DeviceDataSourceInstanceGroup.  # noqa: E501
+    def id(self):
+        """Gets the id of this DeviceDataSourceInstanceGroup.  # noqa: E501
 
 
-        :return: The device_display_name of this DeviceDataSourceInstanceGroup.  # noqa: E501
+        :return: The id of this DeviceDataSourceInstanceGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this DeviceDataSourceInstanceGroup.
+
+
+        :param id: The id of this DeviceDataSourceInstanceGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def name(self):
+        """Gets the name of this DeviceDataSourceInstanceGroup.  # noqa: E501
+
+        Name of the datasource instance group  # noqa: E501
+
+        :return: The name of this DeviceDataSourceInstanceGroup.  # noqa: E501
         :rtype: str
         """
-        return self._device_display_name
+        return self._name
 
-    @device_display_name.setter
-    def device_display_name(self, device_display_name):
-        """Sets the device_display_name of this DeviceDataSourceInstanceGroup.
+    @name.setter
+    def name(self, name):
+        """Sets the name of this DeviceDataSourceInstanceGroup.
 
+        Name of the datasource instance group  # noqa: E501
 
-        :param device_display_name: The device_display_name of this DeviceDataSourceInstanceGroup.  # noqa: E501
+        :param name: The name of this DeviceDataSourceInstanceGroup.  # noqa: E501
         :type: str
         """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
-        self._device_display_name = device_display_name
+        self._name = name
 
     def to_dict(self):
         """Returns the model properties as a dict"""

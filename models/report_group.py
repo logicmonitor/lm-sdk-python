@@ -31,83 +31,41 @@ class ReportGroup(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'user_permission': 'str',
-        'name': 'str',
         'description': 'str',
         'id': 'int',
-        'reports_count': 'int'
+        'name': 'str',
+        'reports_count': 'int',
+        'user_permission': 'str'
     }
 
     attribute_map = {
-        'user_permission': 'userPermission',
-        'name': 'name',
         'description': 'description',
         'id': 'id',
-        'reports_count': 'reportsCount'
+        'name': 'name',
+        'reports_count': 'reportsCount',
+        'user_permission': 'userPermission'
     }
 
-    def __init__(self, user_permission=None, name=None, description=None, id=None, reports_count=None):  # noqa: E501
+    def __init__(self, description=None, id=None, name=None, reports_count=None, user_permission=None):  # noqa: E501
         """ReportGroup - a model defined in Swagger"""  # noqa: E501
 
-        self._user_permission = None
-        self._name = None
         self._description = None
         self._id = None
+        self._name = None
         self._reports_count = None
+        self._user_permission = None
         self.discriminator = None
 
-        if user_permission is not None:
-            self.user_permission = user_permission
-        if name is not None:
-            self.name = name
         if description is not None:
             self.description = description
         if id is not None:
             self.id = id
+        if name is not None:
+            self.name = name
         if reports_count is not None:
             self.reports_count = reports_count
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this ReportGroup.  # noqa: E501
-
-
-        :return: The user_permission of this ReportGroup.  # noqa: E501
-        :rtype: str
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this ReportGroup.
-
-
-        :param user_permission: The user_permission of this ReportGroup.  # noqa: E501
-        :type: str
-        """
-
-        self._user_permission = user_permission
-
-    @property
-    def name(self):
-        """Gets the name of this ReportGroup.  # noqa: E501
-
-
-        :return: The name of this ReportGroup.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this ReportGroup.
-
-
-        :param name: The name of this ReportGroup.  # noqa: E501
-        :type: str
-        """
-
-        self._name = name
+        if user_permission is not None:
+            self.user_permission = user_permission
 
     @property
     def description(self):
@@ -152,6 +110,27 @@ class ReportGroup(object):
         self._id = id
 
     @property
+    def name(self):
+        """Gets the name of this ReportGroup.  # noqa: E501
+
+
+        :return: The name of this ReportGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this ReportGroup.
+
+
+        :param name: The name of this ReportGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._name = name
+
+    @property
     def reports_count(self):
         """Gets the reports_count of this ReportGroup.  # noqa: E501
 
@@ -171,6 +150,27 @@ class ReportGroup(object):
         """
 
         self._reports_count = reports_count
+
+    @property
+    def user_permission(self):
+        """Gets the user_permission of this ReportGroup.  # noqa: E501
+
+
+        :return: The user_permission of this ReportGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_permission
+
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this ReportGroup.
+
+
+        :param user_permission: The user_permission of this ReportGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._user_permission = user_permission
 
     def to_dict(self):
         """Returns the model properties as a dict"""

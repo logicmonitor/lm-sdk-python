@@ -36,57 +36,59 @@ class BigNumberInfo(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'virtual_data_points': 'list[VirtualDataPoint]',
+        'big_number_items': 'list[BigNumberItem]',
         'counters': 'list[Counter]',
         'data_points': 'list[BigNumberDataPoint]',
-        'big_number_items': 'list[BigNumberItem]'
+        'virtual_data_points': 'list[VirtualDataPoint]'
     }
 
     attribute_map = {
-        'virtual_data_points': 'virtualDataPoints',
+        'big_number_items': 'bigNumberItems',
         'counters': 'counters',
         'data_points': 'dataPoints',
-        'big_number_items': 'bigNumberItems'
+        'virtual_data_points': 'virtualDataPoints'
     }
 
-    def __init__(self, virtual_data_points=None, counters=None, data_points=None, big_number_items=None):  # noqa: E501
+    def __init__(self, big_number_items=None, counters=None, data_points=None, virtual_data_points=None):  # noqa: E501
         """BigNumberInfo - a model defined in Swagger"""  # noqa: E501
 
-        self._virtual_data_points = None
+        self._big_number_items = None
         self._counters = None
         self._data_points = None
-        self._big_number_items = None
+        self._virtual_data_points = None
         self.discriminator = None
 
-        if virtual_data_points is not None:
-            self.virtual_data_points = virtual_data_points
+        self.big_number_items = big_number_items
         if counters is not None:
             self.counters = counters
         self.data_points = data_points
-        self.big_number_items = big_number_items
+        if virtual_data_points is not None:
+            self.virtual_data_points = virtual_data_points
 
     @property
-    def virtual_data_points(self):
-        """Gets the virtual_data_points of this BigNumberInfo.  # noqa: E501
+    def big_number_items(self):
+        """Gets the big_number_items of this BigNumberInfo.  # noqa: E501
 
-        The virtual datapoints included in the widget. Note that a virtual datapoint must be referenced in the bigNumberItems object in order to be displayed  # noqa: E501
+        The datapoints and virtual datapoints whose values should be displayed in the big number widget  # noqa: E501
 
-        :return: The virtual_data_points of this BigNumberInfo.  # noqa: E501
-        :rtype: list[VirtualDataPoint]
+        :return: The big_number_items of this BigNumberInfo.  # noqa: E501
+        :rtype: list[BigNumberItem]
         """
-        return self._virtual_data_points
+        return self._big_number_items
 
-    @virtual_data_points.setter
-    def virtual_data_points(self, virtual_data_points):
-        """Sets the virtual_data_points of this BigNumberInfo.
+    @big_number_items.setter
+    def big_number_items(self, big_number_items):
+        """Sets the big_number_items of this BigNumberInfo.
 
-        The virtual datapoints included in the widget. Note that a virtual datapoint must be referenced in the bigNumberItems object in order to be displayed  # noqa: E501
+        The datapoints and virtual datapoints whose values should be displayed in the big number widget  # noqa: E501
 
-        :param virtual_data_points: The virtual_data_points of this BigNumberInfo.  # noqa: E501
-        :type: list[VirtualDataPoint]
+        :param big_number_items: The big_number_items of this BigNumberInfo.  # noqa: E501
+        :type: list[BigNumberItem]
         """
+        if big_number_items is None:
+            raise ValueError("Invalid value for `big_number_items`, must not be `None`")  # noqa: E501
 
-        self._virtual_data_points = virtual_data_points
+        self._big_number_items = big_number_items
 
     @property
     def counters(self):
@@ -137,29 +139,27 @@ class BigNumberInfo(object):
         self._data_points = data_points
 
     @property
-    def big_number_items(self):
-        """Gets the big_number_items of this BigNumberInfo.  # noqa: E501
+    def virtual_data_points(self):
+        """Gets the virtual_data_points of this BigNumberInfo.  # noqa: E501
 
-        The datapoints and virtual datapoints whose values should be displayed in the big number widget  # noqa: E501
+        The virtual datapoints included in the widget. Note that a virtual datapoint must be referenced in the bigNumberItems object in order to be displayed  # noqa: E501
 
-        :return: The big_number_items of this BigNumberInfo.  # noqa: E501
-        :rtype: list[BigNumberItem]
+        :return: The virtual_data_points of this BigNumberInfo.  # noqa: E501
+        :rtype: list[VirtualDataPoint]
         """
-        return self._big_number_items
+        return self._virtual_data_points
 
-    @big_number_items.setter
-    def big_number_items(self, big_number_items):
-        """Sets the big_number_items of this BigNumberInfo.
+    @virtual_data_points.setter
+    def virtual_data_points(self, virtual_data_points):
+        """Sets the virtual_data_points of this BigNumberInfo.
 
-        The datapoints and virtual datapoints whose values should be displayed in the big number widget  # noqa: E501
+        The virtual datapoints included in the widget. Note that a virtual datapoint must be referenced in the bigNumberItems object in order to be displayed  # noqa: E501
 
-        :param big_number_items: The big_number_items of this BigNumberInfo.  # noqa: E501
-        :type: list[BigNumberItem]
+        :param virtual_data_points: The virtual_data_points of this BigNumberInfo.  # noqa: E501
+        :type: list[VirtualDataPoint]
         """
-        if big_number_items is None:
-            raise ValueError("Invalid value for `big_number_items`, must not be `None`")  # noqa: E501
 
-        self._big_number_items = big_number_items
+        self._virtual_data_points = virtual_data_points
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -36,61 +36,61 @@ class WMIAutoDiscoveryMethod(AutoDiscoveryMethod):
     """
     swagger_types = {
         'name': 'str',
-        'linked_classes': 'list[LinkedWmiClass]',
-        'external_resource_id': 'str',
-        'external_resource_type': 'str',
-        'wmi_class': 'str',
-        '_property': 'str',
-        'namespace': 'str',
         'ilp': 'list[ILP]',
         'enable_linked_class_ilp': 'bool',
-        'enable_wmi_class_ilp': 'bool'
+        'enable_wmi_class_ilp': 'bool',
+        'external_resource_id': 'str',
+        'external_resource_type': 'str',
+        'linked_classes': 'list[LinkedWmiClass]',
+        'namespace': 'str',
+        '_property': 'str',
+        'wmi_class': 'str'
     }
 
     attribute_map = {
         'name': 'name',
-        'linked_classes': 'linkedClasses',
-        'external_resource_id': 'externalResourceID',
-        'external_resource_type': 'externalResourceType',
-        'wmi_class': 'wmiClass',
-        '_property': 'property',
-        'namespace': 'namespace',
         'ilp': 'ILP',
         'enable_linked_class_ilp': 'enableLinkedClassILP',
-        'enable_wmi_class_ilp': 'enableWmiClassILP'
+        'enable_wmi_class_ilp': 'enableWmiClassILP',
+        'external_resource_id': 'externalResourceID',
+        'external_resource_type': 'externalResourceType',
+        'linked_classes': 'linkedClasses',
+        'namespace': 'namespace',
+        '_property': 'property',
+        'wmi_class': 'wmiClass'
     }
 
-    def __init__(self, name=None, linked_classes=None, external_resource_id=None, external_resource_type=None, wmi_class=None, _property=None, namespace=None, ilp=None, enable_linked_class_ilp=None, enable_wmi_class_ilp=None):  # noqa: E501
+    def __init__(self, name=None, ilp=None, enable_linked_class_ilp=None, enable_wmi_class_ilp=None, external_resource_id=None, external_resource_type=None, linked_classes=None, namespace=None, _property=None, wmi_class=None):  # noqa: E501
         """WMIAutoDiscoveryMethod - a model defined in Swagger"""  # noqa: E501
 
         self._name = None
-        self._linked_classes = None
-        self._external_resource_id = None
-        self._external_resource_type = None
-        self._wmi_class = None
-        self.__property = None
-        self._namespace = None
         self._ilp = None
         self._enable_linked_class_ilp = None
         self._enable_wmi_class_ilp = None
+        self._external_resource_id = None
+        self._external_resource_type = None
+        self._linked_classes = None
+        self._namespace = None
+        self.__property = None
+        self._wmi_class = None
         self.discriminator = None
 
         self.name = name
-        if linked_classes is not None:
-            self.linked_classes = linked_classes
-        if external_resource_id is not None:
-            self.external_resource_id = external_resource_id
-        if external_resource_type is not None:
-            self.external_resource_type = external_resource_type
-        self.wmi_class = wmi_class
-        self._property = _property
-        self.namespace = namespace
         if ilp is not None:
             self.ilp = ilp
         if enable_linked_class_ilp is not None:
             self.enable_linked_class_ilp = enable_linked_class_ilp
         if enable_wmi_class_ilp is not None:
             self.enable_wmi_class_ilp = enable_wmi_class_ilp
+        if external_resource_id is not None:
+            self.external_resource_id = external_resource_id
+        if external_resource_type is not None:
+            self.external_resource_type = external_resource_type
+        if linked_classes is not None:
+            self.linked_classes = linked_classes
+        self.namespace = namespace
+        self._property = _property
+        self.wmi_class = wmi_class
 
     @property
     def name(self):
@@ -114,138 +114,6 @@ class WMIAutoDiscoveryMethod(AutoDiscoveryMethod):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
-
-    @property
-    def linked_classes(self):
-        """Gets the linked_classes of this WMIAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The linked_classes of this WMIAutoDiscoveryMethod.  # noqa: E501
-        :rtype: list[LinkedWmiClass]
-        """
-        return self._linked_classes
-
-    @linked_classes.setter
-    def linked_classes(self, linked_classes):
-        """Sets the linked_classes of this WMIAutoDiscoveryMethod.
-
-
-        :param linked_classes: The linked_classes of this WMIAutoDiscoveryMethod.  # noqa: E501
-        :type: list[LinkedWmiClass]
-        """
-
-        self._linked_classes = linked_classes
-
-    @property
-    def external_resource_id(self):
-        """Gets the external_resource_id of this WMIAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The external_resource_id of this WMIAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._external_resource_id
-
-    @external_resource_id.setter
-    def external_resource_id(self, external_resource_id):
-        """Sets the external_resource_id of this WMIAutoDiscoveryMethod.
-
-
-        :param external_resource_id: The external_resource_id of this WMIAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-
-        self._external_resource_id = external_resource_id
-
-    @property
-    def external_resource_type(self):
-        """Gets the external_resource_type of this WMIAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The external_resource_type of this WMIAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._external_resource_type
-
-    @external_resource_type.setter
-    def external_resource_type(self, external_resource_type):
-        """Sets the external_resource_type of this WMIAutoDiscoveryMethod.
-
-
-        :param external_resource_type: The external_resource_type of this WMIAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-
-        self._external_resource_type = external_resource_type
-
-    @property
-    def wmi_class(self):
-        """Gets the wmi_class of this WMIAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The wmi_class of this WMIAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._wmi_class
-
-    @wmi_class.setter
-    def wmi_class(self, wmi_class):
-        """Sets the wmi_class of this WMIAutoDiscoveryMethod.
-
-
-        :param wmi_class: The wmi_class of this WMIAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-        if wmi_class is None:
-            raise ValueError("Invalid value for `wmi_class`, must not be `None`")  # noqa: E501
-
-        self._wmi_class = wmi_class
-
-    @property
-    def _property(self):
-        """Gets the _property of this WMIAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The _property of this WMIAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self.__property
-
-    @_property.setter
-    def _property(self, _property):
-        """Sets the _property of this WMIAutoDiscoveryMethod.
-
-
-        :param _property: The _property of this WMIAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-        if _property is None:
-            raise ValueError("Invalid value for `_property`, must not be `None`")  # noqa: E501
-
-        self.__property = _property
-
-    @property
-    def namespace(self):
-        """Gets the namespace of this WMIAutoDiscoveryMethod.  # noqa: E501
-
-
-        :return: The namespace of this WMIAutoDiscoveryMethod.  # noqa: E501
-        :rtype: str
-        """
-        return self._namespace
-
-    @namespace.setter
-    def namespace(self, namespace):
-        """Sets the namespace of this WMIAutoDiscoveryMethod.
-
-
-        :param namespace: The namespace of this WMIAutoDiscoveryMethod.  # noqa: E501
-        :type: str
-        """
-        if namespace is None:
-            raise ValueError("Invalid value for `namespace`, must not be `None`")  # noqa: E501
-
-        self._namespace = namespace
 
     @property
     def ilp(self):
@@ -309,6 +177,138 @@ class WMIAutoDiscoveryMethod(AutoDiscoveryMethod):
         """
 
         self._enable_wmi_class_ilp = enable_wmi_class_ilp
+
+    @property
+    def external_resource_id(self):
+        """Gets the external_resource_id of this WMIAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The external_resource_id of this WMIAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._external_resource_id
+
+    @external_resource_id.setter
+    def external_resource_id(self, external_resource_id):
+        """Sets the external_resource_id of this WMIAutoDiscoveryMethod.
+
+
+        :param external_resource_id: The external_resource_id of this WMIAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+
+        self._external_resource_id = external_resource_id
+
+    @property
+    def external_resource_type(self):
+        """Gets the external_resource_type of this WMIAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The external_resource_type of this WMIAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._external_resource_type
+
+    @external_resource_type.setter
+    def external_resource_type(self, external_resource_type):
+        """Sets the external_resource_type of this WMIAutoDiscoveryMethod.
+
+
+        :param external_resource_type: The external_resource_type of this WMIAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+
+        self._external_resource_type = external_resource_type
+
+    @property
+    def linked_classes(self):
+        """Gets the linked_classes of this WMIAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The linked_classes of this WMIAutoDiscoveryMethod.  # noqa: E501
+        :rtype: list[LinkedWmiClass]
+        """
+        return self._linked_classes
+
+    @linked_classes.setter
+    def linked_classes(self, linked_classes):
+        """Sets the linked_classes of this WMIAutoDiscoveryMethod.
+
+
+        :param linked_classes: The linked_classes of this WMIAutoDiscoveryMethod.  # noqa: E501
+        :type: list[LinkedWmiClass]
+        """
+
+        self._linked_classes = linked_classes
+
+    @property
+    def namespace(self):
+        """Gets the namespace of this WMIAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The namespace of this WMIAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._namespace
+
+    @namespace.setter
+    def namespace(self, namespace):
+        """Sets the namespace of this WMIAutoDiscoveryMethod.
+
+
+        :param namespace: The namespace of this WMIAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+        if namespace is None:
+            raise ValueError("Invalid value for `namespace`, must not be `None`")  # noqa: E501
+
+        self._namespace = namespace
+
+    @property
+    def _property(self):
+        """Gets the _property of this WMIAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The _property of this WMIAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self.__property
+
+    @_property.setter
+    def _property(self, _property):
+        """Sets the _property of this WMIAutoDiscoveryMethod.
+
+
+        :param _property: The _property of this WMIAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+        if _property is None:
+            raise ValueError("Invalid value for `_property`, must not be `None`")  # noqa: E501
+
+        self.__property = _property
+
+    @property
+    def wmi_class(self):
+        """Gets the wmi_class of this WMIAutoDiscoveryMethod.  # noqa: E501
+
+
+        :return: The wmi_class of this WMIAutoDiscoveryMethod.  # noqa: E501
+        :rtype: str
+        """
+        return self._wmi_class
+
+    @wmi_class.setter
+    def wmi_class(self, wmi_class):
+        """Sets the wmi_class of this WMIAutoDiscoveryMethod.
+
+
+        :param wmi_class: The wmi_class of this WMIAutoDiscoveryMethod.  # noqa: E501
+        :type: str
+        """
+        if wmi_class is None:
+            raise ValueError("Invalid value for `wmi_class`, must not be `None`")  # noqa: E501
+
+        self._wmi_class = wmi_class
 
     def to_dict(self):
         """Returns the model properties as a dict"""

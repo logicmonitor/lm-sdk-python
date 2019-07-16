@@ -31,29 +31,50 @@ class PieChartItem(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'data_point_name': 'str',
         'color': 'str',
+        'data_point_name': 'str',
         'legend': 'str'
     }
 
     attribute_map = {
-        'data_point_name': 'dataPointName',
         'color': 'color',
+        'data_point_name': 'dataPointName',
         'legend': 'legend'
     }
 
-    def __init__(self, data_point_name=None, color=None, legend=None):  # noqa: E501
+    def __init__(self, color=None, data_point_name=None, legend=None):  # noqa: E501
         """PieChartItem - a model defined in Swagger"""  # noqa: E501
 
-        self._data_point_name = None
         self._color = None
+        self._data_point_name = None
         self._legend = None
         self.discriminator = None
 
-        self.data_point_name = data_point_name
         if color is not None:
             self.color = color
+        self.data_point_name = data_point_name
         self.legend = legend
+
+    @property
+    def color(self):
+        """Gets the color of this PieChartItem.  # noqa: E501
+
+
+        :return: The color of this PieChartItem.  # noqa: E501
+        :rtype: str
+        """
+        return self._color
+
+    @color.setter
+    def color(self, color):
+        """Sets the color of this PieChartItem.
+
+
+        :param color: The color of this PieChartItem.  # noqa: E501
+        :type: str
+        """
+
+        self._color = color
 
     @property
     def data_point_name(self):
@@ -77,27 +98,6 @@ class PieChartItem(object):
             raise ValueError("Invalid value for `data_point_name`, must not be `None`")  # noqa: E501
 
         self._data_point_name = data_point_name
-
-    @property
-    def color(self):
-        """Gets the color of this PieChartItem.  # noqa: E501
-
-
-        :return: The color of this PieChartItem.  # noqa: E501
-        :rtype: str
-        """
-        return self._color
-
-    @color.setter
-    def color(self, color):
-        """Sets the color of this PieChartItem.
-
-
-        :param color: The color of this PieChartItem.  # noqa: E501
-        :type: str
-        """
-
-        self._color = color
 
     @property
     def legend(self):

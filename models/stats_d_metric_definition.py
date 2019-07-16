@@ -33,36 +33,57 @@ class StatsDMetricDefinition(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'aggregate_function': 'str',
         'consolidate_function': 'int',
         'display': 'StatsDGraphDisplay',
-        'name': 'str',
-        'aggregate_function': 'str'
+        'name': 'str'
     }
 
     attribute_map = {
+        'aggregate_function': 'aggregateFunction',
         'consolidate_function': 'consolidateFunction',
         'display': 'display',
-        'name': 'name',
-        'aggregate_function': 'aggregateFunction'
+        'name': 'name'
     }
 
-    def __init__(self, consolidate_function=None, display=None, name=None, aggregate_function=None):  # noqa: E501
+    def __init__(self, aggregate_function=None, consolidate_function=None, display=None, name=None):  # noqa: E501
         """StatsDMetricDefinition - a model defined in Swagger"""  # noqa: E501
 
+        self._aggregate_function = None
         self._consolidate_function = None
         self._display = None
         self._name = None
-        self._aggregate_function = None
         self.discriminator = None
 
+        if aggregate_function is not None:
+            self.aggregate_function = aggregate_function
         if consolidate_function is not None:
             self.consolidate_function = consolidate_function
         if display is not None:
             self.display = display
         if name is not None:
             self.name = name
-        if aggregate_function is not None:
-            self.aggregate_function = aggregate_function
+
+    @property
+    def aggregate_function(self):
+        """Gets the aggregate_function of this StatsDMetricDefinition.  # noqa: E501
+
+
+        :return: The aggregate_function of this StatsDMetricDefinition.  # noqa: E501
+        :rtype: str
+        """
+        return self._aggregate_function
+
+    @aggregate_function.setter
+    def aggregate_function(self, aggregate_function):
+        """Sets the aggregate_function of this StatsDMetricDefinition.
+
+
+        :param aggregate_function: The aggregate_function of this StatsDMetricDefinition.  # noqa: E501
+        :type: str
+        """
+
+        self._aggregate_function = aggregate_function
 
     @property
     def consolidate_function(self):
@@ -126,27 +147,6 @@ class StatsDMetricDefinition(object):
         """
 
         self._name = name
-
-    @property
-    def aggregate_function(self):
-        """Gets the aggregate_function of this StatsDMetricDefinition.  # noqa: E501
-
-
-        :return: The aggregate_function of this StatsDMetricDefinition.  # noqa: E501
-        :rtype: str
-        """
-        return self._aggregate_function
-
-    @aggregate_function.setter
-    def aggregate_function(self, aggregate_function):
-        """Sets the aggregate_function of this StatsDMetricDefinition.
-
-
-        :param aggregate_function: The aggregate_function of this StatsDMetricDefinition.  # noqa: E501
-        :type: str
-        """
-
-        self._aggregate_function = aggregate_function
 
     def to_dict(self):
         """Returns the model properties as a dict"""
