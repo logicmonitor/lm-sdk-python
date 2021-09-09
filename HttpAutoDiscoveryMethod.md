@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**regex** | **str** |  | 
 **case_sensitive** | **bool** |  | 
 **follow_redirect** | **bool** |  | 
 **ports** | **str** |  | 
-**regex** | **str** |  | 
 **uri** | **str** |  | 
 **use_ssl** | **bool** |  | 
 

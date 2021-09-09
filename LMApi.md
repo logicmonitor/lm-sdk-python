@@ -61,6 +61,7 @@ Method | HTTP request | Description
 [**delete_website_group_by_id**](LMApi.md#delete_website_group_by_id) | **DELETE** /website/groups/{id} | delete website group
 [**delete_widget_by_id**](LMApi.md#delete_widget_by_id) | **DELETE** /dashboard/widgets/{id} | delete widget
 [**execute_debug_command**](LMApi.md#execute_debug_command) | **POST** /debug | Execute a Collector debug command
+[**fetch_device_instances_data**](LMApi.md#fetch_device_instances_data) | **POST** /device/instances/datafetch | fetch device instances data
 [**generate_report_by_id**](LMApi.md#generate_report_by_id) | **POST** /report/reports/{id}/executions | run a report
 [**get_admin_by_id**](LMApi.md#get_admin_by_id) | **GET** /setting/admins/{id} | get user
 [**get_admin_list**](LMApi.md#get_admin_list) | **GET** /setting/admins | get user list
@@ -130,9 +131,9 @@ Method | HTTP request | Description
 [**get_escalation_chain_by_id**](LMApi.md#get_escalation_chain_by_id) | **GET** /setting/alert/chains/{id} | get escalation chain by id
 [**get_escalation_chain_list**](LMApi.md#get_escalation_chain_list) | **GET** /setting/alert/chains | get escalation chain list
 [**get_event_source_list**](LMApi.md#get_event_source_list) | **GET** /setting/eventsources | get eventSource list
+[**get_external_api_stats**](LMApi.md#get_external_api_stats) | **GET** /apiStats/externalApis | get external api stats info
 [**get_immediate_device_list_by_device_group_id**](LMApi.md#get_immediate_device_list_by_device_group_id) | **GET** /device/groups/{id}/devices | get immediate devices under group
 [**get_immediate_website_list_by_website_group_id**](LMApi.md#get_immediate_website_list_by_website_group_id) | **GET** /website/groups/{id}/websites | get a list of websites for a group
-[**get_logic_module_metadata**](LMApi.md#get_logic_module_metadata) | **GET** /setting/registry/metadata/{lmType}/{lmId} | get logic module metadata
 [**get_metrics_usage**](LMApi.md#get_metrics_usage) | **GET** /metrics/usage | get metrics usage
 [**get_netflow_endpoint_list**](LMApi.md#get_netflow_endpoint_list) | **GET** /device/devices/{id}/endpoints | get netflow endpoint list
 [**get_netflow_flow_list**](LMApi.md#get_netflow_flow_list) | **GET** /device/devices/{id}/flows | get netflow flow list
@@ -517,7 +518,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_api_token_by_admin_id**
-> APIToken add_api_token_by_admin_id(admin_id, body)
+> APIToken add_api_token_by_admin_id(admin_id, body, type=type)
 
 add api tokens for a user
 
@@ -541,10 +542,11 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 admin_id = 56 # int | 
 body = logicmonitor_sdk.APIToken() # APIToken | 
+type = 'API Token' # str |  (optional) (default to API Token)
 
 try:
     # add api tokens for a user
-    api_response = api_instance.add_api_token_by_admin_id(admin_id, body)
+    api_response = api_instance.add_api_token_by_admin_id(admin_id, body, type=type)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->add_api_token_by_admin_id: %s\n" % e)
@@ -556,6 +558,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **admin_id** | **int**|  | 
  **body** | [**APIToken**](APIToken.md)|  | 
+ **type** | **str**|  | [optional] [default to API Token]
 
 ### Return type
 
@@ -3242,7 +3245,7 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-delete_children = 0 # int |  (optional) (default to 0)
+delete_children = 56 # int |  (optional)
 
 try:
     # delete website group
@@ -3257,7 +3260,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **delete_children** | **int**|  | [optional] [default to 0]
+ **delete_children** | **int**|  | [optional] 
 
 ### Return type
 
@@ -3352,7 +3355,7 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Debug() # Debug |  (optional)
-collector_id = -1 # int |  (optional) (default to -1)
+collector_id = 56 # int |  (optional)
 
 try:
     # Execute a Collector debug command
@@ -3367,11 +3370,73 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**Debug**](Debug.md)|  | [optional] 
- **collector_id** | **int**|  | [optional] [default to -1]
+ **collector_id** | **int**|  | [optional] 
 
 ### Return type
 
 [**Debug**](Debug.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **fetch_device_instances_data**
+> DeviceInstanceDataPaginationResponse fetch_device_instances_data(body, period=period, start=start, end=end, aggregate=aggregate)
+
+fetch device instances data
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.DeviceInstances() # DeviceInstances | 
+period = 1.0 # float |  (optional) (default to 1.0)
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
+aggregate = 'none' # str | the aggregate option (optional) (default to none)
+
+try:
+    # fetch device instances data
+    api_response = api_instance.fetch_device_instances_data(body, period=period, start=start, end=end, aggregate=aggregate)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->fetch_device_instances_data: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DeviceInstances**](DeviceInstances.md)|  | 
+ **period** | **float**|  | [optional] [default to 1.0]
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
+ **aggregate** | **str**| the aggregate option | [optional] [default to none]
+
+### Return type
+
+[**DeviceInstanceDataPaginationResponse**](DeviceInstanceDataPaginationResponse.md)
 
 ### Authorization
 
@@ -3520,8 +3585,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -3537,8 +3602,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -3617,7 +3682,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_alert_list**
-> AlertPaginationResponse get_alert_list(custom_columns=custom_columns, fields=fields, size=size, offset=offset, filter=filter)
+> AlertPaginationResponse get_alert_list(fields=fields, size=size, offset=offset, filter=filter)
 
 get alert list
 
@@ -3639,15 +3704,14 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-custom_columns = 'custom_columns_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
     # get alert list
-    api_response = api_instance.get_alert_list(custom_columns=custom_columns, fields=fields, size=size, offset=offset, filter=filter)
+    api_response = api_instance.get_alert_list(fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_alert_list: %s\n" % e)
@@ -3657,10 +3721,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **custom_columns** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -3705,8 +3768,8 @@ id = 56 # int |
 need_message = false # bool |  (optional) (default to false)
 custom_columns = 'custom_columns_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -3725,8 +3788,8 @@ Name | Type | Description  | Notes
  **need_message** | **bool**|  | [optional] [default to false]
  **custom_columns** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -3775,8 +3838,8 @@ need_message = false # bool |  (optional) (default to false)
 custom_columns = 'custom_columns_example' # str |  (optional)
 bound = 'instances' # str |  (optional) (default to instances)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -3799,8 +3862,8 @@ Name | Type | Description  | Notes
  **custom_columns** | **str**|  | [optional] 
  **bound** | **str**|  | [optional] [default to instances]
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -3898,8 +3961,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -3915,8 +3978,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -3962,8 +4025,8 @@ start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -3983,8 +4046,8 @@ Name | Type | Description  | Notes
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -4027,8 +4090,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -4045,8 +4108,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -4088,8 +4151,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -4105,8 +4168,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -4149,8 +4212,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 admin_id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -4167,8 +4230,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **admin_id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -4264,8 +4327,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -4281,8 +4344,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -4325,8 +4388,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -4343,8 +4406,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -4441,8 +4504,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 format = 'format_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -4459,8 +4522,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -4664,8 +4727,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -4681,8 +4744,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -4728,7 +4791,7 @@ os_and_arch = 'os_and_arch_example' # str |
 collector_version = 56 # int | The version of the installer you'd like to download. This defaults to the latest GD Collector, unless useEA is true (optional)
 token = 'token_example' # str |  (optional)
 monitor_others = true # bool |  (optional) (default to true)
-collector_size = 'medium' # str | The size of the Collector you'd like to install. Options are nano, small (requires 2GB memory), medium (requires 4GB memory), large (requires 8GB memory). Requires collector version 22.180 or higher. Defaults to small (optional) (default to medium)
+collector_size = 'medium' # str | The size of the Collector you'd like to install. Options are nano, small (requires 2GB memory), medium (requires 4GB memory), large (requires 8GB memory), extra large (requires 16GB memory), double extra large (requires 32GB memory). Requires collector version 22.180 or higher. Defaults to small (optional) (default to medium)
 use_ea = false # bool | If true, the latest EA Collector version will be used. Defaults to false (optional) (default to false)
 
 try:
@@ -4748,7 +4811,7 @@ Name | Type | Description  | Notes
  **collector_version** | **int**| The version of the installer you&#39;d like to download. This defaults to the latest GD Collector, unless useEA is true | [optional] 
  **token** | **str**|  | [optional] 
  **monitor_others** | **bool**|  | [optional] [default to true]
- **collector_size** | **str**| The size of the Collector you&#39;d like to install. Options are nano, small (requires 2GB memory), medium (requires 4GB memory), large (requires 8GB memory). Requires collector version 22.180 or higher. Defaults to small | [optional] [default to medium]
+ **collector_size** | **str**| The size of the Collector you&#39;d like to install. Options are nano, small (requires 2GB memory), medium (requires 4GB memory), large (requires 8GB memory), extra large (requires 16GB memory), double extra large (requires 32GB memory). Requires collector version 22.180 or higher. Defaults to small | [optional] [default to medium]
  **use_ea** | **bool**| If true, the latest EA Collector version will be used. Defaults to false | [optional] [default to false]
 
 ### Return type
@@ -4790,8 +4853,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -4807,8 +4870,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -4850,8 +4913,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -4867,8 +4930,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -5030,8 +5093,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -5047,8 +5110,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -5090,8 +5153,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -5107,8 +5170,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -5207,8 +5270,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 ds_id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -5225,8 +5288,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ds_id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -5327,8 +5390,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 format = 'json' # str |  (optional) (default to json)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -5345,8 +5408,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**|  | [optional] [default to json]
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -5388,7 +5451,7 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
-collector_id = -1 # int |  (optional) (default to -1)
+collector_id = 56 # int |  (optional)
 
 try:
     # Get the result of a Collector debug command
@@ -5403,7 +5466,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **collector_id** | **int**|  | [optional] [default to -1]
+ **collector_id** | **int**|  | [optional] 
 
 ### Return type
 
@@ -5510,7 +5573,7 @@ hds_id = 56 # int |
 instance_id = 56 # int | 
 id = 'id_example' # str | 
 format = 'json' # str |  (optional) (default to json)
-start_epoch = 0 # int |  (optional) (default to 0)
+start_epoch = 789 # int |  (optional)
 fields = 'fields_example' # str |  (optional)
 
 try:
@@ -5530,7 +5593,7 @@ Name | Type | Description  | Notes
  **instance_id** | **int**|  | 
  **id** | **str**|  | 
  **format** | **str**|  | [optional] [default to json]
- **start_epoch** | **int**|  | [optional] [default to 0]
+ **start_epoch** | **int**|  | [optional] 
  **fields** | **str**|  | [optional] 
 
 ### Return type
@@ -5575,8 +5638,8 @@ device_id = 56 # int |
 hds_id = 56 # int | 
 instance_id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -5595,8 +5658,8 @@ Name | Type | Description  | Notes
  **hds_id** | **int**|  | 
  **instance_id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -5697,9 +5760,9 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 id = 56 # int | 
-period = 1 # float |  (optional) (default to 1)
-start = 0 # int |  (optional) (default to 0)
-end = 0 # int |  (optional) (default to 0)
+period = 1.0 # float |  (optional) (default to 1.0)
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
 datapoints = 'datapoints_example' # str |  (optional)
 format = 'json' # str |  (optional) (default to json)
 aggregate = 'none' # str | the aggregate option (optional) (default to none)
@@ -5718,9 +5781,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **int**|  | 
  **id** | **int**|  | 
- **period** | **float**|  | [optional] [default to 1]
- **start** | **int**|  | [optional] [default to 0]
- **end** | **int**|  | [optional] [default to 0]
+ **period** | **float**|  | [optional] [default to 1.0]
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
  **datapoints** | **str**|  | [optional] 
  **format** | **str**|  | [optional] [default to json]
  **aggregate** | **str**| the aggregate option | [optional] [default to none]
@@ -5829,8 +5892,8 @@ device_id = 56 # int |
 start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 
 try:
     # get a list of alert settings for a device
@@ -5848,8 +5911,8 @@ Name | Type | Description  | Notes
  **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
 
 ### Return type
 
@@ -5892,8 +5955,8 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | Device-DataSource ID
 instance_id = 56 # int | 
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 
 try:
     # get a list of alert settings for a device datasource instance
@@ -5910,8 +5973,8 @@ Name | Type | Description  | Notes
  **device_id** | **int**|  | 
  **hds_id** | **int**| Device-DataSource ID | 
  **instance_id** | **int**|  | 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
 
 ### Return type
 
@@ -6014,9 +6077,9 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | The device-datasource ID
 id = 56 # int | 
-period = 1 # float |  (optional) (default to 1)
-start = 0 # int |  (optional) (default to 0)
-end = 0 # int |  (optional) (default to 0)
+period = 1.0 # float |  (optional) (default to 1.0)
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
 datapoints = 'datapoints_example' # str |  (optional)
 format = 'json' # str |  (optional) (default to json)
 
@@ -6035,9 +6098,9 @@ Name | Type | Description  | Notes
  **device_id** | **int**|  | 
  **hds_id** | **int**| The device-datasource ID | 
  **id** | **int**|  | 
- **period** | **float**|  | [optional] [default to 1]
- **start** | **int**|  | [optional] [default to 0]
- **end** | **int**|  | [optional] [default to 0]
+ **period** | **float**|  | [optional] [default to 1.0]
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
  **datapoints** | **str**|  | [optional] 
  **format** | **str**|  | [optional] [default to json]
 
@@ -6208,8 +6271,8 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -6227,8 +6290,8 @@ Name | Type | Description  | Notes
  **device_id** | **int**|  | 
  **device_ds_id** | **int**| The device-datasource ID you&#39;d like to add an instance group for | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -6338,8 +6401,8 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | The device-datasource ID
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -6357,8 +6420,8 @@ Name | Type | Description  | Notes
  **device_id** | **int**|  | 
  **hds_id** | **int**| The device-datasource ID | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -6403,8 +6466,8 @@ device_id = 56 # int |
 hds_id = 56 # int | The device-datasource ID
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -6423,8 +6486,8 @@ Name | Type | Description  | Notes
  **hds_id** | **int**| The device-datasource ID | 
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -6467,8 +6530,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -6485,8 +6548,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -6641,8 +6704,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_group_id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -6659,8 +6722,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_group_id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -6820,8 +6883,8 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_group_id = 56 # int | 
 include_disabled_data_source_without_instance = false # bool |  (optional) (default to false)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -6839,8 +6902,8 @@ Name | Type | Description  | Notes
  **device_group_id** | **int**|  | 
  **include_disabled_data_source_without_instance** | **bool**|  | [optional] [default to false]
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -6882,8 +6945,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -6899,8 +6962,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -7001,8 +7064,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 gid = 56 # int | group ID
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -7019,8 +7082,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **gid** | **int**| group ID | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -7063,8 +7126,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -7081,8 +7144,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -7190,8 +7253,8 @@ start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -7211,8 +7274,8 @@ Name | Type | Description  | Notes
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -7257,8 +7320,8 @@ start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -7277,8 +7340,8 @@ Name | Type | Description  | Notes
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -7379,8 +7442,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -7397,8 +7460,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -7496,8 +7559,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -7513,8 +7576,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -7557,8 +7620,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 format = 'json' # str |  (optional) (default to json)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -7575,13 +7638,63 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **format** | **str**|  | [optional] [default to json]
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
 
 [**EventSourcePaginationResponse**](EventSourcePaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_external_api_stats**
+> ApiPerfMetrics get_external_api_stats()
+
+get external api stats info
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+
+try:
+    # get external api stats info
+    api_response = api_instance.get_external_api_stats()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_external_api_stats: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**ApiPerfMetrics**](ApiPerfMetrics.md)
 
 ### Authorization
 
@@ -7619,8 +7732,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -7637,8 +7750,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -7681,8 +7794,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -7699,8 +7812,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -7714,62 +7827,6 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_logic_module_metadata**
-> LogicModuleMetadata get_logic_module_metadata(lm_type, lm_id)
-
-get logic module metadata
-
-
-
-### Example
-```python
-from __future__ import print_function
-import time
-import logicmonitor_sdk
-from logicmonitor_sdk.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: LMv1
-configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
-
-# create an instance of the API class
-api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-lm_type = 'lm_type_example' # str | The type of logicmodule (datasource | eventsource)
-lm_id = 56 # int | The ID of logicmodule
-
-try:
-    # get logic module metadata
-    api_response = api_instance.get_logic_module_metadata(lm_type, lm_id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling LMApi->get_logic_module_metadata: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **lm_type** | **str**| The type of logicmodule (datasource | eventsource) | 
- **lm_id** | **int**| The ID of logicmodule | 
-
-### Return type
-
-[**LogicModuleMetadata**](LogicModuleMetadata.md)
-
-### Authorization
-
-[LMv1](../README.md#LMv1)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -7853,8 +7910,8 @@ end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
 port = 'port_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -7875,8 +7932,8 @@ Name | Type | Description  | Notes
  **netflow_filter** | **str**|  | [optional] 
  **port** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -7922,8 +7979,8 @@ start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -7943,8 +8000,8 @@ Name | Type | Description  | Notes
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -7991,8 +8048,8 @@ end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
 ip = 'ip_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -8013,8 +8070,8 @@ Name | Type | Description  | Notes
  **netflow_filter** | **str**|  | [optional] 
  **ip** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -8110,8 +8167,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -8127,8 +8184,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -8226,9 +8283,9 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
-filter = 'filter_example' # str |  (optional)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
+filter = 'filter_example' # str | Filter the response based on tags, createdBy, happenedOn, monitorObjectGroups, monitorObjectNames, or _all field values (optional)
 
 try:
     # get opsnote list
@@ -8243,9 +8300,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
- **filter** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
+ **filter** | **str**| Filter the response based on tags, createdBy, happenedOn, monitorObjectGroups, monitorObjectNames, or _all field values | [optional] 
 
 ### Return type
 
@@ -8340,8 +8397,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -8357,8 +8414,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -8510,8 +8567,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -8527,8 +8584,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -8570,8 +8627,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -8587,8 +8644,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -8686,8 +8743,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -8703,8 +8760,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -8804,8 +8861,8 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -8823,8 +8880,8 @@ Name | Type | Description  | Notes
  **device_id** | **int**|  | 
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -8867,8 +8924,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -8885,8 +8942,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -8932,8 +8989,8 @@ start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -8953,8 +9010,8 @@ Name | Type | Description  | Notes
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -8997,8 +9054,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -9015,8 +9072,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -9059,8 +9116,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -9077,8 +9134,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -9120,8 +9177,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -9137,8 +9194,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -9180,8 +9237,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -9197,8 +9254,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -9304,8 +9361,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -9321,8 +9378,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -9365,8 +9422,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -9383,8 +9440,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -9429,8 +9486,8 @@ id = 56 # int |
 need_message = false # bool |  (optional) (default to false)
 custom_columns = 'custom_columns_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -9449,8 +9506,8 @@ Name | Type | Description  | Notes
  **need_message** | **bool**|  | [optional] [default to false]
  **custom_columns** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -9549,9 +9606,9 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 srv_id = 56 # int | 
 check_id = 56 # int | 
-period = 1 # float |  (optional) (default to 1)
-start = 0 # int |  (optional) (default to 0)
-end = 0 # int |  (optional) (default to 0)
+period = 1.0 # float |  (optional) (default to 1.0)
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
 datapoints = 'datapoints_example' # str |  (optional)
 format = 'json' # str |  (optional) (default to json)
 aggregate = 'none' # str | the aggregate option (optional) (default to none)
@@ -9570,9 +9627,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **srv_id** | **int**|  | 
  **check_id** | **int**|  | 
- **period** | **float**|  | [optional] [default to 1]
- **start** | **int**|  | [optional] [default to 0]
- **end** | **int**|  | [optional] [default to 0]
+ **period** | **float**|  | [optional] [default to 1.0]
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
  **datapoints** | **str**|  | [optional] 
  **format** | **str**|  | [optional] [default to json]
  **aggregate** | **str**| the aggregate option | [optional] [default to none]
@@ -9617,8 +9674,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 graph_name = 'graph_name_example' # str | 
-start = 0 # int |  (optional) (default to 0)
-end = 0 # int |  (optional) (default to 0)
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
 format = 'format_example' # str |  (optional)
 
 try:
@@ -9635,8 +9692,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **graph_name** | **str**|  | 
- **start** | **int**|  | [optional] [default to 0]
- **end** | **int**|  | [optional] [default to 0]
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
  **format** | **str**|  | [optional] 
 
 ### Return type
@@ -9796,8 +9853,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -9813,8 +9870,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -9857,8 +9914,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 collector_ids = 'collector_ids_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -9875,8 +9932,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **collector_ids** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -9919,8 +9976,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -9937,8 +9994,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -9981,8 +10038,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -9999,8 +10056,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -10158,8 +10215,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 # create an instance of the API class
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -10175,8 +10232,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -10219,8 +10276,8 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
-size = 50 # int |  (optional) (default to 50)
-offset = 0 # int |  (optional) (default to 0)
+size = 56 # int |  (optional)
+offset = 56 # int |  (optional)
 filter = 'filter_example' # str |  (optional)
 
 try:
@@ -10237,8 +10294,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
- **size** | **int**|  | [optional] [default to 50]
- **offset** | **int**|  | [optional] [default to 0]
+ **size** | **int**|  | [optional] 
+ **offset** | **int**|  | [optional] 
  **filter** | **str**|  | [optional] 
 
 ### Return type
@@ -10879,7 +10936,7 @@ Name | Type | Description  | Notes
 
 update dashboard
 
-
+The template field works only for the POST API
 
 ### Example
 ```python
@@ -10937,7 +10994,7 @@ Name | Type | Description  | Notes
 
 update dashboard group
 
-
+The template field works only for the POST API
 
 ### Example
 ```python
@@ -11237,7 +11294,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_device_group_by_id**
-> DeviceGroup patch_device_group_by_id(id, body)
+> DeviceGroup patch_device_group_by_id(id, body, op_type=op_type)
 
 update device group
 
@@ -11261,10 +11318,11 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DeviceGroup() # DeviceGroup | 
+op_type = 'refresh' # str |  (optional) (default to refresh)
 
 try:
     # update device group
-    api_response = api_instance.patch_device_group_by_id(id, body)
+    api_response = api_instance.patch_device_group_by_id(id, body, op_type=op_type)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->patch_device_group_by_id: %s\n" % e)
@@ -11276,6 +11334,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**DeviceGroup**](DeviceGroup.md)|  | 
+ **op_type** | **str**|  | [optional] [default to refresh]
 
 ### Return type
 
@@ -12617,7 +12676,7 @@ Name | Type | Description  | Notes
 
 update dashboard
 
-
+The template field works only for the POST API
 
 ### Example
 ```python
@@ -12675,7 +12734,7 @@ Name | Type | Description  | Notes
 
 update dashboard group
 
-
+The template field works only for the POST API
 
 ### Example
 ```python
@@ -12975,7 +13034,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_device_group_by_id**
-> DeviceGroup update_device_group_by_id(id, body)
+> DeviceGroup update_device_group_by_id(id, body, op_type=op_type)
 
 update device group
 
@@ -12999,10 +13058,11 @@ configuration.access_key = 'YOUR_ACCESS_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DeviceGroup() # DeviceGroup | 
+op_type = 'refresh' # str |  (optional) (default to refresh)
 
 try:
     # update device group
-    api_response = api_instance.update_device_group_by_id(id, body)
+    api_response = api_instance.update_device_group_by_id(id, body, op_type=op_type)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->update_device_group_by_id: %s\n" % e)
@@ -13014,6 +13074,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**DeviceGroup**](DeviceGroup.md)|  | 
+ **op_type** | **str**|  | [optional] [default to refresh]
 
 ### Return type
 

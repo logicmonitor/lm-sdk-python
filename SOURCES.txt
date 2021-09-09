@@ -30,6 +30,7 @@ logicmonitor_sdk/models/alert_trends_metric.py
 logicmonitor_sdk/models/alert_trends_report.py
 logicmonitor_sdk/models/alert_widget.py
 logicmonitor_sdk/models/alert_widget_data.py
+logicmonitor_sdk/models/api_perf_metrics.py
 logicmonitor_sdk/models/api_token.py
 logicmonitor_sdk/models/api_token_pagination_response.py
 logicmonitor_sdk/models/applies_to_function.py
@@ -109,6 +110,7 @@ logicmonitor_sdk/models/collector_version.py
 logicmonitor_sdk/models/collector_version_pagination_response.py
 logicmonitor_sdk/models/color_threshold.py
 logicmonitor_sdk/models/column_header.py
+logicmonitor_sdk/models/conversation_filter.py
 logicmonitor_sdk/models/counter.py
 logicmonitor_sdk/models/custom_flexible_virtual_data_source_ex.py
 logicmonitor_sdk/models/custom_graph.py
@@ -169,6 +171,9 @@ logicmonitor_sdk/models/device_group_datasource_pagination_response.py
 logicmonitor_sdk/models/device_group_pagination_response.py
 logicmonitor_sdk/models/device_group_sdt.py
 logicmonitor_sdk/models/device_group_sdt_history_pagination_response.py
+logicmonitor_sdk/models/device_instance_data.py
+logicmonitor_sdk/models/device_instance_data_pagination_response.py
+logicmonitor_sdk/models/device_instances.py
 logicmonitor_sdk/models/device_noc_item.py
 logicmonitor_sdk/models/device_pagination_response.py
 logicmonitor_sdk/models/device_sdt.py
@@ -246,7 +251,6 @@ logicmonitor_sdk/models/linked_wmi_class.py
 logicmonitor_sdk/models/location_data.py
 logicmonitor_sdk/models/log_file.py
 logicmonitor_sdk/models/log_file_event_source.py
-logicmonitor_sdk/models/logic_module_metadata.py
 logicmonitor_sdk/models/macro.py
 logicmonitor_sdk/models/map_item_info.py
 logicmonitor_sdk/models/match_pattern.py
@@ -285,6 +289,8 @@ logicmonitor_sdk/models/noc_widget_data.py
 logicmonitor_sdk/models/normal_graph_widget.py
 logicmonitor_sdk/models/ntlm_authentication.py
 logicmonitor_sdk/models/onetime_upgrade_info.py
+logicmonitor_sdk/models/open_metric_collector_attribute_v2.py
+logicmonitor_sdk/models/open_metric_discovery_method.py
 logicmonitor_sdk/models/ops_note.py
 logicmonitor_sdk/models/ops_note_device_group_scope.py
 logicmonitor_sdk/models/ops_note_device_scope.py
@@ -332,6 +338,7 @@ logicmonitor_sdk/models/role.py
 logicmonitor_sdk/models/role_pagination_response.py
 logicmonitor_sdk/models/role_report.py
 logicmonitor_sdk/models/row_data.py
+logicmonitor_sdk/models/saas_net_scan.py
 logicmonitor_sdk/models/script_auto_discovery_method.py
 logicmonitor_sdk/models/script_collector_attribute.py
 logicmonitor_sdk/models/script_eri_discovery_attribute_v2.py
@@ -351,6 +358,7 @@ logicmonitor_sdk/models/sla_report.py
 logicmonitor_sdk/models/snmp_auto_discovery_method.py
 logicmonitor_sdk/models/snmp_collector_attribute.py
 logicmonitor_sdk/models/snmp_trap_event_source.py
+logicmonitor_sdk/models/snmpilp.py
 logicmonitor_sdk/models/stats_d_graph.py
 logicmonitor_sdk/models/stats_d_graph_display.py
 logicmonitor_sdk/models/stats_d_metric_definition.py
@@ -432,6 +440,7 @@ test/test_alert_trends_metric.py
 test/test_alert_trends_report.py
 test/test_alert_widget.py
 test/test_alert_widget_data.py
+test/test_api_perf_metrics.py
 test/test_api_token.py
 test/test_api_token_pagination_response.py
 test/test_applies_to_function.py
@@ -511,6 +520,7 @@ test/test_collector_version.py
 test/test_collector_version_pagination_response.py
 test/test_color_threshold.py
 test/test_column_header.py
+test/test_conversation_filter.py
 test/test_counter.py
 test/test_custom_flexible_virtual_data_source_ex.py
 test/test_custom_graph.py
@@ -571,6 +581,9 @@ test/test_device_group_datasource_pagination_response.py
 test/test_device_group_pagination_response.py
 test/test_device_group_sdt.py
 test/test_device_group_sdt_history_pagination_response.py
+test/test_device_instance_data.py
+test/test_device_instance_data_pagination_response.py
+test/test_device_instances.py
 test/test_device_noc_item.py
 test/test_device_pagination_response.py
 test/test_device_sdt.py
@@ -649,7 +662,6 @@ test/test_lm_api.py
 test/test_location_data.py
 test/test_log_file.py
 test/test_log_file_event_source.py
-test/test_logic_module_metadata.py
 test/test_macro.py
 test/test_map_item_info.py
 test/test_match_pattern.py
@@ -688,6 +700,8 @@ test/test_noc_widget_data.py
 test/test_normal_graph_widget.py
 test/test_ntlm_authentication.py
 test/test_onetime_upgrade_info.py
+test/test_open_metric_collector_attribute_v2.py
+test/test_open_metric_discovery_method.py
 test/test_ops_note.py
 test/test_ops_note_device_group_scope.py
 test/test_ops_note_device_scope.py
@@ -735,6 +749,7 @@ test/test_role.py
 test/test_role_pagination_response.py
 test/test_role_report.py
 test/test_row_data.py
+test/test_saas_net_scan.py
 test/test_script_auto_discovery_method.py
 test/test_script_collector_attribute.py
 test/test_script_eri_discovery_attribute_v2.py
@@ -754,6 +769,7 @@ test/test_sla_report.py
 test/test_snmp_auto_discovery_method.py
 test/test_snmp_collector_attribute.py
 test/test_snmp_trap_event_source.py
+test/test_snmpilp.py
 test/test_stats_d_graph.py
 test/test_stats_d_graph_display.py
 test/test_stats_d_metric_definition.py

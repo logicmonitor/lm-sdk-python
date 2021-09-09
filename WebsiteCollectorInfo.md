@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**collector_group_id** | **int** |  | [optional] 
-**collector_group_name** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
 **hostname** | **str** |  | [optional] 
+**collector_group_name** | **str** |  | [optional] 
+**collector_group_id** | **int** |  | [optional] 
+**description** | **str** |  | [optional] 
 **id** | **int** |  | [optional] 
 **status** | **str** |  | [optional] 
 
