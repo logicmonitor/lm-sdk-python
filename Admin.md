@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **sms_email_format** | **str** | sms | fullText, where sms &#x3D; 160 characters and fullText&#x3D; all characters | [optional] 
 **apionly** | **bool** | Whether it is a API only user | [optional] 
 **api_tokens** | [**list[APIToken]**](APIToken.md) | Any API Tokens associated with the user | [optional] 
+**admin_group_ids** | **list[int]** | The Id(s) of the groups the admin is in, where multiple group ids are comma separated | [optional] 
 **password** | **str** | The password associated with the user | 
 **last_action** | **str** | The last action taken by the user | [optional] 
 **training_email** | **str** | The email address for user&#39;s Training account | [optional] 
@@ -21,12 +22,14 @@ Name | Type | Description | Notes
 **email** | **str** | The email address associated with the user | 
 **contact_method** | **str** | email | smsemail | [optional] 
 **accept_eula_on** | **int** | The time, in epoch format, that the user accepted the EULA (if required to) | [optional] 
+**user_permission** | **str** | The permission of current user with the admin. values can be write|read|none | [optional] 
 **sms_email** | **str** | The sms email address associated with the user | [optional] 
 **two_fa_enabled** | **bool** | Whether or not two factor authentication is enabled for the user | [optional] 
 **first_name** | **str** | The first name associated with the user | [optional] 
 **phone** | **str** | The phone number associated with the user | [optional] 
 **created_by** | **str** | Who created the user. This may be another user, SAML or LogicMonitor | [optional] 
 **force_password_change** | **bool** | Whether or not the user should be forced to change their password on the next login | [optional] 
+**tenant_id** | **int** | The tenant id of the user | [optional] 
 **accept_eula** | **bool** | Whether or not the user is required to accept the EULA (end user license agreement) | [optional] 
 **username** | **str** | The username associated with the user | 
 **status** | **str** | The user&#39;s status. Should be one of active and suspended | [optional] 

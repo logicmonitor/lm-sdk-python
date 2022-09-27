@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **custom_report_type_id** | **int** | The id of the custom report template, if the report is a custom report. An id of 0 indicates that the report is not a custom report | [optional] 
 **type** | **str** | The report type. Acceptable values are: Alert,Alert SLA,Alert threshold,Alert trends,Host CPU,Host group inventory,Host inventory,Host metric trends,Interfaces Bandwidth,Netflow device metric,Service Level Agreement,Website Service Overview,Word template,Audit Log,Alert Forecasting,Dashboard,Website SLA,User,Role | 
 **last_generate_pages** | **int** | The number of pages in the report, the last time it was generated | [optional] 
+**report_link_expire** | **str** | The report link Expire. Allowable values are:High Flexibility,High Security | [optional] 
 **schedule** | **str** | A cron schedule that indicates when the report will be delivered via email | [optional] 
 **recipients** | [**list[ReportRecipient]**](ReportRecipient.md) | If the report is configured to be delivered via email, this object provides the recipients that the report will be delivered to | [optional] 
 **custom_report_type_name** | **str** | The name of the custom report template | [optional] 

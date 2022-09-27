@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **receive** | **float** |  | [optional] 
 **usage** | **float** |  | [optional] 
+**device_id** | **int** |  | [optional] 
 **send** | **float** |  | [optional] 
 **device_display_name** | **str** |  | [optional] 
 

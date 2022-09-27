@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **percent_usage** | **float** |  | [optional] 
 **port** | **int** |  | [optional] 
-**data_type** | **str** |  | [optional] 
 **usage** | **float** |  | [optional] 
 **description** | **str** |  | [optional] 
 

@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **alternate_data_points** | [**list[TableWidgetDataPoint]**](TableWidgetDataPoint.md) |  | [optional] 
 **rpn** | **str** |  | [optional] 
+**unit_label** | **str** | The unit label | [optional] 
 **data_point** | [**TableWidgetDataPoint**](TableWidgetDataPoint.md) |  | 
 **column_name** | **str** |  | 
 **enable_forecast** | **bool** |  | [optional] 

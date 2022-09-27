@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **connect_timeout** | **int** |  | [optional] 
 **group_label** | **str** |  | [optional] 
 **instance_label** | **str** |  | 
+**instance_property_tags** | **str** |  | [optional] 
 **url** | **str** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

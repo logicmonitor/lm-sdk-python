@@ -3,12 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**is_unc_instance** | **bool** | Whether or not UNC Monitoring enabled for device | [optional] 
 **stop_monitoring** | **bool** | Whether or not monitoring is disabled for the instance | [optional] 
 **device_data_source_id** | **int** | The id of the unique device-datasource the instance is associated with | [optional] 
 **display_name** | **str** | The instance alias. This is the descriptive name of the instance, and should be unique for the device/datasource combination | 
 **wild_value2** | **str** | Only used for two dimensional active discovery. When used, during Active Discovery runs, the token ##WILDVALUE## is replaces with the value of ALIAS and the token ##WILDVALUE2## is replaced with the value of the second part alias. This value must be unique for the device/datasource/WILDVALUE combination | [optional] 
 **group_id** | **int** | The id of the instance group associated with the datasource instance | [optional] 
 **description** | **str** | The description of the datasource instance | [optional] 
+**collector_id** | **int** | The id of the collector the datasource instance is associated with | [optional] 
 **disable_alerting** | **bool** | Whether or not alerting is disabled for the instance | [optional] 
 **device_id** | **int** | The id of the device the datasource instance is associated with | [optional] 
 **device_display_name** | **str** | The display name of the device the datasource instance is associated with | [optional] 

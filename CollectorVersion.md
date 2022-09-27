@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**feature** | **bool** | Specifies if this is a feature version | [optional] 
 **stable** | **bool** | False for early release. True for general release | [optional] 
 **release_epoch** | **int** | Release Epoch for official releases | [optional] 
 **has32bit_windows** | **bool** | True if Windows collector available | [optional] 

@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **admin_name** | **str** | The name of the user associated with the API Tokens | [optional] 
 **note** | **str** | The note associated with the API Tokens | [optional] 
 **last_used_on** | **int** | The epoch at which the API Tokens were last used | [optional] 
+**user_permission** | **str** | The permission of current apiToken with the admin. values can be write|read|none | [optional] 
 **access_key** | **str** | The secret key associated with the API Tokens | [optional] 
 **created_by** | **str** | The user who is the API Tokens created by | [optional] 
 **roles** | **list[str]** | The roles assigned to the user that is associated with the API Tokens | [optional] 

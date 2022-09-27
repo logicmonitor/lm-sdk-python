@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **if_out** | **int** |  | [optional] 
 **data_type** | **str** |  | [optional] 
 **usage** | **float** |  | [optional] 
+**src_asn** | **int** |  | [optional] 
 **dst_dns** | **str** |  | [optional] 
 **src_port** | **int** |  | [optional] 
 **first_epoch_in_sec** | **int** |  | [optional] 
@@ -16,9 +17,12 @@ Name | Type | Description | Notes
 **dst_port** | **int** |  | [optional] 
 **if_in** | **int** |  | [optional] 
 **source_m_bytes** | **float** |  | [optional] 
+**src_asn_name** | **str** |  | [optional] 
 **src_dns** | **str** |  | [optional] 
 **destination_m_bytes** | **float** |  | [optional] 
+**dst_asn** | **int** |  | [optional] 
 **dst_ip** | **str** |  | [optional] 
+**dest_asn_name** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

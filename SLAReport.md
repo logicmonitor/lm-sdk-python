@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**calculation_method** | **int** | Calculation method: 0 &#x3D; percent all resources available, 1 &#x3D; average of all SLA metrics | [optional] 
 **date_range** | **str** | The Time Range configured for the report: Last 2 hours | Last 24 hours | Last calendar day | Last 7 days | Last 14 days | Last 30 days | Last calendar month | Last 365 days | Any custom date range in this format: YYYY-MM-dd hh:mm TO YYYY-MM-dd hh:mm | [optional] 
 **timezone** | **str** | The specific timezone for the report | [optional] 
 **display_with_availability** | **bool** | If true, only devices with less than 100% availability will be displayed in the report | [optional] 
