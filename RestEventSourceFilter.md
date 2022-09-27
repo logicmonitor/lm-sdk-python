@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** |  | [optional] 
-**comment** | **str** |  | [optional] 
-**id** | **int** |  | [optional] 
-**value** | **str** |  | [optional] 
-**operator** | **str** |  | [optional] 
+**name** | **str** | filter name | 
+**comment** | **str** | filter comment | 
+**id** | **int** | filter id | [optional] 
+**value** | **str** | filter value | 
+**operator** | **str** | filter operator | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

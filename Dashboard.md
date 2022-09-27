@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **owner** | **str** | This field will be empty unless the dashboard is a private dashboard, in which case the owner will be listed | [optional] 
-**template** | **object** | The template which is used for import dashboard | [optional] 
+**template** | **object** | The template which is used for importing dashboard | [optional] 
 **user_permission** | **str** | The permission of the user that made the API call | [optional] 
 **group_id** | **int** | The id of the group the dashboard belongs to | [optional] 
 **full_name** | **str** | Full name of the dashboard, including group path | [optional] 
@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **group_name** | **str** | The name of group where created dashboard will reside | [optional] 
 **widget_tokens** | [**list[WidgetToken]**](WidgetToken.md) | If useDynamicWidget&#x3D;true, this field must at least contain tokens defaultDeviceGroup and defaultServiceGroup | [optional] 
 **name** | **str** | The name of the dashboard | 
+**overwrite_group_fields** | **bool** | Overwrite existing Resource/Website Group fields with ##defaultResourceGroup## and/or ##defaultWebsiteGroup## tokens. This value of this attribute is only considered while updating the Dashboard configuration. While creating the new Dashboard, this value will always be considered as false irrespective of the passed value. | [optional] 
 **id** | **int** | The Id of the dashboard | [optional] 
 **group_full_path** | **str** | The full path (excluding root group) of the group the dashboard belongs to | [optional] 
 

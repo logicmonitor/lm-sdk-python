@@ -3,7 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**enable_anomaly_alert_generation** | **str** | enable anomaly alert generation | [optional] 
 **user_permission** | **str** |  | [optional] 
+**enable_anomaly_alert_suppression** | **str** | enable anomaly alert suppression | [optional] 
 **group_id** | **int** |  | [optional] 
 **alert_enabled** | **bool** |  | [optional] 
 **group_full_path** | **str** |  | [optional] 

@@ -4,9 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **virtual_data_points** | [**list[CustomVirtualDataPoint]**](CustomVirtualDataPoint.md) | The virtual datapoints added to the widget (note that a virtual datapoint must be referenced in a graph line to be displayed) | [optional] 
-**min_value** | **object** | The minimum value that should be displayed on the y-axis | [optional] 
+**min_value** | **float** | The minimum value that should be displayed on the y-axis | [optional] 
 **top_x** | **int** | The number of lines to display for each configured datapoint | [optional] 
-**max_value** | **object** | The maximum value that should be displayed on the y-axis | [optional] 
+**max_value** | **float** | The maximum value that should be displayed on the y-axis | [optional] 
 **data_points** | [**list[CustomFlexibleVirtualDataSourceEx]**](CustomFlexibleVirtualDataSourceEx.md) | The datapoints added to the widget (note that a datapoint must be referenced in a graph line to be displayed) | 
 **vertical_label** | **str** | The label that will be display along the y axis | [optional] 
 **id** | **int** | The unique id of the custom graph displayed by this widget (not to be confused with the widget id) | [optional] 

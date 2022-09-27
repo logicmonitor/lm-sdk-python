@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**template** | **object** | The template which is used for import dashboard group | [optional] 
+**template** | **object** | The template which is used for importing dashboard group | [optional] 
 **full_path** | **str** | The full path of the dashboard group | [optional] 
 **user_permission** | **str** | The permission of the user that made the API call | [optional] 
 **widget_tokens** | [**list[WidgetToken]**](WidgetToken.md) | The tokens assigned at the group level | [optional] 

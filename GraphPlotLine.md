@@ -3,20 +3,20 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**color_name** | **str** |  | [optional] 
-**std** | **object** |  | [optional] 
-**visible** | **bool** |  | [optional] 
-**color** | **str** |  | [optional] 
-**data** | **list[object]** |  | [optional] 
-**max** | **object** |  | [optional] 
-**legend** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
-**label** | **str** |  | [optional] 
-**type** | **str** |  | [optional] 
-**min** | **object** |  | [optional] 
-**avg** | **object** |  | [optional] 
-**decimal** | **int** |  | [optional] 
-**use_y_max** | **bool** |  | [optional] 
+**color_name** | **str** | The color name | [optional] 
+**std** | **object** | The standard deviation value | [optional] 
+**visible** | **bool** | true | false Specifies whether the graph will be visible or not | [optional] 
+**color** | **str** | The color of the graph | [optional] 
+**data** | **list[object]** | The polled data used to plot the graph | [optional] 
+**max** | **object** | The max value of datapoint or instance | [optional] 
+**legend** | **str** | The legend of the datapoint or instance | [optional] 
+**description** | **str** | The description for the datapoint or instance | [optional] 
+**label** | **str** | The label for the datapoint or instance | [optional] 
+**type** | **str** | line | area | stack | column | statusBar Specifies how the data of the datapoint or instance will be plotted | [optional] 
+**min** | **object** | The min value of the datapoint or instance | [optional] 
+**avg** | **object** | The average value of the datapoint or instance | [optional] 
+**decimal** | **int** | -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 The decimal value | [optional] 
+**use_y_max** | **bool** | true | false Specifies whether to use YMax or not | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
