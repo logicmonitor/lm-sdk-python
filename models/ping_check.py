@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -280,7 +280,7 @@ class PingCheck(Website):
     def overall_alert_level(self):
         """Gets the overall_alert_level of this PingCheck.  # noqa: E501
 
-        warn | error | critical The level of alert to trigger if the website fails the number of checks specified by transition from the test locations specified by globalSmAlertCond  # noqa: E501
+        The values can be warn|error|critical The level of alert to trigger if the website fails the number of checks specified by transition from the test locations specified by globalSmAlertCond  # noqa: E501
 
         :return: The overall_alert_level of this PingCheck.  # noqa: E501
         :rtype: str
@@ -291,7 +291,7 @@ class PingCheck(Website):
     def overall_alert_level(self, overall_alert_level):
         """Sets the overall_alert_level of this PingCheck.
 
-        warn | error | critical The level of alert to trigger if the website fails the number of checks specified by transition from the test locations specified by globalSmAlertCond  # noqa: E501
+        The values can be warn|error|critical The level of alert to trigger if the website fails the number of checks specified by transition from the test locations specified by globalSmAlertCond  # noqa: E501
 
         :param overall_alert_level: The overall_alert_level of this PingCheck.  # noqa: E501
         :type: str
@@ -303,7 +303,7 @@ class PingCheck(Website):
     def polling_interval(self):
         """Gets the polling_interval of this PingCheck.  # noqa: E501
 
-        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 The polling interval for the website, in units of minutes. This value indicates how often the website is checked. The minimum is 1 minute, and the maximum is 10 minutes  # noqa: E501
+        The values can be 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 The polling interval for the website, in units of minutes. This value indicates how often the website is checked. The minimum is 1 minute, and the maximum is 10 minutes  # noqa: E501
 
         :return: The polling_interval of this PingCheck.  # noqa: E501
         :rtype: int
@@ -314,7 +314,7 @@ class PingCheck(Website):
     def polling_interval(self, polling_interval):
         """Sets the polling_interval of this PingCheck.
 
-        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 The polling interval for the website, in units of minutes. This value indicates how often the website is checked. The minimum is 1 minute, and the maximum is 10 minutes  # noqa: E501
+        The values can be 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 The polling interval for the website, in units of minutes. This value indicates how often the website is checked. The minimum is 1 minute, and the maximum is 10 minutes  # noqa: E501
 
         :param polling_interval: The polling_interval of this PingCheck.  # noqa: E501
         :type: int
@@ -349,7 +349,7 @@ class PingCheck(Website):
     def disable_alerting(self):
         """Gets the disable_alerting of this PingCheck.  # noqa: E501
 
-        true: alerting is disabled for the website false: alerting is enabled for the website If stopMonitoring=true, then alerting will also by default be disabled for the website  # noqa: E501
+        The values can be true|false where true: alerting is disabled for the website false: alerting is enabled for the website If stopMonitoring=true, then alerting will also be disabled by default for the website  # noqa: E501
 
         :return: The disable_alerting of this PingCheck.  # noqa: E501
         :rtype: bool
@@ -360,7 +360,7 @@ class PingCheck(Website):
     def disable_alerting(self, disable_alerting):
         """Sets the disable_alerting of this PingCheck.
 
-        true: alerting is disabled for the website false: alerting is enabled for the website If stopMonitoring=true, then alerting will also by default be disabled for the website  # noqa: E501
+        The values can be true|false where true: alerting is disabled for the website false: alerting is enabled for the website If stopMonitoring=true, then alerting will also be disabled by default for the website  # noqa: E501
 
         :param disable_alerting: The disable_alerting of this PingCheck.  # noqa: E501
         :type: bool
@@ -372,7 +372,7 @@ class PingCheck(Website):
     def type(self):
         """Gets the type of this PingCheck.  # noqa: E501
 
-        pingcheck | webcheck The type of the service  # noqa: E501
+        The values can be pingcheck|webcheck Specifies the type of service  # noqa: E501
 
         :return: The type of this PingCheck.  # noqa: E501
         :rtype: str
@@ -383,7 +383,7 @@ class PingCheck(Website):
     def type(self, type):
         """Sets the type of this PingCheck.
 
-        pingcheck | webcheck The type of the service  # noqa: E501
+        The values can be pingcheck|webcheck Specifies the type of service  # noqa: E501
 
         :param type: The type of this PingCheck.  # noqa: E501
         :type: str
@@ -443,7 +443,7 @@ class PingCheck(Website):
     def stop_monitoring_by_folder(self):
         """Gets the stop_monitoring_by_folder of this PingCheck.  # noqa: E501
 
-        true: monitoring is disabled for all services in the website's folder false: monitoring is not disabled for all services in website's folder  # noqa: E501
+        The values can be true|false where true: monitoring is disabled for all services in the website's folder false: monitoring is not disabled for all services in website's folder  # noqa: E501
 
         :return: The stop_monitoring_by_folder of this PingCheck.  # noqa: E501
         :rtype: bool
@@ -454,7 +454,7 @@ class PingCheck(Website):
     def stop_monitoring_by_folder(self, stop_monitoring_by_folder):
         """Sets the stop_monitoring_by_folder of this PingCheck.
 
-        true: monitoring is disabled for all services in the website's folder false: monitoring is not disabled for all services in website's folder  # noqa: E501
+        The values can be true|false where true: monitoring is disabled for all services in the website's folder false: monitoring is not disabled for all services in website's folder  # noqa: E501
 
         :param stop_monitoring_by_folder: The stop_monitoring_by_folder of this PingCheck.  # noqa: E501
         :type: bool
@@ -489,7 +489,7 @@ class PingCheck(Website):
     def stop_monitoring(self):
         """Gets the stop_monitoring of this PingCheck.  # noqa: E501
 
-        true: monitoring is disabled for the website false: monitoring is enabled for the website If stopMonitoring=true, then alerting will also by default be disabled for the website  # noqa: E501
+        The values can be true|false where true: monitoring is disabled for the website false: monitoring is enabled for the website If stopMonitoring=true, then alerting will also be disabled by default for the website  # noqa: E501
 
         :return: The stop_monitoring of this PingCheck.  # noqa: E501
         :rtype: bool
@@ -500,7 +500,7 @@ class PingCheck(Website):
     def stop_monitoring(self, stop_monitoring):
         """Sets the stop_monitoring of this PingCheck.
 
-        true: monitoring is disabled for the website false: monitoring is enabled for the website If stopMonitoring=true, then alerting will also by default be disabled for the website  # noqa: E501
+        The values can be true|false where true: monitoring is disabled for the website false: monitoring is enabled for the website If stopMonitoring=true, then alerting will also be disabled by default for the website  # noqa: E501
 
         :param stop_monitoring: The stop_monitoring of this PingCheck.  # noqa: E501
         :type: bool
@@ -512,7 +512,7 @@ class PingCheck(Website):
     def user_permission(self):
         """Gets the user_permission of this PingCheck.  # noqa: E501
 
-        write | read | ack. The permission level of the user that made the API request  # noqa: E501
+        The values can be write|read|ack. The permission level of the user that made the API request  # noqa: E501
 
         :return: The user_permission of this PingCheck.  # noqa: E501
         :rtype: str
@@ -523,7 +523,7 @@ class PingCheck(Website):
     def user_permission(self, user_permission):
         """Sets the user_permission of this PingCheck.
 
-        write | read | ack. The permission level of the user that made the API request  # noqa: E501
+        The values can be write|read|ack. The permission level of the user that made the API request  # noqa: E501
 
         :param user_permission: The user_permission of this PingCheck.  # noqa: E501
         :type: str
@@ -535,7 +535,7 @@ class PingCheck(Website):
     def individual_sm_alert_enable(self):
         """Gets the individual_sm_alert_enable of this PingCheck.  # noqa: E501
 
-        true: an alert will be triggered if a check fails from an individual test location false: an alert will not be triggered if a check fails from an individual test location  # noqa: E501
+        The values can be true|false where true: an alert will be triggered if a check fails from an individual test location false: an alert will not be triggered if a check fails from an individual test location  # noqa: E501
 
         :return: The individual_sm_alert_enable of this PingCheck.  # noqa: E501
         :rtype: bool
@@ -546,7 +546,7 @@ class PingCheck(Website):
     def individual_sm_alert_enable(self, individual_sm_alert_enable):
         """Sets the individual_sm_alert_enable of this PingCheck.
 
-        true: an alert will be triggered if a check fails from an individual test location false: an alert will not be triggered if a check fails from an individual test location  # noqa: E501
+        The values can be true|false where true: an alert will be triggered if a check fails from an individual test location false: an alert will not be triggered if a check fails from an individual test location  # noqa: E501
 
         :param individual_sm_alert_enable: The individual_sm_alert_enable of this PingCheck.  # noqa: E501
         :type: bool
@@ -604,7 +604,7 @@ class PingCheck(Website):
     def transition(self):
         """Gets the transition of this PingCheck.  # noqa: E501
 
-        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 30 | 60 The number of checks that must fail before an alert is triggered  # noqa: E501
+        The values can be 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 30 | 60 The number of checks that must fail before an alert is triggered  # noqa: E501
 
         :return: The transition of this PingCheck.  # noqa: E501
         :rtype: int
@@ -615,7 +615,7 @@ class PingCheck(Website):
     def transition(self, transition):
         """Sets the transition of this PingCheck.
 
-        1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 30 | 60 The number of checks that must fail before an alert is triggered  # noqa: E501
+        The values can be 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 30 | 60 The number of checks that must fail before an alert is triggered  # noqa: E501
 
         :param transition: The transition of this PingCheck.  # noqa: E501
         :type: int
@@ -744,7 +744,7 @@ class PingCheck(Website):
     def use_default_location_setting(self):
         """Gets the use_default_location_setting of this PingCheck.  # noqa: E501
 
-        true: The checkpoint locations configured in the website Default Settings will be used false: The checkpoint locations specified in the testLocation will be used  # noqa: E501
+        The values can be true|false where true: The checkpoint locations configured in the website Default Settings will be used false: The checkpoint locations specified in the testLocation will be used  # noqa: E501
 
         :return: The use_default_location_setting of this PingCheck.  # noqa: E501
         :rtype: bool
@@ -755,7 +755,7 @@ class PingCheck(Website):
     def use_default_location_setting(self, use_default_location_setting):
         """Sets the use_default_location_setting of this PingCheck.
 
-        true: The checkpoint locations configured in the website Default Settings will be used false: The checkpoint locations specified in the testLocation will be used  # noqa: E501
+        The values can be true|false where true: The checkpoint locations configured in the website Default Settings will be used false: The checkpoint locations specified in the testLocation will be used  # noqa: E501
 
         :param use_default_location_setting: The use_default_location_setting of this PingCheck.  # noqa: E501
         :type: bool
@@ -767,7 +767,7 @@ class PingCheck(Website):
     def use_default_alert_setting(self):
         """Gets the use_default_alert_setting of this PingCheck.  # noqa: E501
 
-        true: The alert settings configured in the website Default Settings will be used false: Service Default Settings will not be used, and you will need to specify individualSMAlertEnable, individualAlertLevel, globalSmAlertConf, overallAlertLevel and pollingInterval  # noqa: E501
+        The values can be true|false where true: The alert settings configured in the website Default Settings will be used false: Service Default Settings will not be used, and you will need to specify individualSMAlertEnable, individualAlertLevel, globalSmAlertConf, overallAlertLevel and pollingInterval  # noqa: E501
 
         :return: The use_default_alert_setting of this PingCheck.  # noqa: E501
         :rtype: bool
@@ -778,7 +778,7 @@ class PingCheck(Website):
     def use_default_alert_setting(self, use_default_alert_setting):
         """Sets the use_default_alert_setting of this PingCheck.
 
-        true: The alert settings configured in the website Default Settings will be used false: Service Default Settings will not be used, and you will need to specify individualSMAlertEnable, individualAlertLevel, globalSmAlertConf, overallAlertLevel and pollingInterval  # noqa: E501
+        The values can be true|false where true: The alert settings configured in the website Default Settings will be used false: Service Default Settings will not be used, and you will need to specify individualSMAlertEnable, individualAlertLevel, globalSmAlertConf, overallAlertLevel and pollingInterval  # noqa: E501
 
         :param use_default_alert_setting: The use_default_alert_setting of this PingCheck.  # noqa: E501
         :type: bool
@@ -790,7 +790,7 @@ class PingCheck(Website):
     def individual_alert_level(self):
         """Gets the individual_alert_level of this PingCheck.  # noqa: E501
 
-        warn | error | critical The level of alert to trigger if the website fails a check from an individual test location  # noqa: E501
+        The values can be warn|error|critical The level of alert to trigger if the website fails a check from an individual test location  # noqa: E501
 
         :return: The individual_alert_level of this PingCheck.  # noqa: E501
         :rtype: str
@@ -801,7 +801,7 @@ class PingCheck(Website):
     def individual_alert_level(self, individual_alert_level):
         """Sets the individual_alert_level of this PingCheck.
 
-        warn | error | critical The level of alert to trigger if the website fails a check from an individual test location  # noqa: E501
+        The values can be warn|error|critical The level of alert to trigger if the website fails a check from an individual test location  # noqa: E501
 
         :param individual_alert_level: The individual_alert_level of this PingCheck.  # noqa: E501
         :type: str
@@ -836,7 +836,7 @@ class PingCheck(Website):
     def status(self):
         """Gets the status of this PingCheck.  # noqa: E501
 
-        Whether is the website dead (the collector is down) or not  # noqa: E501
+        Whether the website is dead (the collector is down) or not  # noqa: E501
 
         :return: The status of this PingCheck.  # noqa: E501
         :rtype: str
@@ -847,7 +847,7 @@ class PingCheck(Website):
     def status(self, status):
         """Sets the status of this PingCheck.
 
-        Whether is the website dead (the collector is down) or not  # noqa: E501
+        Whether the website is dead (the collector is down) or not  # noqa: E501
 
         :param status: The status of this PingCheck.  # noqa: E501
         :type: str

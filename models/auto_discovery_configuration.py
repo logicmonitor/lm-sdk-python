@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -88,7 +88,7 @@ class AutoDiscoveryConfiguration(object):
     def persistent_instance(self):
         """Gets the persistent_instance of this AutoDiscoveryConfiguration.  # noqa: E501
 
-        persist discovered instance  # noqa: E501
+        Persist discovered instance  # noqa: E501
 
         :return: The persistent_instance of this AutoDiscoveryConfiguration.  # noqa: E501
         :rtype: bool
@@ -99,7 +99,7 @@ class AutoDiscoveryConfiguration(object):
     def persistent_instance(self, persistent_instance):
         """Sets the persistent_instance of this AutoDiscoveryConfiguration.
 
-        persist discovered instance  # noqa: E501
+        Persist discovered instance  # noqa: E501
 
         :param persistent_instance: The persistent_instance of this AutoDiscoveryConfiguration.  # noqa: E501
         :type: bool
@@ -111,7 +111,7 @@ class AutoDiscoveryConfiguration(object):
     def schedule_interval(self):
         """Gets the schedule_interval of this AutoDiscoveryConfiguration.  # noqa: E501
 
-        auto discovery schedule interval in minutes, 0 means host or data source changed, values can be 0|15|60|1440  # noqa: E501
+        Auto discovery schedule interval in minutes. 0 means host or data source changed. The values can be 0|15|60|1440  # noqa: E501
 
         :return: The schedule_interval of this AutoDiscoveryConfiguration.  # noqa: E501
         :rtype: int
@@ -122,7 +122,7 @@ class AutoDiscoveryConfiguration(object):
     def schedule_interval(self, schedule_interval):
         """Sets the schedule_interval of this AutoDiscoveryConfiguration.
 
-        auto discovery schedule interval in minutes, 0 means host or data source changed, values can be 0|15|60|1440  # noqa: E501
+        Auto discovery schedule interval in minutes. 0 means host or data source changed. The values can be 0|15|60|1440  # noqa: E501
 
         :param schedule_interval: The schedule_interval of this AutoDiscoveryConfiguration.  # noqa: E501
         :type: int
@@ -134,7 +134,7 @@ class AutoDiscoveryConfiguration(object):
     def delete_inactive_instance(self):
         """Gets the delete_inactive_instance of this AutoDiscoveryConfiguration.  # noqa: E501
 
-        delete inactive instance  # noqa: E501
+        Delete inactive instance  # noqa: E501
 
         :return: The delete_inactive_instance of this AutoDiscoveryConfiguration.  # noqa: E501
         :rtype: bool
@@ -145,7 +145,7 @@ class AutoDiscoveryConfiguration(object):
     def delete_inactive_instance(self, delete_inactive_instance):
         """Sets the delete_inactive_instance of this AutoDiscoveryConfiguration.
 
-        delete inactive instance  # noqa: E501
+        Delete inactive instance  # noqa: E501
 
         :param delete_inactive_instance: The delete_inactive_instance of this AutoDiscoveryConfiguration.  # noqa: E501
         :type: bool
@@ -157,7 +157,7 @@ class AutoDiscoveryConfiguration(object):
     def method(self):
         """Gets the method of this AutoDiscoveryConfiguration.  # noqa: E501
 
-        method used to do auto discovery instance  # noqa: E501
+        Method used to do auto discovery instance  # noqa: E501
 
         :return: The method of this AutoDiscoveryConfiguration.  # noqa: E501
         :rtype: AutoDiscoveryMethod
@@ -168,7 +168,7 @@ class AutoDiscoveryConfiguration(object):
     def method(self, method):
         """Sets the method of this AutoDiscoveryConfiguration.
 
-        method used to do auto discovery instance  # noqa: E501
+        Method used to do auto discovery instance  # noqa: E501
 
         :param method: The method of this AutoDiscoveryConfiguration.  # noqa: E501
         :type: AutoDiscoveryMethod
@@ -182,7 +182,7 @@ class AutoDiscoveryConfiguration(object):
     def instance_auto_group_method(self):
         """Gets the instance_auto_group_method of this AutoDiscoveryConfiguration.  # noqa: E501
 
-        auto group method  # noqa: E501
+        Auto group method. The values can be none|netscaler|netscalerservicegroup|regex|esx|ilp  # noqa: E501
 
         :return: The instance_auto_group_method of this AutoDiscoveryConfiguration.  # noqa: E501
         :rtype: str
@@ -193,7 +193,7 @@ class AutoDiscoveryConfiguration(object):
     def instance_auto_group_method(self, instance_auto_group_method):
         """Sets the instance_auto_group_method of this AutoDiscoveryConfiguration.
 
-        auto group method  # noqa: E501
+        Auto group method. The values can be none|netscaler|netscalerservicegroup|regex|esx|ilp  # noqa: E501
 
         :param instance_auto_group_method: The instance_auto_group_method of this AutoDiscoveryConfiguration.  # noqa: E501
         :type: str
@@ -205,7 +205,7 @@ class AutoDiscoveryConfiguration(object):
     def instance_auto_group_method_params(self):
         """Gets the instance_auto_group_method_params of this AutoDiscoveryConfiguration.  # noqa: E501
 
-        auto group method's parameters  # noqa: E501
+        Auto group method's parameters  # noqa: E501
 
         :return: The instance_auto_group_method_params of this AutoDiscoveryConfiguration.  # noqa: E501
         :rtype: str
@@ -216,7 +216,7 @@ class AutoDiscoveryConfiguration(object):
     def instance_auto_group_method_params(self, instance_auto_group_method_params):
         """Sets the instance_auto_group_method_params of this AutoDiscoveryConfiguration.
 
-        auto group method's parameters  # noqa: E501
+        Auto group method's parameters  # noqa: E501
 
         :param instance_auto_group_method_params: The instance_auto_group_method_params of this AutoDiscoveryConfiguration.  # noqa: E501
         :type: str
@@ -249,7 +249,7 @@ class AutoDiscoveryConfiguration(object):
     def disable_instance(self):
         """Gets the disable_instance of this AutoDiscoveryConfiguration.  # noqa: E501
 
-        disable discovered instance  # noqa: E501
+        Disable discovered instance  # noqa: E501
 
         :return: The disable_instance of this AutoDiscoveryConfiguration.  # noqa: E501
         :rtype: bool
@@ -260,7 +260,7 @@ class AutoDiscoveryConfiguration(object):
     def disable_instance(self, disable_instance):
         """Sets the disable_instance of this AutoDiscoveryConfiguration.
 
-        disable discovered instance  # noqa: E501
+        Disable discovered instance  # noqa: E501
 
         :param disable_instance: The disable_instance of this AutoDiscoveryConfiguration.  # noqa: E501
         :type: bool

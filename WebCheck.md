@@ -6,9 +6,7 @@ Name | Type | Description | Notes
 **schema** | **str** | The scheme or protocol associated with the URL to check. Acceptable values are: http, https | [optional] 
 **trigger_ssl_expiration_alert** | **bool** | Whether or not SSL expiration alerts should be triggered | [optional] 
 **trigger_ssl_status_alert** | **bool** | Whether or not SSL status alerts should be triggered | [optional] 
-**domain** | **str** | The domain of the service. This is the base URL of the service | 
 **page_load_alert_time_in_ms** | **int** | The time in milliseconds that the page must load within for each step to avoid triggering an alert | [optional] 
-**steps** | [**list[WebCheckStep]**](WebCheckStep.md) | An object comprising one or more steps, see the table below for the properties included in each step | [optional] 
 **ignore_ssl** | **object** | Whether or not SSL should be ignored, the default value is true | [optional] 
 **alert_expr** | **str** | The threshold (in days) for triggering SSL certification alerts | [optional] 
 

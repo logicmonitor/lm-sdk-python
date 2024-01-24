@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **sub_operation** | **str** | The highest privilege operation on its children operations | [optional] 
 **operation** | **str** | The privilege operation | 
 **object_id** | **str** | The privilege object identifier | 
-**object_type** | **str** | The privilege object type. values can be [dashboard_group|dashboard|host_group|service_group|website_group|report_group|remoteSession|chat|setting|device_dashboard|help|logs|configNeedDeviceManagePermission|map|resourceMapTab|tracesManageTab] | 
+**object_type** | **str** | The privilege object type. The values can be dashboard_group|dashboard|host_group|service_group|website_group|report_group|remoteSession|chat|setting|device_dashboard|help|logs|configNeedDeviceManagePermission|map|resourceMapTab|tracesManageTab|dexda|lmSupportAccess | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

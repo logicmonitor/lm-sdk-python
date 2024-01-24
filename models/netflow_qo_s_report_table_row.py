@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -89,6 +89,7 @@ class NetflowQoSReportTableRow(NetflowDataBase):
     def received(self):
         """Gets the received of this NetflowQoSReportTableRow.  # noqa: E501
 
+        the total bytes of this qos type  # noqa: E501
 
         :return: The received of this NetflowQoSReportTableRow.  # noqa: E501
         :rtype: float
@@ -99,6 +100,7 @@ class NetflowQoSReportTableRow(NetflowDataBase):
     def received(self, received):
         """Sets the received of this NetflowQoSReportTableRow.
 
+        the total bytes of this qos type  # noqa: E501
 
         :param received: The received of this NetflowQoSReportTableRow.  # noqa: E501
         :type: float
@@ -110,6 +112,7 @@ class NetflowQoSReportTableRow(NetflowDataBase):
     def type(self):
         """Gets the type of this NetflowQoSReportTableRow.  # noqa: E501
 
+        this is QoS Type  # noqa: E501
 
         :return: The type of this NetflowQoSReportTableRow.  # noqa: E501
         :rtype: str
@@ -120,6 +123,7 @@ class NetflowQoSReportTableRow(NetflowDataBase):
     def type(self, type):
         """Sets the type of this NetflowQoSReportTableRow.
 
+        this is QoS Type  # noqa: E501
 
         :param type: The type of this NetflowQoSReportTableRow.  # noqa: E501
         :type: str
@@ -131,6 +135,7 @@ class NetflowQoSReportTableRow(NetflowDataBase):
     def sent(self):
         """Gets the sent of this NetflowQoSReportTableRow.  # noqa: E501
 
+        the total bytes of this qos type  # noqa: E501
 
         :return: The sent of this NetflowQoSReportTableRow.  # noqa: E501
         :rtype: float
@@ -141,6 +146,7 @@ class NetflowQoSReportTableRow(NetflowDataBase):
     def sent(self, sent):
         """Sets the sent of this NetflowQoSReportTableRow.
 
+        the total bytes of this qos type  # noqa: E501
 
         :param sent: The sent of this NetflowQoSReportTableRow.  # noqa: E501
         :type: float

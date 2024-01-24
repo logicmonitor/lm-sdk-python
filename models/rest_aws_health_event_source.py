@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -141,7 +141,8 @@ class RestAwsHealthEventSource(EventSource):
         self.name = name
         if clear_after_ack is not None:
             self.clear_after_ack = clear_after_ack
-        self.id = id
+        if id is not None:
+            self.id = id
         self.alert_effective_ival = alert_effective_ival
         if group is not None:
             self.group = group
@@ -198,7 +199,7 @@ class RestAwsHealthEventSource(EventSource):
     def alert_level(self):
         """Gets the alert_level of this RestAwsHealthEventSource.  # noqa: E501
 
-        The default alert level: warn | error | critical | doMapping  # noqa: E501
+        The default alert level. The values can be warn | error | critical | doMapping  # noqa: E501
 
         :return: The alert_level of this RestAwsHealthEventSource.  # noqa: E501
         :rtype: str
@@ -209,7 +210,7 @@ class RestAwsHealthEventSource(EventSource):
     def alert_level(self, alert_level):
         """Sets the alert_level of this RestAwsHealthEventSource.
 
-        The default alert level: warn | error | critical | doMapping  # noqa: E501
+        The default alert level. The values can be warn | error | critical | doMapping  # noqa: E501
 
         :param alert_level: The alert_level of this RestAwsHealthEventSource.  # noqa: E501
         :type: str
@@ -359,7 +360,7 @@ class RestAwsHealthEventSource(EventSource):
     def collector(self):
         """Gets the collector of this RestAwsHealthEventSource.  # noqa: E501
 
-        The EventSource collector type: wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | ipmievent  # noqa: E501
+        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | ipmievent  # noqa: E501
 
         :return: The collector of this RestAwsHealthEventSource.  # noqa: E501
         :rtype: str
@@ -370,7 +371,7 @@ class RestAwsHealthEventSource(EventSource):
     def collector(self, collector):
         """Sets the collector of this RestAwsHealthEventSource.
 
-        The EventSource collector type: wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | ipmievent  # noqa: E501
+        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | ipmievent  # noqa: E501
 
         :param collector: The collector of this RestAwsHealthEventSource.  # noqa: E501
         :type: str
@@ -561,8 +562,6 @@ class RestAwsHealthEventSource(EventSource):
         :param id: The id of this RestAwsHealthEventSource.  # noqa: E501
         :type: int
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 

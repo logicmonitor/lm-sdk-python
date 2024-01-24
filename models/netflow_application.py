@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -134,6 +134,7 @@ class NetflowApplication(NetflowDataBase):
     def first_epoch_in_sec(self):
         """Gets the first_epoch_in_sec of this NetflowApplication.  # noqa: E501
 
+        the fist time(sec) this application send or receive package  # noqa: E501
 
         :return: The first_epoch_in_sec of this NetflowApplication.  # noqa: E501
         :rtype: int
@@ -144,6 +145,7 @@ class NetflowApplication(NetflowDataBase):
     def first_epoch_in_sec(self, first_epoch_in_sec):
         """Sets the first_epoch_in_sec of this NetflowApplication.
 
+        the fist time(sec) this application send or receive package  # noqa: E501
 
         :param first_epoch_in_sec: The first_epoch_in_sec of this NetflowApplication.  # noqa: E501
         :type: int
@@ -155,6 +157,7 @@ class NetflowApplication(NetflowDataBase):
     def protocol(self):
         """Gets the protocol of this NetflowApplication.  # noqa: E501
 
+        the protocol that the application runs on  # noqa: E501
 
         :return: The protocol of this NetflowApplication.  # noqa: E501
         :rtype: str
@@ -165,6 +168,7 @@ class NetflowApplication(NetflowDataBase):
     def protocol(self, protocol):
         """Sets the protocol of this NetflowApplication.
 
+        the protocol that the application runs on  # noqa: E501
 
         :param protocol: The protocol of this NetflowApplication.  # noqa: E501
         :type: str
@@ -176,6 +180,7 @@ class NetflowApplication(NetflowDataBase):
     def source_m_bytes(self):
         """Gets the source_m_bytes of this NetflowApplication.  # noqa: E501
 
+        the bytes that application send  # noqa: E501
 
         :return: The source_m_bytes of this NetflowApplication.  # noqa: E501
         :rtype: float
@@ -186,6 +191,7 @@ class NetflowApplication(NetflowDataBase):
     def source_m_bytes(self, source_m_bytes):
         """Sets the source_m_bytes of this NetflowApplication.
 
+        the bytes that application send  # noqa: E501
 
         :param source_m_bytes: The source_m_bytes of this NetflowApplication.  # noqa: E501
         :type: float
@@ -197,6 +203,7 @@ class NetflowApplication(NetflowDataBase):
     def percent_usage(self):
         """Gets the percent_usage of this NetflowApplication.  # noqa: E501
 
+        the percent traffic of the application  # noqa: E501
 
         :return: The percent_usage of this NetflowApplication.  # noqa: E501
         :rtype: float
@@ -207,6 +214,7 @@ class NetflowApplication(NetflowDataBase):
     def percent_usage(self, percent_usage):
         """Sets the percent_usage of this NetflowApplication.
 
+        the percent traffic of the application  # noqa: E501
 
         :param percent_usage: The percent_usage of this NetflowApplication.  # noqa: E501
         :type: float
@@ -218,6 +226,7 @@ class NetflowApplication(NetflowDataBase):
     def port(self):
         """Gets the port of this NetflowApplication.  # noqa: E501
 
+        the port that the application runs on  # noqa: E501
 
         :return: The port of this NetflowApplication.  # noqa: E501
         :rtype: int
@@ -228,6 +237,7 @@ class NetflowApplication(NetflowDataBase):
     def port(self, port):
         """Sets the port of this NetflowApplication.
 
+        the port that the application runs on  # noqa: E501
 
         :param port: The port of this NetflowApplication.  # noqa: E501
         :type: int
@@ -239,6 +249,7 @@ class NetflowApplication(NetflowDataBase):
     def last_epoch_in_sec(self):
         """Gets the last_epoch_in_sec of this NetflowApplication.  # noqa: E501
 
+        the last time(sec) this application send or receive package  # noqa: E501
 
         :return: The last_epoch_in_sec of this NetflowApplication.  # noqa: E501
         :rtype: int
@@ -249,6 +260,7 @@ class NetflowApplication(NetflowDataBase):
     def last_epoch_in_sec(self, last_epoch_in_sec):
         """Sets the last_epoch_in_sec of this NetflowApplication.
 
+        the last time(sec) this application send or receive package  # noqa: E501
 
         :param last_epoch_in_sec: The last_epoch_in_sec of this NetflowApplication.  # noqa: E501
         :type: int
@@ -260,6 +272,7 @@ class NetflowApplication(NetflowDataBase):
     def destination_m_bytes(self):
         """Gets the destination_m_bytes of this NetflowApplication.  # noqa: E501
 
+        the bytes that application received  # noqa: E501
 
         :return: The destination_m_bytes of this NetflowApplication.  # noqa: E501
         :rtype: float
@@ -270,6 +283,7 @@ class NetflowApplication(NetflowDataBase):
     def destination_m_bytes(self, destination_m_bytes):
         """Sets the destination_m_bytes of this NetflowApplication.
 
+        the bytes that application received  # noqa: E501
 
         :param destination_m_bytes: The destination_m_bytes of this NetflowApplication.  # noqa: E501
         :type: float
@@ -281,6 +295,7 @@ class NetflowApplication(NetflowDataBase):
     def ip(self):
         """Gets the ip of this NetflowApplication.  # noqa: E501
 
+        the ip of the host that the application runs on  # noqa: E501
 
         :return: The ip of this NetflowApplication.  # noqa: E501
         :rtype: str
@@ -291,6 +306,7 @@ class NetflowApplication(NetflowDataBase):
     def ip(self, ip):
         """Sets the ip of this NetflowApplication.
 
+        the ip of the host that the application runs on  # noqa: E501
 
         :param ip: The ip of this NetflowApplication.  # noqa: E501
         :type: str
@@ -302,6 +318,7 @@ class NetflowApplication(NetflowDataBase):
     def usage(self):
         """Gets the usage of this NetflowApplication.  # noqa: E501
 
+        the total traffic of the application  # noqa: E501
 
         :return: The usage of this NetflowApplication.  # noqa: E501
         :rtype: float
@@ -312,6 +329,7 @@ class NetflowApplication(NetflowDataBase):
     def usage(self, usage):
         """Sets the usage of this NetflowApplication.
 
+        the total traffic of the application  # noqa: E501
 
         :param usage: The usage of this NetflowApplication.  # noqa: E501
         :type: float
@@ -323,6 +341,7 @@ class NetflowApplication(NetflowDataBase):
     def dns(self):
         """Gets the dns of this NetflowApplication.  # noqa: E501
 
+        the dns name of the host that the application runs on  # noqa: E501
 
         :return: The dns of this NetflowApplication.  # noqa: E501
         :rtype: str
@@ -333,6 +352,7 @@ class NetflowApplication(NetflowDataBase):
     def dns(self, dns):
         """Sets the dns of this NetflowApplication.
 
+        the dns name of the host that the application runs on  # noqa: E501
 
         :param dns: The dns of this NetflowApplication.  # noqa: E501
         :type: str
@@ -344,6 +364,7 @@ class NetflowApplication(NetflowDataBase):
     def flow_count(self):
         """Gets the flow_count of this NetflowApplication.  # noqa: E501
 
+        the flow count that associated to this application  # noqa: E501
 
         :return: The flow_count of this NetflowApplication.  # noqa: E501
         :rtype: int
@@ -354,6 +375,7 @@ class NetflowApplication(NetflowDataBase):
     def flow_count(self, flow_count):
         """Sets the flow_count of this NetflowApplication.
 
+        the flow count that associated to this application  # noqa: E501
 
         :param flow_count: The flow_count of this NetflowApplication.  # noqa: E501
         :type: int
@@ -365,6 +387,7 @@ class NetflowApplication(NetflowDataBase):
     def client_count(self):
         """Gets the client_count of this NetflowApplication.  # noqa: E501
 
+        the count fo client that communicate with this application  # noqa: E501
 
         :return: The client_count of this NetflowApplication.  # noqa: E501
         :rtype: int
@@ -375,6 +398,7 @@ class NetflowApplication(NetflowDataBase):
     def client_count(self, client_count):
         """Sets the client_count of this NetflowApplication.
 
+        the count fo client that communicate with this application  # noqa: E501
 
         :param client_count: The client_count of this NetflowApplication.  # noqa: E501
         :type: int

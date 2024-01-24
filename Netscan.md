@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **creator** | **str** | The user that created the policy | [optional] 
 **collector_group_name** | **str** | The name of the group of the Collector associated with this Netscan | [optional] 
-**method** | **str** | The method that should be used to discover devices. Options are nmap (ICMP Ping), nec2 (EC2), enhancedScript and script | 
+**method** | **str** | The method that should be used to discover devices. The values can be nmap (ICMP Ping)|nec2 (EC2)|enhancedScript|script | 
 **collector_group** | **int** | The ID of the group of the Collector associated with this Netscan | [optional] 
 **description** | **str** | The description of the Netscan Policy | [optional] 
 **next_start** | **str** | The date and time of the next start time of the scan - displayed as manual if the scan does not run on a schedule | [optional] 

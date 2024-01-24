@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -1023,118 +1023,6 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def add_configsource_audit_version(self, id, **kwargs):  # noqa: E501
-        """add audit version  # noqa: E501
-
-          # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.add_configsource_audit_version(id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param int id: (required)
-        :param Audit body:
-        :return: ConfigSource
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.add_configsource_audit_version_with_http_info(id, **kwargs)  # noqa: E501
-        else:
-            (data) = self.add_configsource_audit_version_with_http_info(id, **kwargs)  # noqa: E501
-            return data
-
-    def add_configsource_audit_version_with_http_info(self, id, **kwargs):  # noqa: E501
-        """add audit version  # noqa: E501
-
-          # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.add_configsource_audit_version_with_http_info(id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param int id: (required)
-        :param Audit body:
-        :return: ConfigSource
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['id', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method add_configsource_audit_version" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `add_configsource_audit_version`")  # noqa: E501
-
-        if 'id' in params and not re.search('\d+', params['id'] if type(params['id']) is str else str(params['id'])):  # noqa: E501
-            raise ValueError("Invalid value for parameter `id` when calling `add_configsource_audit_version`, must conform to the pattern `/\d+/`")  # noqa: E501
-        collection_formats = {}
-
-        path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['LMv1']  # noqa: E501
-        # if the response type is a file, set _preload_content_value=false.
-        # Because python 3.0+ 'utf-8' codec can't decode the binary string
-        _response_type = 'ConfigSource'
-        _preload_content_value = True
-        if _response_type == 'file':
-          _preload_content_value = False
-
-
-        return self.api_client.call_api(
-            '/setting/configsources/{id}/audit', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=_response_type,
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', _preload_content_value),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def add_dashboard(self, body, **kwargs):  # noqa: E501
         """add dashboard  # noqa: E501
 
@@ -1347,47 +1235,49 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def add_datasource_audit_version(self, id, **kwargs):  # noqa: E501
-        """add audit version  # noqa: E501
+    def add_dashboard_group_asynchronously(self, id, **kwargs):  # noqa: E501
+        """add dashboard group asynchronously  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.add_datasource_audit_version(id, async_req=True)
+        >>> thread = api.add_dashboard_group_asynchronously(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: (required)
-        :param Audit body:
-        :return: DataSource
+        :param DashboardGroup body:
+        :param bool recursive:
+        :return: RestDashboardGroupAsyncCloneResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.add_datasource_audit_version_with_http_info(id, **kwargs)  # noqa: E501
+            return self.add_dashboard_group_asynchronously_with_http_info(id, **kwargs)  # noqa: E501
         else:
-            (data) = self.add_datasource_audit_version_with_http_info(id, **kwargs)  # noqa: E501
+            (data) = self.add_dashboard_group_asynchronously_with_http_info(id, **kwargs)  # noqa: E501
             return data
 
-    def add_datasource_audit_version_with_http_info(self, id, **kwargs):  # noqa: E501
-        """add audit version  # noqa: E501
+    def add_dashboard_group_asynchronously_with_http_info(self, id, **kwargs):  # noqa: E501
+        """add dashboard group asynchronously  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.add_datasource_audit_version_with_http_info(id, async_req=True)
+        >>> thread = api.add_dashboard_group_asynchronously_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: (required)
-        :param Audit body:
-        :return: DataSource
+        :param DashboardGroup body:
+        :param bool recursive:
+        :return: RestDashboardGroupAsyncCloneResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'body']  # noqa: E501
+        all_params = ['id', 'body', 'recursive']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1398,17 +1288,17 @@ class LMApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method add_datasource_audit_version" % key
+                    " to method add_dashboard_group_asynchronously" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `add_datasource_audit_version`")  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `add_dashboard_group_asynchronously`")  # noqa: E501
 
         if 'id' in params and not re.search('\d+', params['id'] if type(params['id']) is str else str(params['id'])):  # noqa: E501
-            raise ValueError("Invalid value for parameter `id` when calling `add_datasource_audit_version`, must conform to the pattern `/\d+/`")  # noqa: E501
+            raise ValueError("Invalid value for parameter `id` when calling `add_dashboard_group_asynchronously`, must conform to the pattern `/\d+/`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -1416,6 +1306,114 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
+        if 'recursive' in params:
+            query_params.append(('recursive', params['recursive']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'RestDashboardGroupAsyncCloneResponse'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/dashboard/groups/{id}/asyncclone', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def add_datasource_by_id(self, **kwargs):  # noqa: E501
+        """add datasource  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.add_datasource_by_id(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DataSource body:
+        :param bool create_graph:
+        :return: DataSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.add_datasource_by_id_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.add_datasource_by_id_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def add_datasource_by_id_with_http_info(self, **kwargs):  # noqa: E501
+        """add datasource  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.add_datasource_by_id_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DataSource body:
+        :param bool create_graph:
+        :return: DataSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'create_graph']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method add_datasource_by_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'create_graph' in params:
+            query_params.append(('createGraph', params['create_graph']))  # noqa: E501
 
         header_params = {}
 
@@ -1444,7 +1442,7 @@ class LMApi(object):
 
 
         return self.api_client.call_api(
-            '/setting/datasources/{id}/audit', 'POST',
+            '/setting/datasources', 'POST',
             path_params,
             query_params,
             header_params,
@@ -1693,6 +1691,132 @@ class LMApi(object):
 
         return self.api_client.call_api(
             '/device/devices/{deviceId}/devicedatasources/{hdsId}/instances', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def add_device_datasource_instance_group(self, device_id, device_ds_id, body, **kwargs):  # noqa: E501
+        """add device datasource instance group   # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.add_device_datasource_instance_group(device_id, device_ds_id, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int device_id: (required)
+        :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param DeviceDataSourceInstanceGroup body: (required)
+        :return: DeviceDataSourceInstanceGroup
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.add_device_datasource_instance_group_with_http_info(device_id, device_ds_id, body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.add_device_datasource_instance_group_with_http_info(device_id, device_ds_id, body, **kwargs)  # noqa: E501
+            return data
+
+    def add_device_datasource_instance_group_with_http_info(self, device_id, device_ds_id, body, **kwargs):  # noqa: E501
+        """add device datasource instance group   # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.add_device_datasource_instance_group_with_http_info(device_id, device_ds_id, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int device_id: (required)
+        :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param DeviceDataSourceInstanceGroup body: (required)
+        :return: DeviceDataSourceInstanceGroup
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['device_id', 'device_ds_id', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method add_device_datasource_instance_group" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `add_device_datasource_instance_group`")  # noqa: E501
+        # verify the required parameter 'device_ds_id' is set
+        if ('device_ds_id' not in params or
+                params['device_ds_id'] is None):
+            raise ValueError("Missing the required parameter `device_ds_id` when calling `add_device_datasource_instance_group`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `add_device_datasource_instance_group`")  # noqa: E501
+
+        if 'device_id' in params and not re.search('\d+', params['device_id'] if type(params['device_id']) is str else str(params['device_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `device_id` when calling `add_device_datasource_instance_group`, must conform to the pattern `/\d+/`")  # noqa: E501
+        if 'device_ds_id' in params and not re.search('\d+', params['device_ds_id'] if type(params['device_ds_id']) is str else str(params['device_ds_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `device_ds_id` when calling `add_device_datasource_instance_group`, must conform to the pattern `/\d+/`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
+        if 'device_ds_id' in params:
+            path_params['deviceDsId'] = params['device_ds_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'DeviceDataSourceInstanceGroup'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups', 'POST',
             path_params,
             query_params,
             header_params,
@@ -2151,118 +2275,6 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def add_eventsource_audit_version(self, id, **kwargs):  # noqa: E501
-        """add audit version  # noqa: E501
-
-          # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.add_eventsource_audit_version(id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param int id: (required)
-        :param Audit body:
-        :return: EventSource
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.add_eventsource_audit_version_with_http_info(id, **kwargs)  # noqa: E501
-        else:
-            (data) = self.add_eventsource_audit_version_with_http_info(id, **kwargs)  # noqa: E501
-            return data
-
-    def add_eventsource_audit_version_with_http_info(self, id, **kwargs):  # noqa: E501
-        """add audit version  # noqa: E501
-
-          # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.add_eventsource_audit_version_with_http_info(id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param int id: (required)
-        :param Audit body:
-        :return: EventSource
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['id', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method add_eventsource_audit_version" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `add_eventsource_audit_version`")  # noqa: E501
-
-        if 'id' in params and not re.search('\d+', params['id'] if type(params['id']) is str else str(params['id'])):  # noqa: E501
-            raise ValueError("Invalid value for parameter `id` when calling `add_eventsource_audit_version`, must conform to the pattern `/\d+/`")  # noqa: E501
-        collection_formats = {}
-
-        path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['LMv1']  # noqa: E501
-        # if the response type is a file, set _preload_content_value=false.
-        # Because python 3.0+ 'utf-8' codec can't decode the binary string
-        _response_type = 'EventSource'
-        _preload_content_value = True
-        if _response_type == 'file':
-          _preload_content_value = False
-
-
-        return self.api_client.call_api(
-            '/setting/eventsources/{id}/audit', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=_response_type,
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', _preload_content_value),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def add_netscan(self, **kwargs):  # noqa: E501
         """add a new netscan  # noqa: E501
 
@@ -2457,118 +2469,6 @@ class LMApi(object):
 
         return self.api_client.call_api(
             '/setting/opsnotes', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=_response_type,
-            auth_settings=auth_settings,
-            async_req=params.get('async_req'),
-            _return_http_data_only=params.get('_return_http_data_only'),
-            _preload_content=params.get('_preload_content', _preload_content_value),
-            _request_timeout=params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def add_propertysource_audit_version(self, id, **kwargs):  # noqa: E501
-        """add audit version  # noqa: E501
-
-          # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.add_propertysource_audit_version(id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param int id: (required)
-        :param Audit body:
-        :return: PropertyRule
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.add_propertysource_audit_version_with_http_info(id, **kwargs)  # noqa: E501
-        else:
-            (data) = self.add_propertysource_audit_version_with_http_info(id, **kwargs)  # noqa: E501
-            return data
-
-    def add_propertysource_audit_version_with_http_info(self, id, **kwargs):  # noqa: E501
-        """add audit version  # noqa: E501
-
-          # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.add_propertysource_audit_version_with_http_info(id, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param int id: (required)
-        :param Audit body:
-        :return: PropertyRule
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['id', 'body']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in six.iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method add_propertysource_audit_version" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `add_propertysource_audit_version`")  # noqa: E501
-
-        if 'id' in params and not re.search('\d+', params['id'] if type(params['id']) is str else str(params['id'])):  # noqa: E501
-            raise ValueError("Invalid value for parameter `id` when calling `add_propertysource_audit_version`, must conform to the pattern `/\d+/`")  # noqa: E501
-        collection_formats = {}
-
-        path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'body' in params:
-            body_params = params['body']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['LMv1']  # noqa: E501
-        # if the response type is a file, set _preload_content_value=false.
-        # Because python 3.0+ 'utf-8' codec can't decode the binary string
-        _response_type = 'PropertyRule'
-        _preload_content_value = True
-        if _response_type == 'file':
-          _preload_content_value = False
-
-
-        return self.api_client.call_api(
-            '/setting/propertyrules/{id}/audit', 'POST',
             path_params,
             query_params,
             header_params,
@@ -5609,6 +5509,112 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def discover_subscriptions(self, body, **kwargs):  # noqa: E501
+        """view subscriptions  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.discover_subscriptions(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param RestAzureSubscriptionsDiscoverV3 body: (required)
+        :return: AzureSubscriptionIdPaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.discover_subscriptions_with_http_info(body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.discover_subscriptions_with_http_info(body, **kwargs)  # noqa: E501
+            return data
+
+    def discover_subscriptions_with_http_info(self, body, **kwargs):  # noqa: E501
+        """view subscriptions  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.discover_subscriptions_with_http_info(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param RestAzureSubscriptionsDiscoverV3 body: (required)
+        :return: AzureSubscriptionIdPaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method discover_subscriptions" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `discover_subscriptions`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'AzureSubscriptionIdPaginationResponse'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/azure/functions/discoverSubscriptions', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def execute_debug_command(self, **kwargs):  # noqa: E501
         """Execute a Collector debug command  # noqa: E501
 
@@ -5701,6 +5707,246 @@ class LMApi(object):
 
         return self.api_client.call_api(
             '/debug', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def fetch_device_instances_data(self, body, **kwargs):  # noqa: E501
+        """fetch device instances data  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fetch_device_instances_data(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DeviceInstances body: (required)
+        :param float period:
+        :param int start:
+        :param int end:
+        :param str aggregate: the aggregate option
+        :return: DeviceInstanceDataPaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.fetch_device_instances_data_with_http_info(body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.fetch_device_instances_data_with_http_info(body, **kwargs)  # noqa: E501
+            return data
+
+    def fetch_device_instances_data_with_http_info(self, body, **kwargs):  # noqa: E501
+        """fetch device instances data  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fetch_device_instances_data_with_http_info(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DeviceInstances body: (required)
+        :param float period:
+        :param int start:
+        :param int end:
+        :param str aggregate: the aggregate option
+        :return: DeviceInstanceDataPaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body', 'period', 'start', 'end', 'aggregate']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method fetch_device_instances_data" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `fetch_device_instances_data`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'period' in params:
+            query_params.append(('period', params['period']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
+        if 'end' in params:
+            query_params.append(('end', params['end']))  # noqa: E501
+        if 'aggregate' in params:
+            query_params.append(('aggregate', params['aggregate']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'DeviceInstanceDataPaginationResponse'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/device/instances/datafetch', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def fetch_report_using_task_id(self, id, task_id, **kwargs):  # noqa: E501
+        """get report for task Id  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fetch_report_using_task_id(id, task_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :param str task_id: (required)
+        :return: GenerateReportResult
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.fetch_report_using_task_id_with_http_info(id, task_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.fetch_report_using_task_id_with_http_info(id, task_id, **kwargs)  # noqa: E501
+            return data
+
+    def fetch_report_using_task_id_with_http_info(self, id, task_id, **kwargs):  # noqa: E501
+        """get report for task Id  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.fetch_report_using_task_id_with_http_info(id, task_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :param str task_id: (required)
+        :return: GenerateReportResult
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'task_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method fetch_report_using_task_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `fetch_report_using_task_id`")  # noqa: E501
+        # verify the required parameter 'task_id' is set
+        if ('task_id' not in params or
+                params['task_id'] is None):
+            raise ValueError("Missing the required parameter `task_id` when calling `fetch_report_using_task_id`")  # noqa: E501
+
+        if 'id' in params and not re.search('\d+', params['id'] if type(params['id']) is str else str(params['id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `id` when calling `fetch_report_using_task_id`, must conform to the pattern `/\d+/`")  # noqa: E501
+        if 'task_id' in params and not re.search('\d+', params['task_id'] if type(params['task_id']) is str else str(params['task_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `task_id` when calling `fetch_report_using_task_id`, must conform to the pattern `/\d+/`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+        if 'task_id' in params:
+            path_params['taskId'] = params['task_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'GenerateReportResult'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/report/reports/{id}/tasks/{taskId}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -6185,12 +6431,11 @@ class LMApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str custom_columns:
         :param str fields:
         :param int size:
         :param int offset:
         :param str filter:
-        :return: AlertPaginationResponse
+        :return: AlertListPaginationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6211,17 +6456,16 @@ class LMApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str custom_columns:
         :param str fields:
         :param int size:
         :param int offset:
         :param str filter:
-        :return: AlertPaginationResponse
+        :return: AlertListPaginationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['custom_columns', 'fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6242,8 +6486,6 @@ class LMApi(object):
         path_params = {}
 
         query_params = []
-        if 'custom_columns' in params:
-            query_params.append(('customColumns', params['custom_columns']))  # noqa: E501
         if 'fields' in params:
             query_params.append(('fields', params['fields']))  # noqa: E501
         if 'size' in params:
@@ -6267,7 +6509,7 @@ class LMApi(object):
         auth_settings = ['LMv1']  # noqa: E501
         # if the response type is a file, set _preload_content_value=false.
         # Because python 3.0+ 'utf-8' codec can't decode the binary string
-        _response_type = 'AlertPaginationResponse'
+        _response_type = 'AlertListPaginationResponse'
         _preload_content_value = True
         if _response_type == 'file':
           _preload_content_value = False
@@ -7737,8 +7979,102 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_aws_account_id(self, **kwargs):  # noqa: E501
+        """Get AWS account ID  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_aws_account_id(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: AwsAccountId
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_aws_account_id_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_aws_account_id_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_aws_account_id_with_http_info(self, **kwargs):  # noqa: E501
+        """Get AWS account ID  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_aws_account_id_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: AwsAccountId
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_aws_account_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'AwsAccountId'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/aws/accountId', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def get_aws_external_id(self, **kwargs):  # noqa: E501
-        """Get AWS external id  # noqa: E501
+        """Get AWS external ID  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -7759,7 +8095,7 @@ class LMApi(object):
             return data
 
     def get_aws_external_id_with_http_info(self, **kwargs):  # noqa: E501
-        """Get AWS external id  # noqa: E501
+        """Get AWS external ID  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -9403,6 +9739,208 @@ class LMApi(object):
 
         return self.api_client.call_api(
             '/debug/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_delta_devices(self, delta_id, **kwargs):  # noqa: E501
+        """Get delta devices using deltaId  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_delta_devices(delta_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str delta_id: (required)
+        :return: DeviceDeltaPaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_delta_devices_with_http_info(delta_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_delta_devices_with_http_info(delta_id, **kwargs)  # noqa: E501
+            return data
+
+    def get_delta_devices_with_http_info(self, delta_id, **kwargs):  # noqa: E501
+        """Get delta devices using deltaId  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_delta_devices_with_http_info(delta_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str delta_id: (required)
+        :return: DeviceDeltaPaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['delta_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_delta_devices" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'delta_id' is set
+        if ('delta_id' not in params or
+                params['delta_id'] is None):
+            raise ValueError("Missing the required parameter `delta_id` when calling `get_delta_devices`")  # noqa: E501
+
+        if 'delta_id' in params and not re.search('\w+', params['delta_id'] if type(params['delta_id']) is str else str(params['delta_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `delta_id` when calling `get_delta_devices`, must conform to the pattern `/\w+/`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'delta_id' in params:
+            path_params['deltaId'] = params['delta_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'DeviceDeltaPaginationResponse'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/device/devices/delta/{deltaId}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_delta_id_with_devices(self, **kwargs):  # noqa: E501
+        """Get filter matched devices with new deltaId  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_delta_id_with_devices(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str delta_id:
+        :return: DeviceDeltaPaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_delta_id_with_devices_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_delta_id_with_devices_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_delta_id_with_devices_with_http_info(self, **kwargs):  # noqa: E501
+        """Get filter matched devices with new deltaId  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_delta_id_with_devices_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str delta_id:
+        :return: DeviceDeltaPaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['delta_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_delta_id_with_devices" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'delta_id' in params:
+            query_params.append(('deltaId', params['delta_id']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'DeviceDeltaPaginationResponse'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/device/devices/delta', 'GET',
             path_params,
             query_params,
             header_params,
@@ -13383,6 +13921,7 @@ class LMApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str format:
         :return: IntegrationAuditLogPaginationResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -13404,12 +13943,13 @@ class LMApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param str format:
         :return: IntegrationAuditLogPaginationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['format']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -13430,6 +13970,8 @@ class LMApi(object):
         path_params = {}
 
         query_params = []
+        if 'format' in params:
+            query_params.append(('format', params['format']))  # noqa: E501
 
         header_params = {}
 
@@ -14781,6 +15323,7 @@ class LMApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param bool exclude_admin:
         :param str fields:
         :param int size:
         :param int offset:
@@ -14806,6 +15349,7 @@ class LMApi(object):
         >>> result = thread.get()
 
         :param async_req bool
+        :param bool exclude_admin:
         :param str fields:
         :param int size:
         :param int offset:
@@ -14815,7 +15359,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['exclude_admin', 'fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -14836,6 +15380,8 @@ class LMApi(object):
         path_params = {}
 
         query_params = []
+        if 'exclude_admin' in params:
+            query_params.append(('excludeAdmin', params['exclude_admin']))  # noqa: E501
         if 'fields' in params:
             query_params.append(('fields', params['fields']))  # noqa: E501
         if 'size' in params:
@@ -15723,8 +16269,6 @@ class LMApi(object):
         :param int start:
         :param int end:
         :param str netflow_filter:
-        :param int start2:
-        :param int end2:
         :param str format:
         :param str keyword:
         :return: GraphPlot
@@ -15752,8 +16296,6 @@ class LMApi(object):
         :param int start:
         :param int end:
         :param str netflow_filter:
-        :param int start2:
-        :param int end2:
         :param str format:
         :param str keyword:
         :return: GraphPlot
@@ -15761,7 +16303,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'netflow_filter', 'start2', 'end2', 'format', 'keyword']  # noqa: E501
+        all_params = ['id', 'start', 'end', 'netflow_filter', 'format', 'keyword']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -15796,10 +16338,6 @@ class LMApi(object):
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
-        if 'start2' in params:
-            query_params.append(('start', params['start2']))  # noqa: E501
-        if 'end2' in params:
-            query_params.append(('end', params['end2']))  # noqa: E501
         if 'format' in params:
             query_params.append(('format', params['format']))  # noqa: E501
         if 'keyword' in params:
@@ -15937,6 +16475,110 @@ class LMApi(object):
 
         return self.api_client.call_api(
             '/device/unmonitoreddevices', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_update_reason_list_by_config_source_id(self, id, **kwargs):  # noqa: E501
+        """get update history for a configSource  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_update_reason_list_by_config_source_id(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :return: ConfigSourceUpdateReasonsPaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_update_reason_list_by_config_source_id_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_update_reason_list_by_config_source_id_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def get_update_reason_list_by_config_source_id_with_http_info(self, id, **kwargs):  # noqa: E501
+        """get update history for a configSource  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_update_reason_list_by_config_source_id_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :return: ConfigSourceUpdateReasonsPaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_update_reason_list_by_config_source_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_update_reason_list_by_config_source_id`")  # noqa: E501
+
+        if 'id' in params and not re.search('\d+', params['id'] if type(params['id']) is str else str(params['id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `id` when calling `get_update_reason_list_by_config_source_id`, must conform to the pattern `/\d+/`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'ConfigSourceUpdateReasonsPaginationResponse'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/setting/configsources/{id}/updatereasons', 'GET',
             path_params,
             query_params,
             header_params,
@@ -17758,6 +18400,7 @@ class LMApi(object):
         :param int id: (required)
         :param Admin body: (required)
         :param bool change_password:
+        :param bool validation_only:
         :return: Admin
                  If the method is called asynchronously,
                  returns the request thread.
@@ -17782,12 +18425,13 @@ class LMApi(object):
         :param int id: (required)
         :param Admin body: (required)
         :param bool change_password:
+        :param bool validation_only:
         :return: Admin
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'body', 'change_password']  # noqa: E501
+        all_params = ['id', 'body', 'change_password', 'validation_only']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -17822,6 +18466,8 @@ class LMApi(object):
         query_params = []
         if 'change_password' in params:
             query_params.append(('changePassword', params['change_password']))  # noqa: E501
+        if 'validation_only' in params:
+            query_params.append(('validationOnly', params['validation_only']))  # noqa: E501
 
         header_params = {}
 
@@ -18593,6 +19239,242 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def patch_datasource_by_id(self, id, **kwargs):  # noqa: E501
+        """update datasource  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_datasource_by_id(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :param DataSource body:
+        :param str reason:
+        :param bool force_unique_identifier:
+        :param str force_restricted_change_key:
+        :return: DataSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.patch_datasource_by_id_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.patch_datasource_by_id_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def patch_datasource_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
+        """update datasource  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_datasource_by_id_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :param DataSource body:
+        :param str reason:
+        :param bool force_unique_identifier:
+        :param str force_restricted_change_key:
+        :return: DataSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'body', 'reason', 'force_unique_identifier', 'force_restricted_change_key']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_datasource_by_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `patch_datasource_by_id`")  # noqa: E501
+
+        if 'id' in params and not re.search('\d+', params['id'] if type(params['id']) is str else str(params['id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `id` when calling `patch_datasource_by_id`, must conform to the pattern `/\d+/`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+        if 'reason' in params:
+            query_params.append(('reason', params['reason']))  # noqa: E501
+        if 'force_unique_identifier' in params:
+            query_params.append(('forceUniqueIdentifier', params['force_unique_identifier']))  # noqa: E501
+        if 'force_restricted_change_key' in params:
+            query_params.append(('forceRestrictedChangeKey', params['force_restricted_change_key']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'DataSource'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/setting/datasources/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def patch_default_dashboard(self, id, **kwargs):  # noqa: E501
+        """update default dashboard  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_default_dashboard(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param RestUserCustomizedDataV3 body:
+        :return: object
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.patch_default_dashboard_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.patch_default_dashboard_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def patch_default_dashboard_with_http_info(self, id, **kwargs):  # noqa: E501
+        """update default dashboard  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_default_dashboard_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param RestUserCustomizedDataV3 body:
+        :return: object
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_default_dashboard" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `patch_default_dashboard`")  # noqa: E501
+
+        if 'id' in params and not re.search('.+', params['id'] if type(params['id']) is str else str(params['id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `id` when calling `patch_default_dashboard`, must conform to the pattern `/.+/`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'object'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/setting/userdata/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def patch_device(self, id, body, **kwargs):  # noqa: E501
         """update a device  # noqa: E501
 
@@ -18997,6 +19879,142 @@ class LMApi(object):
 
         return self.api_client.call_api(
             '/device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def patch_device_datasource_instance_group_by_id(self, device_id, device_ds_id, id, body, **kwargs):  # noqa: E501
+        """update device datasource instance group  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_device_datasource_instance_group_by_id(device_id, device_ds_id, id, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int device_id: (required)
+        :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int id: (required)
+        :param DeviceDataSourceInstanceGroup body: (required)
+        :return: DeviceDataSourceInstanceGroup
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.patch_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.patch_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, body, **kwargs)  # noqa: E501
+            return data
+
+    def patch_device_datasource_instance_group_by_id_with_http_info(self, device_id, device_ds_id, id, body, **kwargs):  # noqa: E501
+        """update device datasource instance group  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int device_id: (required)
+        :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int id: (required)
+        :param DeviceDataSourceInstanceGroup body: (required)
+        :return: DeviceDataSourceInstanceGroup
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['device_id', 'device_ds_id', 'id', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_device_datasource_instance_group_by_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `patch_device_datasource_instance_group_by_id`")  # noqa: E501
+        # verify the required parameter 'device_ds_id' is set
+        if ('device_ds_id' not in params or
+                params['device_ds_id'] is None):
+            raise ValueError("Missing the required parameter `device_ds_id` when calling `patch_device_datasource_instance_group_by_id`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `patch_device_datasource_instance_group_by_id`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `patch_device_datasource_instance_group_by_id`")  # noqa: E501
+
+        if 'device_id' in params and not re.search('\d+', params['device_id'] if type(params['device_id']) is str else str(params['device_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `device_id` when calling `patch_device_datasource_instance_group_by_id`, must conform to the pattern `/\d+/`")  # noqa: E501
+        if 'device_ds_id' in params and not re.search('\d+', params['device_ds_id'] if type(params['device_ds_id']) is str else str(params['device_ds_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `device_ds_id` when calling `patch_device_datasource_instance_group_by_id`, must conform to the pattern `/\d+/`")  # noqa: E501
+        if 'id' in params and not re.search('\d+', params['id'] if type(params['id']) is str else str(params['id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `id` when calling `patch_device_datasource_instance_group_by_id`, must conform to the pattern `/\d+/`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
+        if 'device_ds_id' in params:
+            path_params['deviceDsId'] = params['device_ds_id']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'DeviceDataSourceInstanceGroup'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{id}', 'PATCH',
             path_params,
             query_params,
             header_params,
@@ -19733,6 +20751,148 @@ class LMApi(object):
 
         return self.api_client.call_api(
             '/setting/alert/chains/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def patch_instances_alert_threshold(self, device_id, device_ds_id, dsig_id, dp_id, **kwargs):  # noqa: E501
+        """update instances alert threshold (Setting the threshold at default group is not allowed)  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_instances_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int device_id: (required)
+        :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int dsig_id: (required)
+        :param int dp_id: (required)
+        :param RestDeviceInstanceGroupAlertConfigV3 body:
+        :return: DeviceDataSourceInstanceGroup
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.patch_instances_alert_threshold_with_http_info(device_id, device_ds_id, dsig_id, dp_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.patch_instances_alert_threshold_with_http_info(device_id, device_ds_id, dsig_id, dp_id, **kwargs)  # noqa: E501
+            return data
+
+    def patch_instances_alert_threshold_with_http_info(self, device_id, device_ds_id, dsig_id, dp_id, **kwargs):  # noqa: E501
+        """update instances alert threshold (Setting the threshold at default group is not allowed)  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_instances_alert_threshold_with_http_info(device_id, device_ds_id, dsig_id, dp_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int device_id: (required)
+        :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int dsig_id: (required)
+        :param int dp_id: (required)
+        :param RestDeviceInstanceGroupAlertConfigV3 body:
+        :return: DeviceDataSourceInstanceGroup
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['device_id', 'device_ds_id', 'dsig_id', 'dp_id', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_instances_alert_threshold" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `patch_instances_alert_threshold`")  # noqa: E501
+        # verify the required parameter 'device_ds_id' is set
+        if ('device_ds_id' not in params or
+                params['device_ds_id'] is None):
+            raise ValueError("Missing the required parameter `device_ds_id` when calling `patch_instances_alert_threshold`")  # noqa: E501
+        # verify the required parameter 'dsig_id' is set
+        if ('dsig_id' not in params or
+                params['dsig_id'] is None):
+            raise ValueError("Missing the required parameter `dsig_id` when calling `patch_instances_alert_threshold`")  # noqa: E501
+        # verify the required parameter 'dp_id' is set
+        if ('dp_id' not in params or
+                params['dp_id'] is None):
+            raise ValueError("Missing the required parameter `dp_id` when calling `patch_instances_alert_threshold`")  # noqa: E501
+
+        if 'device_id' in params and not re.search('\d+', params['device_id'] if type(params['device_id']) is str else str(params['device_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `device_id` when calling `patch_instances_alert_threshold`, must conform to the pattern `/\d+/`")  # noqa: E501
+        if 'device_ds_id' in params and not re.search('\d+', params['device_ds_id'] if type(params['device_ds_id']) is str else str(params['device_ds_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `device_ds_id` when calling `patch_instances_alert_threshold`, must conform to the pattern `/\d+/`")  # noqa: E501
+        if 'dsig_id' in params and not re.search('\d+', params['dsig_id'] if type(params['dsig_id']) is str else str(params['dsig_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `dsig_id` when calling `patch_instances_alert_threshold`, must conform to the pattern `/\d+/`")  # noqa: E501
+        if 'dp_id' in params and not re.search('\d+', params['dp_id'] if type(params['dp_id']) is str else str(params['dp_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `dp_id` when calling `patch_instances_alert_threshold`, must conform to the pattern `/\d+/`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
+        if 'device_ds_id' in params:
+            path_params['deviceDsId'] = params['device_ds_id']  # noqa: E501
+        if 'dsig_id' in params:
+            path_params['dsigId'] = params['dsig_id']  # noqa: E501
+        if 'dp_id' in params:
+            path_params['dpId'] = params['dp_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'DeviceDataSourceInstanceGroup'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{dsigId}/datapoints/{dpId}/alertconfig', 'PATCH',
             path_params,
             query_params,
             header_params,
@@ -20801,6 +21961,430 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def test_aws_account(self, body, **kwargs):  # noqa: E501
+        """test AWS account  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.test_aws_account(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param RestAwsAccountTestV3 body: (required)
+        :return: RestCloudOkPermissionsV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.test_aws_account_with_http_info(body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.test_aws_account_with_http_info(body, **kwargs)  # noqa: E501
+            return data
+
+    def test_aws_account_with_http_info(self, body, **kwargs):  # noqa: E501
+        """test AWS account  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.test_aws_account_with_http_info(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param RestAwsAccountTestV3 body: (required)
+        :return: RestCloudOkPermissionsV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method test_aws_account" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `test_aws_account`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'RestCloudOkPermissionsV3'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/aws/functions/testAccount', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def test_azure_account(self, body, **kwargs):  # noqa: E501
+        """test Azure account  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.test_azure_account(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param RestAzureAccountTestV3 body: (required)
+        :return: RestCloudOkPermissionsV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.test_azure_account_with_http_info(body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.test_azure_account_with_http_info(body, **kwargs)  # noqa: E501
+            return data
+
+    def test_azure_account_with_http_info(self, body, **kwargs):  # noqa: E501
+        """test Azure account  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.test_azure_account_with_http_info(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param RestAzureAccountTestV3 body: (required)
+        :return: RestCloudOkPermissionsV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method test_azure_account" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `test_azure_account`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'RestCloudOkPermissionsV3'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/azure/functions/testAccount', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def test_gcp_account(self, body, **kwargs):  # noqa: E501
+        """test GCP account  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.test_gcp_account(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param RestGcpAccountTestV3 body: (required)
+        :return: RestCloudOkPermissionsV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.test_gcp_account_with_http_info(body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.test_gcp_account_with_http_info(body, **kwargs)  # noqa: E501
+            return data
+
+    def test_gcp_account_with_http_info(self, body, **kwargs):  # noqa: E501
+        """test GCP account  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.test_gcp_account_with_http_info(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param RestGcpAccountTestV3 body: (required)
+        :return: RestCloudOkPermissionsV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method test_gcp_account" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `test_gcp_account`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'RestCloudOkPermissionsV3'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/gcp/functions/testAccount', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def test_saa_s_account(self, body, **kwargs):  # noqa: E501
+        """test SaaS account  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.test_saa_s_account(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param RestSaaSAccountTestV3 body: (required)
+        :return: RestCloudOkPermissionsV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.test_saa_s_account_with_http_info(body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.test_saa_s_account_with_http_info(body, **kwargs)  # noqa: E501
+            return data
+
+    def test_saa_s_account_with_http_info(self, body, **kwargs):  # noqa: E501
+        """test SaaS account  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.test_saa_s_account_with_http_info(body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param RestSaaSAccountTestV3 body: (required)
+        :return: RestCloudOkPermissionsV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method test_saa_s_account" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `test_saa_s_account`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'RestCloudOkPermissionsV3'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/saas/functions/testAccount', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def update_admin_by_id(self, id, body, **kwargs):  # noqa: E501
         """update user  # noqa: E501
 
@@ -20814,6 +22398,7 @@ class LMApi(object):
         :param int id: (required)
         :param Admin body: (required)
         :param bool change_password:
+        :param bool validation_only:
         :return: Admin
                  If the method is called asynchronously,
                  returns the request thread.
@@ -20838,12 +22423,13 @@ class LMApi(object):
         :param int id: (required)
         :param Admin body: (required)
         :param bool change_password:
+        :param bool validation_only:
         :return: Admin
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'body', 'change_password']  # noqa: E501
+        all_params = ['id', 'body', 'change_password', 'validation_only']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -20878,6 +22464,8 @@ class LMApi(object):
         query_params = []
         if 'change_password' in params:
             query_params.append(('changePassword', params['change_password']))  # noqa: E501
+        if 'validation_only' in params:
+            query_params.append(('validationOnly', params['validation_only']))  # noqa: E501
 
         header_params = {}
 
@@ -21649,6 +23237,242 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def update_datasource_by_id(self, id, **kwargs):  # noqa: E501
+        """update datasource  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_datasource_by_id(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :param DataSource body:
+        :param str reason:
+        :param bool force_unique_identifier:
+        :param str force_restricted_change_key:
+        :return: DataSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.update_datasource_by_id_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.update_datasource_by_id_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def update_datasource_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
+        """update datasource  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_datasource_by_id_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :param DataSource body:
+        :param str reason:
+        :param bool force_unique_identifier:
+        :param str force_restricted_change_key:
+        :return: DataSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'body', 'reason', 'force_unique_identifier', 'force_restricted_change_key']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_datasource_by_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_datasource_by_id`")  # noqa: E501
+
+        if 'id' in params and not re.search('\d+', params['id'] if type(params['id']) is str else str(params['id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `id` when calling `update_datasource_by_id`, must conform to the pattern `/\d+/`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+        if 'reason' in params:
+            query_params.append(('reason', params['reason']))  # noqa: E501
+        if 'force_unique_identifier' in params:
+            query_params.append(('forceUniqueIdentifier', params['force_unique_identifier']))  # noqa: E501
+        if 'force_restricted_change_key' in params:
+            query_params.append(('forceRestrictedChangeKey', params['force_restricted_change_key']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'DataSource'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/setting/datasources/{id}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_default_dashboard(self, id, **kwargs):  # noqa: E501
+        """update default dashboard  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_default_dashboard(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param RestUserCustomizedDataV3 body:
+        :return: object
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.update_default_dashboard_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.update_default_dashboard_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def update_default_dashboard_with_http_info(self, id, **kwargs):  # noqa: E501
+        """update default dashboard  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_default_dashboard_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: (required)
+        :param RestUserCustomizedDataV3 body:
+        :return: object
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_default_dashboard" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_default_dashboard`")  # noqa: E501
+
+        if 'id' in params and not re.search('.+', params['id'] if type(params['id']) is str else str(params['id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `id` when calling `update_default_dashboard`, must conform to the pattern `/.+/`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'object'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/setting/userdata/{id}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def update_device(self, id, body, **kwargs):  # noqa: E501
         """update a device  # noqa: E501
 
@@ -22053,6 +23877,142 @@ class LMApi(object):
 
         return self.api_client.call_api(
             '/device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_device_datasource_instance_group_by_id(self, device_id, device_ds_id, id, body, **kwargs):  # noqa: E501
+        """update device datasource instance group  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_device_datasource_instance_group_by_id(device_id, device_ds_id, id, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int device_id: (required)
+        :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int id: (required)
+        :param DeviceDataSourceInstanceGroup body: (required)
+        :return: DeviceDataSourceInstanceGroup
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.update_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, body, **kwargs)  # noqa: E501
+        else:
+            (data) = self.update_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, body, **kwargs)  # noqa: E501
+            return data
+
+    def update_device_datasource_instance_group_by_id_with_http_info(self, device_id, device_ds_id, id, body, **kwargs):  # noqa: E501
+        """update device datasource instance group  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, body, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int device_id: (required)
+        :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int id: (required)
+        :param DeviceDataSourceInstanceGroup body: (required)
+        :return: DeviceDataSourceInstanceGroup
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['device_id', 'device_ds_id', 'id', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_device_datasource_instance_group_by_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `update_device_datasource_instance_group_by_id`")  # noqa: E501
+        # verify the required parameter 'device_ds_id' is set
+        if ('device_ds_id' not in params or
+                params['device_ds_id'] is None):
+            raise ValueError("Missing the required parameter `device_ds_id` when calling `update_device_datasource_instance_group_by_id`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_device_datasource_instance_group_by_id`")  # noqa: E501
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `update_device_datasource_instance_group_by_id`")  # noqa: E501
+
+        if 'device_id' in params and not re.search('\d+', params['device_id'] if type(params['device_id']) is str else str(params['device_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `device_id` when calling `update_device_datasource_instance_group_by_id`, must conform to the pattern `/\d+/`")  # noqa: E501
+        if 'device_ds_id' in params and not re.search('\d+', params['device_ds_id'] if type(params['device_ds_id']) is str else str(params['device_ds_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `device_ds_id` when calling `update_device_datasource_instance_group_by_id`, must conform to the pattern `/\d+/`")  # noqa: E501
+        if 'id' in params and not re.search('\d+', params['id'] if type(params['id']) is str else str(params['id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `id` when calling `update_device_datasource_instance_group_by_id`, must conform to the pattern `/\d+/`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
+        if 'device_ds_id' in params:
+            path_params['deviceDsId'] = params['device_ds_id']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'DeviceDataSourceInstanceGroup'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{id}', 'PUT',
             path_params,
             query_params,
             header_params,
@@ -22789,6 +24749,148 @@ class LMApi(object):
 
         return self.api_client.call_api(
             '/setting/alert/chains/{id}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', _preload_content_value),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_instances_alert_threshold(self, device_id, device_ds_id, dsig_id, dp_id, **kwargs):  # noqa: E501
+        """update instances alert threshold (Setting the threshold at default group is not allowed)  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_instances_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int device_id: (required)
+        :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int dsig_id: (required)
+        :param int dp_id: (required)
+        :param RestDeviceInstanceGroupAlertConfigV3 body:
+        :return: DeviceDataSourceInstanceGroup
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.update_instances_alert_threshold_with_http_info(device_id, device_ds_id, dsig_id, dp_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.update_instances_alert_threshold_with_http_info(device_id, device_ds_id, dsig_id, dp_id, **kwargs)  # noqa: E501
+            return data
+
+    def update_instances_alert_threshold_with_http_info(self, device_id, device_ds_id, dsig_id, dp_id, **kwargs):  # noqa: E501
+        """update instances alert threshold (Setting the threshold at default group is not allowed)  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_instances_alert_threshold_with_http_info(device_id, device_ds_id, dsig_id, dp_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int device_id: (required)
+        :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int dsig_id: (required)
+        :param int dp_id: (required)
+        :param RestDeviceInstanceGroupAlertConfigV3 body:
+        :return: DeviceDataSourceInstanceGroup
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['device_id', 'device_ds_id', 'dsig_id', 'dp_id', 'body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_instances_alert_threshold" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `update_instances_alert_threshold`")  # noqa: E501
+        # verify the required parameter 'device_ds_id' is set
+        if ('device_ds_id' not in params or
+                params['device_ds_id'] is None):
+            raise ValueError("Missing the required parameter `device_ds_id` when calling `update_instances_alert_threshold`")  # noqa: E501
+        # verify the required parameter 'dsig_id' is set
+        if ('dsig_id' not in params or
+                params['dsig_id'] is None):
+            raise ValueError("Missing the required parameter `dsig_id` when calling `update_instances_alert_threshold`")  # noqa: E501
+        # verify the required parameter 'dp_id' is set
+        if ('dp_id' not in params or
+                params['dp_id'] is None):
+            raise ValueError("Missing the required parameter `dp_id` when calling `update_instances_alert_threshold`")  # noqa: E501
+
+        if 'device_id' in params and not re.search('\d+', params['device_id'] if type(params['device_id']) is str else str(params['device_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `device_id` when calling `update_instances_alert_threshold`, must conform to the pattern `/\d+/`")  # noqa: E501
+        if 'device_ds_id' in params and not re.search('\d+', params['device_ds_id'] if type(params['device_ds_id']) is str else str(params['device_ds_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `device_ds_id` when calling `update_instances_alert_threshold`, must conform to the pattern `/\d+/`")  # noqa: E501
+        if 'dsig_id' in params and not re.search('\d+', params['dsig_id'] if type(params['dsig_id']) is str else str(params['dsig_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `dsig_id` when calling `update_instances_alert_threshold`, must conform to the pattern `/\d+/`")  # noqa: E501
+        if 'dp_id' in params and not re.search('\d+', params['dp_id'] if type(params['dp_id']) is str else str(params['dp_id'])):  # noqa: E501
+            raise ValueError("Invalid value for parameter `dp_id` when calling `update_instances_alert_threshold`, must conform to the pattern `/\d+/`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
+        if 'device_ds_id' in params:
+            path_params['deviceDsId'] = params['device_ds_id']  # noqa: E501
+        if 'dsig_id' in params:
+            path_params['dsigId'] = params['dsig_id']  # noqa: E501
+        if 'dp_id' in params:
+            path_params['dpId'] = params['dp_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        # if the response type is a file, set _preload_content_value=false.
+        # Because python 3.0+ 'utf-8' codec can't decode the binary string
+        _response_type = 'DeviceDataSourceInstanceGroup'
+        _preload_content_value = True
+        if _response_type == 'file':
+          _preload_content_value = False
+
+
+        return self.api_client.call_api(
+            '/device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{dsigId}/datapoints/{dpId}/alertconfig', 'PUT',
             path_params,
             query_params,
             header_params,

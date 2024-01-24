@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -80,7 +80,7 @@ class ScriptERIDiscoveryAttributeV3(object):
     def win_script(self):
         """Gets the win_script of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
 
-        windows script  # noqa: E501
+        The Windows script  # noqa: E501
 
         :return: The win_script of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
         :rtype: str
@@ -91,7 +91,7 @@ class ScriptERIDiscoveryAttributeV3(object):
     def win_script(self, win_script):
         """Sets the win_script of this ScriptERIDiscoveryAttributeV3.
 
-        windows script  # noqa: E501
+        The Windows script  # noqa: E501
 
         :param win_script: The win_script of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
         :type: str
@@ -103,7 +103,7 @@ class ScriptERIDiscoveryAttributeV3(object):
     def groovy_script(self):
         """Gets the groovy_script of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
 
-        groovy script   # noqa: E501
+        The Groovy script  # noqa: E501
 
         :return: The groovy_script of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
         :rtype: str
@@ -114,7 +114,7 @@ class ScriptERIDiscoveryAttributeV3(object):
     def groovy_script(self, groovy_script):
         """Sets the groovy_script of this ScriptERIDiscoveryAttributeV3.
 
-        groovy script   # noqa: E501
+        The Groovy script  # noqa: E501
 
         :param groovy_script: The groovy_script of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
         :type: str
@@ -151,7 +151,7 @@ class ScriptERIDiscoveryAttributeV3(object):
     def type(self):
         """Gets the type of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
 
-        script type  # noqa: E501
+        The script type  # noqa: E501
 
         :return: The type of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
         :rtype: str
@@ -162,7 +162,7 @@ class ScriptERIDiscoveryAttributeV3(object):
     def type(self, type):
         """Sets the type of this ScriptERIDiscoveryAttributeV3.
 
-        script type  # noqa: E501
+        The script type  # noqa: E501
 
         :param type: The type of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
         :type: str
@@ -174,7 +174,7 @@ class ScriptERIDiscoveryAttributeV3(object):
     def linux_cmdline(self):
         """Gets the linux_cmdline of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
 
-        linux script command line  # noqa: E501
+        The Linux script command line  # noqa: E501
 
         :return: The linux_cmdline of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
         :rtype: str
@@ -185,7 +185,7 @@ class ScriptERIDiscoveryAttributeV3(object):
     def linux_cmdline(self, linux_cmdline):
         """Sets the linux_cmdline of this ScriptERIDiscoveryAttributeV3.
 
-        linux script command line  # noqa: E501
+        The Linux script command line  # noqa: E501
 
         :param linux_cmdline: The linux_cmdline of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
         :type: str
@@ -197,7 +197,7 @@ class ScriptERIDiscoveryAttributeV3(object):
     def linux_script(self):
         """Gets the linux_script of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
 
-        linux script file  # noqa: E501
+        The Linux script file  # noqa: E501
 
         :return: The linux_script of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
         :rtype: str
@@ -208,7 +208,7 @@ class ScriptERIDiscoveryAttributeV3(object):
     def linux_script(self, linux_script):
         """Sets the linux_script of this ScriptERIDiscoveryAttributeV3.
 
-        linux script file  # noqa: E501
+        The Linux script file  # noqa: E501
 
         :param linux_script: The linux_script of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
         :type: str
@@ -220,7 +220,7 @@ class ScriptERIDiscoveryAttributeV3(object):
     def win_cmdline(self):
         """Gets the win_cmdline of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
 
-        windows script command line  # noqa: E501
+        The Windows script command line  # noqa: E501
 
         :return: The win_cmdline of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
         :rtype: str
@@ -231,7 +231,7 @@ class ScriptERIDiscoveryAttributeV3(object):
     def win_cmdline(self, win_cmdline):
         """Sets the win_cmdline of this ScriptERIDiscoveryAttributeV3.
 
-        windows script command line  # noqa: E501
+        The Windows script command line  # noqa: E501
 
         :param win_cmdline: The win_cmdline of this ScriptERIDiscoveryAttributeV3.  # noqa: E501
         :type: str

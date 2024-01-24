@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **groovy_script** | **str** | groovy script | [optional] 
+**manual_connections** | **str** | manual | [optional] 
 **script_type** | **str** | script type: embed | file | powershell | [optional] 
 **windows_script** | **str** | windows script | [optional] 
 **linux_cmdline** | **str** | linux script command line | [optional] 

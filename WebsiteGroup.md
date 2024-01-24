@@ -4,14 +4,14 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **full_path** | **str** | The full path of the group | [optional] 
-**stop_monitoring** | **bool** | true: monitoring is disabled for the websites in the group false: monitoring is enabled for the websites in the group If stopMonitoring&#x3D;true, then alerting will also by default be disabled for the websites in the group | [optional] 
-**user_permission** | **str** | The permission level of the user that made the API request. Acceptable values are: write, read, ack | [optional] 
-**test_location** | [**WebsiteLocation**](WebsiteLocation.md) | An object that indicates the websites locations. e.g. {&#39;all&#39;: false, smgId:[1,2,3], collectorIds:[14,16]} | [optional] 
+**stop_monitoring** | **bool** | The values can be true|false where true: monitoring is disabled for the websites in the group false: monitoring is enabled for the websites in the group If stopMonitoring&#x3D;true, then alerting will also be disabled by default for the websites in the group | [optional] 
+**user_permission** | **str** | The permission level of the user that made the API request. The values can be write|read|ack | [optional] 
+**test_location** | [**WebsiteLocation**](WebsiteLocation.md) | An object that indicates the websites locations. eg. {&#39;all&#39;: false, smgId:[1,2,3], collectorIds:[14,16]} | [optional] 
 **has_websites_disabled** | **bool** | Indicates if there are websites disabled in this group | [optional] 
 **description** | **str** | The description of the group | [optional] 
-**disable_alerting** | **bool** | true: alerting is disabled for the websites in the group false: alerting is enabled for the websites in the group If stopMonitoring&#x3D;true, then alerting will also by default be disabled for the websites in the group | [optional] 
+**disable_alerting** | **bool** | The values can be true|false where true: alerting is disabled for the websites in the group false: alerting is enabled for the websites in the group If stopMonitoring&#x3D;true, then alerting will also be disabled by default for the websites in the group | [optional] 
 **role_privileges** | **list[str]** | The privilege operations of the user&#39;s role that made the API request.  The array can contain the values ack, sdt and/or threshold | [optional] 
-**parent_id** | **int** | The Id of the parent group. If parentId&#x3D;1 then the group exists under the root  group | [optional] 
+**parent_id** | **int** | The Id of the parent group. If parentId&#x3D;1 then the group exists under the root group | [optional] 
 **num_of_direct_websites** | **int** | The number of direct websites in this group | [optional] 
 **name** | **str** | The name of the group | 
 **num_of_direct_sub_groups** | **int** | The number of direct website groups in this group (excluding those in subgroups) | [optional] 

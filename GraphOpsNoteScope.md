@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **service_group_ids** | **list[int]** | The service group Id | [optional] 
 **service_id** | **int** | The service Id | [optional] 
-**type** | **str** | device | service | website The corresponding type | [optional] 
+**type** | **str** | The values can be device | service | website | [optional] 
 **device_group_ids** | **list[int]** | The device group Id | [optional] 
 **device_id** | **int** | The device Id | [optional] 
 

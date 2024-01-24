@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -153,7 +153,7 @@ class DataSourceOverviewGraph(object):
     def time_scale(self):
         """Gets the time_scale of this DataSourceOverviewGraph.  # noqa: E501
 
-        the graph time scale, 1hour|2hour|5hour|day|yesterday|week|lastweek|month|3month|year  # noqa: E501
+        The graph time scale.  The values can be 1hour|2hour|5hour|day|yesterday|week|lastweek|month|3month|year  # noqa: E501
 
         :return: The time_scale of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: str
@@ -164,7 +164,7 @@ class DataSourceOverviewGraph(object):
     def time_scale(self, time_scale):
         """Sets the time_scale of this DataSourceOverviewGraph.
 
-        the graph time scale, 1hour|2hour|5hour|day|yesterday|week|lastweek|month|3month|year  # noqa: E501
+        The graph time scale.  The values can be 1hour|2hour|5hour|day|yesterday|week|lastweek|month|3month|year  # noqa: E501
 
         :param time_scale: The time_scale of this DataSourceOverviewGraph.  # noqa: E501
         :type: str
@@ -176,7 +176,7 @@ class DataSourceOverviewGraph(object):
     def max_value(self):
         """Gets the max_value of this DataSourceOverviewGraph.  # noqa: E501
 
-        graph max value  # noqa: E501
+        The graph max value  # noqa: E501
 
         :return: The max_value of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: object
@@ -187,7 +187,7 @@ class DataSourceOverviewGraph(object):
     def max_value(self, max_value):
         """Sets the max_value of this DataSourceOverviewGraph.
 
-        graph max value  # noqa: E501
+        The graph max value  # noqa: E501
 
         :param max_value: The max_value of this DataSourceOverviewGraph.  # noqa: E501
         :type: object
@@ -199,7 +199,7 @@ class DataSourceOverviewGraph(object):
     def display_prio(self):
         """Gets the display_prio of this DataSourceOverviewGraph.  # noqa: E501
 
-        the graph display priority  # noqa: E501
+        The graph display priority  # noqa: E501
 
         :return: The display_prio of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: int
@@ -210,7 +210,7 @@ class DataSourceOverviewGraph(object):
     def display_prio(self, display_prio):
         """Sets the display_prio of this DataSourceOverviewGraph.
 
-        the graph display priority  # noqa: E501
+        The graph display priority  # noqa: E501
 
         :param display_prio: The display_prio of this DataSourceOverviewGraph.  # noqa: E501
         :type: int
@@ -222,7 +222,7 @@ class DataSourceOverviewGraph(object):
     def aggregated(self):
         """Gets the aggregated of this DataSourceOverviewGraph.  # noqa: E501
 
-        is the overview graph aggregated  # noqa: E501
+        Whether the overview graph is aggregated  # noqa: E501
 
         :return: The aggregated of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: bool
@@ -233,7 +233,7 @@ class DataSourceOverviewGraph(object):
     def aggregated(self, aggregated):
         """Sets the aggregated of this DataSourceOverviewGraph.
 
-        is the overview graph aggregated  # noqa: E501
+        Whether the overview graph is aggregated  # noqa: E501
 
         :param aggregated: The aggregated of this DataSourceOverviewGraph.  # noqa: E501
         :type: bool
@@ -245,7 +245,7 @@ class DataSourceOverviewGraph(object):
     def title(self):
         """Gets the title of this DataSourceOverviewGraph.  # noqa: E501
 
-        the graph title  # noqa: E501
+        The graph title  # noqa: E501
 
         :return: The title of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: str
@@ -256,7 +256,7 @@ class DataSourceOverviewGraph(object):
     def title(self, title):
         """Sets the title of this DataSourceOverviewGraph.
 
-        the graph title  # noqa: E501
+        The graph title  # noqa: E501
 
         :param title: The title of this DataSourceOverviewGraph.  # noqa: E501
         :type: str
@@ -268,7 +268,7 @@ class DataSourceOverviewGraph(object):
     def virtual_data_points(self):
         """Gets the virtual_data_points of this DataSourceOverviewGraph.  # noqa: E501
 
-        the virtual data point list  # noqa: E501
+        The virtual data point list  # noqa: E501
 
         :return: The virtual_data_points of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: list[GraphVirtualDataPoint]
@@ -279,7 +279,7 @@ class DataSourceOverviewGraph(object):
     def virtual_data_points(self, virtual_data_points):
         """Sets the virtual_data_points of this DataSourceOverviewGraph.
 
-        the virtual data point list  # noqa: E501
+        The virtual data point list  # noqa: E501
 
         :param virtual_data_points: The virtual_data_points of this DataSourceOverviewGraph.  # noqa: E501
         :type: list[GraphVirtualDataPoint]
@@ -291,7 +291,7 @@ class DataSourceOverviewGraph(object):
     def min_value(self):
         """Gets the min_value of this DataSourceOverviewGraph.  # noqa: E501
 
-        graph min value  # noqa: E501
+        The graph min value  # noqa: E501
 
         :return: The min_value of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: object
@@ -302,7 +302,7 @@ class DataSourceOverviewGraph(object):
     def min_value(self, min_value):
         """Sets the min_value of this DataSourceOverviewGraph.
 
-        graph min value  # noqa: E501
+        The graph min value  # noqa: E501
 
         :param min_value: The min_value of this DataSourceOverviewGraph.  # noqa: E501
         :type: object
@@ -314,7 +314,7 @@ class DataSourceOverviewGraph(object):
     def name(self):
         """Gets the name of this DataSourceOverviewGraph.  # noqa: E501
 
-        the graph name  # noqa: E501
+        The graph name  # noqa: E501
 
         :return: The name of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: str
@@ -325,7 +325,7 @@ class DataSourceOverviewGraph(object):
     def name(self, name):
         """Sets the name of this DataSourceOverviewGraph.
 
-        the graph name  # noqa: E501
+        The graph name  # noqa: E501
 
         :param name: The name of this DataSourceOverviewGraph.  # noqa: E501
         :type: str
@@ -337,7 +337,7 @@ class DataSourceOverviewGraph(object):
     def width(self):
         """Gets the width of this DataSourceOverviewGraph.  # noqa: E501
 
-        the graph width  # noqa: E501
+        The graph width  # noqa: E501
 
         :return: The width of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: int
@@ -348,7 +348,7 @@ class DataSourceOverviewGraph(object):
     def width(self, width):
         """Sets the width of this DataSourceOverviewGraph.
 
-        the graph width  # noqa: E501
+        The graph width  # noqa: E501
 
         :param width: The width of this DataSourceOverviewGraph.  # noqa: E501
         :type: int
@@ -360,7 +360,7 @@ class DataSourceOverviewGraph(object):
     def data_points(self):
         """Gets the data_points of this DataSourceOverviewGraph.  # noqa: E501
 
-        the graph data point list  # noqa: E501
+        The graph data point list  # noqa: E501
 
         :return: The data_points of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: list[OverviewGraphDataPoint]
@@ -371,7 +371,7 @@ class DataSourceOverviewGraph(object):
     def data_points(self, data_points):
         """Sets the data_points of this DataSourceOverviewGraph.
 
-        the graph data point list  # noqa: E501
+        The graph data point list  # noqa: E501
 
         :param data_points: The data_points of this DataSourceOverviewGraph.  # noqa: E501
         :type: list[OverviewGraphDataPoint]
@@ -383,7 +383,7 @@ class DataSourceOverviewGraph(object):
     def vertical_label(self):
         """Gets the vertical_label of this DataSourceOverviewGraph.  # noqa: E501
 
-        the graph vertical label  # noqa: E501
+        The graph vertical label  # noqa: E501
 
         :return: The vertical_label of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: str
@@ -394,7 +394,7 @@ class DataSourceOverviewGraph(object):
     def vertical_label(self, vertical_label):
         """Sets the vertical_label of this DataSourceOverviewGraph.
 
-        the graph vertical label  # noqa: E501
+        The graph vertical label  # noqa: E501
 
         :param vertical_label: The vertical_label of this DataSourceOverviewGraph.  # noqa: E501
         :type: str
@@ -406,7 +406,7 @@ class DataSourceOverviewGraph(object):
     def id(self):
         """Gets the id of this DataSourceOverviewGraph.  # noqa: E501
 
-        the graph id  # noqa: E501
+        The graph Id  # noqa: E501
 
         :return: The id of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: int
@@ -417,7 +417,7 @@ class DataSourceOverviewGraph(object):
     def id(self, id):
         """Sets the id of this DataSourceOverviewGraph.
 
-        the graph id  # noqa: E501
+        The graph Id  # noqa: E501
 
         :param id: The id of this DataSourceOverviewGraph.  # noqa: E501
         :type: int
@@ -429,7 +429,7 @@ class DataSourceOverviewGraph(object):
     def rigid(self):
         """Gets the rigid of this DataSourceOverviewGraph.  # noqa: E501
 
-        the rigid, true|false  # noqa: E501
+        The rigid. The values can be true|false  # noqa: E501
 
         :return: The rigid of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: bool
@@ -440,7 +440,7 @@ class DataSourceOverviewGraph(object):
     def rigid(self, rigid):
         """Sets the rigid of this DataSourceOverviewGraph.
 
-        the rigid, true|false  # noqa: E501
+        The rigid. The values can be true|false  # noqa: E501
 
         :param rigid: The rigid of this DataSourceOverviewGraph.  # noqa: E501
         :type: bool
@@ -452,7 +452,7 @@ class DataSourceOverviewGraph(object):
     def lines(self):
         """Gets the lines of this DataSourceOverviewGraph.  # noqa: E501
 
-        the graph lines  # noqa: E501
+        The graph lines  # noqa: E501
 
         :return: The lines of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: list[GraphLine]
@@ -463,7 +463,7 @@ class DataSourceOverviewGraph(object):
     def lines(self, lines):
         """Sets the lines of this DataSourceOverviewGraph.
 
-        the graph lines  # noqa: E501
+        The graph lines  # noqa: E501
 
         :param lines: The lines of this DataSourceOverviewGraph.  # noqa: E501
         :type: list[GraphLine]
@@ -475,7 +475,7 @@ class DataSourceOverviewGraph(object):
     def height(self):
         """Gets the height of this DataSourceOverviewGraph.  # noqa: E501
 
-        the graph height  # noqa: E501
+        The graph height  # noqa: E501
 
         :return: The height of this DataSourceOverviewGraph.  # noqa: E501
         :rtype: int
@@ -486,7 +486,7 @@ class DataSourceOverviewGraph(object):
     def height(self, height):
         """Sets the height of this DataSourceOverviewGraph.
 
-        the graph height  # noqa: E501
+        The graph height  # noqa: E501
 
         :param height: The height of this DataSourceOverviewGraph.  # noqa: E501
         :type: int

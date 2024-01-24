@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -137,7 +137,8 @@ class DataSource(object):
             self.checksum = checksum
         if data_points is not None:
             self.data_points = data_points
-        self.id = id
+        if id is not None:
+            self.id = id
         if group is not None:
             self.group = group
         self.collector_attribute = collector_attribute
@@ -287,7 +288,7 @@ class DataSource(object):
     def collect_method(self):
         """Gets the collect_method of this DataSource.  # noqa: E501
 
-        The  method to collect data: snmp|ping|exs|webpage|wmi|cim|datadump|dns|ipmi|jdbb|script|udp|tcp|xen  # noqa: E501
+        The  method to collect data. The values can be snmp|ping|exs|webpage|wmi|cim|datadump|dns|ipmi|jdbb|script|udp|tcp|xen  # noqa: E501
 
         :return: The collect_method of this DataSource.  # noqa: E501
         :rtype: str
@@ -298,7 +299,7 @@ class DataSource(object):
     def collect_method(self, collect_method):
         """Sets the collect_method of this DataSource.
 
-        The  method to collect data: snmp|ping|exs|webpage|wmi|cim|datadump|dns|ipmi|jdbb|script|udp|tcp|xen  # noqa: E501
+        The  method to collect data. The values can be snmp|ping|exs|webpage|wmi|cim|datadump|dns|ipmi|jdbb|script|udp|tcp|xen  # noqa: E501
 
         :param collect_method: The collect_method of this DataSource.  # noqa: E501
         :type: str
@@ -374,8 +375,6 @@ class DataSource(object):
         :param id: The id of this DataSource.  # noqa: E501
         :type: int
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -406,7 +405,7 @@ class DataSource(object):
     def collector_attribute(self):
         """Gets the collector_attribute of this DataSource.  # noqa: E501
 
-        data collector's attributes to collector data. e.g. a ping data source has a ping collector attribute.   PingCollectorAttributeV1 has two fields. the ip to ping, the data size send to ping  # noqa: E501
+        Data collector's attributes to collector data. e.g. a ping data source has a ping collector attribute.   PingCollectorAttributeV1 has two fields. the ip to ping, the data size send to ping  # noqa: E501
 
         :return: The collector_attribute of this DataSource.  # noqa: E501
         :rtype: CollectorAttribute
@@ -417,7 +416,7 @@ class DataSource(object):
     def collector_attribute(self, collector_attribute):
         """Sets the collector_attribute of this DataSource.
 
-        data collector's attributes to collector data. e.g. a ping data source has a ping collector attribute.   PingCollectorAttributeV1 has two fields. the ip to ping, the data size send to ping  # noqa: E501
+        Data collector's attributes to collector data. e.g. a ping data source has a ping collector attribute.   PingCollectorAttributeV1 has two fields. the ip to ping, the data size send to ping  # noqa: E501
 
         :param collector_attribute: The collector_attribute of this DataSource.  # noqa: E501
         :type: CollectorAttribute
@@ -454,7 +453,7 @@ class DataSource(object):
     def payload_version(self):
         """Gets the payload_version of this DataSource.  # noqa: E501
 
-        The dataSource payload Version for custom metrics  # noqa: E501
+        The DataSource payload version for custom metrics  # noqa: E501
 
         :return: The payload_version of this DataSource.  # noqa: E501
         :rtype: int
@@ -465,7 +464,7 @@ class DataSource(object):
     def payload_version(self, payload_version):
         """Sets the payload_version of this DataSource.
 
-        The dataSource payload Version for custom metrics  # noqa: E501
+        The DataSource payload version for custom metrics  # noqa: E501
 
         :param payload_version: The payload_version of this DataSource.  # noqa: E501
         :type: int
@@ -477,7 +476,7 @@ class DataSource(object):
     def use_wild_value_as_uuid(self):
         """Gets the use_wild_value_as_uuid of this DataSource.  # noqa: E501
 
-        Use Wildvalue as Unique identifier in case of multiinstance datasource: true|false  # noqa: E501
+        Use wild-value as unique identifier in case of multi instance datasource: true|false  # noqa: E501
 
         :return: The use_wild_value_as_uuid of this DataSource.  # noqa: E501
         :rtype: bool
@@ -488,7 +487,7 @@ class DataSource(object):
     def use_wild_value_as_uuid(self, use_wild_value_as_uuid):
         """Sets the use_wild_value_as_uuid of this DataSource.
 
-        Use Wildvalue as Unique identifier in case of multiinstance datasource: true|false  # noqa: E501
+        Use wild-value as unique identifier in case of multi instance datasource: true|false  # noqa: E501
 
         :param use_wild_value_as_uuid: The use_wild_value_as_uuid of this DataSource.  # noqa: E501
         :type: bool

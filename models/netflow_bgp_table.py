@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -94,6 +94,7 @@ class NetflowBgpTable(NetflowDataBase):
     def percent_usage(self):
         """Gets the percent_usage of this NetflowBgpTable.  # noqa: E501
 
+        percentage of traffic through this asn  # noqa: E501
 
         :return: The percent_usage of this NetflowBgpTable.  # noqa: E501
         :rtype: float
@@ -104,6 +105,7 @@ class NetflowBgpTable(NetflowDataBase):
     def percent_usage(self, percent_usage):
         """Sets the percent_usage of this NetflowBgpTable.
 
+        percentage of traffic through this asn  # noqa: E501
 
         :param percent_usage: The percent_usage of this NetflowBgpTable.  # noqa: E501
         :type: float
@@ -115,6 +117,7 @@ class NetflowBgpTable(NetflowDataBase):
     def as_number(self):
         """Gets the as_number of this NetflowBgpTable.  # noqa: E501
 
+        autonomous system number  # noqa: E501
 
         :return: The as_number of this NetflowBgpTable.  # noqa: E501
         :rtype: int
@@ -125,6 +128,7 @@ class NetflowBgpTable(NetflowDataBase):
     def as_number(self, as_number):
         """Sets the as_number of this NetflowBgpTable.
 
+        autonomous system number  # noqa: E501
 
         :param as_number: The as_number of this NetflowBgpTable.  # noqa: E501
         :type: int
@@ -136,6 +140,7 @@ class NetflowBgpTable(NetflowDataBase):
     def usage(self):
         """Gets the usage of this NetflowBgpTable.  # noqa: E501
 
+        total bytes through this asn  # noqa: E501
 
         :return: The usage of this NetflowBgpTable.  # noqa: E501
         :rtype: float
@@ -146,6 +151,7 @@ class NetflowBgpTable(NetflowDataBase):
     def usage(self, usage):
         """Sets the usage of this NetflowBgpTable.
 
+        total bytes through this asn  # noqa: E501
 
         :param usage: The usage of this NetflowBgpTable.  # noqa: E501
         :type: float
@@ -157,6 +163,7 @@ class NetflowBgpTable(NetflowDataBase):
     def description(self):
         """Gets the description of this NetflowBgpTable.  # noqa: E501
 
+        the description of the asNumber  # noqa: E501
 
         :return: The description of this NetflowBgpTable.  # noqa: E501
         :rtype: str
@@ -167,6 +174,7 @@ class NetflowBgpTable(NetflowDataBase):
     def description(self, description):
         """Sets the description of this NetflowBgpTable.
 
+        the description of the asNumber  # noqa: E501
 
         :param description: The description of this NetflowBgpTable.  # noqa: E501
         :type: str

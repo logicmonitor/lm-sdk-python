@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -92,13 +92,6 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
-    def test_add_configsource_audit_version(self):
-        """Test case for add_configsource_audit_version
-
-        add audit version  # noqa: E501
-        """
-        pass
-
     def test_add_dashboard(self):
         """Test case for add_dashboard
 
@@ -113,10 +106,17 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
-    def test_add_datasource_audit_version(self):
-        """Test case for add_datasource_audit_version
+    def test_add_dashboard_group_asynchronously(self):
+        """Test case for add_dashboard_group_asynchronously
 
-        add audit version  # noqa: E501
+        add dashboard group asynchronously  # noqa: E501
+        """
+        pass
+
+    def test_add_datasource_by_id(self):
+        """Test case for add_datasource_by_id
+
+        add datasource  # noqa: E501
         """
         pass
 
@@ -131,6 +131,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for add_device_datasource_instance
 
         add device instance   # noqa: E501
+        """
+        pass
+
+    def test_add_device_datasource_instance_group(self):
+        """Test case for add_device_datasource_instance_group
+
+        add device datasource instance group   # noqa: E501
         """
         pass
 
@@ -162,13 +169,6 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
-    def test_add_eventsource_audit_version(self):
-        """Test case for add_eventsource_audit_version
-
-        add audit version  # noqa: E501
-        """
-        pass
-
     def test_add_netscan(self):
         """Test case for add_netscan
 
@@ -180,13 +180,6 @@ class TestLMApi(unittest.TestCase):
         """Test case for add_ops_note
 
         add opsnote  # noqa: E501
-        """
-        pass
-
-    def test_add_propertysource_audit_version(self):
-        """Test case for add_propertysource_audit_version
-
-        add audit version  # noqa: E501
         """
         pass
 
@@ -386,10 +379,31 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_discover_subscriptions(self):
+        """Test case for discover_subscriptions
+
+        view subscriptions  # noqa: E501
+        """
+        pass
+
     def test_execute_debug_command(self):
         """Test case for execute_debug_command
 
         Execute a Collector debug command  # noqa: E501
+        """
+        pass
+
+    def test_fetch_device_instances_data(self):
+        """Test case for fetch_device_instances_data
+
+        fetch device instances data  # noqa: E501
+        """
+        pass
+
+    def test_fetch_report_using_task_id(self):
+        """Test case for fetch_report_using_task_id
+
+        get report for task Id  # noqa: E501
         """
         pass
 
@@ -512,10 +526,17 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_aws_account_id(self):
+        """Test case for get_aws_account_id
+
+        Get AWS account ID  # noqa: E501
+        """
+        pass
+
     def test_get_aws_external_id(self):
         """Test case for get_aws_external_id
 
-        Get AWS external id  # noqa: E501
+        Get AWS external ID  # noqa: E501
         """
         pass
 
@@ -614,6 +635,20 @@ class TestLMApi(unittest.TestCase):
         """Test case for get_debug_command_result
 
         Get the result of a Collector debug command using sessionId  # noqa: E501
+        """
+        pass
+
+    def test_get_delta_devices(self):
+        """Test case for get_delta_devices
+
+        Get delta devices using deltaId  # noqa: E501
+        """
+        pass
+
+    def test_get_delta_id_with_devices(self):
+        """Test case for get_delta_id_with_devices
+
+        Get filter matched devices with new deltaId  # noqa: E501
         """
         pass
 
@@ -1002,6 +1037,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_update_reason_list_by_config_source_id(self):
+        """Test case for get_update_reason_list_by_config_source_id
+
+        get update history for a configSource  # noqa: E501
+        """
+        pass
+
     def test_get_update_reason_list_by_data_source_id(self):
         """Test case for get_update_reason_list_by_data_source_id
 
@@ -1156,6 +1198,20 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_datasource_by_id(self):
+        """Test case for patch_datasource_by_id
+
+        update datasource  # noqa: E501
+        """
+        pass
+
+    def test_patch_default_dashboard(self):
+        """Test case for patch_default_dashboard
+
+        update default dashboard  # noqa: E501
+        """
+        pass
+
     def test_patch_device(self):
         """Test case for patch_device
 
@@ -1174,6 +1230,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for patch_device_datasource_instance_by_id
 
         update device instance  # noqa: E501
+        """
+        pass
+
+    def test_patch_device_datasource_instance_group_by_id(self):
+        """Test case for patch_device_datasource_instance_group_by_id
+
+        update device datasource instance group  # noqa: E501
         """
         pass
 
@@ -1216,6 +1279,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for patch_escalation_chain_by_id
 
         update escalation chain  # noqa: E501
+        """
+        pass
+
+    def test_patch_instances_alert_threshold(self):
+        """Test case for patch_instances_alert_threshold
+
+        update instances alert threshold (Setting the threshold at default group is not allowed)  # noqa: E501
         """
         pass
 
@@ -1282,6 +1352,34 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_test_aws_account(self):
+        """Test case for test_aws_account
+
+        test AWS account  # noqa: E501
+        """
+        pass
+
+    def test_test_azure_account(self):
+        """Test case for test_azure_account
+
+        test Azure account  # noqa: E501
+        """
+        pass
+
+    def test_test_gcp_account(self):
+        """Test case for test_gcp_account
+
+        test GCP account  # noqa: E501
+        """
+        pass
+
+    def test_test_saa_s_account(self):
+        """Test case for test_saa_s_account
+
+        test SaaS account  # noqa: E501
+        """
+        pass
+
     def test_update_admin_by_id(self):
         """Test case for update_admin_by_id
 
@@ -1331,6 +1429,20 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_update_datasource_by_id(self):
+        """Test case for update_datasource_by_id
+
+        update datasource  # noqa: E501
+        """
+        pass
+
+    def test_update_default_dashboard(self):
+        """Test case for update_default_dashboard
+
+        update default dashboard  # noqa: E501
+        """
+        pass
+
     def test_update_device(self):
         """Test case for update_device
 
@@ -1349,6 +1461,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for update_device_datasource_instance_by_id
 
         update device instance  # noqa: E501
+        """
+        pass
+
+    def test_update_device_datasource_instance_group_by_id(self):
+        """Test case for update_device_datasource_instance_group_by_id
+
+        update device datasource instance group  # noqa: E501
         """
         pass
 
@@ -1391,6 +1510,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for update_escalation_chain_by_id
 
         update escalation chain  # noqa: E501
+        """
+        pass
+
+    def test_update_instances_alert_threshold(self):
+        """Test case for update_instances_alert_threshold
+
+        update instances alert threshold (Setting the threshold at default group is not allowed)  # noqa: E501
         """
         pass
 
