@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -146,7 +146,7 @@ class WebsiteGroup(object):
     def stop_monitoring(self):
         """Gets the stop_monitoring of this WebsiteGroup.  # noqa: E501
 
-        true: monitoring is disabled for the websites in the group false: monitoring is enabled for the websites in the group If stopMonitoring=true, then alerting will also by default be disabled for the websites in the group  # noqa: E501
+        The values can be true|false where true: monitoring is disabled for the websites in the group false: monitoring is enabled for the websites in the group If stopMonitoring=true, then alerting will also be disabled by default for the websites in the group  # noqa: E501
 
         :return: The stop_monitoring of this WebsiteGroup.  # noqa: E501
         :rtype: bool
@@ -157,7 +157,7 @@ class WebsiteGroup(object):
     def stop_monitoring(self, stop_monitoring):
         """Sets the stop_monitoring of this WebsiteGroup.
 
-        true: monitoring is disabled for the websites in the group false: monitoring is enabled for the websites in the group If stopMonitoring=true, then alerting will also by default be disabled for the websites in the group  # noqa: E501
+        The values can be true|false where true: monitoring is disabled for the websites in the group false: monitoring is enabled for the websites in the group If stopMonitoring=true, then alerting will also be disabled by default for the websites in the group  # noqa: E501
 
         :param stop_monitoring: The stop_monitoring of this WebsiteGroup.  # noqa: E501
         :type: bool
@@ -169,7 +169,7 @@ class WebsiteGroup(object):
     def user_permission(self):
         """Gets the user_permission of this WebsiteGroup.  # noqa: E501
 
-        The permission level of the user that made the API request. Acceptable values are: write, read, ack  # noqa: E501
+        The permission level of the user that made the API request. The values can be write|read|ack  # noqa: E501
 
         :return: The user_permission of this WebsiteGroup.  # noqa: E501
         :rtype: str
@@ -180,7 +180,7 @@ class WebsiteGroup(object):
     def user_permission(self, user_permission):
         """Sets the user_permission of this WebsiteGroup.
 
-        The permission level of the user that made the API request. Acceptable values are: write, read, ack  # noqa: E501
+        The permission level of the user that made the API request. The values can be write|read|ack  # noqa: E501
 
         :param user_permission: The user_permission of this WebsiteGroup.  # noqa: E501
         :type: str
@@ -192,7 +192,7 @@ class WebsiteGroup(object):
     def test_location(self):
         """Gets the test_location of this WebsiteGroup.  # noqa: E501
 
-        An object that indicates the websites locations. e.g. {'all': false, smgId:[1,2,3], collectorIds:[14,16]}  # noqa: E501
+        An object that indicates the websites locations. eg. {'all': false, smgId:[1,2,3], collectorIds:[14,16]}  # noqa: E501
 
         :return: The test_location of this WebsiteGroup.  # noqa: E501
         :rtype: WebsiteLocation
@@ -203,7 +203,7 @@ class WebsiteGroup(object):
     def test_location(self, test_location):
         """Sets the test_location of this WebsiteGroup.
 
-        An object that indicates the websites locations. e.g. {'all': false, smgId:[1,2,3], collectorIds:[14,16]}  # noqa: E501
+        An object that indicates the websites locations. eg. {'all': false, smgId:[1,2,3], collectorIds:[14,16]}  # noqa: E501
 
         :param test_location: The test_location of this WebsiteGroup.  # noqa: E501
         :type: WebsiteLocation
@@ -261,7 +261,7 @@ class WebsiteGroup(object):
     def disable_alerting(self):
         """Gets the disable_alerting of this WebsiteGroup.  # noqa: E501
 
-        true: alerting is disabled for the websites in the group false: alerting is enabled for the websites in the group If stopMonitoring=true, then alerting will also by default be disabled for the websites in the group  # noqa: E501
+        The values can be true|false where true: alerting is disabled for the websites in the group false: alerting is enabled for the websites in the group If stopMonitoring=true, then alerting will also be disabled by default for the websites in the group  # noqa: E501
 
         :return: The disable_alerting of this WebsiteGroup.  # noqa: E501
         :rtype: bool
@@ -272,7 +272,7 @@ class WebsiteGroup(object):
     def disable_alerting(self, disable_alerting):
         """Sets the disable_alerting of this WebsiteGroup.
 
-        true: alerting is disabled for the websites in the group false: alerting is enabled for the websites in the group If stopMonitoring=true, then alerting will also by default be disabled for the websites in the group  # noqa: E501
+        The values can be true|false where true: alerting is disabled for the websites in the group false: alerting is enabled for the websites in the group If stopMonitoring=true, then alerting will also be disabled by default for the websites in the group  # noqa: E501
 
         :param disable_alerting: The disable_alerting of this WebsiteGroup.  # noqa: E501
         :type: bool
@@ -307,7 +307,7 @@ class WebsiteGroup(object):
     def parent_id(self):
         """Gets the parent_id of this WebsiteGroup.  # noqa: E501
 
-        The Id of the parent group. If parentId=1 then the group exists under the root  group  # noqa: E501
+        The Id of the parent group. If parentId=1 then the group exists under the root group  # noqa: E501
 
         :return: The parent_id of this WebsiteGroup.  # noqa: E501
         :rtype: int
@@ -318,7 +318,7 @@ class WebsiteGroup(object):
     def parent_id(self, parent_id):
         """Sets the parent_id of this WebsiteGroup.
 
-        The Id of the parent group. If parentId=1 then the group exists under the root  group  # noqa: E501
+        The Id of the parent group. If parentId=1 then the group exists under the root group  # noqa: E501
 
         :param parent_id: The parent_id of this WebsiteGroup.  # noqa: E501
         :type: int

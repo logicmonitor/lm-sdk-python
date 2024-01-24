@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -61,7 +61,7 @@ class DeviceDataSourceAssociatedInstance(object):
     def name(self):
         """Gets the name of this DeviceDataSourceAssociatedInstance.  # noqa: E501
 
-        instance name  # noqa: E501
+        Instance name  # noqa: E501
 
         :return: The name of this DeviceDataSourceAssociatedInstance.  # noqa: E501
         :rtype: str
@@ -72,7 +72,7 @@ class DeviceDataSourceAssociatedInstance(object):
     def name(self, name):
         """Sets the name of this DeviceDataSourceAssociatedInstance.
 
-        instance name  # noqa: E501
+        Instance name  # noqa: E501
 
         :param name: The name of this DeviceDataSourceAssociatedInstance.  # noqa: E501
         :type: str
@@ -84,7 +84,7 @@ class DeviceDataSourceAssociatedInstance(object):
     def alias(self):
         """Gets the alias of this DeviceDataSourceAssociatedInstance.  # noqa: E501
 
-        instance alias  # noqa: E501
+        Instance alias  # noqa: E501
 
         :return: The alias of this DeviceDataSourceAssociatedInstance.  # noqa: E501
         :rtype: str
@@ -95,7 +95,7 @@ class DeviceDataSourceAssociatedInstance(object):
     def alias(self, alias):
         """Sets the alias of this DeviceDataSourceAssociatedInstance.
 
-        instance alias  # noqa: E501
+        Instance alias  # noqa: E501
 
         :param alias: The alias of this DeviceDataSourceAssociatedInstance.  # noqa: E501
         :type: str
@@ -107,7 +107,7 @@ class DeviceDataSourceAssociatedInstance(object):
     def id(self):
         """Gets the id of this DeviceDataSourceAssociatedInstance.  # noqa: E501
 
-        instance id  # noqa: E501
+        Instance id  # noqa: E501
 
         :return: The id of this DeviceDataSourceAssociatedInstance.  # noqa: E501
         :rtype: int
@@ -118,7 +118,7 @@ class DeviceDataSourceAssociatedInstance(object):
     def id(self, id):
         """Sets the id of this DeviceDataSourceAssociatedInstance.
 
-        instance id  # noqa: E501
+        Instance id  # noqa: E501
 
         :param id: The id of this DeviceDataSourceAssociatedInstance.  # noqa: E501
         :type: int

@@ -8,15 +8,15 @@ Name | Type | Description | Notes
 **description** | **str** | The description for the LMModule | [optional] 
 **applies_to** | **str** | The Applies To for the LMModule | [optional] 
 **lineage_id** | **str** | The lineageId the LMModule belongs to | [optional] 
-**collect_method** | **str** | The  method to collect data: snmp|ping|exs|webpage|wmi|cim|datadump|dns|ipmi|jdbb|script|udp|tcp|xen | 
+**collect_method** | **str** | The  method to collect data. The values can be snmp|ping|exs|webpage|wmi|cim|datadump|dns|ipmi|jdbb|script|udp|tcp|xen | 
 **checksum** | **str** | The metadata checksum for the LMModule content | [optional] 
 **data_points** | [**list[DataPoint]**](DataPoint.md) | The data point list | [optional] 
-**id** | **int** | The ID of the LMModule | 
+**id** | **int** | The ID of the LMModule | [optional] 
 **group** | **str** | The group the LMModule is in | [optional] 
-**collector_attribute** | [**CollectorAttribute**](CollectorAttribute.md) | data collector&#39;s attributes to collector data. e.g. a ping data source has a ping collector attribute.   PingCollectorAttributeV1 has two fields. the ip to ping, the data size send to ping | 
+**collector_attribute** | [**CollectorAttribute**](CollectorAttribute.md) | Data collector&#39;s attributes to collector data. e.g. a ping data source has a ping collector attribute.   PingCollectorAttributeV1 has two fields. the ip to ping, the data size send to ping | 
 **auto_discovery_config** | [**AutoDiscoveryConfiguration**](AutoDiscoveryConfiguration.md) | Auto discovery configuration | [optional] 
-**payload_version** | **int** | The dataSource payload Version for custom metrics | [optional] 
-**use_wild_value_as_uuid** | **bool** | Use Wildvalue as Unique identifier in case of multiinstance datasource: true|false | [optional] 
+**payload_version** | **int** | The DataSource payload version for custom metrics | [optional] 
+**use_wild_value_as_uuid** | **bool** | Use wild-value as unique identifier in case of multi instance datasource: true|false | [optional] 
 **enable_auto_discovery** | **bool** | Enable Auto Discovery or not when this data source has multi instance: false|true | [optional] 
 **technology** | **str** | The Technical Notes for the LMModule | [optional] 
 **version** | **int** | The data source version | [optional] 

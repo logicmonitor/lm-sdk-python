@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -64,7 +64,7 @@ class GoogleMapWidgetData(WidgetData):
     def type(self):
         """Gets the type of this GoogleMapWidgetData.  # noqa: E501
 
-        the widget data type. noc|alert|batchjob|gmap|netflow|netflowGroup|bigNumber|serviceNOC|gauge|pieChart|table|deviceNOC|deviceSLA|serviceSLA|dynamicTable|graph|savedMap  # noqa: E501
+        The widget data type. The values can be noc|alert|batchjob|gmap|netflow|netflowGroup|bigNumber|serviceNOC|gauge|pieChart|table|deviceNOC|deviceSLA|serviceSLA|dynamicTable|graph|savedMap  # noqa: E501
 
         :return: The type of this GoogleMapWidgetData.  # noqa: E501
         :rtype: str
@@ -75,7 +75,7 @@ class GoogleMapWidgetData(WidgetData):
     def type(self, type):
         """Sets the type of this GoogleMapWidgetData.
 
-        the widget data type. noc|alert|batchjob|gmap|netflow|netflowGroup|bigNumber|serviceNOC|gauge|pieChart|table|deviceNOC|deviceSLA|serviceSLA|dynamicTable|graph|savedMap  # noqa: E501
+        The widget data type. The values can be noc|alert|batchjob|gmap|netflow|netflowGroup|bigNumber|serviceNOC|gauge|pieChart|table|deviceNOC|deviceSLA|serviceSLA|dynamicTable|graph|savedMap  # noqa: E501
 
         :param type: The type of this GoogleMapWidgetData.  # noqa: E501
         :type: str
@@ -87,7 +87,7 @@ class GoogleMapWidgetData(WidgetData):
     def title(self):
         """Gets the title of this GoogleMapWidgetData.  # noqa: E501
 
-        the widget title  # noqa: E501
+        The widget title  # noqa: E501
 
         :return: The title of this GoogleMapWidgetData.  # noqa: E501
         :rtype: str
@@ -98,7 +98,7 @@ class GoogleMapWidgetData(WidgetData):
     def title(self, title):
         """Sets the title of this GoogleMapWidgetData.
 
-        the widget title  # noqa: E501
+        The widget title  # noqa: E501
 
         :param title: The title of this GoogleMapWidgetData.  # noqa: E501
         :type: str

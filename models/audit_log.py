@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -76,7 +76,7 @@ class AuditLog(object):
     def happened_on_local(self):
         """Gets the happened_on_local of this AuditLog.  # noqa: E501
 
-        The date and time that the action recorded in the access log entry occured  # noqa: E501
+        The date and time that the action recorded in the access log entry occurred  # noqa: E501
 
         :return: The happened_on_local of this AuditLog.  # noqa: E501
         :rtype: str
@@ -87,7 +87,7 @@ class AuditLog(object):
     def happened_on_local(self, happened_on_local):
         """Sets the happened_on_local of this AuditLog.
 
-        The date and time that the action recorded in the access log entry occured  # noqa: E501
+        The date and time that the action recorded in the access log entry occurred  # noqa: E501
 
         :param happened_on_local: The happened_on_local of this AuditLog.  # noqa: E501
         :type: str

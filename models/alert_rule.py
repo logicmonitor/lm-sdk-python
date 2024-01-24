@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -124,7 +124,7 @@ class AlertRule(object):
     def datapoint(self):
         """Gets the datapoint of this AlertRule.  # noqa: E501
 
-        The datapoint the alert rule is configured to match  # noqa: E501
+        The datapoint for which the alert rule is configured to match  # noqa: E501
 
         :return: The datapoint of this AlertRule.  # noqa: E501
         :rtype: str
@@ -135,7 +135,7 @@ class AlertRule(object):
     def datapoint(self, datapoint):
         """Sets the datapoint of this AlertRule.
 
-        The datapoint the alert rule is configured to match  # noqa: E501
+        The datapoint for which the alert rule is configured to match  # noqa: E501
 
         :param datapoint: The datapoint of this AlertRule.  # noqa: E501
         :type: str
@@ -147,7 +147,7 @@ class AlertRule(object):
     def instance(self):
         """Gets the instance of this AlertRule.  # noqa: E501
 
-        The instance the alert rule is configured to match  # noqa: E501
+        The instance for which the alert rule is configured to match  # noqa: E501
 
         :return: The instance of this AlertRule.  # noqa: E501
         :rtype: str
@@ -158,7 +158,7 @@ class AlertRule(object):
     def instance(self, instance):
         """Sets the instance of this AlertRule.
 
-        The instance the alert rule is configured to match  # noqa: E501
+        The instance for which the alert rule is configured to match  # noqa: E501
 
         :param instance: The instance of this AlertRule.  # noqa: E501
         :type: str
@@ -170,7 +170,7 @@ class AlertRule(object):
     def devices(self):
         """Gets the devices of this AlertRule.  # noqa: E501
 
-        The device names and service names the alert rule is configured to match  # noqa: E501
+        The device names and service names for which the alert rule is configured to match  # noqa: E501
 
         :return: The devices of this AlertRule.  # noqa: E501
         :rtype: list[str]
@@ -181,7 +181,7 @@ class AlertRule(object):
     def devices(self, devices):
         """Sets the devices of this AlertRule.
 
-        The device names and service names the alert rule is configured to match  # noqa: E501
+        The device names and service names for which the alert rule is configured to match  # noqa: E501
 
         :param devices: The devices of this AlertRule.  # noqa: E501
         :type: list[str]
@@ -241,7 +241,7 @@ class AlertRule(object):
     def send_anomaly_suppressed_alert(self):
         """Gets the send_anomaly_suppressed_alert of this AlertRule.  # noqa: E501
 
-         send anomaly suppressed alert  # noqa: E501
+        Whether or not send anomaly suppressed alert  # noqa: E501
 
         :return: The send_anomaly_suppressed_alert of this AlertRule.  # noqa: E501
         :rtype: bool
@@ -252,7 +252,7 @@ class AlertRule(object):
     def send_anomaly_suppressed_alert(self, send_anomaly_suppressed_alert):
         """Sets the send_anomaly_suppressed_alert of this AlertRule.
 
-         send anomaly suppressed alert  # noqa: E501
+        Whether or not send anomaly suppressed alert  # noqa: E501
 
         :param send_anomaly_suppressed_alert: The send_anomaly_suppressed_alert of this AlertRule.  # noqa: E501
         :type: bool
@@ -314,7 +314,7 @@ class AlertRule(object):
     def datasource(self):
         """Gets the datasource of this AlertRule.  # noqa: E501
 
-        The datasource the alert rule is configured to match  # noqa: E501
+        The datasource for which the alert rule is configured to match  # noqa: E501
 
         :return: The datasource of this AlertRule.  # noqa: E501
         :rtype: str
@@ -325,7 +325,7 @@ class AlertRule(object):
     def datasource(self, datasource):
         """Sets the datasource of this AlertRule.
 
-        The datasource the alert rule is configured to match  # noqa: E501
+        The datasource for which the alert rule is configured to match  # noqa: E501
 
         :param datasource: The datasource of this AlertRule.  # noqa: E501
         :type: str
@@ -408,7 +408,7 @@ class AlertRule(object):
     def level_str(self):
         """Gets the level_str of this AlertRule.  # noqa: E501
 
-        The alert severity levels the alert rule is configured to match. Acceptable values are: All, Warn, Error, Critical  # noqa: E501
+        The alert severity levels for which the alert rule is configured to match.  The values can be All|Warn|Error|Critical  # noqa: E501
 
         :return: The level_str of this AlertRule.  # noqa: E501
         :rtype: str
@@ -419,7 +419,7 @@ class AlertRule(object):
     def level_str(self, level_str):
         """Sets the level_str of this AlertRule.
 
-        The alert severity levels the alert rule is configured to match. Acceptable values are: All, Warn, Error, Critical  # noqa: E501
+        The alert severity levels for which the alert rule is configured to match.  The values can be All|Warn|Error|Critical  # noqa: E501
 
         :param level_str: The level_str of this AlertRule.  # noqa: E501
         :type: str
@@ -431,7 +431,7 @@ class AlertRule(object):
     def device_groups(self):
         """Gets the device_groups of this AlertRule.  # noqa: E501
 
-        The device groups and service groups the alert rule is configured to match  # noqa: E501
+        The device groups and service groups for which the alert rule is configured to match  # noqa: E501
 
         :return: The device_groups of this AlertRule.  # noqa: E501
         :rtype: list[str]
@@ -442,7 +442,7 @@ class AlertRule(object):
     def device_groups(self, device_groups):
         """Sets the device_groups of this AlertRule.
 
-        The device groups and service groups the alert rule is configured to match  # noqa: E501
+        The device groups and service groups for which the alert rule is configured to match  # noqa: E501
 
         :param device_groups: The device_groups of this AlertRule.  # noqa: E501
         :type: list[str]

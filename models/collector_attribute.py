@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -51,24 +51,24 @@ class CollectorAttribute(object):
         'awsbilling': 'AwsBillingCollectorAttribute',
         'awsclassicelbservicelimits': 'AwsClassicElbServiceLimitsCollectorAttribute',
         '': 'AzureBackupProtectedItemHealthCollectorAttribute',
+        '': 'AzureVwanVpnConnectionCollectorAttribute',
         '': 'AzureEABillingCollectorAttribute',
         'dns': 'DNSCollectorAttribute',
         '': 'AwsEbsVolumeSnapshotCollectorAttributeV3',
         'jdbc': 'JDBCCollectorAttribute',
         'udp': 'UDPCollectorAttribute',
         'cim': 'CIMCollectorAttribute',
-        'awss3': 'AwsS3CollectorAttribute',
         '': 'AzureVirtualDesktopHostPoolsCollectorAttributeV3',
         '': 'AzureBackupJobCollectorAttributeV3',
         'awsecsservicedetails': 'AwsEcsServiceDetailsCollectorAttribute',
         '': 'AzureLogAnalyticsWorkspacesCollectorAttribute',
         'batchscript': 'BatchScriptCollectorAttribute',
+        '': 'AzureActiveDirectoryUsersCollectorAttribute',
         '': 'AzureWebJobCollectorAttributeV3',
         'awsec2reservedinstancecoverage': 'AwsEC2ReservedInstanceCoverageCollectorAttribute',
         '': 'SaasOffice365HealthCollectorAttributeV3',
         '': 'GcpComputeServiceLimitsCollectorAttributeV3',
         'awsservicelimitsfromtrustedadvisor': 'AwsServiceLimitsFromTrustedAdvisorCollectorAttribute',
-        'awsdynamodb': 'AwsDynamodbCollectorAttribute',
         'internal': 'InternalCollectorAttribute',
         'netapp': 'NetAppCollectorAttribute',
         '': 'AzureRecoveryServiceVaultSRCollectorAttribute',
@@ -79,6 +79,7 @@ class CollectorAttribute(object):
         '': 'PaaSMongoDbCollectorAttribute',
         '': 'SaasSalesforceJsonCollectorAttributeV3',
         '': 'SaasOffice365CsvReportCollectorAttributeV3',
+        '': 'SaasSlackHealthCollectorAttribute',
         'azureresourcehealth': 'AzureResourceHealthCollectorAttribute',
         '': 'GcpStackDriverCollectorAttributeV3',
         'ipmi': 'IPMICollectorAttribute',
@@ -99,8 +100,8 @@ class CollectorAttribute(object):
         'awsec2scheduledevents': 'AwsEC2ScheduledEventsCollectorAttribute',
         'ping': 'PingCollectorAttribute',
         'azurevmservicelimits': 'AzureVMServiceLimitsCollectorAttribute',
+        '': 'AzureActiveDirectorySyncCollectorAttribute',
         'azurenetworkservicelimits': 'AzureNetworkServiceLimitsCollectorAttribute',
-        'awssqs': 'AwsSqsCollectorAttribute',
         'awsec2reservedinstance': 'AwsEC2ReservedInstanceCollectorAttribute',
         '': 'SaasOffice365SkusCollectorAttribute',
         'jmx': 'JMXCollectorAttribute',
@@ -114,17 +115,21 @@ class CollectorAttribute(object):
         '': 'SaasOffice365TeamsCallsQosCollectorAttributeV3',
         'memcached': 'MemcachedCollectorAttribute',
         'perfmon': 'PerfmonCollectorAttribute',
+        '': 'AzureAuthenticationAttribute',
         'awscloudwatch': 'AwsCloudWatchCollectorAttribute',
         '': 'SaasSalesforceSOQLQueryCollectorAttributeV3',
         'awsautoscalingservicelimits': 'AwsAutoScalingServiceLimitsCollectorAttribute',
         '': 'GcpBillingBigQuerySourceCollectorAttribute',
         '': 'AzureBackupProtectedItemBackupJobCollectorAttribute',
+        '': 'AwsRoute53ResolverIPAddressCollectorAttribute',
+        '': 'AzureResourceUsageCollectorAttribute',
         'esx': 'ESXCollectorAttribute',
         'script': 'ScriptCollectorAttribute',
         '': 'SaasZoomJsonCollectorAttributeV3',
         'azurestorageservicelimits': 'AzureStorageServiceLimitsCollectorAttribute',
         '': 'OpenMetricCollectorAttributeV3',
         '': 'AzureCostManagementCollectorAttribute',
+        '': 'AzureActiveDirectoryAppSecretCollectorAttribute',
         '': 'AwsRdsServiceLimitsCollectorAttributeV3',
         'awssesservicelimits': 'AwsSesServiceLimitsCollectorAttribute',
         'azureinsights': 'AzureInsightsCollectorAttribute',
@@ -143,7 +148,7 @@ class CollectorAttribute(object):
     def name(self):
         """Gets the name of this CollectorAttribute.  # noqa: E501
 
-        data collector's name  # noqa: E501
+        The data collector's name  # noqa: E501
 
         :return: The name of this CollectorAttribute.  # noqa: E501
         :rtype: str
@@ -154,7 +159,7 @@ class CollectorAttribute(object):
     def name(self, name):
         """Sets the name of this CollectorAttribute.
 
-        data collector's name  # noqa: E501
+        The data collector's name  # noqa: E501
 
         :param name: The name of this CollectorAttribute.  # noqa: E501
         :type: str

@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -67,7 +67,7 @@ class RestEventSourceFilter(object):
     def name(self):
         """Gets the name of this RestEventSourceFilter.  # noqa: E501
 
-        filter name  # noqa: E501
+        The filter name  # noqa: E501
 
         :return: The name of this RestEventSourceFilter.  # noqa: E501
         :rtype: str
@@ -78,7 +78,7 @@ class RestEventSourceFilter(object):
     def name(self, name):
         """Sets the name of this RestEventSourceFilter.
 
-        filter name  # noqa: E501
+        The filter name  # noqa: E501
 
         :param name: The name of this RestEventSourceFilter.  # noqa: E501
         :type: str
@@ -92,7 +92,7 @@ class RestEventSourceFilter(object):
     def comment(self):
         """Gets the comment of this RestEventSourceFilter.  # noqa: E501
 
-        filter comment  # noqa: E501
+        The filter comment  # noqa: E501
 
         :return: The comment of this RestEventSourceFilter.  # noqa: E501
         :rtype: str
@@ -103,7 +103,7 @@ class RestEventSourceFilter(object):
     def comment(self, comment):
         """Sets the comment of this RestEventSourceFilter.
 
-        filter comment  # noqa: E501
+        The filter comment  # noqa: E501
 
         :param comment: The comment of this RestEventSourceFilter.  # noqa: E501
         :type: str
@@ -117,7 +117,7 @@ class RestEventSourceFilter(object):
     def id(self):
         """Gets the id of this RestEventSourceFilter.  # noqa: E501
 
-        filter id  # noqa: E501
+        The filter id  # noqa: E501
 
         :return: The id of this RestEventSourceFilter.  # noqa: E501
         :rtype: int
@@ -128,7 +128,7 @@ class RestEventSourceFilter(object):
     def id(self, id):
         """Sets the id of this RestEventSourceFilter.
 
-        filter id  # noqa: E501
+        The filter id  # noqa: E501
 
         :param id: The id of this RestEventSourceFilter.  # noqa: E501
         :type: int
@@ -140,7 +140,7 @@ class RestEventSourceFilter(object):
     def value(self):
         """Gets the value of this RestEventSourceFilter.  # noqa: E501
 
-        filter value  # noqa: E501
+        The filter value  # noqa: E501
 
         :return: The value of this RestEventSourceFilter.  # noqa: E501
         :rtype: str
@@ -151,7 +151,7 @@ class RestEventSourceFilter(object):
     def value(self, value):
         """Sets the value of this RestEventSourceFilter.
 
-        filter value  # noqa: E501
+        The filter value  # noqa: E501
 
         :param value: The value of this RestEventSourceFilter.  # noqa: E501
         :type: str
@@ -165,7 +165,7 @@ class RestEventSourceFilter(object):
     def operator(self):
         """Gets the operator of this RestEventSourceFilter.  # noqa: E501
 
-        filter operator  # noqa: E501
+        The filter operator  # noqa: E501
 
         :return: The operator of this RestEventSourceFilter.  # noqa: E501
         :rtype: str
@@ -176,7 +176,7 @@ class RestEventSourceFilter(object):
     def operator(self, operator):
         """Sets the operator of this RestEventSourceFilter.
 
-        filter operator  # noqa: E501
+        The filter operator  # noqa: E501
 
         :param operator: The operator of this RestEventSourceFilter.  # noqa: E501
         :type: str

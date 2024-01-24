@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -184,6 +184,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def src_ip(self):
         """Gets the src_ip of this GroupNetFlowRecord.  # noqa: E501
 
+        the source ip of flow record  # noqa: E501
 
         :return: The src_ip of this GroupNetFlowRecord.  # noqa: E501
         :rtype: str
@@ -194,6 +195,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def src_ip(self, src_ip):
         """Sets the src_ip of this GroupNetFlowRecord.
 
+        the source ip of flow record  # noqa: E501
 
         :param src_ip: The src_ip of this GroupNetFlowRecord.  # noqa: E501
         :type: str
@@ -205,6 +207,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def percent_usage(self):
         """Gets the percent_usage of this GroupNetFlowRecord.  # noqa: E501
 
+        the percent traffic of the flow record  # noqa: E501
 
         :return: The percent_usage of this GroupNetFlowRecord.  # noqa: E501
         :rtype: float
@@ -215,6 +218,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def percent_usage(self, percent_usage):
         """Sets the percent_usage of this GroupNetFlowRecord.
 
+        the percent traffic of the flow record  # noqa: E501
 
         :param percent_usage: The percent_usage of this GroupNetFlowRecord.  # noqa: E501
         :type: float
@@ -226,6 +230,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def last_epoch_in_sec(self):
         """Gets the last_epoch_in_sec of this GroupNetFlowRecord.  # noqa: E501
 
+        the end time  of this flow record  # noqa: E501
 
         :return: The last_epoch_in_sec of this GroupNetFlowRecord.  # noqa: E501
         :rtype: int
@@ -236,6 +241,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def last_epoch_in_sec(self, last_epoch_in_sec):
         """Sets the last_epoch_in_sec of this GroupNetFlowRecord.
 
+        the end time  of this flow record  # noqa: E501
 
         :param last_epoch_in_sec: The last_epoch_in_sec of this GroupNetFlowRecord.  # noqa: E501
         :type: int
@@ -247,6 +253,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def if_out(self):
         """Gets the if_out of this GroupNetFlowRecord.  # noqa: E501
 
+        the out interface of this flow record  # noqa: E501
 
         :return: The if_out of this GroupNetFlowRecord.  # noqa: E501
         :rtype: int
@@ -257,6 +264,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def if_out(self, if_out):
         """Sets the if_out of this GroupNetFlowRecord.
 
+        the out interface of this flow record  # noqa: E501
 
         :param if_out: The if_out of this GroupNetFlowRecord.  # noqa: E501
         :type: int
@@ -268,6 +276,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def usage(self):
         """Gets the usage of this GroupNetFlowRecord.  # noqa: E501
 
+        the total bytes of this flow record (source bytes + destination bytes)  # noqa: E501
 
         :return: The usage of this GroupNetFlowRecord.  # noqa: E501
         :rtype: float
@@ -278,6 +287,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def usage(self, usage):
         """Sets the usage of this GroupNetFlowRecord.
 
+        the total bytes of this flow record (source bytes + destination bytes)  # noqa: E501
 
         :param usage: The usage of this GroupNetFlowRecord.  # noqa: E501
         :type: float
@@ -289,6 +299,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def src_asn(self):
         """Gets the src_asn of this GroupNetFlowRecord.  # noqa: E501
 
+        source autonomous system number  # noqa: E501
 
         :return: The src_asn of this GroupNetFlowRecord.  # noqa: E501
         :rtype: int
@@ -299,6 +310,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def src_asn(self, src_asn):
         """Sets the src_asn of this GroupNetFlowRecord.
 
+        source autonomous system number  # noqa: E501
 
         :param src_asn: The src_asn of this GroupNetFlowRecord.  # noqa: E501
         :type: int
@@ -310,6 +322,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def dst_dns(self):
         """Gets the dst_dns of this GroupNetFlowRecord.  # noqa: E501
 
+        the dns name of destination ip  # noqa: E501
 
         :return: The dst_dns of this GroupNetFlowRecord.  # noqa: E501
         :rtype: str
@@ -320,6 +333,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def dst_dns(self, dst_dns):
         """Sets the dst_dns of this GroupNetFlowRecord.
 
+        the dns name of destination ip  # noqa: E501
 
         :param dst_dns: The dst_dns of this GroupNetFlowRecord.  # noqa: E501
         :type: str
@@ -331,6 +345,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def src_port(self):
         """Gets the src_port of this GroupNetFlowRecord.  # noqa: E501
 
+        the source port of the flow record  # noqa: E501
 
         :return: The src_port of this GroupNetFlowRecord.  # noqa: E501
         :rtype: int
@@ -341,6 +356,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def src_port(self, src_port):
         """Sets the src_port of this GroupNetFlowRecord.
 
+        the source port of the flow record  # noqa: E501
 
         :param src_port: The src_port of this GroupNetFlowRecord.  # noqa: E501
         :type: int
@@ -394,6 +410,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def first_epoch_in_sec(self):
         """Gets the first_epoch_in_sec of this GroupNetFlowRecord.  # noqa: E501
 
+        the start time of this flow record  # noqa: E501
 
         :return: The first_epoch_in_sec of this GroupNetFlowRecord.  # noqa: E501
         :rtype: int
@@ -404,6 +421,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def first_epoch_in_sec(self, first_epoch_in_sec):
         """Sets the first_epoch_in_sec of this GroupNetFlowRecord.
 
+        the start time of this flow record  # noqa: E501
 
         :param first_epoch_in_sec: The first_epoch_in_sec of this GroupNetFlowRecord.  # noqa: E501
         :type: int
@@ -415,6 +433,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def protocol(self):
         """Gets the protocol of this GroupNetFlowRecord.  # noqa: E501
 
+        the protocol name of this flow record  # noqa: E501
 
         :return: The protocol of this GroupNetFlowRecord.  # noqa: E501
         :rtype: str
@@ -425,6 +444,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def protocol(self, protocol):
         """Sets the protocol of this GroupNetFlowRecord.
 
+        the protocol name of this flow record  # noqa: E501
 
         :param protocol: The protocol of this GroupNetFlowRecord.  # noqa: E501
         :type: str
@@ -436,6 +456,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def dst_port(self):
         """Gets the dst_port of this GroupNetFlowRecord.  # noqa: E501
 
+        the destination port  # noqa: E501
 
         :return: The dst_port of this GroupNetFlowRecord.  # noqa: E501
         :rtype: int
@@ -446,6 +467,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def dst_port(self, dst_port):
         """Sets the dst_port of this GroupNetFlowRecord.
 
+        the destination port  # noqa: E501
 
         :param dst_port: The dst_port of this GroupNetFlowRecord.  # noqa: E501
         :type: int
@@ -457,6 +479,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def if_in(self):
         """Gets the if_in of this GroupNetFlowRecord.  # noqa: E501
 
+        the in interface of this flow record  # noqa: E501
 
         :return: The if_in of this GroupNetFlowRecord.  # noqa: E501
         :rtype: int
@@ -467,6 +490,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def if_in(self, if_in):
         """Sets the if_in of this GroupNetFlowRecord.
 
+        the in interface of this flow record  # noqa: E501
 
         :param if_in: The if_in of this GroupNetFlowRecord.  # noqa: E501
         :type: int
@@ -478,6 +502,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def source_m_bytes(self):
         """Gets the source_m_bytes of this GroupNetFlowRecord.  # noqa: E501
 
+        the source bytes of this flow record  # noqa: E501
 
         :return: The source_m_bytes of this GroupNetFlowRecord.  # noqa: E501
         :rtype: float
@@ -488,6 +513,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def source_m_bytes(self, source_m_bytes):
         """Sets the source_m_bytes of this GroupNetFlowRecord.
 
+        the source bytes of this flow record  # noqa: E501
 
         :param source_m_bytes: The source_m_bytes of this GroupNetFlowRecord.  # noqa: E501
         :type: float
@@ -499,6 +525,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def src_asn_name(self):
         """Gets the src_asn_name of this GroupNetFlowRecord.  # noqa: E501
 
+        the name of src ASN number  # noqa: E501
 
         :return: The src_asn_name of this GroupNetFlowRecord.  # noqa: E501
         :rtype: str
@@ -509,6 +536,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def src_asn_name(self, src_asn_name):
         """Sets the src_asn_name of this GroupNetFlowRecord.
 
+        the name of src ASN number  # noqa: E501
 
         :param src_asn_name: The src_asn_name of this GroupNetFlowRecord.  # noqa: E501
         :type: str
@@ -520,6 +548,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def src_dns(self):
         """Gets the src_dns of this GroupNetFlowRecord.  # noqa: E501
 
+        the dns name of source ip  # noqa: E501
 
         :return: The src_dns of this GroupNetFlowRecord.  # noqa: E501
         :rtype: str
@@ -530,6 +559,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def src_dns(self, src_dns):
         """Sets the src_dns of this GroupNetFlowRecord.
 
+        the dns name of source ip  # noqa: E501
 
         :param src_dns: The src_dns of this GroupNetFlowRecord.  # noqa: E501
         :type: str
@@ -541,6 +571,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def destination_m_bytes(self):
         """Gets the destination_m_bytes of this GroupNetFlowRecord.  # noqa: E501
 
+        the destination byte of this flow record  # noqa: E501
 
         :return: The destination_m_bytes of this GroupNetFlowRecord.  # noqa: E501
         :rtype: float
@@ -551,6 +582,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def destination_m_bytes(self, destination_m_bytes):
         """Sets the destination_m_bytes of this GroupNetFlowRecord.
 
+        the destination byte of this flow record  # noqa: E501
 
         :param destination_m_bytes: The destination_m_bytes of this GroupNetFlowRecord.  # noqa: E501
         :type: float
@@ -562,6 +594,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def dst_asn(self):
         """Gets the dst_asn of this GroupNetFlowRecord.  # noqa: E501
 
+        destination autonomous system number  # noqa: E501
 
         :return: The dst_asn of this GroupNetFlowRecord.  # noqa: E501
         :rtype: int
@@ -572,6 +605,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def dst_asn(self, dst_asn):
         """Sets the dst_asn of this GroupNetFlowRecord.
 
+        destination autonomous system number  # noqa: E501
 
         :param dst_asn: The dst_asn of this GroupNetFlowRecord.  # noqa: E501
         :type: int
@@ -583,6 +617,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def dst_ip(self):
         """Gets the dst_ip of this GroupNetFlowRecord.  # noqa: E501
 
+        the destination ip of the flow record  # noqa: E501
 
         :return: The dst_ip of this GroupNetFlowRecord.  # noqa: E501
         :rtype: str
@@ -593,6 +628,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def dst_ip(self, dst_ip):
         """Sets the dst_ip of this GroupNetFlowRecord.
 
+        the destination ip of the flow record  # noqa: E501
 
         :param dst_ip: The dst_ip of this GroupNetFlowRecord.  # noqa: E501
         :type: str
@@ -625,6 +661,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def dest_asn_name(self):
         """Gets the dest_asn_name of this GroupNetFlowRecord.  # noqa: E501
 
+        the name of dest ASN number  # noqa: E501
 
         :return: The dest_asn_name of this GroupNetFlowRecord.  # noqa: E501
         :rtype: str
@@ -635,6 +672,7 @@ class GroupNetFlowRecord(NetflowDataBase):
     def dest_asn_name(self, dest_asn_name):
         """Sets the dest_asn_name of this GroupNetFlowRecord.
 
+        the name of dest ASN number  # noqa: E501
 
         :param dest_asn_name: The dest_asn_name of this GroupNetFlowRecord.  # noqa: E501
         :type: str

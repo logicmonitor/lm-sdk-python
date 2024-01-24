@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -71,7 +71,7 @@ class OverviewGraphDataPoint(object):
     def aggregate_method(self):
         """Gets the aggregate_method of this OverviewGraphDataPoint.  # noqa: E501
 
-        the graph line data point aggregate method, average|min|max|sum  # noqa: E501
+        The graph line data point aggregate method. The values can be average|min|max|sum  # noqa: E501
 
         :return: The aggregate_method of this OverviewGraphDataPoint.  # noqa: E501
         :rtype: str
@@ -82,7 +82,7 @@ class OverviewGraphDataPoint(object):
     def aggregate_method(self, aggregate_method):
         """Sets the aggregate_method of this OverviewGraphDataPoint.
 
-        the graph line data point aggregate method, average|min|max|sum  # noqa: E501
+        The graph line data point aggregate method. The values can be average|min|max|sum  # noqa: E501
 
         :param aggregate_method: The aggregate_method of this OverviewGraphDataPoint.  # noqa: E501
         :type: str
@@ -94,7 +94,7 @@ class OverviewGraphDataPoint(object):
     def data_point_name(self):
         """Gets the data_point_name of this OverviewGraphDataPoint.  # noqa: E501
 
-        the graph line data point name  # noqa: E501
+        The graph line data point name  # noqa: E501
 
         :return: The data_point_name of this OverviewGraphDataPoint.  # noqa: E501
         :rtype: str
@@ -105,7 +105,7 @@ class OverviewGraphDataPoint(object):
     def data_point_name(self, data_point_name):
         """Sets the data_point_name of this OverviewGraphDataPoint.
 
-        the graph line data point name  # noqa: E501
+        The graph line data point name  # noqa: E501
 
         :param data_point_name: The data_point_name of this OverviewGraphDataPoint.  # noqa: E501
         :type: str
@@ -117,7 +117,7 @@ class OverviewGraphDataPoint(object):
     def data_point_id(self):
         """Gets the data_point_id of this OverviewGraphDataPoint.  # noqa: E501
 
-        the graph line data point id  # noqa: E501
+        The graph line data point Id  # noqa: E501
 
         :return: The data_point_id of this OverviewGraphDataPoint.  # noqa: E501
         :rtype: int
@@ -128,7 +128,7 @@ class OverviewGraphDataPoint(object):
     def data_point_id(self, data_point_id):
         """Sets the data_point_id of this OverviewGraphDataPoint.
 
-        the graph line data point id  # noqa: E501
+        The graph line data point Id  # noqa: E501
 
         :param data_point_id: The data_point_id of this OverviewGraphDataPoint.  # noqa: E501
         :type: int
@@ -140,7 +140,7 @@ class OverviewGraphDataPoint(object):
     def consolidate_func(self):
         """Gets the consolidate_func of this OverviewGraphDataPoint.  # noqa: E501
 
-        the graph line data point consolidate function, 1=avg|2=max|3=min  # noqa: E501
+        The graph line data point consolidate function. The values can be 1|2|3 where,       1=avg, 2=max, 3=min  # noqa: E501
 
         :return: The consolidate_func of this OverviewGraphDataPoint.  # noqa: E501
         :rtype: int
@@ -151,7 +151,7 @@ class OverviewGraphDataPoint(object):
     def consolidate_func(self, consolidate_func):
         """Sets the consolidate_func of this OverviewGraphDataPoint.
 
-        the graph line data point consolidate function, 1=avg|2=max|3=min  # noqa: E501
+        The graph line data point consolidate function. The values can be 1|2|3 where,       1=avg, 2=max, 3=min  # noqa: E501
 
         :param consolidate_func: The consolidate_func of this OverviewGraphDataPoint.  # noqa: E501
         :type: int

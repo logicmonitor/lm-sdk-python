@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -33,6 +33,30 @@ class Device(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'log_collector_group_id': 'int',
+        'disable_alerting': 'bool',
+        'netflow_collector_group_id': 'int',
+        'role_privileges': 'list[str]',
+        'system_properties': 'list[NameAndValue]',
+        'is_preferred_log_collector_configured': 'bool',
+        'host_status': 'str',
+        'auto_balanced_collector_group_id': 'int',
+        'inherited_properties': 'list[NameAndValue]',
+        'id': 'int',
+        'synthetics_collector_ids': 'list[int]',
+        'up_time_in_seconds': 'int',
+        'device_type': 'int',
+        'current_collector_id': 'int',
+        'netflow_collector_id': 'int',
+        'auto_props_assigned_on': 'int',
+        'updated_on': 'int',
+        'preferred_collector_group_id': 'int',
+        'custom_properties': 'list[NameAndValue]',
+        'collector_description': 'str',
+        'preferred_collector_id': 'int',
+        'last_rawdata_time': 'int',
+        'name': 'str',
+        'deleted_time_in_ms': 'int',
         'netflow_collector_group_name': 'str',
         'azure_state': 'int',
         'related_device_id': 'int',
@@ -40,50 +64,51 @@ class Device(object):
         'display_name': 'str',
         'log_collector_description': 'str',
         'link': 'str',
-        'log_collector_group_id': 'int',
         'aws_state': 'int',
         'description': 'str',
-        'disable_alerting': 'bool',
-        'netflow_collector_group_id': 'int',
         'created_on': 'int',
-        'role_privileges': 'list[str]',
-        'system_properties': 'list[NameAndValue]',
-        'is_preferred_log_collector_configured': 'bool',
-        'host_status': 'str',
         'gcp_state': 'int',
-        'auto_balanced_collector_group_id': 'int',
         'auto_props_updated_on': 'int',
         'scan_config_id': 'int',
-        'inherited_properties': 'list[NameAndValue]',
-        'id': 'int',
         'enable_netflow': 'bool',
         'last_data_time': 'int',
-        'synthetics_collector_ids': 'list[int]',
         'host_group_ids': 'str',
-        'up_time_in_seconds': 'int',
         'resource_ids': 'list[NameAndValue]',
-        'device_type': 'int',
-        'current_collector_id': 'int',
+        'op': 'str',
         'current_log_collector_id': 'int',
         'log_collector_id': 'int',
         'netflow_collector_description': 'str',
-        'netflow_collector_id': 'int',
         'user_permission': 'str',
-        'auto_props_assigned_on': 'int',
-        'updated_on': 'int',
         'preferred_collector_group_name': 'str',
-        'preferred_collector_group_id': 'int',
         'auto_properties': 'list[NameAndValue]',
-        'custom_properties': 'list[NameAndValue]',
-        'to_delete_time_in_ms': 'int',
-        'collector_description': 'str',
-        'preferred_collector_id': 'int',
-        'last_rawdata_time': 'int',
-        'name': 'str',
-        'deleted_time_in_ms': 'int'
+        'to_delete_time_in_ms': 'int'
     }
 
     attribute_map = {
+        'log_collector_group_id': 'logCollectorGroupId',
+        'disable_alerting': 'disableAlerting',
+        'netflow_collector_group_id': 'netflowCollectorGroupId',
+        'role_privileges': 'rolePrivileges',
+        'system_properties': 'systemProperties',
+        'is_preferred_log_collector_configured': 'isPreferredLogCollectorConfigured',
+        'host_status': 'hostStatus',
+        'auto_balanced_collector_group_id': 'autoBalancedCollectorGroupId',
+        'inherited_properties': 'inheritedProperties',
+        'id': 'id',
+        'synthetics_collector_ids': 'syntheticsCollectorIds',
+        'up_time_in_seconds': 'upTimeInSeconds',
+        'device_type': 'deviceType',
+        'current_collector_id': 'currentCollectorId',
+        'netflow_collector_id': 'netflowCollectorId',
+        'auto_props_assigned_on': 'autoPropsAssignedOn',
+        'updated_on': 'updatedOn',
+        'preferred_collector_group_id': 'preferredCollectorGroupId',
+        'custom_properties': 'customProperties',
+        'collector_description': 'collectorDescription',
+        'preferred_collector_id': 'preferredCollectorId',
+        'last_rawdata_time': 'lastRawdataTime',
+        'name': 'name',
+        'deleted_time_in_ms': 'deletedTimeInMs',
         'netflow_collector_group_name': 'netflowCollectorGroupName',
         'azure_state': 'azureState',
         'related_device_id': 'relatedDeviceId',
@@ -91,52 +116,53 @@ class Device(object):
         'display_name': 'displayName',
         'log_collector_description': 'logCollectorDescription',
         'link': 'link',
-        'log_collector_group_id': 'logCollectorGroupId',
         'aws_state': 'awsState',
         'description': 'description',
-        'disable_alerting': 'disableAlerting',
-        'netflow_collector_group_id': 'netflowCollectorGroupId',
         'created_on': 'createdOn',
-        'role_privileges': 'rolePrivileges',
-        'system_properties': 'systemProperties',
-        'is_preferred_log_collector_configured': 'isPreferredLogCollectorConfigured',
-        'host_status': 'hostStatus',
         'gcp_state': 'gcpState',
-        'auto_balanced_collector_group_id': 'autoBalancedCollectorGroupId',
         'auto_props_updated_on': 'autoPropsUpdatedOn',
         'scan_config_id': 'scanConfigId',
-        'inherited_properties': 'inheritedProperties',
-        'id': 'id',
         'enable_netflow': 'enableNetflow',
         'last_data_time': 'lastDataTime',
-        'synthetics_collector_ids': 'syntheticsCollectorIds',
         'host_group_ids': 'hostGroupIds',
-        'up_time_in_seconds': 'upTimeInSeconds',
         'resource_ids': 'resourceIds',
-        'device_type': 'deviceType',
-        'current_collector_id': 'currentCollectorId',
+        'op': 'op',
         'current_log_collector_id': 'currentLogCollectorId',
         'log_collector_id': 'logCollectorId',
         'netflow_collector_description': 'netflowCollectorDescription',
-        'netflow_collector_id': 'netflowCollectorId',
         'user_permission': 'userPermission',
-        'auto_props_assigned_on': 'autoPropsAssignedOn',
-        'updated_on': 'updatedOn',
         'preferred_collector_group_name': 'preferredCollectorGroupName',
-        'preferred_collector_group_id': 'preferredCollectorGroupId',
         'auto_properties': 'autoProperties',
-        'custom_properties': 'customProperties',
-        'to_delete_time_in_ms': 'toDeleteTimeInMs',
-        'collector_description': 'collectorDescription',
-        'preferred_collector_id': 'preferredCollectorId',
-        'last_rawdata_time': 'lastRawdataTime',
-        'name': 'name',
-        'deleted_time_in_ms': 'deletedTimeInMs'
+        'to_delete_time_in_ms': 'toDeleteTimeInMs'
     }
 
-    def __init__(self, netflow_collector_group_name=None, azure_state=None, related_device_id=None, log_collector_group_name=None, display_name=None, log_collector_description=None, link=None, log_collector_group_id=None, aws_state=None, description=None, disable_alerting=None, netflow_collector_group_id=None, created_on=None, role_privileges=None, system_properties=None, is_preferred_log_collector_configured=None, host_status=None, gcp_state=None, auto_balanced_collector_group_id=None, auto_props_updated_on=None, scan_config_id=None, inherited_properties=None, id=None, enable_netflow=None, last_data_time=None, synthetics_collector_ids=None, host_group_ids=None, up_time_in_seconds=None, resource_ids=None, device_type=None, current_collector_id=None, current_log_collector_id=None, log_collector_id=None, netflow_collector_description=None, netflow_collector_id=None, user_permission=None, auto_props_assigned_on=None, updated_on=None, preferred_collector_group_name=None, preferred_collector_group_id=None, auto_properties=None, custom_properties=None, to_delete_time_in_ms=None, collector_description=None, preferred_collector_id=None, last_rawdata_time=None, name=None, deleted_time_in_ms=None):  # noqa: E501
+    def __init__(self, log_collector_group_id=None, disable_alerting=None, netflow_collector_group_id=None, role_privileges=None, system_properties=None, is_preferred_log_collector_configured=None, host_status=None, auto_balanced_collector_group_id=None, inherited_properties=None, id=None, synthetics_collector_ids=None, up_time_in_seconds=None, device_type=None, current_collector_id=None, netflow_collector_id=None, auto_props_assigned_on=None, updated_on=None, preferred_collector_group_id=None, custom_properties=None, collector_description=None, preferred_collector_id=None, last_rawdata_time=None, name=None, deleted_time_in_ms=None, netflow_collector_group_name=None, azure_state=None, related_device_id=None, log_collector_group_name=None, display_name=None, log_collector_description=None, link=None, aws_state=None, description=None, created_on=None, gcp_state=None, auto_props_updated_on=None, scan_config_id=None, enable_netflow=None, last_data_time=None, host_group_ids=None, resource_ids=None, op=None, current_log_collector_id=None, log_collector_id=None, netflow_collector_description=None, user_permission=None, preferred_collector_group_name=None, auto_properties=None, to_delete_time_in_ms=None):  # noqa: E501
         """Device - a model defined in Swagger"""  # noqa: E501
 
+        self._log_collector_group_id = None
+        self._disable_alerting = None
+        self._netflow_collector_group_id = None
+        self._role_privileges = None
+        self._system_properties = None
+        self._is_preferred_log_collector_configured = None
+        self._host_status = None
+        self._auto_balanced_collector_group_id = None
+        self._inherited_properties = None
+        self._id = None
+        self._synthetics_collector_ids = None
+        self._up_time_in_seconds = None
+        self._device_type = None
+        self._current_collector_id = None
+        self._netflow_collector_id = None
+        self._auto_props_assigned_on = None
+        self._updated_on = None
+        self._preferred_collector_group_id = None
+        self._custom_properties = None
+        self._collector_description = None
+        self._preferred_collector_id = None
+        self._last_rawdata_time = None
+        self._name = None
+        self._deleted_time_in_ms = None
         self._netflow_collector_group_name = None
         self._azure_state = None
         self._related_device_id = None
@@ -144,49 +170,72 @@ class Device(object):
         self._display_name = None
         self._log_collector_description = None
         self._link = None
-        self._log_collector_group_id = None
         self._aws_state = None
         self._description = None
-        self._disable_alerting = None
-        self._netflow_collector_group_id = None
         self._created_on = None
-        self._role_privileges = None
-        self._system_properties = None
-        self._is_preferred_log_collector_configured = None
-        self._host_status = None
         self._gcp_state = None
-        self._auto_balanced_collector_group_id = None
         self._auto_props_updated_on = None
         self._scan_config_id = None
-        self._inherited_properties = None
-        self._id = None
         self._enable_netflow = None
         self._last_data_time = None
-        self._synthetics_collector_ids = None
         self._host_group_ids = None
-        self._up_time_in_seconds = None
         self._resource_ids = None
-        self._device_type = None
-        self._current_collector_id = None
+        self._op = None
         self._current_log_collector_id = None
         self._log_collector_id = None
         self._netflow_collector_description = None
-        self._netflow_collector_id = None
         self._user_permission = None
-        self._auto_props_assigned_on = None
-        self._updated_on = None
         self._preferred_collector_group_name = None
-        self._preferred_collector_group_id = None
         self._auto_properties = None
-        self._custom_properties = None
         self._to_delete_time_in_ms = None
-        self._collector_description = None
-        self._preferred_collector_id = None
-        self._last_rawdata_time = None
-        self._name = None
-        self._deleted_time_in_ms = None
         self.discriminator = None
 
+        if log_collector_group_id is not None:
+            self.log_collector_group_id = log_collector_group_id
+        if disable_alerting is not None:
+            self.disable_alerting = disable_alerting
+        if netflow_collector_group_id is not None:
+            self.netflow_collector_group_id = netflow_collector_group_id
+        if role_privileges is not None:
+            self.role_privileges = role_privileges
+        if system_properties is not None:
+            self.system_properties = system_properties
+        if is_preferred_log_collector_configured is not None:
+            self.is_preferred_log_collector_configured = is_preferred_log_collector_configured
+        if host_status is not None:
+            self.host_status = host_status
+        if auto_balanced_collector_group_id is not None:
+            self.auto_balanced_collector_group_id = auto_balanced_collector_group_id
+        if inherited_properties is not None:
+            self.inherited_properties = inherited_properties
+        if id is not None:
+            self.id = id
+        if synthetics_collector_ids is not None:
+            self.synthetics_collector_ids = synthetics_collector_ids
+        if up_time_in_seconds is not None:
+            self.up_time_in_seconds = up_time_in_seconds
+        if device_type is not None:
+            self.device_type = device_type
+        if current_collector_id is not None:
+            self.current_collector_id = current_collector_id
+        if netflow_collector_id is not None:
+            self.netflow_collector_id = netflow_collector_id
+        if auto_props_assigned_on is not None:
+            self.auto_props_assigned_on = auto_props_assigned_on
+        if updated_on is not None:
+            self.updated_on = updated_on
+        if preferred_collector_group_id is not None:
+            self.preferred_collector_group_id = preferred_collector_group_id
+        if custom_properties is not None:
+            self.custom_properties = custom_properties
+        if collector_description is not None:
+            self.collector_description = collector_description
+        self.preferred_collector_id = preferred_collector_id
+        if last_rawdata_time is not None:
+            self.last_rawdata_time = last_rawdata_time
+        self.name = name
+        if deleted_time_in_ms is not None:
+            self.deleted_time_in_ms = deleted_time_in_ms
         if netflow_collector_group_name is not None:
             self.netflow_collector_group_name = netflow_collector_group_name
         if azure_state is not None:
@@ -200,86 +249,598 @@ class Device(object):
             self.log_collector_description = log_collector_description
         if link is not None:
             self.link = link
-        if log_collector_group_id is not None:
-            self.log_collector_group_id = log_collector_group_id
         if aws_state is not None:
             self.aws_state = aws_state
         if description is not None:
             self.description = description
-        if disable_alerting is not None:
-            self.disable_alerting = disable_alerting
-        if netflow_collector_group_id is not None:
-            self.netflow_collector_group_id = netflow_collector_group_id
         if created_on is not None:
             self.created_on = created_on
-        if role_privileges is not None:
-            self.role_privileges = role_privileges
-        if system_properties is not None:
-            self.system_properties = system_properties
-        if is_preferred_log_collector_configured is not None:
-            self.is_preferred_log_collector_configured = is_preferred_log_collector_configured
-        if host_status is not None:
-            self.host_status = host_status
         if gcp_state is not None:
             self.gcp_state = gcp_state
-        if auto_balanced_collector_group_id is not None:
-            self.auto_balanced_collector_group_id = auto_balanced_collector_group_id
         if auto_props_updated_on is not None:
             self.auto_props_updated_on = auto_props_updated_on
         if scan_config_id is not None:
             self.scan_config_id = scan_config_id
-        if inherited_properties is not None:
-            self.inherited_properties = inherited_properties
-        if id is not None:
-            self.id = id
         if enable_netflow is not None:
             self.enable_netflow = enable_netflow
         if last_data_time is not None:
             self.last_data_time = last_data_time
-        if synthetics_collector_ids is not None:
-            self.synthetics_collector_ids = synthetics_collector_ids
         if host_group_ids is not None:
             self.host_group_ids = host_group_ids
-        if up_time_in_seconds is not None:
-            self.up_time_in_seconds = up_time_in_seconds
         if resource_ids is not None:
             self.resource_ids = resource_ids
-        if device_type is not None:
-            self.device_type = device_type
-        if current_collector_id is not None:
-            self.current_collector_id = current_collector_id
+        if op is not None:
+            self.op = op
         if current_log_collector_id is not None:
             self.current_log_collector_id = current_log_collector_id
         if log_collector_id is not None:
             self.log_collector_id = log_collector_id
         if netflow_collector_description is not None:
             self.netflow_collector_description = netflow_collector_description
-        if netflow_collector_id is not None:
-            self.netflow_collector_id = netflow_collector_id
         if user_permission is not None:
             self.user_permission = user_permission
-        if auto_props_assigned_on is not None:
-            self.auto_props_assigned_on = auto_props_assigned_on
-        if updated_on is not None:
-            self.updated_on = updated_on
         if preferred_collector_group_name is not None:
             self.preferred_collector_group_name = preferred_collector_group_name
-        if preferred_collector_group_id is not None:
-            self.preferred_collector_group_id = preferred_collector_group_id
         if auto_properties is not None:
             self.auto_properties = auto_properties
-        if custom_properties is not None:
-            self.custom_properties = custom_properties
         if to_delete_time_in_ms is not None:
             self.to_delete_time_in_ms = to_delete_time_in_ms
-        if collector_description is not None:
-            self.collector_description = collector_description
-        self.preferred_collector_id = preferred_collector_id
-        if last_rawdata_time is not None:
-            self.last_rawdata_time = last_rawdata_time
-        self.name = name
-        if deleted_time_in_ms is not None:
-            self.deleted_time_in_ms = deleted_time_in_ms
+
+    @property
+    def log_collector_group_id(self):
+        """Gets the log_collector_group_id of this Device.  # noqa: E501
+
+        The id of the Collector Group associated with the device's log collection  # noqa: E501
+
+        :return: The log_collector_group_id of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._log_collector_group_id
+
+    @log_collector_group_id.setter
+    def log_collector_group_id(self, log_collector_group_id):
+        """Sets the log_collector_group_id of this Device.
+
+        The id of the Collector Group associated with the device's log collection  # noqa: E501
+
+        :param log_collector_group_id: The log_collector_group_id of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._log_collector_group_id = log_collector_group_id
+
+    @property
+    def disable_alerting(self):
+        """Gets the disable_alerting of this Device.  # noqa: E501
+
+        Indicates whether alerting is disabled (true) or enabled (false) for this device  # noqa: E501
+
+        :return: The disable_alerting of this Device.  # noqa: E501
+        :rtype: bool
+        """
+        return self._disable_alerting
+
+    @disable_alerting.setter
+    def disable_alerting(self, disable_alerting):
+        """Sets the disable_alerting of this Device.
+
+        Indicates whether alerting is disabled (true) or enabled (false) for this device  # noqa: E501
+
+        :param disable_alerting: The disable_alerting of this Device.  # noqa: E501
+        :type: bool
+        """
+
+        self._disable_alerting = disable_alerting
+
+    @property
+    def netflow_collector_group_id(self):
+        """Gets the netflow_collector_group_id of this Device.  # noqa: E501
+
+        The id of the Collector Group associated with the device's netflow collector  # noqa: E501
+
+        :return: The netflow_collector_group_id of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._netflow_collector_group_id
+
+    @netflow_collector_group_id.setter
+    def netflow_collector_group_id(self, netflow_collector_group_id):
+        """Sets the netflow_collector_group_id of this Device.
+
+        The id of the Collector Group associated with the device's netflow collector  # noqa: E501
+
+        :param netflow_collector_group_id: The netflow_collector_group_id of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._netflow_collector_group_id = netflow_collector_group_id
+
+    @property
+    def role_privileges(self):
+        """Gets the role_privileges of this Device.  # noqa: E501
+
+        The role privilege operation(s) for this device that are granted to the user who made the API request  # noqa: E501
+
+        :return: The role_privileges of this Device.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._role_privileges
+
+    @role_privileges.setter
+    def role_privileges(self, role_privileges):
+        """Sets the role_privileges of this Device.
+
+        The role privilege operation(s) for this device that are granted to the user who made the API request  # noqa: E501
+
+        :param role_privileges: The role_privileges of this Device.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._role_privileges = role_privileges
+
+    @property
+    def system_properties(self):
+        """Gets the system_properties of this Device.  # noqa: E501
+
+        Any system properties (aside from system.categories) defined for this device  # noqa: E501
+
+        :return: The system_properties of this Device.  # noqa: E501
+        :rtype: list[NameAndValue]
+        """
+        return self._system_properties
+
+    @system_properties.setter
+    def system_properties(self, system_properties):
+        """Sets the system_properties of this Device.
+
+        Any system properties (aside from system.categories) defined for this device  # noqa: E501
+
+        :param system_properties: The system_properties of this Device.  # noqa: E501
+        :type: list[NameAndValue]
+        """
+
+        self._system_properties = system_properties
+
+    @property
+    def is_preferred_log_collector_configured(self):
+        """Gets the is_preferred_log_collector_configured of this Device.  # noqa: E501
+
+        Indicates whether Preferred Log Collector is configured  (true) or not (false) for the device  # noqa: E501
+
+        :return: The is_preferred_log_collector_configured of this Device.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_preferred_log_collector_configured
+
+    @is_preferred_log_collector_configured.setter
+    def is_preferred_log_collector_configured(self, is_preferred_log_collector_configured):
+        """Sets the is_preferred_log_collector_configured of this Device.
+
+        Indicates whether Preferred Log Collector is configured  (true) or not (false) for the device  # noqa: E501
+
+        :param is_preferred_log_collector_configured: The is_preferred_log_collector_configured of this Device.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_preferred_log_collector_configured = is_preferred_log_collector_configured
+
+    @property
+    def host_status(self):
+        """Gets the host_status of this Device.  # noqa: E501
+
+        The status of this device, where possible statuses are normal, dead and dead-collector  # noqa: E501
+
+        :return: The host_status of this Device.  # noqa: E501
+        :rtype: str
+        """
+        return self._host_status
+
+    @host_status.setter
+    def host_status(self, host_status):
+        """Sets the host_status of this Device.
+
+        The status of this device, where possible statuses are normal, dead and dead-collector  # noqa: E501
+
+        :param host_status: The host_status of this Device.  # noqa: E501
+        :type: str
+        """
+
+        self._host_status = host_status
+
+    @property
+    def auto_balanced_collector_group_id(self):
+        """Gets the auto_balanced_collector_group_id of this Device.  # noqa: E501
+
+        The Auto Balanced Collector Group id. 0 means not monitored by ABCG  # noqa: E501
+
+        :return: The auto_balanced_collector_group_id of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._auto_balanced_collector_group_id
+
+    @auto_balanced_collector_group_id.setter
+    def auto_balanced_collector_group_id(self, auto_balanced_collector_group_id):
+        """Sets the auto_balanced_collector_group_id of this Device.
+
+        The Auto Balanced Collector Group id. 0 means not monitored by ABCG  # noqa: E501
+
+        :param auto_balanced_collector_group_id: The auto_balanced_collector_group_id of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._auto_balanced_collector_group_id = auto_balanced_collector_group_id
+
+    @property
+    def inherited_properties(self):
+        """Gets the inherited_properties of this Device.  # noqa: E501
+
+        Any properties inherit from parents  # noqa: E501
+
+        :return: The inherited_properties of this Device.  # noqa: E501
+        :rtype: list[NameAndValue]
+        """
+        return self._inherited_properties
+
+    @inherited_properties.setter
+    def inherited_properties(self, inherited_properties):
+        """Sets the inherited_properties of this Device.
+
+        Any properties inherit from parents  # noqa: E501
+
+        :param inherited_properties: The inherited_properties of this Device.  # noqa: E501
+        :type: list[NameAndValue]
+        """
+
+        self._inherited_properties = inherited_properties
+
+    @property
+    def id(self):
+        """Gets the id of this Device.  # noqa: E501
+
+        The Id of the device  # noqa: E501
+
+        :return: The id of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Device.
+
+        The Id of the device  # noqa: E501
+
+        :param id: The id of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def synthetics_collector_ids(self):
+        """Gets the synthetics_collector_ids of this Device.  # noqa: E501
+
+        The list of ids of the collectors currently monitoring the resource and discovering instances  # noqa: E501
+
+        :return: The synthetics_collector_ids of this Device.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._synthetics_collector_ids
+
+    @synthetics_collector_ids.setter
+    def synthetics_collector_ids(self, synthetics_collector_ids):
+        """Sets the synthetics_collector_ids of this Device.
+
+        The list of ids of the collectors currently monitoring the resource and discovering instances  # noqa: E501
+
+        :param synthetics_collector_ids: The synthetics_collector_ids of this Device.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._synthetics_collector_ids = synthetics_collector_ids
+
+    @property
+    def up_time_in_seconds(self):
+        """Gets the up_time_in_seconds of this Device.  # noqa: E501
+
+        The uptime of the device in seconds. This value will always be the largest value reported by the following datasources: Host Uptime- SNMPUptime- SNMP_Engine_Uptime- WinSystemUptime- NimbleUptime-  # noqa: E501
+
+        :return: The up_time_in_seconds of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._up_time_in_seconds
+
+    @up_time_in_seconds.setter
+    def up_time_in_seconds(self, up_time_in_seconds):
+        """Sets the up_time_in_seconds of this Device.
+
+        The uptime of the device in seconds. This value will always be the largest value reported by the following datasources: Host Uptime- SNMPUptime- SNMP_Engine_Uptime- WinSystemUptime- NimbleUptime-  # noqa: E501
+
+        :param up_time_in_seconds: The up_time_in_seconds of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._up_time_in_seconds = up_time_in_seconds
+
+    @property
+    def device_type(self):
+        """Gets the device_type of this Device.  # noqa: E501
+
+        The type of device: 0 indicates a regular device, 1 indicates an APPGROUP device, 2 indicates an AWS device, 3 indicates a service device, 4 indicates an Azure device, 6 indicates a biz_service device, 7 indicates a GCP device, 8 indicates K8S device  # noqa: E501
+
+        :return: The device_type of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._device_type
+
+    @device_type.setter
+    def device_type(self, device_type):
+        """Sets the device_type of this Device.
+
+        The type of device: 0 indicates a regular device, 1 indicates an APPGROUP device, 2 indicates an AWS device, 3 indicates a service device, 4 indicates an Azure device, 6 indicates a biz_service device, 7 indicates a GCP device, 8 indicates K8S device  # noqa: E501
+
+        :param device_type: The device_type of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._device_type = device_type
+
+    @property
+    def current_collector_id(self):
+        """Gets the current_collector_id of this Device.  # noqa: E501
+
+        The id of the collector currently monitoring the device and discovering instances  # noqa: E501
+
+        :return: The current_collector_id of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._current_collector_id
+
+    @current_collector_id.setter
+    def current_collector_id(self, current_collector_id):
+        """Sets the current_collector_id of this Device.
+
+        The id of the collector currently monitoring the device and discovering instances  # noqa: E501
+
+        :param current_collector_id: The current_collector_id of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._current_collector_id = current_collector_id
+
+    @property
+    def netflow_collector_id(self):
+        """Gets the netflow_collector_id of this Device.  # noqa: E501
+
+        The Id of the netflow collector associated with the device  # noqa: E501
+
+        :return: The netflow_collector_id of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._netflow_collector_id
+
+    @netflow_collector_id.setter
+    def netflow_collector_id(self, netflow_collector_id):
+        """Sets the netflow_collector_id of this Device.
+
+        The Id of the netflow collector associated with the device  # noqa: E501
+
+        :param netflow_collector_id: The netflow_collector_id of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._netflow_collector_id = netflow_collector_id
+
+    @property
+    def auto_props_assigned_on(self):
+        """Gets the auto_props_assigned_on of this Device.  # noqa: E501
+
+        The time, in epoch seconds format, that properties were first discovered for this device  # noqa: E501
+
+        :return: The auto_props_assigned_on of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._auto_props_assigned_on
+
+    @auto_props_assigned_on.setter
+    def auto_props_assigned_on(self, auto_props_assigned_on):
+        """Sets the auto_props_assigned_on of this Device.
+
+        The time, in epoch seconds format, that properties were first discovered for this device  # noqa: E501
+
+        :param auto_props_assigned_on: The auto_props_assigned_on of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._auto_props_assigned_on = auto_props_assigned_on
+
+    @property
+    def updated_on(self):
+        """Gets the updated_on of this Device.  # noqa: E501
+
+        The time, in epoch seconds format, that the device was last updated  # noqa: E501
+
+        :return: The updated_on of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._updated_on
+
+    @updated_on.setter
+    def updated_on(self, updated_on):
+        """Sets the updated_on of this Device.
+
+        The time, in epoch seconds format, that the device was last updated  # noqa: E501
+
+        :param updated_on: The updated_on of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._updated_on = updated_on
+
+    @property
+    def preferred_collector_group_id(self):
+        """Gets the preferred_collector_group_id of this Device.  # noqa: E501
+
+        The id of the Collector Group associated with the device's preferred collector  # noqa: E501
+
+        :return: The preferred_collector_group_id of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._preferred_collector_group_id
+
+    @preferred_collector_group_id.setter
+    def preferred_collector_group_id(self, preferred_collector_group_id):
+        """Sets the preferred_collector_group_id of this Device.
+
+        The id of the Collector Group associated with the device's preferred collector  # noqa: E501
+
+        :param preferred_collector_group_id: The preferred_collector_group_id of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._preferred_collector_group_id = preferred_collector_group_id
+
+    @property
+    def custom_properties(self):
+        """Gets the custom_properties of this Device.  # noqa: E501
+
+        Any non-system properties (aside from system.categories) defined for this device  # noqa: E501
+
+        :return: The custom_properties of this Device.  # noqa: E501
+        :rtype: list[NameAndValue]
+        """
+        return self._custom_properties
+
+    @custom_properties.setter
+    def custom_properties(self, custom_properties):
+        """Sets the custom_properties of this Device.
+
+        Any non-system properties (aside from system.categories) defined for this device  # noqa: E501
+
+        :param custom_properties: The custom_properties of this Device.  # noqa: E501
+        :type: list[NameAndValue]
+        """
+
+        self._custom_properties = custom_properties
+
+    @property
+    def collector_description(self):
+        """Gets the collector_description of this Device.  # noqa: E501
+
+        The description/name of the collector for this device  # noqa: E501
+
+        :return: The collector_description of this Device.  # noqa: E501
+        :rtype: str
+        """
+        return self._collector_description
+
+    @collector_description.setter
+    def collector_description(self, collector_description):
+        """Sets the collector_description of this Device.
+
+        The description/name of the collector for this device  # noqa: E501
+
+        :param collector_description: The collector_description of this Device.  # noqa: E501
+        :type: str
+        """
+
+        self._collector_description = collector_description
+
+    @property
+    def preferred_collector_id(self):
+        """Gets the preferred_collector_id of this Device.  # noqa: E501
+
+        The Id of the preferred collector assigned to monitor the device  # noqa: E501
+
+        :return: The preferred_collector_id of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._preferred_collector_id
+
+    @preferred_collector_id.setter
+    def preferred_collector_id(self, preferred_collector_id):
+        """Sets the preferred_collector_id of this Device.
+
+        The Id of the preferred collector assigned to monitor the device  # noqa: E501
+
+        :param preferred_collector_id: The preferred_collector_id of this Device.  # noqa: E501
+        :type: int
+        """
+        if preferred_collector_id is None:
+            raise ValueError("Invalid value for `preferred_collector_id`, must not be `None`")  # noqa: E501
+
+        self._preferred_collector_id = preferred_collector_id
+
+    @property
+    def last_rawdata_time(self):
+        """Gets the last_rawdata_time of this Device.  # noqa: E501
+
+        The last time, in epoch seconds, that raw Netflow data was reported  # noqa: E501
+
+        :return: The last_rawdata_time of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._last_rawdata_time
+
+    @last_rawdata_time.setter
+    def last_rawdata_time(self, last_rawdata_time):
+        """Sets the last_rawdata_time of this Device.
+
+        The last time, in epoch seconds, that raw Netflow data was reported  # noqa: E501
+
+        :param last_rawdata_time: The last_rawdata_time of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._last_rawdata_time = last_rawdata_time
+
+    @property
+    def name(self):
+        """Gets the name of this Device.  # noqa: E501
+
+        The host name or IP address of the device  # noqa: E501
+
+        :return: The name of this Device.  # noqa: E501
+        :rtype: str
+        """
+        return self._name
+
+    @name.setter
+    def name(self, name):
+        """Sets the name of this Device.
+
+        The host name or IP address of the device  # noqa: E501
+
+        :param name: The name of this Device.  # noqa: E501
+        :type: str
+        """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+
+        self._name = name
+
+    @property
+    def deleted_time_in_ms(self):
+        """Gets the deleted_time_in_ms of this Device.  # noqa: E501
+
+        The time in milliseconds that the device has been dead for, or since the AWS device was filtered out  # noqa: E501
+
+        :return: The deleted_time_in_ms of this Device.  # noqa: E501
+        :rtype: int
+        """
+        return self._deleted_time_in_ms
+
+    @deleted_time_in_ms.setter
+    def deleted_time_in_ms(self, deleted_time_in_ms):
+        """Sets the deleted_time_in_ms of this Device.
+
+        The time in milliseconds that the device has been dead for, or since the AWS device was filtered out  # noqa: E501
+
+        :param deleted_time_in_ms: The deleted_time_in_ms of this Device.  # noqa: E501
+        :type: int
+        """
+
+        self._deleted_time_in_ms = deleted_time_in_ms
 
     @property
     def netflow_collector_group_name(self):
@@ -308,7 +869,7 @@ class Device(object):
     def azure_state(self):
         """Gets the azure_state of this Device.  # noqa: E501
 
-        The azure instance state (if applicable): 1 indicates that the instance is running, 2 indicates that the instance is stopped and 3 the instance is terminated.  # noqa: E501
+        The Azure instance state (if applicable): 1 indicates that the instance is running, 2 indicates that the instance is stopped and 3 the instance is terminated.  # noqa: E501
 
         :return: The azure_state of this Device.  # noqa: E501
         :rtype: int
@@ -319,7 +880,7 @@ class Device(object):
     def azure_state(self, azure_state):
         """Sets the azure_state of this Device.
 
-        The azure instance state (if applicable): 1 indicates that the instance is running, 2 indicates that the instance is stopped and 3 the instance is terminated.  # noqa: E501
+        The Azure instance state (if applicable): 1 indicates that the instance is running, 2 indicates that the instance is stopped and 3 the instance is terminated.  # noqa: E501
 
         :param azure_state: The azure_state of this Device.  # noqa: E501
         :type: int
@@ -445,29 +1006,6 @@ class Device(object):
         self._link = link
 
     @property
-    def log_collector_group_id(self):
-        """Gets the log_collector_group_id of this Device.  # noqa: E501
-
-        The id of the Collector Group associated with the device's log collection  # noqa: E501
-
-        :return: The log_collector_group_id of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._log_collector_group_id
-
-    @log_collector_group_id.setter
-    def log_collector_group_id(self, log_collector_group_id):
-        """Sets the log_collector_group_id of this Device.
-
-        The id of the Collector Group associated with the device's log collection  # noqa: E501
-
-        :param log_collector_group_id: The log_collector_group_id of this Device.  # noqa: E501
-        :type: int
-        """
-
-        self._log_collector_group_id = log_collector_group_id
-
-    @property
     def aws_state(self):
         """Gets the aws_state of this Device.  # noqa: E501
 
@@ -514,52 +1052,6 @@ class Device(object):
         self._description = description
 
     @property
-    def disable_alerting(self):
-        """Gets the disable_alerting of this Device.  # noqa: E501
-
-        Indicates whether alerting is disabled (true) or enabled (false) for this device  # noqa: E501
-
-        :return: The disable_alerting of this Device.  # noqa: E501
-        :rtype: bool
-        """
-        return self._disable_alerting
-
-    @disable_alerting.setter
-    def disable_alerting(self, disable_alerting):
-        """Sets the disable_alerting of this Device.
-
-        Indicates whether alerting is disabled (true) or enabled (false) for this device  # noqa: E501
-
-        :param disable_alerting: The disable_alerting of this Device.  # noqa: E501
-        :type: bool
-        """
-
-        self._disable_alerting = disable_alerting
-
-    @property
-    def netflow_collector_group_id(self):
-        """Gets the netflow_collector_group_id of this Device.  # noqa: E501
-
-        The id of the Collector Group associated with the device's netflow collector  # noqa: E501
-
-        :return: The netflow_collector_group_id of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._netflow_collector_group_id
-
-    @netflow_collector_group_id.setter
-    def netflow_collector_group_id(self, netflow_collector_group_id):
-        """Sets the netflow_collector_group_id of this Device.
-
-        The id of the Collector Group associated with the device's netflow collector  # noqa: E501
-
-        :param netflow_collector_group_id: The netflow_collector_group_id of this Device.  # noqa: E501
-        :type: int
-        """
-
-        self._netflow_collector_group_id = netflow_collector_group_id
-
-    @property
     def created_on(self):
         """Gets the created_on of this Device.  # noqa: E501
 
@@ -583,102 +1075,10 @@ class Device(object):
         self._created_on = created_on
 
     @property
-    def role_privileges(self):
-        """Gets the role_privileges of this Device.  # noqa: E501
-
-        The role privilege operation(s) for this device that are granted to the user who made the API request  # noqa: E501
-
-        :return: The role_privileges of this Device.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._role_privileges
-
-    @role_privileges.setter
-    def role_privileges(self, role_privileges):
-        """Sets the role_privileges of this Device.
-
-        The role privilege operation(s) for this device that are granted to the user who made the API request  # noqa: E501
-
-        :param role_privileges: The role_privileges of this Device.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._role_privileges = role_privileges
-
-    @property
-    def system_properties(self):
-        """Gets the system_properties of this Device.  # noqa: E501
-
-        Any system properties (aside from system.categories) defined for this device  # noqa: E501
-
-        :return: The system_properties of this Device.  # noqa: E501
-        :rtype: list[NameAndValue]
-        """
-        return self._system_properties
-
-    @system_properties.setter
-    def system_properties(self, system_properties):
-        """Sets the system_properties of this Device.
-
-        Any system properties (aside from system.categories) defined for this device  # noqa: E501
-
-        :param system_properties: The system_properties of this Device.  # noqa: E501
-        :type: list[NameAndValue]
-        """
-
-        self._system_properties = system_properties
-
-    @property
-    def is_preferred_log_collector_configured(self):
-        """Gets the is_preferred_log_collector_configured of this Device.  # noqa: E501
-
-        Indicates whether Preferred Log Collector is configured  (true) or not (false) for the device  # noqa: E501
-
-        :return: The is_preferred_log_collector_configured of this Device.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_preferred_log_collector_configured
-
-    @is_preferred_log_collector_configured.setter
-    def is_preferred_log_collector_configured(self, is_preferred_log_collector_configured):
-        """Sets the is_preferred_log_collector_configured of this Device.
-
-        Indicates whether Preferred Log Collector is configured  (true) or not (false) for the device  # noqa: E501
-
-        :param is_preferred_log_collector_configured: The is_preferred_log_collector_configured of this Device.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_preferred_log_collector_configured = is_preferred_log_collector_configured
-
-    @property
-    def host_status(self):
-        """Gets the host_status of this Device.  # noqa: E501
-
-        The status of this device, where possible statuses are normal, dead and dead-collector  # noqa: E501
-
-        :return: The host_status of this Device.  # noqa: E501
-        :rtype: str
-        """
-        return self._host_status
-
-    @host_status.setter
-    def host_status(self, host_status):
-        """Sets the host_status of this Device.
-
-        The status of this device, where possible statuses are normal, dead and dead-collector  # noqa: E501
-
-        :param host_status: The host_status of this Device.  # noqa: E501
-        :type: str
-        """
-
-        self._host_status = host_status
-
-    @property
     def gcp_state(self):
         """Gets the gcp_state of this Device.  # noqa: E501
 
-        The gcp instance state (if applicable): 1 indicates that the instance is running, 2 indicates that the instance is stopped and 3 the instance is terminated.  # noqa: E501
+        The GCP instance state (if applicable): 1 indicates that the instance is running, 2 indicates that the instance is stopped and 3 the instance is terminated.  # noqa: E501
 
         :return: The gcp_state of this Device.  # noqa: E501
         :rtype: int
@@ -689,36 +1089,13 @@ class Device(object):
     def gcp_state(self, gcp_state):
         """Sets the gcp_state of this Device.
 
-        The gcp instance state (if applicable): 1 indicates that the instance is running, 2 indicates that the instance is stopped and 3 the instance is terminated.  # noqa: E501
+        The GCP instance state (if applicable): 1 indicates that the instance is running, 2 indicates that the instance is stopped and 3 the instance is terminated.  # noqa: E501
 
         :param gcp_state: The gcp_state of this Device.  # noqa: E501
         :type: int
         """
 
         self._gcp_state = gcp_state
-
-    @property
-    def auto_balanced_collector_group_id(self):
-        """Gets the auto_balanced_collector_group_id of this Device.  # noqa: E501
-
-        The Auto Balanced Collector Group id. 0 means not monitored by ABCG  # noqa: E501
-
-        :return: The auto_balanced_collector_group_id of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._auto_balanced_collector_group_id
-
-    @auto_balanced_collector_group_id.setter
-    def auto_balanced_collector_group_id(self, auto_balanced_collector_group_id):
-        """Sets the auto_balanced_collector_group_id of this Device.
-
-        The Auto Balanced Collector Group id. 0 means not monitored by ABCG  # noqa: E501
-
-        :param auto_balanced_collector_group_id: The auto_balanced_collector_group_id of this Device.  # noqa: E501
-        :type: int
-        """
-
-        self._auto_balanced_collector_group_id = auto_balanced_collector_group_id
 
     @property
     def auto_props_updated_on(self):
@@ -767,52 +1144,6 @@ class Device(object):
         self._scan_config_id = scan_config_id
 
     @property
-    def inherited_properties(self):
-        """Gets the inherited_properties of this Device.  # noqa: E501
-
-        Any properties inherit from parents  # noqa: E501
-
-        :return: The inherited_properties of this Device.  # noqa: E501
-        :rtype: list[NameAndValue]
-        """
-        return self._inherited_properties
-
-    @inherited_properties.setter
-    def inherited_properties(self, inherited_properties):
-        """Sets the inherited_properties of this Device.
-
-        Any properties inherit from parents  # noqa: E501
-
-        :param inherited_properties: The inherited_properties of this Device.  # noqa: E501
-        :type: list[NameAndValue]
-        """
-
-        self._inherited_properties = inherited_properties
-
-    @property
-    def id(self):
-        """Gets the id of this Device.  # noqa: E501
-
-        The Id of the device  # noqa: E501
-
-        :return: The id of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this Device.
-
-        The Id of the device  # noqa: E501
-
-        :param id: The id of this Device.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
     def enable_netflow(self):
         """Gets the enable_netflow of this Device.  # noqa: E501
 
@@ -859,29 +1190,6 @@ class Device(object):
         self._last_data_time = last_data_time
 
     @property
-    def synthetics_collector_ids(self):
-        """Gets the synthetics_collector_ids of this Device.  # noqa: E501
-
-        The list of ids of the collectors currently monitoring the resource and discovering instances  # noqa: E501
-
-        :return: The synthetics_collector_ids of this Device.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._synthetics_collector_ids
-
-    @synthetics_collector_ids.setter
-    def synthetics_collector_ids(self, synthetics_collector_ids):
-        """Sets the synthetics_collector_ids of this Device.
-
-        The list of ids of the collectors currently monitoring the resource and discovering instances  # noqa: E501
-
-        :param synthetics_collector_ids: The synthetics_collector_ids of this Device.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._synthetics_collector_ids = synthetics_collector_ids
-
-    @property
     def host_group_ids(self):
         """Gets the host_group_ids of this Device.  # noqa: E501
 
@@ -903,29 +1211,6 @@ class Device(object):
         """
 
         self._host_group_ids = host_group_ids
-
-    @property
-    def up_time_in_seconds(self):
-        """Gets the up_time_in_seconds of this Device.  # noqa: E501
-
-        The uptime of the device in seconds. This value will always be the largest value reported by the following datasources: Host Uptime- SNMPUptime- SNMP_Engine_Uptime- WinSystemUptime- NimbleUptime-  # noqa: E501
-
-        :return: The up_time_in_seconds of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._up_time_in_seconds
-
-    @up_time_in_seconds.setter
-    def up_time_in_seconds(self, up_time_in_seconds):
-        """Sets the up_time_in_seconds of this Device.
-
-        The uptime of the device in seconds. This value will always be the largest value reported by the following datasources: Host Uptime- SNMPUptime- SNMP_Engine_Uptime- WinSystemUptime- NimbleUptime-  # noqa: E501
-
-        :param up_time_in_seconds: The up_time_in_seconds of this Device.  # noqa: E501
-        :type: int
-        """
-
-        self._up_time_in_seconds = up_time_in_seconds
 
     @property
     def resource_ids(self):
@@ -951,50 +1236,27 @@ class Device(object):
         self._resource_ids = resource_ids
 
     @property
-    def device_type(self):
-        """Gets the device_type of this Device.  # noqa: E501
+    def op(self):
+        """Gets the op of this Device.  # noqa: E501
 
-        The type of device: 0 indicates a regular device, 2 indicates an AWS device, 4 indicates an Azure device  # noqa: E501
+        whether to use AND or OR for device matching  # noqa: E501
 
-        :return: The device_type of this Device.  # noqa: E501
-        :rtype: int
+        :return: The op of this Device.  # noqa: E501
+        :rtype: str
         """
-        return self._device_type
+        return self._op
 
-    @device_type.setter
-    def device_type(self, device_type):
-        """Sets the device_type of this Device.
+    @op.setter
+    def op(self, op):
+        """Sets the op of this Device.
 
-        The type of device: 0 indicates a regular device, 2 indicates an AWS device, 4 indicates an Azure device  # noqa: E501
+        whether to use AND or OR for device matching  # noqa: E501
 
-        :param device_type: The device_type of this Device.  # noqa: E501
-        :type: int
-        """
-
-        self._device_type = device_type
-
-    @property
-    def current_collector_id(self):
-        """Gets the current_collector_id of this Device.  # noqa: E501
-
-        The id of the collector currently monitoring the device and discovering instances  # noqa: E501
-
-        :return: The current_collector_id of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._current_collector_id
-
-    @current_collector_id.setter
-    def current_collector_id(self, current_collector_id):
-        """Sets the current_collector_id of this Device.
-
-        The id of the collector currently monitoring the device and discovering instances  # noqa: E501
-
-        :param current_collector_id: The current_collector_id of this Device.  # noqa: E501
-        :type: int
+        :param op: The op of this Device.  # noqa: E501
+        :type: str
         """
 
-        self._current_collector_id = current_collector_id
+        self._op = op
 
     @property
     def current_log_collector_id(self):
@@ -1066,29 +1328,6 @@ class Device(object):
         self._netflow_collector_description = netflow_collector_description
 
     @property
-    def netflow_collector_id(self):
-        """Gets the netflow_collector_id of this Device.  # noqa: E501
-
-        The Id of the netflow collector associated with the device  # noqa: E501
-
-        :return: The netflow_collector_id of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._netflow_collector_id
-
-    @netflow_collector_id.setter
-    def netflow_collector_id(self, netflow_collector_id):
-        """Sets the netflow_collector_id of this Device.
-
-        The Id of the netflow collector associated with the device  # noqa: E501
-
-        :param netflow_collector_id: The netflow_collector_id of this Device.  # noqa: E501
-        :type: int
-        """
-
-        self._netflow_collector_id = netflow_collector_id
-
-    @property
     def user_permission(self):
         """Gets the user_permission of this Device.  # noqa: E501
 
@@ -1110,52 +1349,6 @@ class Device(object):
         """
 
         self._user_permission = user_permission
-
-    @property
-    def auto_props_assigned_on(self):
-        """Gets the auto_props_assigned_on of this Device.  # noqa: E501
-
-        The time, in epoch seconds format, that properties were first discovered for this device  # noqa: E501
-
-        :return: The auto_props_assigned_on of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._auto_props_assigned_on
-
-    @auto_props_assigned_on.setter
-    def auto_props_assigned_on(self, auto_props_assigned_on):
-        """Sets the auto_props_assigned_on of this Device.
-
-        The time, in epoch seconds format, that properties were first discovered for this device  # noqa: E501
-
-        :param auto_props_assigned_on: The auto_props_assigned_on of this Device.  # noqa: E501
-        :type: int
-        """
-
-        self._auto_props_assigned_on = auto_props_assigned_on
-
-    @property
-    def updated_on(self):
-        """Gets the updated_on of this Device.  # noqa: E501
-
-        The time, in epoch seconds format, that the device was last updated  # noqa: E501
-
-        :return: The updated_on of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._updated_on
-
-    @updated_on.setter
-    def updated_on(self, updated_on):
-        """Sets the updated_on of this Device.
-
-        The time, in epoch seconds format, that the device was last updated  # noqa: E501
-
-        :param updated_on: The updated_on of this Device.  # noqa: E501
-        :type: int
-        """
-
-        self._updated_on = updated_on
 
     @property
     def preferred_collector_group_name(self):
@@ -1181,29 +1374,6 @@ class Device(object):
         self._preferred_collector_group_name = preferred_collector_group_name
 
     @property
-    def preferred_collector_group_id(self):
-        """Gets the preferred_collector_group_id of this Device.  # noqa: E501
-
-        The id of the Collector Group associated with the device's preferred collector  # noqa: E501
-
-        :return: The preferred_collector_group_id of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._preferred_collector_group_id
-
-    @preferred_collector_group_id.setter
-    def preferred_collector_group_id(self, preferred_collector_group_id):
-        """Sets the preferred_collector_group_id of this Device.
-
-        The id of the Collector Group associated with the device's preferred collector  # noqa: E501
-
-        :param preferred_collector_group_id: The preferred_collector_group_id of this Device.  # noqa: E501
-        :type: int
-        """
-
-        self._preferred_collector_group_id = preferred_collector_group_id
-
-    @property
     def auto_properties(self):
         """Gets the auto_properties of this Device.  # noqa: E501
 
@@ -1227,29 +1397,6 @@ class Device(object):
         self._auto_properties = auto_properties
 
     @property
-    def custom_properties(self):
-        """Gets the custom_properties of this Device.  # noqa: E501
-
-        Any non-system properties (aside from system.categories) defined for this device  # noqa: E501
-
-        :return: The custom_properties of this Device.  # noqa: E501
-        :rtype: list[NameAndValue]
-        """
-        return self._custom_properties
-
-    @custom_properties.setter
-    def custom_properties(self, custom_properties):
-        """Sets the custom_properties of this Device.
-
-        Any non-system properties (aside from system.categories) defined for this device  # noqa: E501
-
-        :param custom_properties: The custom_properties of this Device.  # noqa: E501
-        :type: list[NameAndValue]
-        """
-
-        self._custom_properties = custom_properties
-
-    @property
     def to_delete_time_in_ms(self):
         """Gets the to_delete_time_in_ms of this Device.  # noqa: E501
 
@@ -1271,125 +1418,6 @@ class Device(object):
         """
 
         self._to_delete_time_in_ms = to_delete_time_in_ms
-
-    @property
-    def collector_description(self):
-        """Gets the collector_description of this Device.  # noqa: E501
-
-        The description/name of the collector for this device  # noqa: E501
-
-        :return: The collector_description of this Device.  # noqa: E501
-        :rtype: str
-        """
-        return self._collector_description
-
-    @collector_description.setter
-    def collector_description(self, collector_description):
-        """Sets the collector_description of this Device.
-
-        The description/name of the collector for this device  # noqa: E501
-
-        :param collector_description: The collector_description of this Device.  # noqa: E501
-        :type: str
-        """
-
-        self._collector_description = collector_description
-
-    @property
-    def preferred_collector_id(self):
-        """Gets the preferred_collector_id of this Device.  # noqa: E501
-
-        The Id of the preferred collector assigned to monitor the device  # noqa: E501
-
-        :return: The preferred_collector_id of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._preferred_collector_id
-
-    @preferred_collector_id.setter
-    def preferred_collector_id(self, preferred_collector_id):
-        """Sets the preferred_collector_id of this Device.
-
-        The Id of the preferred collector assigned to monitor the device  # noqa: E501
-
-        :param preferred_collector_id: The preferred_collector_id of this Device.  # noqa: E501
-        :type: int
-        """
-        if preferred_collector_id is None:
-            raise ValueError("Invalid value for `preferred_collector_id`, must not be `None`")  # noqa: E501
-
-        self._preferred_collector_id = preferred_collector_id
-
-    @property
-    def last_rawdata_time(self):
-        """Gets the last_rawdata_time of this Device.  # noqa: E501
-
-        The last time, in epoch seconds, that raw Netflow data was reported  # noqa: E501
-
-        :return: The last_rawdata_time of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._last_rawdata_time
-
-    @last_rawdata_time.setter
-    def last_rawdata_time(self, last_rawdata_time):
-        """Sets the last_rawdata_time of this Device.
-
-        The last time, in epoch seconds, that raw Netflow data was reported  # noqa: E501
-
-        :param last_rawdata_time: The last_rawdata_time of this Device.  # noqa: E501
-        :type: int
-        """
-
-        self._last_rawdata_time = last_rawdata_time
-
-    @property
-    def name(self):
-        """Gets the name of this Device.  # noqa: E501
-
-        The host name or IP address of the device  # noqa: E501
-
-        :return: The name of this Device.  # noqa: E501
-        :rtype: str
-        """
-        return self._name
-
-    @name.setter
-    def name(self, name):
-        """Sets the name of this Device.
-
-        The host name or IP address of the device  # noqa: E501
-
-        :param name: The name of this Device.  # noqa: E501
-        :type: str
-        """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-
-        self._name = name
-
-    @property
-    def deleted_time_in_ms(self):
-        """Gets the deleted_time_in_ms of this Device.  # noqa: E501
-
-        The time in milliseconds that the device has been dead for, or since the AWS device was filtered out  # noqa: E501
-
-        :return: The deleted_time_in_ms of this Device.  # noqa: E501
-        :rtype: int
-        """
-        return self._deleted_time_in_ms
-
-    @deleted_time_in_ms.setter
-    def deleted_time_in_ms(self, deleted_time_in_ms):
-        """Sets the deleted_time_in_ms of this Device.
-
-        The time in milliseconds that the device has been dead for, or since the AWS device was filtered out  # noqa: E501
-
-        :param deleted_time_in_ms: The deleted_time_in_ms of this Device.  # noqa: E501
-        :type: int
-        """
-
-        self._deleted_time_in_ms = deleted_time_in_ms
 
     def to_dict(self):
         """Returns the model properties as a dict"""

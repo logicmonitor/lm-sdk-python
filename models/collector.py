@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -38,7 +38,10 @@ class Collector(object):
     swagger_types = {
         'user_change_on': 'int',
         'conf_version': 'str',
+        'download_url': 'str',
         'updated_on_local': 'str',
+        'collector_type': 'str',
+        'encoded_config_data': 'str',
         'hostname': 'str',
         'number_of_instances': 'int',
         'id': 'int',
@@ -48,6 +51,8 @@ class Collector(object):
         'collector_group_name': 'str',
         'netscan_version': 'str',
         'in_sdt': 'bool',
+        'is_encoded': 'bool',
+        'format': 'str',
         'updated_on': 'int',
         'automatic_upgrade_info': 'AutomaticUpgradeInfo',
         'number_of_hosts': 'int',
@@ -61,6 +66,7 @@ class Collector(object):
         'onetime_upgrade_info': 'OnetimeUpgradeInfo',
         'wrapper_conf': 'str',
         'clear_sent': 'bool',
+        'is_lmlogs_syslog_enabled': 'bool',
         'status': 'int',
         'backup_agent_id': 'int',
         'specified_collector_device_group_id': 'int',
@@ -76,6 +82,7 @@ class Collector(object):
         'can_downgrade': 'bool',
         'ack_comment': 'str',
         'next_upgrade_info': 'NextUpgradeInfo',
+        'enable_lm_logs': 'bool',
         'suppress_alert_clear': 'bool',
         'next_recipient': 'int',
         'acked_on': 'int',
@@ -92,7 +99,10 @@ class Collector(object):
         'acked': 'bool',
         'onetime_downgrade_info': 'OnetimeUpgradeInfo',
         'website_conf': 'str',
+        'copy_url': 'str',
         'up_time': 'int',
+        'otel_version': 'str',
+        'bearer_token': 'str',
         'build': 'str',
         'previous_version': 'str',
         'collector_group_id': 'int',
@@ -100,13 +110,18 @@ class Collector(object):
         'enable_fail_back': 'object',
         'resend_ival': 'int',
         'arch': 'str',
-        'enable_fail_over_on_collector_device': 'bool'
+        'otel_id': 'str',
+        'enable_fail_over_on_collector_device': 'bool',
+        'config': 'str'
     }
 
     attribute_map = {
         'user_change_on': 'userChangeOn',
         'conf_version': 'confVersion',
+        'download_url': 'downloadUrl',
         'updated_on_local': 'updatedOnLocal',
+        'collector_type': 'collectorType',
+        'encoded_config_data': 'encodedConfigData',
         'hostname': 'hostname',
         'number_of_instances': 'numberOfInstances',
         'id': 'id',
@@ -116,6 +131,8 @@ class Collector(object):
         'collector_group_name': 'collectorGroupName',
         'netscan_version': 'netscanVersion',
         'in_sdt': 'inSDT',
+        'is_encoded': 'isEncoded',
+        'format': 'format',
         'updated_on': 'updatedOn',
         'automatic_upgrade_info': 'automaticUpgradeInfo',
         'number_of_hosts': 'numberOfHosts',
@@ -129,6 +146,7 @@ class Collector(object):
         'onetime_upgrade_info': 'onetimeUpgradeInfo',
         'wrapper_conf': 'wrapperConf',
         'clear_sent': 'clearSent',
+        'is_lmlogs_syslog_enabled': 'isLmlogsSyslogEnabled',
         'status': 'status',
         'backup_agent_id': 'backupAgentId',
         'specified_collector_device_group_id': 'specifiedCollectorDeviceGroupId',
@@ -144,6 +162,7 @@ class Collector(object):
         'can_downgrade': 'canDowngrade',
         'ack_comment': 'ackComment',
         'next_upgrade_info': 'nextUpgradeInfo',
+        'enable_lm_logs': 'enableLMLogs',
         'suppress_alert_clear': 'suppressAlertClear',
         'next_recipient': 'nextRecipient',
         'acked_on': 'ackedOn',
@@ -160,7 +179,10 @@ class Collector(object):
         'acked': 'acked',
         'onetime_downgrade_info': 'onetimeDowngradeInfo',
         'website_conf': 'websiteConf',
+        'copy_url': 'copyUrl',
         'up_time': 'upTime',
+        'otel_version': 'otelVersion',
+        'bearer_token': 'bearerToken',
         'build': 'build',
         'previous_version': 'previousVersion',
         'collector_group_id': 'collectorGroupId',
@@ -168,15 +190,20 @@ class Collector(object):
         'enable_fail_back': 'enableFailBack',
         'resend_ival': 'resendIval',
         'arch': 'arch',
-        'enable_fail_over_on_collector_device': 'enableFailOverOnCollectorDevice'
+        'otel_id': 'otelId',
+        'enable_fail_over_on_collector_device': 'enableFailOverOnCollectorDevice',
+        'config': 'config'
     }
 
-    def __init__(self, user_change_on=None, conf_version=None, updated_on_local=None, hostname=None, number_of_instances=None, id=None, ea=None, watchdog_updated_on_local=None, has_fail_over_device=None, collector_group_name=None, netscan_version=None, in_sdt=None, updated_on=None, automatic_upgrade_info=None, number_of_hosts=None, collector_conf=None, sbproxy_conf=None, agent_conf_fields=None, user_visible_websites_num=None, last_sent_notification_on_local=None, custom_properties=None, predefined_config=None, onetime_upgrade_info=None, wrapper_conf=None, clear_sent=None, status=None, backup_agent_id=None, specified_collector_device_group_id=None, escalating_chain_id=None, collector_size=None, acked_on_local=None, watchdog_conf=None, description=None, created_on=None, platform=None, is_down=None, user_visible_hosts_num=None, can_downgrade=None, ack_comment=None, next_upgrade_info=None, suppress_alert_clear=None, next_recipient=None, acked_on=None, user_change_on_local=None, number_of_websites=None, collector_device_id=None, acked_by=None, user_permission=None, need_auto_create_collector_device=None, watchdog_updated_on=None, can_downgrade_reason=None, last_sent_notification_on=None, synthetics_enabled=None, acked=None, onetime_downgrade_info=None, website_conf=None, up_time=None, build=None, previous_version=None, collector_group_id=None, created_on_local=None, enable_fail_back=None, resend_ival=None, arch=None, enable_fail_over_on_collector_device=None):  # noqa: E501
+    def __init__(self, user_change_on=None, conf_version=None, download_url=None, updated_on_local=None, collector_type=None, encoded_config_data=None, hostname=None, number_of_instances=None, id=None, ea=None, watchdog_updated_on_local=None, has_fail_over_device=None, collector_group_name=None, netscan_version=None, in_sdt=None, is_encoded=None, format=None, updated_on=None, automatic_upgrade_info=None, number_of_hosts=None, collector_conf=None, sbproxy_conf=None, agent_conf_fields=None, user_visible_websites_num=None, last_sent_notification_on_local=None, custom_properties=None, predefined_config=None, onetime_upgrade_info=None, wrapper_conf=None, clear_sent=None, is_lmlogs_syslog_enabled=None, status=None, backup_agent_id=None, specified_collector_device_group_id=None, escalating_chain_id=None, collector_size=None, acked_on_local=None, watchdog_conf=None, description=None, created_on=None, platform=None, is_down=None, user_visible_hosts_num=None, can_downgrade=None, ack_comment=None, next_upgrade_info=None, enable_lm_logs=None, suppress_alert_clear=None, next_recipient=None, acked_on=None, user_change_on_local=None, number_of_websites=None, collector_device_id=None, acked_by=None, user_permission=None, need_auto_create_collector_device=None, watchdog_updated_on=None, can_downgrade_reason=None, last_sent_notification_on=None, synthetics_enabled=None, acked=None, onetime_downgrade_info=None, website_conf=None, copy_url=None, up_time=None, otel_version=None, bearer_token=None, build=None, previous_version=None, collector_group_id=None, created_on_local=None, enable_fail_back=None, resend_ival=None, arch=None, otel_id=None, enable_fail_over_on_collector_device=None, config=None):  # noqa: E501
         """Collector - a model defined in Swagger"""  # noqa: E501
 
         self._user_change_on = None
         self._conf_version = None
+        self._download_url = None
         self._updated_on_local = None
+        self._collector_type = None
+        self._encoded_config_data = None
         self._hostname = None
         self._number_of_instances = None
         self._id = None
@@ -186,6 +213,8 @@ class Collector(object):
         self._collector_group_name = None
         self._netscan_version = None
         self._in_sdt = None
+        self._is_encoded = None
+        self._format = None
         self._updated_on = None
         self._automatic_upgrade_info = None
         self._number_of_hosts = None
@@ -199,6 +228,7 @@ class Collector(object):
         self._onetime_upgrade_info = None
         self._wrapper_conf = None
         self._clear_sent = None
+        self._is_lmlogs_syslog_enabled = None
         self._status = None
         self._backup_agent_id = None
         self._specified_collector_device_group_id = None
@@ -214,6 +244,7 @@ class Collector(object):
         self._can_downgrade = None
         self._ack_comment = None
         self._next_upgrade_info = None
+        self._enable_lm_logs = None
         self._suppress_alert_clear = None
         self._next_recipient = None
         self._acked_on = None
@@ -230,7 +261,10 @@ class Collector(object):
         self._acked = None
         self._onetime_downgrade_info = None
         self._website_conf = None
+        self._copy_url = None
         self._up_time = None
+        self._otel_version = None
+        self._bearer_token = None
         self._build = None
         self._previous_version = None
         self._collector_group_id = None
@@ -238,15 +272,23 @@ class Collector(object):
         self._enable_fail_back = None
         self._resend_ival = None
         self._arch = None
+        self._otel_id = None
         self._enable_fail_over_on_collector_device = None
+        self._config = None
         self.discriminator = None
 
         if user_change_on is not None:
             self.user_change_on = user_change_on
         if conf_version is not None:
             self.conf_version = conf_version
+        if download_url is not None:
+            self.download_url = download_url
         if updated_on_local is not None:
             self.updated_on_local = updated_on_local
+        if collector_type is not None:
+            self.collector_type = collector_type
+        if encoded_config_data is not None:
+            self.encoded_config_data = encoded_config_data
         if hostname is not None:
             self.hostname = hostname
         if number_of_instances is not None:
@@ -265,6 +307,10 @@ class Collector(object):
             self.netscan_version = netscan_version
         if in_sdt is not None:
             self.in_sdt = in_sdt
+        if is_encoded is not None:
+            self.is_encoded = is_encoded
+        if format is not None:
+            self.format = format
         if updated_on is not None:
             self.updated_on = updated_on
         if automatic_upgrade_info is not None:
@@ -291,6 +337,8 @@ class Collector(object):
             self.wrapper_conf = wrapper_conf
         if clear_sent is not None:
             self.clear_sent = clear_sent
+        if is_lmlogs_syslog_enabled is not None:
+            self.is_lmlogs_syslog_enabled = is_lmlogs_syslog_enabled
         if status is not None:
             self.status = status
         if backup_agent_id is not None:
@@ -321,6 +369,8 @@ class Collector(object):
             self.ack_comment = ack_comment
         if next_upgrade_info is not None:
             self.next_upgrade_info = next_upgrade_info
+        if enable_lm_logs is not None:
+            self.enable_lm_logs = enable_lm_logs
         if suppress_alert_clear is not None:
             self.suppress_alert_clear = suppress_alert_clear
         if next_recipient is not None:
@@ -353,8 +403,14 @@ class Collector(object):
             self.onetime_downgrade_info = onetime_downgrade_info
         if website_conf is not None:
             self.website_conf = website_conf
+        if copy_url is not None:
+            self.copy_url = copy_url
         if up_time is not None:
             self.up_time = up_time
+        if otel_version is not None:
+            self.otel_version = otel_version
+        if bearer_token is not None:
+            self.bearer_token = bearer_token
         if build is not None:
             self.build = build
         if previous_version is not None:
@@ -369,8 +425,12 @@ class Collector(object):
             self.resend_ival = resend_ival
         if arch is not None:
             self.arch = arch
+        if otel_id is not None:
+            self.otel_id = otel_id
         if enable_fail_over_on_collector_device is not None:
             self.enable_fail_over_on_collector_device = enable_fail_over_on_collector_device
+        if config is not None:
+            self.config = config
 
     @property
     def user_change_on(self):
@@ -419,6 +479,29 @@ class Collector(object):
         self._conf_version = conf_version
 
     @property
+    def download_url(self):
+        """Gets the download_url of this Collector.  # noqa: E501
+
+        Download Url  # noqa: E501
+
+        :return: The download_url of this Collector.  # noqa: E501
+        :rtype: str
+        """
+        return self._download_url
+
+    @download_url.setter
+    def download_url(self, download_url):
+        """Sets the download_url of this Collector.
+
+        Download Url  # noqa: E501
+
+        :param download_url: The download_url of this Collector.  # noqa: E501
+        :type: str
+        """
+
+        self._download_url = download_url
+
+    @property
     def updated_on_local(self):
         """Gets the updated_on_local of this Collector.  # noqa: E501
 
@@ -440,6 +523,52 @@ class Collector(object):
         """
 
         self._updated_on_local = updated_on_local
+
+    @property
+    def collector_type(self):
+        """Gets the collector_type of this Collector.  # noqa: E501
+
+        Collector type  # noqa: E501
+
+        :return: The collector_type of this Collector.  # noqa: E501
+        :rtype: str
+        """
+        return self._collector_type
+
+    @collector_type.setter
+    def collector_type(self, collector_type):
+        """Sets the collector_type of this Collector.
+
+        Collector type  # noqa: E501
+
+        :param collector_type: The collector_type of this Collector.  # noqa: E501
+        :type: str
+        """
+
+        self._collector_type = collector_type
+
+    @property
+    def encoded_config_data(self):
+        """Gets the encoded_config_data of this Collector.  # noqa: E501
+
+        Base 64 encoded config data  # noqa: E501
+
+        :return: The encoded_config_data of this Collector.  # noqa: E501
+        :rtype: str
+        """
+        return self._encoded_config_data
+
+    @encoded_config_data.setter
+    def encoded_config_data(self, encoded_config_data):
+        """Sets the encoded_config_data of this Collector.
+
+        Base 64 encoded config data  # noqa: E501
+
+        :param encoded_config_data: The encoded_config_data of this Collector.  # noqa: E501
+        :type: str
+        """
+
+        self._encoded_config_data = encoded_config_data
 
     @property
     def hostname(self):
@@ -645,6 +774,50 @@ class Collector(object):
         """
 
         self._in_sdt = in_sdt
+
+    @property
+    def is_encoded(self):
+        """Gets the is_encoded of this Collector.  # noqa: E501
+
+
+        :return: The is_encoded of this Collector.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_encoded
+
+    @is_encoded.setter
+    def is_encoded(self, is_encoded):
+        """Sets the is_encoded of this Collector.
+
+
+        :param is_encoded: The is_encoded of this Collector.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_encoded = is_encoded
+
+    @property
+    def format(self):
+        """Gets the format of this Collector.  # noqa: E501
+
+        External collector installation format  # noqa: E501
+
+        :return: The format of this Collector.  # noqa: E501
+        :rtype: str
+        """
+        return self._format
+
+    @format.setter
+    def format(self, format):
+        """Sets the format of this Collector.
+
+        External collector installation format  # noqa: E501
+
+        :param format: The format of this Collector.  # noqa: E501
+        :type: str
+        """
+
+        self._format = format
 
     @property
     def updated_on(self):
@@ -944,6 +1117,29 @@ class Collector(object):
         """
 
         self._clear_sent = clear_sent
+
+    @property
+    def is_lmlogs_syslog_enabled(self):
+        """Gets the is_lmlogs_syslog_enabled of this Collector.  # noqa: E501
+
+        Whether collector has isLmlogsSyslogEnabled flag set as true  # noqa: E501
+
+        :return: The is_lmlogs_syslog_enabled of this Collector.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_lmlogs_syslog_enabled
+
+    @is_lmlogs_syslog_enabled.setter
+    def is_lmlogs_syslog_enabled(self, is_lmlogs_syslog_enabled):
+        """Sets the is_lmlogs_syslog_enabled of this Collector.
+
+        Whether collector has isLmlogsSyslogEnabled flag set as true  # noqa: E501
+
+        :param is_lmlogs_syslog_enabled: The is_lmlogs_syslog_enabled of this Collector.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_lmlogs_syslog_enabled = is_lmlogs_syslog_enabled
 
     @property
     def status(self):
@@ -1289,6 +1485,29 @@ class Collector(object):
         """
 
         self._next_upgrade_info = next_upgrade_info
+
+    @property
+    def enable_lm_logs(self):
+        """Gets the enable_lm_logs of this Collector.  # noqa: E501
+
+        Usage of the Otel Collector - logging or tracing  # noqa: E501
+
+        :return: The enable_lm_logs of this Collector.  # noqa: E501
+        :rtype: bool
+        """
+        return self._enable_lm_logs
+
+    @enable_lm_logs.setter
+    def enable_lm_logs(self, enable_lm_logs):
+        """Sets the enable_lm_logs of this Collector.
+
+        Usage of the Otel Collector - logging or tracing  # noqa: E501
+
+        :param enable_lm_logs: The enable_lm_logs of this Collector.  # noqa: E501
+        :type: bool
+        """
+
+        self._enable_lm_logs = enable_lm_logs
 
     @property
     def suppress_alert_clear(self):
@@ -1659,6 +1878,29 @@ class Collector(object):
         self._website_conf = website_conf
 
     @property
+    def copy_url(self):
+        """Gets the copy_url of this Collector.  # noqa: E501
+
+        Copy Command Url  # noqa: E501
+
+        :return: The copy_url of this Collector.  # noqa: E501
+        :rtype: str
+        """
+        return self._copy_url
+
+    @copy_url.setter
+    def copy_url(self, copy_url):
+        """Sets the copy_url of this Collector.
+
+        Copy Command Url  # noqa: E501
+
+        :param copy_url: The copy_url of this Collector.  # noqa: E501
+        :type: str
+        """
+
+        self._copy_url = copy_url
+
+    @property
     def up_time(self):
         """Gets the up_time of this Collector.  # noqa: E501
 
@@ -1680,6 +1922,52 @@ class Collector(object):
         """
 
         self._up_time = up_time
+
+    @property
+    def otel_version(self):
+        """Gets the otel_version of this Collector.  # noqa: E501
+
+        Collector Version  # noqa: E501
+
+        :return: The otel_version of this Collector.  # noqa: E501
+        :rtype: str
+        """
+        return self._otel_version
+
+    @otel_version.setter
+    def otel_version(self, otel_version):
+        """Sets the otel_version of this Collector.
+
+        Collector Version  # noqa: E501
+
+        :param otel_version: The otel_version of this Collector.  # noqa: E501
+        :type: str
+        """
+
+        self._otel_version = otel_version
+
+    @property
+    def bearer_token(self):
+        """Gets the bearer_token of this Collector.  # noqa: E501
+
+        Bearer Token  # noqa: E501
+
+        :return: The bearer_token of this Collector.  # noqa: E501
+        :rtype: str
+        """
+        return self._bearer_token
+
+    @bearer_token.setter
+    def bearer_token(self, bearer_token):
+        """Sets the bearer_token of this Collector.
+
+        Bearer Token  # noqa: E501
+
+        :param bearer_token: The bearer_token of this Collector.  # noqa: E501
+        :type: str
+        """
+
+        self._bearer_token = bearer_token
 
     @property
     def build(self):
@@ -1843,6 +2131,29 @@ class Collector(object):
         self._arch = arch
 
     @property
+    def otel_id(self):
+        """Gets the otel_id of this Collector.  # noqa: E501
+
+        Collector Id  # noqa: E501
+
+        :return: The otel_id of this Collector.  # noqa: E501
+        :rtype: str
+        """
+        return self._otel_id
+
+    @otel_id.setter
+    def otel_id(self, otel_id):
+        """Sets the otel_id of this Collector.
+
+        Collector Id  # noqa: E501
+
+        :param otel_id: The otel_id of this Collector.  # noqa: E501
+        :type: str
+        """
+
+        self._otel_id = otel_id
+
+    @property
     def enable_fail_over_on_collector_device(self):
         """Gets the enable_fail_over_on_collector_device of this Collector.  # noqa: E501
 
@@ -1864,6 +2175,29 @@ class Collector(object):
         """
 
         self._enable_fail_over_on_collector_device = enable_fail_over_on_collector_device
+
+    @property
+    def config(self):
+        """Gets the config of this Collector.  # noqa: E501
+
+        Collector Config  # noqa: E501
+
+        :return: The config of this Collector.  # noqa: E501
+        :rtype: str
+        """
+        return self._config
+
+    @config.setter
+    def config(self, config):
+        """Sets the config of this Collector.
+
+        Collector Config  # noqa: E501
+
+        :param config: The config of this Collector.  # noqa: E501
+        :type: str
+        """
+
+        self._config = config
 
     def to_dict(self):
         """Returns the model properties as a dict"""

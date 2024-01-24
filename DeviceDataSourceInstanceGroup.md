@@ -3,11 +3,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**device_data_source_id** | **int** | the device datasource id | [optional] 
+**device_data_source_id** | **int** | The device datasource id | [optional] 
 **name** | **str** | Name of the datasource instance group | 
 **description** | **str** | The description of the datasource instance group | [optional] 
-**create_on** | **int** | time when the group was created. | [optional] 
-**id** | **int** | the instance group id | [optional] 
+**create_on** | **int** | Time when the group was created. | [optional] 
+**id** | **int** | The instance group id | [optional] 
 **device_id** | **int** | The id of associated device | [optional] 
 **device_display_name** | **str** | The display name of the device | [optional] 
 

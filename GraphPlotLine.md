@@ -12,10 +12,10 @@ Name | Type | Description | Notes
 **legend** | **str** | The legend of the datapoint or instance | [optional] 
 **description** | **str** | The description for the datapoint or instance | [optional] 
 **label** | **str** | The label for the datapoint or instance | [optional] 
-**type** | **str** | line | area | stack | column | statusBar Specifies how the data of the datapoint or instance will be plotted | [optional] 
+**type** | **str** | Specifies how the data of the datapoint or instance will be plotted The values can be line | area | stack | column | statusBar | [optional] 
 **min** | **object** | The min value of the datapoint or instance | [optional] 
 **avg** | **object** | The average value of the datapoint or instance | [optional] 
-**decimal** | **int** | -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 The decimal value | [optional] 
+**decimal** | **int** | The decimal value The values can be -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | [optional] 
 **use_y_max** | **bool** | true | false Specifies whether to use YMax or not | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

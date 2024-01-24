@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -32,40 +32,55 @@ class InstanceGroupAlertThresholdInfo(object):
     """
     swagger_types = {
         'enable_anomaly_alert_generation': 'str',
+        'alert_for_no_data': 'str',
         'enable_anomaly_alert_suppression': 'str',
         'group_id': 'int',
+        'alert_clear_transition_interval': 'str',
         'alert_enabled': 'bool',
-        'alert_expr': 'str'
+        'alert_expr': 'str',
+        'alert_transition_interval': 'str'
     }
 
     attribute_map = {
         'enable_anomaly_alert_generation': 'enableAnomalyAlertGeneration',
+        'alert_for_no_data': 'alertForNoData',
         'enable_anomaly_alert_suppression': 'enableAnomalyAlertSuppression',
         'group_id': 'groupId',
+        'alert_clear_transition_interval': 'alertClearTransitionInterval',
         'alert_enabled': 'alertEnabled',
-        'alert_expr': 'alertExpr'
+        'alert_expr': 'alertExpr',
+        'alert_transition_interval': 'alertTransitionInterval'
     }
 
-    def __init__(self, enable_anomaly_alert_generation=None, enable_anomaly_alert_suppression=None, group_id=None, alert_enabled=None, alert_expr=None):  # noqa: E501
+    def __init__(self, enable_anomaly_alert_generation=None, alert_for_no_data=None, enable_anomaly_alert_suppression=None, group_id=None, alert_clear_transition_interval=None, alert_enabled=None, alert_expr=None, alert_transition_interval=None):  # noqa: E501
         """InstanceGroupAlertThresholdInfo - a model defined in Swagger"""  # noqa: E501
 
         self._enable_anomaly_alert_generation = None
+        self._alert_for_no_data = None
         self._enable_anomaly_alert_suppression = None
         self._group_id = None
+        self._alert_clear_transition_interval = None
         self._alert_enabled = None
         self._alert_expr = None
+        self._alert_transition_interval = None
         self.discriminator = None
 
         if enable_anomaly_alert_generation is not None:
             self.enable_anomaly_alert_generation = enable_anomaly_alert_generation
+        if alert_for_no_data is not None:
+            self.alert_for_no_data = alert_for_no_data
         if enable_anomaly_alert_suppression is not None:
             self.enable_anomaly_alert_suppression = enable_anomaly_alert_suppression
         if group_id is not None:
             self.group_id = group_id
+        if alert_clear_transition_interval is not None:
+            self.alert_clear_transition_interval = alert_clear_transition_interval
         if alert_enabled is not None:
             self.alert_enabled = alert_enabled
         if alert_expr is not None:
             self.alert_expr = alert_expr
+        if alert_transition_interval is not None:
+            self.alert_transition_interval = alert_transition_interval
 
     @property
     def enable_anomaly_alert_generation(self):
@@ -89,6 +104,31 @@ class InstanceGroupAlertThresholdInfo(object):
         """
 
         self._enable_anomaly_alert_generation = enable_anomaly_alert_generation
+
+    @property
+    def alert_for_no_data(self):
+        """Gets the alert_for_no_data of this InstanceGroupAlertThresholdInfo.  # noqa: E501
+
+        The triggered alert level if we cannot collect data for this datapoint. The values can be 0-4 (0:unused alert, 1:alert ok, 2:warn alert, 2:error alert, 4:critical alert)  # noqa: E501
+
+        :return: The alert_for_no_data of this InstanceGroupAlertThresholdInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_for_no_data
+
+    @alert_for_no_data.setter
+    def alert_for_no_data(self, alert_for_no_data):
+        """Sets the alert_for_no_data of this InstanceGroupAlertThresholdInfo.
+
+        The triggered alert level if we cannot collect data for this datapoint. The values can be 0-4 (0:unused alert, 1:alert ok, 2:warn alert, 2:error alert, 4:critical alert)  # noqa: E501
+
+        :param alert_for_no_data: The alert_for_no_data of this InstanceGroupAlertThresholdInfo.  # noqa: E501
+        :type: str
+        """
+        if alert_for_no_data is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', alert_for_no_data):  # noqa: E501
+            raise ValueError("Invalid value for `alert_for_no_data`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
+
+        self._alert_for_no_data = alert_for_no_data
 
     @property
     def enable_anomaly_alert_suppression(self):
@@ -135,6 +175,31 @@ class InstanceGroupAlertThresholdInfo(object):
         self._group_id = group_id
 
     @property
+    def alert_clear_transition_interval(self):
+        """Gets the alert_clear_transition_interval of this InstanceGroupAlertThresholdInfo.  # noqa: E501
+
+        The count that the alert must exist for this many poll cycles before the alert will be cleared  # noqa: E501
+
+        :return: The alert_clear_transition_interval of this InstanceGroupAlertThresholdInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_clear_transition_interval
+
+    @alert_clear_transition_interval.setter
+    def alert_clear_transition_interval(self, alert_clear_transition_interval):
+        """Sets the alert_clear_transition_interval of this InstanceGroupAlertThresholdInfo.
+
+        The count that the alert must exist for this many poll cycles before the alert will be cleared  # noqa: E501
+
+        :param alert_clear_transition_interval: The alert_clear_transition_interval of this InstanceGroupAlertThresholdInfo.  # noqa: E501
+        :type: str
+        """
+        if alert_clear_transition_interval is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', alert_clear_transition_interval):  # noqa: E501
+            raise ValueError("Invalid value for `alert_clear_transition_interval`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
+
+        self._alert_clear_transition_interval = alert_clear_transition_interval
+
+    @property
     def alert_enabled(self):
         """Gets the alert_enabled of this InstanceGroupAlertThresholdInfo.  # noqa: E501
 
@@ -175,6 +240,31 @@ class InstanceGroupAlertThresholdInfo(object):
         """
 
         self._alert_expr = alert_expr
+
+    @property
+    def alert_transition_interval(self):
+        """Gets the alert_transition_interval of this InstanceGroupAlertThresholdInfo.  # noqa: E501
+
+        The count that the alert must exist for this many poll cycles before it will be triggered  # noqa: E501
+
+        :return: The alert_transition_interval of this InstanceGroupAlertThresholdInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_transition_interval
+
+    @alert_transition_interval.setter
+    def alert_transition_interval(self, alert_transition_interval):
+        """Sets the alert_transition_interval of this InstanceGroupAlertThresholdInfo.
+
+        The count that the alert must exist for this many poll cycles before it will be triggered  # noqa: E501
+
+        :param alert_transition_interval: The alert_transition_interval of this InstanceGroupAlertThresholdInfo.  # noqa: E501
+        :type: str
+        """
+        if alert_transition_interval is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', alert_transition_interval):  # noqa: E501
+            raise ValueError("Invalid value for `alert_transition_interval`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
+
+        self._alert_transition_interval = alert_transition_interval
 
     def to_dict(self):
         """Returns the model properties as a dict"""

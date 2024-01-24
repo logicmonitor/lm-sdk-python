@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **is_changed_from_origin** | **bool** | Specifies if the Applies To function is changed from origin or not | [optional] 
 **audited_registry_id** | **str** | Specifies the audited registry Id | [optional] 
 **target_lineage_id** | **str** | Specifies the target lineage Id | [optional] 
-**logic_module_type** | **str** | DataSources | EventSources | PropertySources | ConfigSources | LogSources | TopologySources | Jobmonitors | AppliesTo Functions | SNMP SysOID Maps The type of LogicModule | [optional] 
+**logic_module_type** | **str** | The values can be DataSources | EventSources | PropertySources | ConfigSources | LogSources | TopologySources | Jobmonitors | AppliesTo Functions | SNMP SysOID Maps The type of LogicModule | [optional] 
 **is_changed_from_target_last_published** | **bool** | Specifies if the Applies To function is changed from target last published or not | [optional] 
 **origin_lineage_id** | **str** | The origin lineage Id of the LMmodule | [optional] 
 **origin_author_company_uuid** | **str** | Specifies the origin Author companies unique Id | [optional] 

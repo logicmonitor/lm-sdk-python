@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -66,7 +66,6 @@ class Alert(object):
         'enable_anomaly_alert_suppression': 'str',
         'received_list': 'str',
         'monitor_object_type': 'str',
-        'custom_columns': 'object',
         'acked': 'bool',
         'resource_template_type': 'str',
         'clear_value': 'str',
@@ -117,7 +116,6 @@ class Alert(object):
         'enable_anomaly_alert_suppression': 'enableAnomalyAlertSuppression',
         'received_list': 'receivedList',
         'monitor_object_type': 'monitorObjectType',
-        'custom_columns': 'customColumns',
         'acked': 'acked',
         'resource_template_type': 'resourceTemplateType',
         'clear_value': 'clearValue',
@@ -132,7 +130,7 @@ class Alert(object):
         'resource_template_name': 'resourceTemplateName'
     }
 
-    def __init__(self, resource_id=None, anomaly=None, instance_name=None, monitor_object_id=None, end_epoch=None, rule=None, threshold=None, type=None, start_epoch=None, enable_anomaly_alert_generation=None, internal_id=None, ack_comment=None, monitor_object_name=None, data_point_name=None, instance_id=None, data_point_id=None, suppress_desc=None, next_recipient=None, suppressor=None, id=None, detail_message=None, rule_id=None, tenant=None, alert_value=None, ad_alert=None, acked_by=None, severity=None, sdted=None, acked_epoch=None, chain=None, sdt=None, sub_chain_id=None, enable_anomaly_alert_suppression=None, received_list=None, monitor_object_type=None, custom_columns=None, acked=None, resource_template_type=None, clear_value=None, instance_description=None, dependency_routing_state=None, monitor_object_groups=None, dependency_role=None, chain_id=None, resource_template_id=None, cleared=None, ad_alert_desc=None, resource_template_name=None):  # noqa: E501
+    def __init__(self, resource_id=None, anomaly=None, instance_name=None, monitor_object_id=None, end_epoch=None, rule=None, threshold=None, type=None, start_epoch=None, enable_anomaly_alert_generation=None, internal_id=None, ack_comment=None, monitor_object_name=None, data_point_name=None, instance_id=None, data_point_id=None, suppress_desc=None, next_recipient=None, suppressor=None, id=None, detail_message=None, rule_id=None, tenant=None, alert_value=None, ad_alert=None, acked_by=None, severity=None, sdted=None, acked_epoch=None, chain=None, sdt=None, sub_chain_id=None, enable_anomaly_alert_suppression=None, received_list=None, monitor_object_type=None, acked=None, resource_template_type=None, clear_value=None, instance_description=None, dependency_routing_state=None, monitor_object_groups=None, dependency_role=None, chain_id=None, resource_template_id=None, cleared=None, ad_alert_desc=None, resource_template_name=None):  # noqa: E501
         """Alert - a model defined in Swagger"""  # noqa: E501
 
         self._resource_id = None
@@ -170,7 +168,6 @@ class Alert(object):
         self._enable_anomaly_alert_suppression = None
         self._received_list = None
         self._monitor_object_type = None
-        self._custom_columns = None
         self._acked = None
         self._resource_template_type = None
         self._clear_value = None
@@ -255,8 +252,6 @@ class Alert(object):
             self.received_list = received_list
         if monitor_object_type is not None:
             self.monitor_object_type = monitor_object_type
-        if custom_columns is not None:
-            self.custom_columns = custom_columns
         if acked is not None:
             self.acked = acked
         if resource_template_type is not None:
@@ -493,7 +488,7 @@ class Alert(object):
     def enable_anomaly_alert_generation(self):
         """Gets the enable_anomaly_alert_generation of this Alert.  # noqa: E501
 
-        Indicates dynamic threshold alert generation setting. expression is comma separated 0 denotes OFF, 1 denotes ON, -1 denotes INVALID 1,0,1 =   warn : ON     error: OFF   critical: ON Empty value on this parameter means : 0,0,0  # noqa: E501
+        Indicates dynamic threshold alert generation setting. Expression is comma separated 0 denotes OFF, 1 denotes ON, -1 denotes INVALID 1,0,1 =   warn : ON     error: OFF   critical: ON Empty value on this parameter means : 0,0,0  # noqa: E501
 
         :return: The enable_anomaly_alert_generation of this Alert.  # noqa: E501
         :rtype: str
@@ -504,7 +499,7 @@ class Alert(object):
     def enable_anomaly_alert_generation(self, enable_anomaly_alert_generation):
         """Sets the enable_anomaly_alert_generation of this Alert.
 
-        Indicates dynamic threshold alert generation setting. expression is comma separated 0 denotes OFF, 1 denotes ON, -1 denotes INVALID 1,0,1 =   warn : ON     error: OFF   critical: ON Empty value on this parameter means : 0,0,0  # noqa: E501
+        Indicates dynamic threshold alert generation setting. Expression is comma separated 0 denotes OFF, 1 denotes ON, -1 denotes INVALID 1,0,1 =   warn : ON     error: OFF   critical: ON Empty value on this parameter means : 0,0,0  # noqa: E501
 
         :param enable_anomaly_alert_generation: The enable_anomaly_alert_generation of this Alert.  # noqa: E501
         :type: str
@@ -700,7 +695,7 @@ class Alert(object):
     def suppressor(self):
         """Gets the suppressor of this Alert.  # noqa: E501
 
-        The component (Ex SDT, HostClusterAlert) which suppressed the alert  # noqa: E501
+        The component (For example: SDT, HostClusterAlert) which suppressed the alert  # noqa: E501
 
         :return: The suppressor of this Alert.  # noqa: E501
         :rtype: str
@@ -711,7 +706,7 @@ class Alert(object):
     def suppressor(self, suppressor):
         """Sets the suppressor of this Alert.
 
-        The component (Ex SDT, HostClusterAlert) which suppressed the alert  # noqa: E501
+        The component (For example: SDT, HostClusterAlert) which suppressed the alert  # noqa: E501
 
         :param suppressor: The suppressor of this Alert.  # noqa: E501
         :type: str
@@ -792,7 +787,7 @@ class Alert(object):
     def tenant(self):
         """Gets the tenant of this Alert.  # noqa: E501
 
-        tenant to which this alert belongs to.   # noqa: E501
+        Tenant to which this alert belongs to.   # noqa: E501
 
         :return: The tenant of this Alert.  # noqa: E501
         :rtype: str
@@ -803,7 +798,7 @@ class Alert(object):
     def tenant(self, tenant):
         """Sets the tenant of this Alert.
 
-        tenant to which this alert belongs to.   # noqa: E501
+        Tenant to which this alert belongs to.   # noqa: E501
 
         :param tenant: The tenant of this Alert.  # noqa: E501
         :type: str
@@ -838,7 +833,7 @@ class Alert(object):
     def ad_alert(self):
         """Gets the ad_alert of this Alert.  # noqa: E501
 
-        Whether or not the alert is dynamic threshold based  # noqa: E501
+        Specifies whether alert is dynamic threshold based or not  # noqa: E501
 
         :return: The ad_alert of this Alert.  # noqa: E501
         :rtype: bool
@@ -849,7 +844,7 @@ class Alert(object):
     def ad_alert(self, ad_alert):
         """Sets the ad_alert of this Alert.
 
-        Whether or not the alert is dynamic threshold based  # noqa: E501
+        Specifies whether alert is dynamic threshold based or not  # noqa: E501
 
         :param ad_alert: The ad_alert of this Alert.  # noqa: E501
         :type: bool
@@ -1084,29 +1079,6 @@ class Alert(object):
         """
 
         self._monitor_object_type = monitor_object_type
-
-    @property
-    def custom_columns(self):
-        """Gets the custom_columns of this Alert.  # noqa: E501
-
-        The property or token values that should display with the alert details. Note that if referencing tokens, you'll need to URL encode the # symbol.  # noqa: E501
-
-        :return: The custom_columns of this Alert.  # noqa: E501
-        :rtype: object
-        """
-        return self._custom_columns
-
-    @custom_columns.setter
-    def custom_columns(self, custom_columns):
-        """Sets the custom_columns of this Alert.
-
-        The property or token values that should display with the alert details. Note that if referencing tokens, you'll need to URL encode the # symbol.  # noqa: E501
-
-        :param custom_columns: The custom_columns of this Alert.  # noqa: E501
-        :type: object
-        """
-
-        self._custom_columns = custom_columns
 
     @property
     def acked(self):

@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -76,7 +76,7 @@ class GraphLine(object):
     def color_name(self):
         """Gets the color_name of this GraphLine.  # noqa: E501
 
-        the graph line color name  # noqa: E501
+        The graph line color name  # noqa: E501
 
         :return: The color_name of this GraphLine.  # noqa: E501
         :rtype: str
@@ -87,7 +87,7 @@ class GraphLine(object):
     def color_name(self, color_name):
         """Sets the color_name of this GraphLine.
 
-        the graph line color name  # noqa: E501
+        The graph line color name  # noqa: E501
 
         :param color_name: The color_name of this GraphLine.  # noqa: E501
         :type: str
@@ -99,7 +99,7 @@ class GraphLine(object):
     def data_point_name(self):
         """Gets the data_point_name of this GraphLine.  # noqa: E501
 
-        the graph line data point name  # noqa: E501
+        The graph line data point name  # noqa: E501
 
         :return: The data_point_name of this GraphLine.  # noqa: E501
         :rtype: str
@@ -110,7 +110,7 @@ class GraphLine(object):
     def data_point_name(self, data_point_name):
         """Sets the data_point_name of this GraphLine.
 
-        the graph line data point name  # noqa: E501
+        The graph line data point name  # noqa: E501
 
         :param data_point_name: The data_point_name of this GraphLine.  # noqa: E501
         :type: str
@@ -122,7 +122,7 @@ class GraphLine(object):
     def data_point_id(self):
         """Gets the data_point_id of this GraphLine.  # noqa: E501
 
-        the graph line data point id  # noqa: E501
+        The graph line data point id  # noqa: E501
 
         :return: The data_point_id of this GraphLine.  # noqa: E501
         :rtype: int
@@ -133,7 +133,7 @@ class GraphLine(object):
     def data_point_id(self, data_point_id):
         """Sets the data_point_id of this GraphLine.
 
-        the graph line data point id  # noqa: E501
+        The graph line data point id  # noqa: E501
 
         :param data_point_id: The data_point_id of this GraphLine.  # noqa: E501
         :type: int
@@ -145,7 +145,7 @@ class GraphLine(object):
     def legend(self):
         """Gets the legend of this GraphLine.  # noqa: E501
 
-        the graph line legend  # noqa: E501
+        The graph line legend  # noqa: E501
 
         :return: The legend of this GraphLine.  # noqa: E501
         :rtype: str
@@ -156,7 +156,7 @@ class GraphLine(object):
     def legend(self, legend):
         """Sets the legend of this GraphLine.
 
-        the graph line legend  # noqa: E501
+        The graph line legend  # noqa: E501
 
         :param legend: The legend of this GraphLine.  # noqa: E501
         :type: str
@@ -168,7 +168,7 @@ class GraphLine(object):
     def is_virtual_data_point(self):
         """Gets the is_virtual_data_point of this GraphLine.  # noqa: E501
 
-        if the graph line's data point is a virtual data point  # noqa: E501
+        Whether the graph line's data point is a virtual data point  # noqa: E501
 
         :return: The is_virtual_data_point of this GraphLine.  # noqa: E501
         :rtype: bool
@@ -179,7 +179,7 @@ class GraphLine(object):
     def is_virtual_data_point(self, is_virtual_data_point):
         """Sets the is_virtual_data_point of this GraphLine.
 
-        if the graph line's data point is a virtual data point  # noqa: E501
+        Whether the graph line's data point is a virtual data point  # noqa: E501
 
         :param is_virtual_data_point: The is_virtual_data_point of this GraphLine.  # noqa: E501
         :type: bool
@@ -191,7 +191,7 @@ class GraphLine(object):
     def type(self):
         """Gets the type of this GraphLine.  # noqa: E501
 
-        the graph line type, 1=line|2=area|3=stack|4=column  # noqa: E501
+        The graph line type.  The values can be 1|2|3|4  where,       1=line, 2=area, 3=stack, 4=column  # noqa: E501
 
         :return: The type of this GraphLine.  # noqa: E501
         :rtype: int
@@ -202,7 +202,7 @@ class GraphLine(object):
     def type(self, type):
         """Sets the type of this GraphLine.
 
-        the graph line type, 1=line|2=area|3=stack|4=column  # noqa: E501
+        The graph line type.  The values can be 1|2|3|4  where,       1=line, 2=area, 3=stack, 4=column  # noqa: E501
 
         :param type: The type of this GraphLine.  # noqa: E501
         :type: int

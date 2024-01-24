@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -206,7 +206,7 @@ class WebCheckStep(object):
     def resp_type(self):
         """Gets the resp_type of this WebCheckStep.  # noqa: E501
 
-        Plain Text/String | Glob expression | JSON | XML | Multi line key value pair Step Response Type  # noqa: E501
+        The values can be Plain Text/String|Glob expression|JSON|XML|Multi line key value pair Step Response Type  # noqa: E501
 
         :return: The resp_type of this WebCheckStep.  # noqa: E501
         :rtype: str
@@ -217,7 +217,7 @@ class WebCheckStep(object):
     def resp_type(self, resp_type):
         """Sets the resp_type of this WebCheckStep.
 
-        Plain Text/String | Glob expression | JSON | XML | Multi line key value pair Step Response Type  # noqa: E501
+        The values can be Plain Text/String|Glob expression|JSON|XML|Multi line key value pair Step Response Type  # noqa: E501
 
         :param resp_type: The resp_type of this WebCheckStep.  # noqa: E501
         :type: str
@@ -321,7 +321,7 @@ class WebCheckStep(object):
     def type(self):
         """Gets the type of this WebCheckStep.  # noqa: E501
 
-        script | config The type of service step  # noqa: E501
+        The values can be script|config The type of service step  # noqa: E501
 
         :return: The type of this WebCheckStep.  # noqa: E501
         :rtype: str
@@ -332,7 +332,7 @@ class WebCheckStep(object):
     def type(self, type):
         """Sets the type of this WebCheckStep.
 
-        script | config The type of service step  # noqa: E501
+        The values can be script|config The type of service step  # noqa: E501
 
         :param type: The type of this WebCheckStep.  # noqa: E501
         :type: str
@@ -367,7 +367,7 @@ class WebCheckStep(object):
     def use_default_root(self):
         """Gets the use_default_root of this WebCheckStep.  # noqa: E501
 
-        true | falseCheck if using the default root  # noqa: E501
+        The values can be true|false Check if using the default root  # noqa: E501
 
         :return: The use_default_root of this WebCheckStep.  # noqa: E501
         :rtype: object
@@ -378,7 +378,7 @@ class WebCheckStep(object):
     def use_default_root(self, use_default_root):
         """Sets the use_default_root of this WebCheckStep.
 
-        true | falseCheck if using the default root  # noqa: E501
+        The values can be true|false Check if using the default root  # noqa: E501
 
         :param use_default_root: The use_default_root of this WebCheckStep.  # noqa: E501
         :type: object
@@ -413,7 +413,7 @@ class WebCheckStep(object):
     def http_method(self):
         """Gets the http_method of this WebCheckStep.  # noqa: E501
 
-        GET | HEAD | POST Specifies the type of HTTP method  # noqa: E501
+        The values can be GET|HEAD|POST Specifies the type of HTTP method  # noqa: E501
 
         :return: The http_method of this WebCheckStep.  # noqa: E501
         :rtype: str
@@ -424,7 +424,7 @@ class WebCheckStep(object):
     def http_method(self, http_method):
         """Sets the http_method of this WebCheckStep.
 
-        GET | HEAD | POST Specifies the type of HTTP method  # noqa: E501
+        The values can be GET|HEAD|POST Specifies the type of HTTP method  # noqa: E501
 
         :param http_method: The http_method of this WebCheckStep.  # noqa: E501
         :type: str
@@ -436,7 +436,7 @@ class WebCheckStep(object):
     def enable(self):
         """Gets the enable of this WebCheckStep.  # noqa: E501
 
-        true | false Specifies whether to enable step or not  # noqa: E501
+        The values can be true|false Specifies whether to enable step or not  # noqa: E501
 
         :return: The enable of this WebCheckStep.  # noqa: E501
         :rtype: object
@@ -447,7 +447,7 @@ class WebCheckStep(object):
     def enable(self, enable):
         """Sets the enable of this WebCheckStep.
 
-        true | false Specifies whether to enable step or not  # noqa: E501
+        The values can be true|false Specifies whether to enable step or not  # noqa: E501
 
         :param enable: The enable of this WebCheckStep.  # noqa: E501
         :type: object
@@ -459,7 +459,7 @@ class WebCheckStep(object):
     def http_version(self):
         """Gets the http_version of this WebCheckStep.  # noqa: E501
 
-        1.1 | 1 Specifies HTTP version  # noqa: E501
+        The values can be 1.1|1 Specifies HTTP version  # noqa: E501
 
         :return: The http_version of this WebCheckStep.  # noqa: E501
         :rtype: str
@@ -470,7 +470,7 @@ class WebCheckStep(object):
     def http_version(self, http_version):
         """Sets the http_version of this WebCheckStep.
 
-        1.1 | 1 Specifies HTTP version  # noqa: E501
+        The values can be 1.1|1 Specifies HTTP version  # noqa: E501
 
         :param http_version: The http_version of this WebCheckStep.  # noqa: E501
         :type: str
@@ -574,7 +574,7 @@ class WebCheckStep(object):
     def invert_match(self):
         """Gets the invert_match of this WebCheckStep.  # noqa: E501
 
-        true | false Checks if invert matches or not  # noqa: E501
+        The values can be true|false Checks if invert matches or not  # noqa: E501
 
         :return: The invert_match of this WebCheckStep.  # noqa: E501
         :rtype: bool
@@ -585,7 +585,7 @@ class WebCheckStep(object):
     def invert_match(self, invert_match):
         """Sets the invert_match of this WebCheckStep.
 
-        true | false Checks if invert matches or not  # noqa: E501
+        The values can be true|false Checks if invert matches or not  # noqa: E501
 
         :param invert_match: The invert_match of this WebCheckStep.  # noqa: E501
         :type: bool
@@ -643,7 +643,7 @@ class WebCheckStep(object):
     def follow_redirection(self):
         """Gets the follow_redirection of this WebCheckStep.  # noqa: E501
 
-        true | false Specifies whether to follow redirection or not  # noqa: E501
+        The values can be true|false Specifies whether to follow redirection or not  # noqa: E501
 
         :return: The follow_redirection of this WebCheckStep.  # noqa: E501
         :rtype: object
@@ -654,7 +654,7 @@ class WebCheckStep(object):
     def follow_redirection(self, follow_redirection):
         """Sets the follow_redirection of this WebCheckStep.
 
-        true | false Specifies whether to follow redirection or not  # noqa: E501
+        The values can be true|false Specifies whether to follow redirection or not  # noqa: E501
 
         :param follow_redirection: The follow_redirection of this WebCheckStep.  # noqa: E501
         :type: object
@@ -666,7 +666,7 @@ class WebCheckStep(object):
     def post_data_edit_type(self):
         """Gets the post_data_edit_type of this WebCheckStep.  # noqa: E501
 
-        Raw | Formatted Data Specifies POST data type  # noqa: E501
+        The values can be Raw|Formatted Data Specifies POST data type  # noqa: E501
 
         :return: The post_data_edit_type of this WebCheckStep.  # noqa: E501
         :rtype: str
@@ -677,7 +677,7 @@ class WebCheckStep(object):
     def post_data_edit_type(self, post_data_edit_type):
         """Sets the post_data_edit_type of this WebCheckStep.
 
-        Raw | Formatted Data Specifies POST data type  # noqa: E501
+        The values can be Raw|Formatted Data Specifies POST data type  # noqa: E501
 
         :param post_data_edit_type: The post_data_edit_type of this WebCheckStep.  # noqa: E501
         :type: str
@@ -712,7 +712,7 @@ class WebCheckStep(object):
     def require_auth(self):
         """Gets the require_auth of this WebCheckStep.  # noqa: E501
 
-        true | false Checks if authorization required or not  # noqa: E501
+        The values can be true|false Checks if authorization required or not  # noqa: E501
 
         :return: The require_auth of this WebCheckStep.  # noqa: E501
         :rtype: bool
@@ -723,7 +723,7 @@ class WebCheckStep(object):
     def require_auth(self, require_auth):
         """Sets the require_auth of this WebCheckStep.
 
-        true | false Checks if authorization required or not  # noqa: E501
+        The values can be true|false Checks if authorization required or not  # noqa: E501
 
         :param require_auth: The require_auth of this WebCheckStep.  # noqa: E501
         :type: bool
@@ -735,7 +735,7 @@ class WebCheckStep(object):
     def req_type(self):
         """Gets the req_type of this WebCheckStep.  # noqa: E501
 
-        script | config Step Request Type  # noqa: E501
+        The values can be script|config Step Request Type  # noqa: E501
 
         :return: The req_type of this WebCheckStep.  # noqa: E501
         :rtype: str
@@ -746,7 +746,7 @@ class WebCheckStep(object):
     def req_type(self, req_type):
         """Sets the req_type of this WebCheckStep.
 
-        script | config Step Request Type  # noqa: E501
+        The values can be script|config Step Request Type  # noqa: E501
 
         :param req_type: The req_type of this WebCheckStep.  # noqa: E501
         :type: str
@@ -758,7 +758,7 @@ class WebCheckStep(object):
     def fullpage_load(self):
         """Gets the fullpage_load of this WebCheckStep.  # noqa: E501
 
-        true | false Checks if full page should be loaded or not  # noqa: E501
+        The values can be true|false Checks if full page should be loaded or not  # noqa: E501
 
         :return: The fullpage_load of this WebCheckStep.  # noqa: E501
         :rtype: bool
@@ -769,7 +769,7 @@ class WebCheckStep(object):
     def fullpage_load(self, fullpage_load):
         """Sets the fullpage_load of this WebCheckStep.
 
-        true | false Checks if full page should be loaded or not  # noqa: E501
+        The values can be true|false Checks if full page should be loaded or not  # noqa: E501
 
         :param fullpage_load: The fullpage_load of this WebCheckStep.  # noqa: E501
         :type: bool

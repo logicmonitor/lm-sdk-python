@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -208,7 +208,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def sdt_type(self):
         """Gets the sdt_type of this DeviceDataSourceInstanceSDT.  # noqa: E501
 
-        the type of sdt, values can be oneTime|weekly|monthly|daily|monthlyByWeek  # noqa: E501
+        The type of sdt. The values can be oneTime|weekly|monthly|daily|monthlyByWeek  # noqa: E501
 
         :return: The sdt_type of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :rtype: str
@@ -219,7 +219,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def sdt_type(self, sdt_type):
         """Sets the sdt_type of this DeviceDataSourceInstanceSDT.
 
-        the type of sdt, values can be oneTime|weekly|monthly|daily|monthlyByWeek  # noqa: E501
+        The type of sdt. The values can be oneTime|weekly|monthly|daily|monthlyByWeek  # noqa: E501
 
         :param sdt_type: The sdt_type of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :type: str
@@ -231,7 +231,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def month_day(self):
         """Gets the month_day of this DeviceDataSourceInstanceSDT.  # noqa: E501
 
-        1 | 2....| 31 The day of the month that the SDT will be active for a monthly SDT  # noqa: E501
+        The values can be 1 | 2....| 31. Specifies the day of the month that the SDT will be active for a monthly SDT  # noqa: E501
 
         :return: The month_day of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :rtype: int
@@ -242,7 +242,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def month_day(self, month_day):
         """Sets the month_day of this DeviceDataSourceInstanceSDT.
 
-        1 | 2....| 31 The day of the month that the SDT will be active for a monthly SDT  # noqa: E501
+        The values can be 1 | 2....| 31. Specifies the day of the month that the SDT will be active for a monthly SDT  # noqa: E501
 
         :param month_day: The month_day of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :type: int
@@ -323,7 +323,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def type(self):
         """Gets the type of this DeviceDataSourceInstanceSDT.  # noqa: E501
 
-        The type resource that this SDT is for: CollectorSDT | DeviceDataSourceInstanceSDT | DeviceBatchJobSDT | DeviceClusterAlertDefSDT | DeviceDataSourceInstanceGroupSDT | DeviceDataSourceSDT | DeviceEventSourceSDT | ResourceGroupSDT | ResourceSDT | WebsiteCheckpointSDT | WebsiteGroupSDT | WebsiteSDT | DeviceLogPipeLineResourceSDT  # noqa: E501
+        The type of resource that this SDT is for. The values can be CollectorSDT | DeviceDataSourceInstanceSDT | DeviceBatchJobSDT | DeviceClusterAlertDefSDT | DeviceDataSourceInstanceGroupSDT | DeviceDataSourceSDT | DeviceEventSourceSDT | ResourceGroupSDT | ResourceSDT | WebsiteCheckpointSDT | WebsiteGroupSDT | WebsiteSDT | DeviceLogPipeLineResourceSDT  # noqa: E501
 
         :return: The type of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :rtype: str
@@ -334,7 +334,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def type(self, type):
         """Sets the type of this DeviceDataSourceInstanceSDT.
 
-        The type resource that this SDT is for: CollectorSDT | DeviceDataSourceInstanceSDT | DeviceBatchJobSDT | DeviceClusterAlertDefSDT | DeviceDataSourceInstanceGroupSDT | DeviceDataSourceSDT | DeviceEventSourceSDT | ResourceGroupSDT | ResourceSDT | WebsiteCheckpointSDT | WebsiteGroupSDT | WebsiteSDT | DeviceLogPipeLineResourceSDT  # noqa: E501
+        The type of resource that this SDT is for. The values can be CollectorSDT | DeviceDataSourceInstanceSDT | DeviceBatchJobSDT | DeviceClusterAlertDefSDT | DeviceDataSourceInstanceGroupSDT | DeviceDataSourceSDT | DeviceEventSourceSDT | ResourceGroupSDT | ResourceSDT | WebsiteCheckpointSDT | WebsiteGroupSDT | WebsiteSDT | DeviceLogPipeLineResourceSDT  # noqa: E501
 
         :param type: The type of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :type: str
@@ -348,7 +348,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def is_effective(self):
         """Gets the is_effective of this DeviceDataSourceInstanceSDT.  # noqa: E501
 
-        true: the SDT is currently actice false: the SDT is currently inactive  # noqa: E501
+        The values can be true|false, where true: the SDT is currently active false: the SDT is currently inactive  # noqa: E501
 
         :return: The is_effective of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :rtype: bool
@@ -359,7 +359,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def is_effective(self, is_effective):
         """Sets the is_effective of this DeviceDataSourceInstanceSDT.
 
-        true: the SDT is currently actice false: the SDT is currently inactive  # noqa: E501
+        The values can be true|false, where true: the SDT is currently active false: the SDT is currently inactive  # noqa: E501
 
         :param is_effective: The is_effective of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :type: bool
@@ -371,7 +371,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def minute(self):
         """Gets the minute of this DeviceDataSourceInstanceSDT.  # noqa: E501
 
-        1 | 2....| 60 The minute of the hour that the SDT should begin for a repeating SDT  # noqa: E501
+        The values can be 1 | 2....| 60. Specifies the minute of the hour that the SDT should begin for a repeating SDT  # noqa: E501
 
         :return: The minute of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :rtype: int
@@ -382,7 +382,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def minute(self, minute):
         """Sets the minute of this DeviceDataSourceInstanceSDT.
 
-        1 | 2....| 60 The minute of the hour that the SDT should begin for a repeating SDT  # noqa: E501
+        The values can be 1 | 2....| 60. Specifies the minute of the hour that the SDT should begin for a repeating SDT  # noqa: E501
 
         :param minute: The minute of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :type: int
@@ -417,7 +417,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def end_hour(self):
         """Gets the end_hour of this DeviceDataSourceInstanceSDT.  # noqa: E501
 
-        1 | 2....| 24 The hour that the SDT ends for a repeating SDT  # noqa: E501
+        The values can be 1 | 2....| 24. Specifies the hour that the SDT ends for a repeating SDT  # noqa: E501
 
         :return: The end_hour of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :rtype: int
@@ -428,7 +428,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def end_hour(self, end_hour):
         """Sets the end_hour of this DeviceDataSourceInstanceSDT.
 
-        1 | 2....| 24 The hour that the SDT ends for a repeating SDT  # noqa: E501
+        The values can be 1 | 2....| 24. Specifies the hour that the SDT ends for a repeating SDT  # noqa: E501
 
         :param end_hour: The end_hour of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :type: int
@@ -463,7 +463,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def hour(self):
         """Gets the hour of this DeviceDataSourceInstanceSDT.  # noqa: E501
 
-        1 | 2....| 24 The hour that the SDT will start for a repeating SDT (daily, weekly, or monthly)  # noqa: E501
+        The values can be 1 | 2....| 24. Specifies the hour that the SDT will start for a repeating SDT (daily, weekly, or monthly)  # noqa: E501
 
         :return: The hour of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :rtype: int
@@ -474,7 +474,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def hour(self, hour):
         """Sets the hour of this DeviceDataSourceInstanceSDT.
 
-        1 | 2....| 24 The hour that the SDT will start for a repeating SDT (daily, weekly, or monthly)  # noqa: E501
+        The values can be 1 | 2....| 24. Specifies the hour that the SDT will start for a repeating SDT (daily, weekly, or monthly)  # noqa: E501
 
         :param hour: The hour of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :type: int
@@ -509,7 +509,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def week_day(self):
         """Gets the week_day of this DeviceDataSourceInstanceSDT.  # noqa: E501
 
-        the week day of sdt, values can be SUNDAY|MONDAY|TUESDAY|WEDNESDAY|THURSDAY|FRIDAY|SATURDAY  # noqa: E501
+        The week day of sdt. The values can be SUNDAY|MONDAY|TUESDAY|WEDNESDAY|THURSDAY|FRIDAY|SATURDAY  # noqa: E501
 
         :return: The week_day of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :rtype: str
@@ -520,7 +520,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def week_day(self, week_day):
         """Sets the week_day of this DeviceDataSourceInstanceSDT.
 
-        the week day of sdt, values can be SUNDAY|MONDAY|TUESDAY|WEDNESDAY|THURSDAY|FRIDAY|SATURDAY  # noqa: E501
+        The week day of sdt. The values can be SUNDAY|MONDAY|TUESDAY|WEDNESDAY|THURSDAY|FRIDAY|SATURDAY  # noqa: E501
 
         :param week_day: The week_day of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :type: str
@@ -578,7 +578,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def end_minute(self):
         """Gets the end_minute of this DeviceDataSourceInstanceSDT.  # noqa: E501
 
-        1 | 2....| 60 The minute of the hour that the SDT ends for a repeating SDT  # noqa: E501
+        The values can be 1 | 2....| 60. Specifies the minute of the hour that the SDT ends for a repeating SDT  # noqa: E501
 
         :return: The end_minute of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :rtype: int
@@ -589,7 +589,7 @@ class DeviceDataSourceInstanceSDT(SDT):
     def end_minute(self, end_minute):
         """Sets the end_minute of this DeviceDataSourceInstanceSDT.
 
-        1 | 2....| 60 The minute of the hour that the SDT ends for a repeating SDT  # noqa: E501
+        The values can be 1 | 2....| 60. Specifies the minute of the hour that the SDT ends for a repeating SDT  # noqa: E501
 
         :param end_minute: The end_minute of this DeviceDataSourceInstanceSDT.  # noqa: E501
         :type: int

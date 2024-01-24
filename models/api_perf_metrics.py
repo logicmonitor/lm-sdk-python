@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -33,6 +33,7 @@ class ApiPerfMetrics(object):
     swagger_types = {
         'summary': 'str',
         'total_waiting_requests': 'int',
+        'total_rejected_get_api_count': 'int',
         'tot_nano_time': 'int',
         'total_processed_requests': 'int',
         'total_requests': 'int',
@@ -44,6 +45,7 @@ class ApiPerfMetrics(object):
     attribute_map = {
         'summary': 'summary',
         'total_waiting_requests': 'totalWaitingRequests',
+        'total_rejected_get_api_count': 'totalRejectedGetAPICount',
         'tot_nano_time': 'totNanoTime',
         'total_processed_requests': 'totalProcessedRequests',
         'total_requests': 'totalRequests',
@@ -52,11 +54,12 @@ class ApiPerfMetrics(object):
         'tags': 'tags'
     }
 
-    def __init__(self, summary=None, total_waiting_requests=None, tot_nano_time=None, total_processed_requests=None, total_requests=None, api=None, max_nano_time=None, tags=None):  # noqa: E501
+    def __init__(self, summary=None, total_waiting_requests=None, total_rejected_get_api_count=None, tot_nano_time=None, total_processed_requests=None, total_requests=None, api=None, max_nano_time=None, tags=None):  # noqa: E501
         """ApiPerfMetrics - a model defined in Swagger"""  # noqa: E501
 
         self._summary = None
         self._total_waiting_requests = None
+        self._total_rejected_get_api_count = None
         self._tot_nano_time = None
         self._total_processed_requests = None
         self._total_requests = None
@@ -69,6 +72,8 @@ class ApiPerfMetrics(object):
             self.summary = summary
         if total_waiting_requests is not None:
             self.total_waiting_requests = total_waiting_requests
+        if total_rejected_get_api_count is not None:
+            self.total_rejected_get_api_count = total_rejected_get_api_count
         if tot_nano_time is not None:
             self.tot_nano_time = tot_nano_time
         if total_processed_requests is not None:
@@ -127,6 +132,29 @@ class ApiPerfMetrics(object):
         """
 
         self._total_waiting_requests = total_waiting_requests
+
+    @property
+    def total_rejected_get_api_count(self):
+        """Gets the total_rejected_get_api_count of this ApiPerfMetrics.  # noqa: E501
+
+        api's summary defined in swagger.json  # noqa: E501
+
+        :return: The total_rejected_get_api_count of this ApiPerfMetrics.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_rejected_get_api_count
+
+    @total_rejected_get_api_count.setter
+    def total_rejected_get_api_count(self, total_rejected_get_api_count):
+        """Sets the total_rejected_get_api_count of this ApiPerfMetrics.
+
+        api's summary defined in swagger.json  # noqa: E501
+
+        :param total_rejected_get_api_count: The total_rejected_get_api_count of this ApiPerfMetrics.  # noqa: E501
+        :type: int
+        """
+
+        self._total_rejected_get_api_count = total_rejected_get_api_count
 
     @property
     def tot_nano_time(self):

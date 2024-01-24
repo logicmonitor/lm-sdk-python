@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -134,7 +134,7 @@ class DeviceDataSourceInstanceConfig(object):
     def instance_name(self):
         """Gets the instance_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
-        device datasource instance name  # noqa: E501
+        Device datasource instance name  # noqa: E501
 
         :return: The instance_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :rtype: str
@@ -145,7 +145,7 @@ class DeviceDataSourceInstanceConfig(object):
     def instance_name(self, instance_name):
         """Sets the instance_name of this DeviceDataSourceInstanceConfig.
 
-        device datasource instance name  # noqa: E501
+        Device datasource instance name  # noqa: E501
 
         :param instance_name: The instance_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :type: str
@@ -157,7 +157,7 @@ class DeviceDataSourceInstanceConfig(object):
     def device_data_source_id(self):
         """Gets the device_data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
-        device datasource id  # noqa: E501
+        Device datasource id  # noqa: E501
 
         :return: The device_data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :rtype: int
@@ -168,7 +168,7 @@ class DeviceDataSourceInstanceConfig(object):
     def device_data_source_id(self, device_data_source_id):
         """Sets the device_data_source_id of this DeviceDataSourceInstanceConfig.
 
-        device datasource id  # noqa: E501
+        Device datasource id  # noqa: E501
 
         :param device_data_source_id: The device_data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :type: int
@@ -226,7 +226,7 @@ class DeviceDataSourceInstanceConfig(object):
     def version(self):
         """Gets the version of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
-        config version  # noqa: E501
+        Config version  # noqa: E501
 
         :return: The version of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :rtype: int
@@ -237,7 +237,7 @@ class DeviceDataSourceInstanceConfig(object):
     def version(self, version):
         """Sets the version of this DeviceDataSourceInstanceConfig.
 
-        config version  # noqa: E501
+        Config version  # noqa: E501
 
         :param version: The version of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :type: int
@@ -249,7 +249,7 @@ class DeviceDataSourceInstanceConfig(object):
     def device_id(self):
         """Gets the device_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
-        device id  # noqa: E501
+        Device id  # noqa: E501
 
         :return: The device_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :rtype: int
@@ -260,7 +260,7 @@ class DeviceDataSourceInstanceConfig(object):
     def device_id(self, device_id):
         """Sets the device_id of this DeviceDataSourceInstanceConfig.
 
-        device id  # noqa: E501
+        Device id  # noqa: E501
 
         :param device_id: The device_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :type: int
@@ -295,7 +295,7 @@ class DeviceDataSourceInstanceConfig(object):
     def device_display_name(self):
         """Gets the device_display_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
-        device display name  # noqa: E501
+        Device display name  # noqa: E501
 
         :return: The device_display_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :rtype: str
@@ -306,7 +306,7 @@ class DeviceDataSourceInstanceConfig(object):
     def device_display_name(self, device_display_name):
         """Sets the device_display_name of this DeviceDataSourceInstanceConfig.
 
-        device display name  # noqa: E501
+        Device display name  # noqa: E501
 
         :param device_display_name: The device_display_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :type: str
@@ -318,7 +318,7 @@ class DeviceDataSourceInstanceConfig(object):
     def data_source_name(self):
         """Gets the data_source_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
-        datasource name  # noqa: E501
+        Datasource name  # noqa: E501
 
         :return: The data_source_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :rtype: str
@@ -329,7 +329,7 @@ class DeviceDataSourceInstanceConfig(object):
     def data_source_name(self, data_source_name):
         """Sets the data_source_name of this DeviceDataSourceInstanceConfig.
 
-        datasource name  # noqa: E501
+        Datasource name  # noqa: E501
 
         :param data_source_name: The data_source_name of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :type: str
@@ -364,7 +364,7 @@ class DeviceDataSourceInstanceConfig(object):
     def data_source_id(self):
         """Gets the data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
-        configsource id  # noqa: E501
+        Configsource id  # noqa: E501
 
         :return: The data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :rtype: int
@@ -375,7 +375,7 @@ class DeviceDataSourceInstanceConfig(object):
     def data_source_id(self, data_source_id):
         """Sets the data_source_id of this DeviceDataSourceInstanceConfig.
 
-        configsource id  # noqa: E501
+        Configsource id  # noqa: E501
 
         :param data_source_id: The data_source_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :type: int
@@ -387,7 +387,7 @@ class DeviceDataSourceInstanceConfig(object):
     def instance_id(self):
         """Gets the instance_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
-        device datasource instance id  # noqa: E501
+        Device datasource instance id  # noqa: E501
 
         :return: The instance_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :rtype: int
@@ -398,7 +398,7 @@ class DeviceDataSourceInstanceConfig(object):
     def instance_id(self, instance_id):
         """Sets the instance_id of this DeviceDataSourceInstanceConfig.
 
-        device datasource instance id  # noqa: E501
+        Device datasource instance id  # noqa: E501
 
         :param instance_id: The instance_id of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :type: int
@@ -479,7 +479,7 @@ class DeviceDataSourceInstanceConfig(object):
     def poll_timestamp(self):
         """Gets the poll_timestamp of this DeviceDataSourceInstanceConfig.  # noqa: E501
 
-        datasource poll timestamp in milliseconds  # noqa: E501
+        Datasource poll timestamp in milliseconds  # noqa: E501
 
         :return: The poll_timestamp of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :rtype: int
@@ -490,7 +490,7 @@ class DeviceDataSourceInstanceConfig(object):
     def poll_timestamp(self, poll_timestamp):
         """Sets the poll_timestamp of this DeviceDataSourceInstanceConfig.
 
-        datasource poll timestamp in milliseconds  # noqa: E501
+        Datasource poll timestamp in milliseconds  # noqa: E501
 
         :param poll_timestamp: The poll_timestamp of this DeviceDataSourceInstanceConfig.  # noqa: E501
         :type: int

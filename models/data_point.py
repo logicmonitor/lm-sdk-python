@@ -3,7 +3,7 @@
 """
     LogicMonitor REST API
 
-    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. Note: For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. However, the RESPONSE parameters will always contain an underscore. For example, the REQUEST parameter can be testLocation or test_location. The RESPONSE parameter will be test_location.  # noqa: E501
+    LogicMonitor is a SaaS-based performance monitoring platform that provides full visibility into complex, hybrid infrastructures, offering granular performance monitoring and actionable data and insights. logicmonitor_sdk enables you to manage your LogicMonitor account programmatically. <br> <br> Note: <ul> <li> For Python SDKs, the REQUEST parameters can contain camelCase or an underscore. </li> <li> Both underscore and camelCase are supported if parameters are encapsulated within the body. </li> <li> Only camelCase is supported if parameters are encapsulated within the body and also if the user is passing raw JSON as REQUEST parameter. However, the RESPONSE parameters always contain an underscore. For example, you can use testLocation or test_location in the REQUEST parameter. But the RESPONSE parameter will always be test_location. </li> <li> The fields parameter only supports camelCase. </li> </ul>  # noqa: E501
 
     OpenAPI spec version: 3.0.0
     
@@ -185,7 +185,7 @@ class DataPoint(object):
     def alert_for_no_data(self):
         """Gets the alert_for_no_data of this DataPoint.  # noqa: E501
 
-        The triggered alert level if we cannot collect data for this datapoint, value can be 1-4 (0:unused alert, 1:alert ok, 2:warn alert, 2:error alert, 4:critical alert)  # noqa: E501
+        The triggered alert level if we cannot collect data for this datapoint. The values can be 0-4 (0:unused alert, 1:alert ok, 2:warn alert, 2:error alert, 4:critical alert)  # noqa: E501
 
         :return: The alert_for_no_data of this DataPoint.  # noqa: E501
         :rtype: int
@@ -196,7 +196,7 @@ class DataPoint(object):
     def alert_for_no_data(self, alert_for_no_data):
         """Sets the alert_for_no_data of this DataPoint.
 
-        The triggered alert level if we cannot collect data for this datapoint, value can be 1-4 (0:unused alert, 1:alert ok, 2:warn alert, 2:error alert, 4:critical alert)  # noqa: E501
+        The triggered alert level if we cannot collect data for this datapoint. The values can be 0-4 (0:unused alert, 1:alert ok, 2:warn alert, 2:error alert, 4:critical alert)  # noqa: E501
 
         :param alert_for_no_data: The alert_for_no_data of this DataPoint.  # noqa: E501
         :type: int
@@ -392,7 +392,7 @@ class DataPoint(object):
     def type(self):
         """Gets the type of this DataPoint.  # noqa: E501
 
-        The data metric type, values can be 0-7 (0:unknown, 1:counter, 2:gauge, 3:derive, 5:status, 6:compute, 7:counter32, 8:counter64)  # noqa: E501
+        The data metric type. The values can be 0-7 (0:unknown, 1:counter, 2:gauge, 3:derive, 5:status, 6:compute, 7:counter32, 8:counter64)  # noqa: E501
 
         :return: The type of this DataPoint.  # noqa: E501
         :rtype: int
@@ -403,7 +403,7 @@ class DataPoint(object):
     def type(self, type):
         """Sets the type of this DataPoint.
 
-        The data metric type, values can be 0-7 (0:unknown, 1:counter, 2:gauge, 3:derive, 5:status, 6:compute, 7:counter32, 8:counter64)  # noqa: E501
+        The data metric type. The values can be 0-7 (0:unknown, 1:counter, 2:gauge, 3:derive, 5:status, 6:compute, 7:counter32, 8:counter64)  # noqa: E501
 
         :param type: The type of this DataPoint.  # noqa: E501
         :type: int
@@ -461,7 +461,7 @@ class DataPoint(object):
     def alert_body(self):
         """Gets the alert_body of this DataPoint.  # noqa: E501
 
-        The customized alert message body define,  empty string mean we will use the define in default template  # noqa: E501
+        The customized alert message body define.  Empty string mean we will use the define in default template  # noqa: E501
 
         :return: The alert_body of this DataPoint.  # noqa: E501
         :rtype: str
@@ -472,7 +472,7 @@ class DataPoint(object):
     def alert_body(self, alert_body):
         """Sets the alert_body of this DataPoint.
 
-        The customized alert message body define,  empty string mean we will use the define in default template  # noqa: E501
+        The customized alert message body define.  Empty string mean we will use the define in default template  # noqa: E501
 
         :param alert_body: The alert_body of this DataPoint.  # noqa: E501
         :type: str
@@ -484,7 +484,7 @@ class DataPoint(object):
     def origin_id(self):
         """Gets the origin_id of this DataPoint.  # noqa: E501
 
-        portable id for origin tracking  # noqa: E501
+        Portable id for origin tracking  # noqa: E501
 
         :return: The origin_id of this DataPoint.  # noqa: E501
         :rtype: str
@@ -495,7 +495,7 @@ class DataPoint(object):
     def origin_id(self, origin_id):
         """Sets the origin_id of this DataPoint.
 
-        portable id for origin tracking  # noqa: E501
+        Portable id for origin tracking  # noqa: E501
 
         :param origin_id: The origin_id of this DataPoint.  # noqa: E501
         :type: str
@@ -530,7 +530,7 @@ class DataPoint(object):
     def alert_subject(self):
         """Gets the alert_subject of this DataPoint.  # noqa: E501
 
-        The customized alert message subject define, empty string mean we will use the define in default template  # noqa: E501
+        The customized alert message subject define. Empty string mean we will use the define in default template  # noqa: E501
 
         :return: The alert_subject of this DataPoint.  # noqa: E501
         :rtype: str
@@ -541,7 +541,7 @@ class DataPoint(object):
     def alert_subject(self, alert_subject):
         """Sets the alert_subject of this DataPoint.
 
-        The customized alert message subject define, empty string mean we will use the define in default template  # noqa: E501
+        The customized alert message subject define. Empty string mean we will use the define in default template  # noqa: E501
 
         :param alert_subject: The alert_subject of this DataPoint.  # noqa: E501
         :type: str
@@ -645,7 +645,7 @@ class DataPoint(object):
     def data_type(self):
         """Gets the data_type of this DataPoint.  # noqa: E501
 
-        The data value type, values can be 1-8 (1:boolean, 2:byte, 3:short, 4:int, 5:long, 6:float, 7:double, 8:ulong)  # noqa: E501
+        The data value type. The values can be 1-8 (1:boolean, 2:byte, 3:short, 4:int, 5:long, 6:float, 7:double, 8:ulong)  # noqa: E501
 
         :return: The data_type of this DataPoint.  # noqa: E501
         :rtype: int
@@ -656,7 +656,7 @@ class DataPoint(object):
     def data_type(self, data_type):
         """Sets the data_type of this DataPoint.
 
-        The data value type, values can be 1-8 (1:boolean, 2:byte, 3:short, 4:int, 5:long, 6:float, 7:double, 8:ulong)  # noqa: E501
+        The data value type. The values can be 1-8 (1:boolean, 2:byte, 3:short, 4:int, 5:long, 6:float, 7:double, 8:ulong)  # noqa: E501
 
         :param data_type: The data_type of this DataPoint.  # noqa: E501
         :type: int
@@ -668,7 +668,7 @@ class DataPoint(object):
     def critical_ad_adv_setting(self):
         """Gets the critical_ad_adv_setting of this DataPoint.  # noqa: E501
 
-        enable anomaly detection advance setting for CRITICAL severity  # noqa: E501
+        Enable anomaly detection advance setting for CRITICAL severity  # noqa: E501
 
         :return: The critical_ad_adv_setting of this DataPoint.  # noqa: E501
         :rtype: str
@@ -679,7 +679,7 @@ class DataPoint(object):
     def critical_ad_adv_setting(self, critical_ad_adv_setting):
         """Sets the critical_ad_adv_setting of this DataPoint.
 
-        enable anomaly detection advance setting for CRITICAL severity  # noqa: E501
+        Enable anomaly detection advance setting for CRITICAL severity  # noqa: E501
 
         :param critical_ad_adv_setting: The critical_ad_adv_setting of this DataPoint.  # noqa: E501
         :type: str
@@ -714,7 +714,7 @@ class DataPoint(object):
     def ad_adv_setting_enabled(self):
         """Gets the ad_adv_setting_enabled of this DataPoint.  # noqa: E501
 
-        the AD advance setting enable flag  # noqa: E501
+        The AD advance setting enable flag  # noqa: E501
 
         :return: The ad_adv_setting_enabled of this DataPoint.  # noqa: E501
         :rtype: bool
@@ -725,7 +725,7 @@ class DataPoint(object):
     def ad_adv_setting_enabled(self, ad_adv_setting_enabled):
         """Sets the ad_adv_setting_enabled of this DataPoint.
 
-        the AD advance setting enable flag  # noqa: E501
+        The AD advance setting enable flag  # noqa: E501
 
         :param ad_adv_setting_enabled: The ad_adv_setting_enabled of this DataPoint.  # noqa: E501
         :type: bool
@@ -737,7 +737,7 @@ class DataPoint(object):
     def error_ad_adv_setting(self):
         """Gets the error_ad_adv_setting of this DataPoint.  # noqa: E501
 
-        enable anomaly detection advance setting for ERROR severity  # noqa: E501
+        Enable anomaly detection advance setting for ERROR severity  # noqa: E501
 
         :return: The error_ad_adv_setting of this DataPoint.  # noqa: E501
         :rtype: str
@@ -748,7 +748,7 @@ class DataPoint(object):
     def error_ad_adv_setting(self, error_ad_adv_setting):
         """Sets the error_ad_adv_setting of this DataPoint.
 
-        enable anomaly detection advance setting for ERROR severity  # noqa: E501
+        Enable anomaly detection advance setting for ERROR severity  # noqa: E501
 
         :param error_ad_adv_setting: The error_ad_adv_setting of this DataPoint.  # noqa: E501
         :type: str
@@ -760,7 +760,7 @@ class DataPoint(object):
     def warn_ad_adv_setting(self):
         """Gets the warn_ad_adv_setting of this DataPoint.  # noqa: E501
 
-        enable anomaly detection advance setting for WARN severity  # noqa: E501
+        Enable anomaly detection advance setting for WARN severity  # noqa: E501
 
         :return: The warn_ad_adv_setting of this DataPoint.  # noqa: E501
         :rtype: str
@@ -771,7 +771,7 @@ class DataPoint(object):
     def warn_ad_adv_setting(self, warn_ad_adv_setting):
         """Sets the warn_ad_adv_setting of this DataPoint.
 
-        enable anomaly detection advance setting for WARN severity  # noqa: E501
+        Enable anomaly detection advance setting for WARN severity  # noqa: E501
 
         :param warn_ad_adv_setting: The warn_ad_adv_setting of this DataPoint.  # noqa: E501
         :type: str
