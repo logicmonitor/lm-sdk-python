@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **ack_comment** | **str** | The comment submitted with the acknowledgement | [optional] 
 **monitor_object_name** | **str** | The name of the object that the alert is associated with | [optional] 
 **data_point_name** | **str** | The name of the datapoint in alert | [optional] 
+**alert_group_entity_value** | **str** | Alert group entity value for stateful log alerts | [optional] 
 **instance_id** | **int** | The id of the instance in alert | [optional] 
 **data_point_id** | **int** | The id of the datapoint in alert | [optional] 
 **suppress_desc** | **str** | The description for suppressed alert | [optional] 

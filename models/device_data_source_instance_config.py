@@ -38,6 +38,7 @@ class DeviceDataSourceInstanceConfig(object):
         'device_data_source_id': 'int',
         'exclude_lines': 'list[int]',
         'config_status': 'int',
+        'compared_with': 'str',
         'version': 'int',
         'device_id': 'int',
         'delta_config': 'list[DeviceDataSourceInstanceConfigDiff]',
@@ -58,6 +59,7 @@ class DeviceDataSourceInstanceConfig(object):
         'device_data_source_id': 'deviceDataSourceId',
         'exclude_lines': 'excludeLines',
         'config_status': 'configStatus',
+        'compared_with': 'comparedWith',
         'version': 'version',
         'device_id': 'deviceId',
         'delta_config': 'deltaConfig',
@@ -73,13 +75,14 @@ class DeviceDataSourceInstanceConfig(object):
         'config': 'config'
     }
 
-    def __init__(self, instance_name=None, device_data_source_id=None, exclude_lines=None, config_status=None, version=None, device_id=None, delta_config=None, device_display_name=None, data_source_name=None, alerts=None, data_source_id=None, instance_id=None, config_err_msg=None, change_status=None, id=None, poll_timestamp=None, config=None):  # noqa: E501
+    def __init__(self, instance_name=None, device_data_source_id=None, exclude_lines=None, config_status=None, compared_with=None, version=None, device_id=None, delta_config=None, device_display_name=None, data_source_name=None, alerts=None, data_source_id=None, instance_id=None, config_err_msg=None, change_status=None, id=None, poll_timestamp=None, config=None):  # noqa: E501
         """DeviceDataSourceInstanceConfig - a model defined in Swagger"""  # noqa: E501
 
         self._instance_name = None
         self._device_data_source_id = None
         self._exclude_lines = None
         self._config_status = None
+        self._compared_with = None
         self._version = None
         self._device_id = None
         self._delta_config = None
@@ -103,6 +106,8 @@ class DeviceDataSourceInstanceConfig(object):
             self.exclude_lines = exclude_lines
         if config_status is not None:
             self.config_status = config_status
+        if compared_with is not None:
+            self.compared_with = compared_with
         if version is not None:
             self.version = version
         if device_id is not None:
@@ -221,6 +226,29 @@ class DeviceDataSourceInstanceConfig(object):
         """
 
         self._config_status = config_status
+
+    @property
+    def compared_with(self):
+        """Gets the compared_with of this DeviceDataSourceInstanceConfig.  # noqa: E501
+
+        Version compared with and found difference  # noqa: E501
+
+        :return: The compared_with of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._compared_with
+
+    @compared_with.setter
+    def compared_with(self, compared_with):
+        """Sets the compared_with of this DeviceDataSourceInstanceConfig.
+
+        Version compared with and found difference  # noqa: E501
+
+        :param compared_with: The compared_with of this DeviceDataSourceInstanceConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._compared_with = compared_with
 
     @property
     def version(self):

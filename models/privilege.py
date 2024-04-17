@@ -164,7 +164,7 @@ class Privilege(object):
     def object_type(self):
         """Gets the object_type of this Privilege.  # noqa: E501
 
-        The privilege object type. The values can be dashboard_group|dashboard|host_group|service_group|website_group|report_group|remoteSession|chat|setting|device_dashboard|help|logs|configNeedDeviceManagePermission|map|resourceMapTab|tracesManageTab|dexda|lmSupportAccess  # noqa: E501
+        The privilege object type. The values can be dashboard_group|dashboard|host_group|service_group|website_group|report_group|remoteSession|chat|setting|device_dashboard|help|logs|configNeedDeviceManagePermission|map|resourceMapTab|tracesManageTab|costOptimization|dexda|lmSupportAccess  # noqa: E501
 
         :return: The object_type of this Privilege.  # noqa: E501
         :rtype: str
@@ -175,7 +175,7 @@ class Privilege(object):
     def object_type(self, object_type):
         """Sets the object_type of this Privilege.
 
-        The privilege object type. The values can be dashboard_group|dashboard|host_group|service_group|website_group|report_group|remoteSession|chat|setting|device_dashboard|help|logs|configNeedDeviceManagePermission|map|resourceMapTab|tracesManageTab|dexda|lmSupportAccess  # noqa: E501
+        The privilege object type. The values can be dashboard_group|dashboard|host_group|service_group|website_group|report_group|remoteSession|chat|setting|device_dashboard|help|logs|configNeedDeviceManagePermission|map|resourceMapTab|tracesManageTab|costOptimization|dexda|lmSupportAccess  # noqa: E501
 
         :param object_type: The object_type of this Privilege.  # noqa: E501
         :type: str

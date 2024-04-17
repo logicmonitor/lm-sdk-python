@@ -96,7 +96,8 @@ class EventSource(object):
         '': 'RestAzureResourceLogAnalyticsWorkspacesSource',
         '': 'RestAzureResourceHealthEventSource',
         '': 'AzureEmergingIssueEventSource',
-        'azurerss': 'AzureRssEventSource'
+        'azurerss': 'AzureRssEventSource',
+        '': 'RestAwsOrganizationalHealthEventSource'
     }
 
     def __init__(self, suppress_duplicates_es=None, alert_subject_template=None, alert_level=None, description=None, applies_to=None, technology=None, filters=None, version=None, lineage_id=None, collector=None, tags=None, audit_version=None, installation_metadata=None, alert_body_template=None, checksum=None, name=None, clear_after_ack=None, id=None, alert_effective_ival=None, group=None):  # noqa: E501
@@ -374,7 +375,7 @@ class EventSource(object):
     def collector(self):
         """Gets the collector of this EventSource.  # noqa: E501
 
-        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | ipmievent  # noqa: E501
+        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | awsorganizationalhealth | ipmievent  # noqa: E501
 
         :return: The collector of this EventSource.  # noqa: E501
         :rtype: str
@@ -385,7 +386,7 @@ class EventSource(object):
     def collector(self, collector):
         """Sets the collector of this EventSource.
 
-        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | ipmievent  # noqa: E501
+        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | awsorganizationalhealth | ipmievent  # noqa: E501
 
         :param collector: The collector of this EventSource.  # noqa: E501
         :type: str

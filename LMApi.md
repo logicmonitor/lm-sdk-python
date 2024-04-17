@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**ack_alert_by_id**](LMApi.md#ack_alert_by_id) | **POST** /alert/alerts/{id}/ack | ack alert by id
 [**ack_collector_down_alert_by_id**](LMApi.md#ack_collector_down_alert_by_id) | **POST** /setting/collector/collectors/{id}/ackdown | ack collector down alert
+[**add_access_group**](LMApi.md#add_access_group) | **POST** /setting/accessgroup/add | Create a access group
 [**add_admin**](LMApi.md#add_admin) | **POST** /setting/admins | add user
 [**add_alert_note_by_id**](LMApi.md#add_alert_note_by_id) | **POST** /alert/alerts/{id}/note | add alert note
 [**add_alert_rule**](LMApi.md#add_alert_rule) | **POST** /setting/alert/rules | add alert rule
@@ -35,6 +36,7 @@ Method | HTTP request | Description
 [**add_website_group**](LMApi.md#add_website_group) | **POST** /website/groups | add website group
 [**add_widget**](LMApi.md#add_widget) | **POST** /dashboard/widgets | add widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 [**collect_device_config_source_config**](LMApi.md#collect_device_config_source_config) | **POST** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/config/configCollection | collect a config for a device
+[**delete_access_group**](LMApi.md#delete_access_group) | **DELETE** /setting/accessgroup/{id} | Delete access group
 [**delete_admin_by_id**](LMApi.md#delete_admin_by_id) | **DELETE** /setting/admins/{id} | delete user
 [**delete_alert_rule_by_id**](LMApi.md#delete_alert_rule_by_id) | **DELETE** /setting/alert/rules/{id} | delete alert rule
 [**delete_collector_by_id**](LMApi.md#delete_collector_by_id) | **DELETE** /setting/collector/collectors/{id} | delete collector
@@ -55,10 +57,13 @@ Method | HTTP request | Description
 [**delete_website_group_by_id**](LMApi.md#delete_website_group_by_id) | **DELETE** /website/groups/{id} | delete website group
 [**delete_widget_by_id**](LMApi.md#delete_widget_by_id) | **DELETE** /dashboard/widgets/{id} | delete widget
 [**discover_subscriptions**](LMApi.md#discover_subscriptions) | **POST** /azure/functions/discoverSubscriptions | view subscriptions
+[**escalated_alert_by_id**](LMApi.md#escalated_alert_by_id) | **POST** /alert/alerts/{id}/escalate | escalate alert by id
 [**execute_debug_command**](LMApi.md#execute_debug_command) | **POST** /debug | Execute a Collector debug command
 [**fetch_device_instances_data**](LMApi.md#fetch_device_instances_data) | **POST** /device/instances/datafetch | fetch device instances data
 [**fetch_report_using_task_id**](LMApi.md#fetch_report_using_task_id) | **GET** /report/reports/{id}/tasks/{taskId} | get report for task Id
 [**generate_report_by_id**](LMApi.md#generate_report_by_id) | **POST** /report/reports/{id}/executions | run a report
+[**get_access_group_by_id**](LMApi.md#get_access_group_by_id) | **GET** /setting/accessgroup/{id} | Get access group by id
+[**get_access_group_list**](LMApi.md#get_access_group_list) | **GET** /setting/accessgroup | Get access group list
 [**get_admin_by_id**](LMApi.md#get_admin_by_id) | **GET** /setting/admins/{id} | get user
 [**get_admin_list**](LMApi.md#get_admin_list) | **GET** /setting/admins | get user list
 [**get_alert_by_id**](LMApi.md#get_alert_by_id) | **GET** /alert/alerts/{id} | get alert
@@ -101,6 +106,7 @@ Method | HTTP request | Description
 [**get_device_datasource_instance_by_id**](LMApi.md#get_device_datasource_instance_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id} | get device instance 
 [**get_device_datasource_instance_data**](LMApi.md#get_device_datasource_instance_data) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}/data | get device instance data
 [**get_device_datasource_instance_graph_data**](LMApi.md#get_device_datasource_instance_graph_data) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}/graphs/{graphId}/data | get device instance graph data 
+[**get_device_datasource_instance_group_by_id**](LMApi.md#get_device_datasource_instance_group_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{id} | get device datasource instance group 
 [**get_device_datasource_instance_group_list**](LMApi.md#get_device_datasource_instance_group_list) | **GET** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups | get device datasource instance group list 
 [**get_device_datasource_instance_group_overview_graph_data**](LMApi.md#get_device_datasource_instance_group_overview_graph_data) | **GET** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{dsigId}/graphs/{ographId}/data | get device instance group overview graph data 
 [**get_device_datasource_instance_list**](LMApi.md#get_device_datasource_instance_list) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances | get device instance list
@@ -164,6 +170,7 @@ Method | HTTP request | Description
 [**get_widget_data_by_id**](LMApi.md#get_widget_data_by_id) | **GET** /dashboard/widgets/{id}/data | get widget data (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 [**get_widget_list**](LMApi.md#get_widget_list) | **GET** /dashboard/widgets | get widget list (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 [**get_widget_list_by_dashboard_id**](LMApi.md#get_widget_list_by_dashboard_id) | **GET** /dashboard/dashboards/{id}/widgets | get widget list by DashboardId
+[**patch_access_group**](LMApi.md#patch_access_group) | **PATCH** /setting/accessgroup/{id} | Update access group
 [**patch_admin_by_id**](LMApi.md#patch_admin_by_id) | **PATCH** /setting/admins/{id} | update user
 [**patch_alert_rule_by_id**](LMApi.md#patch_alert_rule_by_id) | **PATCH** /setting/alert/rules/{id} | update alert rule
 [**patch_applies_to_function**](LMApi.md#patch_applies_to_function) | **PATCH** /setting/functions/{id} | update applies to function
@@ -183,7 +190,6 @@ Method | HTTP request | Description
 [**patch_device_group_property_by_name**](LMApi.md#patch_device_group_property_by_name) | **PATCH** /device/groups/{gid}/properties/{name} | update device group property
 [**patch_device_property_by_name**](LMApi.md#patch_device_property_by_name) | **PATCH** /device/devices/{deviceId}/properties/{name} | update device property
 [**patch_escalation_chain_by_id**](LMApi.md#patch_escalation_chain_by_id) | **PATCH** /setting/alert/chains/{id} | update escalation chain
-[**patch_instances_alert_threshold**](LMApi.md#patch_instances_alert_threshold) | **PATCH** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{dsigId}/datapoints/{dpId}/alertconfig | update instances alert threshold (Setting the threshold at default group is not allowed)
 [**patch_recipient_group_by_id**](LMApi.md#patch_recipient_group_by_id) | **PATCH** /setting/recipientgroups/{id} | update recipient group
 [**patch_report_by_id**](LMApi.md#patch_report_by_id) | **PATCH** /report/reports/{id} | update report
 [**patch_report_group_by_id**](LMApi.md#patch_report_group_by_id) | **PATCH** /report/groups/{id} | update report group
@@ -197,6 +203,7 @@ Method | HTTP request | Description
 [**test_azure_account**](LMApi.md#test_azure_account) | **POST** /azure/functions/testAccount | test Azure account
 [**test_gcp_account**](LMApi.md#test_gcp_account) | **POST** /gcp/functions/testAccount | test GCP account
 [**test_saa_s_account**](LMApi.md#test_saa_s_account) | **POST** /saas/functions/testAccount | test SaaS account
+[**update_access_group**](LMApi.md#update_access_group) | **PUT** /setting/accessgroup/{id} | Update access group
 [**update_admin_by_id**](LMApi.md#update_admin_by_id) | **PUT** /setting/admins/{id} | update user
 [**update_alert_rule_by_id**](LMApi.md#update_alert_rule_by_id) | **PUT** /setting/alert/rules/{id} | update alert rule
 [**update_applies_to_function**](LMApi.md#update_applies_to_function) | **PUT** /setting/functions/{id} | update applies to function
@@ -216,7 +223,7 @@ Method | HTTP request | Description
 [**update_device_group_property_by_name**](LMApi.md#update_device_group_property_by_name) | **PUT** /device/groups/{gid}/properties/{name} | update device group property
 [**update_device_property_by_name**](LMApi.md#update_device_property_by_name) | **PUT** /device/devices/{deviceId}/properties/{name} | update device property
 [**update_escalation_chain_by_id**](LMApi.md#update_escalation_chain_by_id) | **PUT** /setting/alert/chains/{id} | update escalation chain
-[**update_instances_alert_threshold**](LMApi.md#update_instances_alert_threshold) | **PUT** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{dsigId}/datapoints/{dpId}/alertconfig | update instances alert threshold (Setting the threshold at default group is not allowed)
+[**update_instance_group_alert_threshold**](LMApi.md#update_instance_group_alert_threshold) | **PUT** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{dsigId}/datapoints/{dpId}/alertconfig | update instance group alert threshold (Setting the threshold at default group is not allowed)
 [**update_recipient_group_by_id**](LMApi.md#update_recipient_group_by_id) | **PUT** /setting/recipientgroups/{id} | update recipient group
 [**update_report_by_id**](LMApi.md#update_report_by_id) | **PUT** /report/reports/{id} | update report
 [**update_report_group_by_id**](LMApi.md#update_report_group_by_id) | **PUT** /report/groups/{id} | update report group
@@ -327,6 +334,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 **object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_access_group**
+> AccessGroup add_access_group(body=body)
+
+Create a access group
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.AccessGroup() # AccessGroup |  (optional)
+
+try:
+    # Create a access group
+    api_response = api_instance.add_access_group(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->add_access_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**AccessGroup**](AccessGroup.md)|  | [optional] 
+
+### Return type
+
+[**AccessGroup**](AccessGroup.md)
 
 ### Authorization
 
@@ -1941,6 +2002,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_access_group**
+> object delete_access_group(id)
+
+Delete access group
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+
+try:
+    # Delete access group
+    api_response = api_instance.delete_access_group(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->delete_access_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_admin_by_id**
 > object delete_admin_by_id(id)
 
@@ -3045,6 +3160,60 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **escalated_alert_by_id**
+> object escalated_alert_by_id(id)
+
+escalate alert by id
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 'id_example' # str | 
+
+try:
+    # escalate alert by id
+    api_response = api_instance.escalated_alert_by_id(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->escalated_alert_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **execute_debug_command**
 > Debug execute_debug_command(body=body, collector_id=collector_id)
 
@@ -3271,6 +3440,122 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_access_group_by_id**
+> AccessGroup get_access_group_by_id(id, fields=fields)
+
+Get access group by id
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+fields = 'fields_example' # str |  (optional)
+
+try:
+    # Get access group by id
+    api_response = api_instance.get_access_group_by_id(id, fields=fields)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_access_group_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **fields** | **str**|  | [optional] 
+
+### Return type
+
+[**AccessGroup**](AccessGroup.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_access_group_list**
+> AccessGroupPaginationResponse get_access_group_list(fields=fields, size=size, offset=offset, filter=filter)
+
+Get access group list
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+fields = 'fields_example' # str |  (optional)
+size = 50 # int |  (optional) (default to 50)
+offset = 0 # int |  (optional) (default to 0)
+filter = 'filter_example' # str |  (optional)
+
+try:
+    # Get access group list
+    api_response = api_instance.get_access_group_list(fields=fields, size=size, offset=offset, filter=filter)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_access_group_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fields** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] [default to 50]
+ **offset** | **int**|  | [optional] [default to 0]
+ **filter** | **str**|  | [optional] 
+
+### Return type
+
+[**AccessGroupPaginationResponse**](AccessGroupPaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -5813,6 +6098,66 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GraphPlot**](GraphPlot.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_device_datasource_instance_group_by_id**
+> DeviceDataSourceInstanceGroup get_device_datasource_instance_group_by_id(device_id, device_ds_id, id, fields=fields)
+
+get device datasource instance group 
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+device_id = 56 # int | 
+device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
+id = 56 # int | 
+fields = 'fields_example' # str |  (optional)
+
+try:
+    # get device datasource instance group 
+    api_response = api_instance.get_device_datasource_instance_group_by_id(device_id, device_ds_id, id, fields=fields)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_device_datasource_instance_group_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_id** | **int**|  | 
+ **device_ds_id** | **int**| The device-datasource ID you&#39;d like to add an instance group for | 
+ **id** | **int**|  | 
+ **fields** | **str**|  | [optional] 
+
+### Return type
+
+[**DeviceDataSourceInstanceGroup**](DeviceDataSourceInstanceGroup.md)
 
 ### Authorization
 
@@ -9627,6 +9972,62 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **patch_access_group**
+> AccessGroup patch_access_group(id, body)
+
+Update access group
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.AccessGroup() # AccessGroup | 
+
+try:
+    # Update access group
+    api_response = api_instance.patch_access_group(id, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_access_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**AccessGroup**](AccessGroup.md)|  | 
+
+### Return type
+
+[**AccessGroup**](AccessGroup.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **patch_admin_by_id**
 > Admin patch_admin_by_id(id, body, change_password=change_password, validation_only=validation_only)
 
@@ -10753,68 +11154,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_instances_alert_threshold**
-> DeviceDataSourceInstanceGroup patch_instances_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, body=body)
-
-update instances alert threshold (Setting the threshold at default group is not allowed)
-
-
-
-### Example
-```python
-from __future__ import print_function
-import time
-import logicmonitor_sdk
-from logicmonitor_sdk.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: LMv1
-configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
-
-# create an instance of the API class
-api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-device_id = 56 # int | 
-device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
-dsig_id = 56 # int | 
-dp_id = 56 # int | 
-body = logicmonitor_sdk.RestDeviceInstanceGroupAlertConfigV3() # RestDeviceInstanceGroupAlertConfigV3 |  (optional)
-
-try:
-    # update instances alert threshold (Setting the threshold at default group is not allowed)
-    api_response = api_instance.patch_instances_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, body=body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling LMApi->patch_instances_alert_threshold: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **device_id** | **int**|  | 
- **device_ds_id** | **int**| The device-datasource ID you&#39;d like to add an instance group for | 
- **dsig_id** | **int**|  | 
- **dp_id** | **int**|  | 
- **body** | [**RestDeviceInstanceGroupAlertConfigV3**](RestDeviceInstanceGroupAlertConfigV3.md)|  | [optional] 
-
-### Return type
-
-[**DeviceDataSourceInstanceGroup**](DeviceDataSourceInstanceGroup.md)
-
-### Authorization
-
-[LMv1](../README.md#LMv1)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **patch_recipient_group_by_id**
 > RecipientGroup patch_recipient_group_by_id(id, body)
 
@@ -11531,6 +11870,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RestCloudOkPermissionsV3**](RestCloudOkPermissionsV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_access_group**
+> AccessGroup update_access_group(id, body)
+
+Update access group
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.AccessGroup() # AccessGroup | 
+
+try:
+    # Update access group
+    api_response = api_instance.update_access_group(id, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_access_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**AccessGroup**](AccessGroup.md)|  | 
+
+### Return type
+
+[**AccessGroup**](AccessGroup.md)
 
 ### Authorization
 
@@ -12669,10 +13064,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_instances_alert_threshold**
-> DeviceDataSourceInstanceGroup update_instances_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, body=body)
+# **update_instance_group_alert_threshold**
+> object update_instance_group_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, body=body)
 
-update instances alert threshold (Setting the threshold at default group is not allowed)
+update instance group alert threshold (Setting the threshold at default group is not allowed)
 
 
 
@@ -12699,11 +13094,11 @@ dp_id = 56 # int |
 body = logicmonitor_sdk.RestDeviceInstanceGroupAlertConfigV3() # RestDeviceInstanceGroupAlertConfigV3 |  (optional)
 
 try:
-    # update instances alert threshold (Setting the threshold at default group is not allowed)
-    api_response = api_instance.update_instances_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, body=body)
+    # update instance group alert threshold (Setting the threshold at default group is not allowed)
+    api_response = api_instance.update_instance_group_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, body=body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling LMApi->update_instances_alert_threshold: %s\n" % e)
+    print("Exception when calling LMApi->update_instance_group_alert_threshold: %s\n" % e)
 ```
 
 ### Parameters
@@ -12718,7 +13113,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DeviceDataSourceInstanceGroup**](DeviceDataSourceInstanceGroup.md)
+**object**
 
 ### Authorization
 

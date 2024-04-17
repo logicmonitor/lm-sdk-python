@@ -32,13 +32,13 @@ class DeviceGroupDataSourceDataPointConfig(object):
     """
     swagger_types = {
         'global_alert_expr': 'str',
-        'alert_for_no_data': 'str',
+        'alert_for_no_data': 'int',
         'enable_anomaly_alert_suppression': 'str',
-        'global_alert_for_no_data': 'str',
+        'global_alert_for_no_data': 'int',
         'critical_ad_adv_setting': 'str',
         'disable_alerting': 'bool',
-        'alert_clear_transition_interval': 'str',
-        'global_alert_transition_interval': 'str',
+        'alert_clear_transition_interval': 'int',
+        'global_alert_transition_interval': 'int',
         'alert_expr_note': 'str',
         'ad_adv_setting_enabled': 'bool',
         'error_ad_adv_setting': 'str',
@@ -49,10 +49,10 @@ class DeviceGroupDataSourceDataPointConfig(object):
         'data_point_name': 'str',
         'data_point_id': 'int',
         'global_enable_anomaly_alert_suppression': 'str',
-        'global_alert_clear_transition_interval': 'str',
+        'global_alert_clear_transition_interval': 'int',
         'collection_interval': 'int',
         'alert_expr': 'str',
-        'alert_transition_interval': 'str'
+        'alert_transition_interval': 'int'
     }
 
     attribute_map = {
@@ -174,10 +174,10 @@ class DeviceGroupDataSourceDataPointConfig(object):
     def alert_for_no_data(self):
         """Gets the alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
 
-        The triggered alert level if we cannot collect data for this datapoint. The values can be 0-4 (0:unused alert, 1:alert ok, 2:warn alert, 2:error alert, 4:critical alert)  # noqa: E501
+        The triggered alert level if we cannot collect data for this datapoint. The values can be 1-4 (1:no alert, 2:warn alert, 3:error alert, 4:critical alert)  # noqa: E501
 
         :return: The alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._alert_for_no_data
 
@@ -185,13 +185,11 @@ class DeviceGroupDataSourceDataPointConfig(object):
     def alert_for_no_data(self, alert_for_no_data):
         """Sets the alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.
 
-        The triggered alert level if we cannot collect data for this datapoint. The values can be 0-4 (0:unused alert, 1:alert ok, 2:warn alert, 2:error alert, 4:critical alert)  # noqa: E501
+        The triggered alert level if we cannot collect data for this datapoint. The values can be 1-4 (1:no alert, 2:warn alert, 3:error alert, 4:critical alert)  # noqa: E501
 
         :param alert_for_no_data: The alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
+        :type: int
         """
-        if alert_for_no_data is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', alert_for_no_data):  # noqa: E501
-            raise ValueError("Invalid value for `alert_for_no_data`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
 
         self._alert_for_no_data = alert_for_no_data
 
@@ -220,10 +218,10 @@ class DeviceGroupDataSourceDataPointConfig(object):
     def global_alert_for_no_data(self):
         """Gets the global_alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
 
-        The triggered alert level if we cannot collect data for this datapoint. The values can be 0-4 (0:unused alert, 1:alert ok, 2:warn alert, 2:error alert, 4:critical alert)  # noqa: E501
+        The triggered alert level if we cannot collect data for this datapoint. The values can be 1-4 (1:no alert, 2:warn alert, 3:error alert, 4:critical alert)  # noqa: E501
 
         :return: The global_alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._global_alert_for_no_data
 
@@ -231,13 +229,11 @@ class DeviceGroupDataSourceDataPointConfig(object):
     def global_alert_for_no_data(self, global_alert_for_no_data):
         """Sets the global_alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.
 
-        The triggered alert level if we cannot collect data for this datapoint. The values can be 0-4 (0:unused alert, 1:alert ok, 2:warn alert, 2:error alert, 4:critical alert)  # noqa: E501
+        The triggered alert level if we cannot collect data for this datapoint. The values can be 1-4 (1:no alert, 2:warn alert, 3:error alert, 4:critical alert)  # noqa: E501
 
         :param global_alert_for_no_data: The global_alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
+        :type: int
         """
-        if global_alert_for_no_data is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', global_alert_for_no_data):  # noqa: E501
-            raise ValueError("Invalid value for `global_alert_for_no_data`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
 
         self._global_alert_for_no_data = global_alert_for_no_data
 
@@ -287,10 +283,10 @@ class DeviceGroupDataSourceDataPointConfig(object):
     def alert_clear_transition_interval(self):
         """Gets the alert_clear_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
 
-        The count that the alert must exist for this many poll cycles before the alert will be cleared  # noqa: E501
+        The count that the alert must exist for this many poll cycles before the alert will be cleared (0-60)  # noqa: E501
 
         :return: The alert_clear_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._alert_clear_transition_interval
 
@@ -298,13 +294,11 @@ class DeviceGroupDataSourceDataPointConfig(object):
     def alert_clear_transition_interval(self, alert_clear_transition_interval):
         """Sets the alert_clear_transition_interval of this DeviceGroupDataSourceDataPointConfig.
 
-        The count that the alert must exist for this many poll cycles before the alert will be cleared  # noqa: E501
+        The count that the alert must exist for this many poll cycles before the alert will be cleared (0-60)  # noqa: E501
 
         :param alert_clear_transition_interval: The alert_clear_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
+        :type: int
         """
-        if alert_clear_transition_interval is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', alert_clear_transition_interval):  # noqa: E501
-            raise ValueError("Invalid value for `alert_clear_transition_interval`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
 
         self._alert_clear_transition_interval = alert_clear_transition_interval
 
@@ -315,7 +309,7 @@ class DeviceGroupDataSourceDataPointConfig(object):
         The count that the alert must exist for this many poll cycles before it will be triggered  # noqa: E501
 
         :return: The global_alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._global_alert_transition_interval
 
@@ -326,10 +320,8 @@ class DeviceGroupDataSourceDataPointConfig(object):
         The count that the alert must exist for this many poll cycles before it will be triggered  # noqa: E501
 
         :param global_alert_transition_interval: The global_alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
+        :type: int
         """
-        if global_alert_transition_interval is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', global_alert_transition_interval):  # noqa: E501
-            raise ValueError("Invalid value for `global_alert_transition_interval`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
 
         self._global_alert_transition_interval = global_alert_transition_interval
 
@@ -554,7 +546,7 @@ class DeviceGroupDataSourceDataPointConfig(object):
         The count that the alert must exist for this many poll cycles before the alert will be cleared  # noqa: E501
 
         :return: The global_alert_clear_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._global_alert_clear_transition_interval
 
@@ -565,10 +557,8 @@ class DeviceGroupDataSourceDataPointConfig(object):
         The count that the alert must exist for this many poll cycles before the alert will be cleared  # noqa: E501
 
         :param global_alert_clear_transition_interval: The global_alert_clear_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
+        :type: int
         """
-        if global_alert_clear_transition_interval is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', global_alert_clear_transition_interval):  # noqa: E501
-            raise ValueError("Invalid value for `global_alert_clear_transition_interval`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
 
         self._global_alert_clear_transition_interval = global_alert_clear_transition_interval
 
@@ -622,10 +612,10 @@ class DeviceGroupDataSourceDataPointConfig(object):
     def alert_transition_interval(self):
         """Gets the alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
 
-        The count that the alert must exist for this many poll cycles before it will be triggered  # noqa: E501
+        The count that the alert must exist for this many poll cycles before it will be triggered (0-60)  # noqa: E501
 
         :return: The alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._alert_transition_interval
 
@@ -633,13 +623,11 @@ class DeviceGroupDataSourceDataPointConfig(object):
     def alert_transition_interval(self, alert_transition_interval):
         """Sets the alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.
 
-        The count that the alert must exist for this many poll cycles before it will be triggered  # noqa: E501
+        The count that the alert must exist for this many poll cycles before it will be triggered (0-60)  # noqa: E501
 
         :param alert_transition_interval: The alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
+        :type: int
         """
-        if alert_transition_interval is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', alert_transition_interval):  # noqa: E501
-            raise ValueError("Invalid value for `alert_transition_interval`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
 
         self._alert_transition_interval = alert_transition_interval
 

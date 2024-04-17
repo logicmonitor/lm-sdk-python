@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **last_action_on_local** | **str** | The time, in local format, of the user&#39;s last action | [optional] 
 **sms_email_format** | **str** | The values can be sms | fullText, where sms &#x3D; 160 characters and fullText &#x3D; all characters | [optional] 
 **apionly** | **bool** | Specifies whether the user is an API only user. The values can be true|false | [optional] 
+**last_auth_ip** | **str** | The Last User IP | [optional] 
 **api_tokens** | [**list[APIToken]**](APIToken.md) | Any API Tokens associated with the user | [optional] 
 **admin_group_ids** | **list[int]** | The Id(s) of the groups the admin is in, where multiple group ids are comma separated | [optional] 
 **password** | **str** | The password associated with the user | 
@@ -22,6 +23,7 @@ Name | Type | Description | Notes
 **email** | **str** | The email address associated with the user | 
 **contact_method** | **str** | The values can be email | smsemail. Specifies the contact method for this admin | [optional] 
 **accept_eula_on** | **int** | The time, in epoch format, that the user accepted the EULA (if required to) | [optional] 
+**immediate_force_logout** | **bool** | Specifies whether the user need to be logged off, if Force Password Change is enabled. The values can be true|false | [optional] 
 **user_permission** | **str** | The permission of current user with the admin. values can be write|read|none | [optional] 
 **sms_email** | **str** | The sms email address associated with the user | [optional] 
 **two_fa_enabled** | **bool** | Whether or not two factor authentication is enabled for the user | [optional] 
