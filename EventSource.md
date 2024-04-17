@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **filters** | [**list[RestEventSourceFilter]**](RestEventSourceFilter.md) | The filters for the EventSource | [optional] 
 **version** | **int** | The epoch time of the last update to the EventSource | [optional] 
 **lineage_id** | **str** | The lineageId the LMModule belongs to | [optional] 
-**collector** | **str** | The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | ipmievent | [optional] 
+**collector** | **str** | The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | awsorganizationalhealth | ipmievent | [optional] 
 **tags** | **str** | The Tags for the LMModule | [optional] 
 **audit_version** | **int** | The auditVersion of the EventSource | [optional] 
 **installation_metadata** | [**IntegrationMetadata**](IntegrationMetadata.md) | The local module&#39;s IntegrationMetadata, readable for troubleshooting purposes | [optional] 

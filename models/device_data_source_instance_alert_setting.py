@@ -18,6 +18,7 @@ import six
 
 from logicmonitor_sdk.models.device_group_alert_threshold_info import DeviceGroupAlertThresholdInfo  # noqa: F401,E501
 from logicmonitor_sdk.models.instance_group_alert_threshold_info import InstanceGroupAlertThresholdInfo  # noqa: F401,E501
+from logicmonitor_sdk.models.resource_data_source_alert_threshold_info import ResourceDataSourceAlertThresholdInfo  # noqa: F401,E501
 
 
 class DeviceDataSourceInstanceAlertSetting(object):
@@ -39,7 +40,7 @@ class DeviceDataSourceInstanceAlertSetting(object):
         'alert_for_no_data': 'int',
         'post_processor_param': 'str',
         'disable_alerting': 'bool',
-        'global_alert_transition_interval': 'str',
+        'global_alert_transition_interval': 'int',
         'data_point_description': 'str',
         'global_enable_anomaly_alert_generation': 'str',
         'enable_anomaly_alert_generation': 'str',
@@ -49,10 +50,11 @@ class DeviceDataSourceInstanceAlertSetting(object):
         'global_enable_anomaly_alert_suppression': 'str',
         'device_group_id': 'int',
         'id': 'int',
-        'global_alert_clear_transition_interval': 'str',
+        'global_alert_clear_transition_interval': 'int',
+        'parent_resource_data_source_alert_expr': 'ResourceDataSourceAlertThresholdInfo',
         'device_group_full_path': 'str',
         'alert_transition_interval': 'int',
-        'global_alert_for_no_data': 'str',
+        'global_alert_for_no_data': 'int',
         'enable_anomaly_alert_suppression': 'str',
         'alert_clear_interval': 'int',
         'critical_ad_adv_setting': 'str',
@@ -86,6 +88,7 @@ class DeviceDataSourceInstanceAlertSetting(object):
         'device_group_id': 'deviceGroupId',
         'id': 'id',
         'global_alert_clear_transition_interval': 'globalAlertClearTransitionInterval',
+        'parent_resource_data_source_alert_expr': 'parentResourceDataSourceAlertExpr',
         'device_group_full_path': 'deviceGroupFullPath',
         'alert_transition_interval': 'alertTransitionInterval',
         'global_alert_for_no_data': 'globalAlertForNoData',
@@ -105,7 +108,7 @@ class DeviceDataSourceInstanceAlertSetting(object):
         'alert_expr': 'alertExpr'
     }
 
-    def __init__(self, global_alert_expr=None, parent_instance_group_alert_expr=None, alert_for_no_data=None, post_processor_param=None, disable_alerting=None, global_alert_transition_interval=None, data_point_description=None, global_enable_anomaly_alert_generation=None, enable_anomaly_alert_generation=None, disable_dp_alert_host_groups=None, data_point_name=None, data_point_id=None, global_enable_anomaly_alert_suppression=None, device_group_id=None, id=None, global_alert_clear_transition_interval=None, device_group_full_path=None, alert_transition_interval=None, global_alert_for_no_data=None, enable_anomaly_alert_suppression=None, alert_clear_interval=None, critical_ad_adv_setting=None, alert_expr_note=None, ad_adv_setting_enabled=None, error_ad_adv_setting=None, data_source_instance_id=None, warn_ad_adv_setting=None, global_post_processor_param=None, parent_device_group_alert_expr_list=None, alerting_disabled_on=None, data_source_instance_alias=None, collection_interval=None, alert_expr=None):  # noqa: E501
+    def __init__(self, global_alert_expr=None, parent_instance_group_alert_expr=None, alert_for_no_data=None, post_processor_param=None, disable_alerting=None, global_alert_transition_interval=None, data_point_description=None, global_enable_anomaly_alert_generation=None, enable_anomaly_alert_generation=None, disable_dp_alert_host_groups=None, data_point_name=None, data_point_id=None, global_enable_anomaly_alert_suppression=None, device_group_id=None, id=None, global_alert_clear_transition_interval=None, parent_resource_data_source_alert_expr=None, device_group_full_path=None, alert_transition_interval=None, global_alert_for_no_data=None, enable_anomaly_alert_suppression=None, alert_clear_interval=None, critical_ad_adv_setting=None, alert_expr_note=None, ad_adv_setting_enabled=None, error_ad_adv_setting=None, data_source_instance_id=None, warn_ad_adv_setting=None, global_post_processor_param=None, parent_device_group_alert_expr_list=None, alerting_disabled_on=None, data_source_instance_alias=None, collection_interval=None, alert_expr=None):  # noqa: E501
         """DeviceDataSourceInstanceAlertSetting - a model defined in Swagger"""  # noqa: E501
 
         self._global_alert_expr = None
@@ -124,6 +127,7 @@ class DeviceDataSourceInstanceAlertSetting(object):
         self._device_group_id = None
         self._id = None
         self._global_alert_clear_transition_interval = None
+        self._parent_resource_data_source_alert_expr = None
         self._device_group_full_path = None
         self._alert_transition_interval = None
         self._global_alert_for_no_data = None
@@ -175,6 +179,8 @@ class DeviceDataSourceInstanceAlertSetting(object):
             self.id = id
         if global_alert_clear_transition_interval is not None:
             self.global_alert_clear_transition_interval = global_alert_clear_transition_interval
+        if parent_resource_data_source_alert_expr is not None:
+            self.parent_resource_data_source_alert_expr = parent_resource_data_source_alert_expr
         if device_group_full_path is not None:
             self.device_group_full_path = device_group_full_path
         if alert_transition_interval is not None:
@@ -260,7 +266,7 @@ class DeviceDataSourceInstanceAlertSetting(object):
     def alert_for_no_data(self):
         """Gets the alert_for_no_data of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
 
-        alert for no data  # noqa: E501
+        alert for no data (no alert-1, warning-2, error-3, critical-4)  # noqa: E501
 
         :return: The alert_for_no_data of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
         :rtype: int
@@ -271,7 +277,7 @@ class DeviceDataSourceInstanceAlertSetting(object):
     def alert_for_no_data(self, alert_for_no_data):
         """Sets the alert_for_no_data of this DeviceDataSourceInstanceAlertSetting.
 
-        alert for no data  # noqa: E501
+        alert for no data (no alert-1, warning-2, error-3, critical-4)  # noqa: E501
 
         :param alert_for_no_data: The alert_for_no_data of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
         :type: int
@@ -329,9 +335,10 @@ class DeviceDataSourceInstanceAlertSetting(object):
     def global_alert_transition_interval(self):
         """Gets the global_alert_transition_interval of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
 
+        The count that the alert must exist for this many poll cycles before it will be triggered  # noqa: E501
 
         :return: The global_alert_transition_interval of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._global_alert_transition_interval
 
@@ -339,12 +346,11 @@ class DeviceDataSourceInstanceAlertSetting(object):
     def global_alert_transition_interval(self, global_alert_transition_interval):
         """Sets the global_alert_transition_interval of this DeviceDataSourceInstanceAlertSetting.
 
+        The count that the alert must exist for this many poll cycles before it will be triggered  # noqa: E501
 
         :param global_alert_transition_interval: The global_alert_transition_interval of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
-        :type: str
+        :type: int
         """
-        if global_alert_transition_interval is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', global_alert_transition_interval):  # noqa: E501
-            raise ValueError("Invalid value for `global_alert_transition_interval`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
 
         self._global_alert_transition_interval = global_alert_transition_interval
 
@@ -559,9 +565,10 @@ class DeviceDataSourceInstanceAlertSetting(object):
     def global_alert_clear_transition_interval(self):
         """Gets the global_alert_clear_transition_interval of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
 
+        The count that the alert must exist for this many poll cycles before the alert will be cleared  # noqa: E501
 
         :return: The global_alert_clear_transition_interval of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._global_alert_clear_transition_interval
 
@@ -569,14 +576,36 @@ class DeviceDataSourceInstanceAlertSetting(object):
     def global_alert_clear_transition_interval(self, global_alert_clear_transition_interval):
         """Sets the global_alert_clear_transition_interval of this DeviceDataSourceInstanceAlertSetting.
 
+        The count that the alert must exist for this many poll cycles before the alert will be cleared  # noqa: E501
 
         :param global_alert_clear_transition_interval: The global_alert_clear_transition_interval of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
-        :type: str
+        :type: int
         """
-        if global_alert_clear_transition_interval is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', global_alert_clear_transition_interval):  # noqa: E501
-            raise ValueError("Invalid value for `global_alert_clear_transition_interval`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
 
         self._global_alert_clear_transition_interval = global_alert_clear_transition_interval
+
+    @property
+    def parent_resource_data_source_alert_expr(self):
+        """Gets the parent_resource_data_source_alert_expr of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
+
+        Resource datasource alert expression list base on the priority. The first is the highest priority and effected on this instance  # noqa: E501
+
+        :return: The parent_resource_data_source_alert_expr of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
+        :rtype: ResourceDataSourceAlertThresholdInfo
+        """
+        return self._parent_resource_data_source_alert_expr
+
+    @parent_resource_data_source_alert_expr.setter
+    def parent_resource_data_source_alert_expr(self, parent_resource_data_source_alert_expr):
+        """Sets the parent_resource_data_source_alert_expr of this DeviceDataSourceInstanceAlertSetting.
+
+        Resource datasource alert expression list base on the priority. The first is the highest priority and effected on this instance  # noqa: E501
+
+        :param parent_resource_data_source_alert_expr: The parent_resource_data_source_alert_expr of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
+        :type: ResourceDataSourceAlertThresholdInfo
+        """
+
+        self._parent_resource_data_source_alert_expr = parent_resource_data_source_alert_expr
 
     @property
     def device_group_full_path(self):
@@ -605,7 +634,7 @@ class DeviceDataSourceInstanceAlertSetting(object):
     def alert_transition_interval(self):
         """Gets the alert_transition_interval of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
 
-        The interval of alert transition  # noqa: E501
+        The polling interval of alert transition (0-60)  # noqa: E501
 
         :return: The alert_transition_interval of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
         :rtype: int
@@ -616,7 +645,7 @@ class DeviceDataSourceInstanceAlertSetting(object):
     def alert_transition_interval(self, alert_transition_interval):
         """Sets the alert_transition_interval of this DeviceDataSourceInstanceAlertSetting.
 
-        The interval of alert transition  # noqa: E501
+        The polling interval of alert transition (0-60)  # noqa: E501
 
         :param alert_transition_interval: The alert_transition_interval of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
         :type: int
@@ -628,9 +657,10 @@ class DeviceDataSourceInstanceAlertSetting(object):
     def global_alert_for_no_data(self):
         """Gets the global_alert_for_no_data of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
 
+        The triggered alert level if we cannot collect data for this datapoint  # noqa: E501
 
         :return: The global_alert_for_no_data of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._global_alert_for_no_data
 
@@ -638,12 +668,11 @@ class DeviceDataSourceInstanceAlertSetting(object):
     def global_alert_for_no_data(self, global_alert_for_no_data):
         """Sets the global_alert_for_no_data of this DeviceDataSourceInstanceAlertSetting.
 
+        The triggered alert level if we cannot collect data for this datapoint  # noqa: E501
 
         :param global_alert_for_no_data: The global_alert_for_no_data of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
-        :type: str
+        :type: int
         """
-        if global_alert_for_no_data is not None and not re.search('^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$', global_alert_for_no_data):  # noqa: E501
-            raise ValueError("Invalid value for `global_alert_for_no_data`, must be a follow pattern or equal to `/^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/`")  # noqa: E501
 
         self._global_alert_for_no_data = global_alert_for_no_data
 
@@ -674,7 +703,7 @@ class DeviceDataSourceInstanceAlertSetting(object):
     def alert_clear_interval(self):
         """Gets the alert_clear_interval of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
 
-        The interval of alert clear transition  # noqa: E501
+        The polling interval of alert clear transition (0-60)  # noqa: E501
 
         :return: The alert_clear_interval of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
         :rtype: int
@@ -685,7 +714,7 @@ class DeviceDataSourceInstanceAlertSetting(object):
     def alert_clear_interval(self, alert_clear_interval):
         """Sets the alert_clear_interval of this DeviceDataSourceInstanceAlertSetting.
 
-        The interval of alert clear transition  # noqa: E501
+        The polling interval of alert clear transition (0-60)  # noqa: E501
 
         :param alert_clear_interval: The alert_clear_interval of this DeviceDataSourceInstanceAlertSetting.  # noqa: E501
         :type: int

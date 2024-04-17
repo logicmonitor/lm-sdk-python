@@ -370,7 +370,7 @@ class RestAwsRdsPerformanceInsightsEventSource(EventSource):
     def collector(self):
         """Gets the collector of this RestAwsRdsPerformanceInsightsEventSource.  # noqa: E501
 
-        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | ipmievent  # noqa: E501
+        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | awsorganizationalhealth | ipmievent  # noqa: E501
 
         :return: The collector of this RestAwsRdsPerformanceInsightsEventSource.  # noqa: E501
         :rtype: str
@@ -381,7 +381,7 @@ class RestAwsRdsPerformanceInsightsEventSource(EventSource):
     def collector(self, collector):
         """Sets the collector of this RestAwsRdsPerformanceInsightsEventSource.
 
-        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | ipmievent  # noqa: E501
+        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | awsorganizationalhealth | ipmievent  # noqa: E501
 
         :param collector: The collector of this RestAwsRdsPerformanceInsightsEventSource.  # noqa: E501
         :type: str

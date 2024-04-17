@@ -43,6 +43,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_add_access_group(self):
+        """Test case for add_access_group
+
+        Create a access group  # noqa: E501
+        """
+        pass
+
     def test_add_admin(self):
         """Test case for add_admin
 
@@ -246,6 +253,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_access_group(self):
+        """Test case for delete_access_group
+
+        Delete access group  # noqa: E501
+        """
+        pass
+
     def test_delete_admin_by_id(self):
         """Test case for delete_admin_by_id
 
@@ -386,6 +400,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_escalated_alert_by_id(self):
+        """Test case for escalated_alert_by_id
+
+        escalate alert by id  # noqa: E501
+        """
+        pass
+
     def test_execute_debug_command(self):
         """Test case for execute_debug_command
 
@@ -411,6 +432,20 @@ class TestLMApi(unittest.TestCase):
         """Test case for generate_report_by_id
 
         run a report  # noqa: E501
+        """
+        pass
+
+    def test_get_access_group_by_id(self):
+        """Test case for get_access_group_by_id
+
+        Get access group by id  # noqa: E501
+        """
+        pass
+
+    def test_get_access_group_list(self):
+        """Test case for get_access_group_list
+
+        Get access group list  # noqa: E501
         """
         pass
 
@@ -705,6 +740,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for get_device_datasource_instance_graph_data
 
         get device instance graph data   # noqa: E501
+        """
+        pass
+
+    def test_get_device_datasource_instance_group_by_id(self):
+        """Test case for get_device_datasource_instance_group_by_id
+
+        get device datasource instance group   # noqa: E501
         """
         pass
 
@@ -1149,6 +1191,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_access_group(self):
+        """Test case for patch_access_group
+
+        Update access group  # noqa: E501
+        """
+        pass
+
     def test_patch_admin_by_id(self):
         """Test case for patch_admin_by_id
 
@@ -1282,13 +1331,6 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
-    def test_patch_instances_alert_threshold(self):
-        """Test case for patch_instances_alert_threshold
-
-        update instances alert threshold (Setting the threshold at default group is not allowed)  # noqa: E501
-        """
-        pass
-
     def test_patch_recipient_group_by_id(self):
         """Test case for patch_recipient_group_by_id
 
@@ -1377,6 +1419,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for test_saa_s_account
 
         test SaaS account  # noqa: E501
+        """
+        pass
+
+    def test_update_access_group(self):
+        """Test case for update_access_group
+
+        Update access group  # noqa: E501
         """
         pass
 
@@ -1513,10 +1562,10 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
-    def test_update_instances_alert_threshold(self):
-        """Test case for update_instances_alert_threshold
+    def test_update_instance_group_alert_threshold(self):
+        """Test case for update_instance_group_alert_threshold
 
-        update instances alert threshold (Setting the threshold at default group is not allowed)  # noqa: E501
+        update instance group alert threshold (Setting the threshold at default group is not allowed)  # noqa: E501
         """
         pass
 

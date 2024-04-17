@@ -45,6 +45,7 @@ class Alert(object):
         'ack_comment': 'str',
         'monitor_object_name': 'str',
         'data_point_name': 'str',
+        'alert_group_entity_value': 'str',
         'instance_id': 'int',
         'data_point_id': 'int',
         'suppress_desc': 'str',
@@ -95,6 +96,7 @@ class Alert(object):
         'ack_comment': 'ackComment',
         'monitor_object_name': 'monitorObjectName',
         'data_point_name': 'dataPointName',
+        'alert_group_entity_value': 'alertGroupEntityValue',
         'instance_id': 'instanceId',
         'data_point_id': 'dataPointId',
         'suppress_desc': 'suppressDesc',
@@ -130,7 +132,7 @@ class Alert(object):
         'resource_template_name': 'resourceTemplateName'
     }
 
-    def __init__(self, resource_id=None, anomaly=None, instance_name=None, monitor_object_id=None, end_epoch=None, rule=None, threshold=None, type=None, start_epoch=None, enable_anomaly_alert_generation=None, internal_id=None, ack_comment=None, monitor_object_name=None, data_point_name=None, instance_id=None, data_point_id=None, suppress_desc=None, next_recipient=None, suppressor=None, id=None, detail_message=None, rule_id=None, tenant=None, alert_value=None, ad_alert=None, acked_by=None, severity=None, sdted=None, acked_epoch=None, chain=None, sdt=None, sub_chain_id=None, enable_anomaly_alert_suppression=None, received_list=None, monitor_object_type=None, acked=None, resource_template_type=None, clear_value=None, instance_description=None, dependency_routing_state=None, monitor_object_groups=None, dependency_role=None, chain_id=None, resource_template_id=None, cleared=None, ad_alert_desc=None, resource_template_name=None):  # noqa: E501
+    def __init__(self, resource_id=None, anomaly=None, instance_name=None, monitor_object_id=None, end_epoch=None, rule=None, threshold=None, type=None, start_epoch=None, enable_anomaly_alert_generation=None, internal_id=None, ack_comment=None, monitor_object_name=None, data_point_name=None, alert_group_entity_value=None, instance_id=None, data_point_id=None, suppress_desc=None, next_recipient=None, suppressor=None, id=None, detail_message=None, rule_id=None, tenant=None, alert_value=None, ad_alert=None, acked_by=None, severity=None, sdted=None, acked_epoch=None, chain=None, sdt=None, sub_chain_id=None, enable_anomaly_alert_suppression=None, received_list=None, monitor_object_type=None, acked=None, resource_template_type=None, clear_value=None, instance_description=None, dependency_routing_state=None, monitor_object_groups=None, dependency_role=None, chain_id=None, resource_template_id=None, cleared=None, ad_alert_desc=None, resource_template_name=None):  # noqa: E501
         """Alert - a model defined in Swagger"""  # noqa: E501
 
         self._resource_id = None
@@ -147,6 +149,7 @@ class Alert(object):
         self._ack_comment = None
         self._monitor_object_name = None
         self._data_point_name = None
+        self._alert_group_entity_value = None
         self._instance_id = None
         self._data_point_id = None
         self._suppress_desc = None
@@ -210,6 +213,8 @@ class Alert(object):
             self.monitor_object_name = monitor_object_name
         if data_point_name is not None:
             self.data_point_name = data_point_name
+        if alert_group_entity_value is not None:
+            self.alert_group_entity_value = alert_group_entity_value
         if instance_id is not None:
             self.instance_id = instance_id
         if data_point_id is not None:
@@ -598,6 +603,29 @@ class Alert(object):
         """
 
         self._data_point_name = data_point_name
+
+    @property
+    def alert_group_entity_value(self):
+        """Gets the alert_group_entity_value of this Alert.  # noqa: E501
+
+        Alert group entity value for stateful log alerts  # noqa: E501
+
+        :return: The alert_group_entity_value of this Alert.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_group_entity_value
+
+    @alert_group_entity_value.setter
+    def alert_group_entity_value(self, alert_group_entity_value):
+        """Sets the alert_group_entity_value of this Alert.
+
+        Alert group entity value for stateful log alerts  # noqa: E501
+
+        :param alert_group_entity_value: The alert_group_entity_value of this Alert.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_group_entity_value = alert_group_entity_value
 
     @property
     def instance_id(self):

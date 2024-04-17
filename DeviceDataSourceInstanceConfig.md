@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **device_data_source_id** | **int** | Device datasource id | [optional] 
 **exclude_lines** | **list[int]** | advanceDiffChecker | [optional] 
 **config_status** | **int** | Configuration file collect status | [optional] 
+**compared_with** | **str** | Version compared with and found difference | [optional] 
 **version** | **int** | Config version | [optional] 
 **device_id** | **int** | Device id | [optional] 
 **delta_config** | [**list[DeviceDataSourceInstanceConfigDiff]**](DeviceDataSourceInstanceConfigDiff.md) | Configuration file diff | [optional] 

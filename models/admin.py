@@ -43,6 +43,7 @@ class Admin(object):
         'last_action_on_local': 'str',
         'sms_email_format': 'str',
         'apionly': 'bool',
+        'last_auth_ip': 'str',
         'api_tokens': 'list[APIToken]',
         'admin_group_ids': 'list[int]',
         'password': 'str',
@@ -53,6 +54,7 @@ class Admin(object):
         'email': 'str',
         'contact_method': 'str',
         'accept_eula_on': 'int',
+        'immediate_force_logout': 'bool',
         'user_permission': 'str',
         'sms_email': 'str',
         'two_fa_enabled': 'bool',
@@ -76,6 +78,7 @@ class Admin(object):
         'last_action_on_local': 'lastActionOnLocal',
         'sms_email_format': 'smsEmailFormat',
         'apionly': 'apionly',
+        'last_auth_ip': 'lastAuthIp',
         'api_tokens': 'apiTokens',
         'admin_group_ids': 'adminGroupIds',
         'password': 'password',
@@ -86,6 +89,7 @@ class Admin(object):
         'email': 'email',
         'contact_method': 'contactMethod',
         'accept_eula_on': 'acceptEULAOn',
+        'immediate_force_logout': 'immediateForceLogout',
         'user_permission': 'userPermission',
         'sms_email': 'smsEmail',
         'two_fa_enabled': 'twoFAEnabled',
@@ -99,7 +103,7 @@ class Admin(object):
         'status': 'status'
     }
 
-    def __init__(self, last_name=None, note=None, view_permission=None, timezone=None, roles=None, last_login_on=None, last_action_on_local=None, sms_email_format=None, apionly=None, api_tokens=None, admin_group_ids=None, password=None, last_action=None, training_email=None, last_action_on=None, id=None, email=None, contact_method=None, accept_eula_on=None, user_permission=None, sms_email=None, two_fa_enabled=None, first_name=None, phone=None, created_by=None, force_password_change=None, tenant_id=None, accept_eula=None, username=None, status=None):  # noqa: E501
+    def __init__(self, last_name=None, note=None, view_permission=None, timezone=None, roles=None, last_login_on=None, last_action_on_local=None, sms_email_format=None, apionly=None, last_auth_ip=None, api_tokens=None, admin_group_ids=None, password=None, last_action=None, training_email=None, last_action_on=None, id=None, email=None, contact_method=None, accept_eula_on=None, immediate_force_logout=None, user_permission=None, sms_email=None, two_fa_enabled=None, first_name=None, phone=None, created_by=None, force_password_change=None, tenant_id=None, accept_eula=None, username=None, status=None):  # noqa: E501
         """Admin - a model defined in Swagger"""  # noqa: E501
 
         self._last_name = None
@@ -111,6 +115,7 @@ class Admin(object):
         self._last_action_on_local = None
         self._sms_email_format = None
         self._apionly = None
+        self._last_auth_ip = None
         self._api_tokens = None
         self._admin_group_ids = None
         self._password = None
@@ -121,6 +126,7 @@ class Admin(object):
         self._email = None
         self._contact_method = None
         self._accept_eula_on = None
+        self._immediate_force_logout = None
         self._user_permission = None
         self._sms_email = None
         self._two_fa_enabled = None
@@ -151,6 +157,8 @@ class Admin(object):
             self.sms_email_format = sms_email_format
         if apionly is not None:
             self.apionly = apionly
+        if last_auth_ip is not None:
+            self.last_auth_ip = last_auth_ip
         if api_tokens is not None:
             self.api_tokens = api_tokens
         if admin_group_ids is not None:
@@ -169,6 +177,8 @@ class Admin(object):
             self.contact_method = contact_method
         if accept_eula_on is not None:
             self.accept_eula_on = accept_eula_on
+        if immediate_force_logout is not None:
+            self.immediate_force_logout = immediate_force_logout
         if user_permission is not None:
             self.user_permission = user_permission
         if sms_email is not None:
@@ -399,6 +409,29 @@ class Admin(object):
         """
 
         self._apionly = apionly
+
+    @property
+    def last_auth_ip(self):
+        """Gets the last_auth_ip of this Admin.  # noqa: E501
+
+        The Last User IP  # noqa: E501
+
+        :return: The last_auth_ip of this Admin.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_auth_ip
+
+    @last_auth_ip.setter
+    def last_auth_ip(self, last_auth_ip):
+        """Sets the last_auth_ip of this Admin.
+
+        The Last User IP  # noqa: E501
+
+        :param last_auth_ip: The last_auth_ip of this Admin.  # noqa: E501
+        :type: str
+        """
+
+        self._last_auth_ip = last_auth_ip
 
     @property
     def api_tokens(self):
@@ -633,6 +666,29 @@ class Admin(object):
         """
 
         self._accept_eula_on = accept_eula_on
+
+    @property
+    def immediate_force_logout(self):
+        """Gets the immediate_force_logout of this Admin.  # noqa: E501
+
+        Specifies whether the user need to be logged off, if Force Password Change is enabled. The values can be true|false  # noqa: E501
+
+        :return: The immediate_force_logout of this Admin.  # noqa: E501
+        :rtype: bool
+        """
+        return self._immediate_force_logout
+
+    @immediate_force_logout.setter
+    def immediate_force_logout(self, immediate_force_logout):
+        """Sets the immediate_force_logout of this Admin.
+
+        Specifies whether the user need to be logged off, if Force Password Change is enabled. The values can be true|false  # noqa: E501
+
+        :param immediate_force_logout: The immediate_force_logout of this Admin.  # noqa: E501
+        :type: bool
+        """
+
+        self._immediate_force_logout = immediate_force_logout
 
     @property
     def user_permission(self):

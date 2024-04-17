@@ -36,6 +36,7 @@ class IntegrationMetadata(object):
         'target_last_published_version': 'str',
         'origin_checksum': 'str',
         'origin_author_namespace': 'str',
+        'origin_locator': 'str',
         'is_changed_from_origin': 'bool',
         'audited_registry_id': 'str',
         'target_lineage_id': 'str',
@@ -46,7 +47,8 @@ class IntegrationMetadata(object):
         'local_module_id': 'int',
         'origin_registry_id': 'str',
         'origin_version': 'str',
-        'audited_version': 'str'
+        'audited_version': 'str',
+        'origin_name': 'str'
     }
 
     attribute_map = {
@@ -55,6 +57,7 @@ class IntegrationMetadata(object):
         'target_last_published_version': 'targetLastPublishedVersion',
         'origin_checksum': 'originChecksum',
         'origin_author_namespace': 'originAuthorNamespace',
+        'origin_locator': 'originLocator',
         'is_changed_from_origin': 'isChangedFromOrigin',
         'audited_registry_id': 'auditedRegistryId',
         'target_lineage_id': 'targetLineageId',
@@ -65,10 +68,11 @@ class IntegrationMetadata(object):
         'local_module_id': 'localModuleId',
         'origin_registry_id': 'originRegistryId',
         'origin_version': 'originVersion',
-        'audited_version': 'auditedVersion'
+        'audited_version': 'auditedVersion',
+        'origin_name': 'originName'
     }
 
-    def __init__(self, target_last_published_id=None, target_last_published_checksum=None, target_last_published_version=None, origin_checksum=None, origin_author_namespace=None, is_changed_from_origin=None, audited_registry_id=None, target_lineage_id=None, logic_module_type=None, is_changed_from_target_last_published=None, origin_lineage_id=None, origin_author_company_uuid=None, local_module_id=None, origin_registry_id=None, origin_version=None, audited_version=None):  # noqa: E501
+    def __init__(self, target_last_published_id=None, target_last_published_checksum=None, target_last_published_version=None, origin_checksum=None, origin_author_namespace=None, origin_locator=None, is_changed_from_origin=None, audited_registry_id=None, target_lineage_id=None, logic_module_type=None, is_changed_from_target_last_published=None, origin_lineage_id=None, origin_author_company_uuid=None, local_module_id=None, origin_registry_id=None, origin_version=None, audited_version=None, origin_name=None):  # noqa: E501
         """IntegrationMetadata - a model defined in Swagger"""  # noqa: E501
 
         self._target_last_published_id = None
@@ -76,6 +80,7 @@ class IntegrationMetadata(object):
         self._target_last_published_version = None
         self._origin_checksum = None
         self._origin_author_namespace = None
+        self._origin_locator = None
         self._is_changed_from_origin = None
         self._audited_registry_id = None
         self._target_lineage_id = None
@@ -87,6 +92,7 @@ class IntegrationMetadata(object):
         self._origin_registry_id = None
         self._origin_version = None
         self._audited_version = None
+        self._origin_name = None
         self.discriminator = None
 
         if target_last_published_id is not None:
@@ -99,6 +105,8 @@ class IntegrationMetadata(object):
             self.origin_checksum = origin_checksum
         if origin_author_namespace is not None:
             self.origin_author_namespace = origin_author_namespace
+        if origin_locator is not None:
+            self.origin_locator = origin_locator
         if is_changed_from_origin is not None:
             self.is_changed_from_origin = is_changed_from_origin
         if audited_registry_id is not None:
@@ -121,6 +129,8 @@ class IntegrationMetadata(object):
             self.origin_version = origin_version
         if audited_version is not None:
             self.audited_version = audited_version
+        if origin_name is not None:
+            self.origin_name = origin_name
 
     @property
     def target_last_published_id(self):
@@ -236,6 +246,29 @@ class IntegrationMetadata(object):
         """
 
         self._origin_author_namespace = origin_author_namespace
+
+    @property
+    def origin_locator(self):
+        """Gets the origin_locator of this IntegrationMetadata.  # noqa: E501
+
+        Specifies the origin version locator  # noqa: E501
+
+        :return: The origin_locator of this IntegrationMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._origin_locator
+
+    @origin_locator.setter
+    def origin_locator(self, origin_locator):
+        """Sets the origin_locator of this IntegrationMetadata.
+
+        Specifies the origin version locator  # noqa: E501
+
+        :param origin_locator: The origin_locator of this IntegrationMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._origin_locator = origin_locator
 
     @property
     def is_changed_from_origin(self):
@@ -495,6 +528,29 @@ class IntegrationMetadata(object):
         """
 
         self._audited_version = audited_version
+
+    @property
+    def origin_name(self):
+        """Gets the origin_name of this IntegrationMetadata.  # noqa: E501
+
+        Specifies the origin module name  # noqa: E501
+
+        :return: The origin_name of this IntegrationMetadata.  # noqa: E501
+        :rtype: str
+        """
+        return self._origin_name
+
+    @origin_name.setter
+    def origin_name(self, origin_name):
+        """Sets the origin_name of this IntegrationMetadata.
+
+        Specifies the origin module name  # noqa: E501
+
+        :param origin_name: The origin_name of this IntegrationMetadata.  # noqa: E501
+        :type: str
+        """
+
+        self._origin_name = origin_name
 
     def to_dict(self):
         """Returns the model properties as a dict"""
