@@ -143,6 +143,10 @@ class Website(object):
         self._properties = None
         self._status = None
         self.discriminator = 'type'
+        self.schema = None
+        self.trigger_ssl_expiration_alert = None
+        self.trigger_ssl_status_alert = None
+        self.alert_expr = None
 
         if template is not None:
             self.template = template
