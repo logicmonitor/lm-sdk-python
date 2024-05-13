@@ -201,13 +201,13 @@ class Website(object):
             self.properties = properties
         if status is not None:
             self.status = status
-        if self.schema is not None:
+        if schema is not None:
             self.schema = schema
-        if self.trigger_ssl_expiration_alert is not None:
+        if trigger_ssl_expiration_alert is not None:
             self.trigger_ssl_expiration_alert = trigger_ssl_expiration_alert
-        if self.trigger_ssl_status_alert is not None:
+        if trigger_ssl_status_alert is not None:
             self.trigger_ssl_status_alert = trigger_ssl_status_alert
-        if self.alert_expr is not None:
+        if alert_expr is not None:
             self.alert_expr = alert_expr
 
     @property
