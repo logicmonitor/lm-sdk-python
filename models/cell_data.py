@@ -38,7 +38,9 @@ class CellData(object):
         'instance_id': 'int',
         'instance_name': 'str',
         'alert_severity': 'str',
+        'is_property_value': 'bool',
         'days_until_alert_list': 'list[DaysUntilAlert]',
+        'prop_value': 'str',
         'value': 'float'
     }
 
@@ -48,11 +50,13 @@ class CellData(object):
         'instance_id': 'instanceId',
         'instance_name': 'instanceName',
         'alert_severity': 'alertSeverity',
+        'is_property_value': 'isPropertyValue',
         'days_until_alert_list': 'daysUntilAlertList',
+        'prop_value': 'propValue',
         'value': 'value'
     }
 
-    def __init__(self, alert_status=None, forecast_day=None, instance_id=None, instance_name=None, alert_severity=None, days_until_alert_list=None, value=None):  # noqa: E501
+    def __init__(self, alert_status=None, forecast_day=None, instance_id=None, instance_name=None, alert_severity=None, is_property_value=None, days_until_alert_list=None, prop_value=None, value=None):  # noqa: E501
         """CellData - a model defined in Swagger"""  # noqa: E501
 
         self._alert_status = None
@@ -60,7 +64,9 @@ class CellData(object):
         self._instance_id = None
         self._instance_name = None
         self._alert_severity = None
+        self._is_property_value = None
         self._days_until_alert_list = None
+        self._prop_value = None
         self._value = None
         self.discriminator = None
 
@@ -74,8 +80,12 @@ class CellData(object):
             self.instance_name = instance_name
         if alert_severity is not None:
             self.alert_severity = alert_severity
+        if is_property_value is not None:
+            self.is_property_value = is_property_value
         if days_until_alert_list is not None:
             self.days_until_alert_list = days_until_alert_list
+        if prop_value is not None:
+            self.prop_value = prop_value
         if value is not None:
             self.value = value
 
@@ -185,6 +195,27 @@ class CellData(object):
         self._alert_severity = alert_severity
 
     @property
+    def is_property_value(self):
+        """Gets the is_property_value of this CellData.  # noqa: E501
+
+
+        :return: The is_property_value of this CellData.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_property_value
+
+    @is_property_value.setter
+    def is_property_value(self, is_property_value):
+        """Sets the is_property_value of this CellData.
+
+
+        :param is_property_value: The is_property_value of this CellData.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_property_value = is_property_value
+
+    @property
     def days_until_alert_list(self):
         """Gets the days_until_alert_list of this CellData.  # noqa: E501
 
@@ -204,6 +235,27 @@ class CellData(object):
         """
 
         self._days_until_alert_list = days_until_alert_list
+
+    @property
+    def prop_value(self):
+        """Gets the prop_value of this CellData.  # noqa: E501
+
+
+        :return: The prop_value of this CellData.  # noqa: E501
+        :rtype: str
+        """
+        return self._prop_value
+
+    @prop_value.setter
+    def prop_value(self, prop_value):
+        """Sets the prop_value of this CellData.
+
+
+        :param prop_value: The prop_value of this CellData.  # noqa: E501
+        :type: str
+        """
+
+        self._prop_value = prop_value
 
     @property
     def value(self):

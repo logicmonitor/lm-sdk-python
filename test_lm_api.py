@@ -1625,6 +1625,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_verify_storage_accounts_permissions(self):
+        """Test case for verify_storage_accounts_permissions
+
+        view storage accounts  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

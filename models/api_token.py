@@ -31,122 +31,81 @@ class APIToken(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'access_id': 'str',
-        'admin_name': 'str',
         'note': 'str',
         'last_used_on': 'int',
         'user_permission': 'str',
+        'roles': 'list[str]',
+        'created_on': 'int',
+        'access_id': 'str',
+        'admin_name': 'str',
+        'last_auth_ip': 'str',
         'access_key': 'str',
         'created_by': 'str',
-        'roles': 'list[str]',
         'admin_id': 'int',
         'id': 'int',
-        'created_on': 'int',
         'status': 'int'
     }
 
     attribute_map = {
-        'access_id': 'accessId',
-        'admin_name': 'adminName',
         'note': 'note',
         'last_used_on': 'lastUsedOn',
         'user_permission': 'userPermission',
+        'roles': 'roles',
+        'created_on': 'createdOn',
+        'access_id': 'accessId',
+        'admin_name': 'adminName',
+        'last_auth_ip': 'lastAuthIp',
         'access_key': 'accessKey',
         'created_by': 'createdBy',
-        'roles': 'roles',
         'admin_id': 'adminId',
         'id': 'id',
-        'created_on': 'createdOn',
         'status': 'status'
     }
 
-    def __init__(self, access_id=None, admin_name=None, note=None, last_used_on=None, user_permission=None, access_key=None, created_by=None, roles=None, admin_id=None, id=None, created_on=None, status=None):  # noqa: E501
+    def __init__(self, note=None, last_used_on=None, user_permission=None, roles=None, created_on=None, access_id=None, admin_name=None, last_auth_ip=None, access_key=None, created_by=None, admin_id=None, id=None, status=None):  # noqa: E501
         """APIToken - a model defined in Swagger"""  # noqa: E501
 
-        self._access_id = None
-        self._admin_name = None
         self._note = None
         self._last_used_on = None
         self._user_permission = None
+        self._roles = None
+        self._created_on = None
+        self._access_id = None
+        self._admin_name = None
+        self._last_auth_ip = None
         self._access_key = None
         self._created_by = None
-        self._roles = None
         self._admin_id = None
         self._id = None
-        self._created_on = None
         self._status = None
         self.discriminator = None
 
-        if access_id is not None:
-            self.access_id = access_id
-        if admin_name is not None:
-            self.admin_name = admin_name
         if note is not None:
             self.note = note
         if last_used_on is not None:
             self.last_used_on = last_used_on
         if user_permission is not None:
             self.user_permission = user_permission
+        if roles is not None:
+            self.roles = roles
+        if created_on is not None:
+            self.created_on = created_on
+        if access_id is not None:
+            self.access_id = access_id
+        if admin_name is not None:
+            self.admin_name = admin_name
+        if last_auth_ip is not None:
+            self.last_auth_ip = last_auth_ip
         if access_key is not None:
             self.access_key = access_key
         if created_by is not None:
             self.created_by = created_by
-        if roles is not None:
-            self.roles = roles
         if admin_id is not None:
             self.admin_id = admin_id
         if id is not None:
             self.id = id
-        if created_on is not None:
-            self.created_on = created_on
         if status is not None:
             self.status = status
-
-    @property
-    def access_id(self):
-        """Gets the access_id of this APIToken.  # noqa: E501
-
-        The access Id associated with the API Tokens  # noqa: E501
-
-        :return: The access_id of this APIToken.  # noqa: E501
-        :rtype: str
-        """
-        return self._access_id
-
-    @access_id.setter
-    def access_id(self, access_id):
-        """Sets the access_id of this APIToken.
-
-        The access Id associated with the API Tokens  # noqa: E501
-
-        :param access_id: The access_id of this APIToken.  # noqa: E501
-        :type: str
-        """
-
-        self._access_id = access_id
-
-    @property
-    def admin_name(self):
-        """Gets the admin_name of this APIToken.  # noqa: E501
-
-        The name of the user associated with the API Tokens  # noqa: E501
-
-        :return: The admin_name of this APIToken.  # noqa: E501
-        :rtype: str
-        """
-        return self._admin_name
-
-    @admin_name.setter
-    def admin_name(self, admin_name):
-        """Sets the admin_name of this APIToken.
-
-        The name of the user associated with the API Tokens  # noqa: E501
-
-        :param admin_name: The admin_name of this APIToken.  # noqa: E501
-        :type: str
-        """
-
-        self._admin_name = admin_name
 
     @property
     def note(self):
@@ -218,6 +177,121 @@ class APIToken(object):
         self._user_permission = user_permission
 
     @property
+    def roles(self):
+        """Gets the roles of this APIToken.  # noqa: E501
+
+        The roles assigned to the user that is associated with the API Tokens  # noqa: E501
+
+        :return: The roles of this APIToken.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._roles
+
+    @roles.setter
+    def roles(self, roles):
+        """Sets the roles of this APIToken.
+
+        The roles assigned to the user that is associated with the API Tokens  # noqa: E501
+
+        :param roles: The roles of this APIToken.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._roles = roles
+
+    @property
+    def created_on(self):
+        """Gets the created_on of this APIToken.  # noqa: E501
+
+        The epoch at which the API Tokens were created  # noqa: E501
+
+        :return: The created_on of this APIToken.  # noqa: E501
+        :rtype: int
+        """
+        return self._created_on
+
+    @created_on.setter
+    def created_on(self, created_on):
+        """Sets the created_on of this APIToken.
+
+        The epoch at which the API Tokens were created  # noqa: E501
+
+        :param created_on: The created_on of this APIToken.  # noqa: E501
+        :type: int
+        """
+
+        self._created_on = created_on
+
+    @property
+    def access_id(self):
+        """Gets the access_id of this APIToken.  # noqa: E501
+
+        The access Id associated with the API Tokens  # noqa: E501
+
+        :return: The access_id of this APIToken.  # noqa: E501
+        :rtype: str
+        """
+        return self._access_id
+
+    @access_id.setter
+    def access_id(self, access_id):
+        """Sets the access_id of this APIToken.
+
+        The access Id associated with the API Tokens  # noqa: E501
+
+        :param access_id: The access_id of this APIToken.  # noqa: E501
+        :type: str
+        """
+
+        self._access_id = access_id
+
+    @property
+    def admin_name(self):
+        """Gets the admin_name of this APIToken.  # noqa: E501
+
+        The name of the user associated with the API Tokens  # noqa: E501
+
+        :return: The admin_name of this APIToken.  # noqa: E501
+        :rtype: str
+        """
+        return self._admin_name
+
+    @admin_name.setter
+    def admin_name(self, admin_name):
+        """Sets the admin_name of this APIToken.
+
+        The name of the user associated with the API Tokens  # noqa: E501
+
+        :param admin_name: The admin_name of this APIToken.  # noqa: E501
+        :type: str
+        """
+
+        self._admin_name = admin_name
+
+    @property
+    def last_auth_ip(self):
+        """Gets the last_auth_ip of this APIToken.  # noqa: E501
+
+        The IP from which the API Tokens were last used  # noqa: E501
+
+        :return: The last_auth_ip of this APIToken.  # noqa: E501
+        :rtype: str
+        """
+        return self._last_auth_ip
+
+    @last_auth_ip.setter
+    def last_auth_ip(self, last_auth_ip):
+        """Sets the last_auth_ip of this APIToken.
+
+        The IP from which the API Tokens were last used  # noqa: E501
+
+        :param last_auth_ip: The last_auth_ip of this APIToken.  # noqa: E501
+        :type: str
+        """
+
+        self._last_auth_ip = last_auth_ip
+
+    @property
     def access_key(self):
         """Gets the access_key of this APIToken.  # noqa: E501
 
@@ -264,29 +338,6 @@ class APIToken(object):
         self._created_by = created_by
 
     @property
-    def roles(self):
-        """Gets the roles of this APIToken.  # noqa: E501
-
-        The roles assigned to the user that is associated with the API Tokens  # noqa: E501
-
-        :return: The roles of this APIToken.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._roles
-
-    @roles.setter
-    def roles(self, roles):
-        """Sets the roles of this APIToken.
-
-        The roles assigned to the user that is associated with the API Tokens  # noqa: E501
-
-        :param roles: The roles of this APIToken.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._roles = roles
-
-    @property
     def admin_id(self):
         """Gets the admin_id of this APIToken.  # noqa: E501
 
@@ -331,29 +382,6 @@ class APIToken(object):
         """
 
         self._id = id
-
-    @property
-    def created_on(self):
-        """Gets the created_on of this APIToken.  # noqa: E501
-
-        The epoch at which the API Tokens were created  # noqa: E501
-
-        :return: The created_on of this APIToken.  # noqa: E501
-        :rtype: int
-        """
-        return self._created_on
-
-    @created_on.setter
-    def created_on(self, created_on):
-        """Sets the created_on of this APIToken.
-
-        The epoch at which the API Tokens were created  # noqa: E501
-
-        :param created_on: The created_on of this APIToken.  # noqa: E501
-        :type: int
-        """
-
-        self._created_on = created_on
 
     @property
     def status(self):

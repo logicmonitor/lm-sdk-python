@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **force_password_change** | **bool** | Whether or not the user should be forced to change their password on the next login | [optional] 
 **tenant_id** | **int** | The tenant id of the user | [optional] 
 **accept_eula** | **bool** | Whether or not the user is required to accept the EULA (end user license agreement) | [optional] 
+**user_type** | **str** | The type of user | [optional] 
 **username** | **str** | The username associated with the user | 
 **status** | **str** | The user&#39;s status. The values can be active|suspended | [optional] 
 

@@ -232,6 +232,7 @@ Method | HTTP request | Description
 [**update_website_by_id**](LMApi.md#update_website_by_id) | **PUT** /website/websites/{id} | update website
 [**update_website_group_by_id**](LMApi.md#update_website_group_by_id) | **PUT** /website/groups/{id} | update website group
 [**update_widget_by_id**](LMApi.md#update_widget_by_id) | **PUT** /dashboard/widgets/{id} | update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+[**verify_storage_accounts_permissions**](LMApi.md#verify_storage_accounts_permissions) | **POST** /azure/functions/verifyStorageAccountsPermissions | view storage accounts
 
 
 # **ack_alert_by_id**
@@ -13566,6 +13567,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Widget**](Widget.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **verify_storage_accounts_permissions**
+> RestResponse verify_storage_accounts_permissions(body)
+
+view storage accounts
+
+
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.company = 'YOUR_COMPANY'
+configuration.access_id = 'YOUR_ACCESS_ID'
+configuration.access_key = 'YOUR_ACCESS_KEY'
+
+# create an instance of the API class
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.RestAzureStorageAccountVerify() # RestAzureStorageAccountVerify | 
+
+try:
+    # view storage accounts
+    api_response = api_instance.verify_storage_accounts_permissions(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->verify_storage_accounts_permissions: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RestAzureStorageAccountVerify**](RestAzureStorageAccountVerify.md)|  | 
+
+### Return type
+
+[**RestResponse**](RestResponse.md)
 
 ### Authorization
 
