@@ -64,6 +64,7 @@ class Admin(object):
         'force_password_change': 'bool',
         'tenant_id': 'int',
         'accept_eula': 'bool',
+        'user_type': 'str',
         'username': 'str',
         'status': 'str'
     }
@@ -99,11 +100,12 @@ class Admin(object):
         'force_password_change': 'forcePasswordChange',
         'tenant_id': 'tenantId',
         'accept_eula': 'acceptEULA',
+        'user_type': 'userType',
         'username': 'username',
         'status': 'status'
     }
 
-    def __init__(self, last_name=None, note=None, view_permission=None, timezone=None, roles=None, last_login_on=None, last_action_on_local=None, sms_email_format=None, apionly=None, last_auth_ip=None, api_tokens=None, admin_group_ids=None, password=None, last_action=None, training_email=None, last_action_on=None, id=None, email=None, contact_method=None, accept_eula_on=None, immediate_force_logout=None, user_permission=None, sms_email=None, two_fa_enabled=None, first_name=None, phone=None, created_by=None, force_password_change=None, tenant_id=None, accept_eula=None, username=None, status=None):  # noqa: E501
+    def __init__(self, last_name=None, note=None, view_permission=None, timezone=None, roles=None, last_login_on=None, last_action_on_local=None, sms_email_format=None, apionly=None, last_auth_ip=None, api_tokens=None, admin_group_ids=None, password=None, last_action=None, training_email=None, last_action_on=None, id=None, email=None, contact_method=None, accept_eula_on=None, immediate_force_logout=None, user_permission=None, sms_email=None, two_fa_enabled=None, first_name=None, phone=None, created_by=None, force_password_change=None, tenant_id=None, accept_eula=None, user_type=None, username=None, status=None):  # noqa: E501
         """Admin - a model defined in Swagger"""  # noqa: E501
 
         self._last_name = None
@@ -136,6 +138,7 @@ class Admin(object):
         self._force_password_change = None
         self._tenant_id = None
         self._accept_eula = None
+        self._user_type = None
         self._username = None
         self._status = None
         self.discriminator = None
@@ -197,6 +200,8 @@ class Admin(object):
             self.tenant_id = tenant_id
         if accept_eula is not None:
             self.accept_eula = accept_eula
+        if user_type is not None:
+            self.user_type = user_type
         self.username = username
         if status is not None:
             self.status = status
@@ -896,6 +901,29 @@ class Admin(object):
         """
 
         self._accept_eula = accept_eula
+
+    @property
+    def user_type(self):
+        """Gets the user_type of this Admin.  # noqa: E501
+
+        The type of user  # noqa: E501
+
+        :return: The user_type of this Admin.  # noqa: E501
+        :rtype: str
+        """
+        return self._user_type
+
+    @user_type.setter
+    def user_type(self, user_type):
+        """Sets the user_type of this Admin.
+
+        The type of user  # noqa: E501
+
+        :param user_type: The user_type of this Admin.  # noqa: E501
+        :type: str
+        """
+
+        self._user_type = user_type
 
     @property
     def username(self):
