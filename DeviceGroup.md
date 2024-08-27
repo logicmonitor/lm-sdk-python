@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**full_path** | **str** | The full path of the device group (i.e. if the group &#39;Dev&#39; is under a parent group named &#39;Production&#39;, the fullPath would be &#39;Production/Dev&#39; | [optional] 
+**full_path** | **str** | The full path of the device group (i.e. if the group &#x27;Dev&#x27; is under a parent group named &#x27;Production&#x27;, the fullPath would be &#x27;Production/Dev&#x27; | [optional] 
 **group_type** | **str** | The type of device group: normal and dynamic device groups will have groupType&#x3D;Normal, and AWS groups will have a groupType value of AWS/SERVICE (e.g. AWS/S3) | [optional] 
 **num_of_aws_devices** | **int** | The number of AWS devices that belong to this device group (includes AWS devices in sub groups) | [optional] 
 **description** | **str** | The description of the device group | [optional] 
@@ -18,11 +18,11 @@ Name | Type | Description | Notes
 **num_of_azure_devices** | **int** | The number of Azure devices that belong to this device group (includes Azure devices in sub groups) | [optional] 
 **default_collector_description** | **str** | The description of the default collector assigned to the device group | [optional] 
 **default_collector_id** | **int** | The Id of the default collector assigned to the device group | [optional] 
-**aws_test_result** | [**AwsAccountTestResult**](AwsAccountTestResult.md) | The String result returned by the transaction that tests the AWS credentials associated with the AWS group | [optional] 
+**aws_test_result** | [**AwsAccountTestResult**](AwsAccountTestResult.md) |  | [optional] 
 **extra** | **object** | The extra setting for cloud group | [optional] 
-**num_of_direct_sub_groups** | **int** | The number of sub-groups that belong only to this device group (doesn&#39;t include groups under sub-groups) | [optional] 
+**num_of_direct_sub_groups** | **int** | The number of sub-groups that belong only to this device group (doesn&#x27;t include groups under sub-groups) | [optional] 
 **sub_groups** | [**list[DeviceGroupData]**](DeviceGroupData.md) | The child device groups within this device group | [optional] 
-**num_of_direct_devices** | **int** | The number of AWS and normal devices that belong only to this device group (doesn&#39;t include devices in sub-groups) | [optional] 
+**num_of_direct_devices** | **int** | The number of AWS and normal devices that belong only to this device group (doesn&#x27;t include devices in sub-groups) | [optional] 
 **id** | **int** | The id of the device group | [optional] 
 **enable_netflow** | **object** | Indicates whether Netflow is enabled (true) or disabled (false) for the device group, the default value is true | [optional] 
 **azure_test_result_code** | **int** | The Status code result returned by the transaction that tests the Azure credentials associated with the Azure group | [optional] 
@@ -34,17 +34,16 @@ Name | Type | Description | Notes
 **default_collector_group_id** | **int** | The collector group id of the default collector assigned to the device group | [optional] 
 **group_status** | **str** | normal | dead  The status of this device group, where possible statuses are normal and dead. A group with a status of dead may indicate that one or more devices are dead within the group | [optional] 
 **num_of_gcp_devices** | **int** |  | [optional] 
-**azure_test_result** | [**AzureAccountTestResult**](AzureAccountTestResult.md) | The String result returned by the transaction that tests the Azure credentials associated with the Azure group | [optional] 
+**azure_test_result** | [**AzureAccountTestResult**](AzureAccountTestResult.md) |  | [optional] 
 **parent_id** | **int** | The id of the parent group for this device group (the root device group has an Id of 1) | [optional] 
 **aws_test_result_code** | **int** | The Status code result returned by the transaction that tests the AWS credentials associated with the AWS group | [optional] 
 **custom_properties** | [**list[NameAndValue]**](NameAndValue.md) | The properties associated with this device group | [optional] 
 **num_of_hosts** | **int** | The number of total devices, including both AWS and normal devices, that belong to this device group (includes normal devices in sub groups) | [optional] 
 **default_auto_balanced_collector_group_id** | **int** | The id of the default Auto Balanced Collector Group assigned to the device group | [optional] 
-**saas_test_result** | [**SaasAccountTestResult**](SaasAccountTestResult.md) | The result returned by the transaction that tests the SaaS credentials associated with the Saas group | [optional] 
+**saas_test_result** | [**SaasAccountTestResult**](SaasAccountTestResult.md) |  | [optional] 
 **name** | **str** | The name of the device group | 
-**gcp_test_result** | [**GcpAccountTestResult**](GcpAccountTestResult.md) | The result returned by the transaction that tests the GCP credentials associated with the GCP group | [optional] 
+**gcp_test_result** | [**GcpAccountTestResult**](GcpAccountTestResult.md) |  | [optional] 
 **azure_regions_info** | **str** | The number of instances in each Azure region (only applies to Azure groups) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

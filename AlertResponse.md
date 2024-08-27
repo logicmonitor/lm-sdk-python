@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **suppressor** | **str** | The component (For example: SDT, HostClusterAlert) which suppressed the alert | [optional] 
 **id** | **str** | The alert id | [optional] 
 **rule_id** | **int** | The id of the rule the alert matches | [optional] 
-**alert_external_ticket_url** | [**JSONObject**](JSONObject.md) | The alert external ticket urls | [optional] 
+**alert_external_ticket_url** | [**JSONObject**](JSONObject.md) |  | [optional] 
 **tenant** | **str** | Tenant to which this alert belongs to.  | [optional] 
 **alert_value** | **str** | The value that triggered the alert | [optional] 
 **sdted** | **bool** | It specifies if the SDT is set for an active alert or not. However, the sdted is set to false for cleared alert as you cannot apply SDT to a cleared alert. | [optional] 
@@ -54,5 +54,4 @@ Name | Type | Description | Notes
 **dependency_role** | **str** | The dependency role | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

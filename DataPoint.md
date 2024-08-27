@@ -30,8 +30,7 @@ Name | Type | Description | Notes
 **error_ad_adv_setting** | **str** | Enable anomaly detection advance setting for ERROR severity | [optional] 
 **warn_ad_adv_setting** | **str** | Enable anomaly detection advance setting for WARN severity | [optional] 
 **name** | **str** | The datapoint name | 
-**alert_expr** | **str** | The alert threshold define for the datapoint. e.g. &#39;&gt; 60 80 90&#39; mean it will:  trigger warn alert if value &gt; 60 trigger error alert if value &gt; 80 trigger critical alert if value &gt; 90 | [optional] 
+**alert_expr** | **str** | The alert threshold define for the datapoint. e.g. &#x27;&gt; 60 80 90&#x27; mean it will:  trigger warn alert if value &gt; 60 trigger error alert if value &gt; 80 trigger critical alert if value &gt; 90 | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

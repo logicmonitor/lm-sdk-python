@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **schema** | **str** | HTTP schema | [optional] 
 **resp_type** | **str** | The values can be Plain Text/String|Glob expression|JSON|XML|Multi line key value pair Step Response Type | [optional] 
 **http_headers** | **str** | HTTP header | [optional] 
-**auth** | [**Authentication**](Authentication.md) | Authorization Information | [optional] 
+**auth** | [**Authentication**](Authentication.md) |  | [optional] 
 **match_type** | **str** | Body match type | [optional] 
 **description** | **str** | The description of the Step | [optional] 
 **type** | **str** | The values can be script|config The type of service step | [optional] 
@@ -32,5 +32,4 @@ Name | Type | Description | Notes
 **status_code** | **str** | The expected status code | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 
