@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **num_of_collectors** | **int** | The number of collectors that belong to the group | [optional] 
 **auto_balance_instance_count_threshold** | **int** | Threshold for instance count strategy to check if a collector has high load | [optional] 
 **description** | **str** | The description of the collector group | [optional] 
-**highest_priority_collector_status** | [**RestHighestPriorityCollectorStatus**](RestHighestPriorityCollectorStatus.md) | The status of the highest priority sub collector | [optional] 
+**highest_priority_collector_status** | [**RestHighestPriorityCollectorStatus**](RestHighestPriorityCollectorStatus.md) |  | [optional] 
 **platform** | **str** | The platform limitation | [optional] 
 **auto_balance** | **bool** | Whether the collector has autoBalance set as true or false | [optional] 
 **custom_properties** | [**list[NameAndValue]**](NameAndValue.md) | The custom properties defined for the collector group | [optional] 
@@ -20,5 +20,4 @@ Name | Type | Description | Notes
 **mismatch_version** | **bool** | Specifies if the version of all collectors in group is same | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

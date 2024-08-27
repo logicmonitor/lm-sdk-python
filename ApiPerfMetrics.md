@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**summary** | **str** | api&#39;s summary defined in swagger.json | [optional] 
+**summary** | **str** | api&#x27;s summary defined in swagger.json | [optional] 
 **total_waiting_requests** | **int** | total waiting requests | [optional] 
-**total_rejected_get_api_count** | **int** | api&#39;s summary defined in swagger.json | [optional] 
+**total_rejected_get_api_count** | **int** | api&#x27;s summary defined in swagger.json | [optional] 
 **tot_nano_time** | **int** | total time taken to process requests | [optional] 
 **total_processed_requests** | **int** | total processed requests | [optional] 
 **total_requests** | **int** | total requests | [optional] 
@@ -14,5 +14,4 @@ Name | Type | Description | Notes
 **tags** | **list[str]** | api tags | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 
