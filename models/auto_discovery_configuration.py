@@ -35,7 +35,8 @@ class AutoDiscoveryConfiguration(object):
         'instance_auto_group_method': 'str',
         'instance_auto_group_method_params': 'str',
         'filters': 'list[AutoDiscoveryFilter]',
-        'disable_instance': 'bool'
+        'disable_instance': 'bool',
+        'show_deleted_instance_days': 'int'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class AutoDiscoveryConfiguration(object):
         'instance_auto_group_method': 'instanceAutoGroupMethod',
         'instance_auto_group_method_params': 'instanceAutoGroupMethodParams',
         'filters': 'filters',
-        'disable_instance': 'disableInstance'
+        'disable_instance': 'disableInstance',
+        'show_deleted_instance_days': 'showDeletedInstanceDays'
     }
 
-    def __init__(self, persistent_instance=None, schedule_interval=None, delete_inactive_instance=None, method=None, instance_auto_group_method=None, instance_auto_group_method_params=None, filters=None, disable_instance=None):  # noqa: E501
+    def __init__(self, persistent_instance=None, schedule_interval=None, delete_inactive_instance=None, method=None, instance_auto_group_method=None, instance_auto_group_method_params=None, filters=None, disable_instance=None, show_deleted_instance_days=None):  # noqa: E501
         """AutoDiscoveryConfiguration - a model defined in Swagger"""  # noqa: E501
         self._persistent_instance = None
         self._schedule_interval = None
@@ -59,6 +61,7 @@ class AutoDiscoveryConfiguration(object):
         self._instance_auto_group_method_params = None
         self._filters = None
         self._disable_instance = None
+        self._show_deleted_instance_days = None
         self.discriminator = None
         if persistent_instance is not None:
             self.persistent_instance = persistent_instance
@@ -75,6 +78,8 @@ class AutoDiscoveryConfiguration(object):
             self.filters = filters
         if disable_instance is not None:
             self.disable_instance = disable_instance
+        if show_deleted_instance_days is not None:
+            self.show_deleted_instance_days = show_deleted_instance_days
 
     @property
     def persistent_instance(self):
@@ -257,6 +262,29 @@ class AutoDiscoveryConfiguration(object):
         """
 
         self._disable_instance = disable_instance
+
+    @property
+    def show_deleted_instance_days(self):
+        """Gets the show_deleted_instance_days of this AutoDiscoveryConfiguration.  # noqa: E501
+
+        show deleted instance days  # noqa: E501
+
+        :return: The show_deleted_instance_days of this AutoDiscoveryConfiguration.  # noqa: E501
+        :rtype: int
+        """
+        return self._show_deleted_instance_days
+
+    @show_deleted_instance_days.setter
+    def show_deleted_instance_days(self, show_deleted_instance_days):
+        """Sets the show_deleted_instance_days of this AutoDiscoveryConfiguration.
+
+        show deleted instance days  # noqa: E501
+
+        :param show_deleted_instance_days: The show_deleted_instance_days of this AutoDiscoveryConfiguration.  # noqa: E501
+        :type: int
+        """
+
+        self._show_deleted_instance_days = show_deleted_instance_days
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import logicmonitor_sdk
-from logicmonitor_sdk.models.rest_scrape_log_source_collection_attributes_v3 import RestScrapeLogSourceCollectionAttributesV3  # noqa: E501
+from logicmonitor_sdk.models.device_cluster_alert_config_pagination_response import DeviceClusterAlertConfigPaginationResponse  # noqa: E501
 from logicmonitor_sdk.rest import ApiException
 
 
-class TestRestScrapeLogSourceCollectionAttributesV3(unittest.TestCase):
-    """RestScrapeLogSourceCollectionAttributesV3 unit test stubs"""
+class TestDeviceClusterAlertConfigPaginationResponse(unittest.TestCase):
+    """DeviceClusterAlertConfigPaginationResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestRestScrapeLogSourceCollectionAttributesV3(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testRestScrapeLogSourceCollectionAttributesV3(self):
-        """Test RestScrapeLogSourceCollectionAttributesV3"""
+    def testDeviceClusterAlertConfigPaginationResponse(self):
+        """Test DeviceClusterAlertConfigPaginationResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = logicmonitor_sdk.models.rest_scrape_log_source_collection_attributes_v3.RestScrapeLogSourceCollectionAttributesV3()  # noqa: E501
+        # model = logicmonitor_sdk.models.device_cluster_alert_config_pagination_response.DeviceClusterAlertConfigPaginationResponse()  # noqa: E501
         pass
 
 

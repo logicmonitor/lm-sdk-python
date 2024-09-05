@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **instance_auto_group_method_params** | **str** | Auto group method&#x27;s parameters | [optional] 
 **filters** | [**list[AutoDiscoveryFilter]**](AutoDiscoveryFilter.md) |  | [optional] 
 **disable_instance** | **bool** | Disable discovered instance | [optional] 
+**show_deleted_instance_days** | **int** | show deleted instance days | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

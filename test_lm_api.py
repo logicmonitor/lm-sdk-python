@@ -161,6 +161,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_add_device_group_cluster_alert_conf(self):
+        """Test case for add_device_group_cluster_alert_conf
+
+        Add cluster alert configuration  # noqa: E501
+        """
+        pass
+
     def test_add_device_group_property(self):
         """Test case for add_device_group_property
 
@@ -193,13 +200,6 @@ class TestLMApi(unittest.TestCase):
         """Test case for add_job_monitor
 
         Add JobMonitor  # noqa: E501
-        """
-        pass
-
-    def test_add_log_source(self):
-        """Test case for add_log_source
-
-        add log source   # noqa: E501
         """
         pass
 
@@ -385,6 +385,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_device_group_cluster_alert_conf_by_id(self):
+        """Test case for delete_device_group_cluster_alert_conf_by_id
+
+        Delete cluster alert configuration  # noqa: E501
+        """
+        pass
+
     def test_delete_device_group_property_by_name(self):
         """Test case for delete_device_group_property_by_name
 
@@ -410,13 +417,6 @@ class TestLMApi(unittest.TestCase):
         """Test case for delete_job_monitor
 
         Delete JobMonitor  # noqa: E501
-        """
-        pass
-
-    def test_delete_log_source(self):
-        """Test case for delete_log_source
-
-        delete log source   # noqa: E501
         """
         pass
 
@@ -805,6 +805,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_device_config_source_config_by_id(self):
+        """Test case for get_device_config_source_config_by_id
+
+        get a config for a device  # noqa: E501
+        """
+        pass
+
     def test_get_device_config_source_config_list(self):
         """Test case for get_device_config_source_config_list
 
@@ -823,6 +830,20 @@ class TestLMApi(unittest.TestCase):
         """Test case for get_device_datasource_data_by_id
 
         get device datasource data   # noqa: E501
+        """
+        pass
+
+    def test_get_device_datasource_instance_alert_setting_by_id(self):
+        """Test case for get_device_datasource_instance_alert_setting_by_id
+
+        get device instance alert setting  # noqa: E501
+        """
+        pass
+
+    def test_get_device_datasource_instance_alert_setting_list_of_device(self):
+        """Test case for get_device_datasource_instance_alert_setting_list_of_device
+
+        get a list of alert settings for a device  # noqa: E501
         """
         pass
 
@@ -900,6 +921,20 @@ class TestLMApi(unittest.TestCase):
         """Test case for get_device_group_by_id
 
         get device group  # noqa: E501
+        """
+        pass
+
+    def test_get_device_group_cluster_alert_conf_by_id(self):
+        """Test case for get_device_group_cluster_alert_conf_by_id
+
+        Get cluster alert configuration by id  # noqa: E501
+        """
+        pass
+
+    def test_get_device_group_cluster_alert_conf_list(self):
+        """Test case for get_device_group_cluster_alert_conf_list
+
+        get a list of cluster alert configurations for a device group  # noqa: E501
         """
         pass
 
@@ -1057,20 +1092,6 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
-    def test_get_log_source_by_id(self):
-        """Test case for get_log_source_by_id
-
-        get log source   # noqa: E501
-        """
-        pass
-
-    def test_get_log_source_list(self):
-        """Test case for get_log_source_list
-
-        get log source list  # noqa: E501
-        """
-        pass
-
     def test_get_metrics_usage(self):
         """Test case for get_metrics_usage
 
@@ -1078,10 +1099,24 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_netflow_endpoint_list(self):
+        """Test case for get_netflow_endpoint_list
+
+        get netflow endpoints  # noqa: E501
+        """
+        pass
+
     def test_get_netflow_flow_list(self):
         """Test case for get_netflow_flow_list
 
         get netflow flows  # noqa: E501
+        """
+        pass
+
+    def test_get_netflow_port_list(self):
+        """Test case for get_netflow_port_list
+
+        get netflow ports  # noqa: E501
         """
         pass
 
@@ -1099,17 +1134,17 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_oid_by_id(self):
+        """Test case for get_oid_by_id
+
+        get OID by id  # noqa: E501
+        """
+        pass
+
     def test_get_oid_list(self):
         """Test case for get_oid_list
 
         get OID's list  # noqa: E501
-        """
-        pass
-
-    def test_get_oidby_id(self):
-        """Test case for get_oidby_id
-
-        get OID by id  # noqa: E501
         """
         pass
 
@@ -1498,6 +1533,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_device_group_cluster_alert_conf_by_id(self):
+        """Test case for patch_device_group_cluster_alert_conf_by_id
+
+        Update cluster alert configuration  # noqa: E501
+        """
+        pass
+
     def test_patch_device_group_datasource_alert_setting(self):
         """Test case for patch_device_group_datasource_alert_setting
 
@@ -1544,13 +1586,6 @@ class TestLMApi(unittest.TestCase):
         """Test case for patch_job_monitor
 
         Update JobMonitor  # noqa: E501
-        """
-        pass
-
-    def test_patch_log_source(self):
-        """Test case for patch_log_source
-
-        update log source   # noqa: E501
         """
         pass
 
@@ -1778,6 +1813,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_update_device_group_cluster_alert_conf_by_id(self):
+        """Test case for update_device_group_cluster_alert_conf_by_id
+
+        Update cluster alert configuration  # noqa: E501
+        """
+        pass
+
     def test_update_device_group_datasource_alert_setting(self):
         """Test case for update_device_group_datasource_alert_setting
 
@@ -1831,13 +1873,6 @@ class TestLMApi(unittest.TestCase):
         """Test case for update_job_monitor
 
         Update JobMonitor  # noqa: E501
-        """
-        pass
-
-    def test_update_log_source(self):
-        """Test case for update_log_source
-
-        update log source   # noqa: E501
         """
         pass
 

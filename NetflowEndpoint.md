@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **last_seen** | **int** |  | [optional] 
 **percent_usage** | **float** |  | [optional] 
+**data_type** | **str** |  | [optional] 
 **ip** | **str** |  | [optional] 
 **usage** | **float** |  | [optional] 
 **dns** | **str** |  | [optional] 

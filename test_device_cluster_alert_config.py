@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import logicmonitor_sdk
-from logicmonitor_sdk.models.rest_log_source_log_field_v3 import RestLogSourceLogFieldV3  # noqa: E501
+from logicmonitor_sdk.models.device_cluster_alert_config import DeviceClusterAlertConfig  # noqa: E501
 from logicmonitor_sdk.rest import ApiException
 
 
-class TestRestLogSourceLogFieldV3(unittest.TestCase):
-    """RestLogSourceLogFieldV3 unit test stubs"""
+class TestDeviceClusterAlertConfig(unittest.TestCase):
+    """DeviceClusterAlertConfig unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestRestLogSourceLogFieldV3(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testRestLogSourceLogFieldV3(self):
-        """Test RestLogSourceLogFieldV3"""
+    def testDeviceClusterAlertConfig(self):
+        """Test DeviceClusterAlertConfig"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = logicmonitor_sdk.models.rest_log_source_log_field_v3.RestLogSourceLogFieldV3()  # noqa: E501
+        # model = logicmonitor_sdk.models.device_cluster_alert_config.DeviceClusterAlertConfig()  # noqa: E501
         pass
 
 
