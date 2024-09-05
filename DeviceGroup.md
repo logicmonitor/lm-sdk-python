@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **role_privileges** | **list[str]** | The role privilege operations for the device group that are granted to the user that made this API request | [optional] 
 **has_netflow_enabled_devices** | **bool** | Whether if any Netflow enabled devices in this device group | [optional] 
 **num_of_azure_devices** | **int** | The number of Azure devices that belong to this device group (includes Azure devices in sub groups) | [optional] 
+**property_change_warning_message** | **str** | Warning message if Parent Property of system.tenant.identifier is changed for a group | [optional] 
 **default_collector_description** | **str** | The description of the default collector assigned to the device group | [optional] 
 **default_collector_id** | **int** | The Id of the default collector assigned to the device group | [optional] 
 **aws_test_result** | [**AwsAccountTestResult**](AwsAccountTestResult.md) |  | [optional] 

@@ -41,6 +41,7 @@ class DeviceGroup(object):
         'role_privileges': 'list[str]',
         'has_netflow_enabled_devices': 'bool',
         'num_of_azure_devices': 'int',
+        'property_change_warning_message': 'str',
         'default_collector_description': 'str',
         'default_collector_id': 'int',
         'aws_test_result': 'AwsAccountTestResult',
@@ -85,6 +86,7 @@ class DeviceGroup(object):
         'role_privileges': 'rolePrivileges',
         'has_netflow_enabled_devices': 'hasNetflowEnabledDevices',
         'num_of_azure_devices': 'numOfAzureDevices',
+        'property_change_warning_message': 'propertyChangeWarningMessage',
         'default_collector_description': 'defaultCollectorDescription',
         'default_collector_id': 'defaultCollectorId',
         'aws_test_result': 'awsTestResult',
@@ -115,7 +117,7 @@ class DeviceGroup(object):
         'azure_regions_info': 'azureRegionsInfo'
     }
 
-    def __init__(self, full_path=None, group_type=None, num_of_aws_devices=None, description=None, applies_to=None, gcp_test_result_code=None, disable_alerting=None, num_of_kubernetes_devices=None, aws_regions_info=None, created_on=None, role_privileges=None, has_netflow_enabled_devices=None, num_of_azure_devices=None, default_collector_description=None, default_collector_id=None, aws_test_result=None, extra=None, num_of_direct_sub_groups=None, sub_groups=None, num_of_direct_devices=None, id=None, enable_netflow=None, azure_test_result_code=None, effective_alert_enabled=None, default_collector_group_description=None, user_permission=None, gcp_regions_info=None, saas_test_result_code=None, default_collector_group_id=None, group_status=None, num_of_gcp_devices=None, azure_test_result=None, parent_id=None, aws_test_result_code=None, custom_properties=None, num_of_hosts=None, default_auto_balanced_collector_group_id=None, saas_test_result=None, name=None, gcp_test_result=None, azure_regions_info=None):  # noqa: E501
+    def __init__(self, full_path=None, group_type=None, num_of_aws_devices=None, description=None, applies_to=None, gcp_test_result_code=None, disable_alerting=None, num_of_kubernetes_devices=None, aws_regions_info=None, created_on=None, role_privileges=None, has_netflow_enabled_devices=None, num_of_azure_devices=None, property_change_warning_message=None, default_collector_description=None, default_collector_id=None, aws_test_result=None, extra=None, num_of_direct_sub_groups=None, sub_groups=None, num_of_direct_devices=None, id=None, enable_netflow=None, azure_test_result_code=None, effective_alert_enabled=None, default_collector_group_description=None, user_permission=None, gcp_regions_info=None, saas_test_result_code=None, default_collector_group_id=None, group_status=None, num_of_gcp_devices=None, azure_test_result=None, parent_id=None, aws_test_result_code=None, custom_properties=None, num_of_hosts=None, default_auto_balanced_collector_group_id=None, saas_test_result=None, name=None, gcp_test_result=None, azure_regions_info=None):  # noqa: E501
         """DeviceGroup - a model defined in Swagger"""  # noqa: E501
         self._full_path = None
         self._group_type = None
@@ -130,6 +132,7 @@ class DeviceGroup(object):
         self._role_privileges = None
         self._has_netflow_enabled_devices = None
         self._num_of_azure_devices = None
+        self._property_change_warning_message = None
         self._default_collector_description = None
         self._default_collector_id = None
         self._aws_test_result = None
@@ -185,6 +188,8 @@ class DeviceGroup(object):
             self.has_netflow_enabled_devices = has_netflow_enabled_devices
         if num_of_azure_devices is not None:
             self.num_of_azure_devices = num_of_azure_devices
+        if property_change_warning_message is not None:
+            self.property_change_warning_message = property_change_warning_message
         if default_collector_description is not None:
             self.default_collector_description = default_collector_description
         if default_collector_id is not None:
@@ -539,6 +544,29 @@ class DeviceGroup(object):
         """
 
         self._num_of_azure_devices = num_of_azure_devices
+
+    @property
+    def property_change_warning_message(self):
+        """Gets the property_change_warning_message of this DeviceGroup.  # noqa: E501
+
+        Warning message if Parent Property of system.tenant.identifier is changed for a group  # noqa: E501
+
+        :return: The property_change_warning_message of this DeviceGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._property_change_warning_message
+
+    @property_change_warning_message.setter
+    def property_change_warning_message(self, property_change_warning_message):
+        """Sets the property_change_warning_message of this DeviceGroup.
+
+        Warning message if Parent Property of system.tenant.identifier is changed for a group  # noqa: E501
+
+        :param property_change_warning_message: The property_change_warning_message of this DeviceGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._property_change_warning_message = property_change_warning_message
 
     @property
     def default_collector_description(self):

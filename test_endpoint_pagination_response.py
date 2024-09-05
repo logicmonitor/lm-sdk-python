@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import logicmonitor_sdk
-from logicmonitor_sdk.models.rest_log_source_collection_attributes_v3 import RestLogSourceCollectionAttributesV3  # noqa: E501
+from logicmonitor_sdk.models.endpoint_pagination_response import EndpointPaginationResponse  # noqa: E501
 from logicmonitor_sdk.rest import ApiException
 
 
-class TestRestLogSourceCollectionAttributesV3(unittest.TestCase):
-    """RestLogSourceCollectionAttributesV3 unit test stubs"""
+class TestEndpointPaginationResponse(unittest.TestCase):
+    """EndpointPaginationResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestRestLogSourceCollectionAttributesV3(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testRestLogSourceCollectionAttributesV3(self):
-        """Test RestLogSourceCollectionAttributesV3"""
+    def testEndpointPaginationResponse(self):
+        """Test EndpointPaginationResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = logicmonitor_sdk.models.rest_log_source_collection_attributes_v3.RestLogSourceCollectionAttributesV3()  # noqa: E501
+        # model = logicmonitor_sdk.models.endpoint_pagination_response.EndpointPaginationResponse()  # noqa: E501
         pass
 
 

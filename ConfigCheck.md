@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **id** | **int** | The ConfigCheck id | [optional] 
 **type** | **str** | The ConfigCheck type. The values can be fetch|ignore|missing|value|groovy | [optional] 
 **alert_effective_ival** | **int** | Alert effective interval | [optional] 
-**script** | [**JSONObject**](JSONObject.md) |  | [optional] 
+**script** | **object** | The ConfigCheck script | [optional] 
 **alert_transition_interval** | **int** | The count that the alert must exist for these many poll cycles before it will be triggered | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

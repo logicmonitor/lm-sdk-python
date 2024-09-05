@@ -212,6 +212,8 @@ logicmonitor_sdk/models/days_until_alert.py
 logicmonitor_sdk/models/debug.py
 logicmonitor_sdk/models/device.py
 logicmonitor_sdk/models/device_batch_job_sdt.py
+logicmonitor_sdk/models/device_cluster_alert_config.py
+logicmonitor_sdk/models/device_cluster_alert_config_pagination_response.py
 logicmonitor_sdk/models/device_cluster_alert_def_sdt.py
 logicmonitor_sdk/models/device_data_source.py
 logicmonitor_sdk/models/device_data_source_associated.py
@@ -260,7 +262,6 @@ logicmonitor_sdk/models/device_sla_widget_data.py
 logicmonitor_sdk/models/device_status.py
 logicmonitor_sdk/models/dns_collector_attribute.py
 logicmonitor_sdk/models/dummy_auto_discovery_method.py
-logicmonitor_sdk/models/duration.py
 logicmonitor_sdk/models/dynamic_column.py
 logicmonitor_sdk/models/dynamic_table_widget.py
 logicmonitor_sdk/models/dynamic_table_widget_column.py
@@ -272,6 +273,7 @@ logicmonitor_sdk/models/ec2_netscan.py
 logicmonitor_sdk/models/ec2_netscan_policy_credential.py
 logicmonitor_sdk/models/ec2_scheduled_event_auto_discovery_method.py
 logicmonitor_sdk/models/echo_event_source.py
+logicmonitor_sdk/models/endpoint_pagination_response.py
 logicmonitor_sdk/models/enhanced_script_netscan.py
 logicmonitor_sdk/models/entity_property.py
 logicmonitor_sdk/models/error_response.py
@@ -346,9 +348,6 @@ logicmonitor_sdk/models/linked_wmi_class.py
 logicmonitor_sdk/models/location_data.py
 logicmonitor_sdk/models/log_file.py
 logicmonitor_sdk/models/log_file_event_source.py
-logicmonitor_sdk/models/log_source.py
-logicmonitor_sdk/models/log_source_pagination_response.py
-logicmonitor_sdk/models/log_source_param.py
 logicmonitor_sdk/models/logs_info.py
 logicmonitor_sdk/models/logs_widget.py
 logicmonitor_sdk/models/macro.py
@@ -422,6 +421,7 @@ logicmonitor_sdk/models/ping_check.py
 logicmonitor_sdk/models/ping_collector_attribute.py
 logicmonitor_sdk/models/point_source.py
 logicmonitor_sdk/models/port_auto_discovery_method.py
+logicmonitor_sdk/models/port_pagination_response.py
 logicmonitor_sdk/models/privilege.py
 logicmonitor_sdk/models/property_match_rule.py
 logicmonitor_sdk/models/property_pagination_response.py
@@ -460,11 +460,6 @@ logicmonitor_sdk/models/rest_device_instance_group_alert_config_v3.py
 logicmonitor_sdk/models/rest_event_source_filter.py
 logicmonitor_sdk/models/rest_gcp_account_test_v3.py
 logicmonitor_sdk/models/rest_highest_priority_collector_status.py
-logicmonitor_sdk/models/rest_log_source_collection_attributes_v3.py
-logicmonitor_sdk/models/rest_log_source_collection_attributes_v3_object.py
-logicmonitor_sdk/models/rest_log_source_filter_v3.py
-logicmonitor_sdk/models/rest_log_source_log_field_v3.py
-logicmonitor_sdk/models/rest_log_source_resource_mapping_v3.py
 logicmonitor_sdk/models/rest_map_module_v3.py
 logicmonitor_sdk/models/rest_n_map_netscan_policy_credential.py
 logicmonitor_sdk/models/rest_netscan_ports.py
@@ -472,16 +467,10 @@ logicmonitor_sdk/models/rest_oid_v3.py
 logicmonitor_sdk/models/rest_response.py
 logicmonitor_sdk/models/rest_response_meta_block.py
 logicmonitor_sdk/models/rest_saa_s_account_test_v3.py
-logicmonitor_sdk/models/rest_saas_o365_audit_log_source_collection_attributes_v3.py
 logicmonitor_sdk/models/rest_saved_map_widget_v3.py
 logicmonitor_sdk/models/rest_schedule.py
-logicmonitor_sdk/models/rest_scrape_log_source_collection_attributes_v3.py
-logicmonitor_sdk/models/rest_script_log_source_collection_attributes_v3.py
-logicmonitor_sdk/models/rest_snmp_trap_log_source_collection_attributes_v3.py
-logicmonitor_sdk/models/rest_sys_log_source_collection_attributes_v3.py
 logicmonitor_sdk/models/rest_user_customized_data_v3.py
 logicmonitor_sdk/models/rest_viz_widget_data_v3.py
-logicmonitor_sdk/models/rest_win_event_log_source_collection_attributes_v3.py
 logicmonitor_sdk/models/result_item.py
 logicmonitor_sdk/models/role.py
 logicmonitor_sdk/models/role_pagination_response.py
@@ -557,7 +546,6 @@ logicmonitor_sdk/models/udp_collector_attribute.py
 logicmonitor_sdk/models/unmonitored_device_pagination_response.py
 logicmonitor_sdk/models/unmonitored_devices.py
 logicmonitor_sdk/models/update_reason.py
-logicmonitor_sdk/models/update_reasons.py
 logicmonitor_sdk/models/usage.py
 logicmonitor_sdk/models/user_filter.py
 logicmonitor_sdk/models/user_report.py
@@ -802,6 +790,8 @@ test/test_days_until_alert.py
 test/test_debug.py
 test/test_device.py
 test/test_device_batch_job_sdt.py
+test/test_device_cluster_alert_config.py
+test/test_device_cluster_alert_config_pagination_response.py
 test/test_device_cluster_alert_def_sdt.py
 test/test_device_data_source.py
 test/test_device_data_source_associated.py
@@ -850,7 +840,6 @@ test/test_device_sla_widget_data.py
 test/test_device_status.py
 test/test_dns_collector_attribute.py
 test/test_dummy_auto_discovery_method.py
-test/test_duration.py
 test/test_dynamic_column.py
 test/test_dynamic_table_widget.py
 test/test_dynamic_table_widget_column.py
@@ -862,6 +851,7 @@ test/test_ec2_netscan.py
 test/test_ec2_netscan_policy_credential.py
 test/test_ec2_scheduled_event_auto_discovery_method.py
 test/test_echo_event_source.py
+test/test_endpoint_pagination_response.py
 test/test_enhanced_script_netscan.py
 test/test_entity_property.py
 test/test_error_response.py
@@ -937,9 +927,6 @@ test/test_lm_api.py
 test/test_location_data.py
 test/test_log_file.py
 test/test_log_file_event_source.py
-test/test_log_source.py
-test/test_log_source_pagination_response.py
-test/test_log_source_param.py
 test/test_logs_info.py
 test/test_logs_widget.py
 test/test_macro.py
@@ -1013,6 +1000,7 @@ test/test_ping_check.py
 test/test_ping_collector_attribute.py
 test/test_point_source.py
 test/test_port_auto_discovery_method.py
+test/test_port_pagination_response.py
 test/test_privilege.py
 test/test_property_match_rule.py
 test/test_property_pagination_response.py
@@ -1051,11 +1039,6 @@ test/test_rest_device_instance_group_alert_config_v3.py
 test/test_rest_event_source_filter.py
 test/test_rest_gcp_account_test_v3.py
 test/test_rest_highest_priority_collector_status.py
-test/test_rest_log_source_collection_attributes_v3.py
-test/test_rest_log_source_collection_attributes_v3_object.py
-test/test_rest_log_source_filter_v3.py
-test/test_rest_log_source_log_field_v3.py
-test/test_rest_log_source_resource_mapping_v3.py
 test/test_rest_map_module_v3.py
 test/test_rest_n_map_netscan_policy_credential.py
 test/test_rest_netscan_ports.py
@@ -1063,16 +1046,10 @@ test/test_rest_oid_v3.py
 test/test_rest_response.py
 test/test_rest_response_meta_block.py
 test/test_rest_saa_s_account_test_v3.py
-test/test_rest_saas_o365_audit_log_source_collection_attributes_v3.py
 test/test_rest_saved_map_widget_v3.py
 test/test_rest_schedule.py
-test/test_rest_scrape_log_source_collection_attributes_v3.py
-test/test_rest_script_log_source_collection_attributes_v3.py
-test/test_rest_snmp_trap_log_source_collection_attributes_v3.py
-test/test_rest_sys_log_source_collection_attributes_v3.py
 test/test_rest_user_customized_data_v3.py
 test/test_rest_viz_widget_data_v3.py
-test/test_rest_win_event_log_source_collection_attributes_v3.py
 test/test_result_item.py
 test/test_role.py
 test/test_role_pagination_response.py
@@ -1148,7 +1125,6 @@ test/test_udp_collector_attribute.py
 test/test_unmonitored_device_pagination_response.py
 test/test_unmonitored_devices.py
 test/test_update_reason.py
-test/test_update_reasons.py
 test/test_usage.py
 test/test_user_filter.py
 test/test_user_report.py

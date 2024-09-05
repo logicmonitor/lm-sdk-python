@@ -39,11 +39,9 @@ class NetflowDataBase(object):
           'qosreporttablerow': 'NetflowQoSReportTableRow',
 'NetflowBgpTable': 'NetflowBgpTable',
 'NetflowNbarApplication': 'NetflowNbarApplication',
-'port': 'NetflowPort',
 'groupflowrecord': 'GroupNetFlowRecord',
 'bandwidth': 'NetflowBandwidth',
-'application': 'NetflowApplication',
-'endpoint': 'NetflowEndpoint'    }
+'application': 'NetflowApplication'    }
 
     def __init__(self, data_type=None):  # noqa: E501
         """NetflowDataBase - a model defined in Swagger"""  # noqa: E501

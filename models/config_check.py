@@ -37,7 +37,7 @@ class ConfigCheck(object):
         'id': 'int',
         'type': 'str',
         'alert_effective_ival': 'int',
-        'script': 'JSONObject',
+        'script': 'object',
         'alert_transition_interval': 'int'
     }
 
@@ -303,9 +303,10 @@ class ConfigCheck(object):
     def script(self):
         """Gets the script of this ConfigCheck.  # noqa: E501
 
+        The ConfigCheck script  # noqa: E501
 
         :return: The script of this ConfigCheck.  # noqa: E501
-        :rtype: JSONObject
+        :rtype: object
         """
         return self._script
 
@@ -313,9 +314,10 @@ class ConfigCheck(object):
     def script(self, script):
         """Sets the script of this ConfigCheck.
 
+        The ConfigCheck script  # noqa: E501
 
         :param script: The script of this ConfigCheck.  # noqa: E501
-        :type: JSONObject
+        :type: object
         """
 
         self._script = script

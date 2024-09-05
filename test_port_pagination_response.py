@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import logicmonitor_sdk
-from logicmonitor_sdk.models.rest_snmp_trap_log_source_collection_attributes_v3 import RestSnmpTrapLogSourceCollectionAttributesV3  # noqa: E501
+from logicmonitor_sdk.models.port_pagination_response import PortPaginationResponse  # noqa: E501
 from logicmonitor_sdk.rest import ApiException
 
 
-class TestRestSnmpTrapLogSourceCollectionAttributesV3(unittest.TestCase):
-    """RestSnmpTrapLogSourceCollectionAttributesV3 unit test stubs"""
+class TestPortPaginationResponse(unittest.TestCase):
+    """PortPaginationResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestRestSnmpTrapLogSourceCollectionAttributesV3(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testRestSnmpTrapLogSourceCollectionAttributesV3(self):
-        """Test RestSnmpTrapLogSourceCollectionAttributesV3"""
+    def testPortPaginationResponse(self):
+        """Test PortPaginationResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = logicmonitor_sdk.models.rest_snmp_trap_log_source_collection_attributes_v3.RestSnmpTrapLogSourceCollectionAttributesV3()  # noqa: E501
+        # model = logicmonitor_sdk.models.port_pagination_response.PortPaginationResponse()  # noqa: E501
         pass
 
 
