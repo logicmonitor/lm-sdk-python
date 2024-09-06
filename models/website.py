@@ -55,7 +55,11 @@ class Website(object):
         'use_default_alert_setting': 'bool',
         'individual_alert_level': 'str',
         'properties': 'list[NameAndValue]',
-        'status': 'str'
+        'status': 'str',
+        'schema': 'str',
+        'trigger_ssl_expiration_alert': 'bool',
+        'trigger_ssl_status_alert': 'bool',
+        'alert_expr': 'str',
     }
 
     attribute_map = {
@@ -86,14 +90,18 @@ class Website(object):
         'use_default_alert_setting': 'useDefaultAlertSetting',
         'individual_alert_level': 'individualAlertLevel',
         'properties': 'properties',
-        'status': 'status'
+        'status': 'status',
+        'schema': 'schema',
+        'trigger_ssl_expiration_alert': 'triggerSSLExpirationAlert',
+        'trigger_ssl_status_alert': 'triggerSSLStatusAlert',
+        'alert_expr': 'alertExpr',
     }
 
     discriminator_value_class_map = {
           'webcheck': 'WebCheck',
 'pingcheck': 'PingCheck'    }
 
-    def __init__(self, template=None, test_location=None, group_id=None, overall_alert_level=None, polling_interval=None, description=None, disable_alerting=None, type=None, role_privileges=None, last_updated=None, stop_monitoring_by_folder=None, id=None, stop_monitoring=None, user_permission=None, individual_sm_alert_enable=None, checkpoints=None, steps=None, transition=None, global_sm_alert_cond=None, is_internal=None, collectors=None, domain=None, name=None, use_default_location_setting=None, use_default_alert_setting=None, individual_alert_level=None, properties=None, status=None):  # noqa: E501
+    def __init__(self, template=None, test_location=None, group_id=None, overall_alert_level=None, polling_interval=None, description=None, disable_alerting=None, type=None, role_privileges=None, last_updated=None, stop_monitoring_by_folder=None, id=None, stop_monitoring=None, user_permission=None, individual_sm_alert_enable=None, checkpoints=None, steps=None, transition=None, global_sm_alert_cond=None, is_internal=None, collectors=None, domain=None, name=None, use_default_location_setting=None, use_default_alert_setting=None, individual_alert_level=None, properties=None, status=None, schema=None, trigger_ssl_expiration_alert=None, trigger_ssl_status_alert=None, alert_expr=None):  # noqa: E501
         """Website - a model defined in Swagger"""  # noqa: E501
         self._template = None
         self._test_location = None
@@ -124,6 +132,11 @@ class Website(object):
         self._properties = None
         self._status = None
         self.discriminator = 'type'
+        self.schema = None
+        self.trigger_ssl_expiration_alert = None
+        self.trigger_ssl_status_alert = None
+        self.alert_expr = None
+
         if template is not None:
             self.template = template
         self.test_location = test_location
@@ -177,6 +190,14 @@ class Website(object):
             self.properties = properties
         if status is not None:
             self.status = status
+        if schema is not None:
+            self.schema = schema
+        if trigger_ssl_expiration_alert is not None:
+            self.trigger_ssl_expiration_alert = trigger_ssl_expiration_alert
+        if trigger_ssl_status_alert is not None:
+            self.trigger_ssl_status_alert = trigger_ssl_status_alert
+        if alert_expr is not None:
+            self.alert_expr = alert_expr
 
     @property
     def template(self):
