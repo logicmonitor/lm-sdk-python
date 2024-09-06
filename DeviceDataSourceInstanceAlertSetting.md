@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **global_alert_expr** | **str** | The global alert expression for this datapoint | [optional] 
-**parent_instance_group_alert_expr** | [**InstanceGroupAlertThresholdInfo**](InstanceGroupAlertThresholdInfo.md) | Instance group alert expression list base on the priority. The first is the highest priority and effected on this instance | [optional] 
+**parent_instance_group_alert_expr** | [**InstanceGroupAlertThresholdInfo**](InstanceGroupAlertThresholdInfo.md) |  | [optional] 
 **alert_for_no_data** | **int** | alert for no data (no alert-1, warning-2, error-3, critical-4) | [optional] 
 **post_processor_param** | **str** | The post processor parameter for complex DataPoint and instance level configCheck threshold. | [optional] 
 **disable_alerting** | **bool** | Whether or not alerting will be disabled for the datapoint | [optional] 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **device_group_id** | **int** | The ID of the device group | [optional] 
 **id** | **int** | The id of this alert setting | [optional] 
 **global_alert_clear_transition_interval** | **int** | The count that the alert must exist for this many poll cycles before the alert will be cleared | [optional] 
-**parent_resource_data_source_alert_expr** | [**ResourceDataSourceAlertThresholdInfo**](ResourceDataSourceAlertThresholdInfo.md) | Resource datasource alert expression list base on the priority. The first is the highest priority and effected on this instance | [optional] 
+**parent_resource_data_source_alert_expr** | [**ResourceDataSourceAlertThresholdInfo**](ResourceDataSourceAlertThresholdInfo.md) |  | [optional] 
 **device_group_full_path** | **str** | The full path of the device group | [optional] 
 **alert_transition_interval** | **int** | The polling interval of alert transition (0-60) | [optional] 
 **global_alert_for_no_data** | **int** | The triggered alert level if we cannot collect data for this datapoint | [optional] 
@@ -39,5 +39,4 @@ Name | Type | Description | Notes
 **alert_expr** | **str** | The thresholds that should be associated with the datapoint. Note that you need to have a space between the operator and each threshold (e.g. &gt; 1 2 3) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

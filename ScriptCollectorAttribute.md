@@ -7,11 +7,11 @@ Name | Type | Description | Notes
 **manual_connections** | **str** | manual | [optional] 
 **script_type** | **str** | script type: embed | file | powershell | [optional] 
 **windows_script** | **str** | windows script | [optional] 
+**name** | **str** | The data collector&#x27;s name | 
 **linux_cmdline** | **str** | linux script command line | [optional] 
 **linux_script** | **str** | linux script | [optional] 
 **windows_cmdline** | **str** | windows script command line | [optional] 
 **properties** | **str** | property based | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

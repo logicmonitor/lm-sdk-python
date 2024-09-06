@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **script_path** | **str** | The script path for an external script | [optional] 
 **default_group_full_path** | **str** | The full path of the default group to add discovered devices to | [optional] 
 **groovy_script** | **str** | For embedded script scans, the groovy script contents | [optional] 
-**credentials** | [**RestNMapNetscanPolicyCredential**](RestNMapNetscanPolicyCredential.md) | The credentials to be used for the scan | [optional] 
+**credentials** | [**RestNMapNetscanPolicyCredential**](RestNMapNetscanPolicyCredential.md) |  | [optional] 
 **linux_script_params** | **str** |  | [optional] 
 **groovy_script_params** | **str** | For embedded script scans, the groovy script parameters | [optional] 
 **windows_script** | **str** |  | [optional] 
@@ -18,5 +18,4 @@ Name | Type | Description | Notes
 **linux_script** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

@@ -1,6 +1,6 @@
 # logicmonitor_sdk.LMApi
 
-All URIs are relative to *https://localhost/santaba/rest*
+All URIs are relative to */santaba/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**add_applies_to_function**](LMApi.md#add_applies_to_function) | **POST** /setting/functions | add applies to function
 [**add_collector**](LMApi.md#add_collector) | **POST** /setting/collector/collectors | add collector
 [**add_collector_group**](LMApi.md#add_collector_group) | **POST** /setting/collector/groups | add collector group
+[**add_config_source**](LMApi.md#add_config_source) | **POST** /setting/configsources | add config source
 [**add_dashboard**](LMApi.md#add_dashboard) | **POST** /dashboard/dashboards | add dashboard
 [**add_dashboard_group**](LMApi.md#add_dashboard_group) | **POST** /dashboard/groups | add dashboard group
 [**add_dashboard_group_asynchronously**](LMApi.md#add_dashboard_group_asynchronously) | **POST** /dashboard/groups/{id}/asyncclone | add dashboard group asynchronously
@@ -22,16 +23,22 @@ Method | HTTP request | Description
 [**add_device_datasource_instance**](LMApi.md#add_device_datasource_instance) | **POST** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances | add device instance 
 [**add_device_datasource_instance_group**](LMApi.md#add_device_datasource_instance_group) | **POST** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups | add device datasource instance group 
 [**add_device_group**](LMApi.md#add_device_group) | **POST** /device/groups | add device group
+[**add_device_group_cluster_alert_conf**](LMApi.md#add_device_group_cluster_alert_conf) | **POST** /device/groups/{deviceGroupId}/clusterAlertConf | Add cluster alert configuration
 [**add_device_group_property**](LMApi.md#add_device_group_property) | **POST** /device/groups/{gid}/properties | add device group property
 [**add_device_property**](LMApi.md#add_device_property) | **POST** /device/devices/{deviceId}/properties | add device property
 [**add_escalation_chain**](LMApi.md#add_escalation_chain) | **POST** /setting/alert/chains | add escalation chain
+[**add_event_source**](LMApi.md#add_event_source) | **POST** /setting/eventsources | add eventSource
+[**add_job_monitor**](LMApi.md#add_job_monitor) | **POST** /setting/batchjobs | Add JobMonitor
 [**add_netscan**](LMApi.md#add_netscan) | **POST** /setting/netscans | add a new netscan
+[**add_oid**](LMApi.md#add_oid) | **POST** /setting/oids | add a new OID
 [**add_ops_note**](LMApi.md#add_ops_note) | **POST** /setting/opsnotes | add opsnote
+[**add_property_rule**](LMApi.md#add_property_rule) | **POST** /setting/propertyrules | add a new property rule
 [**add_recipient_group**](LMApi.md#add_recipient_group) | **POST** /setting/recipientgroups | add recipient group
 [**add_report**](LMApi.md#add_report) | **POST** /report/reports | add report
 [**add_report_group**](LMApi.md#add_report_group) | **POST** /report/groups | add report group
 [**add_role**](LMApi.md#add_role) | **POST** /setting/roles | add role
 [**add_sdt**](LMApi.md#add_sdt) | **POST** /sdt/sdts | add SDT (Response may contain extra fields depending upon the type of SDT being added)
+[**add_topology_source**](LMApi.md#add_topology_source) | **POST** /setting/topologysources | Add TopologySource
 [**add_website**](LMApi.md#add_website) | **POST** /website/websites | add website
 [**add_website_group**](LMApi.md#add_website_group) | **POST** /website/groups | add website group
 [**add_widget**](LMApi.md#add_widget) | **POST** /dashboard/widgets | add widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
@@ -41,18 +48,25 @@ Method | HTTP request | Description
 [**delete_alert_rule_by_id**](LMApi.md#delete_alert_rule_by_id) | **DELETE** /setting/alert/rules/{id} | delete alert rule
 [**delete_collector_by_id**](LMApi.md#delete_collector_by_id) | **DELETE** /setting/collector/collectors/{id} | delete collector
 [**delete_collector_group_by_id**](LMApi.md#delete_collector_group_by_id) | **DELETE** /setting/collector/groups/{id} | delete collector group
+[**delete_config_source_by_id**](LMApi.md#delete_config_source_by_id) | **DELETE** /setting/configsources/{id} | delete config source by id
 [**delete_dashboard_by_id**](LMApi.md#delete_dashboard_by_id) | **DELETE** /dashboard/dashboards/{id} | delete dashboard
 [**delete_dashboard_group_by_id**](LMApi.md#delete_dashboard_group_by_id) | **DELETE** /dashboard/groups/{id} | delete dashboard group
 [**delete_datasource_by_id**](LMApi.md#delete_datasource_by_id) | **DELETE** /setting/datasources/{id} | delete datasource
 [**delete_device_by_id**](LMApi.md#delete_device_by_id) | **DELETE** /device/devices/{id} | delete a device
 [**delete_device_datasource_instance_by_id**](LMApi.md#delete_device_datasource_instance_by_id) | **DELETE** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id} | delete a device instance
 [**delete_device_group_by_id**](LMApi.md#delete_device_group_by_id) | **DELETE** /device/groups/{id} | delete device group
+[**delete_device_group_cluster_alert_conf_by_id**](LMApi.md#delete_device_group_cluster_alert_conf_by_id) | **DELETE** /device/groups/{deviceGroupId}/clusterAlertConf/{id} | Delete cluster alert configuration
 [**delete_device_group_property_by_name**](LMApi.md#delete_device_group_property_by_name) | **DELETE** /device/groups/{gid}/properties/{name} | delete device group property
 [**delete_device_property_by_name**](LMApi.md#delete_device_property_by_name) | **DELETE** /device/devices/{deviceId}/properties/{name} | delete device property
+[**delete_event_source_by_id**](LMApi.md#delete_event_source_by_id) | **DELETE** /setting/eventsources/{id} | delete eventSource by id
+[**delete_job_monitor**](LMApi.md#delete_job_monitor) | **DELETE** /setting/batchjobs/{id} | Delete JobMonitor
+[**delete_oid**](LMApi.md#delete_oid) | **DELETE** /setting/oids/{id} | delete a OID
+[**delete_property_rule**](LMApi.md#delete_property_rule) | **DELETE** /setting/propertyrules/{id} | delete a property rule
 [**delete_report_by_id**](LMApi.md#delete_report_by_id) | **DELETE** /report/reports/{id} | delete report
 [**delete_report_group_by_id**](LMApi.md#delete_report_group_by_id) | **DELETE** /report/groups/{id} | delete report group
 [**delete_role_by_id**](LMApi.md#delete_role_by_id) | **DELETE** /setting/roles/{id} | delete role
 [**delete_sdt_by_id**](LMApi.md#delete_sdt_by_id) | **DELETE** /sdt/sdts/{id} | delete SDT
+[**delete_topology_source**](LMApi.md#delete_topology_source) | **DELETE** /setting/topologysources/{id} | Delete TopologySource
 [**delete_website_by_id**](LMApi.md#delete_website_by_id) | **DELETE** /website/websites/{id} | delete website
 [**delete_website_group_by_id**](LMApi.md#delete_website_group_by_id) | **DELETE** /website/groups/{id} | delete website group
 [**delete_widget_by_id**](LMApi.md#delete_widget_by_id) | **DELETE** /dashboard/widgets/{id} | delete widget
@@ -88,6 +102,8 @@ Method | HTTP request | Description
 [**get_collector_installer**](LMApi.md#get_collector_installer) | **GET** /setting/collector/collectors/{collectorId}/installers/{osAndArch} | get collector installer
 [**get_collector_list**](LMApi.md#get_collector_list) | **GET** /setting/collector/collectors | get collector list
 [**get_collector_version_list**](LMApi.md#get_collector_version_list) | **GET** /setting/collector/collectors/versions | get collector version list
+[**get_config_source_by_id**](LMApi.md#get_config_source_by_id) | **GET** /setting/configsources/{id} | get config source by id
+[**get_config_source_list**](LMApi.md#get_config_source_list) | **GET** /setting/configsources | get config source list
 [**get_dashboard_by_id**](LMApi.md#get_dashboard_by_id) | **GET** /dashboard/dashboards/{id} | get dashboard
 [**get_dashboard_group_by_id**](LMApi.md#get_dashboard_group_by_id) | **GET** /dashboard/groups/{id} | get dashboard group
 [**get_dashboard_group_list**](LMApi.md#get_dashboard_group_list) | **GET** /dashboard/groups | get dashboard group list
@@ -99,9 +115,12 @@ Method | HTTP request | Description
 [**get_delta_devices**](LMApi.md#get_delta_devices) | **GET** /device/devices/delta/{deltaId} | Get delta devices using deltaId
 [**get_delta_id_with_devices**](LMApi.md#get_delta_id_with_devices) | **GET** /device/devices/delta | Get filter matched devices with new deltaId
 [**get_device_by_id**](LMApi.md#get_device_by_id) | **GET** /device/devices/{id} | get device by id
+[**get_device_config_source_config_by_id**](LMApi.md#get_device_config_source_config_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/config/{id} | get a config for a device
 [**get_device_config_source_config_list**](LMApi.md#get_device_config_source_config_list) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/config | get detailed config information for the instance
 [**get_device_datasource_by_id**](LMApi.md#get_device_datasource_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{id} | get device datasource 
 [**get_device_datasource_data_by_id**](LMApi.md#get_device_datasource_data_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{id}/data | get device datasource data 
+[**get_device_datasource_instance_alert_setting_by_id**](LMApi.md#get_device_datasource_instance_alert_setting_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/alertsettings/{id} | get device instance alert setting
+[**get_device_datasource_instance_alert_setting_list_of_device**](LMApi.md#get_device_datasource_instance_alert_setting_list_of_device) | **GET** /device/devices/{deviceId}/alertsettings | get a list of alert settings for a device
 [**get_device_datasource_instance_alert_setting_list_of_dsi**](LMApi.md#get_device_datasource_instance_alert_setting_list_of_dsi) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/alertsettings | get a list of alert settings for a device datasource instance
 [**get_device_datasource_instance_by_id**](LMApi.md#get_device_datasource_instance_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id} | get device instance 
 [**get_device_datasource_instance_data**](LMApi.md#get_device_datasource_instance_data) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}/data | get device instance data
@@ -113,6 +132,8 @@ Method | HTTP request | Description
 [**get_device_datasource_instance_sdt_history**](LMApi.md#get_device_datasource_instance_sdt_history) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}/historysdts | get device instance SDT history
 [**get_device_datasource_list**](LMApi.md#get_device_datasource_list) | **GET** /device/devices/{deviceId}/devicedatasources | get device datasource list 
 [**get_device_group_by_id**](LMApi.md#get_device_group_by_id) | **GET** /device/groups/{id} | get device group
+[**get_device_group_cluster_alert_conf_by_id**](LMApi.md#get_device_group_cluster_alert_conf_by_id) | **GET** /device/groups/{deviceGroupId}/clusterAlertConf/{id} | Get cluster alert configuration by id
+[**get_device_group_cluster_alert_conf_list**](LMApi.md#get_device_group_cluster_alert_conf_list) | **GET** /device/groups/{deviceGroupId}/clusterAlertConf | get a list of cluster alert configurations for a device group
 [**get_device_group_datasource_alert_setting**](LMApi.md#get_device_group_datasource_alert_setting) | **GET** /device/groups/{deviceGroupId}/datasources/{dsId}/alertsettings | get device group datasource alert setting 
 [**get_device_group_datasource_by_id**](LMApi.md#get_device_group_datasource_by_id) | **GET** /device/groups/{deviceGroupId}/datasources/{id} | get device group datasource
 [**get_device_group_datasource_list**](LMApi.md#get_device_group_datasource_list) | **GET** /device/groups/{deviceGroupId}/datasources | get device group datasource list
@@ -127,16 +148,25 @@ Method | HTTP request | Description
 [**get_device_property_list**](LMApi.md#get_device_property_list) | **GET** /device/devices/{deviceId}/properties | get device properties
 [**get_escalation_chain_by_id**](LMApi.md#get_escalation_chain_by_id) | **GET** /setting/alert/chains/{id} | get escalation chain by id
 [**get_escalation_chain_list**](LMApi.md#get_escalation_chain_list) | **GET** /setting/alert/chains | get escalation chain list
+[**get_event_source_by_id**](LMApi.md#get_event_source_by_id) | **GET** /setting/eventsources/{id} | get eventSource by id
 [**get_event_source_list**](LMApi.md#get_event_source_list) | **GET** /setting/eventsources | get eventSource list
 [**get_external_api_stats**](LMApi.md#get_external_api_stats) | **GET** /apiStats/externalApis | get external api stats info
 [**get_immediate_device_list_by_device_group_id**](LMApi.md#get_immediate_device_list_by_device_group_id) | **GET** /device/groups/{id}/devices | get immediate devices under group
 [**get_immediate_website_list_by_website_group_id**](LMApi.md#get_immediate_website_list_by_website_group_id) | **GET** /website/groups/{id}/websites | get a list of websites for a group (Response may contain extra fields depending upon the type of check { PingCheck | WebCheck} being added)
 [**get_integration_audit_logs**](LMApi.md#get_integration_audit_logs) | **GET** /setting/integrations/auditlogs | get integration audit logs list
+[**get_job_monitor_by_id**](LMApi.md#get_job_monitor_by_id) | **GET** /setting/batchjobs/{id} | Get JobMonitor by id
+[**get_job_monitor_list**](LMApi.md#get_job_monitor_list) | **GET** /setting/batchjobs | Get JobMonitor List
 [**get_metrics_usage**](LMApi.md#get_metrics_usage) | **GET** /metrics/usage | get metrics usage
+[**get_netflow_endpoint_list**](LMApi.md#get_netflow_endpoint_list) | **GET** /device/devices/{id}/endpoints | get netflow endpoints
 [**get_netflow_flow_list**](LMApi.md#get_netflow_flow_list) | **GET** /device/devices/{id}/flows | get netflow flows
+[**get_netflow_port_list**](LMApi.md#get_netflow_port_list) | **GET** /device/devices/{id}/ports | get netflow ports
 [**get_netscan_by_id**](LMApi.md#get_netscan_by_id) | **GET** /setting/netscans/{id} | get netscan by id
 [**get_netscan_list**](LMApi.md#get_netscan_list) | **GET** /setting/netscans | get netscan list
+[**get_oid_by_id**](LMApi.md#get_oid_by_id) | **GET** /setting/oids/{id} | get OID by id
+[**get_oid_list**](LMApi.md#get_oid_list) | **GET** /setting/oids | get OID&#x27;s list
 [**get_ops_note_list**](LMApi.md#get_ops_note_list) | **GET** /setting/opsnotes | get opsnote list
+[**get_property_rules_by_id**](LMApi.md#get_property_rules_by_id) | **GET** /setting/propertyrules/{id} | get property rules by id
+[**get_property_rules_list**](LMApi.md#get_property_rules_list) | **GET** /setting/propertyrules | get property rules list
 [**get_recipient_group_by_id**](LMApi.md#get_recipient_group_by_id) | **GET** /setting/recipientgroups/{id} | get recipient group by id
 [**get_recipient_group_list**](LMApi.md#get_recipient_group_list) | **GET** /setting/recipientgroups | get recipient group List
 [**get_report_by_id**](LMApi.md#get_report_by_id) | **GET** /report/reports/{id} | get report by id
@@ -153,6 +183,8 @@ Method | HTTP request | Description
 [**get_sdt_list**](LMApi.md#get_sdt_list) | **GET** /sdt/sdts | get SDT list
 [**get_site_monitor_check_point_list**](LMApi.md#get_site_monitor_check_point_list) | **GET** /website/smcheckpoints | get website checkpoint list
 [**get_top_talkers_graph**](LMApi.md#get_top_talkers_graph) | **GET** /device/devices/{id}/topTalkersGraph | get top talkers graph
+[**get_topology_source_by_id**](LMApi.md#get_topology_source_by_id) | **GET** /setting/topologysources/{id} | Get TopologySource by id
+[**get_topology_source_list**](LMApi.md#get_topology_source_list) | **GET** /setting/topologysources | Get TopologySource List
 [**get_unmonitored_device_list**](LMApi.md#get_unmonitored_device_list) | **GET** /device/unmonitoreddevices | get unmonitored device list
 [**get_update_reason_list_by_config_source_id**](LMApi.md#get_update_reason_list_by_config_source_id) | **GET** /setting/configsources/{id}/updatereasons | get update history for a configSource
 [**get_update_reason_list_by_data_source_id**](LMApi.md#get_update_reason_list_by_data_source_id) | **GET** /setting/datasources/{id}/updatereasons | get update history for a datasource
@@ -170,12 +202,14 @@ Method | HTTP request | Description
 [**get_widget_data_by_id**](LMApi.md#get_widget_data_by_id) | **GET** /dashboard/widgets/{id}/data | get widget data (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 [**get_widget_list**](LMApi.md#get_widget_list) | **GET** /dashboard/widgets | get widget list (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 [**get_widget_list_by_dashboard_id**](LMApi.md#get_widget_list_by_dashboard_id) | **GET** /dashboard/dashboards/{id}/widgets | get widget list by DashboardId
+[**map_un_map_module_to_access_group**](LMApi.md#map_un_map_module_to_access_group) | **POST** /setting/accessgroup/mapunmap/modules | Create a mapping of access group &amp; module
 [**patch_access_group**](LMApi.md#patch_access_group) | **PATCH** /setting/accessgroup/{id} | Update access group
 [**patch_admin_by_id**](LMApi.md#patch_admin_by_id) | **PATCH** /setting/admins/{id} | update user
 [**patch_alert_rule_by_id**](LMApi.md#patch_alert_rule_by_id) | **PATCH** /setting/alert/rules/{id} | update alert rule
 [**patch_applies_to_function**](LMApi.md#patch_applies_to_function) | **PATCH** /setting/functions/{id} | update applies to function
 [**patch_collector_by_id**](LMApi.md#patch_collector_by_id) | **PATCH** /setting/collector/collectors/{id} | update collector
 [**patch_collector_group_by_id**](LMApi.md#patch_collector_group_by_id) | **PATCH** /setting/collector/groups/{id} | update collector group
+[**patch_config_source_by_id**](LMApi.md#patch_config_source_by_id) | **PATCH** /setting/configsources/{id} | update config source by id
 [**patch_dashboard_by_id**](LMApi.md#patch_dashboard_by_id) | **PATCH** /dashboard/dashboards/{id} | update dashboard
 [**patch_dashboard_group_by_id**](LMApi.md#patch_dashboard_group_by_id) | **PATCH** /dashboard/groups/{id} | update dashboard group
 [**patch_datasource_by_id**](LMApi.md#patch_datasource_by_id) | **PATCH** /setting/datasources/{id} | update datasource
@@ -185,16 +219,22 @@ Method | HTTP request | Description
 [**patch_device_datasource_instance_by_id**](LMApi.md#patch_device_datasource_instance_by_id) | **PATCH** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id} | update device instance
 [**patch_device_datasource_instance_group_by_id**](LMApi.md#patch_device_datasource_instance_group_by_id) | **PATCH** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{id} | update device datasource instance group
 [**patch_device_group_by_id**](LMApi.md#patch_device_group_by_id) | **PATCH** /device/groups/{id} | update device group
+[**patch_device_group_cluster_alert_conf_by_id**](LMApi.md#patch_device_group_cluster_alert_conf_by_id) | **PATCH** /device/groups/{deviceGroupId}/clusterAlertConf/{id} | Update cluster alert configuration
 [**patch_device_group_datasource_alert_setting**](LMApi.md#patch_device_group_datasource_alert_setting) | **PATCH** /device/groups/{deviceGroupId}/datasources/{dsId}/alertsettings | update device group datasource alert setting
 [**patch_device_group_datasource_by_id**](LMApi.md#patch_device_group_datasource_by_id) | **PATCH** /device/groups/{deviceGroupId}/datasources/{id} | update device group datasource
 [**patch_device_group_property_by_name**](LMApi.md#patch_device_group_property_by_name) | **PATCH** /device/groups/{gid}/properties/{name} | update device group property
 [**patch_device_property_by_name**](LMApi.md#patch_device_property_by_name) | **PATCH** /device/devices/{deviceId}/properties/{name} | update device property
 [**patch_escalation_chain_by_id**](LMApi.md#patch_escalation_chain_by_id) | **PATCH** /setting/alert/chains/{id} | update escalation chain
+[**patch_event_source_by_id**](LMApi.md#patch_event_source_by_id) | **PATCH** /setting/eventsources/{id} | update eventSource by id
+[**patch_job_monitor**](LMApi.md#patch_job_monitor) | **PATCH** /setting/batchjobs/{id} | Update JobMonitor
+[**patch_oid**](LMApi.md#patch_oid) | **PATCH** /setting/oids/{id} | update a OID
+[**patch_property_rule**](LMApi.md#patch_property_rule) | **PATCH** /setting/propertyrules/{id} | update a property rule
 [**patch_recipient_group_by_id**](LMApi.md#patch_recipient_group_by_id) | **PATCH** /setting/recipientgroups/{id} | update recipient group
 [**patch_report_by_id**](LMApi.md#patch_report_by_id) | **PATCH** /report/reports/{id} | update report
 [**patch_report_group_by_id**](LMApi.md#patch_report_group_by_id) | **PATCH** /report/groups/{id} | update report group
 [**patch_role_by_id**](LMApi.md#patch_role_by_id) | **PATCH** /setting/roles/{id} | update role
 [**patch_sdt_by_id**](LMApi.md#patch_sdt_by_id) | **PATCH** /sdt/sdts/{id} | update SDT (Response may contain extra fields depending upon the type of SDT being updated)
+[**patch_topology_source**](LMApi.md#patch_topology_source) | **PATCH** /setting/topologysources/{id} | Update TopologySource
 [**patch_website_by_id**](LMApi.md#patch_website_by_id) | **PATCH** /website/websites/{id} | update website
 [**patch_website_group_by_id**](LMApi.md#patch_website_group_by_id) | **PATCH** /website/groups/{id} | update website group
 [**patch_widget_by_id**](LMApi.md#patch_widget_by_id) | **PATCH** /dashboard/widgets/{id} | update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
@@ -209,6 +249,7 @@ Method | HTTP request | Description
 [**update_applies_to_function**](LMApi.md#update_applies_to_function) | **PUT** /setting/functions/{id} | update applies to function
 [**update_collector_by_id**](LMApi.md#update_collector_by_id) | **PUT** /setting/collector/collectors/{id} | update collector
 [**update_collector_group_by_id**](LMApi.md#update_collector_group_by_id) | **PUT** /setting/collector/groups/{id} | update collector group
+[**update_config_source_by_id**](LMApi.md#update_config_source_by_id) | **PUT** /setting/configsources/{id} | update config source by id
 [**update_dashboard_by_id**](LMApi.md#update_dashboard_by_id) | **PUT** /dashboard/dashboards/{id} | update dashboard
 [**update_dashboard_group_by_id**](LMApi.md#update_dashboard_group_by_id) | **PUT** /dashboard/groups/{id} | update dashboard group
 [**update_datasource_by_id**](LMApi.md#update_datasource_by_id) | **PUT** /setting/datasources/{id} | update datasource
@@ -218,28 +259,32 @@ Method | HTTP request | Description
 [**update_device_datasource_instance_by_id**](LMApi.md#update_device_datasource_instance_by_id) | **PUT** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id} | update device instance
 [**update_device_datasource_instance_group_by_id**](LMApi.md#update_device_datasource_instance_group_by_id) | **PUT** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{id} | update device datasource instance group
 [**update_device_group_by_id**](LMApi.md#update_device_group_by_id) | **PUT** /device/groups/{id} | update device group
+[**update_device_group_cluster_alert_conf_by_id**](LMApi.md#update_device_group_cluster_alert_conf_by_id) | **PUT** /device/groups/{deviceGroupId}/clusterAlertConf/{id} | Update cluster alert configuration
 [**update_device_group_datasource_alert_setting**](LMApi.md#update_device_group_datasource_alert_setting) | **PUT** /device/groups/{deviceGroupId}/datasources/{dsId}/alertsettings | update device group datasource alert setting
 [**update_device_group_datasource_by_id**](LMApi.md#update_device_group_datasource_by_id) | **PUT** /device/groups/{deviceGroupId}/datasources/{id} | update device group datasource
 [**update_device_group_property_by_name**](LMApi.md#update_device_group_property_by_name) | **PUT** /device/groups/{gid}/properties/{name} | update device group property
 [**update_device_property_by_name**](LMApi.md#update_device_property_by_name) | **PUT** /device/devices/{deviceId}/properties/{name} | update device property
 [**update_escalation_chain_by_id**](LMApi.md#update_escalation_chain_by_id) | **PUT** /setting/alert/chains/{id} | update escalation chain
+[**update_event_source_by_id**](LMApi.md#update_event_source_by_id) | **PUT** /setting/eventsources/{id} | update eventSource by id
 [**update_instance_group_alert_threshold**](LMApi.md#update_instance_group_alert_threshold) | **PUT** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{dsigId}/datapoints/{dpId}/alertconfig | update instance group alert threshold (Setting the threshold at default group is not allowed)
+[**update_job_monitor**](LMApi.md#update_job_monitor) | **PUT** /setting/batchjobs/{id} | Update JobMonitor
+[**update_oid**](LMApi.md#update_oid) | **PUT** /setting/oids/{id} | update a OID
+[**update_property_rule**](LMApi.md#update_property_rule) | **PUT** /setting/propertyrules/{id} | update a property rule
 [**update_recipient_group_by_id**](LMApi.md#update_recipient_group_by_id) | **PUT** /setting/recipientgroups/{id} | update recipient group
 [**update_report_by_id**](LMApi.md#update_report_by_id) | **PUT** /report/reports/{id} | update report
 [**update_report_group_by_id**](LMApi.md#update_report_group_by_id) | **PUT** /report/groups/{id} | update report group
 [**update_role_by_id**](LMApi.md#update_role_by_id) | **PUT** /setting/roles/{id} | update role
 [**update_sdt_by_id**](LMApi.md#update_sdt_by_id) | **PUT** /sdt/sdts/{id} | update SDT (Response may contain extra fields depending upon the type of SDT being updated)
+[**update_topology_source**](LMApi.md#update_topology_source) | **PUT** /setting/topologysources/{id} | Update TopologySource
 [**update_website_by_id**](LMApi.md#update_website_by_id) | **PUT** /website/websites/{id} | update website
 [**update_website_group_by_id**](LMApi.md#update_website_group_by_id) | **PUT** /website/groups/{id} | update website group
 [**update_widget_by_id**](LMApi.md#update_widget_by_id) | **PUT** /dashboard/widgets/{id} | update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
-
+[**verify_storage_accounts_permissions**](LMApi.md#verify_storage_accounts_permissions) | **POST** /azure/functions/verifyStorageAccountsPermissions | view storage accounts
 
 # **ack_alert_by_id**
 > object ack_alert_by_id(body, id)
 
 ack alert by id
-
-
 
 ### Example
 ```python
@@ -251,11 +296,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.AlertAck() # AlertAck | 
 id = 'id_example' # str | 
@@ -295,8 +340,6 @@ Name | Type | Description  | Notes
 
 ack collector down alert
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -307,11 +350,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.AckCollectorDown() # AckCollectorDown | 
@@ -351,8 +394,6 @@ Name | Type | Description  | Notes
 
 Create a access group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -363,11 +404,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.AccessGroup() # AccessGroup |  (optional)
 
@@ -405,8 +446,6 @@ Name | Type | Description  | Notes
 
 add user
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -417,11 +456,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Admin() # Admin | 
 
@@ -459,8 +498,6 @@ Name | Type | Description  | Notes
 
 add alert note
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -471,11 +508,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.AlertAck() # AlertAck | 
 id = 'id_example' # str | 
@@ -515,8 +552,6 @@ Name | Type | Description  | Notes
 
 add alert rule
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -527,11 +562,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.AlertRule() # AlertRule | 
 
@@ -569,8 +604,6 @@ Name | Type | Description  | Notes
 
 add api tokens for a user
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -581,11 +614,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 admin_id = 56 # int | 
 body = logicmonitor_sdk.APIToken() # APIToken | 
@@ -627,8 +660,6 @@ Name | Type | Description  | Notes
 
 add applies to function
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -639,11 +670,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.AppliesToFunction() # AppliesToFunction |  (optional)
 
@@ -681,8 +712,6 @@ Name | Type | Description  | Notes
 
 add collector
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -693,11 +722,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Collector() # Collector | 
 
@@ -735,8 +764,6 @@ Name | Type | Description  | Notes
 
 add collector group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -747,11 +774,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.CollectorGroup() # CollectorGroup | 
 
@@ -784,12 +811,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **add_dashboard**
-> Dashboard add_dashboard(body)
+# **add_config_source**
+> ConfigSource add_config_source(body=body)
 
-add dashboard
-
-
+add config source
 
 ### Example
 ```python
@@ -801,11 +826,63 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.ConfigSource() # ConfigSource |  (optional)
+
+try:
+    # add config source
+    api_response = api_instance.add_config_source(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->add_config_source: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**ConfigSource**](ConfigSource.md)|  | [optional] 
+
+### Return type
+
+[**ConfigSource**](ConfigSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_dashboard**
+> Dashboard add_dashboard(body)
+
+add dashboard
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Dashboard() # Dashboard | 
 
@@ -843,8 +920,6 @@ Name | Type | Description  | Notes
 
 add dashboard group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -855,11 +930,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.DashboardGroup() # DashboardGroup | 
 
@@ -897,8 +972,6 @@ Name | Type | Description  | Notes
 
 add dashboard group asynchronously
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -909,11 +982,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DashboardGroup() # DashboardGroup |  (optional)
@@ -955,8 +1028,6 @@ Name | Type | Description  | Notes
 
 add datasource
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -967,11 +1038,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.DataSource() # DataSource |  (optional)
 create_graph = false # bool |  (optional) (default to false)
@@ -1011,8 +1082,6 @@ Name | Type | Description  | Notes
 
 add a new device
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1023,11 +1092,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Device() # Device | 
 start = 789 # int |  (optional)
@@ -1073,8 +1142,6 @@ Name | Type | Description  | Notes
 
 add device instance 
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1085,11 +1152,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | The device-datasource ID
@@ -1131,8 +1198,6 @@ Name | Type | Description  | Notes
 
 add device datasource instance group 
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1143,11 +1208,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
@@ -1166,7 +1231,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **int**|  | 
- **device_ds_id** | **int**| The device-datasource ID you&#39;d like to add an instance group for | 
+ **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
  **body** | [**DeviceDataSourceInstanceGroup**](DeviceDataSourceInstanceGroup.md)|  | 
 
 ### Return type
@@ -1189,8 +1254,6 @@ Name | Type | Description  | Notes
 
 add device group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1201,11 +1264,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.DeviceGroup() # DeviceGroup | 
 
@@ -1238,12 +1301,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **add_device_group_property**
-> EntityProperty add_device_group_property(gid, body)
+# **add_device_group_cluster_alert_conf**
+> DeviceClusterAlertConfig add_device_group_cluster_alert_conf(device_group_id, body)
 
-add device group property
-
-
+Add cluster alert configuration
 
 ### Example
 ```python
@@ -1255,11 +1316,65 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+device_group_id = 56 # int | 
+body = logicmonitor_sdk.DeviceClusterAlertConfig() # DeviceClusterAlertConfig | 
+
+try:
+    # Add cluster alert configuration
+    api_response = api_instance.add_device_group_cluster_alert_conf(device_group_id, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->add_device_group_cluster_alert_conf: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_group_id** | **int**|  | 
+ **body** | [**DeviceClusterAlertConfig**](DeviceClusterAlertConfig.md)|  | 
+
+### Return type
+
+[**DeviceClusterAlertConfig**](DeviceClusterAlertConfig.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_device_group_property**
+> EntityProperty add_device_group_property(gid, body)
+
+add device group property
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 gid = 56 # int | group ID
 body = logicmonitor_sdk.EntityProperty() # EntityProperty | 
@@ -1299,8 +1414,6 @@ Name | Type | Description  | Notes
 
 add device property
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1311,11 +1424,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 body = logicmonitor_sdk.EntityProperty() # EntityProperty | 
@@ -1355,8 +1468,6 @@ Name | Type | Description  | Notes
 
 add escalation chain
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1367,11 +1478,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.EscalatingChain() # EscalatingChain | 
 
@@ -1404,12 +1515,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **add_netscan**
-> Netscan add_netscan(body=body)
+# **add_event_source**
+> EventSource add_event_source(body=body)
 
-add a new netscan
-
-
+add eventSource
 
 ### Example
 ```python
@@ -1421,11 +1530,115 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.EventSource() # EventSource |  (optional)
+
+try:
+    # add eventSource
+    api_response = api_instance.add_event_source(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->add_event_source: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**EventSource**](EventSource.md)|  | [optional] 
+
+### Return type
+
+[**EventSource**](EventSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_job_monitor**
+> BatchJob add_job_monitor(body=body)
+
+Add JobMonitor
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.BatchJob() # BatchJob |  (optional)
+
+try:
+    # Add JobMonitor
+    api_response = api_instance.add_job_monitor(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->add_job_monitor: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**BatchJob**](BatchJob.md)|  | [optional] 
+
+### Return type
+
+[**BatchJob**](BatchJob.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_netscan**
+> Netscan add_netscan(body=body)
+
+add a new netscan
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Netscan() # Netscan |  (optional)
 
@@ -1458,12 +1671,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **add_ops_note**
-> OpsNote add_ops_note(body)
+# **add_oid**
+> RestOidV3 add_oid(body=body)
 
-add opsnote
-
-
+add a new OID
 
 ### Example
 ```python
@@ -1475,11 +1686,63 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.RestOidV3() # RestOidV3 |  (optional)
+
+try:
+    # add a new OID
+    api_response = api_instance.add_oid(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->add_oid: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RestOidV3**](RestOidV3.md)|  | [optional] 
+
+### Return type
+
+[**RestOidV3**](RestOidV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_ops_note**
+> OpsNote add_ops_note(body)
+
+add opsnote
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.OpsNote() # OpsNote | 
 
@@ -1512,12 +1775,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **add_recipient_group**
-> RecipientGroup add_recipient_group(body)
+# **add_property_rule**
+> PropertyRule add_property_rule(body=body)
 
-add recipient group
-
-
+add a new property rule
 
 ### Example
 ```python
@@ -1529,11 +1790,63 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.PropertyRule() # PropertyRule |  (optional)
+
+try:
+    # add a new property rule
+    api_response = api_instance.add_property_rule(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->add_property_rule: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**PropertyRule**](PropertyRule.md)|  | [optional] 
+
+### Return type
+
+[**PropertyRule**](PropertyRule.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_recipient_group**
+> RecipientGroup add_recipient_group(body)
+
+add recipient group
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.RecipientGroup() # RecipientGroup | 
 
@@ -1571,8 +1884,6 @@ Name | Type | Description  | Notes
 
 add report
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1583,11 +1894,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.ReportBase() # ReportBase | 
 
@@ -1625,8 +1936,6 @@ Name | Type | Description  | Notes
 
 add report group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1637,11 +1946,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.ReportGroup() # ReportGroup | 
 
@@ -1679,8 +1988,6 @@ Name | Type | Description  | Notes
 
 add role
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1691,11 +1998,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Role() # Role | 
 
@@ -1733,8 +2040,6 @@ Name | Type | Description  | Notes
 
 add SDT (Response may contain extra fields depending upon the type of SDT being added)
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1745,11 +2050,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.SDT() # SDT | 
 
@@ -1782,12 +2087,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **add_website**
-> Website add_website(body)
+# **add_topology_source**
+> TopologySource add_topology_source(body=body)
 
-add website
-
-
+Add TopologySource
 
 ### Example
 ```python
@@ -1799,11 +2102,63 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.TopologySource() # TopologySource |  (optional)
+
+try:
+    # Add TopologySource
+    api_response = api_instance.add_topology_source(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->add_topology_source: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**TopologySource**](TopologySource.md)|  | [optional] 
+
+### Return type
+
+[**TopologySource**](TopologySource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_website**
+> Website add_website(body)
+
+add website
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Website() # Website | 
 
@@ -1841,8 +2196,6 @@ Name | Type | Description  | Notes
 
 add website group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1853,11 +2206,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.WebsiteGroup() # WebsiteGroup | 
 
@@ -1895,8 +2248,6 @@ Name | Type | Description  | Notes
 
 add widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1907,11 +2258,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Widget() # Widget | 
 
@@ -1949,8 +2300,6 @@ Name | Type | Description  | Notes
 
 collect a config for a device
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -1961,11 +2310,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | 
@@ -1997,7 +2346,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -2006,8 +2355,6 @@ Name | Type | Description  | Notes
 > object delete_access_group(id)
 
 Delete access group
-
-
 
 ### Example
 ```python
@@ -2019,11 +2366,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -2061,8 +2408,6 @@ Name | Type | Description  | Notes
 
 delete user
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2073,11 +2418,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -2115,8 +2460,6 @@ Name | Type | Description  | Notes
 
 delete alert rule
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2127,11 +2470,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -2169,8 +2512,6 @@ Name | Type | Description  | Notes
 
 delete collector
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2181,11 +2522,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -2223,8 +2564,6 @@ Name | Type | Description  | Notes
 
 delete collector group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2235,11 +2574,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -2272,12 +2611,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_dashboard_by_id**
-> object delete_dashboard_by_id(id)
+# **delete_config_source_by_id**
+> ConfigSource delete_config_source_by_id(id)
 
-delete dashboard
-
-
+delete config source by id
 
 ### Example
 ```python
@@ -2289,11 +2626,63 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+
+try:
+    # delete config source by id
+    api_response = api_instance.delete_config_source_by_id(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->delete_config_source_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**ConfigSource**](ConfigSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_dashboard_by_id**
+> object delete_dashboard_by_id(id)
+
+delete dashboard
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -2331,8 +2720,6 @@ Name | Type | Description  | Notes
 
 delete dashboard group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2343,11 +2730,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 allow_non_empty_group = false # bool |  (optional) (default to false)
@@ -2387,8 +2774,6 @@ Name | Type | Description  | Notes
 
 delete datasource
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2399,11 +2784,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -2441,8 +2826,6 @@ Name | Type | Description  | Notes
 
 delete a device
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2453,11 +2836,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 start = 789 # int |  (optional)
@@ -2503,8 +2886,6 @@ Name | Type | Description  | Notes
 
 delete a device instance
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2515,11 +2896,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | The device-datasource ID
@@ -2561,8 +2942,6 @@ Name | Type | Description  | Notes
 
 delete device group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2573,11 +2952,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 delete_children = false # bool |  (optional) (default to false)
@@ -2614,12 +2993,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_device_group_property_by_name**
-> object delete_device_group_property_by_name(gid, name)
+# **delete_device_group_cluster_alert_conf_by_id**
+> object delete_device_group_cluster_alert_conf_by_id(device_group_id, id)
 
-delete device group property
-
-
+Delete cluster alert configuration
 
 ### Example
 ```python
@@ -2631,11 +3008,65 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+device_group_id = 56 # int | 
+id = 56 # int | 
+
+try:
+    # Delete cluster alert configuration
+    api_response = api_instance.delete_device_group_cluster_alert_conf_by_id(device_group_id, id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->delete_device_group_cluster_alert_conf_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_group_id** | **int**|  | 
+ **id** | **int**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_device_group_property_by_name**
+> object delete_device_group_property_by_name(gid, name)
+
+delete device group property
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 gid = 56 # int | group ID
 name = 'name_example' # str | 
@@ -2675,8 +3106,6 @@ Name | Type | Description  | Notes
 
 delete device property
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2687,11 +3116,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 name = 'name_example' # str | 
@@ -2726,12 +3155,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_report_by_id**
-> object delete_report_by_id(id)
+# **delete_event_source_by_id**
+> object delete_event_source_by_id(id)
 
-delete report
-
-
+delete eventSource by id
 
 ### Example
 ```python
@@ -2743,11 +3170,219 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+
+try:
+    # delete eventSource by id
+    api_response = api_instance.delete_event_source_by_id(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->delete_event_source_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_job_monitor**
+> object delete_job_monitor(id)
+
+Delete JobMonitor
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+
+try:
+    # Delete JobMonitor
+    api_response = api_instance.delete_job_monitor(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->delete_job_monitor: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_oid**
+> object delete_oid(id)
+
+delete a OID
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+
+try:
+    # delete a OID
+    api_response = api_instance.delete_oid(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->delete_oid: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_property_rule**
+> object delete_property_rule(id)
+
+delete a property rule
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+
+try:
+    # delete a property rule
+    api_response = api_instance.delete_property_rule(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->delete_property_rule: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_report_by_id**
+> object delete_report_by_id(id)
+
+delete report
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -2785,8 +3420,6 @@ Name | Type | Description  | Notes
 
 delete report group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2797,11 +3430,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -2839,8 +3472,6 @@ Name | Type | Description  | Notes
 
 delete role
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2851,11 +3482,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -2893,8 +3524,6 @@ Name | Type | Description  | Notes
 
 delete SDT
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -2905,11 +3534,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
 
@@ -2942,12 +3571,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_website_by_id**
-> object delete_website_by_id(id)
+# **delete_topology_source**
+> object delete_topology_source(id)
 
-delete website
-
-
+Delete TopologySource
 
 ### Example
 ```python
@@ -2959,11 +3586,63 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+
+try:
+    # Delete TopologySource
+    api_response = api_instance.delete_topology_source(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->delete_topology_source: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_website_by_id**
+> object delete_website_by_id(id)
+
+delete website
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -3001,8 +3680,6 @@ Name | Type | Description  | Notes
 
 delete website group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3013,11 +3690,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 delete_children = 0 # int |  (optional) (default to 0)
@@ -3047,7 +3724,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3056,8 +3733,6 @@ Name | Type | Description  | Notes
 > object delete_widget_by_id(id)
 
 delete widget
-
-
 
 ### Example
 ```python
@@ -3069,11 +3744,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -3111,8 +3786,6 @@ Name | Type | Description  | Notes
 
 view subscriptions
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3123,11 +3796,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.RestAzureSubscriptionsDiscoverV3() # RestAzureSubscriptionsDiscoverV3 | 
 
@@ -3165,8 +3838,6 @@ Name | Type | Description  | Notes
 
 escalate alert by id
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3177,11 +3848,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
 
@@ -3209,7 +3880,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3218,8 +3889,6 @@ Name | Type | Description  | Notes
 > Debug execute_debug_command(body=body, collector_id=collector_id)
 
 Execute a Collector debug command
-
-
 
 ### Example
 ```python
@@ -3231,11 +3900,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Debug() # Debug |  (optional)
 collector_id = -1 # int |  (optional) (default to -1)
@@ -3275,8 +3944,6 @@ Name | Type | Description  | Notes
 
 fetch device instances data
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3287,11 +3954,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.DeviceInstances() # DeviceInstances | 
 period = 1.0 # float |  (optional) (default to 1.0)
@@ -3337,8 +4004,6 @@ Name | Type | Description  | Notes
 
 get report for task Id
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3349,11 +4014,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 task_id = 'task_id_example' # str | 
@@ -3383,7 +4048,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3392,8 +4057,6 @@ Name | Type | Description  | Notes
 > GenerateReportResult generate_report_by_id(id, body=body)
 
 run a report
-
-
 
 ### Example
 ```python
@@ -3405,11 +4068,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.GenerateReportRequest() # GenerateReportRequest |  (optional)
@@ -3449,8 +4112,6 @@ Name | Type | Description  | Notes
 
 Get access group by id
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3461,11 +4122,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -3505,8 +4166,6 @@ Name | Type | Description  | Notes
 
 Get access group list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3517,11 +4176,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -3565,8 +4224,6 @@ Name | Type | Description  | Notes
 
 get user
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3577,11 +4234,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -3621,8 +4278,6 @@ Name | Type | Description  | Notes
 
 get user list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3633,11 +4288,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 type = 'type_example' # str |  (optional)
 permission = 'permission_example' # str |  (optional)
@@ -3687,8 +4342,6 @@ Name | Type | Description  | Notes
 
 get alert
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3699,11 +4352,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
 need_message = false # bool |  (optional) (default to false)
@@ -3747,8 +4400,6 @@ Name | Type | Description  | Notes
 
 get alert list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3759,11 +4410,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -3807,8 +4458,6 @@ Name | Type | Description  | Notes
 
 get device group alerts
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3819,11 +4468,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 need_message = false # bool |  (optional) (default to false)
@@ -3873,8 +4522,6 @@ Name | Type | Description  | Notes
 
 get alerts
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3885,11 +4532,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 start = 789 # int |  (optional)
@@ -3947,8 +4594,6 @@ Name | Type | Description  | Notes
 
 get alert rule by id
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -3959,11 +4604,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -4003,8 +4648,6 @@ Name | Type | Description  | Notes
 
 get alert rule list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4015,11 +4658,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -4063,8 +4706,6 @@ Name | Type | Description  | Notes
 
 get SDTs for a device
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4075,11 +4716,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 start = 789 # int |  (optional)
@@ -4131,8 +4772,6 @@ Name | Type | Description  | Notes
 
 get a list of SDTs for a website group (Response may contain extra fields depending upon the type of SDT)
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4143,11 +4782,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -4183,7 +4822,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -4192,8 +4831,6 @@ Name | Type | Description  | Notes
 > ApiTokenPaginationResponse get_api_token_list(type=type, permission=permission, fields=fields, size=size, offset=offset, filter=filter)
 
 get a list of api tokens across users
-
-
 
 ### Example
 ```python
@@ -4205,11 +4842,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 type = 'type_example' # str |  (optional)
 permission = 'permission_example' # str |  (optional)
@@ -4257,8 +4894,6 @@ Name | Type | Description  | Notes
 
 get api tokens for a user
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4269,11 +4904,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 admin_id = 56 # int | 
 type = 'type_example' # str |  (optional)
@@ -4323,8 +4958,6 @@ Name | Type | Description  | Notes
 
 get applies to function
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4335,11 +4968,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -4377,8 +5010,6 @@ Name | Type | Description  | Notes
 
 get applies to function list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4389,11 +5020,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -4437,8 +5068,6 @@ Name | Type | Description  | Notes
 
 get devices associated with a datasource
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4449,11 +5078,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -4499,8 +5128,6 @@ Name | Type | Description  | Notes
 
 Get audit logs
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4511,11 +5138,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 format = 'format_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
@@ -4561,8 +5188,6 @@ Name | Type | Description  | Notes
 
 Get AWS account ID
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4573,11 +5198,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 
 try:
@@ -4611,8 +5236,6 @@ This endpoint does not need any parameter.
 
 Get AWS external ID
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4623,11 +5246,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 
 try:
@@ -4661,8 +5284,6 @@ This endpoint does not need any parameter.
 
 get collector
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4673,11 +5294,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -4717,8 +5338,6 @@ Name | Type | Description  | Notes
 
 get collector group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4729,11 +5348,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -4773,8 +5392,6 @@ Name | Type | Description  | Notes
 
 get collector group list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4785,11 +5402,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -4829,11 +5446,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_collector_installer**
-> file get_collector_installer(collector_id, os_and_arch, collector_version=collector_version, token=token, monitor_others=monitor_others, collector_size=collector_size, use_ea=use_ea)
+> str get_collector_installer(collector_id, os_and_arch, collector_version=collector_version, token=token, monitor_others=monitor_others, collector_size=collector_size, use_ea=use_ea)
 
 get collector installer
-
-
 
 ### Example
 ```python
@@ -4845,11 +5460,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 collector_id = 56 # int | 
 os_and_arch = 'os_and_arch_example' # str | 
@@ -4873,15 +5488,15 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **collector_id** | **int**|  | 
  **os_and_arch** | **str**|  | 
- **collector_version** | **int**| The version of the installer you&#39;d like to download. This defaults to the latest GD Collector, unless useEA is true | [optional] 
+ **collector_version** | **int**| The version of the installer you&#x27;d like to download. This defaults to the latest GD Collector, unless useEA is true | [optional] 
  **token** | **str**|  | [optional] 
  **monitor_others** | **bool**|  | [optional] [default to true]
- **collector_size** | **str**| The size of the Collector you&#39;d like to install. Options are nano, small (requires 2GB memory), medium (requires 4GB memory), large (requires 8GB memory), extra large (requires 16GB memory), double extra large (requires 32GB memory). Requires collector version 22.180 or higher. Defaults to small | [optional] [default to medium]
+ **collector_size** | **str**| The size of the Collector you&#x27;d like to install. Options are nano, small (requires 2GB memory), medium (requires 4GB memory), large (requires 8GB memory), extra large (requires 16GB memory), double extra large (requires 32GB memory). Requires collector version 22.180 or higher. Defaults to small | [optional] [default to medium]
  **use_ea** | **bool**| If true, the latest EA Collector version will be used. Defaults to false | [optional] [default to false]
 
 ### Return type
 
-[**file**](file.md)
+**str**
 
 ### Authorization
 
@@ -4899,8 +5514,6 @@ Name | Type | Description  | Notes
 
 get collector list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4911,11 +5524,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -4959,8 +5572,6 @@ Name | Type | Description  | Notes
 
 get collector version list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -4971,11 +5582,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -5014,12 +5625,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_dashboard_by_id**
-> Dashboard get_dashboard_by_id(id, template=template, format=format, fields=fields)
+# **get_config_source_by_id**
+> ConfigSource get_config_source_by_id(id, format=format)
 
-get dashboard
-
-
+get config source by id
 
 ### Example
 ```python
@@ -5031,11 +5640,125 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+format = 'json' # str |  (optional) (default to json)
+
+try:
+    # get config source by id
+    api_response = api_instance.get_config_source_by_id(id, format=format)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_config_source_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **format** | **str**|  | [optional] [default to json]
+
+### Return type
+
+[**ConfigSource**](ConfigSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_config_source_list**
+> ConfigsourcePaginationResponse get_config_source_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
+
+get config source list
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+format = 'json' # str |  (optional) (default to json)
+fields = 'fields_example' # str |  (optional)
+size = 50 # int |  (optional) (default to 50)
+offset = 0 # int |  (optional) (default to 0)
+filter = 'filter_example' # str |  (optional)
+
+try:
+    # get config source list
+    api_response = api_instance.get_config_source_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_config_source_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**|  | [optional] [default to json]
+ **fields** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] [default to 50]
+ **offset** | **int**|  | [optional] [default to 0]
+ **filter** | **str**|  | [optional] 
+
+### Return type
+
+[**ConfigsourcePaginationResponse**](ConfigsourcePaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_dashboard_by_id**
+> Dashboard get_dashboard_by_id(id, template=template, format=format, fields=fields)
+
+get dashboard
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 template = false # bool |  (optional) (default to false)
@@ -5079,8 +5802,6 @@ Name | Type | Description  | Notes
 
 get dashboard group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5091,11 +5812,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 template = false # bool |  (optional) (default to false)
@@ -5139,8 +5860,6 @@ Name | Type | Description  | Notes
 
 get dashboard group list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5151,11 +5870,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -5199,8 +5918,6 @@ Name | Type | Description  | Notes
 
 get dashboard list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5211,11 +5928,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -5259,8 +5976,6 @@ Name | Type | Description  | Notes
 
 get datasource overview graph list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5271,11 +5986,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 ds_id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -5321,8 +6036,6 @@ Name | Type | Description  | Notes
 
 get datasource by id
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5333,11 +6046,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 format = 'json' # str |  (optional) (default to json)
@@ -5379,8 +6092,6 @@ Name | Type | Description  | Notes
 
 get datasource list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5391,11 +6102,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 format = 'json' # str |  (optional) (default to json)
 fields = 'fields_example' # str |  (optional)
@@ -5441,8 +6152,6 @@ Name | Type | Description  | Notes
 
 Get the result of a Collector debug command using sessionId
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5453,11 +6162,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
 collector_id = -1 # int |  (optional) (default to -1)
@@ -5497,8 +6206,6 @@ Name | Type | Description  | Notes
 
 Get delta devices using deltaId
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5509,11 +6216,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 delta_id = 'delta_id_example' # str | 
 
@@ -5551,8 +6258,6 @@ Name | Type | Description  | Notes
 
 Get filter matched devices with new deltaId
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5563,11 +6268,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 delta_id = 'delta_id_example' # str |  (optional)
 
@@ -5605,8 +6310,6 @@ Name | Type | Description  | Notes
 
 get device by id
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5617,11 +6320,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 start = 789 # int |  (optional)
@@ -5662,12 +6365,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_device_config_source_config_list**
-> DeviceDatasourceInstanceConfigPaginationResponse get_device_config_source_config_list(device_id, hds_id, instance_id, fields=fields, size=size, offset=offset, filter=filter)
+# **get_device_config_source_config_by_id**
+> DeviceDataSourceInstanceConfig get_device_config_source_config_by_id(device_id, hds_id, instance_id, id, format=format, start_epoch=start_epoch, fields=fields)
 
-get detailed config information for the instance
-
-
+get a config for a device
 
 ### Example
 ```python
@@ -5679,11 +6380,75 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+device_id = 56 # int | 
+hds_id = 56 # int | 
+instance_id = 56 # int | 
+id = 'id_example' # str | 
+format = 'json' # str |  (optional) (default to json)
+start_epoch = 0 # int |  (optional) (default to 0)
+fields = 'fields_example' # str |  (optional)
+
+try:
+    # get a config for a device
+    api_response = api_instance.get_device_config_source_config_by_id(device_id, hds_id, instance_id, id, format=format, start_epoch=start_epoch, fields=fields)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_device_config_source_config_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_id** | **int**|  | 
+ **hds_id** | **int**|  | 
+ **instance_id** | **int**|  | 
+ **id** | **str**|  | 
+ **format** | **str**|  | [optional] [default to json]
+ **start_epoch** | **int**|  | [optional] [default to 0]
+ **fields** | **str**|  | [optional] 
+
+### Return type
+
+[**DeviceDataSourceInstanceConfig**](DeviceDataSourceInstanceConfig.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_device_config_source_config_list**
+> DeviceDatasourceInstanceConfigPaginationResponse get_device_config_source_config_list(device_id, hds_id, instance_id, fields=fields, size=size, offset=offset, filter=filter)
+
+get detailed config information for the instance
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | 
@@ -5733,8 +6498,6 @@ Name | Type | Description  | Notes
 
 get device datasource 
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5745,11 +6508,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 id = 56 # int | 
@@ -5791,8 +6554,6 @@ Name | Type | Description  | Notes
 
 get device datasource data 
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5803,11 +6564,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 id = 56 # int | 
@@ -5854,12 +6615,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_device_datasource_instance_alert_setting_list_of_dsi**
-> DeviceDataSourceInstanceAlertSettingPaginationResponse get_device_datasource_instance_alert_setting_list_of_dsi(device_id, hds_id, instance_id, size=size, offset=offset)
+# **get_device_datasource_instance_alert_setting_by_id**
+> DeviceDataSourceInstanceAlertSetting get_device_datasource_instance_alert_setting_by_id(device_id, hds_id, instance_id, id, fields=fields)
 
-get a list of alert settings for a device datasource instance
-
-
+get device instance alert setting
 
 ### Example
 ```python
@@ -5871,11 +6630,133 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+device_id = 56 # int | 
+hds_id = 56 # int | Device-DataSource ID
+instance_id = 56 # int | 
+id = 56 # int | 
+fields = 'fields_example' # str |  (optional)
+
+try:
+    # get device instance alert setting
+    api_response = api_instance.get_device_datasource_instance_alert_setting_by_id(device_id, hds_id, instance_id, id, fields=fields)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_device_datasource_instance_alert_setting_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_id** | **int**|  | 
+ **hds_id** | **int**| Device-DataSource ID | 
+ **instance_id** | **int**|  | 
+ **id** | **int**|  | 
+ **fields** | **str**|  | [optional] 
+
+### Return type
+
+[**DeviceDataSourceInstanceAlertSetting**](DeviceDataSourceInstanceAlertSetting.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_device_datasource_instance_alert_setting_list_of_device**
+> DeviceDataSourceInstanceAlertSettingPaginationResponse get_device_datasource_instance_alert_setting_list_of_device(device_id, start=start, end=end, netflow_filter=netflow_filter, size=size, offset=offset)
+
+get a list of alert settings for a device
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+device_id = 56 # int | 
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
+netflow_filter = 'netflow_filter_example' # str |  (optional)
+size = 50 # int |  (optional) (default to 50)
+offset = 0 # int |  (optional) (default to 0)
+
+try:
+    # get a list of alert settings for a device
+    api_response = api_instance.get_device_datasource_instance_alert_setting_list_of_device(device_id, start=start, end=end, netflow_filter=netflow_filter, size=size, offset=offset)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_device_datasource_instance_alert_setting_list_of_device: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_id** | **int**|  | 
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
+ **netflow_filter** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] [default to 50]
+ **offset** | **int**|  | [optional] [default to 0]
+
+### Return type
+
+[**DeviceDataSourceInstanceAlertSettingPaginationResponse**](DeviceDataSourceInstanceAlertSettingPaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_device_datasource_instance_alert_setting_list_of_dsi**
+> DeviceDataSourceInstanceAlertSettingPaginationResponse get_device_datasource_instance_alert_setting_list_of_dsi(device_id, hds_id, instance_id, size=size, offset=offset)
+
+get a list of alert settings for a device datasource instance
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | Device-DataSource ID
@@ -5921,8 +6802,6 @@ Name | Type | Description  | Notes
 
 get device instance 
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5933,11 +6812,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | The device-datasource ID
@@ -5981,8 +6860,6 @@ Name | Type | Description  | Notes
 
 get device instance data
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -5993,11 +6870,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | The device-datasource ID
@@ -6049,8 +6926,6 @@ Name | Type | Description  | Notes
 
 get device instance graph data 
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6061,11 +6936,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | The device-datasource ID
@@ -6115,8 +6990,6 @@ Name | Type | Description  | Notes
 
 get device datasource instance group 
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6127,11 +7000,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
@@ -6151,7 +7024,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **int**|  | 
- **device_ds_id** | **int**| The device-datasource ID you&#39;d like to add an instance group for | 
+ **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
 
@@ -6175,8 +7048,6 @@ Name | Type | Description  | Notes
 
 get device datasource instance group list 
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6187,11 +7058,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
@@ -6213,7 +7084,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **int**|  | 
- **device_ds_id** | **int**| The device-datasource ID you&#39;d like to add an instance group for | 
+ **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -6239,8 +7110,6 @@ Name | Type | Description  | Notes
 
 get device instance group overview graph data 
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6251,11 +7120,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
@@ -6278,7 +7147,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **int**|  | 
- **device_ds_id** | **int**| The device-datasource ID you&#39;d like to add an instance group for | 
+ **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
  **dsig_id** | **int**|  | 
  **ograph_id** | **int**|  | 
  **start** | **int**|  | [optional] 
@@ -6305,8 +7174,6 @@ Name | Type | Description  | Notes
 
 get device instance list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6317,11 +7184,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | The device-datasource ID
@@ -6369,8 +7236,6 @@ Name | Type | Description  | Notes
 
 get device instance SDT history
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6381,11 +7246,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | The device-datasource ID
@@ -6435,8 +7300,6 @@ Name | Type | Description  | Notes
 
 get device datasource list 
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6447,11 +7310,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -6497,8 +7360,6 @@ Name | Type | Description  | Notes
 
 get device group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6509,11 +7370,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -6548,12 +7409,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_device_group_datasource_alert_setting**
-> DeviceGroupDataSourceAlertConfig get_device_group_datasource_alert_setting(device_group_id, ds_id, fields=fields)
+# **get_device_group_cluster_alert_conf_by_id**
+> DeviceClusterAlertConfig get_device_group_cluster_alert_conf_by_id(device_group_id, id)
 
-get device group datasource alert setting 
-
-
+Get cluster alert configuration by id
 
 ### Example
 ```python
@@ -6565,11 +7424,125 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+device_group_id = 56 # int | 
+id = 56 # int | 
+
+try:
+    # Get cluster alert configuration by id
+    api_response = api_instance.get_device_group_cluster_alert_conf_by_id(device_group_id, id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_device_group_cluster_alert_conf_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_group_id** | **int**|  | 
+ **id** | **int**|  | 
+
+### Return type
+
+[**DeviceClusterAlertConfig**](DeviceClusterAlertConfig.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_device_group_cluster_alert_conf_list**
+> DeviceClusterAlertConfigPaginationResponse get_device_group_cluster_alert_conf_list(device_group_id, fields=fields, size=size, offset=offset, filter=filter)
+
+get a list of cluster alert configurations for a device group
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+device_group_id = 56 # int | 
+fields = 'fields_example' # str |  (optional)
+size = 50 # int |  (optional) (default to 50)
+offset = 0 # int |  (optional) (default to 0)
+filter = 'filter_example' # str |  (optional)
+
+try:
+    # get a list of cluster alert configurations for a device group
+    api_response = api_instance.get_device_group_cluster_alert_conf_list(device_group_id, fields=fields, size=size, offset=offset, filter=filter)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_device_group_cluster_alert_conf_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_group_id** | **int**|  | 
+ **fields** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] [default to 50]
+ **offset** | **int**|  | [optional] [default to 0]
+ **filter** | **str**|  | [optional] 
+
+### Return type
+
+[**DeviceClusterAlertConfigPaginationResponse**](DeviceClusterAlertConfigPaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_device_group_datasource_alert_setting**
+> DeviceGroupDataSourceAlertConfig get_device_group_datasource_alert_setting(device_group_id, ds_id, fields=fields)
+
+get device group datasource alert setting 
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_group_id = 56 # int | 
 ds_id = 56 # int | 
@@ -6611,8 +7584,6 @@ Name | Type | Description  | Notes
 
 get device group datasource
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6623,11 +7594,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_group_id = 56 # int | 
 id = 56 # int | 
@@ -6669,8 +7640,6 @@ Name | Type | Description  | Notes
 
 get device group datasource list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6681,11 +7650,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_group_id = 56 # int | 
 include_disabled_data_source_without_instance = false # bool |  (optional) (default to false)
@@ -6733,8 +7702,6 @@ Name | Type | Description  | Notes
 
 get device group list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6745,11 +7712,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -6793,8 +7760,6 @@ Name | Type | Description  | Notes
 
 get device group property by name
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6805,11 +7770,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 gid = 56 # int | group ID
 name = 'name_example' # str | 
@@ -6851,8 +7816,6 @@ Name | Type | Description  | Notes
 
 get device group properties
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6863,11 +7826,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 gid = 56 # int | group ID
 fields = 'fields_example' # str |  (optional)
@@ -6913,8 +7876,6 @@ Name | Type | Description  | Notes
 
 get device group SDTs
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6925,11 +7886,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -6975,8 +7936,6 @@ Name | Type | Description  | Notes
 
 get device instance data
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -6987,11 +7946,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 instance_id = 56 # int | 
 graph_id = 56 # int | 
@@ -7037,8 +7996,6 @@ Name | Type | Description  | Notes
 
 get device instance list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -7049,11 +8006,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 start = 789 # int |  (optional)
@@ -7101,11 +8058,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_list**
-> DevicePaginationResponse get_device_list(start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+> DevicePaginationResponse get_device_list(start=start, end=end, netflow_filter=netflow_filter, include_deleted_resources=include_deleted_resources, fields=fields, size=size, offset=offset, filter=filter)
 
 get device list
-
-
 
 ### Example
 ```python
@@ -7117,15 +8072,16 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
+include_deleted_resources = false # bool |  (optional) (default to false)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
@@ -7133,7 +8089,7 @@ filter = 'filter_example' # str |  (optional)
 
 try:
     # get device list
-    api_response = api_instance.get_device_list(start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+    api_response = api_instance.get_device_list(start=start, end=end, netflow_filter=netflow_filter, include_deleted_resources=include_deleted_resources, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_device_list: %s\n" % e)
@@ -7146,6 +8102,7 @@ Name | Type | Description  | Notes
  **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
+ **include_deleted_resources** | **bool**|  | [optional] [default to false]
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -7171,8 +8128,6 @@ Name | Type | Description  | Notes
 
 get device property by name
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -7183,11 +8138,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 name = 'name_example' # str | 
@@ -7229,8 +8184,6 @@ Name | Type | Description  | Notes
 
 get device properties
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -7241,11 +8194,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -7291,8 +8244,6 @@ Name | Type | Description  | Notes
 
 get escalation chain by id
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -7303,11 +8254,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -7347,8 +8298,6 @@ Name | Type | Description  | Notes
 
 get escalation chain list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -7359,11 +8308,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -7402,12 +8351,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_event_source_list**
-> EventSourcePaginationResponse get_event_source_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
+# **get_event_source_by_id**
+> EventSource get_event_source_by_id(id, format=format)
 
-get eventSource list
-
-
+get eventSource by id
 
 ### Example
 ```python
@@ -7419,11 +8366,65 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+format = 'json' # str |  (optional) (default to json)
+
+try:
+    # get eventSource by id
+    api_response = api_instance.get_event_source_by_id(id, format=format)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_event_source_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **format** | **str**|  | [optional] [default to json]
+
+### Return type
+
+[**EventSource**](EventSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_event_source_list**
+> EventSourcePaginationResponse get_event_source_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
+
+get eventSource list
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 format = 'json' # str |  (optional) (default to json)
 fields = 'fields_example' # str |  (optional)
@@ -7469,8 +8470,6 @@ Name | Type | Description  | Notes
 
 get external api stats info
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -7481,11 +8480,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 
 try:
@@ -7519,8 +8518,6 @@ This endpoint does not need any parameter.
 
 get immediate devices under group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -7531,11 +8528,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -7581,8 +8578,6 @@ Name | Type | Description  | Notes
 
 get a list of websites for a group (Response may contain extra fields depending upon the type of check { PingCheck | WebCheck} being added)
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -7593,11 +8588,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -7633,7 +8628,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -7642,8 +8637,6 @@ Name | Type | Description  | Notes
 > IntegrationAuditLogPaginationResponse get_integration_audit_logs(format=format)
 
 get integration audit logs list
-
-
 
 ### Example
 ```python
@@ -7655,11 +8648,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 format = 'format_example' # str |  (optional)
 
@@ -7692,12 +8685,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_metrics_usage**
-> Usage get_metrics_usage()
+# **get_job_monitor_by_id**
+> BatchJob get_job_monitor_by_id(id, format=format)
 
-get metrics usage
-
-
+Get JobMonitor by id
 
 ### Example
 ```python
@@ -7709,11 +8700,117 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+format = 'json' # str |  (optional) (default to json)
+
+try:
+    # Get JobMonitor by id
+    api_response = api_instance.get_job_monitor_by_id(id, format=format)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_job_monitor_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **format** | **str**|  | [optional] [default to json]
+
+### Return type
+
+[**BatchJob**](BatchJob.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_job_monitor_list**
+> BatchJobPaginationResponse get_job_monitor_list(format=format)
+
+Get JobMonitor List
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+format = 'json' # str |  (optional) (default to json)
+
+try:
+    # Get JobMonitor List
+    api_response = api_instance.get_job_monitor_list(format=format)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_job_monitor_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**|  | [optional] [default to json]
+
+### Return type
+
+[**BatchJobPaginationResponse**](BatchJobPaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_metrics_usage**
+> Usage get_metrics_usage()
+
+get metrics usage
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 
 try:
@@ -7742,12 +8839,10 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_netflow_flow_list**
-> FlowRecordPaginationResponse get_netflow_flow_list(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+# **get_netflow_endpoint_list**
+> EndpointPaginationResponse get_netflow_endpoint_list(id, start=start, end=end, netflow_filter=netflow_filter, port=port, fields=fields, size=size, offset=offset, filter=filter)
 
-get netflow flows
-
-
+get netflow endpoints
 
 ### Example
 ```python
@@ -7759,11 +8854,79 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
+netflow_filter = 'netflow_filter_example' # str |  (optional)
+port = 'port_example' # str |  (optional)
+fields = 'fields_example' # str |  (optional)
+size = 50 # int |  (optional) (default to 50)
+offset = 0 # int |  (optional) (default to 0)
+filter = 'filter_example' # str |  (optional)
+
+try:
+    # get netflow endpoints
+    api_response = api_instance.get_netflow_endpoint_list(id, start=start, end=end, netflow_filter=netflow_filter, port=port, fields=fields, size=size, offset=offset, filter=filter)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_netflow_endpoint_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
+ **netflow_filter** | **str**|  | [optional] 
+ **port** | **str**|  | [optional] 
+ **fields** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] [default to 50]
+ **offset** | **int**|  | [optional] [default to 0]
+ **filter** | **str**|  | [optional] 
+
+### Return type
+
+[**EndpointPaginationResponse**](EndpointPaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_netflow_flow_list**
+> FlowRecordPaginationResponse get_netflow_flow_list(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+
+get netflow flows
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 start = 789 # int |  (optional)
@@ -7810,12 +8973,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_netscan_by_id**
-> Netscan get_netscan_by_id(id)
+# **get_netflow_port_list**
+> PortPaginationResponse get_netflow_port_list(id, start=start, end=end, netflow_filter=netflow_filter, ip=ip, fields=fields, size=size, offset=offset, filter=filter)
 
-get netscan by id
-
-
+get netflow ports
 
 ### Example
 ```python
@@ -7827,11 +8988,79 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
+netflow_filter = 'netflow_filter_example' # str |  (optional)
+ip = 'ip_example' # str |  (optional)
+fields = 'fields_example' # str |  (optional)
+size = 50 # int |  (optional) (default to 50)
+offset = 0 # int |  (optional) (default to 0)
+filter = 'filter_example' # str |  (optional)
+
+try:
+    # get netflow ports
+    api_response = api_instance.get_netflow_port_list(id, start=start, end=end, netflow_filter=netflow_filter, ip=ip, fields=fields, size=size, offset=offset, filter=filter)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_netflow_port_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
+ **netflow_filter** | **str**|  | [optional] 
+ **ip** | **str**|  | [optional] 
+ **fields** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] [default to 50]
+ **offset** | **int**|  | [optional] [default to 0]
+ **filter** | **str**|  | [optional] 
+
+### Return type
+
+[**PortPaginationResponse**](PortPaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_netscan_by_id**
+> Netscan get_netscan_by_id(id)
+
+get netscan by id
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -7869,8 +9098,6 @@ Name | Type | Description  | Notes
 
 get netscan list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -7881,11 +9108,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -7924,12 +9151,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_ops_note_list**
-> OpsNotePaginationResponse get_ops_note_list(fields=fields, size=size, offset=offset, filter=filter)
+# **get_oid_by_id**
+> RestOidV3 get_oid_by_id(id)
 
-get opsnote list
-
-
+get OID by id
 
 ### Example
 ```python
@@ -7941,11 +9166,111 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+
+try:
+    # get OID by id
+    api_response = api_instance.get_oid_by_id(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_oid_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**RestOidV3**](RestOidV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_oid_list**
+> OidSourcePaginationResponse get_oid_list()
+
+get OID's list
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+
+try:
+    # get OID's list
+    api_response = api_instance.get_oid_list()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_oid_list: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**OidSourcePaginationResponse**](OidSourcePaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_ops_note_list**
+> OpsNotePaginationResponse get_ops_note_list(fields=fields, size=size, offset=offset, filter=filter)
+
+get opsnote list
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -7984,12 +9309,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_recipient_group_by_id**
-> RecipientGroup get_recipient_group_by_id(id)
+# **get_property_rules_by_id**
+> PropertyRule get_property_rules_by_id(id, format=format)
 
-get recipient group by id
-
-
+get property rules by id
 
 ### Example
 ```python
@@ -8001,11 +9324,125 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+format = 'json' # str |  (optional) (default to json)
+
+try:
+    # get property rules by id
+    api_response = api_instance.get_property_rules_by_id(id, format=format)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_property_rules_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **format** | **str**|  | [optional] [default to json]
+
+### Return type
+
+[**PropertyRule**](PropertyRule.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_property_rules_list**
+> PropertyRulePaginationResponse get_property_rules_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
+
+get property rules list
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+format = 'json' # str |  (optional) (default to json)
+fields = 'fields_example' # str |  (optional)
+size = 50 # int |  (optional) (default to 50)
+offset = 0 # int |  (optional) (default to 0)
+filter = 'filter_example' # str |  (optional)
+
+try:
+    # get property rules list
+    api_response = api_instance.get_property_rules_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_property_rules_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **format** | **str**|  | [optional] [default to json]
+ **fields** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] [default to 50]
+ **offset** | **int**|  | [optional] [default to 0]
+ **filter** | **str**|  | [optional] 
+
+### Return type
+
+[**PropertyRulePaginationResponse**](PropertyRulePaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_recipient_group_by_id**
+> RecipientGroup get_recipient_group_by_id(id)
+
+get recipient group by id
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -8043,8 +9480,6 @@ Name | Type | Description  | Notes
 
 get recipient group List
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8055,11 +9490,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -8103,8 +9538,6 @@ Name | Type | Description  | Notes
 
 get report by id
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8115,11 +9548,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -8159,8 +9592,6 @@ Name | Type | Description  | Notes
 
 get report group by id
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8171,11 +9602,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -8213,8 +9644,6 @@ Name | Type | Description  | Notes
 
 get report group list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8225,11 +9654,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -8273,8 +9702,6 @@ Name | Type | Description  | Notes
 
 get report list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8285,11 +9712,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -8333,8 +9760,6 @@ Name | Type | Description  | Notes
 
 get role by id
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8345,11 +9770,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -8389,8 +9814,6 @@ Name | Type | Description  | Notes
 
 get role list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8401,11 +9824,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 exclude_admin = false # bool |  (optional) (default to false)
 fields = 'fields_example' # str |  (optional)
@@ -8447,11 +9870,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_sdt_by_id**
-> SDT get_sdt_by_id(id, fields=fields)
+> SDT get_sdt_by_id(id)
 
 get SDT by id (Response may contain extra fields depending upon the type of SDT of given id)
-
-
 
 ### Example
 ```python
@@ -8463,18 +9884,17 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
-fields = 'fields_example' # str |  (optional)
 
 try:
     # get SDT by id (Response may contain extra fields depending upon the type of SDT of given id)
-    api_response = api_instance.get_sdt_by_id(id, fields=fields)
+    api_response = api_instance.get_sdt_by_id(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_sdt_by_id: %s\n" % e)
@@ -8485,7 +9905,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **fields** | **str**|  | [optional] 
 
 ### Return type
 
@@ -8507,8 +9926,6 @@ Name | Type | Description  | Notes
 
 get SDT history for the device dataSource
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8519,11 +9936,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 id = 56 # int | 
@@ -8571,8 +9988,6 @@ Name | Type | Description  | Notes
 
 get SDT history for the group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8583,11 +9998,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -8633,8 +10048,6 @@ Name | Type | Description  | Notes
 
 get SDT history for the device
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8645,11 +10058,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 start = 789 # int |  (optional)
@@ -8701,8 +10114,6 @@ Name | Type | Description  | Notes
 
 get SDT history for the website (Response may contain extra fields depending upon the type of SDT)
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8713,11 +10124,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -8763,8 +10174,6 @@ Name | Type | Description  | Notes
 
 get SDT list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8775,11 +10184,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -8823,8 +10232,6 @@ Name | Type | Description  | Notes
 
 get website checkpoint list
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8835,11 +10242,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -8883,8 +10290,6 @@ Name | Type | Description  | Notes
 
 get top talkers graph
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -8895,11 +10300,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 start = 789 # int |  (optional)
@@ -8942,12 +10347,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_unmonitored_device_list**
-> UnmonitoredDevicePaginationResponse get_unmonitored_device_list(fields=fields, size=size, offset=offset, filter=filter)
+# **get_topology_source_by_id**
+> TopologySource get_topology_source_by_id(id, format=format)
 
-get unmonitored device list
-
-
+Get TopologySource by id
 
 ### Example
 ```python
@@ -8959,11 +10362,113 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+format = 'json' # str |  (optional) (default to json)
+
+try:
+    # Get TopologySource by id
+    api_response = api_instance.get_topology_source_by_id(id, format=format)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_topology_source_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **format** | **str**|  | [optional] [default to json]
+
+### Return type
+
+[**TopologySource**](TopologySource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_topology_source_list**
+> TopologySourcePaginationResponse get_topology_source_list()
+
+Get TopologySource List
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+
+try:
+    # Get TopologySource List
+    api_response = api_instance.get_topology_source_list()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_topology_source_list: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**TopologySourcePaginationResponse**](TopologySourcePaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_unmonitored_device_list**
+> UnmonitoredDevicePaginationResponse get_unmonitored_device_list(fields=fields, size=size, offset=offset, filter=filter)
+
+get unmonitored device list
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -9007,8 +10512,6 @@ Name | Type | Description  | Notes
 
 get update history for a configSource
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -9019,11 +10522,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -9061,8 +10564,6 @@ Name | Type | Description  | Notes
 
 get update history for a datasource
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -9073,11 +10574,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -9123,8 +10624,6 @@ Name | Type | Description  | Notes
 
 get alerts for a website
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -9135,11 +10634,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 need_message = false # bool |  (optional) (default to false)
@@ -9189,8 +10688,6 @@ Name | Type | Description  | Notes
 
 get website by id
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -9201,11 +10698,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 format = 'json' # str |  (optional) (default to json)
@@ -9235,7 +10732,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -9244,8 +10741,6 @@ Name | Type | Description  | Notes
 > WebsiteCheckpointRawData get_website_checkpoint_data_by_id(srv_id, check_id, period=period, start=start, end=end, datapoints=datapoints, format=format, aggregate=aggregate)
 
 get data for a website checkpoint
-
-
 
 ### Example
 ```python
@@ -9257,11 +10752,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 srv_id = 56 # int | 
 check_id = 56 # int | 
@@ -9313,8 +10808,6 @@ Name | Type | Description  | Notes
 
 get website data by graph name
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -9325,11 +10818,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 graph_name = 'graph_name_example' # str | 
@@ -9375,8 +10868,6 @@ Name | Type | Description  | Notes
 
 get website graph data
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -9387,11 +10878,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 website_id = 56 # int | 
 checkpoint_id = 56 # int | 
@@ -9439,8 +10930,6 @@ Name | Type | Description  | Notes
 
 get website group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -9451,11 +10940,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
@@ -9483,7 +10972,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -9492,8 +10981,6 @@ Name | Type | Description  | Notes
 > WebsiteGroupPaginationResponse get_website_group_list(fields=fields, size=size, offset=offset, filter=filter)
 
 get website group list
-
-
 
 ### Example
 ```python
@@ -9505,11 +10992,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -9543,7 +11030,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -9552,8 +11039,6 @@ Name | Type | Description  | Notes
 > WebsitePaginationResponse get_website_list(collector_ids=collector_ids, fields=fields, size=size, offset=offset, filter=filter)
 
 get website list
-
-
 
 ### Example
 ```python
@@ -9565,11 +11050,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 collector_ids = 'collector_ids_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
@@ -9605,7 +11090,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -9614,8 +11099,6 @@ Name | Type | Description  | Notes
 > PropertyPaginationResponse get_website_property_list_by_website_id(id, fields=fields, size=size, offset=offset, filter=filter)
 
 get a list of properties for a website
-
-
 
 ### Example
 ```python
@@ -9627,11 +11110,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -9677,8 +11160,6 @@ Name | Type | Description  | Notes
 
 get a list of SDTs for a website
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -9689,11 +11170,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -9739,8 +11220,6 @@ Name | Type | Description  | Notes
 
 get widget by id (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -9751,11 +11230,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -9795,8 +11274,6 @@ Name | Type | Description  | Notes
 
 get widget data (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -9807,11 +11284,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 start = 789 # int |  (optional)
@@ -9855,8 +11332,6 @@ Name | Type | Description  | Notes
 
 get widget list (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -9867,11 +11342,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -9915,8 +11390,6 @@ Name | Type | Description  | Notes
 
 get widget list by DashboardId
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -9927,11 +11400,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
@@ -9972,12 +11445,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_access_group**
-> AccessGroup patch_access_group(id, body)
+# **map_un_map_module_to_access_group**
+> RestMapModuleV3 map_un_map_module_to_access_group(body=body)
 
-Update access group
-
-
+Create a mapping of access group & module
 
 ### Example
 ```python
@@ -9989,11 +11460,63 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.RestMapModuleV3() # RestMapModuleV3 |  (optional)
+
+try:
+    # Create a mapping of access group & module
+    api_response = api_instance.map_un_map_module_to_access_group(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->map_un_map_module_to_access_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RestMapModuleV3**](RestMapModuleV3.md)|  | [optional] 
+
+### Return type
+
+[**RestMapModuleV3**](RestMapModuleV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_access_group**
+> AccessGroup patch_access_group(id, body)
+
+Update access group
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.AccessGroup() # AccessGroup | 
@@ -10033,8 +11556,6 @@ Name | Type | Description  | Notes
 
 update user
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10045,11 +11566,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Admin() # Admin | 
@@ -10093,8 +11614,6 @@ Name | Type | Description  | Notes
 
 update alert rule
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10105,11 +11624,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.AlertRule() # AlertRule | 
@@ -10149,8 +11668,6 @@ Name | Type | Description  | Notes
 
 update applies to function
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10161,11 +11678,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.AppliesToFunction() # AppliesToFunction |  (optional)
@@ -10209,8 +11726,6 @@ Name | Type | Description  | Notes
 
 update collector
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10221,11 +11736,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Collector() # Collector | 
@@ -10271,8 +11786,6 @@ Name | Type | Description  | Notes
 
 update collector group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10283,11 +11796,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.CollectorGroup() # CollectorGroup | 
@@ -10328,6 +11841,62 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **patch_config_source_by_id**
+> ConfigSource patch_config_source_by_id(id, body=body, reason=reason)
+
+update config source by id
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.ConfigSource() # ConfigSource |  (optional)
+reason = 'reason_example' # str |  (optional)
+
+try:
+    # update config source by id
+    api_response = api_instance.patch_config_source_by_id(id, body=body, reason=reason)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_config_source_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**ConfigSource**](ConfigSource.md)|  | [optional] 
+ **reason** | **str**|  | [optional] 
+
+### Return type
+
+[**ConfigSource**](ConfigSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **patch_dashboard_by_id**
 > Dashboard patch_dashboard_by_id(id, body, overwrite_group_fields=overwrite_group_fields)
 
@@ -10345,11 +11914,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Dashboard() # Dashboard | 
@@ -10403,11 +11972,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DashboardGroup() # DashboardGroup | 
@@ -10447,8 +12016,6 @@ Name | Type | Description  | Notes
 
 update datasource
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10459,11 +12026,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DataSource() # DataSource |  (optional)
@@ -10509,8 +12076,6 @@ Name | Type | Description  | Notes
 
 update default dashboard
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10521,11 +12086,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
 body = logicmonitor_sdk.RestUserCustomizedDataV3() # RestUserCustomizedDataV3 |  (optional)
@@ -10565,8 +12130,6 @@ Name | Type | Description  | Notes
 
 update a device
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10577,11 +12140,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Device() # Device | 
@@ -10629,8 +12192,6 @@ Name | Type | Description  | Notes
 
 update device instance alert setting
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10641,11 +12202,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | Device-DataSource ID
@@ -10691,8 +12252,6 @@ Name | Type | Description  | Notes
 
 update device instance
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10703,11 +12262,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | The device-datasource ID
@@ -10753,8 +12312,6 @@ Name | Type | Description  | Notes
 
 update device datasource instance group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10765,11 +12322,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
@@ -10789,7 +12346,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **int**|  | 
- **device_ds_id** | **int**| The device-datasource ID you&#39;d like to add an instance group for | 
+ **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
  **id** | **int**|  | 
  **body** | [**DeviceDataSourceInstanceGroup**](DeviceDataSourceInstanceGroup.md)|  | 
 
@@ -10813,8 +12370,6 @@ Name | Type | Description  | Notes
 
 update device group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10825,11 +12380,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DeviceGroup() # DeviceGroup | 
@@ -10866,12 +12421,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_device_group_datasource_alert_setting**
-> DeviceGroupDataSourceAlertConfig patch_device_group_datasource_alert_setting(device_group_id, ds_id, body)
+# **patch_device_group_cluster_alert_conf_by_id**
+> DeviceClusterAlertConfig patch_device_group_cluster_alert_conf_by_id(device_group_id, id, body)
 
-update device group datasource alert setting
-
-
+Update cluster alert configuration
 
 ### Example
 ```python
@@ -10883,11 +12436,67 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+device_group_id = 56 # int | 
+id = 56 # int | 
+body = logicmonitor_sdk.DeviceClusterAlertConfig() # DeviceClusterAlertConfig | 
+
+try:
+    # Update cluster alert configuration
+    api_response = api_instance.patch_device_group_cluster_alert_conf_by_id(device_group_id, id, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_device_group_cluster_alert_conf_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_group_id** | **int**|  | 
+ **id** | **int**|  | 
+ **body** | [**DeviceClusterAlertConfig**](DeviceClusterAlertConfig.md)|  | 
+
+### Return type
+
+[**DeviceClusterAlertConfig**](DeviceClusterAlertConfig.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_device_group_datasource_alert_setting**
+> DeviceGroupDataSourceAlertConfig patch_device_group_datasource_alert_setting(device_group_id, ds_id, body)
+
+update device group datasource alert setting
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_group_id = 56 # int | 
 ds_id = 56 # int | 
@@ -10929,8 +12538,6 @@ Name | Type | Description  | Notes
 
 update device group datasource
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10941,11 +12548,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_group_id = 56 # int | 
 id = 56 # int | 
@@ -10987,8 +12594,6 @@ Name | Type | Description  | Notes
 
 update device group property
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -10999,11 +12604,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 gid = 56 # int | group ID
 name = 'name_example' # str | 
@@ -11045,8 +12650,6 @@ Name | Type | Description  | Notes
 
 update device property
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11057,11 +12660,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 name = 'name_example' # str | 
@@ -11103,8 +12706,6 @@ Name | Type | Description  | Notes
 
 update escalation chain
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11115,11 +12716,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.EscalatingChain() # EscalatingChain | 
@@ -11154,12 +12755,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_recipient_group_by_id**
-> RecipientGroup patch_recipient_group_by_id(id, body)
+# **patch_event_source_by_id**
+> EventSource patch_event_source_by_id(id, body=body, reason=reason)
 
-update recipient group
-
-
+update eventSource by id
 
 ### Example
 ```python
@@ -11171,11 +12770,233 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.EventSource() # EventSource |  (optional)
+reason = 'reason_example' # str |  (optional)
+
+try:
+    # update eventSource by id
+    api_response = api_instance.patch_event_source_by_id(id, body=body, reason=reason)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_event_source_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**EventSource**](EventSource.md)|  | [optional] 
+ **reason** | **str**|  | [optional] 
+
+### Return type
+
+[**EventSource**](EventSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_job_monitor**
+> BatchJob patch_job_monitor(id, body=body, reason=reason)
+
+Update JobMonitor
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.BatchJob() # BatchJob |  (optional)
+reason = 'reason_example' # str |  (optional)
+
+try:
+    # Update JobMonitor
+    api_response = api_instance.patch_job_monitor(id, body=body, reason=reason)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_job_monitor: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**BatchJob**](BatchJob.md)|  | [optional] 
+ **reason** | **str**|  | [optional] 
+
+### Return type
+
+[**BatchJob**](BatchJob.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_oid**
+> RestOidV3 patch_oid(id, body=body)
+
+update a OID
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.RestOidV3() # RestOidV3 |  (optional)
+
+try:
+    # update a OID
+    api_response = api_instance.patch_oid(id, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_oid: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**RestOidV3**](RestOidV3.md)|  | [optional] 
+
+### Return type
+
+[**RestOidV3**](RestOidV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_property_rule**
+> PropertyRule patch_property_rule(id, body=body, reason=reason)
+
+update a property rule
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.PropertyRule() # PropertyRule |  (optional)
+reason = 'reason_example' # str |  (optional)
+
+try:
+    # update a property rule
+    api_response = api_instance.patch_property_rule(id, body=body, reason=reason)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_property_rule: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**PropertyRule**](PropertyRule.md)|  | [optional] 
+ **reason** | **str**|  | [optional] 
+
+### Return type
+
+[**PropertyRule**](PropertyRule.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_recipient_group_by_id**
+> RecipientGroup patch_recipient_group_by_id(id, body)
+
+update recipient group
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.RecipientGroup() # RecipientGroup | 
@@ -11215,8 +13036,6 @@ Name | Type | Description  | Notes
 
 update report
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11227,11 +13046,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.ReportBase() # ReportBase | 
@@ -11271,8 +13090,6 @@ Name | Type | Description  | Notes
 
 update report group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11283,11 +13100,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.ReportGroup() # ReportGroup | 
@@ -11327,8 +13144,6 @@ Name | Type | Description  | Notes
 
 update role
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11339,11 +13154,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Role() # Role | 
@@ -11383,8 +13198,6 @@ Name | Type | Description  | Notes
 
 update SDT (Response may contain extra fields depending upon the type of SDT being updated)
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11395,11 +13208,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
 body = logicmonitor_sdk.SDT() # SDT | 
@@ -11434,12 +13247,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **patch_website_by_id**
-> Website patch_website_by_id(id, body, op_type=op_type)
+# **patch_topology_source**
+> TopologySource patch_topology_source(id, body=body, reason=reason)
 
-update website
-
-
+Update TopologySource
 
 ### Example
 ```python
@@ -11451,11 +13262,67 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.TopologySource() # TopologySource |  (optional)
+reason = 'reason_example' # str |  (optional)
+
+try:
+    # Update TopologySource
+    api_response = api_instance.patch_topology_source(id, body=body, reason=reason)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_topology_source: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**TopologySource**](TopologySource.md)|  | [optional] 
+ **reason** | **str**|  | [optional] 
+
+### Return type
+
+[**TopologySource**](TopologySource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_website_by_id**
+> Website patch_website_by_id(id, body, op_type=op_type)
+
+update website
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Website() # Website | 
@@ -11497,8 +13364,6 @@ Name | Type | Description  | Notes
 
 update website group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11509,11 +13374,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.WebsiteGroup() # WebsiteGroup | 
@@ -11555,8 +13420,6 @@ Name | Type | Description  | Notes
 
 update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11567,11 +13430,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Widget() # Widget | 
@@ -11611,8 +13474,6 @@ Name | Type | Description  | Notes
 
 schedule active discovery for a device
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11623,11 +13484,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 start = 789 # int |  (optional)
@@ -11661,7 +13522,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -11670,8 +13531,6 @@ Name | Type | Description  | Notes
 > RestCloudOkPermissionsV3 test_aws_account(body)
 
 test AWS account
-
-
 
 ### Example
 ```python
@@ -11683,11 +13542,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.RestAwsAccountTestV3() # RestAwsAccountTestV3 | 
 
@@ -11725,8 +13584,6 @@ Name | Type | Description  | Notes
 
 test Azure account
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11737,11 +13594,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.RestAzureAccountTestV3() # RestAzureAccountTestV3 | 
 
@@ -11779,8 +13636,6 @@ Name | Type | Description  | Notes
 
 test GCP account
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11791,11 +13646,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.RestGcpAccountTestV3() # RestGcpAccountTestV3 | 
 
@@ -11833,8 +13688,6 @@ Name | Type | Description  | Notes
 
 test SaaS account
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11845,11 +13698,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.RestSaaSAccountTestV3() # RestSaaSAccountTestV3 | 
 
@@ -11887,8 +13740,6 @@ Name | Type | Description  | Notes
 
 Update access group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11899,11 +13750,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.AccessGroup() # AccessGroup | 
@@ -11943,8 +13794,6 @@ Name | Type | Description  | Notes
 
 update user
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -11955,11 +13804,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Admin() # Admin | 
@@ -12003,8 +13852,6 @@ Name | Type | Description  | Notes
 
 update alert rule
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12015,11 +13862,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.AlertRule() # AlertRule | 
@@ -12059,8 +13906,6 @@ Name | Type | Description  | Notes
 
 update applies to function
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12071,11 +13916,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.AppliesToFunction() # AppliesToFunction |  (optional)
@@ -12119,8 +13964,6 @@ Name | Type | Description  | Notes
 
 update collector
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12131,11 +13974,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Collector() # Collector | 
@@ -12181,8 +14024,6 @@ Name | Type | Description  | Notes
 
 update collector group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12193,11 +14034,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.CollectorGroup() # CollectorGroup | 
@@ -12238,6 +14079,62 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **update_config_source_by_id**
+> ConfigSource update_config_source_by_id(id, body=body, reason=reason)
+
+update config source by id
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.ConfigSource() # ConfigSource |  (optional)
+reason = 'reason_example' # str |  (optional)
+
+try:
+    # update config source by id
+    api_response = api_instance.update_config_source_by_id(id, body=body, reason=reason)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_config_source_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**ConfigSource**](ConfigSource.md)|  | [optional] 
+ **reason** | **str**|  | [optional] 
+
+### Return type
+
+[**ConfigSource**](ConfigSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: */*
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_dashboard_by_id**
 > Dashboard update_dashboard_by_id(id, body, overwrite_group_fields=overwrite_group_fields)
 
@@ -12255,11 +14152,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Dashboard() # Dashboard | 
@@ -12313,11 +14210,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DashboardGroup() # DashboardGroup | 
@@ -12357,8 +14254,6 @@ Name | Type | Description  | Notes
 
 update datasource
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12369,11 +14264,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DataSource() # DataSource |  (optional)
@@ -12419,8 +14314,6 @@ Name | Type | Description  | Notes
 
 update default dashboard
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12431,11 +14324,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
 body = logicmonitor_sdk.RestUserCustomizedDataV3() # RestUserCustomizedDataV3 |  (optional)
@@ -12475,8 +14368,6 @@ Name | Type | Description  | Notes
 
 update a device
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12487,11 +14378,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Device() # Device | 
@@ -12539,8 +14430,6 @@ Name | Type | Description  | Notes
 
 update device instance alert setting
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12551,11 +14440,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | Device-DataSource ID
@@ -12601,8 +14490,6 @@ Name | Type | Description  | Notes
 
 update device instance
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12613,11 +14500,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | The device-datasource ID
@@ -12663,8 +14550,6 @@ Name | Type | Description  | Notes
 
 update device datasource instance group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12675,11 +14560,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
@@ -12699,7 +14584,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **int**|  | 
- **device_ds_id** | **int**| The device-datasource ID you&#39;d like to add an instance group for | 
+ **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
  **id** | **int**|  | 
  **body** | [**DeviceDataSourceInstanceGroup**](DeviceDataSourceInstanceGroup.md)|  | 
 
@@ -12723,8 +14608,6 @@ Name | Type | Description  | Notes
 
 update device group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12735,11 +14618,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DeviceGroup() # DeviceGroup | 
@@ -12776,12 +14659,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_device_group_datasource_alert_setting**
-> DeviceGroupDataSourceAlertConfig update_device_group_datasource_alert_setting(device_group_id, ds_id, body)
+# **update_device_group_cluster_alert_conf_by_id**
+> DeviceClusterAlertConfig update_device_group_cluster_alert_conf_by_id(device_group_id, id, body)
 
-update device group datasource alert setting
-
-
+Update cluster alert configuration
 
 ### Example
 ```python
@@ -12793,11 +14674,67 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+device_group_id = 56 # int | 
+id = 56 # int | 
+body = logicmonitor_sdk.DeviceClusterAlertConfig() # DeviceClusterAlertConfig | 
+
+try:
+    # Update cluster alert configuration
+    api_response = api_instance.update_device_group_cluster_alert_conf_by_id(device_group_id, id, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_device_group_cluster_alert_conf_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_group_id** | **int**|  | 
+ **id** | **int**|  | 
+ **body** | [**DeviceClusterAlertConfig**](DeviceClusterAlertConfig.md)|  | 
+
+### Return type
+
+[**DeviceClusterAlertConfig**](DeviceClusterAlertConfig.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_device_group_datasource_alert_setting**
+> DeviceGroupDataSourceAlertConfig update_device_group_datasource_alert_setting(device_group_id, ds_id, body)
+
+update device group datasource alert setting
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_group_id = 56 # int | 
 ds_id = 56 # int | 
@@ -12839,8 +14776,6 @@ Name | Type | Description  | Notes
 
 update device group datasource
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12851,11 +14786,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_group_id = 56 # int | 
 id = 56 # int | 
@@ -12897,8 +14832,6 @@ Name | Type | Description  | Notes
 
 update device group property
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12909,11 +14842,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 gid = 56 # int | group ID
 name = 'name_example' # str | 
@@ -12955,8 +14888,6 @@ Name | Type | Description  | Notes
 
 update device property
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -12967,11 +14898,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 name = 'name_example' # str | 
@@ -13013,8 +14944,6 @@ Name | Type | Description  | Notes
 
 update escalation chain
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -13025,11 +14954,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.EscalatingChain() # EscalatingChain | 
@@ -13064,12 +14993,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_instance_group_alert_threshold**
-> object update_instance_group_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, body=body)
+# **update_event_source_by_id**
+> EventSource update_event_source_by_id(id, body=body, reason=reason)
 
-update instance group alert threshold (Setting the threshold at default group is not allowed)
-
-
+update eventSource by id
 
 ### Example
 ```python
@@ -13081,11 +15008,67 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.EventSource() # EventSource |  (optional)
+reason = 'reason_example' # str |  (optional)
+
+try:
+    # update eventSource by id
+    api_response = api_instance.update_event_source_by_id(id, body=body, reason=reason)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_event_source_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**EventSource**](EventSource.md)|  | [optional] 
+ **reason** | **str**|  | [optional] 
+
+### Return type
+
+[**EventSource**](EventSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_instance_group_alert_threshold**
+> object update_instance_group_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, body=body)
+
+update instance group alert threshold (Setting the threshold at default group is not allowed)
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
@@ -13106,7 +15089,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **int**|  | 
- **device_ds_id** | **int**| The device-datasource ID you&#39;d like to add an instance group for | 
+ **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
  **dsig_id** | **int**|  | 
  **dp_id** | **int**|  | 
  **body** | [**RestDeviceInstanceGroupAlertConfigV3**](RestDeviceInstanceGroupAlertConfigV3.md)|  | [optional] 
@@ -13126,12 +15109,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_recipient_group_by_id**
-> RecipientGroup update_recipient_group_by_id(id, body)
+# **update_job_monitor**
+> BatchJob update_job_monitor(id, body=body, reason=reason)
 
-update recipient group
-
-
+Update JobMonitor
 
 ### Example
 ```python
@@ -13143,11 +15124,177 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.BatchJob() # BatchJob |  (optional)
+reason = 'reason_example' # str |  (optional)
+
+try:
+    # Update JobMonitor
+    api_response = api_instance.update_job_monitor(id, body=body, reason=reason)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_job_monitor: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**BatchJob**](BatchJob.md)|  | [optional] 
+ **reason** | **str**|  | [optional] 
+
+### Return type
+
+[**BatchJob**](BatchJob.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_oid**
+> RestOidV3 update_oid(id, body=body)
+
+update a OID
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.RestOidV3() # RestOidV3 |  (optional)
+
+try:
+    # update a OID
+    api_response = api_instance.update_oid(id, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_oid: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**RestOidV3**](RestOidV3.md)|  | [optional] 
+
+### Return type
+
+[**RestOidV3**](RestOidV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_property_rule**
+> PropertyRule update_property_rule(id, body=body, reason=reason)
+
+update a property rule
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.PropertyRule() # PropertyRule |  (optional)
+reason = 'reason_example' # str |  (optional)
+
+try:
+    # update a property rule
+    api_response = api_instance.update_property_rule(id, body=body, reason=reason)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_property_rule: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**PropertyRule**](PropertyRule.md)|  | [optional] 
+ **reason** | **str**|  | [optional] 
+
+### Return type
+
+[**PropertyRule**](PropertyRule.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_recipient_group_by_id**
+> RecipientGroup update_recipient_group_by_id(id, body)
+
+update recipient group
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.RecipientGroup() # RecipientGroup | 
@@ -13187,8 +15334,6 @@ Name | Type | Description  | Notes
 
 update report
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -13199,11 +15344,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.ReportBase() # ReportBase | 
@@ -13243,8 +15388,6 @@ Name | Type | Description  | Notes
 
 update report group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -13255,11 +15398,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.ReportGroup() # ReportGroup | 
@@ -13299,8 +15442,6 @@ Name | Type | Description  | Notes
 
 update role
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -13311,11 +15452,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Role() # Role | 
@@ -13355,8 +15496,6 @@ Name | Type | Description  | Notes
 
 update SDT (Response may contain extra fields depending upon the type of SDT being updated)
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -13367,11 +15506,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
 body = logicmonitor_sdk.SDT() # SDT | 
@@ -13406,12 +15545,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_website_by_id**
-> Website update_website_by_id(id, body, op_type=op_type)
+# **update_topology_source**
+> TopologySource update_topology_source(id, body=body, reason=reason)
 
-update website
-
-
+Update TopologySource
 
 ### Example
 ```python
@@ -13423,11 +15560,67 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.TopologySource() # TopologySource |  (optional)
+reason = 'reason_example' # str |  (optional)
+
+try:
+    # Update TopologySource
+    api_response = api_instance.update_topology_source(id, body=body, reason=reason)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_topology_source: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**TopologySource**](TopologySource.md)|  | [optional] 
+ **reason** | **str**|  | [optional] 
+
+### Return type
+
+[**TopologySource**](TopologySource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_website_by_id**
+> Website update_website_by_id(id, body, op_type=op_type)
+
+update website
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Website() # Website | 
@@ -13469,8 +15662,6 @@ Name | Type | Description  | Notes
 
 update website group
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -13481,11 +15672,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.WebsiteGroup() # WebsiteGroup | 
@@ -13527,8 +15718,6 @@ Name | Type | Description  | Notes
 
 update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -13539,11 +15728,11 @@ from pprint import pprint
 
 # Configure API key authorization: LMv1
 configuration = logicmonitor_sdk.Configuration()
-configuration.company = 'YOUR_COMPANY'
-configuration.access_id = 'YOUR_ACCESS_ID'
-configuration.access_key = 'YOUR_ACCESS_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
-# create an instance of the API class
+# create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Widget() # Widget | 
@@ -13566,6 +15755,58 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Widget**](Widget.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **verify_storage_accounts_permissions**
+> RestResponse verify_storage_accounts_permissions(body)
+
+view storage accounts
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.RestAzureStorageAccountVerify() # RestAzureStorageAccountVerify | 
+
+try:
+    # view storage accounts
+    api_response = api_instance.verify_storage_accounts_permissions(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->verify_storage_accounts_permissions: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RestAzureStorageAccountVerify**](RestAzureStorageAccountVerify.md)|  | 
+
+### Return type
+
+[**RestResponse**](RestResponse.md)
 
 ### Authorization
 
