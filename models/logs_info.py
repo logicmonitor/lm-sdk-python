@@ -29,6 +29,7 @@ class LogsInfo(object):
     """
     swagger_types = {
         'logs_data_type': 'str',
+        'partitions': 'list[str]',
         'query': 'str',
         'widget_view': 'str',
         'aggregate_type': 'str'
@@ -36,19 +37,23 @@ class LogsInfo(object):
 
     attribute_map = {
         'logs_data_type': 'logsDataType',
+        'partitions': 'partitions',
         'query': 'query',
         'widget_view': 'widgetView',
         'aggregate_type': 'aggregateType'
     }
 
-    def __init__(self, logs_data_type=None, query=None, widget_view=None, aggregate_type=None):  # noqa: E501
+    def __init__(self, logs_data_type=None, partitions=None, query=None, widget_view=None, aggregate_type=None):  # noqa: E501
         """LogsInfo - a model defined in Swagger"""  # noqa: E501
         self._logs_data_type = None
+        self._partitions = None
         self._query = None
         self._widget_view = None
         self._aggregate_type = None
         self.discriminator = None
         self.logs_data_type = logs_data_type
+        if partitions is not None:
+            self.partitions = partitions
         if query is not None:
             self.query = query
         if widget_view is not None:
@@ -79,6 +84,27 @@ class LogsInfo(object):
             raise ValueError("Invalid value for `logs_data_type`, must not be `None`")  # noqa: E501
 
         self._logs_data_type = logs_data_type
+
+    @property
+    def partitions(self):
+        """Gets the partitions of this LogsInfo.  # noqa: E501
+
+
+        :return: The partitions of this LogsInfo.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._partitions
+
+    @partitions.setter
+    def partitions(self, partitions):
+        """Sets the partitions of this LogsInfo.
+
+
+        :param partitions: The partitions of this LogsInfo.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._partitions = partitions
 
     @property
     def query(self):

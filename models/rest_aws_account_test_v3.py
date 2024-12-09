@@ -29,6 +29,7 @@ class RestAwsAccountTestV3(object):
     """
     swagger_types = {
         'access_id': 'str',
+        'is_billing_accept_opt_in_warnings': 'bool',
         'account_id': 'str',
         'new_billing_bucket': 'str',
         'assumed_role_arn': 'str',
@@ -42,6 +43,7 @@ class RestAwsAccountTestV3(object):
 
     attribute_map = {
         'access_id': 'accessId',
+        'is_billing_accept_opt_in_warnings': 'isBillingAcceptOptInWarnings',
         'account_id': 'accountId',
         'new_billing_bucket': 'newBillingBucket',
         'assumed_role_arn': 'assumedRoleArn',
@@ -53,9 +55,10 @@ class RestAwsAccountTestV3(object):
         'external_id': 'externalId'
     }
 
-    def __init__(self, access_id=None, account_id=None, new_billing_bucket=None, assumed_role_arn=None, bucket_name_for_billing_files=None, access_key=None, checked_services=None, group_id=None, new_billing_path=None, external_id=None):  # noqa: E501
+    def __init__(self, access_id=None, is_billing_accept_opt_in_warnings=None, account_id=None, new_billing_bucket=None, assumed_role_arn=None, bucket_name_for_billing_files=None, access_key=None, checked_services=None, group_id=None, new_billing_path=None, external_id=None):  # noqa: E501
         """RestAwsAccountTestV3 - a model defined in Swagger"""  # noqa: E501
         self._access_id = None
+        self._is_billing_accept_opt_in_warnings = None
         self._account_id = None
         self._new_billing_bucket = None
         self._assumed_role_arn = None
@@ -68,6 +71,8 @@ class RestAwsAccountTestV3(object):
         self.discriminator = None
         if access_id is not None:
             self.access_id = access_id
+        if is_billing_accept_opt_in_warnings is not None:
+            self.is_billing_accept_opt_in_warnings = is_billing_accept_opt_in_warnings
         if account_id is not None:
             self.account_id = account_id
         if new_billing_bucket is not None:
@@ -107,6 +112,27 @@ class RestAwsAccountTestV3(object):
         """
 
         self._access_id = access_id
+
+    @property
+    def is_billing_accept_opt_in_warnings(self):
+        """Gets the is_billing_accept_opt_in_warnings of this RestAwsAccountTestV3.  # noqa: E501
+
+
+        :return: The is_billing_accept_opt_in_warnings of this RestAwsAccountTestV3.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_billing_accept_opt_in_warnings
+
+    @is_billing_accept_opt_in_warnings.setter
+    def is_billing_accept_opt_in_warnings(self, is_billing_accept_opt_in_warnings):
+        """Sets the is_billing_accept_opt_in_warnings of this RestAwsAccountTestV3.
+
+
+        :param is_billing_accept_opt_in_warnings: The is_billing_accept_opt_in_warnings of this RestAwsAccountTestV3.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_billing_accept_opt_in_warnings = is_billing_accept_opt_in_warnings
 
     @property
     def account_id(self):

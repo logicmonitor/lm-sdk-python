@@ -79,7 +79,7 @@ class ApiClient(object):
             self.default_headers[header_name] = header_value
         self.cookie = cookie
         # Set default User-Agent.
-        self.user_agent = 'Swagger-Codegen/3.0.213/python'
+        self.user_agent = 'Swagger-Codegen/3.0.222/python'
 
     def __del__(self):
         self.pool.close()
@@ -536,7 +536,7 @@ class ApiClient(object):
                             request_vars = method + epoch + json.dumps(body) + resource_path
                         elif files is not None:
                             filedata = ''
-                            if method == 'DELETE' or method == 'POST':
+                            if ((method == 'DELETE' or method == 'POST') and len(files)==0):
                                 filedata = '{}'
                             for k, v in six.iteritems(files):
                                 if not v:

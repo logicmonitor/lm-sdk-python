@@ -33,6 +33,7 @@ class RestResponse(object):
         'successes': 'ArrayNode',
         'meta': 'RestResponseMetaBlock',
         'warnings': 'ArrayNode',
+        'non_id_items': 'list[object]',
         'errors': 'ArrayNode'
     }
 
@@ -42,16 +43,18 @@ class RestResponse(object):
         'successes': 'successes',
         'meta': 'meta',
         'warnings': 'warnings',
+        'non_id_items': 'nonIdItems',
         'errors': 'errors'
     }
 
-    def __init__(self, diagnostics=None, data=None, successes=None, meta=None, warnings=None, errors=None):  # noqa: E501
+    def __init__(self, diagnostics=None, data=None, successes=None, meta=None, warnings=None, non_id_items=None, errors=None):  # noqa: E501
         """RestResponse - a model defined in Swagger"""  # noqa: E501
         self._diagnostics = None
         self._data = None
         self._successes = None
         self._meta = None
         self._warnings = None
+        self._non_id_items = None
         self._errors = None
         self.discriminator = None
         if diagnostics is not None:
@@ -64,6 +67,8 @@ class RestResponse(object):
             self.meta = meta
         if warnings is not None:
             self.warnings = warnings
+        if non_id_items is not None:
+            self.non_id_items = non_id_items
         if errors is not None:
             self.errors = errors
 
@@ -171,6 +176,27 @@ class RestResponse(object):
         """
 
         self._warnings = warnings
+
+    @property
+    def non_id_items(self):
+        """Gets the non_id_items of this RestResponse.  # noqa: E501
+
+
+        :return: The non_id_items of this RestResponse.  # noqa: E501
+        :rtype: list[object]
+        """
+        return self._non_id_items
+
+    @non_id_items.setter
+    def non_id_items(self, non_id_items):
+        """Sets the non_id_items of this RestResponse.
+
+
+        :param non_id_items: The non_id_items of this RestResponse.  # noqa: E501
+        :type: list[object]
+        """
+
+        self._non_id_items = non_id_items
 
     @property
     def errors(self):

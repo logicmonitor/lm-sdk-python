@@ -29,28 +29,28 @@ class AlertFilters(object):
     """
     swagger_types = {
         'datapoints_filter_mode': 'str',
-        'datapoint_filters': 'list[DatapointFilterItem]',
-        'is_ignored_sdt_alerts': 'bool'
+        'is_ignore_sdt_alerts': 'bool',
+        'datapoint_filters': 'list[DatapointFilterItem]'
     }
 
     attribute_map = {
         'datapoints_filter_mode': 'datapointsFilterMode',
-        'datapoint_filters': 'datapointFilters',
-        'is_ignored_sdt_alerts': 'isIgnoredSdtAlerts'
+        'is_ignore_sdt_alerts': 'isIgnoreSdtAlerts',
+        'datapoint_filters': 'datapointFilters'
     }
 
-    def __init__(self, datapoints_filter_mode=None, datapoint_filters=None, is_ignored_sdt_alerts=None):  # noqa: E501
+    def __init__(self, datapoints_filter_mode=None, is_ignore_sdt_alerts=None, datapoint_filters=None):  # noqa: E501
         """AlertFilters - a model defined in Swagger"""  # noqa: E501
         self._datapoints_filter_mode = None
+        self._is_ignore_sdt_alerts = None
         self._datapoint_filters = None
-        self._is_ignored_sdt_alerts = None
         self.discriminator = None
         if datapoints_filter_mode is not None:
             self.datapoints_filter_mode = datapoints_filter_mode
+        if is_ignore_sdt_alerts is not None:
+            self.is_ignore_sdt_alerts = is_ignore_sdt_alerts
         if datapoint_filters is not None:
             self.datapoint_filters = datapoint_filters
-        if is_ignored_sdt_alerts is not None:
-            self.is_ignored_sdt_alerts = is_ignored_sdt_alerts
 
     @property
     def datapoints_filter_mode(self):
@@ -80,6 +80,27 @@ class AlertFilters(object):
         self._datapoints_filter_mode = datapoints_filter_mode
 
     @property
+    def is_ignore_sdt_alerts(self):
+        """Gets the is_ignore_sdt_alerts of this AlertFilters.  # noqa: E501
+
+
+        :return: The is_ignore_sdt_alerts of this AlertFilters.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_ignore_sdt_alerts
+
+    @is_ignore_sdt_alerts.setter
+    def is_ignore_sdt_alerts(self, is_ignore_sdt_alerts):
+        """Sets the is_ignore_sdt_alerts of this AlertFilters.
+
+
+        :param is_ignore_sdt_alerts: The is_ignore_sdt_alerts of this AlertFilters.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_ignore_sdt_alerts = is_ignore_sdt_alerts
+
+    @property
     def datapoint_filters(self):
         """Gets the datapoint_filters of this AlertFilters.  # noqa: E501
 
@@ -99,27 +120,6 @@ class AlertFilters(object):
         """
 
         self._datapoint_filters = datapoint_filters
-
-    @property
-    def is_ignored_sdt_alerts(self):
-        """Gets the is_ignored_sdt_alerts of this AlertFilters.  # noqa: E501
-
-
-        :return: The is_ignored_sdt_alerts of this AlertFilters.  # noqa: E501
-        :rtype: bool
-        """
-        return self._is_ignored_sdt_alerts
-
-    @is_ignored_sdt_alerts.setter
-    def is_ignored_sdt_alerts(self, is_ignored_sdt_alerts):
-        """Sets the is_ignored_sdt_alerts of this AlertFilters.
-
-
-        :param is_ignored_sdt_alerts: The is_ignored_sdt_alerts of this AlertFilters.  # noqa: E501
-        :type: bool
-        """
-
-        self._is_ignored_sdt_alerts = is_ignored_sdt_alerts
 
     def to_dict(self):
         """Returns the model properties as a dict"""

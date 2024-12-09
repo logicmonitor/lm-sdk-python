@@ -182,6 +182,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_add_dns_mapping(self):
+        """Test case for add_dns_mapping
+
+        Add dns mapping  # noqa: E501
+        """
+        pass
+
     def test_add_escalation_chain(self):
         """Test case for add_escalation_chain
 
@@ -200,6 +207,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for add_job_monitor
 
         Add JobMonitor  # noqa: E501
+        """
+        pass
+
+    def test_add_log_source(self):
+        """Test case for add_log_source
+
+        add log source   # noqa: E501
         """
         pass
 
@@ -301,6 +315,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_create_log_partition(self):
+        """Test case for create_log_partition
+
+        Create a new log partition  # noqa: E501
+        """
+        pass
+
     def test_delete_access_group(self):
         """Test case for delete_access_group
 
@@ -319,6 +340,20 @@ class TestLMApi(unittest.TestCase):
         """Test case for delete_alert_rule_by_id
 
         delete alert rule  # noqa: E501
+        """
+        pass
+
+    def test_delete_api_token_by_id(self):
+        """Test case for delete_api_token_by_id
+
+        delete apiToken  # noqa: E501
+        """
+        pass
+
+    def test_delete_applies_to_function_by_id(self):
+        """Test case for delete_applies_to_function_by_id
+
+        delete applies to function  # noqa: E501
         """
         pass
 
@@ -406,6 +441,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_escalation_chain_by_id(self):
+        """Test case for delete_escalation_chain_by_id
+
+        delete escalation chain  # noqa: E501
+        """
+        pass
+
     def test_delete_event_source_by_id(self):
         """Test case for delete_event_source_by_id
 
@@ -420,6 +462,27 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_log_partition_by_id(self):
+        """Test case for delete_log_partition_by_id
+
+        Delete a log partition by ID  # noqa: E501
+        """
+        pass
+
+    def test_delete_log_source(self):
+        """Test case for delete_log_source
+
+        delete log source   # noqa: E501
+        """
+        pass
+
+    def test_delete_netscan_by_id(self):
+        """Test case for delete_netscan_by_id
+
+        delete a netscan  # noqa: E501
+        """
+        pass
+
     def test_delete_oid(self):
         """Test case for delete_oid
 
@@ -427,10 +490,24 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_ops_note_by_id(self):
+        """Test case for delete_ops_note_by_id
+
+        delete opsnote  # noqa: E501
+        """
+        pass
+
     def test_delete_property_rule(self):
         """Test case for delete_property_rule
 
         delete a property rule  # noqa: E501
+        """
+        pass
+
+    def test_delete_recipient_group_by_id(self):
+        """Test case for delete_recipient_group_by_id
+
+        delete recipient group  # noqa: E501
         """
         pass
 
@@ -602,6 +679,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_all_log_partitions(self):
+        """Test case for get_all_log_partitions
+
+        Retrieve a list of all log partitions  # noqa: E501
+        """
+        pass
+
     def test_get_all_sdt_list_by_device_id(self):
         """Test case for get_all_sdt_list_by_device_id
 
@@ -648,6 +732,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for get_associated_device_list_by_data_source_id
 
         get devices associated with a datasource  # noqa: E501
+        """
+        pass
+
+    def test_get_audit_log_by_id(self):
+        """Test case for get_audit_log_by_id
+
+        Get audit log by id  # noqa: E501
         """
         pass
 
@@ -728,6 +819,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_contract_info_by_company(self):
+        """Test case for get_contract_info_by_company
+
+        get contract info by company  # noqa: E501
+        """
+        pass
+
     def test_get_dashboard_by_id(self):
         """Test case for get_dashboard_by_id
 
@@ -753,6 +851,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for get_dashboard_list
 
         get dashboard list  # noqa: E501
+        """
+        pass
+
+    def test_get_data_source_overview_graph_by_id(self):
+        """Test case for get_data_source_overview_graph_by_id
+
+        get datasource overview graph by id  # noqa: E501
         """
         pass
 
@@ -1092,6 +1197,20 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_log_source_by_id(self):
+        """Test case for get_log_source_by_id
+
+        get log source   # noqa: E501
+        """
+        pass
+
+    def test_get_log_source_list(self):
+        """Test case for get_log_source_list
+
+        get log source list  # noqa: E501
+        """
+        pass
+
     def test_get_metrics_usage(self):
         """Test case for get_metrics_usage
 
@@ -1148,10 +1267,24 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_ops_note_by_id(self):
+        """Test case for get_ops_note_by_id
+
+        get opsnote by id  # noqa: E501
+        """
+        pass
+
     def test_get_ops_note_list(self):
         """Test case for get_ops_note_list
 
         get opsnote list  # noqa: E501
+        """
+        pass
+
+    def test_get_partition_by_id(self):
+        """Test case for get_partition_by_id
+
+        Retrieve details of a specific log partition  # noqa: E501
         """
         pass
 
@@ -1211,6 +1344,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_retention_list(self):
+        """Test case for get_retention_list
+
+        Retrieve the list of log retentions  # noqa: E501
+        """
+        pass
+
     def test_get_role_by_id(self):
         """Test case for get_role_by_id
 
@@ -1250,6 +1390,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for get_sdt_history_by_device_id
 
         get SDT history for the device  # noqa: E501
+        """
+        pass
+
+    def test_get_sdt_history_by_website_group_id(self):
+        """Test case for get_sdt_history_by_website_group_id
+
+        get SDT history for the website group (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
         """
         pass
 
@@ -1313,6 +1460,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for get_update_reason_list_by_data_source_id
 
         get update history for a datasource  # noqa: E501
+        """
+        pass
+
+    def test_get_v4_metadata(self):
+        """Test case for get_v4_metadata
+
+        get metadata  # noqa: E501
         """
         pass
 
@@ -1414,10 +1568,45 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_import_batch_job(self):
+        """Test case for import_batch_job
+
+        import batch job via xml  # noqa: E501
+        """
+        pass
+
+    def test_import_config_source(self):
+        """Test case for import_config_source
+
+        import config source via xml  # noqa: E501
+        """
+        pass
+
+    def test_import_data_source(self):
+        """Test case for import_data_source
+
+        import datasource via xml  # noqa: E501
+        """
+        pass
+
+    def test_import_event_source(self):
+        """Test case for import_event_source
+
+        import eventsource via xml  # noqa: E501
+        """
+        pass
+
     def test_map_un_map_module_to_access_group(self):
         """Test case for map_un_map_module_to_access_group
 
         Create a mapping of access group & module  # noqa: E501
+        """
+        pass
+
+    def test_partition_action(self):
+        """Test case for partition_action
+
+        Perform an action on a specified log partition  # noqa: E501
         """
         pass
 
@@ -1439,6 +1628,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for patch_alert_rule_by_id
 
         update alert rule  # noqa: E501
+        """
+        pass
+
+    def test_patch_api_token_by_admin_id(self):
+        """Test case for patch_api_token_by_admin_id
+
+        update api tokens for a user  # noqa: E501
         """
         pass
 
@@ -1589,10 +1785,38 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_log_partition(self):
+        """Test case for patch_log_partition
+
+        Update an existing log partition  # noqa: E501
+        """
+        pass
+
+    def test_patch_log_source(self):
+        """Test case for patch_log_source
+
+        update log source   # noqa: E501
+        """
+        pass
+
+    def test_patch_netscan(self):
+        """Test case for patch_netscan
+
+        update a netscan  # noqa: E501
+        """
+        pass
+
     def test_patch_oid(self):
         """Test case for patch_oid
 
         update a OID  # noqa: E501
+        """
+        pass
+
+    def test_patch_ops_note_by_id(self):
+        """Test case for patch_ops_note_by_id
+
+        update opsnote  # noqa: E501
         """
         pass
 
@@ -1719,6 +1943,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for update_alert_rule_by_id
 
         update alert rule  # noqa: E501
+        """
+        pass
+
+    def test_update_api_token_by_admin_id(self):
+        """Test case for update_api_token_by_admin_id
+
+        update api tokens for a user  # noqa: E501
         """
         pass
 
@@ -1876,10 +2107,38 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_update_log_partition(self):
+        """Test case for update_log_partition
+
+        Update an existing log partition  # noqa: E501
+        """
+        pass
+
+    def test_update_log_source(self):
+        """Test case for update_log_source
+
+        update log source   # noqa: E501
+        """
+        pass
+
+    def test_update_netscan(self):
+        """Test case for update_netscan
+
+        update a netscan  # noqa: E501
+        """
+        pass
+
     def test_update_oid(self):
         """Test case for update_oid
 
         update a OID  # noqa: E501
+        """
+        pass
+
+    def test_update_ops_note_by_id(self):
+        """Test case for update_ops_note_by_id
+
+        update opsnote  # noqa: E501
         """
         pass
 
@@ -1950,6 +2209,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for update_widget_by_id
 
         update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        """
+        pass
+
+    def test_verify_aws_billing_permissions(self):
+        """Test case for verify_aws_billing_permissions
+
+        verify AWS Billing Permissions  # noqa: E501
         """
         pass
 

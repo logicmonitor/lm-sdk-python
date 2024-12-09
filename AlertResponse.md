@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 **alert_group_entity_value** | **str** | Alert group entity value for stateful log alerts | [optional] 
 **instance_id** | **int** | The id of the instance in alert | [optional] 
 **suppress_desc** | **str** | The description for suppressed alert | [optional] 
+**log_partition** | **str** | Specified log alert partition information | [optional] 
 **next_recipient** | **int** | The next recipient in the escalation chain for this alert | [optional] 
 **ad_alert** | **bool** | Specifies whether alert is dynamic threshold based or not | [optional] 
 **acked_by** | **str** | The user that acknowledged the alert | [optional] 

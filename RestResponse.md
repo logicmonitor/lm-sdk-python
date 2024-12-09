@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **successes** | [**ArrayNode**](ArrayNode.md) |  | [optional] 
 **meta** | [**RestResponseMetaBlock**](RestResponseMetaBlock.md) |  | [optional] 
 **warnings** | [**ArrayNode**](ArrayNode.md) |  | [optional] 
+**non_id_items** | **list[object]** |  | [optional] 
 **errors** | [**ArrayNode**](ArrayNode.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

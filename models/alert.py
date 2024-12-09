@@ -63,6 +63,7 @@ class Alert(object):
         'alert_group_entity_value': 'str',
         'instance_id': 'int',
         'suppress_desc': 'str',
+        'log_partition': 'str',
         'next_recipient': 'int',
         'ad_alert': 'bool',
         'acked_by': 'str',
@@ -116,6 +117,7 @@ class Alert(object):
         'alert_group_entity_value': 'alertGroupEntityValue',
         'instance_id': 'instanceId',
         'suppress_desc': 'suppressDesc',
+        'log_partition': 'logPartition',
         'next_recipient': 'nextRecipient',
         'ad_alert': 'adAlert',
         'acked_by': 'ackedBy',
@@ -133,7 +135,7 @@ class Alert(object):
         'dependency_role': 'dependencyRole'
     }
 
-    def __init__(self, resource_id=None, end_epoch=None, threshold=None, type=None, start_epoch=None, enable_anomaly_alert_generation=None, internal_id=None, monitor_object_name=None, data_point_name=None, data_point_id=None, suppressor=None, id=None, detail_message=None, rule_id=None, alert_external_ticket_url=None, tenant=None, alert_value=None, sdted=None, sdt=None, enable_anomaly_alert_suppression=None, received_list=None, monitor_object_groups=None, chain_id=None, resource_template_id=None, cleared=None, ad_alert_desc=None, resource_template_name=None, anomaly=None, instance_name=None, monitor_object_id=None, rule=None, ack_comment=None, alert_group_entity_value=None, instance_id=None, suppress_desc=None, next_recipient=None, ad_alert=None, acked_by=None, severity=None, acked_epoch=None, chain=None, sub_chain_id=None, log_meta_data=None, monitor_object_type=None, acked=None, resource_template_type=None, clear_value=None, instance_description=None, dependency_routing_state=None, dependency_role=None):  # noqa: E501
+    def __init__(self, resource_id=None, end_epoch=None, threshold=None, type=None, start_epoch=None, enable_anomaly_alert_generation=None, internal_id=None, monitor_object_name=None, data_point_name=None, data_point_id=None, suppressor=None, id=None, detail_message=None, rule_id=None, alert_external_ticket_url=None, tenant=None, alert_value=None, sdted=None, sdt=None, enable_anomaly_alert_suppression=None, received_list=None, monitor_object_groups=None, chain_id=None, resource_template_id=None, cleared=None, ad_alert_desc=None, resource_template_name=None, anomaly=None, instance_name=None, monitor_object_id=None, rule=None, ack_comment=None, alert_group_entity_value=None, instance_id=None, suppress_desc=None, log_partition=None, next_recipient=None, ad_alert=None, acked_by=None, severity=None, acked_epoch=None, chain=None, sub_chain_id=None, log_meta_data=None, monitor_object_type=None, acked=None, resource_template_type=None, clear_value=None, instance_description=None, dependency_routing_state=None, dependency_role=None):  # noqa: E501
         """Alert - a model defined in Swagger"""  # noqa: E501
         self._resource_id = None
         self._end_epoch = None
@@ -170,6 +172,7 @@ class Alert(object):
         self._alert_group_entity_value = None
         self._instance_id = None
         self._suppress_desc = None
+        self._log_partition = None
         self._next_recipient = None
         self._ad_alert = None
         self._acked_by = None
@@ -256,6 +259,8 @@ class Alert(object):
             self.instance_id = instance_id
         if suppress_desc is not None:
             self.suppress_desc = suppress_desc
+        if log_partition is not None:
+            self.log_partition = log_partition
         if next_recipient is not None:
             self.next_recipient = next_recipient
         if ad_alert is not None:
@@ -1089,6 +1094,29 @@ class Alert(object):
         """
 
         self._suppress_desc = suppress_desc
+
+    @property
+    def log_partition(self):
+        """Gets the log_partition of this Alert.  # noqa: E501
+
+        Specified log alert partition information  # noqa: E501
+
+        :return: The log_partition of this Alert.  # noqa: E501
+        :rtype: str
+        """
+        return self._log_partition
+
+    @log_partition.setter
+    def log_partition(self, log_partition):
+        """Sets the log_partition of this Alert.
+
+        Specified log alert partition information  # noqa: E501
+
+        :param log_partition: The log_partition of this Alert.  # noqa: E501
+        :type: str
+        """
+
+        self._log_partition = log_partition
 
     @property
     def next_recipient(self):

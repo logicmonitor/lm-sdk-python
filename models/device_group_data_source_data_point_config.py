@@ -30,119 +30,139 @@ class DeviceGroupDataSourceDataPointConfig(object):
     swagger_types = {
         'global_alert_expr': 'str',
         'alert_for_no_data': 'int',
-        'enable_anomaly_alert_suppression': 'str',
-        'global_alert_for_no_data': 'int',
-        'critical_ad_adv_setting': 'str',
         'disable_alerting': 'bool',
         'alert_clear_transition_interval': 'int',
+        'global_critical_ad_adv_setting': 'str',
         'global_alert_transition_interval': 'int',
-        'alert_expr_note': 'str',
-        'ad_adv_setting_enabled': 'bool',
-        'error_ad_adv_setting': 'str',
         'data_point_description': 'str',
         'global_enable_anomaly_alert_generation': 'str',
+        'global_error_ad_adv_setting': 'str',
         'enable_anomaly_alert_generation': 'str',
-        'warn_ad_adv_setting': 'str',
         'data_point_name': 'str',
         'data_point_id': 'int',
         'global_enable_anomaly_alert_suppression': 'str',
         'global_alert_clear_transition_interval': 'int',
+        'alert_transition_interval': 'int',
+        'enable_anomaly_alert_suppression': 'str',
+        'global_alert_for_no_data': 'int',
+        'critical_ad_adv_setting': 'str',
+        'alert_expr_note': 'str',
+        'global_warn_ad_adv_setting': 'str',
+        'ad_adv_setting_enabled': 'bool',
+        'error_ad_adv_setting': 'str',
+        'warn_ad_adv_setting': 'str',
+        'global_ad_adv_setting_enabled': 'bool',
         'collection_interval': 'int',
-        'alert_expr': 'str',
-        'alert_transition_interval': 'int'
+        'alert_expr': 'str'
     }
 
     attribute_map = {
         'global_alert_expr': 'globalAlertExpr',
         'alert_for_no_data': 'alertForNoData',
-        'enable_anomaly_alert_suppression': 'enableAnomalyAlertSuppression',
-        'global_alert_for_no_data': 'globalAlertForNoData',
-        'critical_ad_adv_setting': 'criticalAdAdvSetting',
         'disable_alerting': 'disableAlerting',
         'alert_clear_transition_interval': 'alertClearTransitionInterval',
+        'global_critical_ad_adv_setting': 'globalCriticalAdAdvSetting',
         'global_alert_transition_interval': 'globalAlertTransitionInterval',
-        'alert_expr_note': 'alertExprNote',
-        'ad_adv_setting_enabled': 'adAdvSettingEnabled',
-        'error_ad_adv_setting': 'errorAdAdvSetting',
         'data_point_description': 'dataPointDescription',
         'global_enable_anomaly_alert_generation': 'globalEnableAnomalyAlertGeneration',
+        'global_error_ad_adv_setting': 'globalErrorAdAdvSetting',
         'enable_anomaly_alert_generation': 'enableAnomalyAlertGeneration',
-        'warn_ad_adv_setting': 'warnAdAdvSetting',
         'data_point_name': 'dataPointName',
         'data_point_id': 'dataPointId',
         'global_enable_anomaly_alert_suppression': 'globalEnableAnomalyAlertSuppression',
         'global_alert_clear_transition_interval': 'globalAlertClearTransitionInterval',
+        'alert_transition_interval': 'alertTransitionInterval',
+        'enable_anomaly_alert_suppression': 'enableAnomalyAlertSuppression',
+        'global_alert_for_no_data': 'globalAlertForNoData',
+        'critical_ad_adv_setting': 'criticalAdAdvSetting',
+        'alert_expr_note': 'alertExprNote',
+        'global_warn_ad_adv_setting': 'globalWarnAdAdvSetting',
+        'ad_adv_setting_enabled': 'adAdvSettingEnabled',
+        'error_ad_adv_setting': 'errorAdAdvSetting',
+        'warn_ad_adv_setting': 'warnAdAdvSetting',
+        'global_ad_adv_setting_enabled': 'globalAdAdvSettingEnabled',
         'collection_interval': 'collectionInterval',
-        'alert_expr': 'alertExpr',
-        'alert_transition_interval': 'alertTransitionInterval'
+        'alert_expr': 'alertExpr'
     }
 
-    def __init__(self, global_alert_expr=None, alert_for_no_data=None, enable_anomaly_alert_suppression=None, global_alert_for_no_data=None, critical_ad_adv_setting=None, disable_alerting=None, alert_clear_transition_interval=None, global_alert_transition_interval=None, alert_expr_note=None, ad_adv_setting_enabled=None, error_ad_adv_setting=None, data_point_description=None, global_enable_anomaly_alert_generation=None, enable_anomaly_alert_generation=None, warn_ad_adv_setting=None, data_point_name=None, data_point_id=None, global_enable_anomaly_alert_suppression=None, global_alert_clear_transition_interval=None, collection_interval=None, alert_expr=None, alert_transition_interval=None):  # noqa: E501
+    def __init__(self, global_alert_expr=None, alert_for_no_data=None, disable_alerting=None, alert_clear_transition_interval=None, global_critical_ad_adv_setting=None, global_alert_transition_interval=None, data_point_description=None, global_enable_anomaly_alert_generation=None, global_error_ad_adv_setting=None, enable_anomaly_alert_generation=None, data_point_name=None, data_point_id=None, global_enable_anomaly_alert_suppression=None, global_alert_clear_transition_interval=None, alert_transition_interval=None, enable_anomaly_alert_suppression=None, global_alert_for_no_data=None, critical_ad_adv_setting=None, alert_expr_note=None, global_warn_ad_adv_setting=None, ad_adv_setting_enabled=None, error_ad_adv_setting=None, warn_ad_adv_setting=None, global_ad_adv_setting_enabled=None, collection_interval=None, alert_expr=None):  # noqa: E501
         """DeviceGroupDataSourceDataPointConfig - a model defined in Swagger"""  # noqa: E501
         self._global_alert_expr = None
         self._alert_for_no_data = None
-        self._enable_anomaly_alert_suppression = None
-        self._global_alert_for_no_data = None
-        self._critical_ad_adv_setting = None
         self._disable_alerting = None
         self._alert_clear_transition_interval = None
+        self._global_critical_ad_adv_setting = None
         self._global_alert_transition_interval = None
-        self._alert_expr_note = None
-        self._ad_adv_setting_enabled = None
-        self._error_ad_adv_setting = None
         self._data_point_description = None
         self._global_enable_anomaly_alert_generation = None
+        self._global_error_ad_adv_setting = None
         self._enable_anomaly_alert_generation = None
-        self._warn_ad_adv_setting = None
         self._data_point_name = None
         self._data_point_id = None
         self._global_enable_anomaly_alert_suppression = None
         self._global_alert_clear_transition_interval = None
+        self._alert_transition_interval = None
+        self._enable_anomaly_alert_suppression = None
+        self._global_alert_for_no_data = None
+        self._critical_ad_adv_setting = None
+        self._alert_expr_note = None
+        self._global_warn_ad_adv_setting = None
+        self._ad_adv_setting_enabled = None
+        self._error_ad_adv_setting = None
+        self._warn_ad_adv_setting = None
+        self._global_ad_adv_setting_enabled = None
         self._collection_interval = None
         self._alert_expr = None
-        self._alert_transition_interval = None
         self.discriminator = None
         if global_alert_expr is not None:
             self.global_alert_expr = global_alert_expr
         if alert_for_no_data is not None:
             self.alert_for_no_data = alert_for_no_data
-        if enable_anomaly_alert_suppression is not None:
-            self.enable_anomaly_alert_suppression = enable_anomaly_alert_suppression
-        if global_alert_for_no_data is not None:
-            self.global_alert_for_no_data = global_alert_for_no_data
-        if critical_ad_adv_setting is not None:
-            self.critical_ad_adv_setting = critical_ad_adv_setting
         if disable_alerting is not None:
             self.disable_alerting = disable_alerting
         if alert_clear_transition_interval is not None:
             self.alert_clear_transition_interval = alert_clear_transition_interval
+        if global_critical_ad_adv_setting is not None:
+            self.global_critical_ad_adv_setting = global_critical_ad_adv_setting
         if global_alert_transition_interval is not None:
             self.global_alert_transition_interval = global_alert_transition_interval
-        if alert_expr_note is not None:
-            self.alert_expr_note = alert_expr_note
-        if ad_adv_setting_enabled is not None:
-            self.ad_adv_setting_enabled = ad_adv_setting_enabled
-        if error_ad_adv_setting is not None:
-            self.error_ad_adv_setting = error_ad_adv_setting
         if data_point_description is not None:
             self.data_point_description = data_point_description
         if global_enable_anomaly_alert_generation is not None:
             self.global_enable_anomaly_alert_generation = global_enable_anomaly_alert_generation
+        if global_error_ad_adv_setting is not None:
+            self.global_error_ad_adv_setting = global_error_ad_adv_setting
         if enable_anomaly_alert_generation is not None:
             self.enable_anomaly_alert_generation = enable_anomaly_alert_generation
-        if warn_ad_adv_setting is not None:
-            self.warn_ad_adv_setting = warn_ad_adv_setting
         self.data_point_name = data_point_name
         self.data_point_id = data_point_id
         if global_enable_anomaly_alert_suppression is not None:
             self.global_enable_anomaly_alert_suppression = global_enable_anomaly_alert_suppression
         if global_alert_clear_transition_interval is not None:
             self.global_alert_clear_transition_interval = global_alert_clear_transition_interval
+        if alert_transition_interval is not None:
+            self.alert_transition_interval = alert_transition_interval
+        if enable_anomaly_alert_suppression is not None:
+            self.enable_anomaly_alert_suppression = enable_anomaly_alert_suppression
+        if global_alert_for_no_data is not None:
+            self.global_alert_for_no_data = global_alert_for_no_data
+        if critical_ad_adv_setting is not None:
+            self.critical_ad_adv_setting = critical_ad_adv_setting
+        if alert_expr_note is not None:
+            self.alert_expr_note = alert_expr_note
+        if global_warn_ad_adv_setting is not None:
+            self.global_warn_ad_adv_setting = global_warn_ad_adv_setting
+        if ad_adv_setting_enabled is not None:
+            self.ad_adv_setting_enabled = ad_adv_setting_enabled
+        if error_ad_adv_setting is not None:
+            self.error_ad_adv_setting = error_ad_adv_setting
+        if warn_ad_adv_setting is not None:
+            self.warn_ad_adv_setting = warn_ad_adv_setting
+        if global_ad_adv_setting_enabled is not None:
+            self.global_ad_adv_setting_enabled = global_ad_adv_setting_enabled
         if collection_interval is not None:
             self.collection_interval = collection_interval
         self.alert_expr = alert_expr
-        if alert_transition_interval is not None:
-            self.alert_transition_interval = alert_transition_interval
 
     @property
     def global_alert_expr(self):
@@ -189,71 +209,6 @@ class DeviceGroupDataSourceDataPointConfig(object):
         self._alert_for_no_data = alert_for_no_data
 
     @property
-    def enable_anomaly_alert_suppression(self):
-        """Gets the enable_anomaly_alert_suppression of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-
-        :return: The enable_anomaly_alert_suppression of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._enable_anomaly_alert_suppression
-
-    @enable_anomaly_alert_suppression.setter
-    def enable_anomaly_alert_suppression(self, enable_anomaly_alert_suppression):
-        """Sets the enable_anomaly_alert_suppression of this DeviceGroupDataSourceDataPointConfig.
-
-
-        :param enable_anomaly_alert_suppression: The enable_anomaly_alert_suppression of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
-        """
-
-        self._enable_anomaly_alert_suppression = enable_anomaly_alert_suppression
-
-    @property
-    def global_alert_for_no_data(self):
-        """Gets the global_alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-        The triggered alert level if we cannot collect data for this datapoint. The values can be 1-4 (1:no alert, 2:warn alert, 3:error alert, 4:critical alert)  # noqa: E501
-
-        :return: The global_alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: int
-        """
-        return self._global_alert_for_no_data
-
-    @global_alert_for_no_data.setter
-    def global_alert_for_no_data(self, global_alert_for_no_data):
-        """Sets the global_alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.
-
-        The triggered alert level if we cannot collect data for this datapoint. The values can be 1-4 (1:no alert, 2:warn alert, 3:error alert, 4:critical alert)  # noqa: E501
-
-        :param global_alert_for_no_data: The global_alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: int
-        """
-
-        self._global_alert_for_no_data = global_alert_for_no_data
-
-    @property
-    def critical_ad_adv_setting(self):
-        """Gets the critical_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-
-        :return: The critical_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._critical_ad_adv_setting
-
-    @critical_ad_adv_setting.setter
-    def critical_ad_adv_setting(self, critical_ad_adv_setting):
-        """Sets the critical_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.
-
-
-        :param critical_ad_adv_setting: The critical_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
-        """
-
-        self._critical_ad_adv_setting = critical_ad_adv_setting
-
-    @property
     def disable_alerting(self):
         """Gets the disable_alerting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
 
@@ -298,6 +253,27 @@ class DeviceGroupDataSourceDataPointConfig(object):
         self._alert_clear_transition_interval = alert_clear_transition_interval
 
     @property
+    def global_critical_ad_adv_setting(self):
+        """Gets the global_critical_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The global_critical_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._global_critical_ad_adv_setting
+
+    @global_critical_ad_adv_setting.setter
+    def global_critical_ad_adv_setting(self, global_critical_ad_adv_setting):
+        """Sets the global_critical_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param global_critical_ad_adv_setting: The global_critical_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._global_critical_ad_adv_setting = global_critical_ad_adv_setting
+
+    @property
     def global_alert_transition_interval(self):
         """Gets the global_alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
 
@@ -319,69 +295,6 @@ class DeviceGroupDataSourceDataPointConfig(object):
         """
 
         self._global_alert_transition_interval = global_alert_transition_interval
-
-    @property
-    def alert_expr_note(self):
-        """Gets the alert_expr_note of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-
-        :return: The alert_expr_note of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._alert_expr_note
-
-    @alert_expr_note.setter
-    def alert_expr_note(self, alert_expr_note):
-        """Sets the alert_expr_note of this DeviceGroupDataSourceDataPointConfig.
-
-
-        :param alert_expr_note: The alert_expr_note of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
-        """
-
-        self._alert_expr_note = alert_expr_note
-
-    @property
-    def ad_adv_setting_enabled(self):
-        """Gets the ad_adv_setting_enabled of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-
-        :return: The ad_adv_setting_enabled of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: bool
-        """
-        return self._ad_adv_setting_enabled
-
-    @ad_adv_setting_enabled.setter
-    def ad_adv_setting_enabled(self, ad_adv_setting_enabled):
-        """Sets the ad_adv_setting_enabled of this DeviceGroupDataSourceDataPointConfig.
-
-
-        :param ad_adv_setting_enabled: The ad_adv_setting_enabled of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: bool
-        """
-
-        self._ad_adv_setting_enabled = ad_adv_setting_enabled
-
-    @property
-    def error_ad_adv_setting(self):
-        """Gets the error_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-
-        :return: The error_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._error_ad_adv_setting
-
-    @error_ad_adv_setting.setter
-    def error_ad_adv_setting(self, error_ad_adv_setting):
-        """Sets the error_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.
-
-
-        :param error_ad_adv_setting: The error_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
-        """
-
-        self._error_ad_adv_setting = error_ad_adv_setting
 
     @property
     def data_point_description(self):
@@ -426,6 +339,27 @@ class DeviceGroupDataSourceDataPointConfig(object):
         self._global_enable_anomaly_alert_generation = global_enable_anomaly_alert_generation
 
     @property
+    def global_error_ad_adv_setting(self):
+        """Gets the global_error_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The global_error_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._global_error_ad_adv_setting
+
+    @global_error_ad_adv_setting.setter
+    def global_error_ad_adv_setting(self, global_error_ad_adv_setting):
+        """Sets the global_error_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param global_error_ad_adv_setting: The global_error_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._global_error_ad_adv_setting = global_error_ad_adv_setting
+
+    @property
     def enable_anomaly_alert_generation(self):
         """Gets the enable_anomaly_alert_generation of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
 
@@ -445,27 +379,6 @@ class DeviceGroupDataSourceDataPointConfig(object):
         """
 
         self._enable_anomaly_alert_generation = enable_anomaly_alert_generation
-
-    @property
-    def warn_ad_adv_setting(self):
-        """Gets the warn_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-
-        :return: The warn_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: str
-        """
-        return self._warn_ad_adv_setting
-
-    @warn_ad_adv_setting.setter
-    def warn_ad_adv_setting(self, warn_ad_adv_setting):
-        """Sets the warn_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.
-
-
-        :param warn_ad_adv_setting: The warn_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: str
-        """
-
-        self._warn_ad_adv_setting = warn_ad_adv_setting
 
     @property
     def data_point_name(self):
@@ -558,6 +471,220 @@ class DeviceGroupDataSourceDataPointConfig(object):
         self._global_alert_clear_transition_interval = global_alert_clear_transition_interval
 
     @property
+    def alert_transition_interval(self):
+        """Gets the alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+        The count that the alert must exist for this many poll cycles before it will be triggered (0-60)  # noqa: E501
+
+        :return: The alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: int
+        """
+        return self._alert_transition_interval
+
+    @alert_transition_interval.setter
+    def alert_transition_interval(self, alert_transition_interval):
+        """Sets the alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.
+
+        The count that the alert must exist for this many poll cycles before it will be triggered (0-60)  # noqa: E501
+
+        :param alert_transition_interval: The alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: int
+        """
+
+        self._alert_transition_interval = alert_transition_interval
+
+    @property
+    def enable_anomaly_alert_suppression(self):
+        """Gets the enable_anomaly_alert_suppression of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The enable_anomaly_alert_suppression of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._enable_anomaly_alert_suppression
+
+    @enable_anomaly_alert_suppression.setter
+    def enable_anomaly_alert_suppression(self, enable_anomaly_alert_suppression):
+        """Sets the enable_anomaly_alert_suppression of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param enable_anomaly_alert_suppression: The enable_anomaly_alert_suppression of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._enable_anomaly_alert_suppression = enable_anomaly_alert_suppression
+
+    @property
+    def global_alert_for_no_data(self):
+        """Gets the global_alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+        The triggered alert level if we cannot collect data for this datapoint. The values can be 1-4 (1:no alert, 2:warn alert, 3:error alert, 4:critical alert)  # noqa: E501
+
+        :return: The global_alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: int
+        """
+        return self._global_alert_for_no_data
+
+    @global_alert_for_no_data.setter
+    def global_alert_for_no_data(self, global_alert_for_no_data):
+        """Sets the global_alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.
+
+        The triggered alert level if we cannot collect data for this datapoint. The values can be 1-4 (1:no alert, 2:warn alert, 3:error alert, 4:critical alert)  # noqa: E501
+
+        :param global_alert_for_no_data: The global_alert_for_no_data of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: int
+        """
+
+        self._global_alert_for_no_data = global_alert_for_no_data
+
+    @property
+    def critical_ad_adv_setting(self):
+        """Gets the critical_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The critical_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._critical_ad_adv_setting
+
+    @critical_ad_adv_setting.setter
+    def critical_ad_adv_setting(self, critical_ad_adv_setting):
+        """Sets the critical_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param critical_ad_adv_setting: The critical_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._critical_ad_adv_setting = critical_ad_adv_setting
+
+    @property
+    def alert_expr_note(self):
+        """Gets the alert_expr_note of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The alert_expr_note of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_expr_note
+
+    @alert_expr_note.setter
+    def alert_expr_note(self, alert_expr_note):
+        """Sets the alert_expr_note of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param alert_expr_note: The alert_expr_note of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_expr_note = alert_expr_note
+
+    @property
+    def global_warn_ad_adv_setting(self):
+        """Gets the global_warn_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The global_warn_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._global_warn_ad_adv_setting
+
+    @global_warn_ad_adv_setting.setter
+    def global_warn_ad_adv_setting(self, global_warn_ad_adv_setting):
+        """Sets the global_warn_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param global_warn_ad_adv_setting: The global_warn_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._global_warn_ad_adv_setting = global_warn_ad_adv_setting
+
+    @property
+    def ad_adv_setting_enabled(self):
+        """Gets the ad_adv_setting_enabled of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The ad_adv_setting_enabled of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: bool
+        """
+        return self._ad_adv_setting_enabled
+
+    @ad_adv_setting_enabled.setter
+    def ad_adv_setting_enabled(self, ad_adv_setting_enabled):
+        """Sets the ad_adv_setting_enabled of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param ad_adv_setting_enabled: The ad_adv_setting_enabled of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: bool
+        """
+
+        self._ad_adv_setting_enabled = ad_adv_setting_enabled
+
+    @property
+    def error_ad_adv_setting(self):
+        """Gets the error_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The error_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._error_ad_adv_setting
+
+    @error_ad_adv_setting.setter
+    def error_ad_adv_setting(self, error_ad_adv_setting):
+        """Sets the error_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param error_ad_adv_setting: The error_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._error_ad_adv_setting = error_ad_adv_setting
+
+    @property
+    def warn_ad_adv_setting(self):
+        """Gets the warn_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The warn_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._warn_ad_adv_setting
+
+    @warn_ad_adv_setting.setter
+    def warn_ad_adv_setting(self, warn_ad_adv_setting):
+        """Sets the warn_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param warn_ad_adv_setting: The warn_ad_adv_setting of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._warn_ad_adv_setting = warn_ad_adv_setting
+
+    @property
+    def global_ad_adv_setting_enabled(self):
+        """Gets the global_ad_adv_setting_enabled of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The global_ad_adv_setting_enabled of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: bool
+        """
+        return self._global_ad_adv_setting_enabled
+
+    @global_ad_adv_setting_enabled.setter
+    def global_ad_adv_setting_enabled(self, global_ad_adv_setting_enabled):
+        """Sets the global_ad_adv_setting_enabled of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param global_ad_adv_setting_enabled: The global_ad_adv_setting_enabled of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: bool
+        """
+
+        self._global_ad_adv_setting_enabled = global_ad_adv_setting_enabled
+
+    @property
     def collection_interval(self):
         """Gets the collection_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
 
@@ -602,29 +729,6 @@ class DeviceGroupDataSourceDataPointConfig(object):
             raise ValueError("Invalid value for `alert_expr`, must not be `None`")  # noqa: E501
 
         self._alert_expr = alert_expr
-
-    @property
-    def alert_transition_interval(self):
-        """Gets the alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-
-        The count that the alert must exist for this many poll cycles before it will be triggered (0-60)  # noqa: E501
-
-        :return: The alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :rtype: int
-        """
-        return self._alert_transition_interval
-
-    @alert_transition_interval.setter
-    def alert_transition_interval(self, alert_transition_interval):
-        """Sets the alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.
-
-        The count that the alert must exist for this many poll cycles before it will be triggered (0-60)  # noqa: E501
-
-        :param alert_transition_interval: The alert_transition_interval of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
-        :type: int
-        """
-
-        self._alert_transition_interval = alert_transition_interval
 
     def to_dict(self):
         """Returns the model properties as a dict"""

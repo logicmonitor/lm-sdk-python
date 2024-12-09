@@ -76,7 +76,8 @@ class Device(object):
         'user_permission': 'str',
         'preferred_collector_group_name': 'str',
         'auto_properties': 'list[NameAndValue]',
-        'to_delete_time_in_ms': 'int'
+        'to_delete_time_in_ms': 'int',
+        'contains_multi_value': 'bool'
     }
 
     attribute_map = {
@@ -128,10 +129,11 @@ class Device(object):
         'user_permission': 'userPermission',
         'preferred_collector_group_name': 'preferredCollectorGroupName',
         'auto_properties': 'autoProperties',
-        'to_delete_time_in_ms': 'toDeleteTimeInMs'
+        'to_delete_time_in_ms': 'toDeleteTimeInMs',
+        'contains_multi_value': 'containsMultiValue'
     }
 
-    def __init__(self, log_collector_group_id=None, disable_alerting=None, netflow_collector_group_id=None, role_privileges=None, system_properties=None, is_preferred_log_collector_configured=None, host_status=None, auto_balanced_collector_group_id=None, inherited_properties=None, id=None, synthetics_collector_ids=None, up_time_in_seconds=None, device_type=None, current_collector_id=None, netflow_collector_id=None, auto_props_assigned_on=None, updated_on=None, preferred_collector_group_id=None, custom_properties=None, collector_description=None, preferred_collector_id=None, last_rawdata_time=None, name=None, deleted_time_in_ms=None, netflow_collector_group_name=None, azure_state=None, related_device_id=None, log_collector_group_name=None, display_name=None, log_collector_description=None, link=None, aws_state=None, description=None, created_on=None, gcp_state=None, auto_props_updated_on=None, scan_config_id=None, enable_netflow=None, last_data_time=None, host_group_ids=None, resource_ids=None, op=None, current_log_collector_id=None, log_collector_id=None, netflow_collector_description=None, user_permission=None, preferred_collector_group_name=None, auto_properties=None, to_delete_time_in_ms=None):  # noqa: E501
+    def __init__(self, log_collector_group_id=None, disable_alerting=None, netflow_collector_group_id=None, role_privileges=None, system_properties=None, is_preferred_log_collector_configured=None, host_status=None, auto_balanced_collector_group_id=None, inherited_properties=None, id=None, synthetics_collector_ids=None, up_time_in_seconds=None, device_type=None, current_collector_id=None, netflow_collector_id=None, auto_props_assigned_on=None, updated_on=None, preferred_collector_group_id=None, custom_properties=None, collector_description=None, preferred_collector_id=None, last_rawdata_time=None, name=None, deleted_time_in_ms=None, netflow_collector_group_name=None, azure_state=None, related_device_id=None, log_collector_group_name=None, display_name=None, log_collector_description=None, link=None, aws_state=None, description=None, created_on=None, gcp_state=None, auto_props_updated_on=None, scan_config_id=None, enable_netflow=None, last_data_time=None, host_group_ids=None, resource_ids=None, op=None, current_log_collector_id=None, log_collector_id=None, netflow_collector_description=None, user_permission=None, preferred_collector_group_name=None, auto_properties=None, to_delete_time_in_ms=None, contains_multi_value=None):  # noqa: E501
         """Device - a model defined in Swagger"""  # noqa: E501
         self._log_collector_group_id = None
         self._disable_alerting = None
@@ -182,6 +184,7 @@ class Device(object):
         self._preferred_collector_group_name = None
         self._auto_properties = None
         self._to_delete_time_in_ms = None
+        self._contains_multi_value = None
         self.discriminator = None
         if log_collector_group_id is not None:
             self.log_collector_group_id = log_collector_group_id
@@ -278,6 +281,8 @@ class Device(object):
             self.auto_properties = auto_properties
         if to_delete_time_in_ms is not None:
             self.to_delete_time_in_ms = to_delete_time_in_ms
+        if contains_multi_value is not None:
+            self.contains_multi_value = contains_multi_value
 
     @property
     def log_collector_group_id(self):
@@ -1411,6 +1416,29 @@ class Device(object):
         """
 
         self._to_delete_time_in_ms = to_delete_time_in_ms
+
+    @property
+    def contains_multi_value(self):
+        """Gets the contains_multi_value of this Device.  # noqa: E501
+
+        request contains multi value field  # noqa: E501
+
+        :return: The contains_multi_value of this Device.  # noqa: E501
+        :rtype: bool
+        """
+        return self._contains_multi_value
+
+    @contains_multi_value.setter
+    def contains_multi_value(self, contains_multi_value):
+        """Sets the contains_multi_value of this Device.
+
+        request contains multi value field  # noqa: E501
+
+        :param contains_multi_value: The contains_multi_value of this Device.  # noqa: E501
+        :type: bool
+        """
+
+        self._contains_multi_value = contains_multi_value
 
     def to_dict(self):
         """Returns the model properties as a dict"""
