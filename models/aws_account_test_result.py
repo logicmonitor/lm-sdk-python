@@ -28,29 +28,62 @@ class AwsAccountTestResult(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'warnings': 'list[str]',
         'no_permission_services': 'list[str]',
         'detail_link': 'str',
         'non_permission_errors': 'list[str]'
     }
 
     attribute_map = {
+        'warnings': 'warnings',
         'no_permission_services': 'noPermissionServices',
         'detail_link': 'detailLink',
         'non_permission_errors': 'nonPermissionErrors'
     }
 
-    def __init__(self, no_permission_services=None, detail_link=None, non_permission_errors=None):  # noqa: E501
+    def __init__(self, warnings=None, no_permission_services=None, detail_link=None, non_permission_errors=None):  # noqa: E501
         """AwsAccountTestResult - a model defined in Swagger"""  # noqa: E501
+        self._warnings = None
         self._no_permission_services = None
         self._detail_link = None
         self._non_permission_errors = None
         self.discriminator = None
+        if warnings is not None:
+            self.warnings = warnings
         if no_permission_services is not None:
             self.no_permission_services = no_permission_services
         if detail_link is not None:
             self.detail_link = detail_link
         if non_permission_errors is not None:
             self.non_permission_errors = non_permission_errors
+
+    @property
+    def warnings(self):
+        """Gets the warnings of this AwsAccountTestResult.  # noqa: E501
+
+
+        :return: The warnings of this AwsAccountTestResult.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._warnings
+
+    @warnings.setter
+    def warnings(self, warnings):
+        """Sets the warnings of this AwsAccountTestResult.
+
+
+        :param warnings: The warnings of this AwsAccountTestResult.  # noqa: E501
+        :type: list[str]
+        """
+        allowed_values = ["CLIENT_ID_ISSUE", "TENANT_ID_ISSUE", "KEY_ISSUE", "SUBSCRIPTION_ID_ISSUE", "SERVICE_NAME_ERROR", "TEMPORARY_WARNING", "PROJECT_ID_ISSUE", "CLIENT_EMAIL_ISSUE", "TOKEN_URI_ISSUE", "ROLE_ARN_ISSUE", "PERMISSION_TEST_BYPASSED", "POLICY_OR_NAME_ISSUE", "SERVICE_PERMISION_FAILURE", "MISSING_REQUIRED_CREDENTIAL_DATA", "MISSING_CREDENTIALS", "MISSING_SUBSCRIPTION_IDS", "NO_SERVICES_CHECKED", "MAXIMUM_RECORDS_EXCEEDED", "FILTER_UNUSED", "ID_NOT_FOUND", "TYPE_INVALID", "INVALID_TIME_RANGE", "UNAUTHORIZED", "OPTIONAL_FIELD_NOT_FOUND", "EXTRA_FIELDS_PROVIDED", "DEFAULT_COLUMNS_FILTER", "SAAS_O365_EXTRA_PERMISSION", "SAAS_O365_API_INACCESSIBLE", "SAAS_O365_NO_PERMISSION_GRANTED", "PATCH_NOT_ALLOWED_ON_READ_ONLY", "PATCH_NOT_ALLOWED_ON_MULTI", "IGNORED_COMPONENT_OF_PAYLOAD", "INVALID_FIELD_VALUE", "NO_ALERT_RULE_MATCHES_THIS_ALERT", "INVALID_PROPERTY_NAMES_IGNORED", "NO_STAGE_1_RECEIPIENTS_DEFINED_FOR_ALERT", "NO_ESCALATING_CHAIN_MATCHES_THIS_ALERT", "ASSUMED_TYPE", "NO_DATA_FOR_MODEL", "GET_INTEGRATION_FAIL", "DASHBOARDS_NOT_CREATED", "MISSING_PERMISSION_OR_MISSING_DATAPOINT", "DISABLED_CLOUD_TYPE", "SERVICE_API_DISABLED", "ALERT_GENERATION_DISABLED", "ALERT_GENERATION_DISABLED_WITH_NAME"]  # noqa: E501
+        if not set(warnings).issubset(set(allowed_values)):
+            raise ValueError(
+                "Invalid values for `warnings` [{0}], must be a subset of [{1}]"  # noqa: E501
+                .format(", ".join(map(str, set(warnings) - set(allowed_values))),  # noqa: E501
+                        ", ".join(map(str, allowed_values)))
+            )
+
+        self._warnings = warnings
 
     @property
     def no_permission_services(self):

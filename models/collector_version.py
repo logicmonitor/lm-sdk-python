@@ -28,6 +28,7 @@ class CollectorVersion(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'patch': 'bool',
         'feature': 'bool',
         'stable': 'bool',
         'release_epoch': 'int',
@@ -39,6 +40,7 @@ class CollectorVersion(object):
     }
 
     attribute_map = {
+        'patch': 'patch',
         'feature': 'feature',
         'stable': 'stable',
         'release_epoch': 'releaseEpoch',
@@ -49,8 +51,9 @@ class CollectorVersion(object):
         'mandatory': 'mandatory'
     }
 
-    def __init__(self, feature=None, stable=None, release_epoch=None, has32bit_windows=None, has32bit_linux=None, major_version=None, minor_version=None, mandatory=None):  # noqa: E501
+    def __init__(self, patch=None, feature=None, stable=None, release_epoch=None, has32bit_windows=None, has32bit_linux=None, major_version=None, minor_version=None, mandatory=None):  # noqa: E501
         """CollectorVersion - a model defined in Swagger"""  # noqa: E501
+        self._patch = None
         self._feature = None
         self._stable = None
         self._release_epoch = None
@@ -60,6 +63,8 @@ class CollectorVersion(object):
         self._minor_version = None
         self._mandatory = None
         self.discriminator = None
+        if patch is not None:
+            self.patch = patch
         if feature is not None:
             self.feature = feature
         if stable is not None:
@@ -76,6 +81,29 @@ class CollectorVersion(object):
             self.minor_version = minor_version
         if mandatory is not None:
             self.mandatory = mandatory
+
+    @property
+    def patch(self):
+        """Gets the patch of this CollectorVersion.  # noqa: E501
+
+        Specifies if this is a ea patch version  # noqa: E501
+
+        :return: The patch of this CollectorVersion.  # noqa: E501
+        :rtype: bool
+        """
+        return self._patch
+
+    @patch.setter
+    def patch(self, patch):
+        """Sets the patch of this CollectorVersion.
+
+        Specifies if this is a ea patch version  # noqa: E501
+
+        :param patch: The patch of this CollectorVersion.  # noqa: E501
+        :type: bool
+        """
+
+        self._patch = patch
 
     @property
     def feature(self):

@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import logicmonitor_sdk
-from logicmonitor_sdk.models.azure_ea_billing_collector_attribute import AzureEABillingCollectorAttribute  # noqa: E501
+from logicmonitor_sdk.models.cloud_recommendation import CloudRecommendation  # noqa: E501
 from logicmonitor_sdk.rest import ApiException
 
 
-class TestAzureEABillingCollectorAttribute(unittest.TestCase):
-    """AzureEABillingCollectorAttribute unit test stubs"""
+class TestCloudRecommendation(unittest.TestCase):
+    """CloudRecommendation unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestAzureEABillingCollectorAttribute(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testAzureEABillingCollectorAttribute(self):
-        """Test AzureEABillingCollectorAttribute"""
+    def testCloudRecommendation(self):
+        """Test CloudRecommendation"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = logicmonitor_sdk.models.azure_ea_billing_collector_attribute.AzureEABillingCollectorAttribute()  # noqa: E501
+        # model = logicmonitor_sdk.models.cloud_recommendation.CloudRecommendation()  # noqa: E501
         pass
 
 

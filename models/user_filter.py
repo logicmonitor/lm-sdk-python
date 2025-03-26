@@ -32,6 +32,8 @@ class UserFilter(object):
         'first_name': 'str',
         'last_name': 'str',
         'enable2fa': 'str',
+        'email_verification': 'str',
+        '_2_fa': 'str',
         'role_assignment': 'str',
         'email': 'str',
         'status': 'str',
@@ -43,18 +45,22 @@ class UserFilter(object):
         'first_name': 'firstName',
         'last_name': 'lastName',
         'enable2fa': 'enable2fa',
+        'email_verification': 'emailVerification',
+        '_2_fa': '2FA',
         'role_assignment': 'roleAssignment',
         'email': 'email',
         'status': 'status',
         'username': 'username'
     }
 
-    def __init__(self, api_only_user=None, first_name=None, last_name=None, enable2fa=None, role_assignment=None, email=None, status=None, username=None):  # noqa: E501
+    def __init__(self, api_only_user=None, first_name=None, last_name=None, enable2fa=None, email_verification=None, _2_fa=None, role_assignment=None, email=None, status=None, username=None):  # noqa: E501
         """UserFilter - a model defined in Swagger"""  # noqa: E501
         self._api_only_user = None
         self._first_name = None
         self._last_name = None
         self._enable2fa = None
+        self._email_verification = None
+        self.__2_fa = None
         self._role_assignment = None
         self._email = None
         self._status = None
@@ -68,6 +74,10 @@ class UserFilter(object):
             self.last_name = last_name
         if enable2fa is not None:
             self.enable2fa = enable2fa
+        if email_verification is not None:
+            self.email_verification = email_verification
+        if _2_fa is not None:
+            self._2_fa = _2_fa
         if role_assignment is not None:
             self.role_assignment = role_assignment
         if email is not None:
@@ -168,6 +178,52 @@ class UserFilter(object):
         """
 
         self._enable2fa = enable2fa
+
+    @property
+    def email_verification(self):
+        """Gets the email_verification of this UserFilter.  # noqa: E501
+
+        The email verification status for the user  # noqa: E501
+
+        :return: The email_verification of this UserFilter.  # noqa: E501
+        :rtype: str
+        """
+        return self._email_verification
+
+    @email_verification.setter
+    def email_verification(self, email_verification):
+        """Sets the email_verification of this UserFilter.
+
+        The email verification status for the user  # noqa: E501
+
+        :param email_verification: The email_verification of this UserFilter.  # noqa: E501
+        :type: str
+        """
+
+        self._email_verification = email_verification
+
+    @property
+    def _2_fa(self):
+        """Gets the _2_fa of this UserFilter.  # noqa: E501
+
+        Filter for 2FA enabled property  # noqa: E501
+
+        :return: The _2_fa of this UserFilter.  # noqa: E501
+        :rtype: str
+        """
+        return self.__2_fa
+
+    @_2_fa.setter
+    def _2_fa(self, _2_fa):
+        """Sets the _2_fa of this UserFilter.
+
+        Filter for 2FA enabled property  # noqa: E501
+
+        :param _2_fa: The _2_fa of this UserFilter.  # noqa: E501
+        :type: str
+        """
+
+        self.__2_fa = _2_fa
 
     @property
     def role_assignment(self):

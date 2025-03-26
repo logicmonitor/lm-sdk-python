@@ -30,28 +30,32 @@ class Widget(object):
     swagger_types = {
         'last_updated_by': 'str',
         'user_permission': 'str',
-        'dashboard_id': 'int',
-        'name': 'str',
+        'support_custom_property': 'bool',
         'description': 'str',
+        'type': 'str',
+        'dashboard_id': 'int',
+        'is_support_custom_property': 'bool',
+        'name': 'str',
         'last_updated_on': 'int',
         'theme': 'str',
         'interval': 'int',
         'id': 'int',
-        'type': 'str',
         'timescale': 'str'
     }
 
     attribute_map = {
         'last_updated_by': 'lastUpdatedBy',
         'user_permission': 'userPermission',
-        'dashboard_id': 'dashboardId',
-        'name': 'name',
+        'support_custom_property': 'supportCustomProperty',
         'description': 'description',
+        'type': 'type',
+        'dashboard_id': 'dashboardId',
+        'is_support_custom_property': 'isSupportCustomProperty',
+        'name': 'name',
         'last_updated_on': 'lastUpdatedOn',
         'theme': 'theme',
         'interval': 'interval',
         'id': 'id',
-        'type': 'type',
         'timescale': 'timescale'
     }
 
@@ -76,40 +80,50 @@ class Widget(object):
 'groupnetflow': 'NetflowGroupWidget',
 'devicesla': 'DeviceSLAWidget',
 'ngraph': 'NormalGraphWidget',
+'CloudRecommendation': 'CloudRecommendation',
 'ServiceAlert': 'ServiceAlert',
+'BillingWidget': 'BillingWidget',
 'text': 'TextWidget',
 'websiteoverview': 'WebsiteOverviewWidget',
 'table': 'TableWidget',
 'gauge': 'GaugeWidget',
 'netflowgraph': 'NetflowGraphWidget',
+'LMQLWidget': 'LMQLWidget',
 'alert': 'AlertWidget',
 'gmap': 'GoogleMapWidget',
 'flash': 'FlashWidget',
 'bignumber': 'BigNumberWidget',
 'html': 'HtmlWidget'    }
 
-    def __init__(self, last_updated_by=None, user_permission=None, dashboard_id=None, name=None, description=None, last_updated_on=None, theme=None, interval=None, id=None, type=None, timescale=None):  # noqa: E501
+    def __init__(self, last_updated_by=None, user_permission=None, support_custom_property=None, description=None, type=None, dashboard_id=None, is_support_custom_property=None, name=None, last_updated_on=None, theme=None, interval=None, id=None, timescale=None):  # noqa: E501
         """Widget - a model defined in Swagger"""  # noqa: E501
         self._last_updated_by = None
         self._user_permission = None
-        self._dashboard_id = None
-        self._name = None
+        self._support_custom_property = None
         self._description = None
+        self._type = None
+        self._dashboard_id = None
+        self._is_support_custom_property = None
+        self._name = None
         self._last_updated_on = None
         self._theme = None
         self._interval = None
         self._id = None
-        self._type = None
         self._timescale = None
         self.discriminator = 'type'
         if last_updated_by is not None:
             self.last_updated_by = last_updated_by
         if user_permission is not None:
             self.user_permission = user_permission
-        self.dashboard_id = dashboard_id
-        self.name = name
+        if support_custom_property is not None:
+            self.support_custom_property = support_custom_property
         if description is not None:
             self.description = description
+        self.type = type
+        self.dashboard_id = dashboard_id
+        if is_support_custom_property is not None:
+            self.is_support_custom_property = is_support_custom_property
+        self.name = name
         if last_updated_on is not None:
             self.last_updated_on = last_updated_on
         if theme is not None:
@@ -118,7 +132,6 @@ class Widget(object):
             self.interval = interval
         if id is not None:
             self.id = id
-        self.type = type
         if timescale is not None:
             self.timescale = timescale
 
@@ -169,6 +182,75 @@ class Widget(object):
         self._user_permission = user_permission
 
     @property
+    def support_custom_property(self):
+        """Gets the support_custom_property of this Widget.  # noqa: E501
+
+
+        :return: The support_custom_property of this Widget.  # noqa: E501
+        :rtype: bool
+        """
+        return self._support_custom_property
+
+    @support_custom_property.setter
+    def support_custom_property(self, support_custom_property):
+        """Sets the support_custom_property of this Widget.
+
+
+        :param support_custom_property: The support_custom_property of this Widget.  # noqa: E501
+        :type: bool
+        """
+
+        self._support_custom_property = support_custom_property
+
+    @property
+    def description(self):
+        """Gets the description of this Widget.  # noqa: E501
+
+        The description of the widget  # noqa: E501
+
+        :return: The description of this Widget.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this Widget.
+
+        The description of the widget  # noqa: E501
+
+        :param description: The description of this Widget.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
+
+    @property
+    def type(self):
+        """Gets the type of this Widget.  # noqa: E501
+
+        alert | batchjob | flash | gmap | ngraph | ograph | cgraph | sgraph | netflowgraph | groupNetflowGraph | netflow | groupNetflow | html | bigNumber | gauge | pieChart | table | dynamicTable | deviceSLA | text | statsd | deviceStatus | serviceAlert | noc | websiteOverview | websiteOverallStatus | websiteIndividualStatus | websiteSLA | savedMap  # noqa: E501
+
+        :return: The type of this Widget.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this Widget.
+
+        alert | batchjob | flash | gmap | ngraph | ograph | cgraph | sgraph | netflowgraph | groupNetflowGraph | netflow | groupNetflow | html | bigNumber | gauge | pieChart | table | dynamicTable | deviceSLA | text | statsd | deviceStatus | serviceAlert | noc | websiteOverview | websiteOverallStatus | websiteIndividualStatus | websiteSLA | savedMap  # noqa: E501
+
+        :param type: The type of this Widget.  # noqa: E501
+        :type: str
+        """
+        if type is None:
+            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+
+        self._type = type
+
+    @property
     def dashboard_id(self):
         """Gets the dashboard_id of this Widget.  # noqa: E501
 
@@ -194,6 +276,29 @@ class Widget(object):
         self._dashboard_id = dashboard_id
 
     @property
+    def is_support_custom_property(self):
+        """Gets the is_support_custom_property of this Widget.  # noqa: E501
+
+        Custom property support in table widget or not  # noqa: E501
+
+        :return: The is_support_custom_property of this Widget.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_support_custom_property
+
+    @is_support_custom_property.setter
+    def is_support_custom_property(self, is_support_custom_property):
+        """Sets the is_support_custom_property of this Widget.
+
+        Custom property support in table widget or not  # noqa: E501
+
+        :param is_support_custom_property: The is_support_custom_property of this Widget.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_support_custom_property = is_support_custom_property
+
+    @property
     def name(self):
         """Gets the name of this Widget.  # noqa: E501
 
@@ -217,29 +322,6 @@ class Widget(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
-
-    @property
-    def description(self):
-        """Gets the description of this Widget.  # noqa: E501
-
-        The description of the widget  # noqa: E501
-
-        :return: The description of this Widget.  # noqa: E501
-        :rtype: str
-        """
-        return self._description
-
-    @description.setter
-    def description(self, description):
-        """Sets the description of this Widget.
-
-        The description of the widget  # noqa: E501
-
-        :param description: The description of this Widget.  # noqa: E501
-        :type: str
-        """
-
-        self._description = description
 
     @property
     def last_updated_on(self):
@@ -332,31 +414,6 @@ class Widget(object):
         """
 
         self._id = id
-
-    @property
-    def type(self):
-        """Gets the type of this Widget.  # noqa: E501
-
-        alert | batchjob | flash | gmap | ngraph | ograph | cgraph | sgraph | netflowgraph | groupNetflowGraph | netflow | groupNetflow | html | bigNumber | gauge | pieChart | table | dynamicTable | deviceSLA | text | statsd | deviceStatus | serviceAlert | noc | websiteOverview | websiteOverallStatus | websiteIndividualStatus | websiteSLA | savedMap  # noqa: E501
-
-        :return: The type of this Widget.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this Widget.
-
-        alert | batchjob | flash | gmap | ngraph | ograph | cgraph | sgraph | netflowgraph | groupNetflowGraph | netflow | groupNetflow | html | bigNumber | gauge | pieChart | table | dynamicTable | deviceSLA | text | statsd | deviceStatus | serviceAlert | noc | websiteOverview | websiteOverallStatus | websiteIndividualStatus | websiteSLA | savedMap  # noqa: E501
-
-        :param type: The type of this Widget.  # noqa: E501
-        :type: str
-        """
-        if type is None:
-            raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
-
-        self._type = type
 
     @property
     def timescale(self):

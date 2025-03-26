@@ -63,12 +63,15 @@ class Alert(object):
         'alert_group_entity_value': 'str',
         'instance_id': 'int',
         'suppress_desc': 'str',
+        'log_partition': 'str',
         'next_recipient': 'int',
+        'clear_expr': 'str',
         'ad_alert': 'bool',
         'acked_by': 'str',
         'severity': 'int',
         'acked_epoch': 'int',
         'chain': 'str',
+        'alert_query': 'str',
         'sub_chain_id': 'int',
         'log_meta_data': 'str',
         'monitor_object_type': 'str',
@@ -116,12 +119,15 @@ class Alert(object):
         'alert_group_entity_value': 'alertGroupEntityValue',
         'instance_id': 'instanceId',
         'suppress_desc': 'suppressDesc',
+        'log_partition': 'logPartition',
         'next_recipient': 'nextRecipient',
+        'clear_expr': 'clearExpr',
         'ad_alert': 'adAlert',
         'acked_by': 'ackedBy',
         'severity': 'severity',
         'acked_epoch': 'ackedEpoch',
         'chain': 'chain',
+        'alert_query': 'alertQuery',
         'sub_chain_id': 'subChainId',
         'log_meta_data': 'logMetaData',
         'monitor_object_type': 'monitorObjectType',
@@ -133,7 +139,7 @@ class Alert(object):
         'dependency_role': 'dependencyRole'
     }
 
-    def __init__(self, resource_id=None, end_epoch=None, threshold=None, type=None, start_epoch=None, enable_anomaly_alert_generation=None, internal_id=None, monitor_object_name=None, data_point_name=None, data_point_id=None, suppressor=None, id=None, detail_message=None, rule_id=None, alert_external_ticket_url=None, tenant=None, alert_value=None, sdted=None, sdt=None, enable_anomaly_alert_suppression=None, received_list=None, monitor_object_groups=None, chain_id=None, resource_template_id=None, cleared=None, ad_alert_desc=None, resource_template_name=None, anomaly=None, instance_name=None, monitor_object_id=None, rule=None, ack_comment=None, alert_group_entity_value=None, instance_id=None, suppress_desc=None, next_recipient=None, ad_alert=None, acked_by=None, severity=None, acked_epoch=None, chain=None, sub_chain_id=None, log_meta_data=None, monitor_object_type=None, acked=None, resource_template_type=None, clear_value=None, instance_description=None, dependency_routing_state=None, dependency_role=None):  # noqa: E501
+    def __init__(self, resource_id=None, end_epoch=None, threshold=None, type=None, start_epoch=None, enable_anomaly_alert_generation=None, internal_id=None, monitor_object_name=None, data_point_name=None, data_point_id=None, suppressor=None, id=None, detail_message=None, rule_id=None, alert_external_ticket_url=None, tenant=None, alert_value=None, sdted=None, sdt=None, enable_anomaly_alert_suppression=None, received_list=None, monitor_object_groups=None, chain_id=None, resource_template_id=None, cleared=None, ad_alert_desc=None, resource_template_name=None, anomaly=None, instance_name=None, monitor_object_id=None, rule=None, ack_comment=None, alert_group_entity_value=None, instance_id=None, suppress_desc=None, log_partition=None, next_recipient=None, clear_expr=None, ad_alert=None, acked_by=None, severity=None, acked_epoch=None, chain=None, alert_query=None, sub_chain_id=None, log_meta_data=None, monitor_object_type=None, acked=None, resource_template_type=None, clear_value=None, instance_description=None, dependency_routing_state=None, dependency_role=None):  # noqa: E501
         """Alert - a model defined in Swagger"""  # noqa: E501
         self._resource_id = None
         self._end_epoch = None
@@ -170,12 +176,15 @@ class Alert(object):
         self._alert_group_entity_value = None
         self._instance_id = None
         self._suppress_desc = None
+        self._log_partition = None
         self._next_recipient = None
+        self._clear_expr = None
         self._ad_alert = None
         self._acked_by = None
         self._severity = None
         self._acked_epoch = None
         self._chain = None
+        self._alert_query = None
         self._sub_chain_id = None
         self._log_meta_data = None
         self._monitor_object_type = None
@@ -256,8 +265,12 @@ class Alert(object):
             self.instance_id = instance_id
         if suppress_desc is not None:
             self.suppress_desc = suppress_desc
+        if log_partition is not None:
+            self.log_partition = log_partition
         if next_recipient is not None:
             self.next_recipient = next_recipient
+        if clear_expr is not None:
+            self.clear_expr = clear_expr
         if ad_alert is not None:
             self.ad_alert = ad_alert
         if acked_by is not None:
@@ -268,6 +281,8 @@ class Alert(object):
             self.acked_epoch = acked_epoch
         if chain is not None:
             self.chain = chain
+        if alert_query is not None:
+            self.alert_query = alert_query
         if sub_chain_id is not None:
             self.sub_chain_id = sub_chain_id
         if log_meta_data is not None:
@@ -1091,6 +1106,29 @@ class Alert(object):
         self._suppress_desc = suppress_desc
 
     @property
+    def log_partition(self):
+        """Gets the log_partition of this Alert.  # noqa: E501
+
+        Specified log alert partition information  # noqa: E501
+
+        :return: The log_partition of this Alert.  # noqa: E501
+        :rtype: str
+        """
+        return self._log_partition
+
+    @log_partition.setter
+    def log_partition(self, log_partition):
+        """Sets the log_partition of this Alert.
+
+        Specified log alert partition information  # noqa: E501
+
+        :param log_partition: The log_partition of this Alert.  # noqa: E501
+        :type: str
+        """
+
+        self._log_partition = log_partition
+
+    @property
     def next_recipient(self):
         """Gets the next_recipient of this Alert.  # noqa: E501
 
@@ -1112,6 +1150,29 @@ class Alert(object):
         """
 
         self._next_recipient = next_recipient
+
+    @property
+    def clear_expr(self):
+        """Gets the clear_expr of this Alert.  # noqa: E501
+
+        Specified log alert clear expression information  # noqa: E501
+
+        :return: The clear_expr of this Alert.  # noqa: E501
+        :rtype: str
+        """
+        return self._clear_expr
+
+    @clear_expr.setter
+    def clear_expr(self, clear_expr):
+        """Sets the clear_expr of this Alert.
+
+        Specified log alert clear expression information  # noqa: E501
+
+        :param clear_expr: The clear_expr of this Alert.  # noqa: E501
+        :type: str
+        """
+
+        self._clear_expr = clear_expr
 
     @property
     def ad_alert(self):
@@ -1227,6 +1288,29 @@ class Alert(object):
         """
 
         self._chain = chain
+
+    @property
+    def alert_query(self):
+        """Gets the alert_query of this Alert.  # noqa: E501
+
+        Specified alert query information  # noqa: E501
+
+        :return: The alert_query of this Alert.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_query
+
+    @alert_query.setter
+    def alert_query(self, alert_query):
+        """Sets the alert_query of this Alert.
+
+        Specified alert query information  # noqa: E501
+
+        :param alert_query: The alert_query of this Alert.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_query = alert_query
 
     @property
     def sub_chain_id(self):

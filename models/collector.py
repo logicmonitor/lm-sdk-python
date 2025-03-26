@@ -48,6 +48,7 @@ class Collector(object):
         'updated_on': 'int',
         'automatic_upgrade_info': 'AutomaticUpgradeInfo',
         'number_of_hosts': 'int',
+        'collector_list': 'str',
         'collector_conf': 'str',
         'sbproxy_conf': 'str',
         'agent_conf_fields': 'dict(str, str)',
@@ -61,6 +62,7 @@ class Collector(object):
         'is_lmlogs_syslog_enabled': 'bool',
         'status': 'int',
         'backup_agent_id': 'int',
+        'is_admin_account': 'bool',
         'specified_collector_device_group_id': 'int',
         'escalating_chain_id': 'int',
         'collector_size': 'str',
@@ -92,6 +94,7 @@ class Collector(object):
         'onetime_downgrade_info': 'OnetimeUpgradeInfo',
         'website_conf': 'str',
         'copy_url': 'str',
+        'error_msg': 'str',
         'up_time': 'int',
         'otel_version': 'str',
         'bearer_token': 'str',
@@ -128,6 +131,7 @@ class Collector(object):
         'updated_on': 'updatedOn',
         'automatic_upgrade_info': 'automaticUpgradeInfo',
         'number_of_hosts': 'numberOfHosts',
+        'collector_list': 'collectorList',
         'collector_conf': 'collectorConf',
         'sbproxy_conf': 'sbproxyConf',
         'agent_conf_fields': 'agentConfFields',
@@ -141,6 +145,7 @@ class Collector(object):
         'is_lmlogs_syslog_enabled': 'isLmlogsSyslogEnabled',
         'status': 'status',
         'backup_agent_id': 'backupAgentId',
+        'is_admin_account': 'isAdminAccount',
         'specified_collector_device_group_id': 'specifiedCollectorDeviceGroupId',
         'escalating_chain_id': 'escalatingChainId',
         'collector_size': 'collectorSize',
@@ -172,6 +177,7 @@ class Collector(object):
         'onetime_downgrade_info': 'onetimeDowngradeInfo',
         'website_conf': 'websiteConf',
         'copy_url': 'copyUrl',
+        'error_msg': 'errorMsg',
         'up_time': 'upTime',
         'otel_version': 'otelVersion',
         'bearer_token': 'bearerToken',
@@ -187,7 +193,7 @@ class Collector(object):
         'config': 'config'
     }
 
-    def __init__(self, user_change_on=None, conf_version=None, download_url=None, updated_on_local=None, collector_type=None, encoded_config_data=None, hostname=None, number_of_instances=None, id=None, ea=None, watchdog_updated_on_local=None, has_fail_over_device=None, collector_group_name=None, netscan_version=None, in_sdt=None, is_encoded=None, format=None, updated_on=None, automatic_upgrade_info=None, number_of_hosts=None, collector_conf=None, sbproxy_conf=None, agent_conf_fields=None, user_visible_websites_num=None, last_sent_notification_on_local=None, custom_properties=None, predefined_config=None, onetime_upgrade_info=None, wrapper_conf=None, clear_sent=None, is_lmlogs_syslog_enabled=None, status=None, backup_agent_id=None, specified_collector_device_group_id=None, escalating_chain_id=None, collector_size=None, acked_on_local=None, watchdog_conf=None, description=None, created_on=None, platform=None, is_down=None, user_visible_hosts_num=None, can_downgrade=None, ack_comment=None, next_upgrade_info=None, enable_lm_logs=None, suppress_alert_clear=None, next_recipient=None, acked_on=None, user_change_on_local=None, number_of_websites=None, collector_device_id=None, acked_by=None, user_permission=None, need_auto_create_collector_device=None, watchdog_updated_on=None, can_downgrade_reason=None, last_sent_notification_on=None, synthetics_enabled=None, acked=None, onetime_downgrade_info=None, website_conf=None, copy_url=None, up_time=None, otel_version=None, bearer_token=None, build=None, previous_version=None, collector_group_id=None, created_on_local=None, enable_fail_back=None, resend_ival=None, arch=None, otel_id=None, enable_fail_over_on_collector_device=None, config=None):  # noqa: E501
+    def __init__(self, user_change_on=None, conf_version=None, download_url=None, updated_on_local=None, collector_type=None, encoded_config_data=None, hostname=None, number_of_instances=None, id=None, ea=None, watchdog_updated_on_local=None, has_fail_over_device=None, collector_group_name=None, netscan_version=None, in_sdt=None, is_encoded=None, format=None, updated_on=None, automatic_upgrade_info=None, number_of_hosts=None, collector_list=None, collector_conf=None, sbproxy_conf=None, agent_conf_fields=None, user_visible_websites_num=None, last_sent_notification_on_local=None, custom_properties=None, predefined_config=None, onetime_upgrade_info=None, wrapper_conf=None, clear_sent=None, is_lmlogs_syslog_enabled=None, status=None, backup_agent_id=None, is_admin_account=None, specified_collector_device_group_id=None, escalating_chain_id=None, collector_size=None, acked_on_local=None, watchdog_conf=None, description=None, created_on=None, platform=None, is_down=None, user_visible_hosts_num=None, can_downgrade=None, ack_comment=None, next_upgrade_info=None, enable_lm_logs=None, suppress_alert_clear=None, next_recipient=None, acked_on=None, user_change_on_local=None, number_of_websites=None, collector_device_id=None, acked_by=None, user_permission=None, need_auto_create_collector_device=None, watchdog_updated_on=None, can_downgrade_reason=None, last_sent_notification_on=None, synthetics_enabled=None, acked=None, onetime_downgrade_info=None, website_conf=None, copy_url=None, error_msg=None, up_time=None, otel_version=None, bearer_token=None, build=None, previous_version=None, collector_group_id=None, created_on_local=None, enable_fail_back=None, resend_ival=None, arch=None, otel_id=None, enable_fail_over_on_collector_device=None, config=None):  # noqa: E501
         """Collector - a model defined in Swagger"""  # noqa: E501
         self._user_change_on = None
         self._conf_version = None
@@ -209,6 +215,7 @@ class Collector(object):
         self._updated_on = None
         self._automatic_upgrade_info = None
         self._number_of_hosts = None
+        self._collector_list = None
         self._collector_conf = None
         self._sbproxy_conf = None
         self._agent_conf_fields = None
@@ -222,6 +229,7 @@ class Collector(object):
         self._is_lmlogs_syslog_enabled = None
         self._status = None
         self._backup_agent_id = None
+        self._is_admin_account = None
         self._specified_collector_device_group_id = None
         self._escalating_chain_id = None
         self._collector_size = None
@@ -253,6 +261,7 @@ class Collector(object):
         self._onetime_downgrade_info = None
         self._website_conf = None
         self._copy_url = None
+        self._error_msg = None
         self._up_time = None
         self._otel_version = None
         self._bearer_token = None
@@ -307,6 +316,8 @@ class Collector(object):
             self.automatic_upgrade_info = automatic_upgrade_info
         if number_of_hosts is not None:
             self.number_of_hosts = number_of_hosts
+        if collector_list is not None:
+            self.collector_list = collector_list
         if collector_conf is not None:
             self.collector_conf = collector_conf
         if sbproxy_conf is not None:
@@ -333,6 +344,8 @@ class Collector(object):
             self.status = status
         if backup_agent_id is not None:
             self.backup_agent_id = backup_agent_id
+        if is_admin_account is not None:
+            self.is_admin_account = is_admin_account
         if specified_collector_device_group_id is not None:
             self.specified_collector_device_group_id = specified_collector_device_group_id
         if escalating_chain_id is not None:
@@ -395,6 +408,8 @@ class Collector(object):
             self.website_conf = website_conf
         if copy_url is not None:
             self.copy_url = copy_url
+        if error_msg is not None:
+            self.error_msg = error_msg
         if up_time is not None:
             self.up_time = up_time
         if otel_version is not None:
@@ -877,6 +892,27 @@ class Collector(object):
         self._number_of_hosts = number_of_hosts
 
     @property
+    def collector_list(self):
+        """Gets the collector_list of this Collector.  # noqa: E501
+
+
+        :return: The collector_list of this Collector.  # noqa: E501
+        :rtype: str
+        """
+        return self._collector_list
+
+    @collector_list.setter
+    def collector_list(self, collector_list):
+        """Sets the collector_list of this Collector.
+
+
+        :param collector_list: The collector_list of this Collector.  # noqa: E501
+        :type: str
+        """
+
+        self._collector_list = collector_list
+
+    @property
     def collector_conf(self):
         """Gets the collector_conf of this Collector.  # noqa: E501
 
@@ -1172,6 +1208,29 @@ class Collector(object):
         """
 
         self._backup_agent_id = backup_agent_id
+
+    @property
+    def is_admin_account(self):
+        """Gets the is_admin_account of this Collector.  # noqa: E501
+
+        Whether Collector is using an administrative account  # noqa: E501
+
+        :return: The is_admin_account of this Collector.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_admin_account
+
+    @is_admin_account.setter
+    def is_admin_account(self, is_admin_account):
+        """Sets the is_admin_account of this Collector.
+
+        Whether Collector is using an administrative account  # noqa: E501
+
+        :param is_admin_account: The is_admin_account of this Collector.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_admin_account = is_admin_account
 
     @property
     def specified_collector_device_group_id(self):
@@ -1881,6 +1940,27 @@ class Collector(object):
         """
 
         self._copy_url = copy_url
+
+    @property
+    def error_msg(self):
+        """Gets the error_msg of this Collector.  # noqa: E501
+
+
+        :return: The error_msg of this Collector.  # noqa: E501
+        :rtype: str
+        """
+        return self._error_msg
+
+    @error_msg.setter
+    def error_msg(self, error_msg):
+        """Sets the error_msg of this Collector.
+
+
+        :param error_msg: The error_msg of this Collector.  # noqa: E501
+        :type: str
+        """
+
+        self._error_msg = error_msg
 
     @property
     def up_time(self):

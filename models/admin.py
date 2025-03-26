@@ -44,6 +44,7 @@ class Admin(object):
         'last_action': 'str',
         'training_email': 'str',
         'last_action_on': 'int',
+        'last_access_on': 'int',
         'id': 'int',
         'email': 'str',
         'contact_method': 'str',
@@ -80,6 +81,7 @@ class Admin(object):
         'last_action': 'lastAction',
         'training_email': 'trainingEmail',
         'last_action_on': 'lastActionOn',
+        'last_access_on': 'lastAccessOn',
         'id': 'id',
         'email': 'email',
         'contact_method': 'contactMethod',
@@ -99,7 +101,7 @@ class Admin(object):
         'status': 'status'
     }
 
-    def __init__(self, last_name=None, note=None, view_permission=None, timezone=None, roles=None, last_login_on=None, last_action_on_local=None, sms_email_format=None, apionly=None, last_auth_ip=None, api_tokens=None, admin_group_ids=None, password=None, last_action=None, training_email=None, last_action_on=None, id=None, email=None, contact_method=None, accept_eulaon=None, immediate_force_logout=None, user_permission=None, sms_email=None, two_fa_enabled=None, first_name=None, phone=None, created_by=None, force_password_change=None, tenant_id=None, accept_eula=None, user_type=None, username=None, status=None):  # noqa: E501
+    def __init__(self, last_name=None, note=None, view_permission=None, timezone=None, roles=None, last_login_on=None, last_action_on_local=None, sms_email_format=None, apionly=None, last_auth_ip=None, api_tokens=None, admin_group_ids=None, password=None, last_action=None, training_email=None, last_action_on=None, last_access_on=None, id=None, email=None, contact_method=None, accept_eulaon=None, immediate_force_logout=None, user_permission=None, sms_email=None, two_fa_enabled=None, first_name=None, phone=None, created_by=None, force_password_change=None, tenant_id=None, accept_eula=None, user_type=None, username=None, status=None):  # noqa: E501
         """Admin - a model defined in Swagger"""  # noqa: E501
         self._last_name = None
         self._note = None
@@ -117,6 +119,7 @@ class Admin(object):
         self._last_action = None
         self._training_email = None
         self._last_action_on = None
+        self._last_access_on = None
         self._id = None
         self._email = None
         self._contact_method = None
@@ -165,6 +168,8 @@ class Admin(object):
             self.training_email = training_email
         if last_action_on is not None:
             self.last_action_on = last_action_on
+        if last_access_on is not None:
+            self.last_access_on = last_access_on
         if id is not None:
             self.id = id
         self.email = email
@@ -569,6 +574,29 @@ class Admin(object):
         """
 
         self._last_action_on = last_action_on
+
+    @property
+    def last_access_on(self):
+        """Gets the last_access_on of this Admin.  # noqa: E501
+
+        The time that the user last accessed the portal  # noqa: E501
+
+        :return: The last_access_on of this Admin.  # noqa: E501
+        :rtype: int
+        """
+        return self._last_access_on
+
+    @last_access_on.setter
+    def last_access_on(self, last_access_on):
+        """Sets the last_access_on of this Admin.
+
+        The time that the user last accessed the portal  # noqa: E501
+
+        :param last_access_on: The last_access_on of this Admin.  # noqa: E501
+        :type: int
+        """
+
+        self._last_access_on = last_access_on
 
     @property
     def id(self):

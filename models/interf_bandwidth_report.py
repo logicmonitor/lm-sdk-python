@@ -30,10 +30,12 @@ class InterfBandwidthReport(ReportBase):
     """
     swagger_types = {
         'hosts_val_type': 'str',
+        'percentile': 'int',
         'date_range': 'str',
         'hosts_val': 'str',
         'is_base1024': 'bool',
         'top10_only': 'bool',
+        'data_format': 'str',
         'row_format': 'int',
         'metrics': 'list[Metric]'
     }
@@ -42,34 +44,42 @@ class InterfBandwidthReport(ReportBase):
 
     attribute_map = {
         'hosts_val_type': 'hostsValType',
+        'percentile': 'percentile',
         'date_range': 'dateRange',
         'hosts_val': 'hostsVal',
         'is_base1024': 'isBase1024',
         'top10_only': 'top10Only',
+        'data_format': 'dataFormat',
         'row_format': 'rowFormat',
         'metrics': 'metrics'
     }
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, hosts_val_type=None, date_range=None, hosts_val=None, is_base1024=None, top10_only=None, row_format=None, metrics=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, hosts_val_type=None, percentile=None, date_range=None, hosts_val=None, is_base1024=None, top10_only=None, data_format=None, row_format=None, metrics=None, *args, **kwargs):  # noqa: E501
         """InterfBandwidthReport - a model defined in Swagger"""  # noqa: E501
         self._hosts_val_type = None
+        self._percentile = None
         self._date_range = None
         self._hosts_val = None
         self._is_base1024 = None
         self._top10_only = None
+        self._data_format = None
         self._row_format = None
         self._metrics = None
         self.discriminator = None
         if hosts_val_type is not None:
             self.hosts_val_type = hosts_val_type
+        if percentile is not None:
+            self.percentile = percentile
         if date_range is not None:
             self.date_range = date_range
         if hosts_val is not None:
             self.hosts_val = hosts_val
         self.is_base1024 = is_base1024
         self.top10_only = top10_only
+        if data_format is not None:
+            self.data_format = data_format
         if row_format is not None:
             self.row_format = row_format
         self.metrics = metrics
@@ -97,6 +107,29 @@ class InterfBandwidthReport(ReportBase):
         """
 
         self._hosts_val_type = hosts_val_type
+
+    @property
+    def percentile(self):
+        """Gets the percentile of this InterfBandwidthReport.  # noqa: E501
+
+        95|90|85 Example 95: Calculates 95% of the dataset   # noqa: E501
+
+        :return: The percentile of this InterfBandwidthReport.  # noqa: E501
+        :rtype: int
+        """
+        return self._percentile
+
+    @percentile.setter
+    def percentile(self, percentile):
+        """Sets the percentile of this InterfBandwidthReport.
+
+        95|90|85 Example 95: Calculates 95% of the dataset   # noqa: E501
+
+        :param percentile: The percentile of this InterfBandwidthReport.  # noqa: E501
+        :type: int
+        """
+
+        self._percentile = percentile
 
     @property
     def date_range(self):
@@ -193,6 +226,29 @@ class InterfBandwidthReport(ReportBase):
             raise ValueError("Invalid value for `top10_only`, must not be `None`")  # noqa: E501
 
         self._top10_only = top10_only
+
+    @property
+    def data_format(self):
+        """Gets the data_format of this InterfBandwidthReport.  # noqa: E501
+
+        bps|Bps|Kbps|Mbps Converts the data in the given data format   # noqa: E501
+
+        :return: The data_format of this InterfBandwidthReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._data_format
+
+    @data_format.setter
+    def data_format(self, data_format):
+        """Sets the data_format of this InterfBandwidthReport.
+
+        bps|Bps|Kbps|Mbps Converts the data in the given data format   # noqa: E501
+
+        :param data_format: The data_format of this InterfBandwidthReport.  # noqa: E501
+        :type: str
+        """
+
+        self._data_format = data_format
 
     @property
     def row_format(self):

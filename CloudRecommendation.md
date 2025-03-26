@@ -1,9 +1,8 @@
-# AzureEABillingDiscoveryMethodV3
+# CloudRecommendation
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**azure_ea_billing_type** | **str** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

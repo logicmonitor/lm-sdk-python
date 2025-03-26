@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**patch** | **bool** | Specifies if this is a ea patch version | [optional] 
 **feature** | **bool** | Specifies if this is a feature version | [optional] 
 **stable** | **bool** | False for early release. True for general release | [optional] 
 **release_epoch** | **int** | Release Epoch for official releases | [optional] 

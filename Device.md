@@ -52,6 +52,7 @@ Name | Type | Description | Notes
 **preferred_collector_group_name** | **str** | The name of the Collector Group associated with the device&#x27;s preferred collector | [optional] 
 **auto_properties** | [**list[NameAndValue]**](NameAndValue.md) | Any auto properties assigned to the device | [optional] 
 **to_delete_time_in_ms** | **int** | The number of milliseconds until the device will be automatically deleted from your LogicMonitor account (a value of zero indicates that a future delete time/date has not been scheduled) | [optional] 
+**contains_multi_value** | **bool** | request contains multi value field | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

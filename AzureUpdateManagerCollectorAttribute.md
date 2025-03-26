@@ -1,4 +1,4 @@
-# AzureEABillingCollectorAttribute
+# AzureUpdateManagerCollectorAttribute
 
 ## Properties
 Name | Type | Description | Notes

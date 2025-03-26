@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import logicmonitor_sdk
-from logicmonitor_sdk.models.azure_ea_billing_discovery_method_v3 import AzureEABillingDiscoveryMethodV3  # noqa: E501
+from logicmonitor_sdk.models.batchjobs_importxml_body import BatchjobsImportxmlBody  # noqa: E501
 from logicmonitor_sdk.rest import ApiException
 
 
-class TestAzureEABillingDiscoveryMethodV3(unittest.TestCase):
-    """AzureEABillingDiscoveryMethodV3 unit test stubs"""
+class TestBatchjobsImportxmlBody(unittest.TestCase):
+    """BatchjobsImportxmlBody unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestAzureEABillingDiscoveryMethodV3(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testAzureEABillingDiscoveryMethodV3(self):
-        """Test AzureEABillingDiscoveryMethodV3"""
+    def testBatchjobsImportxmlBody(self):
+        """Test BatchjobsImportxmlBody"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = logicmonitor_sdk.models.azure_ea_billing_discovery_method_v3.AzureEABillingDiscoveryMethodV3()  # noqa: E501
+        # model = logicmonitor_sdk.models.batchjobs_importxml_body.BatchjobsImportxmlBody()  # noqa: E501
         pass
 
 
