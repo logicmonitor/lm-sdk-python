@@ -208,7 +208,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
 
     @property
     def company(self):
-        self._company
+        return self._company
 
     @company.setter
     def company(self, value):
