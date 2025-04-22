@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **last_action** | **str** | The last action taken by the user | [optional] 
 **training_email** | **str** | The email address for user&#x27;s Training account | [optional] 
 **last_action_on** | **int** | The time, in epoch format, of the user&#x27;s last action | [optional] 
+**last_access_on** | **int** | The time that the user last accessed the portal | [optional] 
 **id** | **int** | The Id of the user | [optional] 
 **email** | **str** | The email address associated with the user | 
 **contact_method** | **str** | The values can be email | smsemail. Specifies the contact method for this admin | [optional] 

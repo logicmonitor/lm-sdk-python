@@ -76,6 +76,7 @@ class Widget(object):
 'groupnetflow': 'NetflowGroupWidget',
 'devicesla': 'DeviceSLAWidget',
 'ngraph': 'NormalGraphWidget',
+'CloudRecommendation': 'CloudRecommendation',
 'ServiceAlert': 'ServiceAlert',
 'text': 'TextWidget',
 'websiteoverview': 'WebsiteOverviewWidget',

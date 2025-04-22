@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **access_id** | **str** |  | [optional] 
+**is_billing_accept_opt_in_warnings** | **bool** |  | [optional] 
 **account_id** | **str** |  | [optional] 
 **new_billing_bucket** | **str** |  | [optional] 
 **assumed_role_arn** | **str** |  | [optional] 
