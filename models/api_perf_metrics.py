@@ -132,7 +132,7 @@ class ApiPerfMetrics(object):
     def total_rejected_get_api_count(self):
         """Gets the total_rejected_get_api_count of this ApiPerfMetrics.  # noqa: E501
 
-        api's summary defined in swagger.json  # noqa: E501
+        Total rejected get API count  # noqa: E501
 
         :return: The total_rejected_get_api_count of this ApiPerfMetrics.  # noqa: E501
         :rtype: int
@@ -143,7 +143,7 @@ class ApiPerfMetrics(object):
     def total_rejected_get_api_count(self, total_rejected_get_api_count):
         """Sets the total_rejected_get_api_count of this ApiPerfMetrics.
 
-        api's summary defined in swagger.json  # noqa: E501
+        Total rejected get API count  # noqa: E501
 
         :param total_rejected_get_api_count: The total_rejected_get_api_count of this ApiPerfMetrics.  # noqa: E501
         :type: int

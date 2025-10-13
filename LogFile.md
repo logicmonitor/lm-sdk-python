@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**path** | **str** | The path of the log file to monitor | [optional] 
+**path** | **str** | The path of the log file to monitor | 
 **origin_id** | **str** |  | [optional] 
 **excludes** | **list[str]** | The regex or plain text to look for in the file and not trigger alert if found | [optional] 
 **use_glob** | **bool** | Whether or not glob is used in the path | [optional] 

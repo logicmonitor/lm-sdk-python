@@ -28,6 +28,7 @@ class AlertResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'sdt_ids': 'str',
         'resource_id': 'int',
         'end_epoch': 'int',
         'threshold': 'str',
@@ -39,18 +40,20 @@ class AlertResponse(object):
         'data_point_name': 'str',
         'data_point_id': 'int',
         'suppressor': 'str',
+        'context': 'RestAlertQueryContext',
         'id': 'str',
         'rule_id': 'int',
         'alert_external_ticket_url': 'JSONObject',
         'tenant': 'str',
         'alert_value': 'str',
-        'sdted': 'bool',
-        'sdt': 'object',
+        'sdted': 'object',
+        'sdt': 'JSONObject',
         'enable_anomaly_alert_suppression': 'str',
         'received_list': 'str',
         'monitor_object_groups': 'object',
         'chain_id': 'int',
         'resource_template_id': 'int',
+        'last_updated_on_epoch': 'int',
         'cleared': 'bool',
         'ad_alert_desc': 'str',
         'resource_template_name': 'str',
@@ -74,6 +77,7 @@ class AlertResponse(object):
         'sub_chain_id': 'int',
         'log_meta_data': 'str',
         'monitor_object_type': 'str',
+        'session_id': 'int',
         'acked': 'bool',
         'resource_template_type': 'str',
         'clear_value': 'str',
@@ -83,6 +87,7 @@ class AlertResponse(object):
     }
 
     attribute_map = {
+        'sdt_ids': 'sdtIds',
         'resource_id': 'resourceId',
         'end_epoch': 'endEpoch',
         'threshold': 'threshold',
@@ -94,6 +99,7 @@ class AlertResponse(object):
         'data_point_name': 'dataPointName',
         'data_point_id': 'dataPointId',
         'suppressor': 'suppressor',
+        'context': 'context',
         'id': 'id',
         'rule_id': 'ruleId',
         'alert_external_ticket_url': 'alertExternalTicketUrl',
@@ -106,6 +112,7 @@ class AlertResponse(object):
         'monitor_object_groups': 'monitorObjectGroups',
         'chain_id': 'chainId',
         'resource_template_id': 'resourceTemplateId',
+        'last_updated_on_epoch': 'lastUpdatedOnEpoch',
         'cleared': 'cleared',
         'ad_alert_desc': 'adAlertDesc',
         'resource_template_name': 'resourceTemplateName',
@@ -129,6 +136,7 @@ class AlertResponse(object):
         'sub_chain_id': 'subChainId',
         'log_meta_data': 'logMetaData',
         'monitor_object_type': 'monitorObjectType',
+        'session_id': 'sessionId',
         'acked': 'acked',
         'resource_template_type': 'resourceTemplateType',
         'clear_value': 'clearValue',
@@ -137,8 +145,9 @@ class AlertResponse(object):
         'dependency_role': 'dependencyRole'
     }
 
-    def __init__(self, resource_id=None, end_epoch=None, threshold=None, type=None, start_epoch=None, enable_anomaly_alert_generation=None, internal_id=None, monitor_object_name=None, data_point_name=None, data_point_id=None, suppressor=None, id=None, rule_id=None, alert_external_ticket_url=None, tenant=None, alert_value=None, sdted=None, sdt=None, enable_anomaly_alert_suppression=None, received_list=None, monitor_object_groups=None, chain_id=None, resource_template_id=None, cleared=None, ad_alert_desc=None, resource_template_name=None, anomaly=None, instance_name=None, monitor_object_id=None, rule=None, ack_comment=None, alert_group_entity_value=None, instance_id=None, suppress_desc=None, log_partition=None, next_recipient=None, clear_expr=None, ad_alert=None, acked_by=None, severity=None, acked_epoch=None, chain=None, alert_query=None, sub_chain_id=None, log_meta_data=None, monitor_object_type=None, acked=None, resource_template_type=None, clear_value=None, instance_description=None, dependency_routing_state=None, dependency_role=None):  # noqa: E501
+    def __init__(self, sdt_ids=None, resource_id=None, end_epoch=None, threshold=None, type=None, start_epoch=None, enable_anomaly_alert_generation=None, internal_id=None, monitor_object_name=None, data_point_name=None, data_point_id=None, suppressor=None, context=None, id=None, rule_id=None, alert_external_ticket_url=None, tenant=None, alert_value=None, sdted=None, sdt=None, enable_anomaly_alert_suppression=None, received_list=None, monitor_object_groups=None, chain_id=None, resource_template_id=None, last_updated_on_epoch=None, cleared=None, ad_alert_desc=None, resource_template_name=None, anomaly=None, instance_name=None, monitor_object_id=None, rule=None, ack_comment=None, alert_group_entity_value=None, instance_id=None, suppress_desc=None, log_partition=None, next_recipient=None, clear_expr=None, ad_alert=None, acked_by=None, severity=None, acked_epoch=None, chain=None, alert_query=None, sub_chain_id=None, log_meta_data=None, monitor_object_type=None, session_id=None, acked=None, resource_template_type=None, clear_value=None, instance_description=None, dependency_routing_state=None, dependency_role=None):  # noqa: E501
         """AlertResponse - a model defined in Swagger"""  # noqa: E501
+        self._sdt_ids = None
         self._resource_id = None
         self._end_epoch = None
         self._threshold = None
@@ -150,6 +159,7 @@ class AlertResponse(object):
         self._data_point_name = None
         self._data_point_id = None
         self._suppressor = None
+        self._context = None
         self._id = None
         self._rule_id = None
         self._alert_external_ticket_url = None
@@ -162,6 +172,7 @@ class AlertResponse(object):
         self._monitor_object_groups = None
         self._chain_id = None
         self._resource_template_id = None
+        self._last_updated_on_epoch = None
         self._cleared = None
         self._ad_alert_desc = None
         self._resource_template_name = None
@@ -185,6 +196,7 @@ class AlertResponse(object):
         self._sub_chain_id = None
         self._log_meta_data = None
         self._monitor_object_type = None
+        self._session_id = None
         self._acked = None
         self._resource_template_type = None
         self._clear_value = None
@@ -192,6 +204,8 @@ class AlertResponse(object):
         self._dependency_routing_state = None
         self._dependency_role = None
         self.discriminator = None
+        if sdt_ids is not None:
+            self.sdt_ids = sdt_ids
         if resource_id is not None:
             self.resource_id = resource_id
         if end_epoch is not None:
@@ -214,6 +228,8 @@ class AlertResponse(object):
             self.data_point_id = data_point_id
         if suppressor is not None:
             self.suppressor = suppressor
+        if context is not None:
+            self.context = context
         if id is not None:
             self.id = id
         if rule_id is not None:
@@ -238,6 +254,8 @@ class AlertResponse(object):
             self.chain_id = chain_id
         if resource_template_id is not None:
             self.resource_template_id = resource_template_id
+        if last_updated_on_epoch is not None:
+            self.last_updated_on_epoch = last_updated_on_epoch
         if cleared is not None:
             self.cleared = cleared
         if ad_alert_desc is not None:
@@ -284,6 +302,8 @@ class AlertResponse(object):
             self.log_meta_data = log_meta_data
         if monitor_object_type is not None:
             self.monitor_object_type = monitor_object_type
+        if session_id is not None:
+            self.session_id = session_id
         if acked is not None:
             self.acked = acked
         if resource_template_type is not None:
@@ -296,6 +316,29 @@ class AlertResponse(object):
             self.dependency_routing_state = dependency_routing_state
         if dependency_role is not None:
             self.dependency_role = dependency_role
+
+    @property
+    def sdt_ids(self):
+        """Gets the sdt_ids of this AlertResponse.  # noqa: E501
+
+        The SDT Ids associated with the alert  # noqa: E501
+
+        :return: The sdt_ids of this AlertResponse.  # noqa: E501
+        :rtype: str
+        """
+        return self._sdt_ids
+
+    @sdt_ids.setter
+    def sdt_ids(self, sdt_ids):
+        """Sets the sdt_ids of this AlertResponse.
+
+        The SDT Ids associated with the alert  # noqa: E501
+
+        :param sdt_ids: The sdt_ids of this AlertResponse.  # noqa: E501
+        :type: str
+        """
+
+        self._sdt_ids = sdt_ids
 
     @property
     def resource_id(self):
@@ -551,6 +594,27 @@ class AlertResponse(object):
         self._suppressor = suppressor
 
     @property
+    def context(self):
+        """Gets the context of this AlertResponse.  # noqa: E501
+
+
+        :return: The context of this AlertResponse.  # noqa: E501
+        :rtype: RestAlertQueryContext
+        """
+        return self._context
+
+    @context.setter
+    def context(self, context):
+        """Sets the context of this AlertResponse.
+
+
+        :param context: The context of this AlertResponse.  # noqa: E501
+        :type: RestAlertQueryContext
+        """
+
+        self._context = context
+
+    @property
     def id(self):
         """Gets the id of this AlertResponse.  # noqa: E501
 
@@ -670,7 +734,7 @@ class AlertResponse(object):
         It specifies if the SDT is set for an active alert or not. However, the sdted is set to false for cleared alert as you cannot apply SDT to a cleared alert.  # noqa: E501
 
         :return: The sdted of this AlertResponse.  # noqa: E501
-        :rtype: bool
+        :rtype: object
         """
         return self._sdted
 
@@ -681,7 +745,7 @@ class AlertResponse(object):
         It specifies if the SDT is set for an active alert or not. However, the sdted is set to false for cleared alert as you cannot apply SDT to a cleared alert.  # noqa: E501
 
         :param sdted: The sdted of this AlertResponse.  # noqa: E501
-        :type: bool
+        :type: object
         """
 
         self._sdted = sdted
@@ -690,10 +754,9 @@ class AlertResponse(object):
     def sdt(self):
         """Gets the sdt of this AlertResponse.  # noqa: E501
 
-        The active SDT, if one exists  # noqa: E501
 
         :return: The sdt of this AlertResponse.  # noqa: E501
-        :rtype: object
+        :rtype: JSONObject
         """
         return self._sdt
 
@@ -701,10 +764,9 @@ class AlertResponse(object):
     def sdt(self, sdt):
         """Sets the sdt of this AlertResponse.
 
-        The active SDT, if one exists  # noqa: E501
 
         :param sdt: The sdt of this AlertResponse.  # noqa: E501
-        :type: object
+        :type: JSONObject
         """
 
         self._sdt = sdt
@@ -823,6 +885,29 @@ class AlertResponse(object):
         """
 
         self._resource_template_id = resource_template_id
+
+    @property
+    def last_updated_on_epoch(self):
+        """Gets the last_updated_on_epoch of this AlertResponse.  # noqa: E501
+
+        The time (in epoch format) that the alert was last updated. This field is used to track the most recent update to the alert, such as changes in its state, acknowledgment, or other properties  # noqa: E501
+
+        :return: The last_updated_on_epoch of this AlertResponse.  # noqa: E501
+        :rtype: int
+        """
+        return self._last_updated_on_epoch
+
+    @last_updated_on_epoch.setter
+    def last_updated_on_epoch(self, last_updated_on_epoch):
+        """Sets the last_updated_on_epoch of this AlertResponse.
+
+        The time (in epoch format) that the alert was last updated. This field is used to track the most recent update to the alert, such as changes in its state, acknowledgment, or other properties  # noqa: E501
+
+        :param last_updated_on_epoch: The last_updated_on_epoch of this AlertResponse.  # noqa: E501
+        :type: int
+        """
+
+        self._last_updated_on_epoch = last_updated_on_epoch
 
     @property
     def cleared(self):
@@ -1350,6 +1435,29 @@ class AlertResponse(object):
         """
 
         self._monitor_object_type = monitor_object_type
+
+    @property
+    def session_id(self):
+        """Gets the session_id of this AlertResponse.  # noqa: E501
+
+        The session id of alert  # noqa: E501
+
+        :return: The session_id of this AlertResponse.  # noqa: E501
+        :rtype: int
+        """
+        return self._session_id
+
+    @session_id.setter
+    def session_id(self, session_id):
+        """Sets the session_id of this AlertResponse.
+
+        The session id of alert  # noqa: E501
+
+        :param session_id: The session_id of this AlertResponse.  # noqa: E501
+        :type: int
+        """
+
+        self._session_id = session_id
 
     @property
     def acked(self):

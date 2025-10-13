@@ -28,7 +28,7 @@ class ConfigsourcesImportxmlBody(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'file': 'str'
+        'file': 'FormDataContentDisposition'
     }
 
     attribute_map = {
@@ -47,7 +47,7 @@ class ConfigsourcesImportxmlBody(object):
 
 
         :return: The file of this ConfigsourcesImportxmlBody.  # noqa: E501
-        :rtype: str
+        :rtype: FormDataContentDisposition
         """
         return self._file
 
@@ -57,7 +57,7 @@ class ConfigsourcesImportxmlBody(object):
 
 
         :param file: The file of this ConfigsourcesImportxmlBody.  # noqa: E501
-        :type: str
+        :type: FormDataContentDisposition
         """
         if file is None:
             raise ValueError("Invalid value for `file`, must not be `None`")  # noqa: E501

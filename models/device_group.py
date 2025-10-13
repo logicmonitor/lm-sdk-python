@@ -41,6 +41,7 @@ class DeviceGroup(object):
         'role_privileges': 'list[str]',
         'has_netflow_enabled_devices': 'bool',
         'num_of_azure_devices': 'int',
+        'oci_test_result': 'OciAccountTestResult',
         'property_change_warning_message': 'str',
         'default_collector_description': 'str',
         'default_collector_id': 'int',
@@ -56,6 +57,8 @@ class DeviceGroup(object):
         'default_collector_group_description': 'str',
         'user_permission': 'str',
         'gcp_regions_info': 'str',
+        'num_of_oci_devices': 'int',
+        'oci_regions_info': 'str',
         'saas_test_result_code': 'int',
         'default_collector_group_id': 'int',
         'group_status': 'str',
@@ -68,6 +71,7 @@ class DeviceGroup(object):
         'default_auto_balanced_collector_group_id': 'int',
         'saas_test_result': 'SaasAccountTestResult',
         'name': 'str',
+        'oci_test_result_code': 'int',
         'gcp_test_result': 'GcpAccountTestResult',
         'azure_regions_info': 'str'
     }
@@ -86,6 +90,7 @@ class DeviceGroup(object):
         'role_privileges': 'rolePrivileges',
         'has_netflow_enabled_devices': 'hasNetflowEnabledDevices',
         'num_of_azure_devices': 'numOfAzureDevices',
+        'oci_test_result': 'ociTestResult',
         'property_change_warning_message': 'propertyChangeWarningMessage',
         'default_collector_description': 'defaultCollectorDescription',
         'default_collector_id': 'defaultCollectorId',
@@ -101,6 +106,8 @@ class DeviceGroup(object):
         'default_collector_group_description': 'defaultCollectorGroupDescription',
         'user_permission': 'userPermission',
         'gcp_regions_info': 'gcpRegionsInfo',
+        'num_of_oci_devices': 'numOfOciDevices',
+        'oci_regions_info': 'ociRegionsInfo',
         'saas_test_result_code': 'saasTestResultCode',
         'default_collector_group_id': 'defaultCollectorGroupId',
         'group_status': 'groupStatus',
@@ -113,11 +120,12 @@ class DeviceGroup(object):
         'default_auto_balanced_collector_group_id': 'defaultAutoBalancedCollectorGroupId',
         'saas_test_result': 'saasTestResult',
         'name': 'name',
+        'oci_test_result_code': 'ociTestResultCode',
         'gcp_test_result': 'gcpTestResult',
         'azure_regions_info': 'azureRegionsInfo'
     }
 
-    def __init__(self, full_path=None, group_type=None, num_of_aws_devices=None, description=None, applies_to=None, gcp_test_result_code=None, disable_alerting=None, num_of_kubernetes_devices=None, aws_regions_info=None, created_on=None, role_privileges=None, has_netflow_enabled_devices=None, num_of_azure_devices=None, property_change_warning_message=None, default_collector_description=None, default_collector_id=None, aws_test_result=None, extra=None, num_of_direct_sub_groups=None, sub_groups=None, num_of_direct_devices=None, id=None, enable_netflow=None, azure_test_result_code=None, effective_alert_enabled=None, default_collector_group_description=None, user_permission=None, gcp_regions_info=None, saas_test_result_code=None, default_collector_group_id=None, group_status=None, num_of_gcp_devices=None, azure_test_result=None, parent_id=None, aws_test_result_code=None, custom_properties=None, num_of_hosts=None, default_auto_balanced_collector_group_id=None, saas_test_result=None, name=None, gcp_test_result=None, azure_regions_info=None):  # noqa: E501
+    def __init__(self, full_path=None, group_type=None, num_of_aws_devices=None, description=None, applies_to=None, gcp_test_result_code=None, disable_alerting=None, num_of_kubernetes_devices=None, aws_regions_info=None, created_on=None, role_privileges=None, has_netflow_enabled_devices=None, num_of_azure_devices=None, oci_test_result=None, property_change_warning_message=None, default_collector_description=None, default_collector_id=None, aws_test_result=None, extra=None, num_of_direct_sub_groups=None, sub_groups=None, num_of_direct_devices=None, id=None, enable_netflow=None, azure_test_result_code=None, effective_alert_enabled=None, default_collector_group_description=None, user_permission=None, gcp_regions_info=None, num_of_oci_devices=None, oci_regions_info=None, saas_test_result_code=None, default_collector_group_id=None, group_status=None, num_of_gcp_devices=None, azure_test_result=None, parent_id=None, aws_test_result_code=None, custom_properties=None, num_of_hosts=None, default_auto_balanced_collector_group_id=None, saas_test_result=None, name=None, oci_test_result_code=None, gcp_test_result=None, azure_regions_info=None):  # noqa: E501
         """DeviceGroup - a model defined in Swagger"""  # noqa: E501
         self._full_path = None
         self._group_type = None
@@ -132,6 +140,7 @@ class DeviceGroup(object):
         self._role_privileges = None
         self._has_netflow_enabled_devices = None
         self._num_of_azure_devices = None
+        self._oci_test_result = None
         self._property_change_warning_message = None
         self._default_collector_description = None
         self._default_collector_id = None
@@ -147,6 +156,8 @@ class DeviceGroup(object):
         self._default_collector_group_description = None
         self._user_permission = None
         self._gcp_regions_info = None
+        self._num_of_oci_devices = None
+        self._oci_regions_info = None
         self._saas_test_result_code = None
         self._default_collector_group_id = None
         self._group_status = None
@@ -159,6 +170,7 @@ class DeviceGroup(object):
         self._default_auto_balanced_collector_group_id = None
         self._saas_test_result = None
         self._name = None
+        self._oci_test_result_code = None
         self._gcp_test_result = None
         self._azure_regions_info = None
         self.discriminator = None
@@ -188,6 +200,8 @@ class DeviceGroup(object):
             self.has_netflow_enabled_devices = has_netflow_enabled_devices
         if num_of_azure_devices is not None:
             self.num_of_azure_devices = num_of_azure_devices
+        if oci_test_result is not None:
+            self.oci_test_result = oci_test_result
         if property_change_warning_message is not None:
             self.property_change_warning_message = property_change_warning_message
         if default_collector_description is not None:
@@ -218,6 +232,10 @@ class DeviceGroup(object):
             self.user_permission = user_permission
         if gcp_regions_info is not None:
             self.gcp_regions_info = gcp_regions_info
+        if num_of_oci_devices is not None:
+            self.num_of_oci_devices = num_of_oci_devices
+        if oci_regions_info is not None:
+            self.oci_regions_info = oci_regions_info
         if saas_test_result_code is not None:
             self.saas_test_result_code = saas_test_result_code
         if default_collector_group_id is not None:
@@ -241,6 +259,8 @@ class DeviceGroup(object):
         if saas_test_result is not None:
             self.saas_test_result = saas_test_result
         self.name = name
+        if oci_test_result_code is not None:
+            self.oci_test_result_code = oci_test_result_code
         if gcp_test_result is not None:
             self.gcp_test_result = gcp_test_result
         if azure_regions_info is not None:
@@ -544,6 +564,27 @@ class DeviceGroup(object):
         """
 
         self._num_of_azure_devices = num_of_azure_devices
+
+    @property
+    def oci_test_result(self):
+        """Gets the oci_test_result of this DeviceGroup.  # noqa: E501
+
+
+        :return: The oci_test_result of this DeviceGroup.  # noqa: E501
+        :rtype: OciAccountTestResult
+        """
+        return self._oci_test_result
+
+    @oci_test_result.setter
+    def oci_test_result(self, oci_test_result):
+        """Sets the oci_test_result of this DeviceGroup.
+
+
+        :param oci_test_result: The oci_test_result of this DeviceGroup.  # noqa: E501
+        :type: OciAccountTestResult
+        """
+
+        self._oci_test_result = oci_test_result
 
     @property
     def property_change_warning_message(self):
@@ -887,6 +928,48 @@ class DeviceGroup(object):
         self._gcp_regions_info = gcp_regions_info
 
     @property
+    def num_of_oci_devices(self):
+        """Gets the num_of_oci_devices of this DeviceGroup.  # noqa: E501
+
+
+        :return: The num_of_oci_devices of this DeviceGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._num_of_oci_devices
+
+    @num_of_oci_devices.setter
+    def num_of_oci_devices(self, num_of_oci_devices):
+        """Sets the num_of_oci_devices of this DeviceGroup.
+
+
+        :param num_of_oci_devices: The num_of_oci_devices of this DeviceGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._num_of_oci_devices = num_of_oci_devices
+
+    @property
+    def oci_regions_info(self):
+        """Gets the oci_regions_info of this DeviceGroup.  # noqa: E501
+
+
+        :return: The oci_regions_info of this DeviceGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._oci_regions_info
+
+    @oci_regions_info.setter
+    def oci_regions_info(self, oci_regions_info):
+        """Sets the oci_regions_info of this DeviceGroup.
+
+
+        :param oci_regions_info: The oci_regions_info of this DeviceGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._oci_regions_info = oci_regions_info
+
+    @property
     def saas_test_result_code(self):
         """Gets the saas_test_result_code of this DeviceGroup.  # noqa: E501
 
@@ -1157,6 +1240,29 @@ class DeviceGroup(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def oci_test_result_code(self):
+        """Gets the oci_test_result_code of this DeviceGroup.  # noqa: E501
+
+        The Status code result returned by the transaction that tests the OCI credentials associated with the OCI group  # noqa: E501
+
+        :return: The oci_test_result_code of this DeviceGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._oci_test_result_code
+
+    @oci_test_result_code.setter
+    def oci_test_result_code(self, oci_test_result_code):
+        """Sets the oci_test_result_code of this DeviceGroup.
+
+        The Status code result returned by the transaction that tests the OCI credentials associated with the OCI group  # noqa: E501
+
+        :param oci_test_result_code: The oci_test_result_code of this DeviceGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._oci_test_result_code = oci_test_result_code
 
     @property
     def gcp_test_result(self):

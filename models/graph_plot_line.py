@@ -32,7 +32,7 @@ class GraphPlotLine(object):
         'std': 'object',
         'visible': 'bool',
         'color': 'str',
-        'data': 'list[object]',
+        'data': 'list[float]',
         'max': 'object',
         'legend': 'str',
         'description': 'str',
@@ -206,7 +206,7 @@ class GraphPlotLine(object):
         The polled data used to plot the graph  # noqa: E501
 
         :return: The data of this GraphPlotLine.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[float]
         """
         return self._data
 
@@ -217,7 +217,7 @@ class GraphPlotLine(object):
         The polled data used to plot the graph  # noqa: E501
 
         :param data: The data of this GraphPlotLine.  # noqa: E501
-        :type: list[object]
+        :type: list[float]
         """
 
         self._data = data

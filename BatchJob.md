@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **cron_time_zone** | **str** | Cron timezone, effective if activeMonitoring true | 
 **alert_body** | **str** | Alert message body | 
 **start_mrtie** | **int** | Max Relative Time Interval Error, effective if activeMonitoring true | [optional] 
+**origin_registry_id** | **str** | The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module&#x27;s import base and mark the ID&#x27;s version as audited | [optional] 
 **checksum** | **str** | The metadata checksum for the LMModule content | [optional] 
 **name** | **str** | JobMonitor name | 
 **alert_subject** | **str** | Alert message subject | 

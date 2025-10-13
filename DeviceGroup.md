@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **role_privileges** | **list[str]** | The role privilege operations for the device group that are granted to the user that made this API request | [optional] 
 **has_netflow_enabled_devices** | **bool** | Whether if any Netflow enabled devices in this device group | [optional] 
 **num_of_azure_devices** | **int** | The number of Azure devices that belong to this device group (includes Azure devices in sub groups) | [optional] 
+**oci_test_result** | [**OciAccountTestResult**](OciAccountTestResult.md) |  | [optional] 
 **property_change_warning_message** | **str** | Warning message if Parent Property of system.tenant.identifier is changed for a group | [optional] 
 **default_collector_description** | **str** | The description of the default collector assigned to the device group | [optional] 
 **default_collector_id** | **int** | The Id of the default collector assigned to the device group | [optional] 
@@ -31,6 +32,8 @@ Name | Type | Description | Notes
 **default_collector_group_description** | **str** | The description of the default collector group assigned to the device group | [optional] 
 **user_permission** | **str** | The permissions for the device group that are granted to the user that made this API request | [optional] 
 **gcp_regions_info** | **str** |  | [optional] 
+**num_of_oci_devices** | **int** |  | [optional] 
+**oci_regions_info** | **str** |  | [optional] 
 **saas_test_result_code** | **int** | The Status code result returned by the transaction that tests the SaaS credentials associated with the SaaS group | [optional] 
 **default_collector_group_id** | **int** | The collector group id of the default collector assigned to the device group | [optional] 
 **group_status** | **str** | normal | dead  The status of this device group, where possible statuses are normal and dead. A group with a status of dead may indicate that one or more devices are dead within the group | [optional] 
@@ -43,6 +46,7 @@ Name | Type | Description | Notes
 **default_auto_balanced_collector_group_id** | **int** | The id of the default Auto Balanced Collector Group assigned to the device group | [optional] 
 **saas_test_result** | [**SaasAccountTestResult**](SaasAccountTestResult.md) |  | [optional] 
 **name** | **str** | The name of the device group | 
+**oci_test_result_code** | **int** | The Status code result returned by the transaction that tests the OCI credentials associated with the OCI group | [optional] 
 **gcp_test_result** | [**GcpAccountTestResult**](GcpAccountTestResult.md) |  | [optional] 
 **azure_regions_info** | **str** | The number of instances in each Azure region (only applies to Azure groups) | [optional] 
 

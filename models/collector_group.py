@@ -38,6 +38,7 @@ class CollectorGroup(object):
         'custom_properties': 'list[NameAndValue]',
         'num_of_hosts': 'int',
         'num_of_instances': 'int',
+        'cal_threshold': 'int',
         'name': 'str',
         'auto_balance_strategy': 'str',
         'create_on': 'int',
@@ -56,6 +57,7 @@ class CollectorGroup(object):
         'custom_properties': 'customProperties',
         'num_of_hosts': 'numOfHosts',
         'num_of_instances': 'numOfInstances',
+        'cal_threshold': 'calThreshold',
         'name': 'name',
         'auto_balance_strategy': 'autoBalanceStrategy',
         'create_on': 'createOn',
@@ -63,7 +65,7 @@ class CollectorGroup(object):
         'mismatch_version': 'mismatchVersion'
     }
 
-    def __init__(self, user_permission=None, num_of_collectors=None, auto_balance_instance_count_threshold=None, description=None, highest_priority_collector_status=None, platform=None, auto_balance=None, custom_properties=None, num_of_hosts=None, num_of_instances=None, name=None, auto_balance_strategy=None, create_on=None, id=None, mismatch_version=None):  # noqa: E501
+    def __init__(self, user_permission=None, num_of_collectors=None, auto_balance_instance_count_threshold=None, description=None, highest_priority_collector_status=None, platform=None, auto_balance=None, custom_properties=None, num_of_hosts=None, num_of_instances=None, cal_threshold=None, name=None, auto_balance_strategy=None, create_on=None, id=None, mismatch_version=None):  # noqa: E501
         """CollectorGroup - a model defined in Swagger"""  # noqa: E501
         self._user_permission = None
         self._num_of_collectors = None
@@ -75,6 +77,7 @@ class CollectorGroup(object):
         self._custom_properties = None
         self._num_of_hosts = None
         self._num_of_instances = None
+        self._cal_threshold = None
         self._name = None
         self._auto_balance_strategy = None
         self._create_on = None
@@ -101,6 +104,8 @@ class CollectorGroup(object):
             self.num_of_hosts = num_of_hosts
         if num_of_instances is not None:
             self.num_of_instances = num_of_instances
+        if cal_threshold is not None:
+            self.cal_threshold = cal_threshold
         self.name = name
         if auto_balance_strategy is not None:
             self.auto_balance_strategy = auto_balance_strategy
@@ -338,6 +343,29 @@ class CollectorGroup(object):
         """
 
         self._num_of_instances = num_of_instances
+
+    @property
+    def cal_threshold(self):
+        """Gets the cal_threshold of this CollectorGroup.  # noqa: E501
+
+        calculated threshold value for a ABCG collector to check if a collector has high load  # noqa: E501
+
+        :return: The cal_threshold of this CollectorGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._cal_threshold
+
+    @cal_threshold.setter
+    def cal_threshold(self, cal_threshold):
+        """Sets the cal_threshold of this CollectorGroup.
+
+        calculated threshold value for a ABCG collector to check if a collector has high load  # noqa: E501
+
+        :param cal_threshold: The cal_threshold of this CollectorGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._cal_threshold = cal_threshold
 
     @property
     def name(self):

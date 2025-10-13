@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **first_name** | **str** | The first name of the user | [optional] 
 **last_name** | **str** | The last name of the user | [optional] 
 **enable2fa** | **str** | Whether does the user enabled 2FA. Acceptable values are: all, yes, no | [optional] 
+**_2_fa_passkey** | **str** | Filter for 2FA Passkey enabled property | [optional] 
 **email_verification** | **str** | The email verification status for the user | [optional] 
 **_2_fa** | **str** | Filter for 2FA enabled property | [optional] 
 **role_assignment** | **str** | Which roles is the user belongs to | [optional] 

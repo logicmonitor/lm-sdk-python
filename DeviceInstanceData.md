@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **instance_id** | **str** |  | [optional] 
-**values** | **list[list[object]]** | Datapoint values 2-D list | [optional] 
+**values** | **list[list[float]]** | Datapoint values 2-D list | [optional] 
 **err_msg** | **str** |  | [optional] 
 **time** | **list[int]** | Timestamp list | [optional] 
 **next_page_params** | **str** | The next page parameters | [optional] 

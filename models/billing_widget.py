@@ -29,22 +29,27 @@ class BillingWidget(Widget):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'billing_info': 'BillingInfo'
+        'billing_info': 'BillingInfo',
+        'widget_config': 'str'
     }
     if hasattr(Widget, "swagger_types"):
         swagger_types.update(Widget.swagger_types)
 
     attribute_map = {
-        'billing_info': 'billingInfo'
+        'billing_info': 'billingInfo',
+        'widget_config': 'widgetConfig'
     }
     if hasattr(Widget, "attribute_map"):
         attribute_map.update(Widget.attribute_map)
 
-    def __init__(self, billing_info=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, billing_info=None, widget_config=None, *args, **kwargs):  # noqa: E501
         """BillingWidget - a model defined in Swagger"""  # noqa: E501
         self._billing_info = None
+        self._widget_config = None
         self.discriminator = None
         self.billing_info = billing_info
+        if widget_config is not None:
+            self.widget_config = widget_config
         Widget.__init__(self, *args, **kwargs)
 
     @property
@@ -69,6 +74,27 @@ class BillingWidget(Widget):
             raise ValueError("Invalid value for `billing_info`, must not be `None`")  # noqa: E501
 
         self._billing_info = billing_info
+
+    @property
+    def widget_config(self):
+        """Gets the widget_config of this BillingWidget.  # noqa: E501
+
+
+        :return: The widget_config of this BillingWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._widget_config
+
+    @widget_config.setter
+    def widget_config(self, widget_config):
+        """Sets the widget_config of this BillingWidget.
+
+
+        :param widget_config: The widget_config of this BillingWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._widget_config = widget_config
 
     def to_dict(self):
         """Returns the model properties as a dict"""

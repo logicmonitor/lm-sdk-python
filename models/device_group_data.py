@@ -33,6 +33,7 @@ class DeviceGroupData(object):
         'user_permission': 'str',
         'gcp_regions_info': 'str',
         'description': 'str',
+        'oci_regions_info': 'str',
         'applies_to': 'str',
         'role_privileges': 'list[str]',
         'aws_regions_info': 'str',
@@ -50,6 +51,7 @@ class DeviceGroupData(object):
         'user_permission': 'userPermission',
         'gcp_regions_info': 'gcpRegionsInfo',
         'description': 'description',
+        'oci_regions_info': 'ociRegionsInfo',
         'applies_to': 'appliesTo',
         'role_privileges': 'rolePrivileges',
         'aws_regions_info': 'awsRegionsInfo',
@@ -61,13 +63,14 @@ class DeviceGroupData(object):
         'azure_regions_info': 'azureRegionsInfo'
     }
 
-    def __init__(self, full_path=None, group_type=None, user_permission=None, gcp_regions_info=None, description=None, applies_to=None, role_privileges=None, aws_regions_info=None, num_of_hosts=None, name=None, num_of_direct_sub_groups=None, num_of_direct_devices=None, id=None, azure_regions_info=None):  # noqa: E501
+    def __init__(self, full_path=None, group_type=None, user_permission=None, gcp_regions_info=None, description=None, oci_regions_info=None, applies_to=None, role_privileges=None, aws_regions_info=None, num_of_hosts=None, name=None, num_of_direct_sub_groups=None, num_of_direct_devices=None, id=None, azure_regions_info=None):  # noqa: E501
         """DeviceGroupData - a model defined in Swagger"""  # noqa: E501
         self._full_path = None
         self._group_type = None
         self._user_permission = None
         self._gcp_regions_info = None
         self._description = None
+        self._oci_regions_info = None
         self._applies_to = None
         self._role_privileges = None
         self._aws_regions_info = None
@@ -88,6 +91,8 @@ class DeviceGroupData(object):
             self.gcp_regions_info = gcp_regions_info
         if description is not None:
             self.description = description
+        if oci_regions_info is not None:
+            self.oci_regions_info = oci_regions_info
         if applies_to is not None:
             self.applies_to = applies_to
         if role_privileges is not None:
@@ -219,6 +224,27 @@ class DeviceGroupData(object):
         """
 
         self._description = description
+
+    @property
+    def oci_regions_info(self):
+        """Gets the oci_regions_info of this DeviceGroupData.  # noqa: E501
+
+
+        :return: The oci_regions_info of this DeviceGroupData.  # noqa: E501
+        :rtype: str
+        """
+        return self._oci_regions_info
+
+    @oci_regions_info.setter
+    def oci_regions_info(self, oci_regions_info):
+        """Sets the oci_regions_info of this DeviceGroupData.
+
+
+        :param oci_regions_info: The oci_regions_info of this DeviceGroupData.  # noqa: E501
+        :type: str
+        """
+
+        self._oci_regions_info = oci_regions_info
 
     @property
     def applies_to(self):

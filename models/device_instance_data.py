@@ -29,7 +29,7 @@ class DeviceInstanceData(object):
     """
     swagger_types = {
         'instance_id': 'str',
-        'values': 'list[list[object]]',
+        'values': 'list[list[float]]',
         'err_msg': 'str',
         'time': 'list[int]',
         'next_page_params': 'str',
@@ -95,7 +95,7 @@ class DeviceInstanceData(object):
         Datapoint values 2-D list  # noqa: E501
 
         :return: The values of this DeviceInstanceData.  # noqa: E501
-        :rtype: list[list[object]]
+        :rtype: list[list[float]]
         """
         return self._values
 
@@ -106,7 +106,7 @@ class DeviceInstanceData(object):
         Datapoint values 2-D list  # noqa: E501
 
         :param values: The values of this DeviceInstanceData.  # noqa: E501
-        :type: list[list[object]]
+        :type: list[list[float]]
         """
 
         self._values = values

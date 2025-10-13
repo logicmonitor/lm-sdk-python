@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **last_auth_ip** | **str** | The Last User IP | [optional] 
 **api_tokens** | [**list[APIToken]**](APIToken.md) | Any API Tokens associated with the user | [optional] 
 **admin_group_ids** | **list[int]** | The Id(s) of the groups the admin is in, where multiple group ids are comma separated | [optional] 
-**password** | **str** | The password associated with the user | 
+**password** | **str** | The password associated with the user | [optional] 
 **last_action** | **str** | The last action taken by the user | [optional] 
 **training_email** | **str** | The email address for user&#x27;s Training account | [optional] 
 **last_action_on** | **int** | The time, in epoch format, of the user&#x27;s last action | [optional] 

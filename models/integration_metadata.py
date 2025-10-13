@@ -354,7 +354,7 @@ class IntegrationMetadata(object):
         :param logic_module_type: The logic_module_type of this IntegrationMetadata.  # noqa: E501
         :type: str
         """
-        allowed_values = ["DATASOURCE", "EVENTSOURCE", "JOBMONITOR", "APPLIESTO_FUNCTION", "SNMP_SYSOID_MAP", "PROPERTYSOURCE", "CONFIGSOURCE", "TOPOLOGYSOURCE", "LOGSOURCE"]  # noqa: E501
+        allowed_values = ["DATASOURCE", "EVENTSOURCE", "JOBMONITOR", "APPLIESTO_FUNCTION", "SNMP_SYSOID_MAP", "PROPERTYSOURCE", "CONFIGSOURCE", "TOPOLOGYSOURCE", "LOGSOURCE", "DIAGNOSTICSOURCE"]  # noqa: E501
         if logic_module_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `logic_module_type` ({0}), must be one of {1}"  # noqa: E501

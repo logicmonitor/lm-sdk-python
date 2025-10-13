@@ -31,7 +31,7 @@ class DeviceDeltaPaginationResponse(object):
         'total': 'int',
         'delta_id': 'str',
         'search_id': 'str',
-        'items': 'list[Device]'
+        'items': 'list[RestDeviceDeltaV3]'
     }
 
     attribute_map = {
@@ -126,7 +126,7 @@ class DeviceDeltaPaginationResponse(object):
 
 
         :return: The items of this DeviceDeltaPaginationResponse.  # noqa: E501
-        :rtype: list[Device]
+        :rtype: list[RestDeviceDeltaV3]
         """
         return self._items
 
@@ -136,7 +136,7 @@ class DeviceDeltaPaginationResponse(object):
 
 
         :param items: The items of this DeviceDeltaPaginationResponse.  # noqa: E501
-        :type: list[Device]
+        :type: list[RestDeviceDeltaV3]
         """
 
         self._items = items

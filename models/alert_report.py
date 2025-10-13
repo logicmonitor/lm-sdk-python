@@ -47,6 +47,8 @@ class AlertReport(ReportBase):
         'dependency_routing_state': 'str',
         'dependency_role': 'str',
         'data_source_instance_name': 'str',
+        'clear_filter': 'str',
+        'is_historical_sdt': 'str',
         'data_source': 'str',
         'group_full_path': 'str',
         'include_preexist': 'object'
@@ -73,6 +75,8 @@ class AlertReport(ReportBase):
         'dependency_routing_state': 'dependencyRoutingState',
         'dependency_role': 'dependencyRole',
         'data_source_instance_name': 'dataSourceInstanceName',
+        'clear_filter': 'clearFilter',
+        'is_historical_sdt': 'isHistoricalSDT',
         'data_source': 'dataSource',
         'group_full_path': 'groupFullPath',
         'include_preexist': 'includePreexist'
@@ -80,7 +84,7 @@ class AlertReport(ReportBase):
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, active_only=None, sorted_by=None, chain=None, anomaly=None, date_range=None, level=None, timing=None, columns=None, data_point=None, sdt_filter=None, rule=None, ack_filter=None, sorted_direction=None, device_display_name=None, summary_only=None, dependency_routing_state=None, dependency_role=None, data_source_instance_name=None, data_source=None, group_full_path=None, include_preexist=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, active_only=None, sorted_by=None, chain=None, anomaly=None, date_range=None, level=None, timing=None, columns=None, data_point=None, sdt_filter=None, rule=None, ack_filter=None, sorted_direction=None, device_display_name=None, summary_only=None, dependency_routing_state=None, dependency_role=None, data_source_instance_name=None, clear_filter=None, is_historical_sdt=None, data_source=None, group_full_path=None, include_preexist=None, *args, **kwargs):  # noqa: E501
         """AlertReport - a model defined in Swagger"""  # noqa: E501
         self._active_only = None
         self._sorted_by = None
@@ -100,6 +104,8 @@ class AlertReport(ReportBase):
         self._dependency_routing_state = None
         self._dependency_role = None
         self._data_source_instance_name = None
+        self._clear_filter = None
+        self._is_historical_sdt = None
         self._data_source = None
         self._group_full_path = None
         self._include_preexist = None
@@ -140,6 +146,10 @@ class AlertReport(ReportBase):
             self.dependency_role = dependency_role
         if data_source_instance_name is not None:
             self.data_source_instance_name = data_source_instance_name
+        if clear_filter is not None:
+            self.clear_filter = clear_filter
+        if is_historical_sdt is not None:
+            self.is_historical_sdt = is_historical_sdt
         if data_source is not None:
             self.data_source = data_source
         if group_full_path is not None:
@@ -557,6 +567,52 @@ class AlertReport(ReportBase):
         """
 
         self._data_source_instance_name = data_source_instance_name
+
+    @property
+    def clear_filter(self):
+        """Gets the clear_filter of this AlertReport.  # noqa: E501
+
+        Only cleared alerts will be included in the response. no: only active alerts will be included in the response. all: both active and cleared alerts will be included in the response  # noqa: E501
+
+        :return: The clear_filter of this AlertReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._clear_filter
+
+    @clear_filter.setter
+    def clear_filter(self, clear_filter):
+        """Sets the clear_filter of this AlertReport.
+
+        Only cleared alerts will be included in the response. no: only active alerts will be included in the response. all: both active and cleared alerts will be included in the response  # noqa: E501
+
+        :param clear_filter: The clear_filter of this AlertReport.  # noqa: E501
+        :type: str
+        """
+
+        self._clear_filter = clear_filter
+
+    @property
+    def is_historical_sdt(self):
+        """Gets the is_historical_sdt of this AlertReport.  # noqa: E501
+
+        all | yes | no all: alerts during their lifecycle that were in SDT and that weren't in SDT that meet the report criteria will be displayed yes: only alerts that were in SDT during their lifecycle and that meet the report criteria will be displayed no: only alerts that weren't in SDT during their lifecycle and that meet the report criteria will be displayed  # noqa: E501
+
+        :return: The is_historical_sdt of this AlertReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_historical_sdt
+
+    @is_historical_sdt.setter
+    def is_historical_sdt(self, is_historical_sdt):
+        """Sets the is_historical_sdt of this AlertReport.
+
+        all | yes | no all: alerts during their lifecycle that were in SDT and that weren't in SDT that meet the report criteria will be displayed yes: only alerts that were in SDT during their lifecycle and that meet the report criteria will be displayed no: only alerts that weren't in SDT during their lifecycle and that meet the report criteria will be displayed  # noqa: E501
+
+        :param is_historical_sdt: The is_historical_sdt of this AlertReport.  # noqa: E501
+        :type: str
+        """
+
+        self._is_historical_sdt = is_historical_sdt
 
     @property
     def data_source(self):

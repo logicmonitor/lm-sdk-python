@@ -31,7 +31,7 @@ class TestLMApi(unittest.TestCase):
     def test_ack_alert_by_id(self):
         """Test case for ack_alert_by_id
 
-        ack alert by id  # noqa: E501
+        Acknowledge alert by ID  # noqa: E501
         """
         pass
 
@@ -59,7 +59,7 @@ class TestLMApi(unittest.TestCase):
     def test_add_alert_note_by_id(self):
         """Test case for add_alert_note_by_id
 
-        add alert note  # noqa: E501
+        Add alert note  # noqa: E501
         """
         pass
 
@@ -73,14 +73,14 @@ class TestLMApi(unittest.TestCase):
     def test_add_api_token_by_admin_id(self):
         """Test case for add_api_token_by_admin_id
 
-        add api tokens for a user  # noqa: E501
+        Add API tokens for a user  # noqa: E501
         """
         pass
 
     def test_add_applies_to_function(self):
         """Test case for add_applies_to_function
 
-        add applies to function  # noqa: E501
+        Add applies to function  # noqa: E501
         """
         pass
 
@@ -94,14 +94,14 @@ class TestLMApi(unittest.TestCase):
     def test_add_collector_group(self):
         """Test case for add_collector_group
 
-        add collector group  # noqa: E501
+        Add collector group  # noqa: E501
         """
         pass
 
     def test_add_config_source(self):
         """Test case for add_config_source
 
-        add config source  # noqa: E501
+        Add a new config source  # noqa: E501
         """
         pass
 
@@ -129,7 +129,7 @@ class TestLMApi(unittest.TestCase):
     def test_add_datasource_by_id(self):
         """Test case for add_datasource_by_id
 
-        add datasource  # noqa: E501
+        Add datasource  # noqa: E501
         """
         pass
 
@@ -143,14 +143,14 @@ class TestLMApi(unittest.TestCase):
     def test_add_device_datasource_instance(self):
         """Test case for add_device_datasource_instance
 
-        add device instance   # noqa: E501
+        add device instance  # noqa: E501
         """
         pass
 
     def test_add_device_datasource_instance_group(self):
         """Test case for add_device_datasource_instance_group
 
-        add device datasource instance group   # noqa: E501
+        Add device datasource instance group  # noqa: E501
         """
         pass
 
@@ -171,35 +171,42 @@ class TestLMApi(unittest.TestCase):
     def test_add_device_group_property(self):
         """Test case for add_device_group_property
 
-        add device group property  # noqa: E501
+        Add device group property  # noqa: E501
         """
         pass
 
     def test_add_device_property(self):
         """Test case for add_device_property
 
-        add device property  # noqa: E501
+        Add device property  # noqa: E501
+        """
+        pass
+
+    def test_add_diagnostic_source(self):
+        """Test case for add_diagnostic_source
+
+        Add diagnostics source  # noqa: E501
         """
         pass
 
     def test_add_dns_mapping(self):
         """Test case for add_dns_mapping
 
-        Add dns mapping  # noqa: E501
+        Add DNS mapping  # noqa: E501
         """
         pass
 
     def test_add_escalation_chain(self):
         """Test case for add_escalation_chain
 
-        add escalation chain  # noqa: E501
+        Add escalation chain  # noqa: E501
         """
         pass
 
     def test_add_event_source(self):
         """Test case for add_event_source
 
-        add eventSource  # noqa: E501
+        Add event source  # noqa: E501
         """
         pass
 
@@ -213,21 +220,21 @@ class TestLMApi(unittest.TestCase):
     def test_add_log_source(self):
         """Test case for add_log_source
 
-        add log source   # noqa: E501
+        Add log source  # noqa: E501
         """
         pass
 
     def test_add_netscan(self):
         """Test case for add_netscan
 
-        add a new netscan  # noqa: E501
+        Add a new netscan  # noqa: E501
         """
         pass
 
     def test_add_oid(self):
         """Test case for add_oid
 
-        add a new OID  # noqa: E501
+        Add a new OID  # noqa: E501
         """
         pass
 
@@ -241,35 +248,35 @@ class TestLMApi(unittest.TestCase):
     def test_add_property_rule(self):
         """Test case for add_property_rule
 
-        add a new property rule  # noqa: E501
+        Add a new property rule  # noqa: E501
         """
         pass
 
     def test_add_recipient_group(self):
         """Test case for add_recipient_group
 
-        add recipient group  # noqa: E501
+        Add recipient group  # noqa: E501
         """
         pass
 
     def test_add_report(self):
         """Test case for add_report
 
-        add report  # noqa: E501
+        Add report  # noqa: E501
         """
         pass
 
     def test_add_report_group(self):
         """Test case for add_report_group
 
-        add report group  # noqa: E501
+        Add report group  # noqa: E501
         """
         pass
 
     def test_add_role(self):
         """Test case for add_role
 
-        add role  # noqa: E501
+        Add role  # noqa: E501
         """
         pass
 
@@ -290,7 +297,7 @@ class TestLMApi(unittest.TestCase):
     def test_add_website(self):
         """Test case for add_website
 
-        Add website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
+        Add website  # noqa: E501
         """
         pass
 
@@ -304,7 +311,7 @@ class TestLMApi(unittest.TestCase):
     def test_add_widget(self):
         """Test case for add_widget
 
-        add widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        Add widget  # noqa: E501
         """
         pass
 
@@ -346,14 +353,14 @@ class TestLMApi(unittest.TestCase):
     def test_delete_api_token_by_id(self):
         """Test case for delete_api_token_by_id
 
-        delete apiToken  # noqa: E501
+        Delete API token  # noqa: E501
         """
         pass
 
     def test_delete_applies_to_function_by_id(self):
         """Test case for delete_applies_to_function_by_id
 
-        delete applies to function  # noqa: E501
+        Delete applies to function  # noqa: E501
         """
         pass
 
@@ -367,14 +374,14 @@ class TestLMApi(unittest.TestCase):
     def test_delete_collector_group_by_id(self):
         """Test case for delete_collector_group_by_id
 
-        delete collector group  # noqa: E501
+        Delete collector group  # noqa: E501
         """
         pass
 
     def test_delete_config_source_by_id(self):
         """Test case for delete_config_source_by_id
 
-        delete config source by id  # noqa: E501
+        Delete config source by ID  # noqa: E501
         """
         pass
 
@@ -395,7 +402,7 @@ class TestLMApi(unittest.TestCase):
     def test_delete_datasource_by_id(self):
         """Test case for delete_datasource_by_id
 
-        delete datasource  # noqa: E501
+        Delete datasource  # noqa: E501
         """
         pass
 
@@ -430,28 +437,35 @@ class TestLMApi(unittest.TestCase):
     def test_delete_device_group_property_by_name(self):
         """Test case for delete_device_group_property_by_name
 
-        delete device group property  # noqa: E501
+        Delete device group property  # noqa: E501
         """
         pass
 
     def test_delete_device_property_by_name(self):
         """Test case for delete_device_property_by_name
 
-        delete device property  # noqa: E501
+        Delete device property  # noqa: E501
+        """
+        pass
+
+    def test_delete_diagnostic_source_by_id(self):
+        """Test case for delete_diagnostic_source_by_id
+
+        Delete a diagnostic source module  # noqa: E501
         """
         pass
 
     def test_delete_escalation_chain_by_id(self):
         """Test case for delete_escalation_chain_by_id
 
-        delete escalation chain  # noqa: E501
+        Delete escalation chain  # noqa: E501
         """
         pass
 
     def test_delete_event_source_by_id(self):
         """Test case for delete_event_source_by_id
 
-        delete eventSource by id  # noqa: E501
+        Delete event source by ID  # noqa: E501
         """
         pass
 
@@ -472,21 +486,21 @@ class TestLMApi(unittest.TestCase):
     def test_delete_log_source(self):
         """Test case for delete_log_source
 
-        delete log source   # noqa: E501
+        Delete log source  # noqa: E501
         """
         pass
 
     def test_delete_netscan_by_id(self):
         """Test case for delete_netscan_by_id
 
-        delete a netscan  # noqa: E501
+        Delete a netscan  # noqa: E501
         """
         pass
 
     def test_delete_oid(self):
         """Test case for delete_oid
 
-        delete a OID  # noqa: E501
+        Delete an OID  # noqa: E501
         """
         pass
 
@@ -507,28 +521,28 @@ class TestLMApi(unittest.TestCase):
     def test_delete_recipient_group_by_id(self):
         """Test case for delete_recipient_group_by_id
 
-        delete recipient group  # noqa: E501
+        Delete recipient group  # noqa: E501
         """
         pass
 
     def test_delete_report_by_id(self):
         """Test case for delete_report_by_id
 
-        delete report  # noqa: E501
+        Delete report  # noqa: E501
         """
         pass
 
     def test_delete_report_group_by_id(self):
         """Test case for delete_report_group_by_id
 
-        delete report group  # noqa: E501
+        Delete report group  # noqa: E501
         """
         pass
 
     def test_delete_role_by_id(self):
         """Test case for delete_role_by_id
 
-        delete role  # noqa: E501
+        Delete role  # noqa: E501
         """
         pass
 
@@ -563,7 +577,7 @@ class TestLMApi(unittest.TestCase):
     def test_delete_widget_by_id(self):
         """Test case for delete_widget_by_id
 
-        delete widget  # noqa: E501
+        Delete widget  # noqa: E501
         """
         pass
 
@@ -577,7 +591,7 @@ class TestLMApi(unittest.TestCase):
     def test_escalated_alert_by_id(self):
         """Test case for escalated_alert_by_id
 
-        escalate alert by id  # noqa: E501
+        Escalate alert by ID  # noqa: E501
         """
         pass
 
@@ -588,24 +602,31 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_execute_diagnostics_manually(self):
+        """Test case for execute_diagnostics_manually
+
+        Trigger a diagnostic module for host.  # noqa: E501
+        """
+        pass
+
     def test_fetch_device_instances_data(self):
         """Test case for fetch_device_instances_data
 
-        fetch device instances data  # noqa: E501
+        Fetch device instances data  # noqa: E501
         """
         pass
 
     def test_fetch_report_using_task_id(self):
         """Test case for fetch_report_using_task_id
 
-        get report for task Id  # noqa: E501
+        Get report for task ID  # noqa: E501
         """
         pass
 
     def test_generate_report_by_id(self):
         """Test case for generate_report_by_id
 
-        run a report  # noqa: E501
+        Run a report  # noqa: E501
         """
         pass
 
@@ -647,7 +668,7 @@ class TestLMApi(unittest.TestCase):
     def test_get_alert_list(self):
         """Test case for get_alert_list
 
-        get alert list  # noqa: E501
+        Get alert list  # noqa: E501
         """
         pass
 
@@ -703,35 +724,35 @@ class TestLMApi(unittest.TestCase):
     def test_get_api_token_list(self):
         """Test case for get_api_token_list
 
-        get a list of api tokens across users  # noqa: E501
+        Get a list of API tokens across users  # noqa: E501
         """
         pass
 
     def test_get_api_token_list_by_admin_id(self):
         """Test case for get_api_token_list_by_admin_id
 
-        get api tokens for a user  # noqa: E501
+        Get API tokens for a user  # noqa: E501
         """
         pass
 
     def test_get_applies_to_function_by_id(self):
         """Test case for get_applies_to_function_by_id
 
-        get applies to function  # noqa: E501
+        Get applies to function by ID  # noqa: E501
         """
         pass
 
     def test_get_applies_to_function_list(self):
         """Test case for get_applies_to_function_list
 
-        get applies to function list  # noqa: E501
+        Get applies to function list  # noqa: E501
         """
         pass
 
     def test_get_associated_device_list_by_data_source_id(self):
         """Test case for get_associated_device_list_by_data_source_id
 
-        get devices associated with a datasource  # noqa: E501
+        Get devices associated with a datasource  # noqa: E501
         """
         pass
 
@@ -773,14 +794,14 @@ class TestLMApi(unittest.TestCase):
     def test_get_collector_group_by_id(self):
         """Test case for get_collector_group_by_id
 
-        get collector group  # noqa: E501
+        Get collector group  # noqa: E501
         """
         pass
 
     def test_get_collector_group_list(self):
         """Test case for get_collector_group_list
 
-        get collector group list  # noqa: E501
+        Get collector group list  # noqa: E501
         """
         pass
 
@@ -808,14 +829,14 @@ class TestLMApi(unittest.TestCase):
     def test_get_config_source_by_id(self):
         """Test case for get_config_source_by_id
 
-        get config source by id  # noqa: E501
+        Get config source by ID  # noqa: E501
         """
         pass
 
     def test_get_config_source_list(self):
         """Test case for get_config_source_list
 
-        get config source list  # noqa: E501
+        Get config source list  # noqa: E501
         """
         pass
 
@@ -836,7 +857,7 @@ class TestLMApi(unittest.TestCase):
     def test_get_dashboard_group_by_id(self):
         """Test case for get_dashboard_group_by_id
 
-        get dashboard group  # noqa: E501
+        Get dashboard group by ID  # noqa: E501
         """
         pass
 
@@ -850,35 +871,35 @@ class TestLMApi(unittest.TestCase):
     def test_get_dashboard_list(self):
         """Test case for get_dashboard_list
 
-        get dashboard list  # noqa: E501
+        Get dashboard list  # noqa: E501
         """
         pass
 
     def test_get_data_source_overview_graph_by_id(self):
         """Test case for get_data_source_overview_graph_by_id
 
-        get datasource overview graph by id  # noqa: E501
+        Get datasource overview graph by ID  # noqa: E501
         """
         pass
 
     def test_get_data_source_overview_graph_list(self):
         """Test case for get_data_source_overview_graph_list
 
-        get datasource overview graph list  # noqa: E501
+        Get datasource overview graph list  # noqa: E501
         """
         pass
 
     def test_get_datasource_by_id(self):
         """Test case for get_datasource_by_id
 
-        get datasource by id  # noqa: E501
+        Get datasource by ID  # noqa: E501
         """
         pass
 
     def test_get_datasource_list(self):
         """Test case for get_datasource_list
 
-        get datasource list  # noqa: E501
+        Get datasource list  # noqa: E501
         """
         pass
 
@@ -927,14 +948,14 @@ class TestLMApi(unittest.TestCase):
     def test_get_device_datasource_by_id(self):
         """Test case for get_device_datasource_by_id
 
-        get device datasource   # noqa: E501
+        Get device datasource  # noqa: E501
         """
         pass
 
     def test_get_device_datasource_data_by_id(self):
         """Test case for get_device_datasource_data_by_id
 
-        get device datasource data   # noqa: E501
+        Get device datasource data  # noqa: E501
         """
         pass
 
@@ -962,7 +983,7 @@ class TestLMApi(unittest.TestCase):
     def test_get_device_datasource_instance_by_id(self):
         """Test case for get_device_datasource_instance_by_id
 
-        get device instance   # noqa: E501
+        get device instance  # noqa: E501
         """
         pass
 
@@ -976,28 +997,28 @@ class TestLMApi(unittest.TestCase):
     def test_get_device_datasource_instance_graph_data(self):
         """Test case for get_device_datasource_instance_graph_data
 
-        get device instance graph data   # noqa: E501
+        get device instance graph data  # noqa: E501
         """
         pass
 
     def test_get_device_datasource_instance_group_by_id(self):
         """Test case for get_device_datasource_instance_group_by_id
 
-        get device datasource instance group   # noqa: E501
+        Get device datasource instance group  # noqa: E501
         """
         pass
 
     def test_get_device_datasource_instance_group_list(self):
         """Test case for get_device_datasource_instance_group_list
 
-        get device datasource instance group list   # noqa: E501
+        Get device datasource instance group list  # noqa: E501
         """
         pass
 
     def test_get_device_datasource_instance_group_overview_graph_data(self):
         """Test case for get_device_datasource_instance_group_overview_graph_data
 
-        get device instance group overview graph data   # noqa: E501
+        Get device instance group overview graph data  # noqa: E501
         """
         pass
 
@@ -1018,7 +1039,14 @@ class TestLMApi(unittest.TestCase):
     def test_get_device_datasource_list(self):
         """Test case for get_device_datasource_list
 
-        get device datasource list   # noqa: E501
+        Get device datasource list  # noqa: E501
+        """
+        pass
+
+    def test_get_device_eventsource_list(self):
+        """Test case for get_device_eventsource_list
+
+        Get device eventsource list  # noqa: E501
         """
         pass
 
@@ -1046,7 +1074,7 @@ class TestLMApi(unittest.TestCase):
     def test_get_device_group_datasource_alert_setting(self):
         """Test case for get_device_group_datasource_alert_setting
 
-        get device group datasource alert setting   # noqa: E501
+        Get device group datasource alert setting  # noqa: E501
         """
         pass
 
@@ -1074,14 +1102,14 @@ class TestLMApi(unittest.TestCase):
     def test_get_device_group_property_by_name(self):
         """Test case for get_device_group_property_by_name
 
-        get device group property by name  # noqa: E501
+        Get device group property by name  # noqa: E501
         """
         pass
 
     def test_get_device_group_property_list(self):
         """Test case for get_device_group_property_list
 
-        get device group properties  # noqa: E501
+        Get device group properties  # noqa: E501
         """
         pass
 
@@ -1109,49 +1137,63 @@ class TestLMApi(unittest.TestCase):
     def test_get_device_list(self):
         """Test case for get_device_list
 
-        get device list  # noqa: E501
+        Get device list  # noqa: E501
         """
         pass
 
     def test_get_device_property_by_name(self):
         """Test case for get_device_property_by_name
 
-        get device property by name  # noqa: E501
+        Get device property by name  # noqa: E501
         """
         pass
 
     def test_get_device_property_list(self):
         """Test case for get_device_property_list
 
-        get device properties  # noqa: E501
+        Get device properties  # noqa: E501
+        """
+        pass
+
+    def test_get_diagnostic_sources_by_id(self):
+        """Test case for get_diagnostic_sources_by_id
+
+        Get diagnostics sources by ID  # noqa: E501
+        """
+        pass
+
+    def test_get_diagnostic_sources_list(self):
+        """Test case for get_diagnostic_sources_list
+
+        Get diagnostics sources list  # noqa: E501
         """
         pass
 
     def test_get_escalation_chain_by_id(self):
         """Test case for get_escalation_chain_by_id
 
-        get escalation chain by id  # noqa: E501
+        Get escalation chain by ID  # noqa: E501
         """
         pass
 
     def test_get_escalation_chain_list(self):
         """Test case for get_escalation_chain_list
 
-        get escalation chain list  # noqa: E501
+        Get escalation chain list  # noqa: E501
         """
         pass
 
     def test_get_event_source_by_id(self):
         """Test case for get_event_source_by_id
 
-        get eventSource by id  # noqa: E501
+        Get event source by ID  # noqa: E501
         """
         pass
 
     def test_get_event_source_list(self):
         """Test case for get_event_source_list
 
-        get eventSource list  # noqa: E501
+        Get event source list  # noqa: E501
         """
         pass
 
@@ -1179,14 +1221,14 @@ class TestLMApi(unittest.TestCase):
     def test_get_integration_audit_logs(self):
         """Test case for get_integration_audit_logs
 
-        get integration audit logs list  # noqa: E501
+        Get integration audit logs list  # noqa: E501
         """
         pass
 
     def test_get_job_monitor_by_id(self):
         """Test case for get_job_monitor_by_id
 
-        Get JobMonitor by id  # noqa: E501
+        Get JobMonitor by ID  # noqa: E501
         """
         pass
 
@@ -1200,21 +1242,28 @@ class TestLMApi(unittest.TestCase):
     def test_get_log_source_by_id(self):
         """Test case for get_log_source_by_id
 
-        get log source   # noqa: E501
+        Get log source  # noqa: E501
         """
         pass
 
     def test_get_log_source_list(self):
         """Test case for get_log_source_list
 
-        get log source list  # noqa: E501
+        Get log source list  # noqa: E501
+        """
+        pass
+
+    def test_get_metrics_summary(self):
+        """Test case for get_metrics_summary
+
+        get metrics usage with company settings summary  # noqa: E501
         """
         pass
 
     def test_get_metrics_usage(self):
         """Test case for get_metrics_usage
 
-        get metrics usage  # noqa: E501
+        Get metrics usage  # noqa: E501
         """
         pass
 
@@ -1242,28 +1291,28 @@ class TestLMApi(unittest.TestCase):
     def test_get_netscan_by_id(self):
         """Test case for get_netscan_by_id
 
-        get netscan by id  # noqa: E501
+        Get netscan by ID  # noqa: E501
         """
         pass
 
     def test_get_netscan_list(self):
         """Test case for get_netscan_list
 
-        get netscan list  # noqa: E501
+        Get netscan list  # noqa: E501
         """
         pass
 
     def test_get_oid_by_id(self):
         """Test case for get_oid_by_id
 
-        get OID by id  # noqa: E501
+        Get OID by ID  # noqa: E501
         """
         pass
 
     def test_get_oid_list(self):
         """Test case for get_oid_list
 
-        get OID's list  # noqa: E501
+        Get OID's list  # noqa: E501
         """
         pass
 
@@ -1291,56 +1340,77 @@ class TestLMApi(unittest.TestCase):
     def test_get_property_rules_by_id(self):
         """Test case for get_property_rules_by_id
 
-        get property rules by id  # noqa: E501
+        Get property rules by id  # noqa: E501
         """
         pass
 
     def test_get_property_rules_list(self):
         """Test case for get_property_rules_list
 
-        get property rules list  # noqa: E501
+        Get property rules list  # noqa: E501
         """
         pass
 
     def test_get_recipient_group_by_id(self):
         """Test case for get_recipient_group_by_id
 
-        get recipient group by id  # noqa: E501
+        Get recipient group by id  # noqa: E501
         """
         pass
 
     def test_get_recipient_group_list(self):
         """Test case for get_recipient_group_list
 
-        get recipient group List  # noqa: E501
+        Get recipient group list  # noqa: E501
+        """
+        pass
+
+    def test_get_recommendation_by_id(self):
+        """Test case for get_recommendation_by_id
+
+        Get recommendation by ID  # noqa: E501
+        """
+        pass
+
+    def test_get_recommendation_categories_list(self):
+        """Test case for get_recommendation_categories_list
+
+        Get recommendation category list  # noqa: E501
+        """
+        pass
+
+    def test_get_recommendations_list(self):
+        """Test case for get_recommendations_list
+
+        Get recommendation list  # noqa: E501
         """
         pass
 
     def test_get_report_by_id(self):
         """Test case for get_report_by_id
 
-        get report by id  # noqa: E501
+        Get report by ID  # noqa: E501
         """
         pass
 
     def test_get_report_group_by_id(self):
         """Test case for get_report_group_by_id
 
-        get report group by id  # noqa: E501
+        Get report group by id  # noqa: E501
         """
         pass
 
     def test_get_report_group_list(self):
         """Test case for get_report_group_list
 
-        get report group list  # noqa: E501
+        Get report group list  # noqa: E501
         """
         pass
 
     def test_get_report_list(self):
         """Test case for get_report_list
 
-        get report list  # noqa: E501
+        Get report list  # noqa: E501
         """
         pass
 
@@ -1354,14 +1424,14 @@ class TestLMApi(unittest.TestCase):
     def test_get_role_by_id(self):
         """Test case for get_role_by_id
 
-        get role by id  # noqa: E501
+        Get role by ID  # noqa: E501
         """
         pass
 
     def test_get_role_list(self):
         """Test case for get_role_list
 
-        get role list  # noqa: E501
+        Get role list  # noqa: E501
         """
         pass
 
@@ -1375,7 +1445,7 @@ class TestLMApi(unittest.TestCase):
     def test_get_sdt_history_by_device_data_source_id(self):
         """Test case for get_sdt_history_by_device_data_source_id
 
-        get SDT history for the device dataSource  # noqa: E501
+        Get SDT history for the device dataSource  # noqa: E501
         """
         pass
 
@@ -1417,7 +1487,7 @@ class TestLMApi(unittest.TestCase):
     def test_get_site_monitor_check_point_list(self):
         """Test case for get_site_monitor_check_point_list
 
-        get website checkpoint list  # noqa: E501
+        Get website checkpoint list  # noqa: E501
         """
         pass
 
@@ -1445,21 +1515,21 @@ class TestLMApi(unittest.TestCase):
     def test_get_unmonitored_device_list(self):
         """Test case for get_unmonitored_device_list
 
-        get unmonitored device list  # noqa: E501
+        Get unmonitored device list  # noqa: E501
         """
         pass
 
     def test_get_update_reason_list_by_config_source_id(self):
         """Test case for get_update_reason_list_by_config_source_id
 
-        get update history for a configSource  # noqa: E501
+        Get update history for a configSource  # noqa: E501
         """
         pass
 
     def test_get_update_reason_list_by_data_source_id(self):
         """Test case for get_update_reason_list_by_data_source_id
 
-        get update history for a datasource  # noqa: E501
+        Get update history for a datasource  # noqa: E501
         """
         pass
 
@@ -1501,7 +1571,7 @@ class TestLMApi(unittest.TestCase):
     def test_get_website_graph_data(self):
         """Test case for get_website_graph_data
 
-        get website graph data  # noqa: E501
+        Get website graph data  # noqa: E501
         """
         pass
 
@@ -1543,7 +1613,7 @@ class TestLMApi(unittest.TestCase):
     def test_get_widget_by_id(self):
         """Test case for get_widget_by_id
 
-        get widget by id (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        Get widget by ID  # noqa: E501
         """
         pass
 
@@ -1557,7 +1627,7 @@ class TestLMApi(unittest.TestCase):
     def test_get_widget_list(self):
         """Test case for get_widget_list
 
-        get widget list (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        Get widget list  # noqa: E501
         """
         pass
 
@@ -1568,31 +1638,101 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_import_applies_to_function_json(self):
+        """Test case for import_applies_to_function_json
+
+        Import AppliesTo function via json  # noqa: E501
+        """
+        pass
+
     def test_import_batch_job(self):
         """Test case for import_batch_job
 
-        import batch job via xml  # noqa: E501
+        Import batch job via XML  # noqa: E501
         """
         pass
 
     def test_import_config_source(self):
         """Test case for import_config_source
 
-        import config source via xml  # noqa: E501
+        Import config source via XML  # noqa: E501
+        """
+        pass
+
+    def test_import_config_source_json(self):
+        """Test case for import_config_source_json
+
+        Import ConfigSource via json  # noqa: E501
         """
         pass
 
     def test_import_data_source(self):
         """Test case for import_data_source
 
-        import datasource via xml  # noqa: E501
+        Import datasource via XML  # noqa: E501
+        """
+        pass
+
+    def test_import_data_source_json(self):
+        """Test case for import_data_source_json
+
+        Import DataSource via json  # noqa: E501
+        """
+        pass
+
+    def test_import_diagnostic_source_json(self):
+        """Test case for import_diagnostic_source_json
+
+        Import DiagnosticSource via json  # noqa: E501
         """
         pass
 
     def test_import_event_source(self):
         """Test case for import_event_source
 
-        import eventsource via xml  # noqa: E501
+        Import event source via XML  # noqa: E501
+        """
+        pass
+
+    def test_import_event_source_json(self):
+        """Test case for import_event_source_json
+
+        Import EventSource via json  # noqa: E501
+        """
+        pass
+
+    def test_import_job_monitor_json(self):
+        """Test case for import_job_monitor_json
+
+        Import batch JobMonitor via json  # noqa: E501
+        """
+        pass
+
+    def test_import_log_source_json(self):
+        """Test case for import_log_source_json
+
+        Import LogSource via json  # noqa: E501
+        """
+        pass
+
+    def test_import_oid_json(self):
+        """Test case for import_oid_json
+
+        Import OID via json  # noqa: E501
+        """
+        pass
+
+    def test_import_property_source_json(self):
+        """Test case for import_property_source_json
+
+        Import PropertySource via json  # noqa: E501
+        """
+        pass
+
+    def test_import_topology_source_json(self):
+        """Test case for import_topology_source_json
+
+        Import TopologySource via json  # noqa: E501
         """
         pass
 
@@ -1634,14 +1774,14 @@ class TestLMApi(unittest.TestCase):
     def test_patch_api_token_by_admin_id(self):
         """Test case for patch_api_token_by_admin_id
 
-        update api tokens for a user  # noqa: E501
+        Update API tokens for a user  # noqa: E501
         """
         pass
 
     def test_patch_applies_to_function(self):
         """Test case for patch_applies_to_function
 
-        update applies to function  # noqa: E501
+        Update applies to function  # noqa: E501
         """
         pass
 
@@ -1655,14 +1795,14 @@ class TestLMApi(unittest.TestCase):
     def test_patch_collector_group_by_id(self):
         """Test case for patch_collector_group_by_id
 
-        update collector group  # noqa: E501
+        Update collector group  # noqa: E501
         """
         pass
 
     def test_patch_config_source_by_id(self):
         """Test case for patch_config_source_by_id
 
-        update config source by id  # noqa: E501
+        Update config source by ID  # noqa: E501
         """
         pass
 
@@ -1683,14 +1823,14 @@ class TestLMApi(unittest.TestCase):
     def test_patch_datasource_by_id(self):
         """Test case for patch_datasource_by_id
 
-        update datasource  # noqa: E501
+        Update datasource  # noqa: E501
         """
         pass
 
     def test_patch_default_dashboard(self):
         """Test case for patch_default_dashboard
 
-        update default dashboard  # noqa: E501
+        Update default dashboard  # noqa: E501
         """
         pass
 
@@ -1718,7 +1858,7 @@ class TestLMApi(unittest.TestCase):
     def test_patch_device_datasource_instance_group_by_id(self):
         """Test case for patch_device_datasource_instance_group_by_id
 
-        update device datasource instance group  # noqa: E501
+        Update device datasource instance group  # noqa: E501
         """
         pass
 
@@ -1739,7 +1879,7 @@ class TestLMApi(unittest.TestCase):
     def test_patch_device_group_datasource_alert_setting(self):
         """Test case for patch_device_group_datasource_alert_setting
 
-        update device group datasource alert setting  # noqa: E501
+        Update device group datasource alert setting  # noqa: E501
         """
         pass
 
@@ -1753,28 +1893,35 @@ class TestLMApi(unittest.TestCase):
     def test_patch_device_group_property_by_name(self):
         """Test case for patch_device_group_property_by_name
 
-        update device group property  # noqa: E501
+        Update device group property  # noqa: E501
         """
         pass
 
     def test_patch_device_property_by_name(self):
         """Test case for patch_device_property_by_name
 
-        update device property  # noqa: E501
+        Update device property  # noqa: E501
+        """
+        pass
+
+    def test_patch_diagnostic_source_by_id(self):
+        """Test case for patch_diagnostic_source_by_id
+
+        Update a diagnostics source  # noqa: E501
         """
         pass
 
     def test_patch_escalation_chain_by_id(self):
         """Test case for patch_escalation_chain_by_id
 
-        update escalation chain  # noqa: E501
+        Update escalation chain  # noqa: E501
         """
         pass
 
     def test_patch_event_source_by_id(self):
         """Test case for patch_event_source_by_id
 
-        update eventSource by id  # noqa: E501
+        Update event source by ID  # noqa: E501
         """
         pass
 
@@ -1795,21 +1942,21 @@ class TestLMApi(unittest.TestCase):
     def test_patch_log_source(self):
         """Test case for patch_log_source
 
-        update log source   # noqa: E501
+        Update log source  # noqa: E501
         """
         pass
 
     def test_patch_netscan(self):
         """Test case for patch_netscan
 
-        update a netscan  # noqa: E501
+        Update a netscan  # noqa: E501
         """
         pass
 
     def test_patch_oid(self):
         """Test case for patch_oid
 
-        update a OID  # noqa: E501
+        Update an OID  # noqa: E501
         """
         pass
 
@@ -1830,28 +1977,28 @@ class TestLMApi(unittest.TestCase):
     def test_patch_recipient_group_by_id(self):
         """Test case for patch_recipient_group_by_id
 
-        update recipient group  # noqa: E501
+        Update recipient group  # noqa: E501
         """
         pass
 
     def test_patch_report_by_id(self):
         """Test case for patch_report_by_id
 
-        update report  # noqa: E501
+        Update report  # noqa: E501
         """
         pass
 
     def test_patch_report_group_by_id(self):
         """Test case for patch_report_group_by_id
 
-        update report group  # noqa: E501
+        Update report group  # noqa: E501
         """
         pass
 
     def test_patch_role_by_id(self):
         """Test case for patch_role_by_id
 
-        update role  # noqa: E501
+        Update role  # noqa: E501
         """
         pass
 
@@ -1872,7 +2019,7 @@ class TestLMApi(unittest.TestCase):
     def test_patch_website_by_id(self):
         """Test case for patch_website_by_id
 
-        Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
+        update website  # noqa: E501
         """
         pass
 
@@ -1886,7 +2033,7 @@ class TestLMApi(unittest.TestCase):
     def test_patch_widget_by_id(self):
         """Test case for patch_widget_by_id
 
-        update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        Update widget  # noqa: E501
         """
         pass
 
@@ -1900,7 +2047,7 @@ class TestLMApi(unittest.TestCase):
     def test_test_aws_account(self):
         """Test case for test_aws_account
 
-        test AWS account  # noqa: E501
+        Test AWS account  # noqa: E501
         """
         pass
 
@@ -1921,7 +2068,7 @@ class TestLMApi(unittest.TestCase):
     def test_test_saa_s_account(self):
         """Test case for test_saa_s_account
 
-        test SaaS account  # noqa: E501
+        Test SaaS account  # noqa: E501
         """
         pass
 
@@ -1949,14 +2096,14 @@ class TestLMApi(unittest.TestCase):
     def test_update_api_token_by_admin_id(self):
         """Test case for update_api_token_by_admin_id
 
-        update api tokens for a user  # noqa: E501
+        Update API tokens for a user  # noqa: E501
         """
         pass
 
     def test_update_applies_to_function(self):
         """Test case for update_applies_to_function
 
-        update applies to function  # noqa: E501
+        Update applies to function  # noqa: E501
         """
         pass
 
@@ -1970,14 +2117,14 @@ class TestLMApi(unittest.TestCase):
     def test_update_collector_group_by_id(self):
         """Test case for update_collector_group_by_id
 
-        update collector group  # noqa: E501
+        Update collector group  # noqa: E501
         """
         pass
 
     def test_update_config_source_by_id(self):
         """Test case for update_config_source_by_id
 
-        update config source by id  # noqa: E501
+        Update config source by ID  # noqa: E501
         """
         pass
 
@@ -1998,14 +2145,14 @@ class TestLMApi(unittest.TestCase):
     def test_update_datasource_by_id(self):
         """Test case for update_datasource_by_id
 
-        update datasource  # noqa: E501
+        Update datasource  # noqa: E501
         """
         pass
 
     def test_update_default_dashboard(self):
         """Test case for update_default_dashboard
 
-        update default dashboard  # noqa: E501
+        Update default dashboard  # noqa: E501
         """
         pass
 
@@ -2033,7 +2180,7 @@ class TestLMApi(unittest.TestCase):
     def test_update_device_datasource_instance_group_by_id(self):
         """Test case for update_device_datasource_instance_group_by_id
 
-        update device datasource instance group  # noqa: E501
+        Update device datasource instance group  # noqa: E501
         """
         pass
 
@@ -2054,7 +2201,7 @@ class TestLMApi(unittest.TestCase):
     def test_update_device_group_datasource_alert_setting(self):
         """Test case for update_device_group_datasource_alert_setting
 
-        update device group datasource alert setting  # noqa: E501
+        Update device group datasource alert setting  # noqa: E501
         """
         pass
 
@@ -2068,35 +2215,42 @@ class TestLMApi(unittest.TestCase):
     def test_update_device_group_property_by_name(self):
         """Test case for update_device_group_property_by_name
 
-        update device group property  # noqa: E501
+        Update device group property  # noqa: E501
         """
         pass
 
     def test_update_device_property_by_name(self):
         """Test case for update_device_property_by_name
 
-        update device property  # noqa: E501
+        Update device property  # noqa: E501
+        """
+        pass
+
+    def test_update_diagnostic_source_by_id(self):
+        """Test case for update_diagnostic_source_by_id
+
+        Update a diagnostics source  # noqa: E501
         """
         pass
 
     def test_update_escalation_chain_by_id(self):
         """Test case for update_escalation_chain_by_id
 
-        update escalation chain  # noqa: E501
+        Update escalation chain  # noqa: E501
         """
         pass
 
     def test_update_event_source_by_id(self):
         """Test case for update_event_source_by_id
 
-        update eventSource by id  # noqa: E501
+        Update event source by ID  # noqa: E501
         """
         pass
 
     def test_update_instance_group_alert_threshold(self):
         """Test case for update_instance_group_alert_threshold
 
-        update instance group alert threshold (Setting the threshold at default group is not allowed)  # noqa: E501
+        Update instance group alert threshold  # noqa: E501
         """
         pass
 
@@ -2117,21 +2271,21 @@ class TestLMApi(unittest.TestCase):
     def test_update_log_source(self):
         """Test case for update_log_source
 
-        update log source   # noqa: E501
+        Update log source  # noqa: E501
         """
         pass
 
     def test_update_netscan(self):
         """Test case for update_netscan
 
-        update a netscan  # noqa: E501
+        Update a netscan  # noqa: E501
         """
         pass
 
     def test_update_oid(self):
         """Test case for update_oid
 
-        update a OID  # noqa: E501
+        Update an OID  # noqa: E501
         """
         pass
 
@@ -2152,28 +2306,28 @@ class TestLMApi(unittest.TestCase):
     def test_update_recipient_group_by_id(self):
         """Test case for update_recipient_group_by_id
 
-        update recipient group  # noqa: E501
+        Update recipient group  # noqa: E501
         """
         pass
 
     def test_update_report_by_id(self):
         """Test case for update_report_by_id
 
-        update report  # noqa: E501
+        Update report  # noqa: E501
         """
         pass
 
     def test_update_report_group_by_id(self):
         """Test case for update_report_group_by_id
 
-        update report group  # noqa: E501
+        Update report group  # noqa: E501
         """
         pass
 
     def test_update_role_by_id(self):
         """Test case for update_role_by_id
 
-        update role  # noqa: E501
+        Update role  # noqa: E501
         """
         pass
 
@@ -2194,7 +2348,7 @@ class TestLMApi(unittest.TestCase):
     def test_update_website_by_id(self):
         """Test case for update_website_by_id
 
-        Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
+        update website  # noqa: E501
         """
         pass
 
@@ -2208,14 +2362,14 @@ class TestLMApi(unittest.TestCase):
     def test_update_widget_by_id(self):
         """Test case for update_widget_by_id
 
-        update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        Update widget  # noqa: E501
         """
         pass
 
     def test_verify_aws_billing_permissions(self):
         """Test case for verify_aws_billing_permissions
 
-        verify AWS Billing Permissions  # noqa: E501
+        Verify AWS Billing Permissions  # noqa: E501
         """
         pass
 

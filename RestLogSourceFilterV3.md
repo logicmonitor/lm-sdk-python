@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **include** | **str** |  | [optional] 
+**index** | **str** |  | [optional] 
 **comment** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 **attribute** | **str** |  | [optional] 

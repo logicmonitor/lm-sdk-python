@@ -29,6 +29,8 @@ class RestResponseMetaBlock(object):
     """
     swagger_types = {
         'filtered_count': 'int',
+        'from_paging_response_info': 'RestResponseMetaBlock',
+        'from_sort_info': 'RestResponseMetaBlock',
         'per_page_count': 'int',
         'sort': 'str',
         'total_count': 'int',
@@ -37,15 +39,19 @@ class RestResponseMetaBlock(object):
 
     attribute_map = {
         'filtered_count': 'filteredCount',
+        'from_paging_response_info': 'fromPagingResponseInfo',
+        'from_sort_info': 'fromSortInfo',
         'per_page_count': 'perPageCount',
         'sort': 'sort',
         'total_count': 'totalCount',
         'page_offset_count': 'pageOffsetCount'
     }
 
-    def __init__(self, filtered_count=None, per_page_count=None, sort=None, total_count=None, page_offset_count=None):  # noqa: E501
+    def __init__(self, filtered_count=None, from_paging_response_info=None, from_sort_info=None, per_page_count=None, sort=None, total_count=None, page_offset_count=None):  # noqa: E501
         """RestResponseMetaBlock - a model defined in Swagger"""  # noqa: E501
         self._filtered_count = None
+        self._from_paging_response_info = None
+        self._from_sort_info = None
         self._per_page_count = None
         self._sort = None
         self._total_count = None
@@ -53,6 +59,10 @@ class RestResponseMetaBlock(object):
         self.discriminator = None
         if filtered_count is not None:
             self.filtered_count = filtered_count
+        if from_paging_response_info is not None:
+            self.from_paging_response_info = from_paging_response_info
+        if from_sort_info is not None:
+            self.from_sort_info = from_sort_info
         if per_page_count is not None:
             self.per_page_count = per_page_count
         if sort is not None:
@@ -82,6 +92,48 @@ class RestResponseMetaBlock(object):
         """
 
         self._filtered_count = filtered_count
+
+    @property
+    def from_paging_response_info(self):
+        """Gets the from_paging_response_info of this RestResponseMetaBlock.  # noqa: E501
+
+
+        :return: The from_paging_response_info of this RestResponseMetaBlock.  # noqa: E501
+        :rtype: RestResponseMetaBlock
+        """
+        return self._from_paging_response_info
+
+    @from_paging_response_info.setter
+    def from_paging_response_info(self, from_paging_response_info):
+        """Sets the from_paging_response_info of this RestResponseMetaBlock.
+
+
+        :param from_paging_response_info: The from_paging_response_info of this RestResponseMetaBlock.  # noqa: E501
+        :type: RestResponseMetaBlock
+        """
+
+        self._from_paging_response_info = from_paging_response_info
+
+    @property
+    def from_sort_info(self):
+        """Gets the from_sort_info of this RestResponseMetaBlock.  # noqa: E501
+
+
+        :return: The from_sort_info of this RestResponseMetaBlock.  # noqa: E501
+        :rtype: RestResponseMetaBlock
+        """
+        return self._from_sort_info
+
+    @from_sort_info.setter
+    def from_sort_info(self, from_sort_info):
+        """Sets the from_sort_info of this RestResponseMetaBlock.
+
+
+        :param from_sort_info: The from_sort_info of this RestResponseMetaBlock.  # noqa: E501
+        :type: RestResponseMetaBlock
+        """
+
+        self._from_sort_info = from_sort_info
 
     @property
     def per_page_count(self):

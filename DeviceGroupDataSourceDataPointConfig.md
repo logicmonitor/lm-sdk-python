@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **ad_adv_setting_enabled** | **bool** |  | [optional] 
 **error_ad_adv_setting** | **str** |  | [optional] 
 **warn_ad_adv_setting** | **str** |  | [optional] 
+**parent_device_group_alert_expr_list** | [**DeviceGroupAlertThresholdInfo**](DeviceGroupAlertThresholdInfo.md) |  | [optional] 
 **global_ad_adv_setting_enabled** | **bool** |  | [optional] 
 **collection_interval** | **int** | Collection Interval | [optional] 
 **alert_expr** | **str** |  | 

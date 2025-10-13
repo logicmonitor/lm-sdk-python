@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **custom_properties** | [**list[NameAndValue]**](NameAndValue.md) | The custom properties defined for the collector group | [optional] 
 **num_of_hosts** | **int** | The number of hosts that belong to the group | [optional] 
 **num_of_instances** | **int** | The number of instances that belong to the group | [optional] 
+**cal_threshold** | **int** | calculated threshold value for a ABCG collector to check if a collector has high load | [optional] 
 **name** | **str** | The name of the Collector Group | 
 **auto_balance_strategy** | **str** | The auto balance strategy | [optional] 
 **create_on** | **int** | The time at which the group was created in epoch format | [optional] 

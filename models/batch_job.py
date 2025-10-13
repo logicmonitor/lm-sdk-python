@@ -41,6 +41,7 @@ class BatchJob(object):
         'cron_time_zone': 'str',
         'alert_body': 'str',
         'start_mrtie': 'int',
+        'origin_registry_id': 'str',
         'checksum': 'str',
         'name': 'str',
         'alert_subject': 'str',
@@ -65,6 +66,7 @@ class BatchJob(object):
         'cron_time_zone': 'cronTimeZone',
         'alert_body': 'alertBody',
         'start_mrtie': 'startMrtie',
+        'origin_registry_id': 'originRegistryId',
         'checksum': 'checksum',
         'name': 'name',
         'alert_subject': 'alertSubject',
@@ -75,7 +77,7 @@ class BatchJob(object):
         'group': 'group'
     }
 
-    def __init__(self, active_monitoring=None, access_groups=None, alert_level=None, description=None, applies_to=None, technology=None, lineage_id=None, cron_schedule=None, tags=None, installation_metadata=None, cron_time_zone=None, alert_body=None, start_mrtie=None, checksum=None, name=None, alert_subject=None, id=None, access_group_ids=None, longest_run_time_in_minute=None, alert_effective_ival=None, group=None):  # noqa: E501
+    def __init__(self, active_monitoring=None, access_groups=None, alert_level=None, description=None, applies_to=None, technology=None, lineage_id=None, cron_schedule=None, tags=None, installation_metadata=None, cron_time_zone=None, alert_body=None, start_mrtie=None, origin_registry_id=None, checksum=None, name=None, alert_subject=None, id=None, access_group_ids=None, longest_run_time_in_minute=None, alert_effective_ival=None, group=None):  # noqa: E501
         """BatchJob - a model defined in Swagger"""  # noqa: E501
         self._active_monitoring = None
         self._access_groups = None
@@ -90,6 +92,7 @@ class BatchJob(object):
         self._cron_time_zone = None
         self._alert_body = None
         self._start_mrtie = None
+        self._origin_registry_id = None
         self._checksum = None
         self._name = None
         self._alert_subject = None
@@ -121,6 +124,8 @@ class BatchJob(object):
         self.alert_body = alert_body
         if start_mrtie is not None:
             self.start_mrtie = start_mrtie
+        if origin_registry_id is not None:
+            self.origin_registry_id = origin_registry_id
         if checksum is not None:
             self.checksum = checksum
         self.name = name
@@ -445,6 +450,29 @@ class BatchJob(object):
         """
 
         self._start_mrtie = start_mrtie
+
+    @property
+    def origin_registry_id(self):
+        """Gets the origin_registry_id of this BatchJob.  # noqa: E501
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :return: The origin_registry_id of this BatchJob.  # noqa: E501
+        :rtype: str
+        """
+        return self._origin_registry_id
+
+    @origin_registry_id.setter
+    def origin_registry_id(self, origin_registry_id):
+        """Sets the origin_registry_id of this BatchJob.
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :param origin_registry_id: The origin_registry_id of this BatchJob.  # noqa: E501
+        :type: str
+        """
+
+        self._origin_registry_id = origin_registry_id
 
     @property
     def checksum(self):

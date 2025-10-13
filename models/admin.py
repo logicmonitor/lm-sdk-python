@@ -161,7 +161,8 @@ class Admin(object):
             self.api_tokens = api_tokens
         if admin_group_ids is not None:
             self.admin_group_ids = admin_group_ids
-        self.password = password
+        if password is not None:
+            self.password = password
         if last_action is not None:
             self.last_action = last_action
         if training_email is not None:
@@ -501,8 +502,6 @@ class Admin(object):
         :param password: The password of this Admin.  # noqa: E501
         :type: str
         """
-        if password is None:
-            raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
 
         self._password = password
 

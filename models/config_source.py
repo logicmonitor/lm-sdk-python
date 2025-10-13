@@ -28,176 +28,144 @@ class ConfigSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'collector_attribute': 'CollectorAttribute',
-        'auto_discovery_config': 'AutoDiscoveryConfiguration',
         'access_groups': 'list[AccessGroup]',
         'display_name': 'str',
-        'config_checks': 'list[ConfigCheck]',
         'description': 'str',
         'applies_to': 'str',
+        'lineage_id': 'str',
+        'collect_method': 'str',
+        'origin_registry_id': 'str',
+        'checksum': 'str',
+        'id': 'int',
+        'access_group_ids': 'list[int]',
+        'group': 'str',
+        'collector_attribute': 'CollectorAttribute',
+        'auto_discovery_config': 'AutoDiscoveryConfiguration',
+        'ad_parameters': 'DataSource',
+        'config_checks': 'list[ConfigCheck]',
         'enable_auto_discovery': 'bool',
         'technology': 'str',
         'version': 'int',
-        'lineage_id': 'str',
         'tags': 'str',
         'audit_version': 'int',
-        'collect_method': 'str',
         'has_multi_instances': 'bool',
         'installation_metadata': 'IntegrationMetadata',
         'collect_interval': 'int',
-        'checksum': 'str',
         'name': 'str',
         'timestamp_format': 'str',
-        'id': 'int',
-        'access_group_ids': 'list[int]',
-        'file_format': 'str',
-        'group': 'str'
+        'file_format': 'str'
     }
 
     attribute_map = {
-        'collector_attribute': 'collectorAttribute',
-        'auto_discovery_config': 'autoDiscoveryConfig',
         'access_groups': 'accessGroups',
         'display_name': 'displayName',
-        'config_checks': 'configChecks',
         'description': 'description',
         'applies_to': 'appliesTo',
+        'lineage_id': 'lineageId',
+        'collect_method': 'collectMethod',
+        'origin_registry_id': 'originRegistryId',
+        'checksum': 'checksum',
+        'id': 'id',
+        'access_group_ids': 'accessGroupIds',
+        'group': 'group',
+        'collector_attribute': 'collectorAttribute',
+        'auto_discovery_config': 'autoDiscoveryConfig',
+        'ad_parameters': 'adParameters',
+        'config_checks': 'configChecks',
         'enable_auto_discovery': 'enableAutoDiscovery',
         'technology': 'technology',
         'version': 'version',
-        'lineage_id': 'lineageId',
         'tags': 'tags',
         'audit_version': 'auditVersion',
-        'collect_method': 'collectMethod',
         'has_multi_instances': 'hasMultiInstances',
         'installation_metadata': 'installationMetadata',
         'collect_interval': 'collectInterval',
-        'checksum': 'checksum',
         'name': 'name',
         'timestamp_format': 'timestampFormat',
-        'id': 'id',
-        'access_group_ids': 'accessGroupIds',
-        'file_format': 'fileFormat',
-        'group': 'group'
+        'file_format': 'fileFormat'
     }
 
-    def __init__(self, collector_attribute=None, auto_discovery_config=None, access_groups=None, display_name=None, config_checks=None, description=None, applies_to=None, enable_auto_discovery=None, technology=None, version=None, lineage_id=None, tags=None, audit_version=None, collect_method=None, has_multi_instances=None, installation_metadata=None, collect_interval=None, checksum=None, name=None, timestamp_format=None, id=None, access_group_ids=None, file_format=None, group=None):  # noqa: E501
+    def __init__(self, access_groups=None, display_name=None, description=None, applies_to=None, lineage_id=None, collect_method=None, origin_registry_id=None, checksum=None, id=None, access_group_ids=None, group=None, collector_attribute=None, auto_discovery_config=None, ad_parameters=None, config_checks=None, enable_auto_discovery=None, technology=None, version=None, tags=None, audit_version=None, has_multi_instances=None, installation_metadata=None, collect_interval=None, name=None, timestamp_format=None, file_format=None):  # noqa: E501
         """ConfigSource - a model defined in Swagger"""  # noqa: E501
-        self._collector_attribute = None
-        self._auto_discovery_config = None
         self._access_groups = None
         self._display_name = None
-        self._config_checks = None
         self._description = None
         self._applies_to = None
+        self._lineage_id = None
+        self._collect_method = None
+        self._origin_registry_id = None
+        self._checksum = None
+        self._id = None
+        self._access_group_ids = None
+        self._group = None
+        self._collector_attribute = None
+        self._auto_discovery_config = None
+        self._ad_parameters = None
+        self._config_checks = None
         self._enable_auto_discovery = None
         self._technology = None
         self._version = None
-        self._lineage_id = None
         self._tags = None
         self._audit_version = None
-        self._collect_method = None
         self._has_multi_instances = None
         self._installation_metadata = None
         self._collect_interval = None
-        self._checksum = None
         self._name = None
         self._timestamp_format = None
-        self._id = None
-        self._access_group_ids = None
         self._file_format = None
-        self._group = None
         self.discriminator = None
-        if collector_attribute is not None:
-            self.collector_attribute = collector_attribute
-        if auto_discovery_config is not None:
-            self.auto_discovery_config = auto_discovery_config
         if access_groups is not None:
             self.access_groups = access_groups
         if display_name is not None:
             self.display_name = display_name
-        if config_checks is not None:
-            self.config_checks = config_checks
         if description is not None:
             self.description = description
         if applies_to is not None:
             self.applies_to = applies_to
+        if lineage_id is not None:
+            self.lineage_id = lineage_id
+        if collect_method is not None:
+            self.collect_method = collect_method
+        if origin_registry_id is not None:
+            self.origin_registry_id = origin_registry_id
+        if checksum is not None:
+            self.checksum = checksum
+        if id is not None:
+            self.id = id
+        if access_group_ids is not None:
+            self.access_group_ids = access_group_ids
+        if group is not None:
+            self.group = group
+        if collector_attribute is not None:
+            self.collector_attribute = collector_attribute
+        if auto_discovery_config is not None:
+            self.auto_discovery_config = auto_discovery_config
+        if ad_parameters is not None:
+            self.ad_parameters = ad_parameters
+        if config_checks is not None:
+            self.config_checks = config_checks
         if enable_auto_discovery is not None:
             self.enable_auto_discovery = enable_auto_discovery
         if technology is not None:
             self.technology = technology
         if version is not None:
             self.version = version
-        if lineage_id is not None:
-            self.lineage_id = lineage_id
         if tags is not None:
             self.tags = tags
         if audit_version is not None:
             self.audit_version = audit_version
-        if collect_method is not None:
-            self.collect_method = collect_method
         if has_multi_instances is not None:
             self.has_multi_instances = has_multi_instances
         if installation_metadata is not None:
             self.installation_metadata = installation_metadata
         if collect_interval is not None:
             self.collect_interval = collect_interval
-        if checksum is not None:
-            self.checksum = checksum
         if name is not None:
             self.name = name
         if timestamp_format is not None:
             self.timestamp_format = timestamp_format
-        if id is not None:
-            self.id = id
-        if access_group_ids is not None:
-            self.access_group_ids = access_group_ids
         if file_format is not None:
             self.file_format = file_format
-        if group is not None:
-            self.group = group
-
-    @property
-    def collector_attribute(self):
-        """Gets the collector_attribute of this ConfigSource.  # noqa: E501
-
-
-        :return: The collector_attribute of this ConfigSource.  # noqa: E501
-        :rtype: CollectorAttribute
-        """
-        return self._collector_attribute
-
-    @collector_attribute.setter
-    def collector_attribute(self, collector_attribute):
-        """Sets the collector_attribute of this ConfigSource.
-
-
-        :param collector_attribute: The collector_attribute of this ConfigSource.  # noqa: E501
-        :type: CollectorAttribute
-        """
-
-        self._collector_attribute = collector_attribute
-
-    @property
-    def auto_discovery_config(self):
-        """Gets the auto_discovery_config of this ConfigSource.  # noqa: E501
-
-
-        :return: The auto_discovery_config of this ConfigSource.  # noqa: E501
-        :rtype: AutoDiscoveryConfiguration
-        """
-        return self._auto_discovery_config
-
-    @auto_discovery_config.setter
-    def auto_discovery_config(self, auto_discovery_config):
-        """Sets the auto_discovery_config of this ConfigSource.
-
-
-        :param auto_discovery_config: The auto_discovery_config of this ConfigSource.  # noqa: E501
-        :type: AutoDiscoveryConfiguration
-        """
-
-        self._auto_discovery_config = auto_discovery_config
 
     @property
     def access_groups(self):
@@ -246,29 +214,6 @@ class ConfigSource(object):
         self._display_name = display_name
 
     @property
-    def config_checks(self):
-        """Gets the config_checks of this ConfigSource.  # noqa: E501
-
-        The List of ConfigChecks  # noqa: E501
-
-        :return: The config_checks of this ConfigSource.  # noqa: E501
-        :rtype: list[ConfigCheck]
-        """
-        return self._config_checks
-
-    @config_checks.setter
-    def config_checks(self, config_checks):
-        """Sets the config_checks of this ConfigSource.
-
-        The List of ConfigChecks  # noqa: E501
-
-        :param config_checks: The config_checks of this ConfigSource.  # noqa: E501
-        :type: list[ConfigCheck]
-        """
-
-        self._config_checks = config_checks
-
-    @property
     def description(self):
         """Gets the description of this ConfigSource.  # noqa: E501
 
@@ -313,6 +258,253 @@ class ConfigSource(object):
         """
 
         self._applies_to = applies_to
+
+    @property
+    def lineage_id(self):
+        """Gets the lineage_id of this ConfigSource.  # noqa: E501
+
+        The lineageId the LMModule belongs to  # noqa: E501
+
+        :return: The lineage_id of this ConfigSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._lineage_id
+
+    @lineage_id.setter
+    def lineage_id(self, lineage_id):
+        """Sets the lineage_id of this ConfigSource.
+
+        The lineageId the LMModule belongs to  # noqa: E501
+
+        :param lineage_id: The lineage_id of this ConfigSource.  # noqa: E501
+        :type: str
+        """
+
+        self._lineage_id = lineage_id
+
+    @property
+    def collect_method(self):
+        """Gets the collect_method of this ConfigSource.  # noqa: E501
+
+        The method to collect data  # noqa: E501
+
+        :return: The collect_method of this ConfigSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._collect_method
+
+    @collect_method.setter
+    def collect_method(self, collect_method):
+        """Sets the collect_method of this ConfigSource.
+
+        The method to collect data  # noqa: E501
+
+        :param collect_method: The collect_method of this ConfigSource.  # noqa: E501
+        :type: str
+        """
+
+        self._collect_method = collect_method
+
+    @property
+    def origin_registry_id(self):
+        """Gets the origin_registry_id of this ConfigSource.  # noqa: E501
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :return: The origin_registry_id of this ConfigSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._origin_registry_id
+
+    @origin_registry_id.setter
+    def origin_registry_id(self, origin_registry_id):
+        """Sets the origin_registry_id of this ConfigSource.
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :param origin_registry_id: The origin_registry_id of this ConfigSource.  # noqa: E501
+        :type: str
+        """
+
+        self._origin_registry_id = origin_registry_id
+
+    @property
+    def checksum(self):
+        """Gets the checksum of this ConfigSource.  # noqa: E501
+
+        The metadata checksum for the LMModule content  # noqa: E501
+
+        :return: The checksum of this ConfigSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._checksum
+
+    @checksum.setter
+    def checksum(self, checksum):
+        """Sets the checksum of this ConfigSource.
+
+        The metadata checksum for the LMModule content  # noqa: E501
+
+        :param checksum: The checksum of this ConfigSource.  # noqa: E501
+        :type: str
+        """
+
+        self._checksum = checksum
+
+    @property
+    def id(self):
+        """Gets the id of this ConfigSource.  # noqa: E501
+
+        The ID of the LMModule  # noqa: E501
+
+        :return: The id of this ConfigSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this ConfigSource.
+
+        The ID of the LMModule  # noqa: E501
+
+        :param id: The id of this ConfigSource.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def access_group_ids(self):
+        """Gets the access_group_ids of this ConfigSource.  # noqa: E501
+
+        The Access Groups Id's  # noqa: E501
+
+        :return: The access_group_ids of this ConfigSource.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._access_group_ids
+
+    @access_group_ids.setter
+    def access_group_ids(self, access_group_ids):
+        """Sets the access_group_ids of this ConfigSource.
+
+        The Access Groups Id's  # noqa: E501
+
+        :param access_group_ids: The access_group_ids of this ConfigSource.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._access_group_ids = access_group_ids
+
+    @property
+    def group(self):
+        """Gets the group of this ConfigSource.  # noqa: E501
+
+        The group the LMModule is in  # noqa: E501
+
+        :return: The group of this ConfigSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._group
+
+    @group.setter
+    def group(self, group):
+        """Sets the group of this ConfigSource.
+
+        The group the LMModule is in  # noqa: E501
+
+        :param group: The group of this ConfigSource.  # noqa: E501
+        :type: str
+        """
+
+        self._group = group
+
+    @property
+    def collector_attribute(self):
+        """Gets the collector_attribute of this ConfigSource.  # noqa: E501
+
+
+        :return: The collector_attribute of this ConfigSource.  # noqa: E501
+        :rtype: CollectorAttribute
+        """
+        return self._collector_attribute
+
+    @collector_attribute.setter
+    def collector_attribute(self, collector_attribute):
+        """Sets the collector_attribute of this ConfigSource.
+
+
+        :param collector_attribute: The collector_attribute of this ConfigSource.  # noqa: E501
+        :type: CollectorAttribute
+        """
+
+        self._collector_attribute = collector_attribute
+
+    @property
+    def auto_discovery_config(self):
+        """Gets the auto_discovery_config of this ConfigSource.  # noqa: E501
+
+
+        :return: The auto_discovery_config of this ConfigSource.  # noqa: E501
+        :rtype: AutoDiscoveryConfiguration
+        """
+        return self._auto_discovery_config
+
+    @auto_discovery_config.setter
+    def auto_discovery_config(self, auto_discovery_config):
+        """Sets the auto_discovery_config of this ConfigSource.
+
+
+        :param auto_discovery_config: The auto_discovery_config of this ConfigSource.  # noqa: E501
+        :type: AutoDiscoveryConfiguration
+        """
+
+        self._auto_discovery_config = auto_discovery_config
+
+    @property
+    def ad_parameters(self):
+        """Gets the ad_parameters of this ConfigSource.  # noqa: E501
+
+
+        :return: The ad_parameters of this ConfigSource.  # noqa: E501
+        :rtype: DataSource
+        """
+        return self._ad_parameters
+
+    @ad_parameters.setter
+    def ad_parameters(self, ad_parameters):
+        """Sets the ad_parameters of this ConfigSource.
+
+
+        :param ad_parameters: The ad_parameters of this ConfigSource.  # noqa: E501
+        :type: DataSource
+        """
+
+        self._ad_parameters = ad_parameters
+
+    @property
+    def config_checks(self):
+        """Gets the config_checks of this ConfigSource.  # noqa: E501
+
+        The List of ConfigChecks  # noqa: E501
+
+        :return: The config_checks of this ConfigSource.  # noqa: E501
+        :rtype: list[ConfigCheck]
+        """
+        return self._config_checks
+
+    @config_checks.setter
+    def config_checks(self, config_checks):
+        """Sets the config_checks of this ConfigSource.
+
+        The List of ConfigChecks  # noqa: E501
+
+        :param config_checks: The config_checks of this ConfigSource.  # noqa: E501
+        :type: list[ConfigCheck]
+        """
+
+        self._config_checks = config_checks
 
     @property
     def enable_auto_discovery(self):
@@ -384,29 +576,6 @@ class ConfigSource(object):
         self._version = version
 
     @property
-    def lineage_id(self):
-        """Gets the lineage_id of this ConfigSource.  # noqa: E501
-
-        The lineageId the LMModule belongs to  # noqa: E501
-
-        :return: The lineage_id of this ConfigSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._lineage_id
-
-    @lineage_id.setter
-    def lineage_id(self, lineage_id):
-        """Sets the lineage_id of this ConfigSource.
-
-        The lineageId the LMModule belongs to  # noqa: E501
-
-        :param lineage_id: The lineage_id of this ConfigSource.  # noqa: E501
-        :type: str
-        """
-
-        self._lineage_id = lineage_id
-
-    @property
     def tags(self):
         """Gets the tags of this ConfigSource.  # noqa: E501
 
@@ -451,29 +620,6 @@ class ConfigSource(object):
         """
 
         self._audit_version = audit_version
-
-    @property
-    def collect_method(self):
-        """Gets the collect_method of this ConfigSource.  # noqa: E501
-
-        The method to collect data  # noqa: E501
-
-        :return: The collect_method of this ConfigSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._collect_method
-
-    @collect_method.setter
-    def collect_method(self, collect_method):
-        """Sets the collect_method of this ConfigSource.
-
-        The method to collect data  # noqa: E501
-
-        :param collect_method: The collect_method of this ConfigSource.  # noqa: E501
-        :type: str
-        """
-
-        self._collect_method = collect_method
 
     @property
     def has_multi_instances(self):
@@ -543,29 +689,6 @@ class ConfigSource(object):
         self._collect_interval = collect_interval
 
     @property
-    def checksum(self):
-        """Gets the checksum of this ConfigSource.  # noqa: E501
-
-        The metadata checksum for the LMModule content  # noqa: E501
-
-        :return: The checksum of this ConfigSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._checksum
-
-    @checksum.setter
-    def checksum(self, checksum):
-        """Sets the checksum of this ConfigSource.
-
-        The metadata checksum for the LMModule content  # noqa: E501
-
-        :param checksum: The checksum of this ConfigSource.  # noqa: E501
-        :type: str
-        """
-
-        self._checksum = checksum
-
-    @property
     def name(self):
         """Gets the name of this ConfigSource.  # noqa: E501
 
@@ -612,52 +735,6 @@ class ConfigSource(object):
         self._timestamp_format = timestamp_format
 
     @property
-    def id(self):
-        """Gets the id of this ConfigSource.  # noqa: E501
-
-        The ID of the LMModule  # noqa: E501
-
-        :return: The id of this ConfigSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this ConfigSource.
-
-        The ID of the LMModule  # noqa: E501
-
-        :param id: The id of this ConfigSource.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def access_group_ids(self):
-        """Gets the access_group_ids of this ConfigSource.  # noqa: E501
-
-        The Access Groups Id's  # noqa: E501
-
-        :return: The access_group_ids of this ConfigSource.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._access_group_ids
-
-    @access_group_ids.setter
-    def access_group_ids(self, access_group_ids):
-        """Sets the access_group_ids of this ConfigSource.
-
-        The Access Groups Id's  # noqa: E501
-
-        :param access_group_ids: The access_group_ids of this ConfigSource.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._access_group_ids = access_group_ids
-
-    @property
     def file_format(self):
         """Gets the file_format of this ConfigSource.  # noqa: E501
 
@@ -679,29 +756,6 @@ class ConfigSource(object):
         """
 
         self._file_format = file_format
-
-    @property
-    def group(self):
-        """Gets the group of this ConfigSource.  # noqa: E501
-
-        The group the LMModule is in  # noqa: E501
-
-        :return: The group of this ConfigSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._group
-
-    @group.setter
-    def group(self, group):
-        """Sets the group of this ConfigSource.
-
-        The group the LMModule is in  # noqa: E501
-
-        :param group: The group of this ConfigSource.  # noqa: E501
-        :type: str
-        """
-
-        self._group = group
 
     def to_dict(self):
         """Returns the model properties as a dict"""

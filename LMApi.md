@@ -4,95 +4,98 @@ All URIs are relative to */santaba/rest*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ack_alert_by_id**](LMApi.md#ack_alert_by_id) | **POST** /alert/alerts/{id}/ack | ack alert by id
+[**ack_alert_by_id**](LMApi.md#ack_alert_by_id) | **POST** /alert/alerts/{id}/ack | Acknowledge alert by ID
 [**ack_collector_down_alert_by_id**](LMApi.md#ack_collector_down_alert_by_id) | **POST** /setting/collector/collectors/{id}/ackdown | ack collector down alert
 [**add_access_group**](LMApi.md#add_access_group) | **POST** /setting/accessgroup/add | Create a access group
 [**add_admin**](LMApi.md#add_admin) | **POST** /setting/admins | add user
-[**add_alert_note_by_id**](LMApi.md#add_alert_note_by_id) | **POST** /alert/alerts/{id}/note | add alert note
+[**add_alert_note_by_id**](LMApi.md#add_alert_note_by_id) | **POST** /alert/alerts/{id}/note | Add alert note
 [**add_alert_rule**](LMApi.md#add_alert_rule) | **POST** /setting/alert/rules | add alert rule
-[**add_api_token_by_admin_id**](LMApi.md#add_api_token_by_admin_id) | **POST** /setting/admins/{adminId}/apitokens | add api tokens for a user
-[**add_applies_to_function**](LMApi.md#add_applies_to_function) | **POST** /setting/functions | add applies to function
+[**add_api_token_by_admin_id**](LMApi.md#add_api_token_by_admin_id) | **POST** /setting/admins/{adminId}/apitokens | Add API tokens for a user
+[**add_applies_to_function**](LMApi.md#add_applies_to_function) | **POST** /setting/functions | Add applies to function
 [**add_collector**](LMApi.md#add_collector) | **POST** /setting/collector/collectors | add collector
-[**add_collector_group**](LMApi.md#add_collector_group) | **POST** /setting/collector/groups | add collector group
-[**add_config_source**](LMApi.md#add_config_source) | **POST** /setting/configsources | add config source
+[**add_collector_group**](LMApi.md#add_collector_group) | **POST** /setting/collector/groups | Add collector group
+[**add_config_source**](LMApi.md#add_config_source) | **POST** /setting/configsources | Add a new config source
 [**add_dashboard**](LMApi.md#add_dashboard) | **POST** /dashboard/dashboards | add dashboard
 [**add_dashboard_group**](LMApi.md#add_dashboard_group) | **POST** /dashboard/groups | add dashboard group
 [**add_dashboard_group_asynchronously**](LMApi.md#add_dashboard_group_asynchronously) | **POST** /dashboard/groups/{id}/asyncclone | add dashboard group asynchronously
-[**add_datasource_by_id**](LMApi.md#add_datasource_by_id) | **POST** /setting/datasources | add datasource
+[**add_datasource_by_id**](LMApi.md#add_datasource_by_id) | **POST** /setting/datasources | Add datasource
 [**add_device**](LMApi.md#add_device) | **POST** /device/devices | add a new device
-[**add_device_datasource_instance**](LMApi.md#add_device_datasource_instance) | **POST** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances | add device instance 
-[**add_device_datasource_instance_group**](LMApi.md#add_device_datasource_instance_group) | **POST** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups | add device datasource instance group 
+[**add_device_datasource_instance**](LMApi.md#add_device_datasource_instance) | **POST** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances | add device instance
+[**add_device_datasource_instance_group**](LMApi.md#add_device_datasource_instance_group) | **POST** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups | Add device datasource instance group
 [**add_device_group**](LMApi.md#add_device_group) | **POST** /device/groups | add device group
 [**add_device_group_cluster_alert_conf**](LMApi.md#add_device_group_cluster_alert_conf) | **POST** /device/groups/{deviceGroupId}/clusterAlertConf | Add cluster alert configuration
-[**add_device_group_property**](LMApi.md#add_device_group_property) | **POST** /device/groups/{gid}/properties | add device group property
-[**add_device_property**](LMApi.md#add_device_property) | **POST** /device/devices/{deviceId}/properties | add device property
-[**add_dns_mapping**](LMApi.md#add_dns_mapping) | **POST** /setting/dnsmappings | Add dns mapping
-[**add_escalation_chain**](LMApi.md#add_escalation_chain) | **POST** /setting/alert/chains | add escalation chain
-[**add_event_source**](LMApi.md#add_event_source) | **POST** /setting/eventsources | add eventSource
+[**add_device_group_property**](LMApi.md#add_device_group_property) | **POST** /device/groups/{gid}/properties | Add device group property
+[**add_device_property**](LMApi.md#add_device_property) | **POST** /device/devices/{deviceId}/properties | Add device property
+[**add_diagnostic_source**](LMApi.md#add_diagnostic_source) | **POST** /setting/diagnosticsources | Add diagnostics source
+[**add_dns_mapping**](LMApi.md#add_dns_mapping) | **POST** /setting/dnsmappings | Add DNS mapping
+[**add_escalation_chain**](LMApi.md#add_escalation_chain) | **POST** /setting/alert/chains | Add escalation chain
+[**add_event_source**](LMApi.md#add_event_source) | **POST** /setting/eventsources | Add event source
 [**add_job_monitor**](LMApi.md#add_job_monitor) | **POST** /setting/batchjobs | Add JobMonitor
-[**add_log_source**](LMApi.md#add_log_source) | **POST** /setting/logsources | add log source 
-[**add_netscan**](LMApi.md#add_netscan) | **POST** /setting/netscans | add a new netscan
-[**add_oid**](LMApi.md#add_oid) | **POST** /setting/oids | add a new OID
+[**add_log_source**](LMApi.md#add_log_source) | **POST** /setting/logsources | Add log source
+[**add_netscan**](LMApi.md#add_netscan) | **POST** /setting/netscans | Add a new netscan
+[**add_oid**](LMApi.md#add_oid) | **POST** /setting/oids | Add a new OID
 [**add_ops_note**](LMApi.md#add_ops_note) | **POST** /setting/opsnotes | add opsnote
-[**add_property_rule**](LMApi.md#add_property_rule) | **POST** /setting/propertyrules | add a new property rule
-[**add_recipient_group**](LMApi.md#add_recipient_group) | **POST** /setting/recipientgroups | add recipient group
-[**add_report**](LMApi.md#add_report) | **POST** /report/reports | add report
-[**add_report_group**](LMApi.md#add_report_group) | **POST** /report/groups | add report group
-[**add_role**](LMApi.md#add_role) | **POST** /setting/roles | add role
+[**add_property_rule**](LMApi.md#add_property_rule) | **POST** /setting/propertyrules | Add a new property rule
+[**add_recipient_group**](LMApi.md#add_recipient_group) | **POST** /setting/recipientgroups | Add recipient group
+[**add_report**](LMApi.md#add_report) | **POST** /report/reports | Add report
+[**add_report_group**](LMApi.md#add_report_group) | **POST** /report/groups | Add report group
+[**add_role**](LMApi.md#add_role) | **POST** /setting/roles | Add role
 [**add_sdt**](LMApi.md#add_sdt) | **POST** /sdt/sdts | add SDT (Response may contain extra fields depending upon the type of SDT being added)
 [**add_topology_source**](LMApi.md#add_topology_source) | **POST** /setting/topologysources | Add TopologySource
-[**add_website**](LMApi.md#add_website) | **POST** /website/websites | Add website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.
+[**add_website**](LMApi.md#add_website) | **POST** /website/websites | Add website
 [**add_website_group**](LMApi.md#add_website_group) | **POST** /website/groups | add website group
-[**add_widget**](LMApi.md#add_widget) | **POST** /dashboard/widgets | add widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+[**add_widget**](LMApi.md#add_widget) | **POST** /dashboard/widgets | Add widget
 [**collect_device_config_source_config**](LMApi.md#collect_device_config_source_config) | **POST** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/config/configCollection | collect a config for a device
 [**create_log_partition**](LMApi.md#create_log_partition) | **POST** /log/partitions | Create a new log partition
 [**delete_access_group**](LMApi.md#delete_access_group) | **DELETE** /setting/accessgroup/{id} | Delete access group
 [**delete_admin_by_id**](LMApi.md#delete_admin_by_id) | **DELETE** /setting/admins/{id} | delete user
 [**delete_alert_rule_by_id**](LMApi.md#delete_alert_rule_by_id) | **DELETE** /setting/alert/rules/{id} | delete alert rule
-[**delete_api_token_by_id**](LMApi.md#delete_api_token_by_id) | **DELETE** /setting/admins/{adminId}/apitokens/{apitokenId} | delete apiToken
-[**delete_applies_to_function_by_id**](LMApi.md#delete_applies_to_function_by_id) | **DELETE** /setting/functions/{id} | delete applies to function
+[**delete_api_token_by_id**](LMApi.md#delete_api_token_by_id) | **DELETE** /setting/admins/{adminId}/apitokens/{apitokenId} | Delete API token
+[**delete_applies_to_function_by_id**](LMApi.md#delete_applies_to_function_by_id) | **DELETE** /setting/functions/{id} | Delete applies to function
 [**delete_collector_by_id**](LMApi.md#delete_collector_by_id) | **DELETE** /setting/collector/collectors/{id} | delete collector
-[**delete_collector_group_by_id**](LMApi.md#delete_collector_group_by_id) | **DELETE** /setting/collector/groups/{id} | delete collector group
-[**delete_config_source_by_id**](LMApi.md#delete_config_source_by_id) | **DELETE** /setting/configsources/{id} | delete config source by id
+[**delete_collector_group_by_id**](LMApi.md#delete_collector_group_by_id) | **DELETE** /setting/collector/groups/{id} | Delete collector group
+[**delete_config_source_by_id**](LMApi.md#delete_config_source_by_id) | **DELETE** /setting/configsources/{id} | Delete config source by ID
 [**delete_dashboard_by_id**](LMApi.md#delete_dashboard_by_id) | **DELETE** /dashboard/dashboards/{id} | delete dashboard
 [**delete_dashboard_group_by_id**](LMApi.md#delete_dashboard_group_by_id) | **DELETE** /dashboard/groups/{id} | delete dashboard group
-[**delete_datasource_by_id**](LMApi.md#delete_datasource_by_id) | **DELETE** /setting/datasources/{id} | delete datasource
+[**delete_datasource_by_id**](LMApi.md#delete_datasource_by_id) | **DELETE** /setting/datasources/{id} | Delete datasource
 [**delete_device_by_id**](LMApi.md#delete_device_by_id) | **DELETE** /device/devices/{id} | delete a device
 [**delete_device_datasource_instance_by_id**](LMApi.md#delete_device_datasource_instance_by_id) | **DELETE** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id} | delete a device instance
 [**delete_device_group_by_id**](LMApi.md#delete_device_group_by_id) | **DELETE** /device/groups/{id} | delete device group
 [**delete_device_group_cluster_alert_conf_by_id**](LMApi.md#delete_device_group_cluster_alert_conf_by_id) | **DELETE** /device/groups/{deviceGroupId}/clusterAlertConf/{id} | Delete cluster alert configuration
-[**delete_device_group_property_by_name**](LMApi.md#delete_device_group_property_by_name) | **DELETE** /device/groups/{gid}/properties/{name} | delete device group property
-[**delete_device_property_by_name**](LMApi.md#delete_device_property_by_name) | **DELETE** /device/devices/{deviceId}/properties/{name} | delete device property
-[**delete_escalation_chain_by_id**](LMApi.md#delete_escalation_chain_by_id) | **DELETE** /setting/alert/chains/{id} | delete escalation chain
-[**delete_event_source_by_id**](LMApi.md#delete_event_source_by_id) | **DELETE** /setting/eventsources/{id} | delete eventSource by id
+[**delete_device_group_property_by_name**](LMApi.md#delete_device_group_property_by_name) | **DELETE** /device/groups/{gid}/properties/{name} | Delete device group property
+[**delete_device_property_by_name**](LMApi.md#delete_device_property_by_name) | **DELETE** /device/devices/{deviceId}/properties/{name} | Delete device property
+[**delete_diagnostic_source_by_id**](LMApi.md#delete_diagnostic_source_by_id) | **DELETE** /setting/diagnosticsources/{id} | Delete a diagnostic source module
+[**delete_escalation_chain_by_id**](LMApi.md#delete_escalation_chain_by_id) | **DELETE** /setting/alert/chains/{id} | Delete escalation chain
+[**delete_event_source_by_id**](LMApi.md#delete_event_source_by_id) | **DELETE** /setting/eventsources/{id} | Delete event source by ID
 [**delete_job_monitor**](LMApi.md#delete_job_monitor) | **DELETE** /setting/batchjobs/{id} | Delete JobMonitor
 [**delete_log_partition_by_id**](LMApi.md#delete_log_partition_by_id) | **DELETE** /log/partitions/{id} | Delete a log partition by ID
-[**delete_log_source**](LMApi.md#delete_log_source) | **DELETE** /setting/logsources/{id} | delete log source 
-[**delete_netscan_by_id**](LMApi.md#delete_netscan_by_id) | **DELETE** /setting/netscans/{id} | delete a netscan
-[**delete_oid**](LMApi.md#delete_oid) | **DELETE** /setting/oids/{id} | delete a OID
+[**delete_log_source**](LMApi.md#delete_log_source) | **DELETE** /setting/logsources/{id} | Delete log source
+[**delete_netscan_by_id**](LMApi.md#delete_netscan_by_id) | **DELETE** /setting/netscans/{id} | Delete a netscan
+[**delete_oid**](LMApi.md#delete_oid) | **DELETE** /setting/oids/{id} | Delete an OID
 [**delete_ops_note_by_id**](LMApi.md#delete_ops_note_by_id) | **DELETE** /setting/opsnotes/{id} | delete opsnote
 [**delete_property_rule**](LMApi.md#delete_property_rule) | **DELETE** /setting/propertyrules/{id} | delete a property rule
-[**delete_recipient_group_by_id**](LMApi.md#delete_recipient_group_by_id) | **DELETE** /setting/recipientgroups/{id} | delete recipient group
-[**delete_report_by_id**](LMApi.md#delete_report_by_id) | **DELETE** /report/reports/{id} | delete report
-[**delete_report_group_by_id**](LMApi.md#delete_report_group_by_id) | **DELETE** /report/groups/{id} | delete report group
-[**delete_role_by_id**](LMApi.md#delete_role_by_id) | **DELETE** /setting/roles/{id} | delete role
+[**delete_recipient_group_by_id**](LMApi.md#delete_recipient_group_by_id) | **DELETE** /setting/recipientgroups/{id} | Delete recipient group
+[**delete_report_by_id**](LMApi.md#delete_report_by_id) | **DELETE** /report/reports/{id} | Delete report
+[**delete_report_group_by_id**](LMApi.md#delete_report_group_by_id) | **DELETE** /report/groups/{id} | Delete report group
+[**delete_role_by_id**](LMApi.md#delete_role_by_id) | **DELETE** /setting/roles/{id} | Delete role
 [**delete_sdt_by_id**](LMApi.md#delete_sdt_by_id) | **DELETE** /sdt/sdts/{id} | delete SDT
 [**delete_topology_source**](LMApi.md#delete_topology_source) | **DELETE** /setting/topologysources/{id} | Delete TopologySource
 [**delete_website_by_id**](LMApi.md#delete_website_by_id) | **DELETE** /website/websites/{id} | delete website
 [**delete_website_group_by_id**](LMApi.md#delete_website_group_by_id) | **DELETE** /website/groups/{id} | delete website group
-[**delete_widget_by_id**](LMApi.md#delete_widget_by_id) | **DELETE** /dashboard/widgets/{id} | delete widget
+[**delete_widget_by_id**](LMApi.md#delete_widget_by_id) | **DELETE** /dashboard/widgets/{id} | Delete widget
 [**discover_subscriptions**](LMApi.md#discover_subscriptions) | **POST** /azure/functions/discoverSubscriptions | view subscriptions
-[**escalated_alert_by_id**](LMApi.md#escalated_alert_by_id) | **POST** /alert/alerts/{id}/escalate | escalate alert by id
+[**escalated_alert_by_id**](LMApi.md#escalated_alert_by_id) | **POST** /alert/alerts/{id}/escalate | Escalate alert by ID
 [**execute_debug_command**](LMApi.md#execute_debug_command) | **POST** /debug | Execute a Collector debug command
-[**fetch_device_instances_data**](LMApi.md#fetch_device_instances_data) | **POST** /device/instances/datafetch | fetch device instances data
-[**fetch_report_using_task_id**](LMApi.md#fetch_report_using_task_id) | **GET** /report/reports/{id}/tasks/{taskId} | get report for task Id
-[**generate_report_by_id**](LMApi.md#generate_report_by_id) | **POST** /report/reports/{id}/executions | run a report
+[**execute_diagnostics_manually**](LMApi.md#execute_diagnostics_manually) | **POST** /setting/diagnosticsources/executemanually | Trigger a diagnostic module for host.
+[**fetch_device_instances_data**](LMApi.md#fetch_device_instances_data) | **POST** /device/instances/datafetch | Fetch device instances data
+[**fetch_report_using_task_id**](LMApi.md#fetch_report_using_task_id) | **GET** /report/reports/{id}/tasks/{taskId} | Get report for task ID
+[**generate_report_by_id**](LMApi.md#generate_report_by_id) | **POST** /report/reports/{id}/executions | Run a report
 [**get_access_group_by_id**](LMApi.md#get_access_group_by_id) | **GET** /setting/accessgroup/{id} | Get access group by id
 [**get_access_group_list**](LMApi.md#get_access_group_list) | **GET** /setting/accessgroup | Get access group list
 [**get_admin_by_id**](LMApi.md#get_admin_by_id) | **GET** /setting/admins/{id} | get user
 [**get_admin_list**](LMApi.md#get_admin_list) | **GET** /setting/admins | get user list
 [**get_alert_by_id**](LMApi.md#get_alert_by_id) | **GET** /alert/alerts/{id} | get alert
-[**get_alert_list**](LMApi.md#get_alert_list) | **GET** /alert/alerts | get alert list
+[**get_alert_list**](LMApi.md#get_alert_list) | **GET** /alert/alerts | Get alert list
 [**get_alert_list_by_device_group_id**](LMApi.md#get_alert_list_by_device_group_id) | **GET** /device/groups/{id}/alerts | get device group alerts
 [**get_alert_list_by_device_id**](LMApi.md#get_alert_list_by_device_id) | **GET** /device/devices/{id}/alerts | get alerts
 [**get_alert_rule_by_id**](LMApi.md#get_alert_rule_by_id) | **GET** /setting/alert/rules/{id} | get alert rule by id
@@ -100,229 +103,250 @@ Method | HTTP request | Description
 [**get_all_log_partitions**](LMApi.md#get_all_log_partitions) | **GET** /log/partitions | Retrieve a list of all log partitions
 [**get_all_sdt_list_by_device_id**](LMApi.md#get_all_sdt_list_by_device_id) | **GET** /device/devices/{id}/sdts | get SDTs for a device
 [**get_all_sdt_list_by_website_group_id**](LMApi.md#get_all_sdt_list_by_website_group_id) | **GET** /website/groups/{id}/sdts | get a list of SDTs for a website group (Response may contain extra fields depending upon the type of SDT)
-[**get_api_token_list**](LMApi.md#get_api_token_list) | **GET** /setting/admins/apitokens | get a list of api tokens across users
-[**get_api_token_list_by_admin_id**](LMApi.md#get_api_token_list_by_admin_id) | **GET** /setting/admins/{adminId}/apitokens | get api tokens for a user
-[**get_applies_to_function_by_id**](LMApi.md#get_applies_to_function_by_id) | **GET** /setting/functions/{id} | get applies to function
-[**get_applies_to_function_list**](LMApi.md#get_applies_to_function_list) | **GET** /setting/functions | get applies to function list
-[**get_associated_device_list_by_data_source_id**](LMApi.md#get_associated_device_list_by_data_source_id) | **GET** /setting/datasources/{id}/devices | get devices associated with a datasource
+[**get_api_token_list**](LMApi.md#get_api_token_list) | **GET** /setting/admins/apitokens | Get a list of API tokens across users
+[**get_api_token_list_by_admin_id**](LMApi.md#get_api_token_list_by_admin_id) | **GET** /setting/admins/{adminId}/apitokens | Get API tokens for a user
+[**get_applies_to_function_by_id**](LMApi.md#get_applies_to_function_by_id) | **GET** /setting/functions/{id} | Get applies to function by ID
+[**get_applies_to_function_list**](LMApi.md#get_applies_to_function_list) | **GET** /setting/functions | Get applies to function list
+[**get_associated_device_list_by_data_source_id**](LMApi.md#get_associated_device_list_by_data_source_id) | **GET** /setting/datasources/{id}/devices | Get devices associated with a datasource
 [**get_audit_log_by_id**](LMApi.md#get_audit_log_by_id) | **GET** /setting/accesslogs/{id} | Get audit log by id
 [**get_audit_log_list**](LMApi.md#get_audit_log_list) | **GET** /setting/accesslogs | Get audit logs
 [**get_aws_account_id**](LMApi.md#get_aws_account_id) | **GET** /aws/accountId | Get AWS account ID
 [**get_aws_external_id**](LMApi.md#get_aws_external_id) | **GET** /aws/externalId | Get AWS external ID
 [**get_collector_by_id**](LMApi.md#get_collector_by_id) | **GET** /setting/collector/collectors/{id} | get collector
-[**get_collector_group_by_id**](LMApi.md#get_collector_group_by_id) | **GET** /setting/collector/groups/{id} | get collector group
-[**get_collector_group_list**](LMApi.md#get_collector_group_list) | **GET** /setting/collector/groups | get collector group list
+[**get_collector_group_by_id**](LMApi.md#get_collector_group_by_id) | **GET** /setting/collector/groups/{id} | Get collector group
+[**get_collector_group_list**](LMApi.md#get_collector_group_list) | **GET** /setting/collector/groups | Get collector group list
 [**get_collector_installer**](LMApi.md#get_collector_installer) | **GET** /setting/collector/collectors/{collectorId}/installers/{osAndArch} | get collector installer
 [**get_collector_list**](LMApi.md#get_collector_list) | **GET** /setting/collector/collectors | get collector list
 [**get_collector_version_list**](LMApi.md#get_collector_version_list) | **GET** /setting/collector/collectors/versions | get collector version list
-[**get_config_source_by_id**](LMApi.md#get_config_source_by_id) | **GET** /setting/configsources/{id} | get config source by id
-[**get_config_source_list**](LMApi.md#get_config_source_list) | **GET** /setting/configsources | get config source list
+[**get_config_source_by_id**](LMApi.md#get_config_source_by_id) | **GET** /setting/configsources/{id} | Get config source by ID
+[**get_config_source_list**](LMApi.md#get_config_source_list) | **GET** /setting/configsources | Get config source list
 [**get_contract_info_by_company**](LMApi.md#get_contract_info_by_company) | **GET** /usage/contractInfo | get contract info by company
 [**get_dashboard_by_id**](LMApi.md#get_dashboard_by_id) | **GET** /dashboard/dashboards/{id} | get dashboard
-[**get_dashboard_group_by_id**](LMApi.md#get_dashboard_group_by_id) | **GET** /dashboard/groups/{id} | get dashboard group
+[**get_dashboard_group_by_id**](LMApi.md#get_dashboard_group_by_id) | **GET** /dashboard/groups/{id} | Get dashboard group by ID
 [**get_dashboard_group_list**](LMApi.md#get_dashboard_group_list) | **GET** /dashboard/groups | get dashboard group list
-[**get_dashboard_list**](LMApi.md#get_dashboard_list) | **GET** /dashboard/dashboards | get dashboard list
-[**get_data_source_overview_graph_by_id**](LMApi.md#get_data_source_overview_graph_by_id) | **GET** /setting/datasources/{dsId}/ographs/{id} | get datasource overview graph by id
-[**get_data_source_overview_graph_list**](LMApi.md#get_data_source_overview_graph_list) | **GET** /setting/datasources/{dsId}/ographs | get datasource overview graph list
-[**get_datasource_by_id**](LMApi.md#get_datasource_by_id) | **GET** /setting/datasources/{id} | get datasource by id
-[**get_datasource_list**](LMApi.md#get_datasource_list) | **GET** /setting/datasources | get datasource list
+[**get_dashboard_list**](LMApi.md#get_dashboard_list) | **GET** /dashboard/dashboards | Get dashboard list
+[**get_data_source_overview_graph_by_id**](LMApi.md#get_data_source_overview_graph_by_id) | **GET** /setting/datasources/{dsId}/ographs/{id} | Get datasource overview graph by ID
+[**get_data_source_overview_graph_list**](LMApi.md#get_data_source_overview_graph_list) | **GET** /setting/datasources/{dsId}/ographs | Get datasource overview graph list
+[**get_datasource_by_id**](LMApi.md#get_datasource_by_id) | **GET** /setting/datasources/{id} | Get datasource by ID
+[**get_datasource_list**](LMApi.md#get_datasource_list) | **GET** /setting/datasources | Get datasource list
 [**get_debug_command_result**](LMApi.md#get_debug_command_result) | **GET** /debug/{id} | Get the result of a Collector debug command using sessionId
 [**get_delta_devices**](LMApi.md#get_delta_devices) | **GET** /device/devices/delta/{deltaId} | Get delta devices using deltaId
 [**get_delta_id_with_devices**](LMApi.md#get_delta_id_with_devices) | **GET** /device/devices/delta | Get filter matched devices with new deltaId
 [**get_device_by_id**](LMApi.md#get_device_by_id) | **GET** /device/devices/{id} | get device by id
 [**get_device_config_source_config_by_id**](LMApi.md#get_device_config_source_config_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/config/{id} | get a config for a device
 [**get_device_config_source_config_list**](LMApi.md#get_device_config_source_config_list) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/config | get detailed config information for the instance
-[**get_device_datasource_by_id**](LMApi.md#get_device_datasource_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{id} | get device datasource 
-[**get_device_datasource_data_by_id**](LMApi.md#get_device_datasource_data_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{id}/data | get device datasource data 
+[**get_device_datasource_by_id**](LMApi.md#get_device_datasource_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{id} | Get device datasource
+[**get_device_datasource_data_by_id**](LMApi.md#get_device_datasource_data_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{id}/data | Get device datasource data
 [**get_device_datasource_instance_alert_setting_by_id**](LMApi.md#get_device_datasource_instance_alert_setting_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/alertsettings/{id} | get device instance alert setting
 [**get_device_datasource_instance_alert_setting_list_of_device**](LMApi.md#get_device_datasource_instance_alert_setting_list_of_device) | **GET** /device/devices/{deviceId}/alertsettings | get a list of alert settings for a device
 [**get_device_datasource_instance_alert_setting_list_of_dsi**](LMApi.md#get_device_datasource_instance_alert_setting_list_of_dsi) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/alertsettings | get a list of alert settings for a device datasource instance
-[**get_device_datasource_instance_by_id**](LMApi.md#get_device_datasource_instance_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id} | get device instance 
+[**get_device_datasource_instance_by_id**](LMApi.md#get_device_datasource_instance_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id} | get device instance
 [**get_device_datasource_instance_data**](LMApi.md#get_device_datasource_instance_data) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}/data | get device instance data
-[**get_device_datasource_instance_graph_data**](LMApi.md#get_device_datasource_instance_graph_data) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}/graphs/{graphId}/data | get device instance graph data 
-[**get_device_datasource_instance_group_by_id**](LMApi.md#get_device_datasource_instance_group_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{id} | get device datasource instance group 
-[**get_device_datasource_instance_group_list**](LMApi.md#get_device_datasource_instance_group_list) | **GET** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups | get device datasource instance group list 
-[**get_device_datasource_instance_group_overview_graph_data**](LMApi.md#get_device_datasource_instance_group_overview_graph_data) | **GET** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{dsigId}/graphs/{ographId}/data | get device instance group overview graph data 
+[**get_device_datasource_instance_graph_data**](LMApi.md#get_device_datasource_instance_graph_data) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}/graphs/{graphId}/data | get device instance graph data
+[**get_device_datasource_instance_group_by_id**](LMApi.md#get_device_datasource_instance_group_by_id) | **GET** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{id} | Get device datasource instance group
+[**get_device_datasource_instance_group_list**](LMApi.md#get_device_datasource_instance_group_list) | **GET** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups | Get device datasource instance group list
+[**get_device_datasource_instance_group_overview_graph_data**](LMApi.md#get_device_datasource_instance_group_overview_graph_data) | **GET** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{dsigId}/graphs/{ographId}/data | Get device instance group overview graph data
 [**get_device_datasource_instance_list**](LMApi.md#get_device_datasource_instance_list) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances | get device instance list
 [**get_device_datasource_instance_sdt_history**](LMApi.md#get_device_datasource_instance_sdt_history) | **GET** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id}/historysdts | get device instance SDT history
-[**get_device_datasource_list**](LMApi.md#get_device_datasource_list) | **GET** /device/devices/{deviceId}/devicedatasources | get device datasource list 
+[**get_device_datasource_list**](LMApi.md#get_device_datasource_list) | **GET** /device/devices/{deviceId}/devicedatasources | Get device datasource list
+[**get_device_eventsource_list**](LMApi.md#get_device_eventsource_list) | **GET** /device/devices/{deviceId}/deviceeventsources | Get device eventsource list
 [**get_device_group_by_id**](LMApi.md#get_device_group_by_id) | **GET** /device/groups/{id} | get device group
 [**get_device_group_cluster_alert_conf_by_id**](LMApi.md#get_device_group_cluster_alert_conf_by_id) | **GET** /device/groups/{deviceGroupId}/clusterAlertConf/{id} | Get cluster alert configuration by id
 [**get_device_group_cluster_alert_conf_list**](LMApi.md#get_device_group_cluster_alert_conf_list) | **GET** /device/groups/{deviceGroupId}/clusterAlertConf | get a list of cluster alert configurations for a device group
-[**get_device_group_datasource_alert_setting**](LMApi.md#get_device_group_datasource_alert_setting) | **GET** /device/groups/{deviceGroupId}/datasources/{dsId}/alertsettings | get device group datasource alert setting 
+[**get_device_group_datasource_alert_setting**](LMApi.md#get_device_group_datasource_alert_setting) | **GET** /device/groups/{deviceGroupId}/datasources/{dsId}/alertsettings | Get device group datasource alert setting
 [**get_device_group_datasource_by_id**](LMApi.md#get_device_group_datasource_by_id) | **GET** /device/groups/{deviceGroupId}/datasources/{id} | get device group datasource
 [**get_device_group_datasource_list**](LMApi.md#get_device_group_datasource_list) | **GET** /device/groups/{deviceGroupId}/datasources | get device group datasource list
 [**get_device_group_list**](LMApi.md#get_device_group_list) | **GET** /device/groups | get device group list
-[**get_device_group_property_by_name**](LMApi.md#get_device_group_property_by_name) | **GET** /device/groups/{gid}/properties/{name} | get device group property by name
-[**get_device_group_property_list**](LMApi.md#get_device_group_property_list) | **GET** /device/groups/{gid}/properties | get device group properties
+[**get_device_group_property_by_name**](LMApi.md#get_device_group_property_by_name) | **GET** /device/groups/{gid}/properties/{name} | Get device group property by name
+[**get_device_group_property_list**](LMApi.md#get_device_group_property_list) | **GET** /device/groups/{gid}/properties | Get device group properties
 [**get_device_group_sdt_list**](LMApi.md#get_device_group_sdt_list) | **GET** /device/groups/{id}/sdts | get device group SDTs
 [**get_device_instance_graph_data_only_by_instance_id**](LMApi.md#get_device_instance_graph_data_only_by_instance_id) | **GET** /device/devicedatasourceinstances/{instanceId}/graphs/{graphId}/data | get device instance data
 [**get_device_instance_list**](LMApi.md#get_device_instance_list) | **GET** /device/devices/{id}/instances | get device instance list
-[**get_device_list**](LMApi.md#get_device_list) | **GET** /device/devices | get device list
-[**get_device_property_by_name**](LMApi.md#get_device_property_by_name) | **GET** /device/devices/{deviceId}/properties/{name} | get device property by name
-[**get_device_property_list**](LMApi.md#get_device_property_list) | **GET** /device/devices/{deviceId}/properties | get device properties
-[**get_escalation_chain_by_id**](LMApi.md#get_escalation_chain_by_id) | **GET** /setting/alert/chains/{id} | get escalation chain by id
-[**get_escalation_chain_list**](LMApi.md#get_escalation_chain_list) | **GET** /setting/alert/chains | get escalation chain list
-[**get_event_source_by_id**](LMApi.md#get_event_source_by_id) | **GET** /setting/eventsources/{id} | get eventSource by id
-[**get_event_source_list**](LMApi.md#get_event_source_list) | **GET** /setting/eventsources | get eventSource list
+[**get_device_list**](LMApi.md#get_device_list) | **GET** /device/devices | Get device list
+[**get_device_property_by_name**](LMApi.md#get_device_property_by_name) | **GET** /device/devices/{deviceId}/properties/{name} | Get device property by name
+[**get_device_property_list**](LMApi.md#get_device_property_list) | **GET** /device/devices/{deviceId}/properties | Get device properties
+[**get_diagnostic_sources_by_id**](LMApi.md#get_diagnostic_sources_by_id) | **GET** /setting/diagnosticsources/{id} | Get diagnostics sources by ID
+[**get_diagnostic_sources_list**](LMApi.md#get_diagnostic_sources_list) | **GET** /setting/diagnosticsources | Get diagnostics sources list
+[**get_escalation_chain_by_id**](LMApi.md#get_escalation_chain_by_id) | **GET** /setting/alert/chains/{id} | Get escalation chain by ID
+[**get_escalation_chain_list**](LMApi.md#get_escalation_chain_list) | **GET** /setting/alert/chains | Get escalation chain list
+[**get_event_source_by_id**](LMApi.md#get_event_source_by_id) | **GET** /setting/eventsources/{id} | Get event source by ID
+[**get_event_source_list**](LMApi.md#get_event_source_list) | **GET** /setting/eventsources | Get event source list
 [**get_external_api_stats**](LMApi.md#get_external_api_stats) | **GET** /apiStats/externalApis | get external api stats info
 [**get_immediate_device_list_by_device_group_id**](LMApi.md#get_immediate_device_list_by_device_group_id) | **GET** /device/groups/{id}/devices | get immediate devices under group
 [**get_immediate_website_list_by_website_group_id**](LMApi.md#get_immediate_website_list_by_website_group_id) | **GET** /website/groups/{id}/websites | get a list of websites for a group (Response may contain extra fields depending upon the type of check { PingCheck | WebCheck} being added)
-[**get_integration_audit_logs**](LMApi.md#get_integration_audit_logs) | **GET** /setting/integrations/auditlogs | get integration audit logs list
-[**get_job_monitor_by_id**](LMApi.md#get_job_monitor_by_id) | **GET** /setting/batchjobs/{id} | Get JobMonitor by id
+[**get_integration_audit_logs**](LMApi.md#get_integration_audit_logs) | **GET** /setting/integrations/auditlogs | Get integration audit logs list
+[**get_job_monitor_by_id**](LMApi.md#get_job_monitor_by_id) | **GET** /setting/batchjobs/{id} | Get JobMonitor by ID
 [**get_job_monitor_list**](LMApi.md#get_job_monitor_list) | **GET** /setting/batchjobs | Get JobMonitor List
-[**get_log_source_by_id**](LMApi.md#get_log_source_by_id) | **GET** /setting/logsources/{id} | get log source 
-[**get_log_source_list**](LMApi.md#get_log_source_list) | **GET** /setting/logsources | get log source list
-[**get_metrics_usage**](LMApi.md#get_metrics_usage) | **GET** /metrics/usage | get metrics usage
+[**get_log_source_by_id**](LMApi.md#get_log_source_by_id) | **GET** /setting/logsources/{id} | Get log source
+[**get_log_source_list**](LMApi.md#get_log_source_list) | **GET** /setting/logsources | Get log source list
+[**get_metrics_summary**](LMApi.md#get_metrics_summary) | **GET** /metrics/summary | get metrics usage with company settings summary
+[**get_metrics_usage**](LMApi.md#get_metrics_usage) | **GET** /metrics/usage | Get metrics usage
 [**get_netflow_endpoint_list**](LMApi.md#get_netflow_endpoint_list) | **GET** /device/devices/{id}/endpoints | get netflow endpoints
 [**get_netflow_flow_list**](LMApi.md#get_netflow_flow_list) | **GET** /device/devices/{id}/flows | get netflow flows
 [**get_netflow_port_list**](LMApi.md#get_netflow_port_list) | **GET** /device/devices/{id}/ports | get netflow ports
-[**get_netscan_by_id**](LMApi.md#get_netscan_by_id) | **GET** /setting/netscans/{id} | get netscan by id
-[**get_netscan_list**](LMApi.md#get_netscan_list) | **GET** /setting/netscans | get netscan list
-[**get_oid_by_id**](LMApi.md#get_oid_by_id) | **GET** /setting/oids/{id} | get OID by id
-[**get_oid_list**](LMApi.md#get_oid_list) | **GET** /setting/oids | get OID&#x27;s list
+[**get_netscan_by_id**](LMApi.md#get_netscan_by_id) | **GET** /setting/netscans/{id} | Get netscan by ID
+[**get_netscan_list**](LMApi.md#get_netscan_list) | **GET** /setting/netscans | Get netscan list
+[**get_oid_by_id**](LMApi.md#get_oid_by_id) | **GET** /setting/oids/{id} | Get OID by ID
+[**get_oid_list**](LMApi.md#get_oid_list) | **GET** /setting/oids | Get OID&#x27;s list
 [**get_ops_note_by_id**](LMApi.md#get_ops_note_by_id) | **GET** /setting/opsnotes/{id} | get opsnote by id
 [**get_ops_note_list**](LMApi.md#get_ops_note_list) | **GET** /setting/opsnotes | get opsnote list
 [**get_partition_by_id**](LMApi.md#get_partition_by_id) | **GET** /log/partitions/{id} | Retrieve details of a specific log partition
-[**get_property_rules_by_id**](LMApi.md#get_property_rules_by_id) | **GET** /setting/propertyrules/{id} | get property rules by id
-[**get_property_rules_list**](LMApi.md#get_property_rules_list) | **GET** /setting/propertyrules | get property rules list
-[**get_recipient_group_by_id**](LMApi.md#get_recipient_group_by_id) | **GET** /setting/recipientgroups/{id} | get recipient group by id
-[**get_recipient_group_list**](LMApi.md#get_recipient_group_list) | **GET** /setting/recipientgroups | get recipient group List
-[**get_report_by_id**](LMApi.md#get_report_by_id) | **GET** /report/reports/{id} | get report by id
-[**get_report_group_by_id**](LMApi.md#get_report_group_by_id) | **GET** /report/groups/{id} | get report group by id
-[**get_report_group_list**](LMApi.md#get_report_group_list) | **GET** /report/groups | get report group list
-[**get_report_list**](LMApi.md#get_report_list) | **GET** /report/reports | get report list
+[**get_property_rules_by_id**](LMApi.md#get_property_rules_by_id) | **GET** /setting/propertyrules/{id} | Get property rules by id
+[**get_property_rules_list**](LMApi.md#get_property_rules_list) | **GET** /setting/propertyrules | Get property rules list
+[**get_recipient_group_by_id**](LMApi.md#get_recipient_group_by_id) | **GET** /setting/recipientgroups/{id} | Get recipient group by id
+[**get_recipient_group_list**](LMApi.md#get_recipient_group_list) | **GET** /setting/recipientgroups | Get recipient group list
+[**get_recommendation_by_id**](LMApi.md#get_recommendation_by_id) | **GET** /cost-optimization/recommendations/{id} | Get recommendation by ID
+[**get_recommendation_categories_list**](LMApi.md#get_recommendation_categories_list) | **GET** /cost-optimization/recommendations/categories | Get recommendation category list
+[**get_recommendations_list**](LMApi.md#get_recommendations_list) | **GET** /cost-optimization/recommendations | Get recommendation list
+[**get_report_by_id**](LMApi.md#get_report_by_id) | **GET** /report/reports/{id} | Get report by ID
+[**get_report_group_by_id**](LMApi.md#get_report_group_by_id) | **GET** /report/groups/{id} | Get report group by id
+[**get_report_group_list**](LMApi.md#get_report_group_list) | **GET** /report/groups | Get report group list
+[**get_report_list**](LMApi.md#get_report_list) | **GET** /report/reports | Get report list
 [**get_retention_list**](LMApi.md#get_retention_list) | **GET** /log/partitions/retentions | Retrieve the list of log retentions
-[**get_role_by_id**](LMApi.md#get_role_by_id) | **GET** /setting/roles/{id} | get role by id
-[**get_role_list**](LMApi.md#get_role_list) | **GET** /setting/roles | get role list
+[**get_role_by_id**](LMApi.md#get_role_by_id) | **GET** /setting/roles/{id} | Get role by ID
+[**get_role_list**](LMApi.md#get_role_list) | **GET** /setting/roles | Get role list
 [**get_sdt_by_id**](LMApi.md#get_sdt_by_id) | **GET** /sdt/sdts/{id} | get SDT by id (Response may contain extra fields depending upon the type of SDT of given id)
-[**get_sdt_history_by_device_data_source_id**](LMApi.md#get_sdt_history_by_device_data_source_id) | **GET** /device/devices/{deviceId}/devicedatasources/{id}/historysdts | get SDT history for the device dataSource
+[**get_sdt_history_by_device_data_source_id**](LMApi.md#get_sdt_history_by_device_data_source_id) | **GET** /device/devices/{deviceId}/devicedatasources/{id}/historysdts | Get SDT history for the device dataSource
 [**get_sdt_history_by_device_group_id**](LMApi.md#get_sdt_history_by_device_group_id) | **GET** /device/groups/{id}/historysdts | get SDT history for the group
 [**get_sdt_history_by_device_id**](LMApi.md#get_sdt_history_by_device_id) | **GET** /device/devices/{id}/historysdts | get SDT history for the device
 [**get_sdt_history_by_website_group_id**](LMApi.md#get_sdt_history_by_website_group_id) | **GET** /website/groups/{id}/historysdts | get SDT history for the website group (Response may contain extra fields depending upon the type of SDT)
 [**get_sdt_history_by_website_id**](LMApi.md#get_sdt_history_by_website_id) | **GET** /website/websites/{id}/historysdts | get SDT history for the website (Response may contain extra fields depending upon the type of SDT)
 [**get_sdt_list**](LMApi.md#get_sdt_list) | **GET** /sdt/sdts | get SDT list
-[**get_site_monitor_check_point_list**](LMApi.md#get_site_monitor_check_point_list) | **GET** /website/smcheckpoints | get website checkpoint list
+[**get_site_monitor_check_point_list**](LMApi.md#get_site_monitor_check_point_list) | **GET** /website/smcheckpoints | Get website checkpoint list
 [**get_top_talkers_graph**](LMApi.md#get_top_talkers_graph) | **GET** /device/devices/{id}/topTalkersGraph | get top talkers graph
 [**get_topology_source_by_id**](LMApi.md#get_topology_source_by_id) | **GET** /setting/topologysources/{id} | Get TopologySource by id
 [**get_topology_source_list**](LMApi.md#get_topology_source_list) | **GET** /setting/topologysources | Get TopologySource List
-[**get_unmonitored_device_list**](LMApi.md#get_unmonitored_device_list) | **GET** /device/unmonitoreddevices | get unmonitored device list
-[**get_update_reason_list_by_config_source_id**](LMApi.md#get_update_reason_list_by_config_source_id) | **GET** /setting/configsources/{id}/updatereasons | get update history for a configSource
-[**get_update_reason_list_by_data_source_id**](LMApi.md#get_update_reason_list_by_data_source_id) | **GET** /setting/datasources/{id}/updatereasons | get update history for a datasource
+[**get_unmonitored_device_list**](LMApi.md#get_unmonitored_device_list) | **GET** /device/unmonitoreddevices | Get unmonitored device list
+[**get_update_reason_list_by_config_source_id**](LMApi.md#get_update_reason_list_by_config_source_id) | **GET** /setting/configsources/{id}/updatereasons | Get update history for a configSource
+[**get_update_reason_list_by_data_source_id**](LMApi.md#get_update_reason_list_by_data_source_id) | **GET** /setting/datasources/{id}/updatereasons | Get update history for a datasource
 [**get_v4_metadata**](LMApi.md#get_v4_metadata) | **GET** /setting/logicmodules/metadata | get metadata
 [**get_website_alert_list_by_website_id**](LMApi.md#get_website_alert_list_by_website_id) | **GET** /website/websites/{id}/alerts | get alerts for a website
 [**get_website_by_id**](LMApi.md#get_website_by_id) | **GET** /website/websites/{id} | get website by id
 [**get_website_checkpoint_data_by_id**](LMApi.md#get_website_checkpoint_data_by_id) | **GET** /website/websites/{srvId}/checkpoints/{checkId}/data | get data for a website checkpoint
 [**get_website_data_by_graph_name**](LMApi.md#get_website_data_by_graph_name) | **GET** /website/websites/{id}/graphs/{graphName}/data | get website data by graph name
-[**get_website_graph_data**](LMApi.md#get_website_graph_data) | **GET** /website/websites/{websiteId}/checkpoints/{checkpointId}/graphs/{graphName}/data | get website graph data
+[**get_website_graph_data**](LMApi.md#get_website_graph_data) | **GET** /website/websites/{websiteId}/checkpoints/{checkpointId}/graphs/{graphName}/data | Get website graph data
 [**get_website_group_by_id**](LMApi.md#get_website_group_by_id) | **GET** /website/groups/{id} | get website group
 [**get_website_group_list**](LMApi.md#get_website_group_list) | **GET** /website/groups | get website group list
 [**get_website_list**](LMApi.md#get_website_list) | **GET** /website/websites | get website list
 [**get_website_property_list_by_website_id**](LMApi.md#get_website_property_list_by_website_id) | **GET** /website/websites/{id}/properties | get a list of properties for a website
 [**get_website_sdt_list_by_website_id**](LMApi.md#get_website_sdt_list_by_website_id) | **GET** /website/websites/{id}/sdts | get a list of SDTs for a website
-[**get_widget_by_id**](LMApi.md#get_widget_by_id) | **GET** /dashboard/widgets/{id} | get widget by id (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+[**get_widget_by_id**](LMApi.md#get_widget_by_id) | **GET** /dashboard/widgets/{id} | Get widget by ID
 [**get_widget_data_by_id**](LMApi.md#get_widget_data_by_id) | **GET** /dashboard/widgets/{id}/data | get widget data (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
-[**get_widget_list**](LMApi.md#get_widget_list) | **GET** /dashboard/widgets | get widget list (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+[**get_widget_list**](LMApi.md#get_widget_list) | **GET** /dashboard/widgets | Get widget list
 [**get_widget_list_by_dashboard_id**](LMApi.md#get_widget_list_by_dashboard_id) | **GET** /dashboard/dashboards/{id}/widgets | get widget list by DashboardId
-[**import_batch_job**](LMApi.md#import_batch_job) | **POST** /setting/batchjobs/importxml | import batch job via xml
-[**import_config_source**](LMApi.md#import_config_source) | **POST** /setting/configsources/importxml | import config source via xml
-[**import_data_source**](LMApi.md#import_data_source) | **POST** /setting/datasources/importxml | import datasource via xml
-[**import_event_source**](LMApi.md#import_event_source) | **POST** /setting/eventsources/importxml | import eventsource via xml
+[**import_applies_to_function_json**](LMApi.md#import_applies_to_function_json) | **POST** /setting/functions/importjson | Import AppliesTo function via json
+[**import_batch_job**](LMApi.md#import_batch_job) | **POST** /setting/batchjobs/importxml | Import batch job via XML
+[**import_config_source**](LMApi.md#import_config_source) | **POST** /setting/configsources/importxml | Import config source via XML
+[**import_config_source_json**](LMApi.md#import_config_source_json) | **POST** /setting/configsources/importjson | Import ConfigSource via json
+[**import_data_source**](LMApi.md#import_data_source) | **POST** /setting/datasources/importxml | Import datasource via XML
+[**import_data_source_json**](LMApi.md#import_data_source_json) | **POST** /setting/datasources/importjson | Import DataSource via json
+[**import_diagnostic_source_json**](LMApi.md#import_diagnostic_source_json) | **POST** /setting/diagnosticsources/importjson | Import DiagnosticSource via json
+[**import_event_source**](LMApi.md#import_event_source) | **POST** /setting/eventsources/importxml | Import event source via XML
+[**import_event_source_json**](LMApi.md#import_event_source_json) | **POST** /setting/eventsources/importjson | Import EventSource via json
+[**import_job_monitor_json**](LMApi.md#import_job_monitor_json) | **POST** /setting/batchjobs/importjson | Import batch JobMonitor via json
+[**import_log_source_json**](LMApi.md#import_log_source_json) | **POST** /setting/logsources/importjson | Import LogSource via json
+[**import_oid_json**](LMApi.md#import_oid_json) | **POST** /setting/oids/importjson | Import OID via json
+[**import_property_source_json**](LMApi.md#import_property_source_json) | **POST** /setting/propertyrules/importjson | Import PropertySource via json
+[**import_topology_source_json**](LMApi.md#import_topology_source_json) | **POST** /setting/topologysources/importjson | Import TopologySource via json
 [**map_un_map_module_to_access_group**](LMApi.md#map_un_map_module_to_access_group) | **POST** /setting/accessgroup/mapunmap/modules | Create a mapping of access group &amp; module
 [**partition_action**](LMApi.md#partition_action) | **POST** /log/partitions/{id}/{action} | Perform an action on a specified log partition
 [**patch_access_group**](LMApi.md#patch_access_group) | **PATCH** /setting/accessgroup/{id} | Update access group
 [**patch_admin_by_id**](LMApi.md#patch_admin_by_id) | **PATCH** /setting/admins/{id} | update user
 [**patch_alert_rule_by_id**](LMApi.md#patch_alert_rule_by_id) | **PATCH** /setting/alert/rules/{id} | update alert rule
-[**patch_api_token_by_admin_id**](LMApi.md#patch_api_token_by_admin_id) | **PATCH** /setting/admins/{adminId}/apitokens/{apitokenId} | update api tokens for a user
-[**patch_applies_to_function**](LMApi.md#patch_applies_to_function) | **PATCH** /setting/functions/{id} | update applies to function
+[**patch_api_token_by_admin_id**](LMApi.md#patch_api_token_by_admin_id) | **PATCH** /setting/admins/{adminId}/apitokens/{apitokenId} | Update API tokens for a user
+[**patch_applies_to_function**](LMApi.md#patch_applies_to_function) | **PATCH** /setting/functions/{id} | Update applies to function
 [**patch_collector_by_id**](LMApi.md#patch_collector_by_id) | **PATCH** /setting/collector/collectors/{id} | update collector
-[**patch_collector_group_by_id**](LMApi.md#patch_collector_group_by_id) | **PATCH** /setting/collector/groups/{id} | update collector group
-[**patch_config_source_by_id**](LMApi.md#patch_config_source_by_id) | **PATCH** /setting/configsources/{id} | update config source by id
+[**patch_collector_group_by_id**](LMApi.md#patch_collector_group_by_id) | **PATCH** /setting/collector/groups/{id} | Update collector group
+[**patch_config_source_by_id**](LMApi.md#patch_config_source_by_id) | **PATCH** /setting/configsources/{id} | Update config source by ID
 [**patch_dashboard_by_id**](LMApi.md#patch_dashboard_by_id) | **PATCH** /dashboard/dashboards/{id} | update dashboard
 [**patch_dashboard_group_by_id**](LMApi.md#patch_dashboard_group_by_id) | **PATCH** /dashboard/groups/{id} | update dashboard group
-[**patch_datasource_by_id**](LMApi.md#patch_datasource_by_id) | **PATCH** /setting/datasources/{id} | update datasource
-[**patch_default_dashboard**](LMApi.md#patch_default_dashboard) | **PATCH** /setting/userdata/{id} | update default dashboard
+[**patch_datasource_by_id**](LMApi.md#patch_datasource_by_id) | **PATCH** /setting/datasources/{id} | Update datasource
+[**patch_default_dashboard**](LMApi.md#patch_default_dashboard) | **PATCH** /setting/userdata/{id} | Update default dashboard
 [**patch_device**](LMApi.md#patch_device) | **PATCH** /device/devices/{id} | update a device
 [**patch_device_datasource_instance_alert_setting_by_id**](LMApi.md#patch_device_datasource_instance_alert_setting_by_id) | **PATCH** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/alertsettings/{id} | update device instance alert setting
 [**patch_device_datasource_instance_by_id**](LMApi.md#patch_device_datasource_instance_by_id) | **PATCH** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id} | update device instance
-[**patch_device_datasource_instance_group_by_id**](LMApi.md#patch_device_datasource_instance_group_by_id) | **PATCH** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{id} | update device datasource instance group
+[**patch_device_datasource_instance_group_by_id**](LMApi.md#patch_device_datasource_instance_group_by_id) | **PATCH** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{id} | Update device datasource instance group
 [**patch_device_group_by_id**](LMApi.md#patch_device_group_by_id) | **PATCH** /device/groups/{id} | update device group
 [**patch_device_group_cluster_alert_conf_by_id**](LMApi.md#patch_device_group_cluster_alert_conf_by_id) | **PATCH** /device/groups/{deviceGroupId}/clusterAlertConf/{id} | Update cluster alert configuration
-[**patch_device_group_datasource_alert_setting**](LMApi.md#patch_device_group_datasource_alert_setting) | **PATCH** /device/groups/{deviceGroupId}/datasources/{dsId}/alertsettings | update device group datasource alert setting
+[**patch_device_group_datasource_alert_setting**](LMApi.md#patch_device_group_datasource_alert_setting) | **PATCH** /device/groups/{deviceGroupId}/datasources/{dsId}/alertsettings | Update device group datasource alert setting
 [**patch_device_group_datasource_by_id**](LMApi.md#patch_device_group_datasource_by_id) | **PATCH** /device/groups/{deviceGroupId}/datasources/{id} | update device group datasource
-[**patch_device_group_property_by_name**](LMApi.md#patch_device_group_property_by_name) | **PATCH** /device/groups/{gid}/properties/{name} | update device group property
-[**patch_device_property_by_name**](LMApi.md#patch_device_property_by_name) | **PATCH** /device/devices/{deviceId}/properties/{name} | update device property
-[**patch_escalation_chain_by_id**](LMApi.md#patch_escalation_chain_by_id) | **PATCH** /setting/alert/chains/{id} | update escalation chain
-[**patch_event_source_by_id**](LMApi.md#patch_event_source_by_id) | **PATCH** /setting/eventsources/{id} | update eventSource by id
+[**patch_device_group_property_by_name**](LMApi.md#patch_device_group_property_by_name) | **PATCH** /device/groups/{gid}/properties/{name} | Update device group property
+[**patch_device_property_by_name**](LMApi.md#patch_device_property_by_name) | **PATCH** /device/devices/{deviceId}/properties/{name} | Update device property
+[**patch_diagnostic_source_by_id**](LMApi.md#patch_diagnostic_source_by_id) | **PATCH** /setting/diagnosticsources/{id} | Update a diagnostics source
+[**patch_escalation_chain_by_id**](LMApi.md#patch_escalation_chain_by_id) | **PATCH** /setting/alert/chains/{id} | Update escalation chain
+[**patch_event_source_by_id**](LMApi.md#patch_event_source_by_id) | **PATCH** /setting/eventsources/{id} | Update event source by ID
 [**patch_job_monitor**](LMApi.md#patch_job_monitor) | **PATCH** /setting/batchjobs/{id} | Update JobMonitor
 [**patch_log_partition**](LMApi.md#patch_log_partition) | **PATCH** /log/partitions/{id} | Update an existing log partition
-[**patch_log_source**](LMApi.md#patch_log_source) | **PATCH** /setting/logsources/{id} | update log source 
-[**patch_netscan**](LMApi.md#patch_netscan) | **PATCH** /setting/netscans/{id} | update a netscan
-[**patch_oid**](LMApi.md#patch_oid) | **PATCH** /setting/oids/{id} | update a OID
+[**patch_log_source**](LMApi.md#patch_log_source) | **PATCH** /setting/logsources/{id} | Update log source
+[**patch_netscan**](LMApi.md#patch_netscan) | **PATCH** /setting/netscans/{id} | Update a netscan
+[**patch_oid**](LMApi.md#patch_oid) | **PATCH** /setting/oids/{id} | Update an OID
 [**patch_ops_note_by_id**](LMApi.md#patch_ops_note_by_id) | **PATCH** /setting/opsnotes/{id} | update opsnote
 [**patch_property_rule**](LMApi.md#patch_property_rule) | **PATCH** /setting/propertyrules/{id} | update a property rule
-[**patch_recipient_group_by_id**](LMApi.md#patch_recipient_group_by_id) | **PATCH** /setting/recipientgroups/{id} | update recipient group
-[**patch_report_by_id**](LMApi.md#patch_report_by_id) | **PATCH** /report/reports/{id} | update report
-[**patch_report_group_by_id**](LMApi.md#patch_report_group_by_id) | **PATCH** /report/groups/{id} | update report group
-[**patch_role_by_id**](LMApi.md#patch_role_by_id) | **PATCH** /setting/roles/{id} | update role
+[**patch_recipient_group_by_id**](LMApi.md#patch_recipient_group_by_id) | **PATCH** /setting/recipientgroups/{id} | Update recipient group
+[**patch_report_by_id**](LMApi.md#patch_report_by_id) | **PATCH** /report/reports/{id} | Update report
+[**patch_report_group_by_id**](LMApi.md#patch_report_group_by_id) | **PATCH** /report/groups/{id} | Update report group
+[**patch_role_by_id**](LMApi.md#patch_role_by_id) | **PATCH** /setting/roles/{id} | Update role
 [**patch_sdt_by_id**](LMApi.md#patch_sdt_by_id) | **PATCH** /sdt/sdts/{id} | update SDT (Response may contain extra fields depending upon the type of SDT being updated)
 [**patch_topology_source**](LMApi.md#patch_topology_source) | **PATCH** /setting/topologysources/{id} | Update TopologySource
-[**patch_website_by_id**](LMApi.md#patch_website_by_id) | **PATCH** /website/websites/{id} | Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.
+[**patch_website_by_id**](LMApi.md#patch_website_by_id) | **PATCH** /website/websites/{id} | update website
 [**patch_website_group_by_id**](LMApi.md#patch_website_group_by_id) | **PATCH** /website/groups/{id} | update website group
-[**patch_widget_by_id**](LMApi.md#patch_widget_by_id) | **PATCH** /dashboard/widgets/{id} | update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+[**patch_widget_by_id**](LMApi.md#patch_widget_by_id) | **PATCH** /dashboard/widgets/{id} | Update widget
 [**schedule_auto_discovery_by_device_id**](LMApi.md#schedule_auto_discovery_by_device_id) | **POST** /device/devices/{id}/scheduleAutoDiscovery | schedule active discovery for a device
-[**test_aws_account**](LMApi.md#test_aws_account) | **POST** /aws/functions/testAccount | test AWS account
+[**test_aws_account**](LMApi.md#test_aws_account) | **POST** /aws/functions/testAccount | Test AWS account
 [**test_azure_account**](LMApi.md#test_azure_account) | **POST** /azure/functions/testAccount | test Azure account
 [**test_gcp_account**](LMApi.md#test_gcp_account) | **POST** /gcp/functions/testAccount | test GCP account
-[**test_saa_s_account**](LMApi.md#test_saa_s_account) | **POST** /saas/functions/testAccount | test SaaS account
+[**test_saa_s_account**](LMApi.md#test_saa_s_account) | **POST** /saas/functions/testAccount | Test SaaS account
 [**update_access_group**](LMApi.md#update_access_group) | **PUT** /setting/accessgroup/{id} | Update access group
 [**update_admin_by_id**](LMApi.md#update_admin_by_id) | **PUT** /setting/admins/{id} | update user
 [**update_alert_rule_by_id**](LMApi.md#update_alert_rule_by_id) | **PUT** /setting/alert/rules/{id} | update alert rule
-[**update_api_token_by_admin_id**](LMApi.md#update_api_token_by_admin_id) | **PUT** /setting/admins/{adminId}/apitokens/{apitokenId} | update api tokens for a user
-[**update_applies_to_function**](LMApi.md#update_applies_to_function) | **PUT** /setting/functions/{id} | update applies to function
+[**update_api_token_by_admin_id**](LMApi.md#update_api_token_by_admin_id) | **PUT** /setting/admins/{adminId}/apitokens/{apitokenId} | Update API tokens for a user
+[**update_applies_to_function**](LMApi.md#update_applies_to_function) | **PUT** /setting/functions/{id} | Update applies to function
 [**update_collector_by_id**](LMApi.md#update_collector_by_id) | **PUT** /setting/collector/collectors/{id} | update collector
-[**update_collector_group_by_id**](LMApi.md#update_collector_group_by_id) | **PUT** /setting/collector/groups/{id} | update collector group
-[**update_config_source_by_id**](LMApi.md#update_config_source_by_id) | **PUT** /setting/configsources/{id} | update config source by id
+[**update_collector_group_by_id**](LMApi.md#update_collector_group_by_id) | **PUT** /setting/collector/groups/{id} | Update collector group
+[**update_config_source_by_id**](LMApi.md#update_config_source_by_id) | **PUT** /setting/configsources/{id} | Update config source by ID
 [**update_dashboard_by_id**](LMApi.md#update_dashboard_by_id) | **PUT** /dashboard/dashboards/{id} | update dashboard
 [**update_dashboard_group_by_id**](LMApi.md#update_dashboard_group_by_id) | **PUT** /dashboard/groups/{id} | update dashboard group
-[**update_datasource_by_id**](LMApi.md#update_datasource_by_id) | **PUT** /setting/datasources/{id} | update datasource
-[**update_default_dashboard**](LMApi.md#update_default_dashboard) | **PUT** /setting/userdata/{id} | update default dashboard
+[**update_datasource_by_id**](LMApi.md#update_datasource_by_id) | **PUT** /setting/datasources/{id} | Update datasource
+[**update_default_dashboard**](LMApi.md#update_default_dashboard) | **PUT** /setting/userdata/{id} | Update default dashboard
 [**update_device**](LMApi.md#update_device) | **PUT** /device/devices/{id} | update a device
 [**update_device_datasource_instance_alert_setting_by_id**](LMApi.md#update_device_datasource_instance_alert_setting_by_id) | **PUT** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/alertsettings/{id} | update device instance alert setting
 [**update_device_datasource_instance_by_id**](LMApi.md#update_device_datasource_instance_by_id) | **PUT** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{id} | update device instance
-[**update_device_datasource_instance_group_by_id**](LMApi.md#update_device_datasource_instance_group_by_id) | **PUT** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{id} | update device datasource instance group
+[**update_device_datasource_instance_group_by_id**](LMApi.md#update_device_datasource_instance_group_by_id) | **PUT** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{id} | Update device datasource instance group
 [**update_device_group_by_id**](LMApi.md#update_device_group_by_id) | **PUT** /device/groups/{id} | update device group
 [**update_device_group_cluster_alert_conf_by_id**](LMApi.md#update_device_group_cluster_alert_conf_by_id) | **PUT** /device/groups/{deviceGroupId}/clusterAlertConf/{id} | Update cluster alert configuration
-[**update_device_group_datasource_alert_setting**](LMApi.md#update_device_group_datasource_alert_setting) | **PUT** /device/groups/{deviceGroupId}/datasources/{dsId}/alertsettings | update device group datasource alert setting
+[**update_device_group_datasource_alert_setting**](LMApi.md#update_device_group_datasource_alert_setting) | **PUT** /device/groups/{deviceGroupId}/datasources/{dsId}/alertsettings | Update device group datasource alert setting
 [**update_device_group_datasource_by_id**](LMApi.md#update_device_group_datasource_by_id) | **PUT** /device/groups/{deviceGroupId}/datasources/{id} | update device group datasource
-[**update_device_group_property_by_name**](LMApi.md#update_device_group_property_by_name) | **PUT** /device/groups/{gid}/properties/{name} | update device group property
-[**update_device_property_by_name**](LMApi.md#update_device_property_by_name) | **PUT** /device/devices/{deviceId}/properties/{name} | update device property
-[**update_escalation_chain_by_id**](LMApi.md#update_escalation_chain_by_id) | **PUT** /setting/alert/chains/{id} | update escalation chain
-[**update_event_source_by_id**](LMApi.md#update_event_source_by_id) | **PUT** /setting/eventsources/{id} | update eventSource by id
-[**update_instance_group_alert_threshold**](LMApi.md#update_instance_group_alert_threshold) | **PUT** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{dsigId}/datapoints/{dpId}/alertconfig | update instance group alert threshold (Setting the threshold at default group is not allowed)
+[**update_device_group_property_by_name**](LMApi.md#update_device_group_property_by_name) | **PUT** /device/groups/{gid}/properties/{name} | Update device group property
+[**update_device_property_by_name**](LMApi.md#update_device_property_by_name) | **PUT** /device/devices/{deviceId}/properties/{name} | Update device property
+[**update_diagnostic_source_by_id**](LMApi.md#update_diagnostic_source_by_id) | **PUT** /setting/diagnosticsources/{id} | Update a diagnostics source
+[**update_escalation_chain_by_id**](LMApi.md#update_escalation_chain_by_id) | **PUT** /setting/alert/chains/{id} | Update escalation chain
+[**update_event_source_by_id**](LMApi.md#update_event_source_by_id) | **PUT** /setting/eventsources/{id} | Update event source by ID
+[**update_instance_group_alert_threshold**](LMApi.md#update_instance_group_alert_threshold) | **PUT** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{dsigId}/datapoints/{dpId}/alertconfig | Update instance group alert threshold
 [**update_job_monitor**](LMApi.md#update_job_monitor) | **PUT** /setting/batchjobs/{id} | Update JobMonitor
 [**update_log_partition**](LMApi.md#update_log_partition) | **PUT** /log/partitions/{id} | Update an existing log partition
-[**update_log_source**](LMApi.md#update_log_source) | **PUT** /setting/logsources/{id} | update log source 
-[**update_netscan**](LMApi.md#update_netscan) | **PUT** /setting/netscans/{id} | update a netscan
-[**update_oid**](LMApi.md#update_oid) | **PUT** /setting/oids/{id} | update a OID
+[**update_log_source**](LMApi.md#update_log_source) | **PUT** /setting/logsources/{id} | Update log source
+[**update_netscan**](LMApi.md#update_netscan) | **PUT** /setting/netscans/{id} | Update a netscan
+[**update_oid**](LMApi.md#update_oid) | **PUT** /setting/oids/{id} | Update an OID
 [**update_ops_note_by_id**](LMApi.md#update_ops_note_by_id) | **PUT** /setting/opsnotes/{id} | update opsnote
 [**update_property_rule**](LMApi.md#update_property_rule) | **PUT** /setting/propertyrules/{id} | update a property rule
-[**update_recipient_group_by_id**](LMApi.md#update_recipient_group_by_id) | **PUT** /setting/recipientgroups/{id} | update recipient group
-[**update_report_by_id**](LMApi.md#update_report_by_id) | **PUT** /report/reports/{id} | update report
-[**update_report_group_by_id**](LMApi.md#update_report_group_by_id) | **PUT** /report/groups/{id} | update report group
-[**update_role_by_id**](LMApi.md#update_role_by_id) | **PUT** /setting/roles/{id} | update role
+[**update_recipient_group_by_id**](LMApi.md#update_recipient_group_by_id) | **PUT** /setting/recipientgroups/{id} | Update recipient group
+[**update_report_by_id**](LMApi.md#update_report_by_id) | **PUT** /report/reports/{id} | Update report
+[**update_report_group_by_id**](LMApi.md#update_report_group_by_id) | **PUT** /report/groups/{id} | Update report group
+[**update_role_by_id**](LMApi.md#update_role_by_id) | **PUT** /setting/roles/{id} | Update role
 [**update_sdt_by_id**](LMApi.md#update_sdt_by_id) | **PUT** /sdt/sdts/{id} | update SDT (Response may contain extra fields depending upon the type of SDT being updated)
 [**update_topology_source**](LMApi.md#update_topology_source) | **PUT** /setting/topologysources/{id} | Update TopologySource
-[**update_website_by_id**](LMApi.md#update_website_by_id) | **PUT** /website/websites/{id} | Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.
+[**update_website_by_id**](LMApi.md#update_website_by_id) | **PUT** /website/websites/{id} | update website
 [**update_website_group_by_id**](LMApi.md#update_website_group_by_id) | **PUT** /website/groups/{id} | update website group
-[**update_widget_by_id**](LMApi.md#update_widget_by_id) | **PUT** /dashboard/widgets/{id} | update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
-[**verify_aws_billing_permissions**](LMApi.md#verify_aws_billing_permissions) | **POST** /aws/functions/verifyBillingPermissions | verify AWS Billing Permissions
+[**update_widget_by_id**](LMApi.md#update_widget_by_id) | **PUT** /dashboard/widgets/{id} | Update widget
+[**verify_aws_billing_permissions**](LMApi.md#verify_aws_billing_permissions) | **POST** /aws/functions/verifyBillingPermissions | Verify AWS Billing Permissions
 [**verify_storage_accounts_permissions**](LMApi.md#verify_storage_accounts_permissions) | **POST** /azure/functions/verifyStorageAccountsPermissions | view storage accounts
 
 # **ack_alert_by_id**
 > object ack_alert_by_id(body, id)
 
-ack alert by id
+Acknowledge alert by ID
+
+Acknowledge the alert with the given ID
 
 ### Example
 ```python
@@ -344,7 +368,7 @@ body = logicmonitor_sdk.AlertAck() # AlertAck |
 id = 'id_example' # str | 
 
 try:
-    # ack alert by id
+    # Acknowledge alert by ID
     api_response = api_instance.ack_alert_by_id(body, id)
     pprint(api_response)
 except ApiException as e:
@@ -375,6 +399,8 @@ Name | Type | Description  | Notes
 
 # **ack_collector_down_alert_by_id**
 > object ack_collector_down_alert_by_id(id, body)
+
+ack collector down alert
 
 ack collector down alert
 
@@ -432,6 +458,8 @@ Name | Type | Description  | Notes
 
 Create a access group
 
+Create a access group
+
 ### Example
 ```python
 from __future__ import print_function
@@ -481,6 +509,8 @@ Name | Type | Description  | Notes
 
 # **add_admin**
 > Admin add_admin(body)
+
+add user
 
 add user
 
@@ -534,7 +564,9 @@ Name | Type | Description  | Notes
 # **add_alert_note_by_id**
 > object add_alert_note_by_id(body, id)
 
-add alert note
+Add alert note
+
+Add a note to the alert with the given ID
 
 ### Example
 ```python
@@ -556,7 +588,7 @@ body = logicmonitor_sdk.AlertAck() # AlertAck |
 id = 'id_example' # str | 
 
 try:
-    # add alert note
+    # Add alert note
     api_response = api_instance.add_alert_note_by_id(body, id)
     pprint(api_response)
 except ApiException as e:
@@ -587,6 +619,8 @@ Name | Type | Description  | Notes
 
 # **add_alert_rule**
 > AlertRule add_alert_rule(body)
+
+add alert rule
 
 add alert rule
 
@@ -640,7 +674,9 @@ Name | Type | Description  | Notes
 # **add_api_token_by_admin_id**
 > APIToken add_api_token_by_admin_id(admin_id, body, type=type)
 
-add api tokens for a user
+Add API tokens for a user
+
+Add new API tokens for a specific user
 
 ### Example
 ```python
@@ -660,10 +696,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 admin_id = 56 # int | 
 body = logicmonitor_sdk.APIToken() # APIToken | 
-type = 'API Token' # str |  (optional) (default to API Token)
+type = 'type_example' # str |  (optional)
 
 try:
-    # add api tokens for a user
+    # Add API tokens for a user
     api_response = api_instance.add_api_token_by_admin_id(admin_id, body, type=type)
     pprint(api_response)
 except ApiException as e:
@@ -676,7 +712,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **admin_id** | **int**|  | 
  **body** | [**APIToken**](APIToken.md)|  | 
- **type** | **str**|  | [optional] [default to API Token]
+ **type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -696,7 +732,9 @@ Name | Type | Description  | Notes
 # **add_applies_to_function**
 > AppliesToFunction add_applies_to_function(body=body)
 
-add applies to function
+Add applies to function
+
+Create a new applies to function
 
 ### Example
 ```python
@@ -717,7 +755,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.AppliesToFunction() # AppliesToFunction |  (optional)
 
 try:
-    # add applies to function
+    # Add applies to function
     api_response = api_instance.add_applies_to_function(body=body)
     pprint(api_response)
 except ApiException as e:
@@ -747,6 +785,8 @@ Name | Type | Description  | Notes
 
 # **add_collector**
 > Collector add_collector(body)
+
+add collector
 
 add collector
 
@@ -800,7 +840,9 @@ Name | Type | Description  | Notes
 # **add_collector_group**
 > CollectorGroup add_collector_group(body)
 
-add collector group
+Add collector group
+
+Create a new collector group
 
 ### Example
 ```python
@@ -821,7 +863,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.CollectorGroup() # CollectorGroup | 
 
 try:
-    # add collector group
+    # Add collector group
     api_response = api_instance.add_collector_group(body)
     pprint(api_response)
 except ApiException as e:
@@ -852,7 +894,9 @@ Name | Type | Description  | Notes
 # **add_config_source**
 > ConfigSource add_config_source(body=body)
 
-add config source
+Add a new config source
+
+Create a new config source
 
 ### Example
 ```python
@@ -873,7 +917,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.ConfigSource() # ConfigSource |  (optional)
 
 try:
-    # add config source
+    # Add a new config source
     api_response = api_instance.add_config_source(body=body)
     pprint(api_response)
 except ApiException as e:
@@ -903,6 +947,8 @@ Name | Type | Description  | Notes
 
 # **add_dashboard**
 > Dashboard add_dashboard(body)
+
+add dashboard
 
 add dashboard
 
@@ -958,6 +1004,8 @@ Name | Type | Description  | Notes
 
 add dashboard group
 
+add dashboard group
+
 ### Example
 ```python
 from __future__ import print_function
@@ -1010,6 +1058,8 @@ Name | Type | Description  | Notes
 
 add dashboard group asynchronously
 
+add dashboard group asynchronously
+
 ### Example
 ```python
 from __future__ import print_function
@@ -1028,7 +1078,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DashboardGroup() # DashboardGroup |  (optional)
-recursive = true # bool |  (optional) (default to true)
+recursive = true # bool |  (optional)
 
 try:
     # add dashboard group asynchronously
@@ -1044,7 +1094,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**DashboardGroup**](DashboardGroup.md)|  | [optional] 
- **recursive** | **bool**|  | [optional] [default to true]
+ **recursive** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -1064,7 +1114,9 @@ Name | Type | Description  | Notes
 # **add_datasource_by_id**
 > DataSource add_datasource_by_id(body=body, create_graph=create_graph)
 
-add datasource
+Add datasource
+
+Adds a new datasource
 
 ### Example
 ```python
@@ -1083,10 +1135,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.DataSource() # DataSource |  (optional)
-create_graph = false # bool |  (optional) (default to false)
+create_graph = true # bool |  (optional)
 
 try:
-    # add datasource
+    # Add datasource
     api_response = api_instance.add_datasource_by_id(body=body, create_graph=create_graph)
     pprint(api_response)
 except ApiException as e:
@@ -1098,7 +1150,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**DataSource**](DataSource.md)|  | [optional] 
- **create_graph** | **bool**|  | [optional] [default to false]
+ **create_graph** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -1116,7 +1168,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_device**
-> Device add_device(body, start=start, end=end, netflow_filter=netflow_filter, add_from_wizard=add_from_wizard, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp)
+> Device add_device(body, end=end, netflow_filter=netflow_filter, start=start, add_from_wizard=add_from_wizard, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp)
+
+add a new device
 
 add a new device
 
@@ -1137,15 +1191,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Device() # Device | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
-add_from_wizard = false # bool |  (optional) (default to false)
-need_stc_grp_and_sorted_cp = false # bool |  (optional) (default to false)
+start = 789 # int |  (optional)
+add_from_wizard = true # bool |  (optional)
+need_stc_grp_and_sorted_cp = true # bool |  (optional)
 
 try:
     # add a new device
-    api_response = api_instance.add_device(body, start=start, end=end, netflow_filter=netflow_filter, add_from_wizard=add_from_wizard, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp)
+    api_response = api_instance.add_device(body, end=end, netflow_filter=netflow_filter, start=start, add_from_wizard=add_from_wizard, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->add_device: %s\n" % e)
@@ -1156,11 +1210,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**Device**](Device.md)|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
- **add_from_wizard** | **bool**|  | [optional] [default to false]
- **need_stc_grp_and_sorted_cp** | **bool**|  | [optional] [default to false]
+ **start** | **int**|  | [optional] 
+ **add_from_wizard** | **bool**|  | [optional] 
+ **need_stc_grp_and_sorted_cp** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -1180,7 +1234,9 @@ Name | Type | Description  | Notes
 # **add_device_datasource_instance**
 > DeviceDataSourceInstance add_device_datasource_instance(device_id, hds_id, body)
 
-add device instance 
+add device instance
+
+add device instance
 
 ### Example
 ```python
@@ -1203,7 +1259,7 @@ hds_id = 56 # int | The device-datasource ID
 body = logicmonitor_sdk.DeviceDataSourceInstance() # DeviceDataSourceInstance | 
 
 try:
-    # add device instance 
+    # add device instance
     api_response = api_instance.add_device_datasource_instance(device_id, hds_id, body)
     pprint(api_response)
 except ApiException as e:
@@ -1234,9 +1290,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **add_device_datasource_instance_group**
-> DeviceDataSourceInstanceGroup add_device_datasource_instance_group(device_id, device_ds_id, body)
+> DeviceDataSourceInstanceGroup add_device_datasource_instance_group(device_ds_id, device_id, body)
 
-add device datasource instance group 
+Add device datasource instance group
+
+Add a new device datasource instance group
 
 ### Example
 ```python
@@ -1254,13 +1312,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
+device_id = 56 # int | 
 body = logicmonitor_sdk.DeviceDataSourceInstanceGroup() # DeviceDataSourceInstanceGroup | 
 
 try:
-    # add device datasource instance group 
-    api_response = api_instance.add_device_datasource_instance_group(device_id, device_ds_id, body)
+    # Add device datasource instance group
+    api_response = api_instance.add_device_datasource_instance_group(device_ds_id, device_id, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->add_device_datasource_instance_group: %s\n" % e)
@@ -1270,8 +1328,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_id** | **int**|  | 
  **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
+ **device_id** | **int**|  | 
  **body** | [**DeviceDataSourceInstanceGroup**](DeviceDataSourceInstanceGroup.md)|  | 
 
 ### Return type
@@ -1291,6 +1349,8 @@ Name | Type | Description  | Notes
 
 # **add_device_group**
 > DeviceGroup add_device_group(body)
+
+add device group
 
 add device group
 
@@ -1346,6 +1406,8 @@ Name | Type | Description  | Notes
 
 Add cluster alert configuration
 
+Add cluster alert configuration
+
 ### Example
 ```python
 from __future__ import print_function
@@ -1398,7 +1460,9 @@ Name | Type | Description  | Notes
 # **add_device_group_property**
 > EntityProperty add_device_group_property(gid, body)
 
-add device group property
+Add device group property
+
+Add a new property to a specific device group
 
 ### Example
 ```python
@@ -1420,7 +1484,7 @@ gid = 56 # int | group ID
 body = logicmonitor_sdk.EntityProperty() # EntityProperty | 
 
 try:
-    # add device group property
+    # Add device group property
     api_response = api_instance.add_device_group_property(gid, body)
     pprint(api_response)
 except ApiException as e:
@@ -1452,7 +1516,9 @@ Name | Type | Description  | Notes
 # **add_device_property**
 > EntityProperty add_device_property(device_id, body)
 
-add device property
+Add device property
+
+Add a new property to a specific device
 
 ### Example
 ```python
@@ -1474,7 +1540,7 @@ device_id = 56 # int |
 body = logicmonitor_sdk.EntityProperty() # EntityProperty | 
 
 try:
-    # add device property
+    # Add device property
     api_response = api_instance.add_device_property(device_id, body)
     pprint(api_response)
 except ApiException as e:
@@ -1503,10 +1569,66 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **add_diagnostic_source**
+> DiagnosticsSource add_diagnostic_source(body=body)
+
+Add diagnostics source
+
+Adds a new diagnostics source
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.DiagnosticsSource() # DiagnosticsSource |  (optional)
+
+try:
+    # Add diagnostics source
+    api_response = api_instance.add_diagnostic_source(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->add_diagnostic_source: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DiagnosticsSource**](DiagnosticsSource.md)|  | [optional] 
+
+### Return type
+
+[**DiagnosticsSource**](DiagnosticsSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **add_dns_mapping**
 > RestDNSMappingV3 add_dns_mapping(body=body)
 
-Add dns mapping
+Add DNS mapping
+
+Add a new DNS mapping
 
 ### Example
 ```python
@@ -1527,7 +1649,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.RestDNSMappingV3() # RestDNSMappingV3 |  (optional)
 
 try:
-    # Add dns mapping
+    # Add DNS mapping
     api_response = api_instance.add_dns_mapping(body=body)
     pprint(api_response)
 except ApiException as e:
@@ -1558,7 +1680,9 @@ Name | Type | Description  | Notes
 # **add_escalation_chain**
 > EscalatingChain add_escalation_chain(body)
 
-add escalation chain
+Add escalation chain
+
+Create a new escalation chain
 
 ### Example
 ```python
@@ -1579,7 +1703,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.EscalatingChain() # EscalatingChain | 
 
 try:
-    # add escalation chain
+    # Add escalation chain
     api_response = api_instance.add_escalation_chain(body)
     pprint(api_response)
 except ApiException as e:
@@ -1610,7 +1734,9 @@ Name | Type | Description  | Notes
 # **add_event_source**
 > EventSource add_event_source(body=body)
 
-add eventSource
+Add event source
+
+Adds a new event source
 
 ### Example
 ```python
@@ -1631,7 +1757,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.EventSource() # EventSource |  (optional)
 
 try:
-    # add eventSource
+    # Add event source
     api_response = api_instance.add_event_source(body=body)
     pprint(api_response)
 except ApiException as e:
@@ -1663,6 +1789,8 @@ Name | Type | Description  | Notes
 > BatchJob add_job_monitor(body=body)
 
 Add JobMonitor
+
+Create a new JobMonitor
 
 ### Example
 ```python
@@ -1714,7 +1842,9 @@ Name | Type | Description  | Notes
 # **add_log_source**
 > LogSource add_log_source(body=body)
 
-add log source 
+Add log source
+
+Adds a new log source
 
 ### Example
 ```python
@@ -1735,7 +1865,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.LogSource() # LogSource |  (optional)
 
 try:
-    # add log source 
+    # Add log source
     api_response = api_instance.add_log_source(body=body)
     pprint(api_response)
 except ApiException as e:
@@ -1766,7 +1896,9 @@ Name | Type | Description  | Notes
 # **add_netscan**
 > Netscan add_netscan(body=body)
 
-add a new netscan
+Add a new netscan
+
+Create a new netscan
 
 ### Example
 ```python
@@ -1787,7 +1919,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Netscan() # Netscan |  (optional)
 
 try:
-    # add a new netscan
+    # Add a new netscan
     api_response = api_instance.add_netscan(body=body)
     pprint(api_response)
 except ApiException as e:
@@ -1818,7 +1950,9 @@ Name | Type | Description  | Notes
 # **add_oid**
 > RestOidV3 add_oid(body=body)
 
-add a new OID
+Add a new OID
+
+Create a new OID and add it to the system
 
 ### Example
 ```python
@@ -1839,7 +1973,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.RestOidV3() # RestOidV3 |  (optional)
 
 try:
-    # add a new OID
+    # Add a new OID
     api_response = api_instance.add_oid(body=body)
     pprint(api_response)
 except ApiException as e:
@@ -1869,6 +2003,8 @@ Name | Type | Description  | Notes
 
 # **add_ops_note**
 > OpsNote add_ops_note(body)
+
+add opsnote
 
 add opsnote
 
@@ -1922,7 +2058,9 @@ Name | Type | Description  | Notes
 # **add_property_rule**
 > PropertyRule add_property_rule(body=body)
 
-add a new property rule
+Add a new property rule
+
+Creates a new property rule in the system
 
 ### Example
 ```python
@@ -1943,7 +2081,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.PropertyRule() # PropertyRule |  (optional)
 
 try:
-    # add a new property rule
+    # Add a new property rule
     api_response = api_instance.add_property_rule(body=body)
     pprint(api_response)
 except ApiException as e:
@@ -1974,7 +2112,9 @@ Name | Type | Description  | Notes
 # **add_recipient_group**
 > RecipientGroup add_recipient_group(body)
 
-add recipient group
+Add recipient group
+
+Add a new recipient group
 
 ### Example
 ```python
@@ -1995,7 +2135,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.RecipientGroup() # RecipientGroup | 
 
 try:
-    # add recipient group
+    # Add recipient group
     api_response = api_instance.add_recipient_group(body)
     pprint(api_response)
 except ApiException as e:
@@ -2026,7 +2166,9 @@ Name | Type | Description  | Notes
 # **add_report**
 > ReportBase add_report(body)
 
-add report
+Add report
+
+Create a new report
 
 ### Example
 ```python
@@ -2047,7 +2189,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.ReportBase() # ReportBase | 
 
 try:
-    # add report
+    # Add report
     api_response = api_instance.add_report(body)
     pprint(api_response)
 except ApiException as e:
@@ -2078,7 +2220,9 @@ Name | Type | Description  | Notes
 # **add_report_group**
 > ReportGroup add_report_group(body)
 
-add report group
+Add report group
+
+Add a new report group
 
 ### Example
 ```python
@@ -2099,7 +2243,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.ReportGroup() # ReportGroup | 
 
 try:
-    # add report group
+    # Add report group
     api_response = api_instance.add_report_group(body)
     pprint(api_response)
 except ApiException as e:
@@ -2130,7 +2274,9 @@ Name | Type | Description  | Notes
 # **add_role**
 > Role add_role(body)
 
-add role
+Add role
+
+Create a new role
 
 ### Example
 ```python
@@ -2151,7 +2297,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Role() # Role | 
 
 try:
-    # add role
+    # Add role
     api_response = api_instance.add_role(body)
     pprint(api_response)
 except ApiException as e:
@@ -2181,6 +2327,8 @@ Name | Type | Description  | Notes
 
 # **add_sdt**
 > SDT add_sdt(body)
+
+add SDT (Response may contain extra fields depending upon the type of SDT being added)
 
 add SDT (Response may contain extra fields depending upon the type of SDT being added)
 
@@ -2236,6 +2384,8 @@ Name | Type | Description  | Notes
 
 Add TopologySource
 
+Add TopologySource
+
 ### Example
 ```python
 from __future__ import print_function
@@ -2286,6 +2436,8 @@ Name | Type | Description  | Notes
 # **add_website**
 > Website add_website(body)
 
+Add website
+
 Add website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.
 
 ### Example
@@ -2307,7 +2459,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Website() # Website | 
 
 try:
-    # Add website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.
+    # Add website
     api_response = api_instance.add_website(body)
     pprint(api_response)
 except ApiException as e:
@@ -2337,6 +2489,8 @@ Name | Type | Description  | Notes
 
 # **add_website_group**
 > WebsiteGroup add_website_group(body)
+
+add website group
 
 add website group
 
@@ -2390,7 +2544,9 @@ Name | Type | Description  | Notes
 # **add_widget**
 > Widget add_widget(body)
 
-add widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+Add widget
+
+Adds a new widget. Based on widget type, the request and response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.
 
 ### Example
 ```python
@@ -2411,7 +2567,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Widget() # Widget | 
 
 try:
-    # add widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+    # Add widget
     api_response = api_instance.add_widget(body)
     pprint(api_response)
 except ApiException as e:
@@ -2440,7 +2596,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **collect_device_config_source_config**
-> object collect_device_config_source_config(device_id, hds_id, instance_id)
+> object collect_device_config_source_config(instance_id, device_id, hds_id)
+
+collect a config for a device
 
 collect a config for a device
 
@@ -2460,13 +2618,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+instance_id = 56 # int | 
 device_id = 56 # int | 
 hds_id = 56 # int | 
-instance_id = 56 # int | 
 
 try:
     # collect a config for a device
-    api_response = api_instance.collect_device_config_source_config(device_id, hds_id, instance_id)
+    api_response = api_instance.collect_device_config_source_config(instance_id, device_id, hds_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->collect_device_config_source_config: %s\n" % e)
@@ -2476,9 +2634,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **instance_id** | **int**|  | 
  **device_id** | **int**|  | 
  **hds_id** | **int**|  | 
- **instance_id** | **int**|  | 
 
 ### Return type
 
@@ -2497,6 +2655,8 @@ Name | Type | Description  | Notes
 
 # **create_log_partition**
 > LogPartition create_log_partition(body=body)
+
+Create a new log partition
 
 Create a new log partition
 
@@ -2552,6 +2712,8 @@ Name | Type | Description  | Notes
 
 Delete access group
 
+Delete access group
+
 ### Example
 ```python
 from __future__ import print_function
@@ -2601,6 +2763,8 @@ Name | Type | Description  | Notes
 
 # **delete_admin_by_id**
 > object delete_admin_by_id(id)
+
+delete user
 
 delete user
 
@@ -2656,6 +2820,8 @@ Name | Type | Description  | Notes
 
 delete alert rule
 
+delete alert rule
+
 ### Example
 ```python
 from __future__ import print_function
@@ -2706,7 +2872,9 @@ Name | Type | Description  | Notes
 # **delete_api_token_by_id**
 > object delete_api_token_by_id(admin_id, apitoken_id)
 
-delete apiToken
+Delete API token
+
+Delete a specific API token by its ID
 
 ### Example
 ```python
@@ -2728,7 +2896,7 @@ admin_id = 56 # int |
 apitoken_id = 56 # int | 
 
 try:
-    # delete apiToken
+    # Delete API token
     api_response = api_instance.delete_api_token_by_id(admin_id, apitoken_id)
     pprint(api_response)
 except ApiException as e:
@@ -2760,7 +2928,9 @@ Name | Type | Description  | Notes
 # **delete_applies_to_function_by_id**
 > object delete_applies_to_function_by_id(id, ignore_reference=ignore_reference)
 
-delete applies to function
+Delete applies to function
+
+Delete a specific applies to function by its ID
 
 ### Example
 ```python
@@ -2779,10 +2949,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-ignore_reference = false # bool |  (optional) (default to false)
+ignore_reference = true # bool |  (optional)
 
 try:
-    # delete applies to function
+    # Delete applies to function
     api_response = api_instance.delete_applies_to_function_by_id(id, ignore_reference=ignore_reference)
     pprint(api_response)
 except ApiException as e:
@@ -2794,7 +2964,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **ignore_reference** | **bool**|  | [optional] [default to false]
+ **ignore_reference** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -2813,6 +2983,8 @@ Name | Type | Description  | Notes
 
 # **delete_collector_by_id**
 > object delete_collector_by_id(id)
+
+delete collector
 
 delete collector
 
@@ -2866,7 +3038,9 @@ Name | Type | Description  | Notes
 # **delete_collector_group_by_id**
 > object delete_collector_group_by_id(id)
 
-delete collector group
+Delete collector group
+
+Delete a specific collector group by its ID
 
 ### Example
 ```python
@@ -2887,7 +3061,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete collector group
+    # Delete collector group
     api_response = api_instance.delete_collector_group_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -2918,7 +3092,9 @@ Name | Type | Description  | Notes
 # **delete_config_source_by_id**
 > ConfigSource delete_config_source_by_id(id)
 
-delete config source by id
+Delete config source by ID
+
+Delete a config source based on the provided ID
 
 ### Example
 ```python
@@ -2939,7 +3115,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete config source by id
+    # Delete config source by ID
     api_response = api_instance.delete_config_source_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -2969,6 +3145,8 @@ Name | Type | Description  | Notes
 
 # **delete_dashboard_by_id**
 > object delete_dashboard_by_id(id)
+
+delete dashboard
 
 delete dashboard
 
@@ -3024,6 +3202,8 @@ Name | Type | Description  | Notes
 
 delete dashboard group
 
+delete dashboard group
+
 ### Example
 ```python
 from __future__ import print_function
@@ -3041,7 +3221,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-allow_non_empty_group = false # bool |  (optional) (default to false)
+allow_non_empty_group = true # bool |  (optional)
 
 try:
     # delete dashboard group
@@ -3056,7 +3236,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **allow_non_empty_group** | **bool**|  | [optional] [default to false]
+ **allow_non_empty_group** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -3076,7 +3256,9 @@ Name | Type | Description  | Notes
 # **delete_datasource_by_id**
 > object delete_datasource_by_id(id)
 
-delete datasource
+Delete datasource
+
+Deletes a datasource by its ID
 
 ### Example
 ```python
@@ -3097,7 +3279,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete datasource
+    # Delete datasource
     api_response = api_instance.delete_datasource_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -3126,7 +3308,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_device_by_id**
-> object delete_device_by_id(id, start=start, end=end, netflow_filter=netflow_filter, delete_hard=delete_hard)
+> object delete_device_by_id(id, end=end, netflow_filter=netflow_filter, start=start, delete_hard=delete_hard)
+
+delete a device
 
 delete a device
 
@@ -3147,14 +3331,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
-delete_hard = true # bool |  (optional) (default to true)
+start = 789 # int |  (optional)
+delete_hard = true # bool |  (optional)
 
 try:
     # delete a device
-    api_response = api_instance.delete_device_by_id(id, start=start, end=end, netflow_filter=netflow_filter, delete_hard=delete_hard)
+    api_response = api_instance.delete_device_by_id(id, end=end, netflow_filter=netflow_filter, start=start, delete_hard=delete_hard)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->delete_device_by_id: %s\n" % e)
@@ -3165,10 +3349,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
- **delete_hard** | **bool**|  | [optional] [default to true]
+ **start** | **int**|  | [optional] 
+ **delete_hard** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -3187,6 +3371,8 @@ Name | Type | Description  | Notes
 
 # **delete_device_datasource_instance_by_id**
 > object delete_device_datasource_instance_by_id(device_id, hds_id, id)
+
+delete a device instance
 
 delete a device instance
 
@@ -3246,6 +3432,8 @@ Name | Type | Description  | Notes
 
 delete device group
 
+delete device group
+
 ### Example
 ```python
 from __future__ import print_function
@@ -3263,8 +3451,8 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-delete_children = false # bool |  (optional) (default to false)
-delete_hard = true # bool |  (optional) (default to true)
+delete_children = true # bool |  (optional)
+delete_hard = true # bool |  (optional)
 
 try:
     # delete device group
@@ -3279,8 +3467,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **delete_children** | **bool**|  | [optional] [default to false]
- **delete_hard** | **bool**|  | [optional] [default to true]
+ **delete_children** | **bool**|  | [optional] 
+ **delete_hard** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -3299,6 +3487,8 @@ Name | Type | Description  | Notes
 
 # **delete_device_group_cluster_alert_conf_by_id**
 > object delete_device_group_cluster_alert_conf_by_id(device_group_id, id)
+
+Delete cluster alert configuration
 
 Delete cluster alert configuration
 
@@ -3354,7 +3544,9 @@ Name | Type | Description  | Notes
 # **delete_device_group_property_by_name**
 > object delete_device_group_property_by_name(gid, name)
 
-delete device group property
+Delete device group property
+
+Delete a specific property of a device group by its name
 
 ### Example
 ```python
@@ -3376,7 +3568,7 @@ gid = 56 # int | group ID
 name = 'name_example' # str | 
 
 try:
-    # delete device group property
+    # Delete device group property
     api_response = api_instance.delete_device_group_property_by_name(gid, name)
     pprint(api_response)
 except ApiException as e:
@@ -3408,7 +3600,9 @@ Name | Type | Description  | Notes
 # **delete_device_property_by_name**
 > object delete_device_property_by_name(device_id, name)
 
-delete device property
+Delete device property
+
+Delete a specific property of a device by its name
 
 ### Example
 ```python
@@ -3430,7 +3624,7 @@ device_id = 56 # int |
 name = 'name_example' # str | 
 
 try:
-    # delete device property
+    # Delete device property
     api_response = api_instance.delete_device_property_by_name(device_id, name)
     pprint(api_response)
 except ApiException as e:
@@ -3459,10 +3653,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_escalation_chain_by_id**
-> object delete_escalation_chain_by_id(id)
+# **delete_diagnostic_source_by_id**
+> object delete_diagnostic_source_by_id(id)
 
-delete escalation chain
+Delete a diagnostic source module
+
+Deletes a diagnostic source module by its ID
 
 ### Example
 ```python
@@ -3483,7 +3679,61 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete escalation chain
+    # Delete a diagnostic source module
+    api_response = api_instance.delete_diagnostic_source_by_id(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->delete_diagnostic_source_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_escalation_chain_by_id**
+> object delete_escalation_chain_by_id(id)
+
+Delete escalation chain
+
+Delete a specific escalation chain by its ID
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+
+try:
+    # Delete escalation chain
     api_response = api_instance.delete_escalation_chain_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -3514,7 +3764,9 @@ Name | Type | Description  | Notes
 # **delete_event_source_by_id**
 > object delete_event_source_by_id(id)
 
-delete eventSource by id
+Delete event source by ID
+
+Deletes an event source by its ID
 
 ### Example
 ```python
@@ -3535,7 +3787,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete eventSource by id
+    # Delete event source by ID
     api_response = api_instance.delete_event_source_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -3567,6 +3819,8 @@ Name | Type | Description  | Notes
 > object delete_job_monitor(id)
 
 Delete JobMonitor
+
+Delete a specific JobMonitor by its ID
 
 ### Example
 ```python
@@ -3620,6 +3874,8 @@ Name | Type | Description  | Notes
 
 Delete a log partition by ID
 
+Delete a log partition by ID
+
 ### Example
 ```python
 from __future__ import print_function
@@ -3670,7 +3926,9 @@ Name | Type | Description  | Notes
 # **delete_log_source**
 > object delete_log_source(id)
 
-delete log source 
+Delete log source
+
+Deletes an existing log source
 
 ### Example
 ```python
@@ -3691,7 +3949,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete log source 
+    # Delete log source
     api_response = api_instance.delete_log_source(id)
     pprint(api_response)
 except ApiException as e:
@@ -3722,7 +3980,9 @@ Name | Type | Description  | Notes
 # **delete_netscan_by_id**
 > object delete_netscan_by_id(id)
 
-delete a netscan
+Delete a netscan
+
+Delete a specific netscan by its ID
 
 ### Example
 ```python
@@ -3743,7 +4003,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete a netscan
+    # Delete a netscan
     api_response = api_instance.delete_netscan_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -3774,7 +4034,9 @@ Name | Type | Description  | Notes
 # **delete_oid**
 > object delete_oid(id)
 
-delete a OID
+Delete an OID
+
+Delete an existing OID from the system
 
 ### Example
 ```python
@@ -3795,7 +4057,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete a OID
+    # Delete an OID
     api_response = api_instance.delete_oid(id)
     pprint(api_response)
 except ApiException as e:
@@ -3825,6 +4087,8 @@ Name | Type | Description  | Notes
 
 # **delete_ops_note_by_id**
 > object delete_ops_note_by_id(id)
+
+delete opsnote
 
 delete opsnote
 
@@ -3880,6 +4144,8 @@ Name | Type | Description  | Notes
 
 delete a property rule
 
+Delete a property rule by id
+
 ### Example
 ```python
 from __future__ import print_function
@@ -3930,7 +4196,9 @@ Name | Type | Description  | Notes
 # **delete_recipient_group_by_id**
 > object delete_recipient_group_by_id(id)
 
-delete recipient group
+Delete recipient group
+
+Delete a specific recipient group by its ID
 
 ### Example
 ```python
@@ -3951,7 +4219,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete recipient group
+    # Delete recipient group
     api_response = api_instance.delete_recipient_group_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -3982,7 +4250,9 @@ Name | Type | Description  | Notes
 # **delete_report_by_id**
 > object delete_report_by_id(id)
 
-delete report
+Delete report
+
+Delete a specific report by its ID
 
 ### Example
 ```python
@@ -4003,7 +4273,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete report
+    # Delete report
     api_response = api_instance.delete_report_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -4034,7 +4304,9 @@ Name | Type | Description  | Notes
 # **delete_report_group_by_id**
 > object delete_report_group_by_id(id)
 
-delete report group
+Delete report group
+
+Delete a specific report group by its ID
 
 ### Example
 ```python
@@ -4055,7 +4327,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete report group
+    # Delete report group
     api_response = api_instance.delete_report_group_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -4086,7 +4358,9 @@ Name | Type | Description  | Notes
 # **delete_role_by_id**
 > object delete_role_by_id(id)
 
-delete role
+Delete role
+
+Delete a specific role by its ID
 
 ### Example
 ```python
@@ -4107,7 +4381,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete role
+    # Delete role
     api_response = api_instance.delete_role_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -4137,6 +4411,8 @@ Name | Type | Description  | Notes
 
 # **delete_sdt_by_id**
 > object delete_sdt_by_id(id)
+
+delete SDT
 
 delete SDT
 
@@ -4192,6 +4468,8 @@ Name | Type | Description  | Notes
 
 Delete TopologySource
 
+Delete TopologySource
+
 ### Example
 ```python
 from __future__ import print_function
@@ -4241,6 +4519,8 @@ Name | Type | Description  | Notes
 
 # **delete_website_by_id**
 > object delete_website_by_id(id)
+
+delete website
 
 delete website
 
@@ -4296,6 +4576,8 @@ Name | Type | Description  | Notes
 
 delete website group
 
+delete website group
+
 ### Example
 ```python
 from __future__ import print_function
@@ -4313,7 +4595,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-delete_children = 0 # int |  (optional) (default to 0)
+delete_children = 56 # int |  (optional)
 
 try:
     # delete website group
@@ -4328,7 +4610,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **delete_children** | **int**|  | [optional] [default to 0]
+ **delete_children** | **int**|  | [optional] 
 
 ### Return type
 
@@ -4348,7 +4630,9 @@ Name | Type | Description  | Notes
 # **delete_widget_by_id**
 > object delete_widget_by_id(id)
 
-delete widget
+Delete widget
+
+Deletes a widget by its ID
 
 ### Example
 ```python
@@ -4369,7 +4653,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # delete widget
+    # Delete widget
     api_response = api_instance.delete_widget_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -4399,6 +4683,8 @@ Name | Type | Description  | Notes
 
 # **discover_subscriptions**
 > AzureSubscriptionIdPaginationResponse discover_subscriptions(body)
+
+view subscriptions
 
 view subscriptions
 
@@ -4452,7 +4738,9 @@ Name | Type | Description  | Notes
 # **escalated_alert_by_id**
 > object escalated_alert_by_id(id)
 
-escalate alert by id
+Escalate alert by ID
+
+Escalate the alert with the given ID
 
 ### Example
 ```python
@@ -4473,7 +4761,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
 
 try:
-    # escalate alert by id
+    # Escalate alert by ID
     api_response = api_instance.escalated_alert_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -4506,6 +4794,8 @@ Name | Type | Description  | Notes
 
 Execute a Collector debug command
 
+Execute a Collector debug command
+
 ### Example
 ```python
 from __future__ import print_function
@@ -4523,7 +4813,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.Debug() # Debug |  (optional)
-collector_id = -1 # int |  (optional) (default to -1)
+collector_id = 56 # int |  (optional)
 
 try:
     # Execute a Collector debug command
@@ -4538,7 +4828,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**Debug**](Debug.md)|  | [optional] 
- **collector_id** | **int**|  | [optional] [default to -1]
+ **collector_id** | **int**|  | [optional] 
 
 ### Return type
 
@@ -4555,10 +4845,66 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **execute_diagnostics_manually**
+> DiagnosticsSourceExecution execute_diagnostics_manually(body=body)
+
+Trigger a diagnostic module for host.
+
+Trigger a diagnostic module for host.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.DiagnosticsSourceExecution() # DiagnosticsSourceExecution |  (optional)
+
+try:
+    # Trigger a diagnostic module for host.
+    api_response = api_instance.execute_diagnostics_manually(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->execute_diagnostics_manually: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**DiagnosticsSourceExecution**](DiagnosticsSourceExecution.md)|  | [optional] 
+
+### Return type
+
+[**DiagnosticsSourceExecution**](DiagnosticsSourceExecution.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **fetch_device_instances_data**
 > DeviceInstanceDataPaginationResponse fetch_device_instances_data(body, period=period, start=start, end=end, aggregate=aggregate)
 
-fetch device instances data
+Fetch device instances data
+
+Retrieve a paginated list of data for device instances
 
 ### Example
 ```python
@@ -4577,13 +4923,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.DeviceInstances() # DeviceInstances | 
-period = 1.0 # float |  (optional) (default to 1.0)
-start = 0 # int |  (optional) (default to 0)
-end = 0 # int |  (optional) (default to 0)
-aggregate = 'none' # str | the aggregate option (optional) (default to none)
+period = 1.2 # float |  (optional)
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
+aggregate = 'aggregate_example' # str | The aggregate option (optional)
 
 try:
-    # fetch device instances data
+    # Fetch device instances data
     api_response = api_instance.fetch_device_instances_data(body, period=period, start=start, end=end, aggregate=aggregate)
     pprint(api_response)
 except ApiException as e:
@@ -4595,10 +4941,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **body** | [**DeviceInstances**](DeviceInstances.md)|  | 
- **period** | **float**|  | [optional] [default to 1.0]
- **start** | **int**|  | [optional] [default to 0]
- **end** | **int**|  | [optional] [default to 0]
- **aggregate** | **str**| the aggregate option | [optional] [default to none]
+ **period** | **float**|  | [optional] 
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
+ **aggregate** | **str**| The aggregate option | [optional] 
 
 ### Return type
 
@@ -4618,7 +4964,9 @@ Name | Type | Description  | Notes
 # **fetch_report_using_task_id**
 > GenerateReportResult fetch_report_using_task_id(id, task_id)
 
-get report for task Id
+Get report for task ID
+
+Fetch the report associated with a specific task ID
 
 ### Example
 ```python
@@ -4640,7 +4988,7 @@ id = 56 # int |
 task_id = 'task_id_example' # str | 
 
 try:
-    # get report for task Id
+    # Get report for task ID
     api_response = api_instance.fetch_report_using_task_id(id, task_id)
     pprint(api_response)
 except ApiException as e:
@@ -4672,7 +5020,9 @@ Name | Type | Description  | Notes
 # **generate_report_by_id**
 > GenerateReportResult generate_report_by_id(id, body=body)
 
-run a report
+Run a report
+
+Generate a report based on the given report ID
 
 ### Example
 ```python
@@ -4694,7 +5044,7 @@ id = 56 # int |
 body = logicmonitor_sdk.GenerateReportRequest() # GenerateReportRequest |  (optional)
 
 try:
-    # run a report
+    # Run a report
     api_response = api_instance.generate_report_by_id(id, body=body)
     pprint(api_response)
 except ApiException as e:
@@ -4725,6 +5075,8 @@ Name | Type | Description  | Notes
 
 # **get_access_group_by_id**
 > AccessGroup get_access_group_by_id(id, fields=fields)
+
+Get access group by id
 
 Get access group by id
 
@@ -4779,6 +5131,8 @@ Name | Type | Description  | Notes
 
 # **get_access_group_list**
 > AccessGroupPaginationResponse get_access_group_list(fields=fields, size=size, offset=offset, filter=filter)
+
+Get access group list
 
 Get access group list
 
@@ -4840,6 +5194,8 @@ Name | Type | Description  | Notes
 
 get user
 
+get user
+
 ### Example
 ```python
 from __future__ import print_function
@@ -4891,6 +5247,8 @@ Name | Type | Description  | Notes
 
 # **get_admin_list**
 > AdminPaginationResponse get_admin_list(type=type, permission=permission, filter_group_string=filter_group_string, fields=fields, size=size, offset=offset, filter=filter)
+
+get user list
 
 get user list
 
@@ -4958,6 +5316,8 @@ Name | Type | Description  | Notes
 
 get alert
 
+get alert by id
+
 ### Example
 ```python
 from __future__ import print_function
@@ -4975,7 +5335,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
-need_message = false # bool |  (optional) (default to false)
+need_message = true # bool |  (optional)
 custom_columns = 'custom_columns_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 
@@ -4992,7 +5352,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **need_message** | **bool**|  | [optional] [default to false]
+ **need_message** | **bool**|  | [optional] 
  **custom_columns** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
 
@@ -5014,7 +5374,9 @@ Name | Type | Description  | Notes
 # **get_alert_list**
 > AlertListPaginationResponse get_alert_list(fields=fields, size=size, offset=offset, filter=filter)
 
-get alert list
+Get alert list
+
+Retrieve the list of alerts
 
 ### Example
 ```python
@@ -5038,7 +5400,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get alert list
+    # Get alert list
     api_response = api_instance.get_alert_list(fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -5074,6 +5436,8 @@ Name | Type | Description  | Notes
 
 get device group alerts
 
+get device group alerts
+
 ### Example
 ```python
 from __future__ import print_function
@@ -5091,7 +5455,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-need_message = false # bool |  (optional) (default to false)
+need_message = true # bool |  (optional)
 custom_columns = 'custom_columns_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -5111,7 +5475,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **need_message** | **bool**|  | [optional] [default to false]
+ **need_message** | **bool**|  | [optional] 
  **custom_columns** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
@@ -5134,7 +5498,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_alert_list_by_device_id**
-> AlertPaginationResponse get_alert_list_by_device_id(id, start=start, end=end, netflow_filter=netflow_filter, need_message=need_message, custom_columns=custom_columns, bound=bound, fields=fields, size=size, offset=offset, filter=filter)
+> AlertPaginationResponse get_alert_list_by_device_id(id, end=end, netflow_filter=netflow_filter, start=start, need_message=need_message, custom_columns=custom_columns, bound=bound, fields=fields, size=size, offset=offset, filter=filter)
+
+get alerts
 
 get alerts
 
@@ -5155,12 +5521,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
-need_message = false # bool |  (optional) (default to false)
+start = 789 # int |  (optional)
+need_message = true # bool |  (optional)
 custom_columns = 'custom_columns_example' # str |  (optional)
-bound = 'instances' # str |  (optional) (default to instances)
+bound = 'bound_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
@@ -5168,7 +5534,7 @@ filter = 'filter_example' # str |  (optional)
 
 try:
     # get alerts
-    api_response = api_instance.get_alert_list_by_device_id(id, start=start, end=end, netflow_filter=netflow_filter, need_message=need_message, custom_columns=custom_columns, bound=bound, fields=fields, size=size, offset=offset, filter=filter)
+    api_response = api_instance.get_alert_list_by_device_id(id, end=end, netflow_filter=netflow_filter, start=start, need_message=need_message, custom_columns=custom_columns, bound=bound, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_alert_list_by_device_id: %s\n" % e)
@@ -5179,12 +5545,12 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
- **need_message** | **bool**|  | [optional] [default to false]
+ **start** | **int**|  | [optional] 
+ **need_message** | **bool**|  | [optional] 
  **custom_columns** | **str**|  | [optional] 
- **bound** | **str**|  | [optional] [default to instances]
+ **bound** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -5207,6 +5573,8 @@ Name | Type | Description  | Notes
 
 # **get_alert_rule_by_id**
 > AlertRule get_alert_rule_by_id(id, fields=fields)
+
+get alert rule by id
 
 get alert rule by id
 
@@ -5261,6 +5629,8 @@ Name | Type | Description  | Notes
 
 # **get_alert_rule_list**
 > AlertRulePaginationResponse get_alert_rule_list(fields=fields, size=size, offset=offset, filter=filter)
+
+get alert rule list
 
 get alert rule list
 
@@ -5322,6 +5692,8 @@ Name | Type | Description  | Notes
 
 Retrieve a list of all log partitions
 
+Retrieve a list of all log partitions
+
 ### Example
 ```python
 from __future__ import print_function
@@ -5366,7 +5738,9 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_sdt_list_by_device_id**
-> SDTPaginationResponse get_all_sdt_list_by_device_id(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+> SDTPaginationResponse get_all_sdt_list_by_device_id(id, end=end, netflow_filter=netflow_filter, start=start, fields=fields, size=size, offset=offset, filter=filter)
+
+get SDTs for a device
 
 get SDTs for a device
 
@@ -5387,9 +5761,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
+start = 789 # int |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
@@ -5397,7 +5771,7 @@ filter = 'filter_example' # str |  (optional)
 
 try:
     # get SDTs for a device
-    api_response = api_instance.get_all_sdt_list_by_device_id(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+    api_response = api_instance.get_all_sdt_list_by_device_id(id, end=end, netflow_filter=netflow_filter, start=start, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_all_sdt_list_by_device_id: %s\n" % e)
@@ -5408,9 +5782,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
+ **start** | **int**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -5433,6 +5807,8 @@ Name | Type | Description  | Notes
 
 # **get_all_sdt_list_by_website_group_id**
 > SDTPaginationResponse get_all_sdt_list_by_website_group_id(id, fields=fields, size=size, offset=offset, filter=filter)
+
+get a list of SDTs for a website group (Response may contain extra fields depending upon the type of SDT)
 
 get a list of SDTs for a website group (Response may contain extra fields depending upon the type of SDT)
 
@@ -5494,7 +5870,9 @@ Name | Type | Description  | Notes
 # **get_api_token_list**
 > ApiTokenPaginationResponse get_api_token_list(type=type, permission=permission, fields=fields, size=size, offset=offset, filter=filter)
 
-get a list of api tokens across users
+Get a list of API tokens across users
+
+Retrieve a paginated list of API tokens for all users
 
 ### Example
 ```python
@@ -5520,7 +5898,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get a list of api tokens across users
+    # Get a list of API tokens across users
     api_response = api_instance.get_api_token_list(type=type, permission=permission, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -5556,7 +5934,9 @@ Name | Type | Description  | Notes
 # **get_api_token_list_by_admin_id**
 > ApiTokenPaginationResponse get_api_token_list_by_admin_id(admin_id, type=type, permission=permission, fields=fields, size=size, offset=offset, filter=filter)
 
-get api tokens for a user
+Get API tokens for a user
+
+Retrieve a paginated list of API tokens for a specific user
 
 ### Example
 ```python
@@ -5583,7 +5963,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get api tokens for a user
+    # Get API tokens for a user
     api_response = api_instance.get_api_token_list_by_admin_id(admin_id, type=type, permission=permission, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -5620,7 +6000,9 @@ Name | Type | Description  | Notes
 # **get_applies_to_function_by_id**
 > AppliesToFunction get_applies_to_function_by_id(id)
 
-get applies to function
+Get applies to function by ID
+
+Retrieve a specific applies to function using its ID
 
 ### Example
 ```python
@@ -5641,7 +6023,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # get applies to function
+    # Get applies to function by ID
     api_response = api_instance.get_applies_to_function_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -5672,7 +6054,9 @@ Name | Type | Description  | Notes
 # **get_applies_to_function_list**
 > RestAppliesToFunctionPaginationResponse get_applies_to_function_list(fields=fields, size=size, offset=offset, filter=filter)
 
-get applies to function list
+Get applies to function list
+
+Retrieve a paginated list of functions that apply
 
 ### Example
 ```python
@@ -5696,7 +6080,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get applies to function list
+    # Get applies to function list
     api_response = api_instance.get_applies_to_function_list(fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -5730,7 +6114,9 @@ Name | Type | Description  | Notes
 # **get_associated_device_list_by_data_source_id**
 > DeviceDataSourceAssociatedPaginationResponse get_associated_device_list_by_data_source_id(id, fields=fields, size=size, offset=offset, filter=filter)
 
-get devices associated with a datasource
+Get devices associated with a datasource
+
+Retrieves the list of devices associated with a specific datasource
 
 ### Example
 ```python
@@ -5755,7 +6141,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get devices associated with a datasource
+    # Get devices associated with a datasource
     api_response = api_instance.get_associated_device_list_by_data_source_id(id, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -5791,6 +6177,8 @@ Name | Type | Description  | Notes
 > AuditLog get_audit_log_by_id(id)
 
 Get audit log by id
+
+Retrieve a specific audit log by its ID
 
 ### Example
 ```python
@@ -5843,6 +6231,8 @@ Name | Type | Description  | Notes
 > AccessLogPaginationResponse get_audit_log_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
 
 Get audit logs
+
+Retrieve a paginated list of audit logs
 
 ### Example
 ```python
@@ -5904,6 +6294,8 @@ Name | Type | Description  | Notes
 
 Get AWS account ID
 
+Retrieve the AWS account ID
+
 ### Example
 ```python
 from __future__ import print_function
@@ -5952,6 +6344,8 @@ This endpoint does not need any parameter.
 
 Get AWS external ID
 
+Retrieve the AWS external ID
+
 ### Example
 ```python
 from __future__ import print_function
@@ -5997,6 +6391,8 @@ This endpoint does not need any parameter.
 
 # **get_collector_by_id**
 > Collector get_collector_by_id(id, fields=fields)
+
+get collector
 
 get collector
 
@@ -6052,7 +6448,9 @@ Name | Type | Description  | Notes
 # **get_collector_group_by_id**
 > CollectorGroup get_collector_group_by_id(id, fields=fields)
 
-get collector group
+Get collector group
+
+Retrieve details of a specific collector group by its ID
 
 ### Example
 ```python
@@ -6074,7 +6472,7 @@ id = 56 # int |
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get collector group
+    # Get collector group
     api_response = api_instance.get_collector_group_by_id(id, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -6106,7 +6504,9 @@ Name | Type | Description  | Notes
 # **get_collector_group_list**
 > CollectorGroupPaginationResponse get_collector_group_list(fields=fields, size=size, offset=offset, filter=filter)
 
-get collector group list
+Get collector group list
+
+Retrieve a paginated list of collector groups
 
 ### Example
 ```python
@@ -6130,7 +6530,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get collector group list
+    # Get collector group list
     api_response = api_instance.get_collector_group_list(fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -6166,6 +6566,8 @@ Name | Type | Description  | Notes
 
 get collector installer
 
+get collector installer
+
 ### Example
 ```python
 from __future__ import print_function
@@ -6186,9 +6588,9 @@ collector_id = 56 # int |
 os_and_arch = 'os_and_arch_example' # str | 
 collector_version = 56 # int | The version of the installer you'd like to download. This defaults to the latest GD Collector, unless useEA is true (optional)
 token = 'token_example' # str |  (optional)
-monitor_others = true # bool |  (optional) (default to true)
-collector_size = 'medium' # str | The size of the Collector you'd like to install. Options are nano, small (requires 2GB memory), medium (requires 4GB memory), large (requires 8GB memory), extra large (requires 16GB memory), double extra large (requires 32GB memory). Requires collector version 22.180 or higher. Defaults to small (optional) (default to medium)
-use_ea = false # bool | If true, the latest EA Collector version will be used. Defaults to false (optional) (default to false)
+monitor_others = true # bool |  (optional)
+collector_size = 'collector_size_example' # str | The size of the Collector you'd like to install. Options are nano, small (requires 2GB memory), medium (requires 4GB memory), large (requires 8GB memory), extra large (requires 16GB memory), double extra large (requires 32GB memory). Requires collector version 22.180 or higher. Defaults to small (optional)
+use_ea = true # bool | If true, the latest EA Collector version will be used. Defaults to false (optional)
 
 try:
     # get collector installer
@@ -6206,9 +6608,9 @@ Name | Type | Description  | Notes
  **os_and_arch** | **str**|  | 
  **collector_version** | **int**| The version of the installer you&#x27;d like to download. This defaults to the latest GD Collector, unless useEA is true | [optional] 
  **token** | **str**|  | [optional] 
- **monitor_others** | **bool**|  | [optional] [default to true]
- **collector_size** | **str**| The size of the Collector you&#x27;d like to install. Options are nano, small (requires 2GB memory), medium (requires 4GB memory), large (requires 8GB memory), extra large (requires 16GB memory), double extra large (requires 32GB memory). Requires collector version 22.180 or higher. Defaults to small | [optional] [default to medium]
- **use_ea** | **bool**| If true, the latest EA Collector version will be used. Defaults to false | [optional] [default to false]
+ **monitor_others** | **bool**|  | [optional] 
+ **collector_size** | **str**| The size of the Collector you&#x27;d like to install. Options are nano, small (requires 2GB memory), medium (requires 4GB memory), large (requires 8GB memory), extra large (requires 16GB memory), double extra large (requires 32GB memory). Requires collector version 22.180 or higher. Defaults to small | [optional] 
+ **use_ea** | **bool**| If true, the latest EA Collector version will be used. Defaults to false | [optional] 
 
 ### Return type
 
@@ -6227,6 +6629,8 @@ Name | Type | Description  | Notes
 
 # **get_collector_list**
 > CollectorPaginationResponse get_collector_list(fields=fields, size=size, offset=offset, filter=filter)
+
+get collector list
 
 get collector list
 
@@ -6288,6 +6692,8 @@ Name | Type | Description  | Notes
 
 get collector version list
 
+get collector version list
+
 ### Example
 ```python
 from __future__ import print_function
@@ -6344,7 +6750,9 @@ Name | Type | Description  | Notes
 # **get_config_source_by_id**
 > ConfigSource get_config_source_by_id(id, format=format)
 
-get config source by id
+Get config source by ID
+
+Retrieve a config source by its ID
 
 ### Example
 ```python
@@ -6363,10 +6771,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 
 try:
-    # get config source by id
+    # Get config source by ID
     api_response = api_instance.get_config_source_by_id(id, format=format)
     pprint(api_response)
 except ApiException as e:
@@ -6378,7 +6786,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -6398,7 +6806,9 @@ Name | Type | Description  | Notes
 # **get_config_source_list**
 > ConfigsourcePaginationResponse get_config_source_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
 
-get config source list
+Get config source list
+
+Retrieve a list of config sources
 
 ### Example
 ```python
@@ -6416,14 +6826,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get config source list
+    # Get config source list
     api_response = api_instance.get_config_source_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -6434,7 +6844,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -6457,6 +6867,8 @@ Name | Type | Description  | Notes
 
 # **get_contract_info_by_company**
 > RestContractInfoBaseV3 get_contract_info_by_company()
+
+get contract info by company
 
 get contract info by company
 
@@ -6508,6 +6920,8 @@ This endpoint does not need any parameter.
 
 get dashboard
 
+get dashboard
+
 ### Example
 ```python
 from __future__ import print_function
@@ -6525,8 +6939,8 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-template = false # bool |  (optional) (default to false)
-format = 'json' # str |  (optional) (default to json)
+template = true # bool |  (optional)
+format = 'format_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 
 try:
@@ -6542,8 +6956,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **template** | **bool**|  | [optional] [default to false]
- **format** | **str**|  | [optional] [default to json]
+ **template** | **bool**|  | [optional] 
+ **format** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
 
 ### Return type
@@ -6564,7 +6978,9 @@ Name | Type | Description  | Notes
 # **get_dashboard_group_by_id**
 > DashboardGroup get_dashboard_group_by_id(id, template=template, format=format, fields=fields)
 
-get dashboard group
+Get dashboard group by ID
+
+Retrieves a dashboard group by its ID
 
 ### Example
 ```python
@@ -6583,12 +6999,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-template = false # bool |  (optional) (default to false)
-format = 'json' # str |  (optional) (default to json)
+template = true # bool |  (optional)
+format = 'format_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get dashboard group
+    # Get dashboard group by ID
     api_response = api_instance.get_dashboard_group_by_id(id, template=template, format=format, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -6600,8 +7016,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **template** | **bool**|  | [optional] [default to false]
- **format** | **str**|  | [optional] [default to json]
+ **template** | **bool**|  | [optional] 
+ **format** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
 
 ### Return type
@@ -6621,6 +7037,8 @@ Name | Type | Description  | Notes
 
 # **get_dashboard_group_list**
 > DashboardGroupPaginationResponse get_dashboard_group_list(fields=fields, size=size, offset=offset, filter=filter)
+
+get dashboard group list
 
 get dashboard group list
 
@@ -6680,7 +7098,9 @@ Name | Type | Description  | Notes
 # **get_dashboard_list**
 > DashboardPaginationResponse get_dashboard_list(fields=fields, size=size, offset=offset, filter=filter)
 
-get dashboard list
+Get dashboard list
+
+Retrieves a list of dashboards
 
 ### Example
 ```python
@@ -6704,7 +7124,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get dashboard list
+    # Get dashboard list
     api_response = api_instance.get_dashboard_list(fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -6738,7 +7158,9 @@ Name | Type | Description  | Notes
 # **get_data_source_overview_graph_by_id**
 > DataSourceOverviewGraph get_data_source_overview_graph_by_id(ds_id, id)
 
-get datasource overview graph by id
+Get datasource overview graph by ID
+
+Retrieves a datasource overview graph based on the provided ID
 
 ### Example
 ```python
@@ -6760,7 +7182,7 @@ ds_id = 56 # int |
 id = 56 # int | 
 
 try:
-    # get datasource overview graph by id
+    # Get datasource overview graph by ID
     api_response = api_instance.get_data_source_overview_graph_by_id(ds_id, id)
     pprint(api_response)
 except ApiException as e:
@@ -6792,7 +7214,9 @@ Name | Type | Description  | Notes
 # **get_data_source_overview_graph_list**
 > DatasourceOverviewGraphPaginationResponse get_data_source_overview_graph_list(ds_id, fields=fields, size=size, offset=offset, filter=filter)
 
-get datasource overview graph list
+Get datasource overview graph list
+
+Retrieves the list of datasource overview graphs
 
 ### Example
 ```python
@@ -6817,7 +7241,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get datasource overview graph list
+    # Get datasource overview graph list
     api_response = api_instance.get_data_source_overview_graph_list(ds_id, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -6852,7 +7276,9 @@ Name | Type | Description  | Notes
 # **get_datasource_by_id**
 > DataSource get_datasource_by_id(id, format=format, fields=fields)
 
-get datasource by id
+Get datasource by ID
+
+Retrieves a datasource by its ID
 
 ### Example
 ```python
@@ -6871,11 +7297,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get datasource by id
+    # Get datasource by ID
     api_response = api_instance.get_datasource_by_id(id, format=format, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -6887,7 +7313,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
 
 ### Return type
@@ -6908,7 +7334,9 @@ Name | Type | Description  | Notes
 # **get_datasource_list**
 > DatasourcePaginationResponse get_datasource_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
 
-get datasource list
+Get datasource list
+
+Retrieves a list of datasources
 
 ### Example
 ```python
@@ -6926,14 +7354,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get datasource list
+    # Get datasource list
     api_response = api_instance.get_datasource_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -6944,7 +7372,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -6970,6 +7398,8 @@ Name | Type | Description  | Notes
 
 Get the result of a Collector debug command using sessionId
 
+Get the result of a Collector debug command using sessionId
+
 ### Example
 ```python
 from __future__ import print_function
@@ -6987,7 +7417,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
-collector_id = -1 # int |  (optional) (default to -1)
+collector_id = 56 # int |  (optional)
 
 try:
     # Get the result of a Collector debug command using sessionId
@@ -7002,7 +7432,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **collector_id** | **int**|  | [optional] [default to -1]
+ **collector_id** | **int**|  | [optional] 
 
 ### Return type
 
@@ -7021,6 +7451,8 @@ Name | Type | Description  | Notes
 
 # **get_delta_devices**
 > DeviceDeltaPaginationResponse get_delta_devices(delta_id)
+
+Get delta devices using deltaId
 
 Get delta devices using deltaId
 
@@ -7076,6 +7508,8 @@ Name | Type | Description  | Notes
 
 Get filter matched devices with new deltaId
 
+Get filter matched devices with new deltaId
+
 ### Example
 ```python
 from __future__ import print_function
@@ -7124,7 +7558,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_by_id**
-> Device get_device_by_id(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields)
+> Device get_device_by_id(id, end=end, netflow_filter=netflow_filter, start=start, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp, fields=fields)
+
+get device by id
 
 get device by id
 
@@ -7145,14 +7581,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
+start = 789 # int |  (optional)
+need_stc_grp_and_sorted_cp = true # bool |  (optional)
 fields = 'fields_example' # str |  (optional)
 
 try:
     # get device by id
-    api_response = api_instance.get_device_by_id(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields)
+    api_response = api_instance.get_device_by_id(id, end=end, netflow_filter=netflow_filter, start=start, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp, fields=fields)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_device_by_id: %s\n" % e)
@@ -7163,9 +7600,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
+ **start** | **int**|  | [optional] 
+ **need_stc_grp_and_sorted_cp** | **bool**|  | [optional] 
  **fields** | **str**|  | [optional] 
 
 ### Return type
@@ -7184,7 +7622,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_config_source_config_by_id**
-> DeviceDataSourceInstanceConfig get_device_config_source_config_by_id(device_id, hds_id, instance_id, id, format=format, start_epoch=start_epoch, fields=fields)
+> DeviceDataSourceInstanceConfig get_device_config_source_config_by_id(instance_id, device_id, hds_id, id, format=format, start_epoch=start_epoch, fields=fields)
+
+get a config for a device
 
 get a config for a device
 
@@ -7204,17 +7644,17 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+instance_id = 56 # int | 
 device_id = 56 # int | 
 hds_id = 56 # int | 
-instance_id = 56 # int | 
 id = 'id_example' # str | 
-format = 'json' # str |  (optional) (default to json)
-start_epoch = 0 # int |  (optional) (default to 0)
+format = 'format_example' # str |  (optional)
+start_epoch = 789 # int |  (optional)
 fields = 'fields_example' # str |  (optional)
 
 try:
     # get a config for a device
-    api_response = api_instance.get_device_config_source_config_by_id(device_id, hds_id, instance_id, id, format=format, start_epoch=start_epoch, fields=fields)
+    api_response = api_instance.get_device_config_source_config_by_id(instance_id, device_id, hds_id, id, format=format, start_epoch=start_epoch, fields=fields)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_device_config_source_config_by_id: %s\n" % e)
@@ -7224,12 +7664,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **instance_id** | **int**|  | 
  **device_id** | **int**|  | 
  **hds_id** | **int**|  | 
- **instance_id** | **int**|  | 
  **id** | **str**|  | 
- **format** | **str**|  | [optional] [default to json]
- **start_epoch** | **int**|  | [optional] [default to 0]
+ **format** | **str**|  | [optional] 
+ **start_epoch** | **int**|  | [optional] 
  **fields** | **str**|  | [optional] 
 
 ### Return type
@@ -7248,7 +7688,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_config_source_config_list**
-> DeviceDatasourceInstanceConfigPaginationResponse get_device_config_source_config_list(device_id, hds_id, instance_id, fields=fields, size=size, offset=offset, filter=filter)
+> DeviceDatasourceInstanceConfigPaginationResponse get_device_config_source_config_list(instance_id, device_id, hds_id, fields=fields, size=size, offset=offset, filter=filter)
+
+get detailed config information for the instance
 
 get detailed config information for the instance
 
@@ -7268,9 +7710,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+instance_id = 56 # int | 
 device_id = 56 # int | 
 hds_id = 56 # int | 
-instance_id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
@@ -7278,7 +7720,7 @@ filter = 'filter_example' # str |  (optional)
 
 try:
     # get detailed config information for the instance
-    api_response = api_instance.get_device_config_source_config_list(device_id, hds_id, instance_id, fields=fields, size=size, offset=offset, filter=filter)
+    api_response = api_instance.get_device_config_source_config_list(instance_id, device_id, hds_id, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_device_config_source_config_list: %s\n" % e)
@@ -7288,9 +7730,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **instance_id** | **int**|  | 
  **device_id** | **int**|  | 
  **hds_id** | **int**|  | 
- **instance_id** | **int**|  | 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -7314,7 +7756,9 @@ Name | Type | Description  | Notes
 # **get_device_datasource_by_id**
 > DeviceDataSource get_device_datasource_by_id(device_id, id, fields=fields)
 
-get device datasource 
+Get device datasource
+
+Retrieve a specific device datasource by its ID
 
 ### Example
 ```python
@@ -7337,7 +7781,7 @@ id = 56 # int |
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get device datasource 
+    # Get device datasource
     api_response = api_instance.get_device_datasource_by_id(device_id, id, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -7370,7 +7814,9 @@ Name | Type | Description  | Notes
 # **get_device_datasource_data_by_id**
 > DeviceDataSourceData get_device_datasource_data_by_id(device_id, id, period=period, start=start, end=end, datapoints=datapoints, format=format, aggregate=aggregate)
 
-get device datasource data 
+Get device datasource data
+
+Retrieve data for a specific device datasource by its ID
 
 ### Example
 ```python
@@ -7390,15 +7836,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 id = 56 # int | 
-period = 1.0 # float |  (optional) (default to 1.0)
-start = 0 # int |  (optional) (default to 0)
-end = 0 # int |  (optional) (default to 0)
+period = 1.2 # float |  (optional)
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
 datapoints = 'datapoints_example' # str |  (optional)
-format = 'json' # str |  (optional) (default to json)
-aggregate = 'none' # str | the aggregate option (optional) (default to none)
+format = 'format_example' # str |  (optional)
+aggregate = 'aggregate_example' # str | The aggregate option (optional)
 
 try:
-    # get device datasource data 
+    # Get device datasource data
     api_response = api_instance.get_device_datasource_data_by_id(device_id, id, period=period, start=start, end=end, datapoints=datapoints, format=format, aggregate=aggregate)
     pprint(api_response)
 except ApiException as e:
@@ -7411,12 +7857,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **int**|  | 
  **id** | **int**|  | 
- **period** | **float**|  | [optional] [default to 1.0]
- **start** | **int**|  | [optional] [default to 0]
- **end** | **int**|  | [optional] [default to 0]
+ **period** | **float**|  | [optional] 
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
  **datapoints** | **str**|  | [optional] 
- **format** | **str**|  | [optional] [default to json]
- **aggregate** | **str**| the aggregate option | [optional] [default to none]
+ **format** | **str**|  | [optional] 
+ **aggregate** | **str**| The aggregate option | [optional] 
 
 ### Return type
 
@@ -7435,6 +7881,8 @@ Name | Type | Description  | Notes
 
 # **get_device_datasource_instance_alert_setting_by_id**
 > DeviceDataSourceInstanceAlertSetting get_device_datasource_instance_alert_setting_by_id(device_id, hds_id, instance_id, id, fields=fields)
+
+get device instance alert setting
 
 get device instance alert setting
 
@@ -7494,7 +7942,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_datasource_instance_alert_setting_list_of_device**
-> DeviceDataSourceInstanceAlertSettingPaginationResponse get_device_datasource_instance_alert_setting_list_of_device(device_id, start=start, end=end, netflow_filter=netflow_filter, size=size, offset=offset)
+> DeviceDataSourceInstanceAlertSettingPaginationResponse get_device_datasource_instance_alert_setting_list_of_device(device_id, end=end, netflow_filter=netflow_filter, start=start, size=size, offset=offset)
+
+get a list of alert settings for a device
 
 get a list of alert settings for a device
 
@@ -7515,15 +7965,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
+start = 789 # int |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
 
 try:
     # get a list of alert settings for a device
-    api_response = api_instance.get_device_datasource_instance_alert_setting_list_of_device(device_id, start=start, end=end, netflow_filter=netflow_filter, size=size, offset=offset)
+    api_response = api_instance.get_device_datasource_instance_alert_setting_list_of_device(device_id, end=end, netflow_filter=netflow_filter, start=start, size=size, offset=offset)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_device_datasource_instance_alert_setting_list_of_device: %s\n" % e)
@@ -7534,9 +7984,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
+ **start** | **int**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
 
@@ -7557,6 +8007,8 @@ Name | Type | Description  | Notes
 
 # **get_device_datasource_instance_alert_setting_list_of_dsi**
 > DeviceDataSourceInstanceAlertSettingPaginationResponse get_device_datasource_instance_alert_setting_list_of_dsi(device_id, hds_id, instance_id, size=size, offset=offset)
+
+get a list of alert settings for a device datasource instance
 
 get a list of alert settings for a device datasource instance
 
@@ -7618,7 +8070,9 @@ Name | Type | Description  | Notes
 # **get_device_datasource_instance_by_id**
 > DeviceDataSourceInstance get_device_datasource_instance_by_id(device_id, hds_id, id, fields=fields)
 
-get device instance 
+get device instance
+
+get device instance
 
 ### Example
 ```python
@@ -7642,7 +8096,7 @@ id = 56 # int |
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get device instance 
+    # get device instance
     api_response = api_instance.get_device_datasource_instance_by_id(device_id, hds_id, id, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -7678,6 +8132,8 @@ Name | Type | Description  | Notes
 
 get device instance data
 
+get device instance data
+
 ### Example
 ```python
 from __future__ import print_function
@@ -7697,11 +8153,11 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_id = 56 # int | 
 hds_id = 56 # int | The device-datasource ID
 id = 56 # int | 
-period = 1.0 # float |  (optional) (default to 1.0)
-start = 0 # int |  (optional) (default to 0)
-end = 0 # int |  (optional) (default to 0)
+period = 1.2 # float |  (optional)
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
 datapoints = 'datapoints_example' # str |  (optional)
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 
 try:
     # get device instance data
@@ -7718,11 +8174,11 @@ Name | Type | Description  | Notes
  **device_id** | **int**|  | 
  **hds_id** | **int**| The device-datasource ID | 
  **id** | **int**|  | 
- **period** | **float**|  | [optional] [default to 1.0]
- **start** | **int**|  | [optional] [default to 0]
- **end** | **int**|  | [optional] [default to 0]
+ **period** | **float**|  | [optional] 
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
  **datapoints** | **str**|  | [optional] 
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -7742,7 +8198,9 @@ Name | Type | Description  | Notes
 # **get_device_datasource_instance_graph_data**
 > GraphPlot get_device_datasource_instance_graph_data(device_id, hds_id, id, graph_id, start=start, end=end, format=format)
 
-get device instance graph data 
+get device instance graph data
+
+get device instance graph data
 
 ### Example
 ```python
@@ -7769,7 +8227,7 @@ end = 789 # int |  (optional)
 format = 'format_example' # str |  (optional)
 
 try:
-    # get device instance graph data 
+    # get device instance graph data
     api_response = api_instance.get_device_datasource_instance_graph_data(device_id, hds_id, id, graph_id, start=start, end=end, format=format)
     pprint(api_response)
 except ApiException as e:
@@ -7804,9 +8262,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_datasource_instance_group_by_id**
-> DeviceDataSourceInstanceGroup get_device_datasource_instance_group_by_id(device_id, device_ds_id, id, fields=fields)
+> DeviceDataSourceInstanceGroup get_device_datasource_instance_group_by_id(device_ds_id, device_id, id, fields=fields)
 
-get device datasource instance group 
+Get device datasource instance group
+
+Retrieve a specific device datasource instance group by its ID
 
 ### Example
 ```python
@@ -7824,14 +8284,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
+device_id = 56 # int | 
 id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get device datasource instance group 
-    api_response = api_instance.get_device_datasource_instance_group_by_id(device_id, device_ds_id, id, fields=fields)
+    # Get device datasource instance group
+    api_response = api_instance.get_device_datasource_instance_group_by_id(device_ds_id, device_id, id, fields=fields)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_device_datasource_instance_group_by_id: %s\n" % e)
@@ -7841,8 +8301,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_id** | **int**|  | 
  **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
+ **device_id** | **int**|  | 
  **id** | **int**|  | 
  **fields** | **str**|  | [optional] 
 
@@ -7862,9 +8322,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_datasource_instance_group_list**
-> DeviceDatasourceInstanceGroupPaginationResponse get_device_datasource_instance_group_list(device_id, device_ds_id, fields=fields, size=size, offset=offset, filter=filter)
+> DeviceDatasourceInstanceGroupPaginationResponse get_device_datasource_instance_group_list(device_ds_id, device_id, fields=fields, size=size, offset=offset, filter=filter)
 
-get device datasource instance group list 
+Get device datasource instance group list
+
+Retrieve a paginated list of device datasource instance groups
 
 ### Example
 ```python
@@ -7882,16 +8344,16 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
+device_id = 56 # int | 
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get device datasource instance group list 
-    api_response = api_instance.get_device_datasource_instance_group_list(device_id, device_ds_id, fields=fields, size=size, offset=offset, filter=filter)
+    # Get device datasource instance group list
+    api_response = api_instance.get_device_datasource_instance_group_list(device_ds_id, device_id, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_device_datasource_instance_group_list: %s\n" % e)
@@ -7901,8 +8363,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_id** | **int**|  | 
  **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
+ **device_id** | **int**|  | 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -7924,9 +8386,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_datasource_instance_group_overview_graph_data**
-> GraphPlot get_device_datasource_instance_group_overview_graph_data(device_id, device_ds_id, dsig_id, ograph_id, start=start, end=end, format=format)
+> GraphPlot get_device_datasource_instance_group_overview_graph_data(device_ds_id, device_id, dsig_id, ograph_id, start=start, end=end, format=format)
 
-get device instance group overview graph data 
+Get device instance group overview graph data
+
+Retrieve graph data for the overview of a device instance group
 
 ### Example
 ```python
@@ -7944,8 +8408,8 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
+device_id = 56 # int | 
 dsig_id = 56 # int | 
 ograph_id = 56 # int | 
 start = 789 # int |  (optional)
@@ -7953,8 +8417,8 @@ end = 789 # int |  (optional)
 format = 'format_example' # str |  (optional)
 
 try:
-    # get device instance group overview graph data 
-    api_response = api_instance.get_device_datasource_instance_group_overview_graph_data(device_id, device_ds_id, dsig_id, ograph_id, start=start, end=end, format=format)
+    # Get device instance group overview graph data
+    api_response = api_instance.get_device_datasource_instance_group_overview_graph_data(device_ds_id, device_id, dsig_id, ograph_id, start=start, end=end, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_device_datasource_instance_group_overview_graph_data: %s\n" % e)
@@ -7964,8 +8428,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_id** | **int**|  | 
  **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
+ **device_id** | **int**|  | 
  **dsig_id** | **int**|  | 
  **ograph_id** | **int**|  | 
  **start** | **int**|  | [optional] 
@@ -7989,6 +8453,8 @@ Name | Type | Description  | Notes
 
 # **get_device_datasource_instance_list**
 > DeviceDatasourceInstancePaginationResponse get_device_datasource_instance_list(device_id, hds_id, fields=fields, size=size, offset=offset, filter=filter)
+
+get device instance list
 
 get device instance list
 
@@ -8054,6 +8520,8 @@ Name | Type | Description  | Notes
 
 get device instance SDT history
 
+get device instance SDT history
+
 ### Example
 ```python
 from __future__ import print_function
@@ -8116,7 +8584,9 @@ Name | Type | Description  | Notes
 # **get_device_datasource_list**
 > DeviceDatasourcePaginationResponse get_device_datasource_list(device_id, fields=fields, size=size, offset=offset, filter=filter)
 
-get device datasource list 
+Get device datasource list
+
+Retrieve a paginated list of device datasources
 
 ### Example
 ```python
@@ -8141,7 +8611,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get device datasource list 
+    # Get device datasource list
     api_response = api_instance.get_device_datasource_list(device_id, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -8173,8 +8643,64 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_device_eventsource_list**
+> RestDeviceEventsourcePaginationResponse get_device_eventsource_list(device_id)
+
+Get device eventsource list
+
+Retrieve a paginated list of device eventsources
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+device_id = 56 # int | 
+
+try:
+    # Get device eventsource list
+    api_response = api_instance.get_device_eventsource_list(device_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_device_eventsource_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **device_id** | **int**|  | 
+
+### Return type
+
+[**RestDeviceEventsourcePaginationResponse**](RestDeviceEventsourcePaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_device_group_by_id**
 > DeviceGroup get_device_group_by_id(id, fields=fields)
+
+get device group
 
 get device group
 
@@ -8232,6 +8758,8 @@ Name | Type | Description  | Notes
 
 Get cluster alert configuration by id
 
+Get cluster alert configuration by id
+
 ### Example
 ```python
 from __future__ import print_function
@@ -8283,6 +8811,8 @@ Name | Type | Description  | Notes
 
 # **get_device_group_cluster_alert_conf_list**
 > DeviceClusterAlertConfigPaginationResponse get_device_group_cluster_alert_conf_list(device_group_id, fields=fields, size=size, offset=offset, filter=filter)
+
+get a list of cluster alert configurations for a device group
 
 get a list of cluster alert configurations for a device group
 
@@ -8344,7 +8874,9 @@ Name | Type | Description  | Notes
 # **get_device_group_datasource_alert_setting**
 > DeviceGroupDataSourceAlertConfig get_device_group_datasource_alert_setting(device_group_id, ds_id, fields=fields)
 
-get device group datasource alert setting 
+Get device group datasource alert setting
+
+Retrieve the alert setting for a specific device group datasource
 
 ### Example
 ```python
@@ -8367,7 +8899,7 @@ ds_id = 56 # int |
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get device group datasource alert setting 
+    # Get device group datasource alert setting
     api_response = api_instance.get_device_group_datasource_alert_setting(device_group_id, ds_id, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -8399,6 +8931,8 @@ Name | Type | Description  | Notes
 
 # **get_device_group_datasource_by_id**
 > DeviceGroupDataSource get_device_group_datasource_by_id(device_group_id, id, fields=fields)
+
+get device group datasource
 
 get device group datasource
 
@@ -8458,6 +8992,8 @@ Name | Type | Description  | Notes
 
 get device group datasource list
 
+get device group datasource list
+
 ### Example
 ```python
 from __future__ import print_function
@@ -8475,7 +9011,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 device_group_id = 56 # int | 
-include_disabled_data_source_without_instance = false # bool |  (optional) (default to false)
+include_disabled_data_source_without_instance = true # bool |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
@@ -8494,7 +9030,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **device_group_id** | **int**|  | 
- **include_disabled_data_source_without_instance** | **bool**|  | [optional] [default to false]
+ **include_disabled_data_source_without_instance** | **bool**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -8517,6 +9053,8 @@ Name | Type | Description  | Notes
 
 # **get_device_group_list**
 > DeviceGroupPaginationResponse get_device_group_list(fields=fields, size=size, offset=offset, filter=filter)
+
+get device group list
 
 get device group list
 
@@ -8576,7 +9114,9 @@ Name | Type | Description  | Notes
 # **get_device_group_property_by_name**
 > EntityProperty get_device_group_property_by_name(gid, name, fields=fields)
 
-get device group property by name
+Get device group property by name
+
+Retrieve a specific device group property by its name
 
 ### Example
 ```python
@@ -8599,7 +9139,7 @@ name = 'name_example' # str |
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get device group property by name
+    # Get device group property by name
     api_response = api_instance.get_device_group_property_by_name(gid, name, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -8632,7 +9172,9 @@ Name | Type | Description  | Notes
 # **get_device_group_property_list**
 > PropertyPaginationResponse get_device_group_property_list(gid, fields=fields, size=size, offset=offset, filter=filter)
 
-get device group properties
+Get device group properties
+
+Retrieve a paginated list of properties for a specific device group
 
 ### Example
 ```python
@@ -8657,7 +9199,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get device group properties
+    # Get device group properties
     api_response = api_instance.get_device_group_property_list(gid, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -8691,6 +9233,8 @@ Name | Type | Description  | Notes
 
 # **get_device_group_sdt_list**
 > SDTPaginationResponse get_device_group_sdt_list(id, fields=fields, size=size, offset=offset, filter=filter)
+
+get device group SDTs
 
 get device group SDTs
 
@@ -8754,6 +9298,8 @@ Name | Type | Description  | Notes
 
 get device instance data
 
+get device instance data
+
 ### Example
 ```python
 from __future__ import print_function
@@ -8810,7 +9356,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_instance_list**
-> DeviceDatasourceInstancePaginationResponse get_device_instance_list(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+> DeviceDatasourceInstancePaginationResponse get_device_instance_list(id, end=end, netflow_filter=netflow_filter, start=start, fields=fields, size=size, offset=offset, filter=filter)
+
+get device instance list
 
 get device instance list
 
@@ -8831,9 +9379,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
+start = 789 # int |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
@@ -8841,7 +9389,7 @@ filter = 'filter_example' # str |  (optional)
 
 try:
     # get device instance list
-    api_response = api_instance.get_device_instance_list(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+    api_response = api_instance.get_device_instance_list(id, end=end, netflow_filter=netflow_filter, start=start, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_device_instance_list: %s\n" % e)
@@ -8852,9 +9400,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
+ **start** | **int**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -8876,9 +9424,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_device_list**
-> DevicePaginationResponse get_device_list(start=start, end=end, netflow_filter=netflow_filter, include_deleted_resources=include_deleted_resources, fields=fields, size=size, offset=offset, filter=filter)
+> DevicePaginationResponse get_device_list(end=end, netflow_filter=netflow_filter, start=start, include_deleted_resources=include_deleted_resources, fields=fields, size=size, offset=offset, filter=filter)
 
-get device list
+Get device list
+
+Retrieve a paginated list of devices
 
 ### Example
 ```python
@@ -8896,18 +9446,18 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
-include_deleted_resources = false # bool |  (optional) (default to false)
+start = 789 # int |  (optional)
+include_deleted_resources = true # bool |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get device list
-    api_response = api_instance.get_device_list(start=start, end=end, netflow_filter=netflow_filter, include_deleted_resources=include_deleted_resources, fields=fields, size=size, offset=offset, filter=filter)
+    # Get device list
+    api_response = api_instance.get_device_list(end=end, netflow_filter=netflow_filter, start=start, include_deleted_resources=include_deleted_resources, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_device_list: %s\n" % e)
@@ -8917,10 +9467,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
- **include_deleted_resources** | **bool**|  | [optional] [default to false]
+ **start** | **int**|  | [optional] 
+ **include_deleted_resources** | **bool**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -8944,7 +9494,9 @@ Name | Type | Description  | Notes
 # **get_device_property_by_name**
 > EntityProperty get_device_property_by_name(device_id, name, fields=fields)
 
-get device property by name
+Get device property by name
+
+Retrieve a specific device property by its name
 
 ### Example
 ```python
@@ -8967,7 +9519,7 @@ name = 'name_example' # str |
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get device property by name
+    # Get device property by name
     api_response = api_instance.get_device_property_by_name(device_id, name, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -9000,7 +9552,9 @@ Name | Type | Description  | Notes
 # **get_device_property_list**
 > PropertyPaginationResponse get_device_property_list(device_id, fields=fields, size=size, offset=offset, filter=filter)
 
-get device properties
+Get device properties
+
+Retrieve a paginated list of properties for a specific device
 
 ### Example
 ```python
@@ -9025,7 +9579,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get device properties
+    # Get device properties
     api_response = api_instance.get_device_property_list(device_id, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -9057,10 +9611,118 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_diagnostic_sources_by_id**
+> DiagnosticsSource get_diagnostic_sources_by_id(id, format=format)
+
+Get diagnostics sources by ID
+
+Retrieves a diagnostics source by its ID
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+format = 'format_example' # str |  (optional)
+
+try:
+    # Get diagnostics sources by ID
+    api_response = api_instance.get_diagnostic_sources_by_id(id, format=format)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_diagnostic_sources_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **format** | **str**|  | [optional] 
+
+### Return type
+
+[**DiagnosticsSource**](DiagnosticsSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_diagnostic_sources_list**
+> DiagnosticsourcePaginationResponse get_diagnostic_sources_list()
+
+Get diagnostics sources list
+
+Retrieves a list of diagnostics sources
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+
+try:
+    # Get diagnostics sources list
+    api_response = api_instance.get_diagnostic_sources_list()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_diagnostic_sources_list: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**DiagnosticsourcePaginationResponse**](DiagnosticsourcePaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_escalation_chain_by_id**
 > EscalatingChain get_escalation_chain_by_id(id, fields=fields)
 
-get escalation chain by id
+Get escalation chain by ID
+
+Retrieve details of a specific escalation chain by its ID
 
 ### Example
 ```python
@@ -9082,7 +9744,7 @@ id = 56 # int |
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get escalation chain by id
+    # Get escalation chain by ID
     api_response = api_instance.get_escalation_chain_by_id(id, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -9114,7 +9776,9 @@ Name | Type | Description  | Notes
 # **get_escalation_chain_list**
 > EscalationChainPaginationResponse get_escalation_chain_list(fields=fields, size=size, offset=offset, filter=filter)
 
-get escalation chain list
+Get escalation chain list
+
+Retrieve a paginated list of escalation chains
 
 ### Example
 ```python
@@ -9138,7 +9802,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get escalation chain list
+    # Get escalation chain list
     api_response = api_instance.get_escalation_chain_list(fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -9172,7 +9836,9 @@ Name | Type | Description  | Notes
 # **get_event_source_by_id**
 > EventSource get_event_source_by_id(id, format=format)
 
-get eventSource by id
+Get event source by ID
+
+Retrieves an event source by its ID
 
 ### Example
 ```python
@@ -9191,10 +9857,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 
 try:
-    # get eventSource by id
+    # Get event source by ID
     api_response = api_instance.get_event_source_by_id(id, format=format)
     pprint(api_response)
 except ApiException as e:
@@ -9206,7 +9872,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -9226,7 +9892,9 @@ Name | Type | Description  | Notes
 # **get_event_source_list**
 > EventSourcePaginationResponse get_event_source_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
 
-get eventSource list
+Get event source list
+
+Retrieves the list of event sources
 
 ### Example
 ```python
@@ -9244,14 +9912,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get eventSource list
+    # Get event source list
     api_response = api_instance.get_event_source_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -9262,7 +9930,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -9285,6 +9953,8 @@ Name | Type | Description  | Notes
 
 # **get_external_api_stats**
 > ApiPerfMetrics get_external_api_stats()
+
+get external api stats info
 
 get external api stats info
 
@@ -9333,6 +10003,8 @@ This endpoint does not need any parameter.
 
 # **get_immediate_device_list_by_device_group_id**
 > DevicePaginationResponse get_immediate_device_list_by_device_group_id(id, fields=fields, size=size, offset=offset, filter=filter)
+
+get immediate devices under group
 
 get immediate devices under group
 
@@ -9396,6 +10068,8 @@ Name | Type | Description  | Notes
 
 get a list of websites for a group (Response may contain extra fields depending upon the type of check { PingCheck | WebCheck} being added)
 
+get a list of websites for a group (Response may contain extra fields depending upon the type of check { PingCheck | WebCheck} being added)
+
 ### Example
 ```python
 from __future__ import print_function
@@ -9454,7 +10128,9 @@ Name | Type | Description  | Notes
 # **get_integration_audit_logs**
 > IntegrationAuditLogPaginationResponse get_integration_audit_logs(format=format)
 
-get integration audit logs list
+Get integration audit logs list
+
+Retrieves the list of integration audit logs
 
 ### Example
 ```python
@@ -9475,7 +10151,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 format = 'format_example' # str |  (optional)
 
 try:
-    # get integration audit logs list
+    # Get integration audit logs list
     api_response = api_instance.get_integration_audit_logs(format=format)
     pprint(api_response)
 except ApiException as e:
@@ -9506,7 +10182,9 @@ Name | Type | Description  | Notes
 # **get_job_monitor_by_id**
 > BatchJob get_job_monitor_by_id(id, format=format)
 
-Get JobMonitor by id
+Get JobMonitor by ID
+
+Retrieve a specific JobMonitor using its ID
 
 ### Example
 ```python
@@ -9525,10 +10203,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 
 try:
-    # Get JobMonitor by id
+    # Get JobMonitor by ID
     api_response = api_instance.get_job_monitor_by_id(id, format=format)
     pprint(api_response)
 except ApiException as e:
@@ -9540,7 +10218,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -9562,6 +10240,8 @@ Name | Type | Description  | Notes
 
 Get JobMonitor List
 
+Retrieve a paginated list of Job Monitors
+
 ### Example
 ```python
 from __future__ import print_function
@@ -9578,7 +10258,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 
 try:
     # Get JobMonitor List
@@ -9592,7 +10272,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -9612,7 +10292,9 @@ Name | Type | Description  | Notes
 # **get_log_source_by_id**
 > LogSource get_log_source_by_id(id, format=format)
 
-get log source 
+Get log source
+
+Retrieves a specific log source by its ID
 
 ### Example
 ```python
@@ -9631,10 +10313,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 'id_example' # str | 
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 
 try:
-    # get log source 
+    # Get log source
     api_response = api_instance.get_log_source_by_id(id, format=format)
     pprint(api_response)
 except ApiException as e:
@@ -9646,7 +10328,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -9666,7 +10348,9 @@ Name | Type | Description  | Notes
 # **get_log_source_list**
 > LogSourcePaginationResponse get_log_source_list(format=format)
 
-get log source list
+Get log source list
+
+Retrieves a list of log sources
 
 ### Example
 ```python
@@ -9684,10 +10368,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 
 try:
-    # get log source list
+    # Get log source list
     api_response = api_instance.get_log_source_list(format=format)
     pprint(api_response)
 except ApiException as e:
@@ -9698,7 +10382,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -9715,10 +10399,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_metrics_usage**
-> Usage get_metrics_usage()
+# **get_metrics_summary**
+> CompanyMetricsSummary get_metrics_summary()
 
-get metrics usage
+get metrics usage with company settings summary
+
+get metrics usage with company settings summary
 
 ### Example
 ```python
@@ -9738,7 +10424,57 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 
 try:
-    # get metrics usage
+    # get metrics usage with company settings summary
+    api_response = api_instance.get_metrics_summary()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_metrics_summary: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**CompanyMetricsSummary**](CompanyMetricsSummary.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_metrics_usage**
+> Usage get_metrics_usage()
+
+Get metrics usage
+
+Retrieve the metrics usage information
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+
+try:
+    # Get metrics usage
     api_response = api_instance.get_metrics_usage()
     pprint(api_response)
 except ApiException as e:
@@ -9764,7 +10500,9 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_netflow_endpoint_list**
-> EndpointPaginationResponse get_netflow_endpoint_list(id, start=start, end=end, netflow_filter=netflow_filter, port=port, fields=fields, size=size, offset=offset, filter=filter)
+> EndpointPaginationResponse get_netflow_endpoint_list(id, end=end, netflow_filter=netflow_filter, start=start, port=port, fields=fields, size=size, offset=offset, filter=filter)
+
+get netflow endpoints
 
 get netflow endpoints
 
@@ -9785,9 +10523,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
+start = 789 # int |  (optional)
 port = 'port_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -9796,7 +10534,7 @@ filter = 'filter_example' # str |  (optional)
 
 try:
     # get netflow endpoints
-    api_response = api_instance.get_netflow_endpoint_list(id, start=start, end=end, netflow_filter=netflow_filter, port=port, fields=fields, size=size, offset=offset, filter=filter)
+    api_response = api_instance.get_netflow_endpoint_list(id, end=end, netflow_filter=netflow_filter, start=start, port=port, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_netflow_endpoint_list: %s\n" % e)
@@ -9807,9 +10545,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
+ **start** | **int**|  | [optional] 
  **port** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
@@ -9832,7 +10570,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_netflow_flow_list**
-> FlowRecordPaginationResponse get_netflow_flow_list(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+> FlowRecordPaginationResponse get_netflow_flow_list(id, end=end, netflow_filter=netflow_filter, start=start, fields=fields, size=size, offset=offset, filter=filter)
+
+get netflow flows
 
 get netflow flows
 
@@ -9853,9 +10593,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
+start = 789 # int |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
@@ -9863,7 +10603,7 @@ filter = 'filter_example' # str |  (optional)
 
 try:
     # get netflow flows
-    api_response = api_instance.get_netflow_flow_list(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+    api_response = api_instance.get_netflow_flow_list(id, end=end, netflow_filter=netflow_filter, start=start, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_netflow_flow_list: %s\n" % e)
@@ -9874,9 +10614,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
+ **start** | **int**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -9898,7 +10638,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_netflow_port_list**
-> PortPaginationResponse get_netflow_port_list(id, start=start, end=end, netflow_filter=netflow_filter, ip=ip, fields=fields, size=size, offset=offset, filter=filter)
+> PortPaginationResponse get_netflow_port_list(id, end=end, netflow_filter=netflow_filter, start=start, ip=ip, fields=fields, size=size, offset=offset, filter=filter)
+
+get netflow ports
 
 get netflow ports
 
@@ -9919,9 +10661,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
+start = 789 # int |  (optional)
 ip = 'ip_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -9930,7 +10672,7 @@ filter = 'filter_example' # str |  (optional)
 
 try:
     # get netflow ports
-    api_response = api_instance.get_netflow_port_list(id, start=start, end=end, netflow_filter=netflow_filter, ip=ip, fields=fields, size=size, offset=offset, filter=filter)
+    api_response = api_instance.get_netflow_port_list(id, end=end, netflow_filter=netflow_filter, start=start, ip=ip, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_netflow_port_list: %s\n" % e)
@@ -9941,9 +10683,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
+ **start** | **int**|  | [optional] 
  **ip** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
@@ -9968,7 +10710,9 @@ Name | Type | Description  | Notes
 # **get_netscan_by_id**
 > Netscan get_netscan_by_id(id)
 
-get netscan by id
+Get netscan by ID
+
+Retrieve a specific netscan by its ID
 
 ### Example
 ```python
@@ -9989,7 +10733,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # get netscan by id
+    # Get netscan by ID
     api_response = api_instance.get_netscan_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -10020,7 +10764,9 @@ Name | Type | Description  | Notes
 # **get_netscan_list**
 > NetscanPaginationResponse get_netscan_list(fields=fields, size=size, offset=offset, filter=filter)
 
-get netscan list
+Get netscan list
+
+Retrieve a list of netscans
 
 ### Example
 ```python
@@ -10044,7 +10790,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get netscan list
+    # Get netscan list
     api_response = api_instance.get_netscan_list(fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -10078,7 +10824,9 @@ Name | Type | Description  | Notes
 # **get_oid_by_id**
 > RestOidV3 get_oid_by_id(id)
 
-get OID by id
+Get OID by ID
+
+Retrieve the OID details by its ID
 
 ### Example
 ```python
@@ -10099,7 +10847,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # get OID by id
+    # Get OID by ID
     api_response = api_instance.get_oid_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -10130,7 +10878,9 @@ Name | Type | Description  | Notes
 # **get_oid_list**
 > OidSourcePaginationResponse get_oid_list()
 
-get OID's list
+Get OID's list
+
+Retrieve the list of OIDs
 
 ### Example
 ```python
@@ -10150,7 +10900,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 
 try:
-    # get OID's list
+    # Get OID's list
     api_response = api_instance.get_oid_list()
     pprint(api_response)
 except ApiException as e:
@@ -10177,6 +10927,8 @@ This endpoint does not need any parameter.
 
 # **get_ops_note_by_id**
 > OpsNote get_ops_note_by_id(id, fields=fields)
+
+get opsnote by id
 
 get opsnote by id
 
@@ -10231,6 +10983,8 @@ Name | Type | Description  | Notes
 
 # **get_ops_note_list**
 > OpsNotePaginationResponse get_ops_note_list(fields=fields, size=size, offset=offset, filter=filter)
+
+get opsnote list
 
 get opsnote list
 
@@ -10292,6 +11046,8 @@ Name | Type | Description  | Notes
 
 Retrieve details of a specific log partition
 
+Retrieve details of a specific log partition
+
 ### Example
 ```python
 from __future__ import print_function
@@ -10342,7 +11098,9 @@ Name | Type | Description  | Notes
 # **get_property_rules_by_id**
 > PropertyRule get_property_rules_by_id(id, format=format)
 
-get property rules by id
+Get property rules by id
+
+Fetches a property rule by its ID
 
 ### Example
 ```python
@@ -10361,10 +11119,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 
 try:
-    # get property rules by id
+    # Get property rules by id
     api_response = api_instance.get_property_rules_by_id(id, format=format)
     pprint(api_response)
 except ApiException as e:
@@ -10376,7 +11134,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -10396,7 +11154,9 @@ Name | Type | Description  | Notes
 # **get_property_rules_list**
 > PropertyRulePaginationResponse get_property_rules_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
 
-get property rules list
+Get property rules list
+
+Fetches a list of property rules
 
 ### Example
 ```python
@@ -10414,14 +11174,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get property rules list
+    # Get property rules list
     api_response = api_instance.get_property_rules_list(format=format, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -10432,7 +11192,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -10456,7 +11216,9 @@ Name | Type | Description  | Notes
 # **get_recipient_group_by_id**
 > RecipientGroup get_recipient_group_by_id(id)
 
-get recipient group by id
+Get recipient group by id
+
+Retrieve a specific recipient group by its ID
 
 ### Example
 ```python
@@ -10477,7 +11239,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # get recipient group by id
+    # Get recipient group by id
     api_response = api_instance.get_recipient_group_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -10508,7 +11270,9 @@ Name | Type | Description  | Notes
 # **get_recipient_group_list**
 > RecipientGroupPaginationResponse get_recipient_group_list(fields=fields, size=size, offset=offset, filter=filter)
 
-get recipient group List
+Get recipient group list
+
+Retrieve a paginated list of recipient groups
 
 ### Example
 ```python
@@ -10532,7 +11296,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get recipient group List
+    # Get recipient group list
     api_response = api_instance.get_recipient_group_list(fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -10563,10 +11327,188 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_recommendation_by_id**
+> RestCloudRecommendationV3 get_recommendation_by_id(id, fields=fields)
+
+Get recommendation by ID
+
+Retrieves a recommendation by its ID
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 'id_example' # str | an alphanumeric identifier composed of the recommendation's database ID, the associated resource ID, and the recommendation type, delimited with hyphens, e.g. 123-456-EBS_UNATTACHED
+fields = 'fields_example' # str |  (optional)
+
+try:
+    # Get recommendation by ID
+    api_response = api_instance.get_recommendation_by_id(id, fields=fields)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_recommendation_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| an alphanumeric identifier composed of the recommendation&#x27;s database ID, the associated resource ID, and the recommendation type, delimited with hyphens, e.g. 123-456-EBS_UNATTACHED | 
+ **fields** | **str**|  | [optional] 
+
+### Return type
+
+[**RestCloudRecommendationV3**](RestCloudRecommendationV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_recommendation_categories_list**
+> RestCloudRecommendationCategoryV3 get_recommendation_categories_list(fields=fields, size=size, offset=offset, filter=filter)
+
+Get recommendation category list
+
+Retrieves the list of recommendation categories
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+fields = 'fields_example' # str |  (optional)
+size = 50 # int |  (optional) (default to 50)
+offset = 0 # int |  (optional) (default to 0)
+filter = 'filter_example' # str |  (optional)
+
+try:
+    # Get recommendation category list
+    api_response = api_instance.get_recommendation_categories_list(fields=fields, size=size, offset=offset, filter=filter)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_recommendation_categories_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fields** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] [default to 50]
+ **offset** | **int**|  | [optional] [default to 0]
+ **filter** | **str**|  | [optional] 
+
+### Return type
+
+[**RestCloudRecommendationCategoryV3**](RestCloudRecommendationCategoryV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_recommendations_list**
+> RestCloudRecommendationV3 get_recommendations_list(fields=fields, size=size, offset=offset, filter=filter)
+
+Get recommendation list
+
+Retrieves a list of recommendations
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+fields = 'fields_example' # str |  (optional)
+size = 50 # int | The number of recommendations to return. Max permitted value is 500 (optional) (default to 50)
+offset = 0 # int |  (optional) (default to 0)
+filter = 'filter_example' # str | Filtering is available with the : (equals) operator for recommendationStatus and recommendationCategory. Only one value at a time is supported for recommendationCategory, but multiple recommendationStatuses may be filtered on with the | (OR) operator. Also, only the , (AND) relation is supported when combining multiple filters (optional)
+
+try:
+    # Get recommendation list
+    api_response = api_instance.get_recommendations_list(fields=fields, size=size, offset=offset, filter=filter)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_recommendations_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fields** | **str**|  | [optional] 
+ **size** | **int**| The number of recommendations to return. Max permitted value is 500 | [optional] [default to 50]
+ **offset** | **int**|  | [optional] [default to 0]
+ **filter** | **str**| Filtering is available with the : (equals) operator for recommendationStatus and recommendationCategory. Only one value at a time is supported for recommendationCategory, but multiple recommendationStatuses may be filtered on with the | (OR) operator. Also, only the , (AND) relation is supported when combining multiple filters | [optional] 
+
+### Return type
+
+[**RestCloudRecommendationV3**](RestCloudRecommendationV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_report_by_id**
 > ReportBase get_report_by_id(id, fields=fields)
 
-get report by id
+Get report by ID
+
+Retrieve the details of a specific report by its ID
 
 ### Example
 ```python
@@ -10588,7 +11530,7 @@ id = 56 # int |
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get report by id
+    # Get report by ID
     api_response = api_instance.get_report_by_id(id, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -10620,7 +11562,9 @@ Name | Type | Description  | Notes
 # **get_report_group_by_id**
 > ReportGroup get_report_group_by_id(id)
 
-get report group by id
+Get report group by id
+
+Retrieve a specific report group by its ID
 
 ### Example
 ```python
@@ -10641,7 +11585,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # get report group by id
+    # Get report group by id
     api_response = api_instance.get_report_group_by_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -10672,7 +11616,9 @@ Name | Type | Description  | Notes
 # **get_report_group_list**
 > ReportGroupPaginationResponse get_report_group_list(fields=fields, size=size, offset=offset, filter=filter)
 
-get report group list
+Get report group list
+
+Retrieve a paginated list of report groups
 
 ### Example
 ```python
@@ -10696,7 +11642,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get report group list
+    # Get report group list
     api_response = api_instance.get_report_group_list(fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -10730,7 +11676,9 @@ Name | Type | Description  | Notes
 # **get_report_list**
 > ReportPaginationResponse get_report_list(show_next_gen_reports=show_next_gen_reports, fields=fields, size=size, offset=offset, filter=filter)
 
-get report list
+Get report list
+
+Retrieve a paginated list of reports
 
 ### Example
 ```python
@@ -10748,14 +11696,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-show_next_gen_reports = true # bool |  (optional) (default to true)
+show_next_gen_reports = true # bool |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get report list
+    # Get report list
     api_response = api_instance.get_report_list(show_next_gen_reports=show_next_gen_reports, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -10766,7 +11714,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **show_next_gen_reports** | **bool**|  | [optional] [default to true]
+ **show_next_gen_reports** | **bool**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -10789,6 +11737,8 @@ Name | Type | Description  | Notes
 
 # **get_retention_list**
 > Pagination get_retention_list()
+
+Retrieve the list of log retentions
 
 Retrieve the list of log retentions
 
@@ -10838,7 +11788,9 @@ This endpoint does not need any parameter.
 # **get_role_by_id**
 > Role get_role_by_id(id, fields=fields)
 
-get role by id
+Get role by ID
+
+Retrieve details of a specific role by its ID
 
 ### Example
 ```python
@@ -10860,7 +11812,7 @@ id = 56 # int |
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get role by id
+    # Get role by ID
     api_response = api_instance.get_role_by_id(id, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -10892,7 +11844,9 @@ Name | Type | Description  | Notes
 # **get_role_list**
 > RolePaginationResponse get_role_list(exclude_admin=exclude_admin, fields=fields, size=size, offset=offset, filter=filter)
 
-get role list
+Get role list
+
+Retrieve a paginated list of roles
 
 ### Example
 ```python
@@ -10910,14 +11864,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-exclude_admin = false # bool |  (optional) (default to false)
+exclude_admin = true # bool |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get role list
+    # Get role list
     api_response = api_instance.get_role_list(exclude_admin=exclude_admin, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -10928,7 +11882,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **exclude_admin** | **bool**|  | [optional] [default to false]
+ **exclude_admin** | **bool**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -10951,6 +11905,8 @@ Name | Type | Description  | Notes
 
 # **get_sdt_by_id**
 > SDT get_sdt_by_id(id)
+
+get SDT by id (Response may contain extra fields depending upon the type of SDT of given id)
 
 get SDT by id (Response may contain extra fields depending upon the type of SDT of given id)
 
@@ -11004,7 +11960,9 @@ Name | Type | Description  | Notes
 # **get_sdt_history_by_device_data_source_id**
 > DeviceDataSourceSDTHistoryPaginationResponse get_sdt_history_by_device_data_source_id(device_id, id, fields=fields, size=size, offset=offset, filter=filter)
 
-get SDT history for the device dataSource
+Get SDT history for the device dataSource
+
+Retrieve the SDT (Service Disruption Time) history for a specific device dataSource
 
 ### Example
 ```python
@@ -11030,7 +11988,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get SDT history for the device dataSource
+    # Get SDT history for the device dataSource
     api_response = api_instance.get_sdt_history_by_device_data_source_id(device_id, id, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -11065,6 +12023,8 @@ Name | Type | Description  | Notes
 
 # **get_sdt_history_by_device_group_id**
 > DeviceGroupSDTHistoryPaginationResponse get_sdt_history_by_device_group_id(id, fields=fields, size=size, offset=offset, filter=filter)
+
+get SDT history for the group
 
 get SDT history for the group
 
@@ -11124,7 +12084,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_sdt_history_by_device_id**
-> DeviceSDTHistoryPaginationResponse get_sdt_history_by_device_id(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+> DeviceSDTHistoryPaginationResponse get_sdt_history_by_device_id(id, end=end, netflow_filter=netflow_filter, start=start, fields=fields, size=size, offset=offset, filter=filter)
+
+get SDT history for the device
 
 get SDT history for the device
 
@@ -11145,9 +12107,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
+start = 789 # int |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
@@ -11155,7 +12117,7 @@ filter = 'filter_example' # str |  (optional)
 
 try:
     # get SDT history for the device
-    api_response = api_instance.get_sdt_history_by_device_id(id, start=start, end=end, netflow_filter=netflow_filter, fields=fields, size=size, offset=offset, filter=filter)
+    api_response = api_instance.get_sdt_history_by_device_id(id, end=end, netflow_filter=netflow_filter, start=start, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_sdt_history_by_device_id: %s\n" % e)
@@ -11166,9 +12128,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
+ **start** | **int**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -11191,6 +12153,8 @@ Name | Type | Description  | Notes
 
 # **get_sdt_history_by_website_group_id**
 > WebsiteGroupSDTHistoryPaginationResponse get_sdt_history_by_website_group_id(id, fields=fields, size=size, offset=offset, filter=filter)
+
+get SDT history for the website group (Response may contain extra fields depending upon the type of SDT)
 
 get SDT history for the website group (Response may contain extra fields depending upon the type of SDT)
 
@@ -11254,6 +12218,8 @@ Name | Type | Description  | Notes
 
 get SDT history for the website (Response may contain extra fields depending upon the type of SDT)
 
+get SDT history for the website (Response may contain extra fields depending upon the type of SDT)
+
 ### Example
 ```python
 from __future__ import print_function
@@ -11314,6 +12280,8 @@ Name | Type | Description  | Notes
 
 get SDT list
 
+get SDT list
+
 ### Example
 ```python
 from __future__ import print_function
@@ -11368,9 +12336,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_site_monitor_check_point_list**
-> SiteMonitorCheckPointPaginationResponse get_site_monitor_check_point_list(fields=fields, size=size, offset=offset, filter=filter)
+> SiteMonitorCheckPointPaginationResponse get_site_monitor_check_point_list(type=type, fields=fields, size=size, offset=offset, filter=filter)
 
-get website checkpoint list
+Get website checkpoint list
+
+Retrieves the list of website checkpoints
 
 ### Example
 ```python
@@ -11388,14 +12358,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+type = 'type_example' # str | Type of checkpoint to filter. If not specified, returns website legacy checkpoints. (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
 offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get website checkpoint list
-    api_response = api_instance.get_site_monitor_check_point_list(fields=fields, size=size, offset=offset, filter=filter)
+    # Get website checkpoint list
+    api_response = api_instance.get_site_monitor_check_point_list(type=type, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_site_monitor_check_point_list: %s\n" % e)
@@ -11405,6 +12376,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **type** | **str**| Type of checkpoint to filter. If not specified, returns website legacy checkpoints. | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
  **offset** | **int**|  | [optional] [default to 0]
@@ -11426,7 +12398,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_top_talkers_graph**
-> GraphPlot get_top_talkers_graph(id, start=start, end=end, netflow_filter=netflow_filter, format=format, keyword=keyword)
+> GraphPlot get_top_talkers_graph(id, end=end, netflow_filter=netflow_filter, start=start, format=format, keyword=keyword)
+
+get top talkers graph
 
 get top talkers graph
 
@@ -11447,15 +12421,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
+start = 789 # int |  (optional)
 format = 'format_example' # str |  (optional)
 keyword = 'keyword_example' # str |  (optional)
 
 try:
     # get top talkers graph
-    api_response = api_instance.get_top_talkers_graph(id, start=start, end=end, netflow_filter=netflow_filter, format=format, keyword=keyword)
+    api_response = api_instance.get_top_talkers_graph(id, end=end, netflow_filter=netflow_filter, start=start, format=format, keyword=keyword)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_top_talkers_graph: %s\n" % e)
@@ -11466,9 +12440,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
+ **start** | **int**|  | [optional] 
  **format** | **str**|  | [optional] 
  **keyword** | **str**|  | [optional] 
 
@@ -11492,6 +12466,8 @@ Name | Type | Description  | Notes
 
 Get TopologySource by id
 
+Get TopologySource by id
+
 ### Example
 ```python
 from __future__ import print_function
@@ -11509,7 +12485,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 
 try:
     # Get TopologySource by id
@@ -11524,7 +12500,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -11543,6 +12519,8 @@ Name | Type | Description  | Notes
 
 # **get_topology_source_list**
 > TopologySourcePaginationResponse get_topology_source_list()
+
+Get TopologySource List
 
 Get TopologySource List
 
@@ -11592,7 +12570,9 @@ This endpoint does not need any parameter.
 # **get_unmonitored_device_list**
 > UnmonitoredDevicePaginationResponse get_unmonitored_device_list(fields=fields, size=size, offset=offset, filter=filter)
 
-get unmonitored device list
+Get unmonitored device list
+
+Retrieve a paginated list of unmonitored devices
 
 ### Example
 ```python
@@ -11616,7 +12596,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get unmonitored device list
+    # Get unmonitored device list
     api_response = api_instance.get_unmonitored_device_list(fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -11650,7 +12630,9 @@ Name | Type | Description  | Notes
 # **get_update_reason_list_by_config_source_id**
 > ConfigSourceUpdateReasonsPaginationResponse get_update_reason_list_by_config_source_id(id)
 
-get update history for a configSource
+Get update history for a configSource
+
+Retrieve the list of update reasons/history for a specific configSource
 
 ### Example
 ```python
@@ -11671,7 +12653,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 
 try:
-    # get update history for a configSource
+    # Get update history for a configSource
     api_response = api_instance.get_update_reason_list_by_config_source_id(id)
     pprint(api_response)
 except ApiException as e:
@@ -11702,7 +12684,9 @@ Name | Type | Description  | Notes
 # **get_update_reason_list_by_data_source_id**
 > DataSourceUpdateReasonsPaginationResponse get_update_reason_list_by_data_source_id(id, fields=fields, size=size, offset=offset, filter=filter)
 
-get update history for a datasource
+Get update history for a datasource
+
+Retrieves the update history for a specific datasource
 
 ### Example
 ```python
@@ -11727,7 +12711,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get update history for a datasource
+    # Get update history for a datasource
     api_response = api_instance.get_update_reason_list_by_data_source_id(id, fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -11761,6 +12745,8 @@ Name | Type | Description  | Notes
 
 # **get_v4_metadata**
 > Response get_v4_metadata()
+
+get metadata
 
 get metadata
 
@@ -11812,6 +12798,8 @@ This endpoint does not need any parameter.
 
 get alerts for a website
 
+get alerts for a website
+
 ### Example
 ```python
 from __future__ import print_function
@@ -11829,7 +12817,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-need_message = false # bool |  (optional) (default to false)
+need_message = true # bool |  (optional)
 custom_columns = 'custom_columns_example' # str |  (optional)
 fields = 'fields_example' # str |  (optional)
 size = 50 # int |  (optional) (default to 50)
@@ -11849,7 +12837,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **need_message** | **bool**|  | [optional] [default to false]
+ **need_message** | **bool**|  | [optional] 
  **custom_columns** | **str**|  | [optional] 
  **fields** | **str**|  | [optional] 
  **size** | **int**|  | [optional] [default to 50]
@@ -11876,6 +12864,8 @@ Name | Type | Description  | Notes
 
 get website by id
 
+get website by id
+
 ### Example
 ```python
 from __future__ import print_function
@@ -11893,7 +12883,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-format = 'json' # str |  (optional) (default to json)
+format = 'format_example' # str |  (optional)
 
 try:
     # get website by id
@@ -11908,7 +12898,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **format** | **str**|  | [optional] [default to json]
+ **format** | **str**|  | [optional] 
 
 ### Return type
 
@@ -11930,6 +12920,8 @@ Name | Type | Description  | Notes
 
 get data for a website checkpoint
 
+get data for a website checkpoint
+
 ### Example
 ```python
 from __future__ import print_function
@@ -11948,12 +12940,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 srv_id = 56 # int | 
 check_id = 56 # int | 
-period = 1.0 # float |  (optional) (default to 1.0)
-start = 0 # int |  (optional) (default to 0)
-end = 0 # int |  (optional) (default to 0)
+period = 1.2 # float |  (optional)
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
 datapoints = 'datapoints_example' # str |  (optional)
-format = 'json' # str |  (optional) (default to json)
-aggregate = 'none' # str | the aggregate option (optional) (default to none)
+format = 'format_example' # str |  (optional)
+aggregate = 'aggregate_example' # str | the aggregate option (optional)
 
 try:
     # get data for a website checkpoint
@@ -11969,12 +12961,12 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **srv_id** | **int**|  | 
  **check_id** | **int**|  | 
- **period** | **float**|  | [optional] [default to 1.0]
- **start** | **int**|  | [optional] [default to 0]
- **end** | **int**|  | [optional] [default to 0]
+ **period** | **float**|  | [optional] 
+ **start** | **int**|  | [optional] 
+ **end** | **int**|  | [optional] 
  **datapoints** | **str**|  | [optional] 
- **format** | **str**|  | [optional] [default to json]
- **aggregate** | **str**| the aggregate option | [optional] [default to none]
+ **format** | **str**|  | [optional] 
+ **aggregate** | **str**| the aggregate option | [optional] 
 
 ### Return type
 
@@ -11996,6 +12988,8 @@ Name | Type | Description  | Notes
 
 get website data by graph name
 
+get website data by graph name
+
 ### Example
 ```python
 from __future__ import print_function
@@ -12014,8 +13008,8 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 graph_name = 'graph_name_example' # str | 
-start = 0 # int |  (optional) (default to 0)
-end = 0 # int |  (optional) (default to 0)
+start = 789 # int |  (optional)
+end = 789 # int |  (optional)
 format = 'format_example' # str |  (optional)
 
 try:
@@ -12031,68 +13025,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **graph_name** | **str**|  | 
- **start** | **int**|  | [optional] [default to 0]
- **end** | **int**|  | [optional] [default to 0]
- **format** | **str**|  | [optional] 
-
-### Return type
-
-[**GraphPlot**](GraphPlot.md)
-
-### Authorization
-
-[LMv1](../README.md#LMv1)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_website_graph_data**
-> GraphPlot get_website_graph_data(website_id, checkpoint_id, graph_name, start=start, end=end, format=format)
-
-get website graph data
-
-### Example
-```python
-from __future__ import print_function
-import time
-import logicmonitor_sdk
-from logicmonitor_sdk.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: LMv1
-configuration = logicmonitor_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class test
-api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-website_id = 56 # int | 
-checkpoint_id = 56 # int | 
-graph_name = 'graph_name_example' # str | 
-start = 789 # int |  (optional)
-end = 789 # int |  (optional)
-format = 'format_example' # str |  (optional)
-
-try:
-    # get website graph data
-    api_response = api_instance.get_website_graph_data(website_id, checkpoint_id, graph_name, start=start, end=end, format=format)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling LMApi->get_website_graph_data: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **website_id** | **int**|  | 
- **checkpoint_id** | **int**|  | 
  **graph_name** | **str**|  | 
  **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
@@ -12113,8 +13045,74 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_website_graph_data**
+> GraphPlot get_website_graph_data(checkpoint_id, website_id, graph_name, end=end, start=start, format=format)
+
+Get website graph data
+
+Retrieves the graph data for a website
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+checkpoint_id = 56 # int | 
+website_id = 56 # int | 
+graph_name = 'graph_name_example' # str | 
+end = 789 # int |  (optional)
+start = 789 # int |  (optional)
+format = 'format_example' # str |  (optional)
+
+try:
+    # Get website graph data
+    api_response = api_instance.get_website_graph_data(checkpoint_id, website_id, graph_name, end=end, start=start, format=format)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_website_graph_data: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **checkpoint_id** | **int**|  | 
+ **website_id** | **int**|  | 
+ **graph_name** | **str**|  | 
+ **end** | **int**|  | [optional] 
+ **start** | **int**|  | [optional] 
+ **format** | **str**|  | [optional] 
+
+### Return type
+
+[**GraphPlot**](GraphPlot.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_website_group_by_id**
 > WebsiteGroup get_website_group_by_id(id)
+
+get website group
 
 get website group
 
@@ -12167,6 +13165,8 @@ Name | Type | Description  | Notes
 
 # **get_website_group_list**
 > WebsiteGroupPaginationResponse get_website_group_list(fields=fields, size=size, offset=offset, filter=filter)
+
+get website group list
 
 get website group list
 
@@ -12225,6 +13225,8 @@ Name | Type | Description  | Notes
 
 # **get_website_list**
 > WebsitePaginationResponse get_website_list(collector_ids=collector_ids, fields=fields, size=size, offset=offset, filter=filter)
+
+get website list
 
 get website list
 
@@ -12288,6 +13290,8 @@ Name | Type | Description  | Notes
 
 get a list of properties for a website
 
+get a list of properties for a website
+
 ### Example
 ```python
 from __future__ import print_function
@@ -12345,6 +13349,8 @@ Name | Type | Description  | Notes
 
 # **get_website_sdt_list_by_website_id**
 > SDTPaginationResponse get_website_sdt_list_by_website_id(id, fields=fields, size=size, offset=offset, filter=filter)
+
+get a list of SDTs for a website
 
 get a list of SDTs for a website
 
@@ -12406,7 +13412,9 @@ Name | Type | Description  | Notes
 # **get_widget_by_id**
 > Widget get_widget_by_id(id, fields=fields)
 
-get widget by id (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+Get widget by ID
+
+Retrieves a widget by its ID. Based on widget type, the response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.
 
 ### Example
 ```python
@@ -12428,7 +13436,7 @@ id = 56 # int |
 fields = 'fields_example' # str |  (optional)
 
 try:
-    # get widget by id (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+    # Get widget by ID
     api_response = api_instance.get_widget_by_id(id, fields=fields)
     pprint(api_response)
 except ApiException as e:
@@ -12458,7 +13466,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_widget_data_by_id**
-> WidgetData get_widget_data_by_id(id, start=start, end=end, format=format)
+> WidgetData get_widget_data_by_id(id, end=end, format=format, start=start)
+
+get widget data (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 
 get widget data (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
 
@@ -12479,13 +13489,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 format = 'format_example' # str |  (optional)
+start = 789 # int |  (optional)
 
 try:
     # get widget data (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
-    api_response = api_instance.get_widget_data_by_id(id, start=start, end=end, format=format)
+    api_response = api_instance.get_widget_data_by_id(id, end=end, format=format, start=start)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->get_widget_data_by_id: %s\n" % e)
@@ -12496,9 +13506,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **format** | **str**|  | [optional] 
+ **start** | **int**|  | [optional] 
 
 ### Return type
 
@@ -12518,7 +13528,9 @@ Name | Type | Description  | Notes
 # **get_widget_list**
 > WidgetPaginationResponse get_widget_list(fields=fields, size=size, offset=offset, filter=filter)
 
-get widget list (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+Get widget list
+
+Retrieves a list of widgets. Based on widget type, the response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.
 
 ### Example
 ```python
@@ -12542,7 +13554,7 @@ offset = 0 # int |  (optional) (default to 0)
 filter = 'filter_example' # str |  (optional)
 
 try:
-    # get widget list (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+    # Get widget list
     api_response = api_instance.get_widget_list(fields=fields, size=size, offset=offset, filter=filter)
     pprint(api_response)
 except ApiException as e:
@@ -12575,6 +13587,8 @@ Name | Type | Description  | Notes
 
 # **get_widget_list_by_dashboard_id**
 > WidgetPaginationResponse get_widget_list_by_dashboard_id(id, fields=fields, size=size, offset=offset, filter=filter)
+
+get widget list by DashboardId
 
 get widget list by DashboardId
 
@@ -12633,10 +13647,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **import_batch_job**
-> object import_batch_job(file)
+# **import_applies_to_function_json**
+> AppliesToFunction import_applies_to_function_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
 
-import batch job via xml
+Import AppliesTo function via json
+
+Import a AppliesTo function using json data
 
 ### Example
 ```python
@@ -12654,11 +13670,69 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-file = 'file_example' # str | 
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
+handle_conflict = 'handle_conflict_example' # str |  (optional)
+fields_to_preserve = ['fields_to_preserve_example'] # list[str] |  (optional)
 
 try:
-    # import batch job via xml
-    api_response = api_instance.import_batch_job(file)
+    # Import AppliesTo function via json
+    api_response = api_instance.import_applies_to_function_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->import_applies_to_function_json: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
+ **handle_conflict** | **str**|  | [optional] 
+ **fields_to_preserve** | [**list[str]**](str.md)|  | [optional] 
+
+### Return type
+
+[**AppliesToFunction**](AppliesToFunction.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_batch_job**
+> object import_batch_job(file=file)
+
+Import batch job via XML
+
+Import a batch job using XML data
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
+
+try:
+    # Import batch job via XML
+    api_response = api_instance.import_batch_job(file=file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->import_batch_job: %s\n" % e)
@@ -12668,7 +13742,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **str**|  | 
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
 
 ### Return type
 
@@ -12686,9 +13760,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **import_config_source**
-> object import_config_source(file)
+> object import_config_source(file=file)
 
-import config source via xml
+Import config source via XML
+
+Import configuration source data from an XML file
 
 ### Example
 ```python
@@ -12706,11 +13782,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-file = 'file_example' # str | 
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
 
 try:
-    # import config source via xml
-    api_response = api_instance.import_config_source(file)
+    # Import config source via XML
+    api_response = api_instance.import_config_source(file=file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->import_config_source: %s\n" % e)
@@ -12720,11 +13796,69 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **str**|  | 
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
 
 ### Return type
 
 **object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_config_source_json**
+> ConfigSource import_config_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+
+Import ConfigSource via json
+
+Import a ConfigSource using json data
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
+handle_conflict = 'handle_conflict_example' # str |  (optional)
+fields_to_preserve = ['fields_to_preserve_example'] # list[str] |  (optional)
+
+try:
+    # Import ConfigSource via json
+    api_response = api_instance.import_config_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->import_config_source_json: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
+ **handle_conflict** | **str**|  | [optional] 
+ **fields_to_preserve** | [**list[str]**](str.md)|  | [optional] 
+
+### Return type
+
+[**ConfigSource**](ConfigSource.md)
 
 ### Authorization
 
@@ -12738,9 +13872,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **import_data_source**
-> object import_data_source(file)
+> object import_data_source(file=file)
 
-import datasource via xml
+Import datasource via XML
+
+Imports a datasource from an XML file
 
 ### Example
 ```python
@@ -12758,11 +13894,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-file = 'file_example' # str | 
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
 
 try:
-    # import datasource via xml
-    api_response = api_instance.import_data_source(file)
+    # Import datasource via XML
+    api_response = api_instance.import_data_source(file=file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->import_data_source: %s\n" % e)
@@ -12772,7 +13908,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **str**|  | 
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
 
 ### Return type
 
@@ -12789,10 +13925,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **import_event_source**
-> object import_event_source(file)
+# **import_data_source_json**
+> DataSource import_data_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
 
-import eventsource via xml
+Import DataSource via json
+
+Import a DataSource using json data
 
 ### Example
 ```python
@@ -12810,11 +13948,127 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-file = 'file_example' # str | 
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
+handle_conflict = 'handle_conflict_example' # str |  (optional)
+fields_to_preserve = ['fields_to_preserve_example'] # list[str] |  (optional)
 
 try:
-    # import eventsource via xml
-    api_response = api_instance.import_event_source(file)
+    # Import DataSource via json
+    api_response = api_instance.import_data_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->import_data_source_json: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
+ **handle_conflict** | **str**|  | [optional] 
+ **fields_to_preserve** | [**list[str]**](str.md)|  | [optional] 
+
+### Return type
+
+[**DataSource**](DataSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_diagnostic_source_json**
+> RestDiagnosticSourceV4 import_diagnostic_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+
+Import DiagnosticSource via json
+
+Import a DiagnosticSource using json data
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
+handle_conflict = 'handle_conflict_example' # str |  (optional)
+fields_to_preserve = ['fields_to_preserve_example'] # list[str] |  (optional)
+
+try:
+    # Import DiagnosticSource via json
+    api_response = api_instance.import_diagnostic_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->import_diagnostic_source_json: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
+ **handle_conflict** | **str**|  | [optional] 
+ **fields_to_preserve** | [**list[str]**](str.md)|  | [optional] 
+
+### Return type
+
+[**RestDiagnosticSourceV4**](RestDiagnosticSourceV4.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_event_source**
+> object import_event_source(file=file)
+
+Import event source via XML
+
+Imports an event source from an XML file
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
+
+try:
+    # Import event source via XML
+    api_response = api_instance.import_event_source(file=file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->import_event_source: %s\n" % e)
@@ -12824,11 +14078,359 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **file** | **str**|  | 
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
 
 ### Return type
 
 **object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_event_source_json**
+> EventSource import_event_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+
+Import EventSource via json
+
+Import a EventSource using json data
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
+handle_conflict = 'handle_conflict_example' # str |  (optional)
+fields_to_preserve = ['fields_to_preserve_example'] # list[str] |  (optional)
+
+try:
+    # Import EventSource via json
+    api_response = api_instance.import_event_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->import_event_source_json: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
+ **handle_conflict** | **str**|  | [optional] 
+ **fields_to_preserve** | [**list[str]**](str.md)|  | [optional] 
+
+### Return type
+
+[**EventSource**](EventSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_job_monitor_json**
+> BatchJob import_job_monitor_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+
+Import batch JobMonitor via json
+
+Import a JobMonitor using json data
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
+handle_conflict = 'handle_conflict_example' # str |  (optional)
+fields_to_preserve = ['fields_to_preserve_example'] # list[str] |  (optional)
+
+try:
+    # Import batch JobMonitor via json
+    api_response = api_instance.import_job_monitor_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->import_job_monitor_json: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
+ **handle_conflict** | **str**|  | [optional] 
+ **fields_to_preserve** | [**list[str]**](str.md)|  | [optional] 
+
+### Return type
+
+[**BatchJob**](BatchJob.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_log_source_json**
+> LogSource import_log_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+
+Import LogSource via json
+
+Import a LogSource using json data
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
+handle_conflict = 'handle_conflict_example' # str |  (optional)
+fields_to_preserve = ['fields_to_preserve_example'] # list[str] |  (optional)
+
+try:
+    # Import LogSource via json
+    api_response = api_instance.import_log_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->import_log_source_json: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
+ **handle_conflict** | **str**|  | [optional] 
+ **fields_to_preserve** | [**list[str]**](str.md)|  | [optional] 
+
+### Return type
+
+[**LogSource**](LogSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_oid_json**
+> RestOidV3 import_oid_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+
+Import OID via json
+
+Import a OID using json data
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
+handle_conflict = 'handle_conflict_example' # str |  (optional)
+fields_to_preserve = ['fields_to_preserve_example'] # list[str] |  (optional)
+
+try:
+    # Import OID via json
+    api_response = api_instance.import_oid_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->import_oid_json: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
+ **handle_conflict** | **str**|  | [optional] 
+ **fields_to_preserve** | [**list[str]**](str.md)|  | [optional] 
+
+### Return type
+
+[**RestOidV3**](RestOidV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_property_source_json**
+> PropertyRule import_property_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+
+Import PropertySource via json
+
+Import a PropertySource using json data
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
+handle_conflict = 'handle_conflict_example' # str |  (optional)
+fields_to_preserve = ['fields_to_preserve_example'] # list[str] |  (optional)
+
+try:
+    # Import PropertySource via json
+    api_response = api_instance.import_property_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->import_property_source_json: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
+ **handle_conflict** | **str**|  | [optional] 
+ **fields_to_preserve** | [**list[str]**](str.md)|  | [optional] 
+
+### Return type
+
+[**PropertyRule**](PropertyRule.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_topology_source_json**
+> TopologySource import_topology_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+
+Import TopologySource via json
+
+Import a TopologySource using json data
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+file = logicmonitor_sdk.FormDataContentDisposition() # FormDataContentDisposition |  (optional)
+handle_conflict = 'handle_conflict_example' # str |  (optional)
+fields_to_preserve = ['fields_to_preserve_example'] # list[str] |  (optional)
+
+try:
+    # Import TopologySource via json
+    api_response = api_instance.import_topology_source_json(file=file, handle_conflict=handle_conflict, fields_to_preserve=fields_to_preserve)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->import_topology_source_json: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **file** | [**FormDataContentDisposition**](.md)|  | [optional] 
+ **handle_conflict** | **str**|  | [optional] 
+ **fields_to_preserve** | [**list[str]**](str.md)|  | [optional] 
+
+### Return type
+
+[**TopologySource**](TopologySource.md)
 
 ### Authorization
 
@@ -12845,6 +14447,8 @@ Name | Type | Description  | Notes
 > RestMapModuleV3 map_un_map_module_to_access_group(body=body)
 
 Create a mapping of access group & module
+
+Map a module to an access group
 
 ### Example
 ```python
@@ -12895,6 +14499,8 @@ Name | Type | Description  | Notes
 
 # **partition_action**
 > LogPartition partition_action(id, action)
+
+Perform an action on a specified log partition
 
 Perform an action on a specified log partition
 
@@ -12952,6 +14558,8 @@ Name | Type | Description  | Notes
 
 Update access group
 
+Update access group
+
 ### Example
 ```python
 from __future__ import print_function
@@ -13006,6 +14614,8 @@ Name | Type | Description  | Notes
 
 update user
 
+update user
+
 ### Example
 ```python
 from __future__ import print_function
@@ -13024,8 +14634,8 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Admin() # Admin | 
-change_password = false # bool |  (optional) (default to false)
-validation_only = false # bool |  (optional) (default to false)
+change_password = true # bool |  (optional)
+validation_only = true # bool |  (optional)
 
 try:
     # update user
@@ -13041,8 +14651,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**Admin**](Admin.md)|  | 
- **change_password** | **bool**|  | [optional] [default to false]
- **validation_only** | **bool**|  | [optional] [default to false]
+ **change_password** | **bool**|  | [optional] 
+ **validation_only** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -13061,6 +14671,8 @@ Name | Type | Description  | Notes
 
 # **patch_alert_rule_by_id**
 > AlertRule patch_alert_rule_by_id(id, body)
+
+update alert rule
 
 update alert rule
 
@@ -13116,7 +14728,9 @@ Name | Type | Description  | Notes
 # **patch_api_token_by_admin_id**
 > APIToken patch_api_token_by_admin_id(admin_id, apitoken_id, body)
 
-update api tokens for a user
+Update API tokens for a user
+
+Update the API tokens for a specific user
 
 ### Example
 ```python
@@ -13139,7 +14753,7 @@ apitoken_id = 56 # int |
 body = logicmonitor_sdk.APIToken() # APIToken | 
 
 try:
-    # update api tokens for a user
+    # Update API tokens for a user
     api_response = api_instance.patch_api_token_by_admin_id(admin_id, apitoken_id, body)
     pprint(api_response)
 except ApiException as e:
@@ -13172,7 +14786,9 @@ Name | Type | Description  | Notes
 # **patch_applies_to_function**
 > AppliesToFunction patch_applies_to_function(id, body=body, reason=reason, ignore_reference=ignore_reference)
 
-update applies to function
+Update applies to function
+
+Update an existing applies to function
 
 ### Example
 ```python
@@ -13193,10 +14809,10 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.AppliesToFunction() # AppliesToFunction |  (optional)
 reason = 'reason_example' # str |  (optional)
-ignore_reference = false # bool |  (optional) (default to false)
+ignore_reference = true # bool |  (optional)
 
 try:
-    # update applies to function
+    # Update applies to function
     api_response = api_instance.patch_applies_to_function(id, body=body, reason=reason, ignore_reference=ignore_reference)
     pprint(api_response)
 except ApiException as e:
@@ -13210,7 +14826,7 @@ Name | Type | Description  | Notes
  **id** | **int**|  | 
  **body** | [**AppliesToFunction**](AppliesToFunction.md)|  | [optional] 
  **reason** | **str**|  | [optional] 
- **ignore_reference** | **bool**|  | [optional] [default to false]
+ **ignore_reference** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -13232,6 +14848,8 @@ Name | Type | Description  | Notes
 
 update collector
 
+update collector
+
 ### Example
 ```python
 from __future__ import print_function
@@ -13250,9 +14868,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Collector() # Collector | 
-auto_balance_monitored_devices = false # bool |  (optional) (default to false)
-force_update_failed_over_devices = false # bool |  (optional) (default to false)
-op_type = 'refresh' # str |  (optional) (default to refresh)
+auto_balance_monitored_devices = true # bool |  (optional)
+force_update_failed_over_devices = true # bool |  (optional)
+op_type = 'op_type_example' # str |  (optional)
 
 try:
     # update collector
@@ -13268,9 +14886,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**Collector**](Collector.md)|  | 
- **auto_balance_monitored_devices** | **bool**|  | [optional] [default to false]
- **force_update_failed_over_devices** | **bool**|  | [optional] [default to false]
- **op_type** | **str**|  | [optional] [default to refresh]
+ **auto_balance_monitored_devices** | **bool**|  | [optional] 
+ **force_update_failed_over_devices** | **bool**|  | [optional] 
+ **op_type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -13290,7 +14908,9 @@ Name | Type | Description  | Notes
 # **patch_collector_group_by_id**
 > CollectorGroup patch_collector_group_by_id(id, body, auto_balance_monitored_devices=auto_balance_monitored_devices, force_update_failed_over_devices=force_update_failed_over_devices, op_type=op_type)
 
-update collector group
+Update collector group
+
+Update the details of a specific collector group by its ID
 
 ### Example
 ```python
@@ -13310,12 +14930,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.CollectorGroup() # CollectorGroup | 
-auto_balance_monitored_devices = false # bool |  (optional) (default to false)
-force_update_failed_over_devices = false # bool |  (optional) (default to false)
-op_type = 'refresh' # str |  (optional) (default to refresh)
+auto_balance_monitored_devices = true # bool |  (optional)
+force_update_failed_over_devices = true # bool |  (optional)
+op_type = 'op_type_example' # str |  (optional)
 
 try:
-    # update collector group
+    # Update collector group
     api_response = api_instance.patch_collector_group_by_id(id, body, auto_balance_monitored_devices=auto_balance_monitored_devices, force_update_failed_over_devices=force_update_failed_over_devices, op_type=op_type)
     pprint(api_response)
 except ApiException as e:
@@ -13328,9 +14948,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**CollectorGroup**](CollectorGroup.md)|  | 
- **auto_balance_monitored_devices** | **bool**|  | [optional] [default to false]
- **force_update_failed_over_devices** | **bool**|  | [optional] [default to false]
- **op_type** | **str**|  | [optional] [default to refresh]
+ **auto_balance_monitored_devices** | **bool**|  | [optional] 
+ **force_update_failed_over_devices** | **bool**|  | [optional] 
+ **op_type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -13350,7 +14970,9 @@ Name | Type | Description  | Notes
 # **patch_config_source_by_id**
 > ConfigSource patch_config_source_by_id(id, body=body, reason=reason)
 
-update config source by id
+Update config source by ID
+
+Update the config source details based on the provided ID
 
 ### Example
 ```python
@@ -13373,7 +14995,7 @@ body = logicmonitor_sdk.ConfigSource() # ConfigSource |  (optional)
 reason = 'reason_example' # str |  (optional)
 
 try:
-    # update config source by id
+    # Update config source by ID
     api_response = api_instance.patch_config_source_by_id(id, body=body, reason=reason)
     pprint(api_response)
 except ApiException as e:
@@ -13428,7 +15050,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Dashboard() # Dashboard | 
-overwrite_group_fields = false # bool |  (optional) (default to false)
+overwrite_group_fields = true # bool |  (optional)
 
 try:
     # update dashboard
@@ -13444,7 +15066,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**Dashboard**](Dashboard.md)|  | 
- **overwrite_group_fields** | **bool**|  | [optional] [default to false]
+ **overwrite_group_fields** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -13520,7 +15142,9 @@ Name | Type | Description  | Notes
 # **patch_datasource_by_id**
 > DataSource patch_datasource_by_id(id, body=body, reason=reason, force_unique_identifier=force_unique_identifier, force_restricted_change_key=force_restricted_change_key)
 
-update datasource
+Update datasource
+
+Updates a datasource by its ID
 
 ### Example
 ```python
@@ -13541,11 +15165,11 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DataSource() # DataSource |  (optional)
 reason = 'reason_example' # str |  (optional)
-force_unique_identifier = false # bool |  (optional) (default to false)
+force_unique_identifier = true # bool |  (optional)
 force_restricted_change_key = 'force_restricted_change_key_example' # str |  (optional)
 
 try:
-    # update datasource
+    # Update datasource
     api_response = api_instance.patch_datasource_by_id(id, body=body, reason=reason, force_unique_identifier=force_unique_identifier, force_restricted_change_key=force_restricted_change_key)
     pprint(api_response)
 except ApiException as e:
@@ -13559,7 +15183,7 @@ Name | Type | Description  | Notes
  **id** | **int**|  | 
  **body** | [**DataSource**](DataSource.md)|  | [optional] 
  **reason** | **str**|  | [optional] 
- **force_unique_identifier** | **bool**|  | [optional] [default to false]
+ **force_unique_identifier** | **bool**|  | [optional] 
  **force_restricted_change_key** | **str**|  | [optional] 
 
 ### Return type
@@ -13580,7 +15204,9 @@ Name | Type | Description  | Notes
 # **patch_default_dashboard**
 > object patch_default_dashboard(id, body=body)
 
-update default dashboard
+Update default dashboard
+
+Update the default dashboard settings for a user or group
 
 ### Example
 ```python
@@ -13602,7 +15228,7 @@ id = 'id_example' # str |
 body = logicmonitor_sdk.RestUserCustomizedDataV3() # RestUserCustomizedDataV3 |  (optional)
 
 try:
-    # update default dashboard
+    # Update default dashboard
     api_response = api_instance.patch_default_dashboard(id, body=body)
     pprint(api_response)
 except ApiException as e:
@@ -13632,7 +15258,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_device**
-> Device patch_device(id, body, start=start, end=end, netflow_filter=netflow_filter, op_type=op_type, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp)
+> Device patch_device(id, body, end=end, netflow_filter=netflow_filter, start=start, op_type=op_type, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp)
+
+update a device
 
 update a device
 
@@ -13654,15 +15282,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Device() # Device | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
-op_type = 'refresh' # str |  (optional) (default to refresh)
-need_stc_grp_and_sorted_cp = false # bool |  (optional) (default to false)
+start = 789 # int |  (optional)
+op_type = 'op_type_example' # str |  (optional)
+need_stc_grp_and_sorted_cp = true # bool |  (optional)
 
 try:
     # update a device
-    api_response = api_instance.patch_device(id, body, start=start, end=end, netflow_filter=netflow_filter, op_type=op_type, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp)
+    api_response = api_instance.patch_device(id, body, end=end, netflow_filter=netflow_filter, start=start, op_type=op_type, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->patch_device: %s\n" % e)
@@ -13674,11 +15302,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**Device**](Device.md)|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
- **op_type** | **str**|  | [optional] [default to refresh]
- **need_stc_grp_and_sorted_cp** | **bool**|  | [optional] [default to false]
+ **start** | **int**|  | [optional] 
+ **op_type** | **str**|  | [optional] 
+ **need_stc_grp_and_sorted_cp** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -13697,6 +15325,8 @@ Name | Type | Description  | Notes
 
 # **patch_device_datasource_instance_alert_setting_by_id**
 > DeviceDataSourceInstanceAlertSetting patch_device_datasource_instance_alert_setting_by_id(device_id, hds_id, instance_id, id, body)
+
+update device instance alert setting
 
 update device instance alert setting
 
@@ -13760,6 +15390,8 @@ Name | Type | Description  | Notes
 
 update device instance
 
+update device instance
+
 ### Example
 ```python
 from __future__ import print_function
@@ -13780,7 +15412,7 @@ device_id = 56 # int |
 hds_id = 56 # int | The device-datasource ID
 id = 56 # int | 
 body = logicmonitor_sdk.DeviceDataSourceInstance() # DeviceDataSourceInstance | 
-op_type = 'refresh' # str |  (optional) (default to refresh)
+op_type = 'op_type_example' # str |  (optional)
 
 try:
     # update device instance
@@ -13798,7 +15430,7 @@ Name | Type | Description  | Notes
  **hds_id** | **int**| The device-datasource ID | 
  **id** | **int**|  | 
  **body** | [**DeviceDataSourceInstance**](DeviceDataSourceInstance.md)|  | 
- **op_type** | **str**|  | [optional] [default to refresh]
+ **op_type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -13816,9 +15448,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **patch_device_datasource_instance_group_by_id**
-> DeviceDataSourceInstanceGroup patch_device_datasource_instance_group_by_id(device_id, device_ds_id, id, body)
+> DeviceDataSourceInstanceGroup patch_device_datasource_instance_group_by_id(device_ds_id, device_id, id, body)
 
-update device datasource instance group
+Update device datasource instance group
+
+Update a specific device datasource instance group by its ID
 
 ### Example
 ```python
@@ -13836,14 +15470,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
+device_id = 56 # int | 
 id = 56 # int | 
 body = logicmonitor_sdk.DeviceDataSourceInstanceGroup() # DeviceDataSourceInstanceGroup | 
 
 try:
-    # update device datasource instance group
-    api_response = api_instance.patch_device_datasource_instance_group_by_id(device_id, device_ds_id, id, body)
+    # Update device datasource instance group
+    api_response = api_instance.patch_device_datasource_instance_group_by_id(device_ds_id, device_id, id, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->patch_device_datasource_instance_group_by_id: %s\n" % e)
@@ -13853,8 +15487,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_id** | **int**|  | 
  **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
+ **device_id** | **int**|  | 
  **id** | **int**|  | 
  **body** | [**DeviceDataSourceInstanceGroup**](DeviceDataSourceInstanceGroup.md)|  | 
 
@@ -13878,6 +15512,8 @@ Name | Type | Description  | Notes
 
 update device group
 
+update device group
+
 ### Example
 ```python
 from __future__ import print_function
@@ -13896,7 +15532,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DeviceGroup() # DeviceGroup | 
-op_type = 'refresh' # str |  (optional) (default to refresh)
+op_type = 'op_type_example' # str |  (optional)
 
 try:
     # update device group
@@ -13912,7 +15548,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**DeviceGroup**](DeviceGroup.md)|  | 
- **op_type** | **str**|  | [optional] [default to refresh]
+ **op_type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -13931,6 +15567,8 @@ Name | Type | Description  | Notes
 
 # **patch_device_group_cluster_alert_conf_by_id**
 > DeviceClusterAlertConfig patch_device_group_cluster_alert_conf_by_id(device_group_id, id, body)
+
+Update cluster alert configuration
 
 Update cluster alert configuration
 
@@ -13988,7 +15626,9 @@ Name | Type | Description  | Notes
 # **patch_device_group_datasource_alert_setting**
 > DeviceGroupDataSourceAlertConfig patch_device_group_datasource_alert_setting(device_group_id, ds_id, body)
 
-update device group datasource alert setting
+Update device group datasource alert setting
+
+Update the alert setting for a specific device group datasource
 
 ### Example
 ```python
@@ -14011,7 +15651,7 @@ ds_id = 56 # int |
 body = logicmonitor_sdk.DeviceGroupDataSourceAlertConfig() # DeviceGroupDataSourceAlertConfig | 
 
 try:
-    # update device group datasource alert setting
+    # Update device group datasource alert setting
     api_response = api_instance.patch_device_group_datasource_alert_setting(device_group_id, ds_id, body)
     pprint(api_response)
 except ApiException as e:
@@ -14043,6 +15683,8 @@ Name | Type | Description  | Notes
 
 # **patch_device_group_datasource_by_id**
 > DeviceGroupDataSource patch_device_group_datasource_by_id(device_group_id, id, body=body)
+
+update device group datasource
 
 update device group datasource
 
@@ -14100,7 +15742,9 @@ Name | Type | Description  | Notes
 # **patch_device_group_property_by_name**
 > EntityProperty patch_device_group_property_by_name(gid, name, body)
 
-update device group property
+Update device group property
+
+Update a specific property of a device group
 
 ### Example
 ```python
@@ -14123,7 +15767,7 @@ name = 'name_example' # str |
 body = logicmonitor_sdk.EntityProperty() # EntityProperty | 
 
 try:
-    # update device group property
+    # Update device group property
     api_response = api_instance.patch_device_group_property_by_name(gid, name, body)
     pprint(api_response)
 except ApiException as e:
@@ -14156,7 +15800,9 @@ Name | Type | Description  | Notes
 # **patch_device_property_by_name**
 > EntityProperty patch_device_property_by_name(device_id, name, body)
 
-update device property
+Update device property
+
+Update a specific property of a device
 
 ### Example
 ```python
@@ -14179,7 +15825,7 @@ name = 'name_example' # str |
 body = logicmonitor_sdk.EntityProperty() # EntityProperty | 
 
 try:
-    # update device property
+    # Update device property
     api_response = api_instance.patch_device_property_by_name(device_id, name, body)
     pprint(api_response)
 except ApiException as e:
@@ -14209,10 +15855,70 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **patch_diagnostic_source_by_id**
+> DiagnosticsSource patch_diagnostic_source_by_id(id, body=body, reason=reason)
+
+Update a diagnostics source
+
+Updates a diagnostics source by its ID
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.DiagnosticsSource() # DiagnosticsSource |  (optional)
+reason = 'reason_example' # str |  (optional)
+
+try:
+    # Update a diagnostics source
+    api_response = api_instance.patch_diagnostic_source_by_id(id, body=body, reason=reason)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_diagnostic_source_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**DiagnosticsSource**](DiagnosticsSource.md)|  | [optional] 
+ **reason** | **str**|  | [optional] 
+
+### Return type
+
+[**DiagnosticsSource**](DiagnosticsSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **patch_escalation_chain_by_id**
 > EscalatingChain patch_escalation_chain_by_id(id, body)
 
-update escalation chain
+Update escalation chain
+
+Update the details of a specific escalation chain by its ID
 
 ### Example
 ```python
@@ -14234,7 +15940,7 @@ id = 56 # int |
 body = logicmonitor_sdk.EscalatingChain() # EscalatingChain | 
 
 try:
-    # update escalation chain
+    # Update escalation chain
     api_response = api_instance.patch_escalation_chain_by_id(id, body)
     pprint(api_response)
 except ApiException as e:
@@ -14266,7 +15972,9 @@ Name | Type | Description  | Notes
 # **patch_event_source_by_id**
 > EventSource patch_event_source_by_id(id, body=body, reason=reason)
 
-update eventSource by id
+Update event source by ID
+
+Updates the event source with the provided ID
 
 ### Example
 ```python
@@ -14289,7 +15997,7 @@ body = logicmonitor_sdk.EventSource() # EventSource |  (optional)
 reason = 'reason_example' # str |  (optional)
 
 try:
-    # update eventSource by id
+    # Update event source by ID
     api_response = api_instance.patch_event_source_by_id(id, body=body, reason=reason)
     pprint(api_response)
 except ApiException as e:
@@ -14323,6 +16031,8 @@ Name | Type | Description  | Notes
 > BatchJob patch_job_monitor(id, body=body, reason=reason)
 
 Update JobMonitor
+
+Update an existing JobMonitor by its ID
 
 ### Example
 ```python
@@ -14380,6 +16090,8 @@ Name | Type | Description  | Notes
 
 Update an existing log partition
 
+Update an existing log partition
+
 ### Example
 ```python
 from __future__ import print_function
@@ -14432,7 +16144,9 @@ Name | Type | Description  | Notes
 # **patch_log_source**
 > LogSource patch_log_source(id, body=body, reason=reason)
 
-update log source 
+Update log source
+
+Updates an existing log source
 
 ### Example
 ```python
@@ -14455,7 +16169,7 @@ body = logicmonitor_sdk.LogSource() # LogSource |  (optional)
 reason = 'reason_example' # str |  (optional)
 
 try:
-    # update log source 
+    # Update log source
     api_response = api_instance.patch_log_source(id, body=body, reason=reason)
     pprint(api_response)
 except ApiException as e:
@@ -14488,7 +16202,9 @@ Name | Type | Description  | Notes
 # **patch_netscan**
 > Netscan patch_netscan(id, body=body, reason=reason)
 
-update a netscan
+Update a netscan
+
+Update an existing netscan
 
 ### Example
 ```python
@@ -14511,7 +16227,7 @@ body = logicmonitor_sdk.Netscan() # Netscan |  (optional)
 reason = 'reason_example' # str |  (optional)
 
 try:
-    # update a netscan
+    # Update a netscan
     api_response = api_instance.patch_netscan(id, body=body, reason=reason)
     pprint(api_response)
 except ApiException as e:
@@ -14544,7 +16260,9 @@ Name | Type | Description  | Notes
 # **patch_oid**
 > RestOidV3 patch_oid(id, body=body)
 
-update a OID
+Update an OID
+
+Update the details of an existing OID
 
 ### Example
 ```python
@@ -14566,7 +16284,7 @@ id = 56 # int |
 body = logicmonitor_sdk.RestOidV3() # RestOidV3 |  (optional)
 
 try:
-    # update a OID
+    # Update an OID
     api_response = api_instance.patch_oid(id, body=body)
     pprint(api_response)
 except ApiException as e:
@@ -14597,6 +16315,8 @@ Name | Type | Description  | Notes
 
 # **patch_ops_note_by_id**
 > OpsNote patch_ops_note_by_id(id, body)
+
+update opsnote
 
 update opsnote
 
@@ -14654,6 +16374,8 @@ Name | Type | Description  | Notes
 
 update a property rule
 
+Update a property rule by id
+
 ### Example
 ```python
 from __future__ import print_function
@@ -14708,7 +16430,9 @@ Name | Type | Description  | Notes
 # **patch_recipient_group_by_id**
 > RecipientGroup patch_recipient_group_by_id(id, body)
 
-update recipient group
+Update recipient group
+
+Update a specific recipient group by its ID
 
 ### Example
 ```python
@@ -14730,7 +16454,7 @@ id = 56 # int |
 body = logicmonitor_sdk.RecipientGroup() # RecipientGroup | 
 
 try:
-    # update recipient group
+    # Update recipient group
     api_response = api_instance.patch_recipient_group_by_id(id, body)
     pprint(api_response)
 except ApiException as e:
@@ -14762,7 +16486,9 @@ Name | Type | Description  | Notes
 # **patch_report_by_id**
 > ReportBase patch_report_by_id(id, body)
 
-update report
+Update report
+
+Update the details of a specific report by its ID
 
 ### Example
 ```python
@@ -14784,7 +16510,7 @@ id = 56 # int |
 body = logicmonitor_sdk.ReportBase() # ReportBase | 
 
 try:
-    # update report
+    # Update report
     api_response = api_instance.patch_report_by_id(id, body)
     pprint(api_response)
 except ApiException as e:
@@ -14816,7 +16542,9 @@ Name | Type | Description  | Notes
 # **patch_report_group_by_id**
 > ReportGroup patch_report_group_by_id(id, body)
 
-update report group
+Update report group
+
+Update a specific report group by its ID
 
 ### Example
 ```python
@@ -14838,7 +16566,7 @@ id = 56 # int |
 body = logicmonitor_sdk.ReportGroup() # ReportGroup | 
 
 try:
-    # update report group
+    # Update report group
     api_response = api_instance.patch_report_group_by_id(id, body)
     pprint(api_response)
 except ApiException as e:
@@ -14870,7 +16598,9 @@ Name | Type | Description  | Notes
 # **patch_role_by_id**
 > Role patch_role_by_id(id, body)
 
-update role
+Update role
+
+Update the details of a specific role by its ID
 
 ### Example
 ```python
@@ -14892,7 +16622,7 @@ id = 56 # int |
 body = logicmonitor_sdk.Role() # Role | 
 
 try:
-    # update role
+    # Update role
     api_response = api_instance.patch_role_by_id(id, body)
     pprint(api_response)
 except ApiException as e:
@@ -14923,6 +16653,8 @@ Name | Type | Description  | Notes
 
 # **patch_sdt_by_id**
 > SDT patch_sdt_by_id(id, body)
+
+update SDT (Response may contain extra fields depending upon the type of SDT being updated)
 
 update SDT (Response may contain extra fields depending upon the type of SDT being updated)
 
@@ -14980,6 +16712,8 @@ Name | Type | Description  | Notes
 
 Update TopologySource
 
+Update TopologySource
+
 ### Example
 ```python
 from __future__ import print_function
@@ -15034,6 +16768,8 @@ Name | Type | Description  | Notes
 # **patch_website_by_id**
 > Website patch_website_by_id(id, body, op_type=op_type)
 
+update website
+
 Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.
 
 ### Example
@@ -15054,10 +16790,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Website() # Website | 
-op_type = 'refresh' # str |  (optional) (default to refresh)
+op_type = 'op_type_example' # str |  (optional)
 
 try:
-    # Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.
+    # update website
     api_response = api_instance.patch_website_by_id(id, body, op_type=op_type)
     pprint(api_response)
 except ApiException as e:
@@ -15070,7 +16806,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**Website**](Website.md)|  | 
- **op_type** | **str**|  | [optional] [default to refresh]
+ **op_type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -15092,6 +16828,8 @@ Name | Type | Description  | Notes
 
 update website group
 
+update website group
+
 ### Example
 ```python
 from __future__ import print_function
@@ -15110,7 +16848,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.WebsiteGroup() # WebsiteGroup | 
-op_type = 'refresh' # str |  (optional) (default to refresh)
+op_type = 'op_type_example' # str |  (optional)
 
 try:
     # update website group
@@ -15126,7 +16864,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**WebsiteGroup**](WebsiteGroup.md)|  | 
- **op_type** | **str**|  | [optional] [default to refresh]
+ **op_type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -15146,7 +16884,9 @@ Name | Type | Description  | Notes
 # **patch_widget_by_id**
 > Widget patch_widget_by_id(id, body)
 
-update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+Update widget
+
+Updates a widget. Based on widget type, the request and response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.
 
 ### Example
 ```python
@@ -15168,7 +16908,7 @@ id = 56 # int |
 body = logicmonitor_sdk.Widget() # Widget | 
 
 try:
-    # update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+    # Update widget
     api_response = api_instance.patch_widget_by_id(id, body)
     pprint(api_response)
 except ApiException as e:
@@ -15198,7 +16938,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **schedule_auto_discovery_by_device_id**
-> object schedule_auto_discovery_by_device_id(id, start=start, end=end, netflow_filter=netflow_filter)
+> object schedule_auto_discovery_by_device_id(id, end=end, netflow_filter=netflow_filter, start=start)
+
+schedule active discovery for a device
 
 schedule active discovery for a device
 
@@ -15219,13 +16961,13 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
+start = 789 # int |  (optional)
 
 try:
     # schedule active discovery for a device
-    api_response = api_instance.schedule_auto_discovery_by_device_id(id, start=start, end=end, netflow_filter=netflow_filter)
+    api_response = api_instance.schedule_auto_discovery_by_device_id(id, end=end, netflow_filter=netflow_filter, start=start)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->schedule_auto_discovery_by_device_id: %s\n" % e)
@@ -15236,9 +16978,9 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
+ **start** | **int**|  | [optional] 
 
 ### Return type
 
@@ -15258,7 +17000,9 @@ Name | Type | Description  | Notes
 # **test_aws_account**
 > RestCloudOkPermissionsV3 test_aws_account(body)
 
-test AWS account
+Test AWS account
+
+Test the connection or status of an AWS account
 
 ### Example
 ```python
@@ -15279,7 +17023,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.RestAwsAccountTestV3() # RestAwsAccountTestV3 | 
 
 try:
-    # test AWS account
+    # Test AWS account
     api_response = api_instance.test_aws_account(body)
     pprint(api_response)
 except ApiException as e:
@@ -15309,6 +17053,8 @@ Name | Type | Description  | Notes
 
 # **test_azure_account**
 > RestCloudOkPermissionsV3 test_azure_account(body)
+
+test Azure account
 
 test Azure account
 
@@ -15364,6 +17110,8 @@ Name | Type | Description  | Notes
 
 test GCP account
 
+test GCP account
+
 ### Example
 ```python
 from __future__ import print_function
@@ -15414,7 +17162,9 @@ Name | Type | Description  | Notes
 # **test_saa_s_account**
 > RestCloudOkPermissionsV3 test_saa_s_account(body)
 
-test SaaS account
+Test SaaS account
+
+Test the connection or status of a SaaS account
 
 ### Example
 ```python
@@ -15435,7 +17185,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.RestSaaSAccountTestV3() # RestSaaSAccountTestV3 | 
 
 try:
-    # test SaaS account
+    # Test SaaS account
     api_response = api_instance.test_saa_s_account(body)
     pprint(api_response)
 except ApiException as e:
@@ -15465,6 +17215,8 @@ Name | Type | Description  | Notes
 
 # **update_access_group**
 > AccessGroup update_access_group(id, body)
+
+Update access group
 
 Update access group
 
@@ -15522,6 +17274,8 @@ Name | Type | Description  | Notes
 
 update user
 
+update user
+
 ### Example
 ```python
 from __future__ import print_function
@@ -15540,8 +17294,8 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Admin() # Admin | 
-change_password = false # bool |  (optional) (default to false)
-validation_only = false # bool |  (optional) (default to false)
+change_password = true # bool |  (optional)
+validation_only = true # bool |  (optional)
 
 try:
     # update user
@@ -15557,8 +17311,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**Admin**](Admin.md)|  | 
- **change_password** | **bool**|  | [optional] [default to false]
- **validation_only** | **bool**|  | [optional] [default to false]
+ **change_password** | **bool**|  | [optional] 
+ **validation_only** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -15577,6 +17331,8 @@ Name | Type | Description  | Notes
 
 # **update_alert_rule_by_id**
 > AlertRule update_alert_rule_by_id(id, body)
+
+update alert rule
 
 update alert rule
 
@@ -15632,7 +17388,9 @@ Name | Type | Description  | Notes
 # **update_api_token_by_admin_id**
 > APIToken update_api_token_by_admin_id(admin_id, apitoken_id, body)
 
-update api tokens for a user
+Update API tokens for a user
+
+Update the API tokens for a specific user
 
 ### Example
 ```python
@@ -15655,7 +17413,7 @@ apitoken_id = 56 # int |
 body = logicmonitor_sdk.APIToken() # APIToken | 
 
 try:
-    # update api tokens for a user
+    # Update API tokens for a user
     api_response = api_instance.update_api_token_by_admin_id(admin_id, apitoken_id, body)
     pprint(api_response)
 except ApiException as e:
@@ -15688,7 +17446,9 @@ Name | Type | Description  | Notes
 # **update_applies_to_function**
 > AppliesToFunction update_applies_to_function(id, body=body, reason=reason, ignore_reference=ignore_reference)
 
-update applies to function
+Update applies to function
+
+Update an existing applies to function
 
 ### Example
 ```python
@@ -15709,10 +17469,10 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.AppliesToFunction() # AppliesToFunction |  (optional)
 reason = 'reason_example' # str |  (optional)
-ignore_reference = false # bool |  (optional) (default to false)
+ignore_reference = true # bool |  (optional)
 
 try:
-    # update applies to function
+    # Update applies to function
     api_response = api_instance.update_applies_to_function(id, body=body, reason=reason, ignore_reference=ignore_reference)
     pprint(api_response)
 except ApiException as e:
@@ -15726,7 +17486,7 @@ Name | Type | Description  | Notes
  **id** | **int**|  | 
  **body** | [**AppliesToFunction**](AppliesToFunction.md)|  | [optional] 
  **reason** | **str**|  | [optional] 
- **ignore_reference** | **bool**|  | [optional] [default to false]
+ **ignore_reference** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -15748,6 +17508,8 @@ Name | Type | Description  | Notes
 
 update collector
 
+update collector
+
 ### Example
 ```python
 from __future__ import print_function
@@ -15766,9 +17528,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Collector() # Collector | 
-auto_balance_monitored_devices = false # bool |  (optional) (default to false)
-force_update_failed_over_devices = false # bool |  (optional) (default to false)
-op_type = 'refresh' # str |  (optional) (default to refresh)
+auto_balance_monitored_devices = true # bool |  (optional)
+force_update_failed_over_devices = true # bool |  (optional)
+op_type = 'op_type_example' # str |  (optional)
 
 try:
     # update collector
@@ -15784,9 +17546,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**Collector**](Collector.md)|  | 
- **auto_balance_monitored_devices** | **bool**|  | [optional] [default to false]
- **force_update_failed_over_devices** | **bool**|  | [optional] [default to false]
- **op_type** | **str**|  | [optional] [default to refresh]
+ **auto_balance_monitored_devices** | **bool**|  | [optional] 
+ **force_update_failed_over_devices** | **bool**|  | [optional] 
+ **op_type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -15806,7 +17568,9 @@ Name | Type | Description  | Notes
 # **update_collector_group_by_id**
 > CollectorGroup update_collector_group_by_id(id, body, auto_balance_monitored_devices=auto_balance_monitored_devices, force_update_failed_over_devices=force_update_failed_over_devices, op_type=op_type)
 
-update collector group
+Update collector group
+
+Update the details of a specific collector group by its ID
 
 ### Example
 ```python
@@ -15826,12 +17590,12 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.CollectorGroup() # CollectorGroup | 
-auto_balance_monitored_devices = false # bool |  (optional) (default to false)
-force_update_failed_over_devices = false # bool |  (optional) (default to false)
-op_type = 'refresh' # str |  (optional) (default to refresh)
+auto_balance_monitored_devices = true # bool |  (optional)
+force_update_failed_over_devices = true # bool |  (optional)
+op_type = 'op_type_example' # str |  (optional)
 
 try:
-    # update collector group
+    # Update collector group
     api_response = api_instance.update_collector_group_by_id(id, body, auto_balance_monitored_devices=auto_balance_monitored_devices, force_update_failed_over_devices=force_update_failed_over_devices, op_type=op_type)
     pprint(api_response)
 except ApiException as e:
@@ -15844,9 +17608,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**CollectorGroup**](CollectorGroup.md)|  | 
- **auto_balance_monitored_devices** | **bool**|  | [optional] [default to false]
- **force_update_failed_over_devices** | **bool**|  | [optional] [default to false]
- **op_type** | **str**|  | [optional] [default to refresh]
+ **auto_balance_monitored_devices** | **bool**|  | [optional] 
+ **force_update_failed_over_devices** | **bool**|  | [optional] 
+ **op_type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -15866,7 +17630,9 @@ Name | Type | Description  | Notes
 # **update_config_source_by_id**
 > ConfigSource update_config_source_by_id(id, body=body, reason=reason)
 
-update config source by id
+Update config source by ID
+
+Update the config source details based on the provided ID
 
 ### Example
 ```python
@@ -15889,7 +17655,7 @@ body = logicmonitor_sdk.ConfigSource() # ConfigSource |  (optional)
 reason = 'reason_example' # str |  (optional)
 
 try:
-    # update config source by id
+    # Update config source by ID
     api_response = api_instance.update_config_source_by_id(id, body=body, reason=reason)
     pprint(api_response)
 except ApiException as e:
@@ -15944,7 +17710,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Dashboard() # Dashboard | 
-overwrite_group_fields = false # bool |  (optional) (default to false)
+overwrite_group_fields = true # bool |  (optional)
 
 try:
     # update dashboard
@@ -15960,7 +17726,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**Dashboard**](Dashboard.md)|  | 
- **overwrite_group_fields** | **bool**|  | [optional] [default to false]
+ **overwrite_group_fields** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -16036,7 +17802,9 @@ Name | Type | Description  | Notes
 # **update_datasource_by_id**
 > DataSource update_datasource_by_id(id, body=body, reason=reason, force_unique_identifier=force_unique_identifier, force_restricted_change_key=force_restricted_change_key)
 
-update datasource
+Update datasource
+
+Updates a datasource by its ID
 
 ### Example
 ```python
@@ -16057,11 +17825,11 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DataSource() # DataSource |  (optional)
 reason = 'reason_example' # str |  (optional)
-force_unique_identifier = false # bool |  (optional) (default to false)
+force_unique_identifier = true # bool |  (optional)
 force_restricted_change_key = 'force_restricted_change_key_example' # str |  (optional)
 
 try:
-    # update datasource
+    # Update datasource
     api_response = api_instance.update_datasource_by_id(id, body=body, reason=reason, force_unique_identifier=force_unique_identifier, force_restricted_change_key=force_restricted_change_key)
     pprint(api_response)
 except ApiException as e:
@@ -16075,7 +17843,7 @@ Name | Type | Description  | Notes
  **id** | **int**|  | 
  **body** | [**DataSource**](DataSource.md)|  | [optional] 
  **reason** | **str**|  | [optional] 
- **force_unique_identifier** | **bool**|  | [optional] [default to false]
+ **force_unique_identifier** | **bool**|  | [optional] 
  **force_restricted_change_key** | **str**|  | [optional] 
 
 ### Return type
@@ -16096,7 +17864,9 @@ Name | Type | Description  | Notes
 # **update_default_dashboard**
 > object update_default_dashboard(id, body=body)
 
-update default dashboard
+Update default dashboard
+
+Update the default dashboard settings for a user or group
 
 ### Example
 ```python
@@ -16118,7 +17888,7 @@ id = 'id_example' # str |
 body = logicmonitor_sdk.RestUserCustomizedDataV3() # RestUserCustomizedDataV3 |  (optional)
 
 try:
-    # update default dashboard
+    # Update default dashboard
     api_response = api_instance.update_default_dashboard(id, body=body)
     pprint(api_response)
 except ApiException as e:
@@ -16148,7 +17918,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_device**
-> Device update_device(id, body, start=start, end=end, netflow_filter=netflow_filter, op_type=op_type, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp)
+> Device update_device(id, body, end=end, netflow_filter=netflow_filter, start=start, op_type=op_type, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp)
+
+update a device
 
 update a device
 
@@ -16170,15 +17942,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Device() # Device | 
-start = 789 # int |  (optional)
 end = 789 # int |  (optional)
 netflow_filter = 'netflow_filter_example' # str |  (optional)
-op_type = 'refresh' # str |  (optional) (default to refresh)
-need_stc_grp_and_sorted_cp = false # bool |  (optional) (default to false)
+start = 789 # int |  (optional)
+op_type = 'op_type_example' # str |  (optional)
+need_stc_grp_and_sorted_cp = true # bool |  (optional)
 
 try:
     # update a device
-    api_response = api_instance.update_device(id, body, start=start, end=end, netflow_filter=netflow_filter, op_type=op_type, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp)
+    api_response = api_instance.update_device(id, body, end=end, netflow_filter=netflow_filter, start=start, op_type=op_type, need_stc_grp_and_sorted_cp=need_stc_grp_and_sorted_cp)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->update_device: %s\n" % e)
@@ -16190,11 +17962,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**Device**](Device.md)|  | 
- **start** | **int**|  | [optional] 
  **end** | **int**|  | [optional] 
  **netflow_filter** | **str**|  | [optional] 
- **op_type** | **str**|  | [optional] [default to refresh]
- **need_stc_grp_and_sorted_cp** | **bool**|  | [optional] [default to false]
+ **start** | **int**|  | [optional] 
+ **op_type** | **str**|  | [optional] 
+ **need_stc_grp_and_sorted_cp** | **bool**|  | [optional] 
 
 ### Return type
 
@@ -16213,6 +17985,8 @@ Name | Type | Description  | Notes
 
 # **update_device_datasource_instance_alert_setting_by_id**
 > DeviceDataSourceInstanceAlertSetting update_device_datasource_instance_alert_setting_by_id(device_id, hds_id, instance_id, id, body)
+
+update device instance alert setting
 
 update device instance alert setting
 
@@ -16276,6 +18050,8 @@ Name | Type | Description  | Notes
 
 update device instance
 
+update device instance
+
 ### Example
 ```python
 from __future__ import print_function
@@ -16296,7 +18072,7 @@ device_id = 56 # int |
 hds_id = 56 # int | The device-datasource ID
 id = 56 # int | 
 body = logicmonitor_sdk.DeviceDataSourceInstance() # DeviceDataSourceInstance | 
-op_type = 'refresh' # str |  (optional) (default to refresh)
+op_type = 'op_type_example' # str |  (optional)
 
 try:
     # update device instance
@@ -16314,7 +18090,7 @@ Name | Type | Description  | Notes
  **hds_id** | **int**| The device-datasource ID | 
  **id** | **int**|  | 
  **body** | [**DeviceDataSourceInstance**](DeviceDataSourceInstance.md)|  | 
- **op_type** | **str**|  | [optional] [default to refresh]
+ **op_type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -16332,9 +18108,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_device_datasource_instance_group_by_id**
-> DeviceDataSourceInstanceGroup update_device_datasource_instance_group_by_id(device_id, device_ds_id, id, body)
+> DeviceDataSourceInstanceGroup update_device_datasource_instance_group_by_id(device_ds_id, device_id, id, body)
 
-update device datasource instance group
+Update device datasource instance group
+
+Update a specific device datasource instance group by its ID
 
 ### Example
 ```python
@@ -16352,14 +18130,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
+device_id = 56 # int | 
 id = 56 # int | 
 body = logicmonitor_sdk.DeviceDataSourceInstanceGroup() # DeviceDataSourceInstanceGroup | 
 
 try:
-    # update device datasource instance group
-    api_response = api_instance.update_device_datasource_instance_group_by_id(device_id, device_ds_id, id, body)
+    # Update device datasource instance group
+    api_response = api_instance.update_device_datasource_instance_group_by_id(device_ds_id, device_id, id, body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->update_device_datasource_instance_group_by_id: %s\n" % e)
@@ -16369,8 +18147,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_id** | **int**|  | 
  **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
+ **device_id** | **int**|  | 
  **id** | **int**|  | 
  **body** | [**DeviceDataSourceInstanceGroup**](DeviceDataSourceInstanceGroup.md)|  | 
 
@@ -16394,6 +18172,8 @@ Name | Type | Description  | Notes
 
 update device group
 
+update device group
+
 ### Example
 ```python
 from __future__ import print_function
@@ -16412,7 +18192,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.DeviceGroup() # DeviceGroup | 
-op_type = 'refresh' # str |  (optional) (default to refresh)
+op_type = 'op_type_example' # str |  (optional)
 
 try:
     # update device group
@@ -16428,7 +18208,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**DeviceGroup**](DeviceGroup.md)|  | 
- **op_type** | **str**|  | [optional] [default to refresh]
+ **op_type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -16447,6 +18227,8 @@ Name | Type | Description  | Notes
 
 # **update_device_group_cluster_alert_conf_by_id**
 > DeviceClusterAlertConfig update_device_group_cluster_alert_conf_by_id(device_group_id, id, body)
+
+Update cluster alert configuration
 
 Update cluster alert configuration
 
@@ -16504,7 +18286,9 @@ Name | Type | Description  | Notes
 # **update_device_group_datasource_alert_setting**
 > DeviceGroupDataSourceAlertConfig update_device_group_datasource_alert_setting(device_group_id, ds_id, body)
 
-update device group datasource alert setting
+Update device group datasource alert setting
+
+Update the alert setting for a specific device group datasource
 
 ### Example
 ```python
@@ -16527,7 +18311,7 @@ ds_id = 56 # int |
 body = logicmonitor_sdk.DeviceGroupDataSourceAlertConfig() # DeviceGroupDataSourceAlertConfig | 
 
 try:
-    # update device group datasource alert setting
+    # Update device group datasource alert setting
     api_response = api_instance.update_device_group_datasource_alert_setting(device_group_id, ds_id, body)
     pprint(api_response)
 except ApiException as e:
@@ -16559,6 +18343,8 @@ Name | Type | Description  | Notes
 
 # **update_device_group_datasource_by_id**
 > DeviceGroupDataSource update_device_group_datasource_by_id(device_group_id, id, body=body)
+
+update device group datasource
 
 update device group datasource
 
@@ -16616,7 +18402,9 @@ Name | Type | Description  | Notes
 # **update_device_group_property_by_name**
 > EntityProperty update_device_group_property_by_name(gid, name, body)
 
-update device group property
+Update device group property
+
+Update a specific property of a device group
 
 ### Example
 ```python
@@ -16639,7 +18427,7 @@ name = 'name_example' # str |
 body = logicmonitor_sdk.EntityProperty() # EntityProperty | 
 
 try:
-    # update device group property
+    # Update device group property
     api_response = api_instance.update_device_group_property_by_name(gid, name, body)
     pprint(api_response)
 except ApiException as e:
@@ -16672,7 +18460,9 @@ Name | Type | Description  | Notes
 # **update_device_property_by_name**
 > EntityProperty update_device_property_by_name(device_id, name, body)
 
-update device property
+Update device property
+
+Update a specific property of a device
 
 ### Example
 ```python
@@ -16695,7 +18485,7 @@ name = 'name_example' # str |
 body = logicmonitor_sdk.EntityProperty() # EntityProperty | 
 
 try:
-    # update device property
+    # Update device property
     api_response = api_instance.update_device_property_by_name(device_id, name, body)
     pprint(api_response)
 except ApiException as e:
@@ -16725,10 +18515,70 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **update_diagnostic_source_by_id**
+> DiagnosticsSource update_diagnostic_source_by_id(id, body=body, reason=reason)
+
+Update a diagnostics source
+
+Updates a diagnostics source by its ID
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.DiagnosticsSource() # DiagnosticsSource |  (optional)
+reason = 'reason_example' # str |  (optional)
+
+try:
+    # Update a diagnostics source
+    api_response = api_instance.update_diagnostic_source_by_id(id, body=body, reason=reason)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_diagnostic_source_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**DiagnosticsSource**](DiagnosticsSource.md)|  | [optional] 
+ **reason** | **str**|  | [optional] 
+
+### Return type
+
+[**DiagnosticsSource**](DiagnosticsSource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_escalation_chain_by_id**
 > EscalatingChain update_escalation_chain_by_id(id, body)
 
-update escalation chain
+Update escalation chain
+
+Update the details of a specific escalation chain by its ID
 
 ### Example
 ```python
@@ -16750,7 +18600,7 @@ id = 56 # int |
 body = logicmonitor_sdk.EscalatingChain() # EscalatingChain | 
 
 try:
-    # update escalation chain
+    # Update escalation chain
     api_response = api_instance.update_escalation_chain_by_id(id, body)
     pprint(api_response)
 except ApiException as e:
@@ -16782,7 +18632,9 @@ Name | Type | Description  | Notes
 # **update_event_source_by_id**
 > EventSource update_event_source_by_id(id, body=body, reason=reason)
 
-update eventSource by id
+Update event source by ID
+
+Updates the event source with the provided ID
 
 ### Example
 ```python
@@ -16805,7 +18657,7 @@ body = logicmonitor_sdk.EventSource() # EventSource |  (optional)
 reason = 'reason_example' # str |  (optional)
 
 try:
-    # update eventSource by id
+    # Update event source by ID
     api_response = api_instance.update_event_source_by_id(id, body=body, reason=reason)
     pprint(api_response)
 except ApiException as e:
@@ -16836,9 +18688,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_instance_group_alert_threshold**
-> object update_instance_group_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, body=body)
+> object update_instance_group_alert_threshold(device_ds_id, device_id, dsig_id, dp_id, body=body)
 
-update instance group alert threshold (Setting the threshold at default group is not allowed)
+Update instance group alert threshold
+
+Update the alert threshold for an instance group. Setting the threshold at the default group is not allowed.
 
 ### Example
 ```python
@@ -16856,15 +18710,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-device_id = 56 # int | 
 device_ds_id = 56 # int | The device-datasource ID you'd like to add an instance group for
+device_id = 56 # int | 
 dsig_id = 56 # int | 
 dp_id = 56 # int | 
 body = logicmonitor_sdk.RestDeviceInstanceGroupAlertConfigV3() # RestDeviceInstanceGroupAlertConfigV3 |  (optional)
 
 try:
-    # update instance group alert threshold (Setting the threshold at default group is not allowed)
-    api_response = api_instance.update_instance_group_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, body=body)
+    # Update instance group alert threshold
+    api_response = api_instance.update_instance_group_alert_threshold(device_ds_id, device_id, dsig_id, dp_id, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling LMApi->update_instance_group_alert_threshold: %s\n" % e)
@@ -16874,8 +18728,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **device_id** | **int**|  | 
  **device_ds_id** | **int**| The device-datasource ID you&#x27;d like to add an instance group for | 
+ **device_id** | **int**|  | 
  **dsig_id** | **int**|  | 
  **dp_id** | **int**|  | 
  **body** | [**RestDeviceInstanceGroupAlertConfigV3**](RestDeviceInstanceGroupAlertConfigV3.md)|  | [optional] 
@@ -16899,6 +18753,8 @@ Name | Type | Description  | Notes
 > BatchJob update_job_monitor(id, body=body, reason=reason)
 
 Update JobMonitor
+
+Update an existing JobMonitor by its ID
 
 ### Example
 ```python
@@ -16956,6 +18812,8 @@ Name | Type | Description  | Notes
 
 Update an existing log partition
 
+Update an existing log partition
+
 ### Example
 ```python
 from __future__ import print_function
@@ -17008,7 +18866,9 @@ Name | Type | Description  | Notes
 # **update_log_source**
 > LogSource update_log_source(id, body=body, reason=reason)
 
-update log source 
+Update log source
+
+Updates an existing log source
 
 ### Example
 ```python
@@ -17031,7 +18891,7 @@ body = logicmonitor_sdk.LogSource() # LogSource |  (optional)
 reason = 'reason_example' # str |  (optional)
 
 try:
-    # update log source 
+    # Update log source
     api_response = api_instance.update_log_source(id, body=body, reason=reason)
     pprint(api_response)
 except ApiException as e:
@@ -17064,7 +18924,9 @@ Name | Type | Description  | Notes
 # **update_netscan**
 > Netscan update_netscan(id, body=body, reason=reason)
 
-update a netscan
+Update a netscan
+
+Update an existing netscan
 
 ### Example
 ```python
@@ -17087,7 +18949,7 @@ body = logicmonitor_sdk.Netscan() # Netscan |  (optional)
 reason = 'reason_example' # str |  (optional)
 
 try:
-    # update a netscan
+    # Update a netscan
     api_response = api_instance.update_netscan(id, body=body, reason=reason)
     pprint(api_response)
 except ApiException as e:
@@ -17120,7 +18982,9 @@ Name | Type | Description  | Notes
 # **update_oid**
 > RestOidV3 update_oid(id, body=body)
 
-update a OID
+Update an OID
+
+Update the details of an existing OID
 
 ### Example
 ```python
@@ -17142,7 +19006,7 @@ id = 56 # int |
 body = logicmonitor_sdk.RestOidV3() # RestOidV3 |  (optional)
 
 try:
-    # update a OID
+    # Update an OID
     api_response = api_instance.update_oid(id, body=body)
     pprint(api_response)
 except ApiException as e:
@@ -17173,6 +19037,8 @@ Name | Type | Description  | Notes
 
 # **update_ops_note_by_id**
 > OpsNote update_ops_note_by_id(id, body)
+
+update opsnote
 
 update opsnote
 
@@ -17230,6 +19096,8 @@ Name | Type | Description  | Notes
 
 update a property rule
 
+Update a property rule by id
+
 ### Example
 ```python
 from __future__ import print_function
@@ -17284,7 +19152,9 @@ Name | Type | Description  | Notes
 # **update_recipient_group_by_id**
 > RecipientGroup update_recipient_group_by_id(id, body)
 
-update recipient group
+Update recipient group
+
+Update a specific recipient group by its ID
 
 ### Example
 ```python
@@ -17306,7 +19176,7 @@ id = 56 # int |
 body = logicmonitor_sdk.RecipientGroup() # RecipientGroup | 
 
 try:
-    # update recipient group
+    # Update recipient group
     api_response = api_instance.update_recipient_group_by_id(id, body)
     pprint(api_response)
 except ApiException as e:
@@ -17338,7 +19208,9 @@ Name | Type | Description  | Notes
 # **update_report_by_id**
 > ReportBase update_report_by_id(id, body)
 
-update report
+Update report
+
+Update the details of a specific report by its ID
 
 ### Example
 ```python
@@ -17360,7 +19232,7 @@ id = 56 # int |
 body = logicmonitor_sdk.ReportBase() # ReportBase | 
 
 try:
-    # update report
+    # Update report
     api_response = api_instance.update_report_by_id(id, body)
     pprint(api_response)
 except ApiException as e:
@@ -17392,7 +19264,9 @@ Name | Type | Description  | Notes
 # **update_report_group_by_id**
 > ReportGroup update_report_group_by_id(id, body)
 
-update report group
+Update report group
+
+Update a specific report group by its ID
 
 ### Example
 ```python
@@ -17414,7 +19288,7 @@ id = 56 # int |
 body = logicmonitor_sdk.ReportGroup() # ReportGroup | 
 
 try:
-    # update report group
+    # Update report group
     api_response = api_instance.update_report_group_by_id(id, body)
     pprint(api_response)
 except ApiException as e:
@@ -17446,7 +19320,9 @@ Name | Type | Description  | Notes
 # **update_role_by_id**
 > Role update_role_by_id(id, body)
 
-update role
+Update role
+
+Update the details of a specific role by its ID
 
 ### Example
 ```python
@@ -17468,7 +19344,7 @@ id = 56 # int |
 body = logicmonitor_sdk.Role() # Role | 
 
 try:
-    # update role
+    # Update role
     api_response = api_instance.update_role_by_id(id, body)
     pprint(api_response)
 except ApiException as e:
@@ -17499,6 +19375,8 @@ Name | Type | Description  | Notes
 
 # **update_sdt_by_id**
 > SDT update_sdt_by_id(id, body)
+
+update SDT (Response may contain extra fields depending upon the type of SDT being updated)
 
 update SDT (Response may contain extra fields depending upon the type of SDT being updated)
 
@@ -17556,6 +19434,8 @@ Name | Type | Description  | Notes
 
 Update TopologySource
 
+Update TopologySource
+
 ### Example
 ```python
 from __future__ import print_function
@@ -17610,6 +19490,8 @@ Name | Type | Description  | Notes
 # **update_website_by_id**
 > Website update_website_by_id(id, body, op_type=op_type)
 
+update website
+
 Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.
 
 ### Example
@@ -17630,10 +19512,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.Website() # Website | 
-op_type = 'refresh' # str |  (optional) (default to refresh)
+op_type = 'op_type_example' # str |  (optional)
 
 try:
-    # Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.
+    # update website
     api_response = api_instance.update_website_by_id(id, body, op_type=op_type)
     pprint(api_response)
 except ApiException as e:
@@ -17646,7 +19528,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**Website**](Website.md)|  | 
- **op_type** | **str**|  | [optional] [default to refresh]
+ **op_type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -17668,6 +19550,8 @@ Name | Type | Description  | Notes
 
 update website group
 
+update website group
+
 ### Example
 ```python
 from __future__ import print_function
@@ -17686,7 +19570,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 id = 56 # int | 
 body = logicmonitor_sdk.WebsiteGroup() # WebsiteGroup | 
-op_type = 'refresh' # str |  (optional) (default to refresh)
+op_type = 'op_type_example' # str |  (optional)
 
 try:
     # update website group
@@ -17702,7 +19586,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
  **body** | [**WebsiteGroup**](WebsiteGroup.md)|  | 
- **op_type** | **str**|  | [optional] [default to refresh]
+ **op_type** | **str**|  | [optional] 
 
 ### Return type
 
@@ -17722,7 +19606,9 @@ Name | Type | Description  | Notes
 # **update_widget_by_id**
 > Widget update_widget_by_id(id, body)
 
-update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+Update widget
+
+Updates a widget. Based on widget type, the request and response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.
 
 ### Example
 ```python
@@ -17744,7 +19630,7 @@ id = 56 # int |
 body = logicmonitor_sdk.Widget() # Widget | 
 
 try:
-    # update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)
+    # Update widget
     api_response = api_instance.update_widget_by_id(id, body)
     pprint(api_response)
 except ApiException as e:
@@ -17776,7 +19662,9 @@ Name | Type | Description  | Notes
 # **verify_aws_billing_permissions**
 > RestAWSVerifyBillingPermissionsV3 verify_aws_billing_permissions(body)
 
-verify AWS Billing Permissions
+Verify AWS Billing Permissions
+
+Verify the billing permissions of an AWS account
 
 ### Example
 ```python
@@ -17797,7 +19685,7 @@ api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
 body = logicmonitor_sdk.RestAwsAccountTestV3() # RestAwsAccountTestV3 | 
 
 try:
-    # verify AWS Billing Permissions
+    # Verify AWS Billing Permissions
     api_response = api_instance.verify_aws_billing_permissions(body)
     pprint(api_response)
 except ApiException as e:
@@ -17827,6 +19715,8 @@ Name | Type | Description  | Notes
 
 # **verify_storage_accounts_permissions**
 > RestResponse verify_storage_accounts_permissions(body)
+
+view storage accounts
 
 view storage accounts
 

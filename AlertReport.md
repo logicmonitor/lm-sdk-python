@@ -21,6 +21,8 @@ Name | Type | Description | Notes
 **dependency_routing_state** | **str** |  | [optional] 
 **dependency_role** | **str** |  | [optional] 
 **data_source_instance_name** | **str** | The instance filter used to determine which alerts will appear in the report. Glob expressions supported | [optional] 
+**clear_filter** | **str** | Only cleared alerts will be included in the response. no: only active alerts will be included in the response. all: both active and cleared alerts will be included in the response | [optional] 
+**is_historical_sdt** | **str** | all | yes | no all: alerts during their lifecycle that were in SDT and that weren&#x27;t in SDT that meet the report criteria will be displayed yes: only alerts that were in SDT during their lifecycle and that meet the report criteria will be displayed no: only alerts that weren&#x27;t in SDT during their lifecycle and that meet the report criteria will be displayed | [optional] 
 **data_source** | **str** | All alerts displayed in the report must have been triggered for the Datasources specified in this filter | [optional] 
 **group_full_path** | **str** | The group filter used to determine which alerts will appear in the report. Glob expressions supported | [optional] 
 **include_preexist** | **object** | true: alerts that started prior to the specified dateRange but that meet all other criteria will be displayed in the report false: only alerts that started during the specified dateRange will be displayed in the report the default value is true | [optional] 

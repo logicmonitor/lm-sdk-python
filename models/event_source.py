@@ -28,53 +28,59 @@ class EventSource(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'suppress_duplicates_es': 'bool',
         'access_groups': 'list[AccessGroup]',
-        'alert_subject_template': 'str',
-        'alert_level': 'str',
+        'event_source': 'EventSource',
         'description': 'str',
         'applies_to': 'str',
+        'lineage_id': 'str',
+        'collector': 'str',
+        'origin_registry_id': 'str',
+        'alert_body_template': 'str',
+        'checksum': 'str',
+        'id': 'int',
+        'access_group_ids': 'list[int]',
+        'group': 'str',
+        'suppress_duplicates_es': 'bool',
+        'alert_subject_template': 'str',
+        'event_source_filters': 'list[EventSourceFilter]',
+        'alert_level': 'str',
         'technology': 'str',
         'filters': 'list[RestEventSourceFilter]',
         'version': 'int',
-        'lineage_id': 'str',
-        'collector': 'str',
         'tags': 'str',
         'audit_version': 'int',
         'installation_metadata': 'IntegrationMetadata',
-        'alert_body_template': 'str',
-        'checksum': 'str',
         'name': 'str',
         'clear_after_ack': 'bool',
-        'id': 'int',
-        'access_group_ids': 'list[int]',
-        'alert_effective_ival': 'int',
-        'group': 'str'
+        'alert_effective_ival': 'int'
     }
 
     attribute_map = {
-        'suppress_duplicates_es': 'suppressDuplicatesES',
         'access_groups': 'accessGroups',
-        'alert_subject_template': 'alertSubjectTemplate',
-        'alert_level': 'alertLevel',
+        'event_source': 'eventSource',
         'description': 'description',
         'applies_to': 'appliesTo',
+        'lineage_id': 'lineageId',
+        'collector': 'collector',
+        'origin_registry_id': 'originRegistryId',
+        'alert_body_template': 'alertBodyTemplate',
+        'checksum': 'checksum',
+        'id': 'id',
+        'access_group_ids': 'accessGroupIds',
+        'group': 'group',
+        'suppress_duplicates_es': 'suppressDuplicatesES',
+        'alert_subject_template': 'alertSubjectTemplate',
+        'event_source_filters': 'eventSourceFilters',
+        'alert_level': 'alertLevel',
         'technology': 'technology',
         'filters': 'filters',
         'version': 'version',
-        'lineage_id': 'lineageId',
-        'collector': 'collector',
         'tags': 'tags',
         'audit_version': 'auditVersion',
         'installation_metadata': 'installationMetadata',
-        'alert_body_template': 'alertBodyTemplate',
-        'checksum': 'checksum',
         'name': 'name',
         'clear_after_ack': 'clearAfterAck',
-        'id': 'id',
-        'access_group_ids': 'accessGroupIds',
-        'alert_effective_ival': 'alertEffectiveIval',
-        'group': 'group'
+        'alert_effective_ival': 'alertEffectiveIval'
     }
 
     discriminator_value_class_map = {
@@ -97,96 +103,82 @@ class EventSource(object):
 'azurerss': 'AzureRssEventSource',
 'RestAwsOrganizationalHealthEventSource': 'RestAwsOrganizationalHealthEventSource'    }
 
-    def __init__(self, suppress_duplicates_es=None, access_groups=None, alert_subject_template=None, alert_level=None, description=None, applies_to=None, technology=None, filters=None, version=None, lineage_id=None, collector=None, tags=None, audit_version=None, installation_metadata=None, alert_body_template=None, checksum=None, name=None, clear_after_ack=None, id=None, access_group_ids=None, alert_effective_ival=None, group=None):  # noqa: E501
+    def __init__(self, access_groups=None, event_source=None, description=None, applies_to=None, lineage_id=None, collector=None, origin_registry_id=None, alert_body_template=None, checksum=None, id=None, access_group_ids=None, group=None, suppress_duplicates_es=None, alert_subject_template=None, event_source_filters=None, alert_level=None, technology=None, filters=None, version=None, tags=None, audit_version=None, installation_metadata=None, name=None, clear_after_ack=None, alert_effective_ival=None):  # noqa: E501
         """EventSource - a model defined in Swagger"""  # noqa: E501
-        self._suppress_duplicates_es = None
         self._access_groups = None
-        self._alert_subject_template = None
-        self._alert_level = None
+        self._event_source = None
         self._description = None
         self._applies_to = None
+        self._lineage_id = None
+        self._collector = None
+        self._origin_registry_id = None
+        self._alert_body_template = None
+        self._checksum = None
+        self._id = None
+        self._access_group_ids = None
+        self._group = None
+        self._suppress_duplicates_es = None
+        self._alert_subject_template = None
+        self._event_source_filters = None
+        self._alert_level = None
         self._technology = None
         self._filters = None
         self._version = None
-        self._lineage_id = None
-        self._collector = None
         self._tags = None
         self._audit_version = None
         self._installation_metadata = None
-        self._alert_body_template = None
-        self._checksum = None
         self._name = None
         self._clear_after_ack = None
-        self._id = None
-        self._access_group_ids = None
         self._alert_effective_ival = None
-        self._group = None
         self.discriminator = 'collector'
-        if suppress_duplicates_es is not None:
-            self.suppress_duplicates_es = suppress_duplicates_es
         if access_groups is not None:
             self.access_groups = access_groups
-        if alert_subject_template is not None:
-            self.alert_subject_template = alert_subject_template
-        if alert_level is not None:
-            self.alert_level = alert_level
+        if event_source is not None:
+            self.event_source = event_source
         if description is not None:
             self.description = description
         if applies_to is not None:
             self.applies_to = applies_to
+        if lineage_id is not None:
+            self.lineage_id = lineage_id
+        if collector is not None:
+            self.collector = collector
+        if origin_registry_id is not None:
+            self.origin_registry_id = origin_registry_id
+        if alert_body_template is not None:
+            self.alert_body_template = alert_body_template
+        if checksum is not None:
+            self.checksum = checksum
+        if id is not None:
+            self.id = id
+        if access_group_ids is not None:
+            self.access_group_ids = access_group_ids
+        if group is not None:
+            self.group = group
+        if suppress_duplicates_es is not None:
+            self.suppress_duplicates_es = suppress_duplicates_es
+        if alert_subject_template is not None:
+            self.alert_subject_template = alert_subject_template
+        if event_source_filters is not None:
+            self.event_source_filters = event_source_filters
+        if alert_level is not None:
+            self.alert_level = alert_level
         if technology is not None:
             self.technology = technology
         if filters is not None:
             self.filters = filters
         if version is not None:
             self.version = version
-        if lineage_id is not None:
-            self.lineage_id = lineage_id
-        if collector is not None:
-            self.collector = collector
         if tags is not None:
             self.tags = tags
         if audit_version is not None:
             self.audit_version = audit_version
         if installation_metadata is not None:
             self.installation_metadata = installation_metadata
-        if alert_body_template is not None:
-            self.alert_body_template = alert_body_template
-        if checksum is not None:
-            self.checksum = checksum
         self.name = name
         if clear_after_ack is not None:
             self.clear_after_ack = clear_after_ack
-        if id is not None:
-            self.id = id
-        if access_group_ids is not None:
-            self.access_group_ids = access_group_ids
         self.alert_effective_ival = alert_effective_ival
-        if group is not None:
-            self.group = group
-
-    @property
-    def suppress_duplicates_es(self):
-        """Gets the suppress_duplicates_es of this EventSource.  # noqa: E501
-
-        Whether or not duplicate alerts have to be suppressed  # noqa: E501
-
-        :return: The suppress_duplicates_es of this EventSource.  # noqa: E501
-        :rtype: bool
-        """
-        return self._suppress_duplicates_es
-
-    @suppress_duplicates_es.setter
-    def suppress_duplicates_es(self, suppress_duplicates_es):
-        """Sets the suppress_duplicates_es of this EventSource.
-
-        Whether or not duplicate alerts have to be suppressed  # noqa: E501
-
-        :param suppress_duplicates_es: The suppress_duplicates_es of this EventSource.  # noqa: E501
-        :type: bool
-        """
-
-        self._suppress_duplicates_es = suppress_duplicates_es
 
     @property
     def access_groups(self):
@@ -212,50 +204,25 @@ class EventSource(object):
         self._access_groups = access_groups
 
     @property
-    def alert_subject_template(self):
-        """Gets the alert_subject_template of this EventSource.  # noqa: E501
+    def event_source(self):
+        """Gets the event_source of this EventSource.  # noqa: E501
 
-        The alert message subject for the EventSource  # noqa: E501
 
-        :return: The alert_subject_template of this EventSource.  # noqa: E501
-        :rtype: str
+        :return: The event_source of this EventSource.  # noqa: E501
+        :rtype: EventSource
         """
-        return self._alert_subject_template
+        return self._event_source
 
-    @alert_subject_template.setter
-    def alert_subject_template(self, alert_subject_template):
-        """Sets the alert_subject_template of this EventSource.
+    @event_source.setter
+    def event_source(self, event_source):
+        """Sets the event_source of this EventSource.
 
-        The alert message subject for the EventSource  # noqa: E501
 
-        :param alert_subject_template: The alert_subject_template of this EventSource.  # noqa: E501
-        :type: str
+        :param event_source: The event_source of this EventSource.  # noqa: E501
+        :type: EventSource
         """
 
-        self._alert_subject_template = alert_subject_template
-
-    @property
-    def alert_level(self):
-        """Gets the alert_level of this EventSource.  # noqa: E501
-
-        The default alert level. The values can be warn | error | critical | doMapping  # noqa: E501
-
-        :return: The alert_level of this EventSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._alert_level
-
-    @alert_level.setter
-    def alert_level(self, alert_level):
-        """Sets the alert_level of this EventSource.
-
-        The default alert level. The values can be warn | error | critical | doMapping  # noqa: E501
-
-        :param alert_level: The alert_level of this EventSource.  # noqa: E501
-        :type: str
-        """
-
-        self._alert_level = alert_level
+        self._event_source = event_source
 
     @property
     def description(self):
@@ -302,6 +269,280 @@ class EventSource(object):
         """
 
         self._applies_to = applies_to
+
+    @property
+    def lineage_id(self):
+        """Gets the lineage_id of this EventSource.  # noqa: E501
+
+        The lineageId the LMModule belongs to  # noqa: E501
+
+        :return: The lineage_id of this EventSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._lineage_id
+
+    @lineage_id.setter
+    def lineage_id(self, lineage_id):
+        """Sets the lineage_id of this EventSource.
+
+        The lineageId the LMModule belongs to  # noqa: E501
+
+        :param lineage_id: The lineage_id of this EventSource.  # noqa: E501
+        :type: str
+        """
+
+        self._lineage_id = lineage_id
+
+    @property
+    def collector(self):
+        """Gets the collector of this EventSource.  # noqa: E501
+
+        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | awsorganizationalhealth | ipmievent  # noqa: E501
+
+        :return: The collector of this EventSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._collector
+
+    @collector.setter
+    def collector(self, collector):
+        """Sets the collector of this EventSource.
+
+        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | awsorganizationalhealth | ipmievent  # noqa: E501
+
+        :param collector: The collector of this EventSource.  # noqa: E501
+        :type: str
+        """
+
+        self._collector = collector
+
+    @property
+    def origin_registry_id(self):
+        """Gets the origin_registry_id of this EventSource.  # noqa: E501
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :return: The origin_registry_id of this EventSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._origin_registry_id
+
+    @origin_registry_id.setter
+    def origin_registry_id(self, origin_registry_id):
+        """Sets the origin_registry_id of this EventSource.
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :param origin_registry_id: The origin_registry_id of this EventSource.  # noqa: E501
+        :type: str
+        """
+
+        self._origin_registry_id = origin_registry_id
+
+    @property
+    def alert_body_template(self):
+        """Gets the alert_body_template of this EventSource.  # noqa: E501
+
+        The alert message body for the EventSource  # noqa: E501
+
+        :return: The alert_body_template of this EventSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_body_template
+
+    @alert_body_template.setter
+    def alert_body_template(self, alert_body_template):
+        """Sets the alert_body_template of this EventSource.
+
+        The alert message body for the EventSource  # noqa: E501
+
+        :param alert_body_template: The alert_body_template of this EventSource.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_body_template = alert_body_template
+
+    @property
+    def checksum(self):
+        """Gets the checksum of this EventSource.  # noqa: E501
+
+        The metadata checksum for the LMModule content  # noqa: E501
+
+        :return: The checksum of this EventSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._checksum
+
+    @checksum.setter
+    def checksum(self, checksum):
+        """Sets the checksum of this EventSource.
+
+        The metadata checksum for the LMModule content  # noqa: E501
+
+        :param checksum: The checksum of this EventSource.  # noqa: E501
+        :type: str
+        """
+
+        self._checksum = checksum
+
+    @property
+    def id(self):
+        """Gets the id of this EventSource.  # noqa: E501
+
+        The ID of the LMModule  # noqa: E501
+
+        :return: The id of this EventSource.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this EventSource.
+
+        The ID of the LMModule  # noqa: E501
+
+        :param id: The id of this EventSource.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def access_group_ids(self):
+        """Gets the access_group_ids of this EventSource.  # noqa: E501
+
+        The Access Groups Id's  # noqa: E501
+
+        :return: The access_group_ids of this EventSource.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._access_group_ids
+
+    @access_group_ids.setter
+    def access_group_ids(self, access_group_ids):
+        """Sets the access_group_ids of this EventSource.
+
+        The Access Groups Id's  # noqa: E501
+
+        :param access_group_ids: The access_group_ids of this EventSource.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._access_group_ids = access_group_ids
+
+    @property
+    def group(self):
+        """Gets the group of this EventSource.  # noqa: E501
+
+        The group the LMModule is in  # noqa: E501
+
+        :return: The group of this EventSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._group
+
+    @group.setter
+    def group(self, group):
+        """Sets the group of this EventSource.
+
+        The group the LMModule is in  # noqa: E501
+
+        :param group: The group of this EventSource.  # noqa: E501
+        :type: str
+        """
+
+        self._group = group
+
+    @property
+    def suppress_duplicates_es(self):
+        """Gets the suppress_duplicates_es of this EventSource.  # noqa: E501
+
+        Whether or not duplicate alerts have to be suppressed  # noqa: E501
+
+        :return: The suppress_duplicates_es of this EventSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._suppress_duplicates_es
+
+    @suppress_duplicates_es.setter
+    def suppress_duplicates_es(self, suppress_duplicates_es):
+        """Sets the suppress_duplicates_es of this EventSource.
+
+        Whether or not duplicate alerts have to be suppressed  # noqa: E501
+
+        :param suppress_duplicates_es: The suppress_duplicates_es of this EventSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._suppress_duplicates_es = suppress_duplicates_es
+
+    @property
+    def alert_subject_template(self):
+        """Gets the alert_subject_template of this EventSource.  # noqa: E501
+
+        The alert message subject for the EventSource  # noqa: E501
+
+        :return: The alert_subject_template of this EventSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_subject_template
+
+    @alert_subject_template.setter
+    def alert_subject_template(self, alert_subject_template):
+        """Sets the alert_subject_template of this EventSource.
+
+        The alert message subject for the EventSource  # noqa: E501
+
+        :param alert_subject_template: The alert_subject_template of this EventSource.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_subject_template = alert_subject_template
+
+    @property
+    def event_source_filters(self):
+        """Gets the event_source_filters of this EventSource.  # noqa: E501
+
+
+        :return: The event_source_filters of this EventSource.  # noqa: E501
+        :rtype: list[EventSourceFilter]
+        """
+        return self._event_source_filters
+
+    @event_source_filters.setter
+    def event_source_filters(self, event_source_filters):
+        """Sets the event_source_filters of this EventSource.
+
+
+        :param event_source_filters: The event_source_filters of this EventSource.  # noqa: E501
+        :type: list[EventSourceFilter]
+        """
+
+        self._event_source_filters = event_source_filters
+
+    @property
+    def alert_level(self):
+        """Gets the alert_level of this EventSource.  # noqa: E501
+
+        The default alert level. The values can be warn | error | critical | doMapping  # noqa: E501
+
+        :return: The alert_level of this EventSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_level
+
+    @alert_level.setter
+    def alert_level(self, alert_level):
+        """Sets the alert_level of this EventSource.
+
+        The default alert level. The values can be warn | error | critical | doMapping  # noqa: E501
+
+        :param alert_level: The alert_level of this EventSource.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_level = alert_level
 
     @property
     def technology(self):
@@ -373,52 +614,6 @@ class EventSource(object):
         self._version = version
 
     @property
-    def lineage_id(self):
-        """Gets the lineage_id of this EventSource.  # noqa: E501
-
-        The lineageId the LMModule belongs to  # noqa: E501
-
-        :return: The lineage_id of this EventSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._lineage_id
-
-    @lineage_id.setter
-    def lineage_id(self, lineage_id):
-        """Sets the lineage_id of this EventSource.
-
-        The lineageId the LMModule belongs to  # noqa: E501
-
-        :param lineage_id: The lineage_id of this EventSource.  # noqa: E501
-        :type: str
-        """
-
-        self._lineage_id = lineage_id
-
-    @property
-    def collector(self):
-        """Gets the collector of this EventSource.  # noqa: E501
-
-        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | awsorganizationalhealth | ipmievent  # noqa: E501
-
-        :return: The collector of this EventSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._collector
-
-    @collector.setter
-    def collector(self, collector):
-        """Sets the collector of this EventSource.
-
-        The EventSource collector type. The values can be wineventlog | syslog | snmptrap | echo | logfile | scriptevent | awsrss | azurerss | azureadvisor | gcpatom | awsrdspievent | azureresourcehealthevent | azureemergingissue | azureloganalyticsworkspacesevent | awstrustedadvisor | awshealth | awsorganizationalhealth | ipmievent  # noqa: E501
-
-        :param collector: The collector of this EventSource.  # noqa: E501
-        :type: str
-        """
-
-        self._collector = collector
-
-    @property
     def tags(self):
         """Gets the tags of this EventSource.  # noqa: E501
 
@@ -486,52 +681,6 @@ class EventSource(object):
         self._installation_metadata = installation_metadata
 
     @property
-    def alert_body_template(self):
-        """Gets the alert_body_template of this EventSource.  # noqa: E501
-
-        The alert message body for the EventSource  # noqa: E501
-
-        :return: The alert_body_template of this EventSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._alert_body_template
-
-    @alert_body_template.setter
-    def alert_body_template(self, alert_body_template):
-        """Sets the alert_body_template of this EventSource.
-
-        The alert message body for the EventSource  # noqa: E501
-
-        :param alert_body_template: The alert_body_template of this EventSource.  # noqa: E501
-        :type: str
-        """
-
-        self._alert_body_template = alert_body_template
-
-    @property
-    def checksum(self):
-        """Gets the checksum of this EventSource.  # noqa: E501
-
-        The metadata checksum for the LMModule content  # noqa: E501
-
-        :return: The checksum of this EventSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._checksum
-
-    @checksum.setter
-    def checksum(self, checksum):
-        """Sets the checksum of this EventSource.
-
-        The metadata checksum for the LMModule content  # noqa: E501
-
-        :param checksum: The checksum of this EventSource.  # noqa: E501
-        :type: str
-        """
-
-        self._checksum = checksum
-
-    @property
     def name(self):
         """Gets the name of this EventSource.  # noqa: E501
 
@@ -580,52 +729,6 @@ class EventSource(object):
         self._clear_after_ack = clear_after_ack
 
     @property
-    def id(self):
-        """Gets the id of this EventSource.  # noqa: E501
-
-        The ID of the LMModule  # noqa: E501
-
-        :return: The id of this EventSource.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this EventSource.
-
-        The ID of the LMModule  # noqa: E501
-
-        :param id: The id of this EventSource.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def access_group_ids(self):
-        """Gets the access_group_ids of this EventSource.  # noqa: E501
-
-        The Access Groups Id's  # noqa: E501
-
-        :return: The access_group_ids of this EventSource.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._access_group_ids
-
-    @access_group_ids.setter
-    def access_group_ids(self, access_group_ids):
-        """Sets the access_group_ids of this EventSource.
-
-        The Access Groups Id's  # noqa: E501
-
-        :param access_group_ids: The access_group_ids of this EventSource.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._access_group_ids = access_group_ids
-
-    @property
     def alert_effective_ival(self):
         """Gets the alert_effective_ival of this EventSource.  # noqa: E501
 
@@ -649,29 +752,6 @@ class EventSource(object):
             raise ValueError("Invalid value for `alert_effective_ival`, must not be `None`")  # noqa: E501
 
         self._alert_effective_ival = alert_effective_ival
-
-    @property
-    def group(self):
-        """Gets the group of this EventSource.  # noqa: E501
-
-        The group the LMModule is in  # noqa: E501
-
-        :return: The group of this EventSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._group
-
-    @group.setter
-    def group(self, group):
-        """Sets the group of this EventSource.
-
-        The group the LMModule is in  # noqa: E501
-
-        :param group: The group of this EventSource.  # noqa: E501
-        :type: str
-        """
-
-        self._group = group
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

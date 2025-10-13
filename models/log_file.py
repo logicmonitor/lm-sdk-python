@@ -54,8 +54,7 @@ class LogFile(object):
         self._encoding = None
         self._matches = None
         self.discriminator = None
-        if path is not None:
-            self.path = path
+        self.path = path
         if origin_id is not None:
             self.origin_id = origin_id
         if excludes is not None:
@@ -87,6 +86,8 @@ class LogFile(object):
         :param path: The path of this LogFile.  # noqa: E501
         :type: str
         """
+        if path is None:
+            raise ValueError("Invalid value for `path`, must not be `None`")  # noqa: E501
 
         self._path = path
 

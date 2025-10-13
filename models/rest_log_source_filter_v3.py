@@ -29,6 +29,7 @@ class RestLogSourceFilterV3(object):
     """
     swagger_types = {
         'include': 'str',
+        'index': 'str',
         'comment': 'str',
         'id': 'str',
         'attribute': 'str',
@@ -38,6 +39,7 @@ class RestLogSourceFilterV3(object):
 
     attribute_map = {
         'include': 'include',
+        'index': 'index',
         'comment': 'comment',
         'id': 'id',
         'attribute': 'attribute',
@@ -45,9 +47,10 @@ class RestLogSourceFilterV3(object):
         'operator': 'operator'
     }
 
-    def __init__(self, include=None, comment=None, id=None, attribute=None, value=None, operator=None):  # noqa: E501
+    def __init__(self, include=None, index=None, comment=None, id=None, attribute=None, value=None, operator=None):  # noqa: E501
         """RestLogSourceFilterV3 - a model defined in Swagger"""  # noqa: E501
         self._include = None
+        self._index = None
         self._comment = None
         self._id = None
         self._attribute = None
@@ -56,6 +59,8 @@ class RestLogSourceFilterV3(object):
         self.discriminator = None
         if include is not None:
             self.include = include
+        if index is not None:
+            self.index = index
         if comment is not None:
             self.comment = comment
         if id is not None:
@@ -87,6 +92,27 @@ class RestLogSourceFilterV3(object):
         """
 
         self._include = include
+
+    @property
+    def index(self):
+        """Gets the index of this RestLogSourceFilterV3.  # noqa: E501
+
+
+        :return: The index of this RestLogSourceFilterV3.  # noqa: E501
+        :rtype: str
+        """
+        return self._index
+
+    @index.setter
+    def index(self, index):
+        """Sets the index of this RestLogSourceFilterV3.
+
+
+        :param index: The index of this RestLogSourceFilterV3.  # noqa: E501
+        :type: str
+        """
+
+        self._index = index
 
     @property
     def comment(self):

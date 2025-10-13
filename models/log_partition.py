@@ -39,6 +39,7 @@ class LogPartition(object):
         'name': 'str',
         'id': 'str',
         'fullname': 'str',
+        'sku': 'str',
         'tenant': 'str',
         'retention': 'int'
     }
@@ -55,11 +56,12 @@ class LogPartition(object):
         'name': 'name',
         'id': 'id',
         'fullname': 'fullname',
+        'sku': 'sku',
         'tenant': 'tenant',
         'retention': 'retention'
     }
 
-    def __init__(self, parent=None, user_permission=None, criteria=None, changelogs=None, description=None, active=None, paused_at=None, priority=None, name=None, id=None, fullname=None, tenant=None, retention=None):  # noqa: E501
+    def __init__(self, parent=None, user_permission=None, criteria=None, changelogs=None, description=None, active=None, paused_at=None, priority=None, name=None, id=None, fullname=None, sku=None, tenant=None, retention=None):  # noqa: E501
         """LogPartition - a model defined in Swagger"""  # noqa: E501
         self._parent = None
         self._user_permission = None
@@ -72,6 +74,7 @@ class LogPartition(object):
         self._name = None
         self._id = None
         self._fullname = None
+        self._sku = None
         self._tenant = None
         self._retention = None
         self.discriminator = None
@@ -95,6 +98,8 @@ class LogPartition(object):
             self.id = id
         if fullname is not None:
             self.fullname = fullname
+        if sku is not None:
+            self.sku = sku
         if tenant is not None:
             self.tenant = tenant
         self.retention = retention
@@ -353,6 +358,27 @@ class LogPartition(object):
         """
 
         self._fullname = fullname
+
+    @property
+    def sku(self):
+        """Gets the sku of this LogPartition.  # noqa: E501
+
+
+        :return: The sku of this LogPartition.  # noqa: E501
+        :rtype: str
+        """
+        return self._sku
+
+    @sku.setter
+    def sku(self, sku):
+        """Sets the sku of this LogPartition.
+
+
+        :param sku: The sku of this LogPartition.  # noqa: E501
+        :type: str
+        """
+
+        self._sku = sku
 
     @property
     def tenant(self):

@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import logicmonitor_sdk
-from logicmonitor_sdk.models.lmql_graph_info import LmqlGraphInfo  # noqa: E501
+from logicmonitor_sdk.models.logic_module_association_counts import LogicModuleAssociationCounts  # noqa: E501
 from logicmonitor_sdk.rest import ApiException
 
 
-class TestLmqlGraphInfo(unittest.TestCase):
-    """LmqlGraphInfo unit test stubs"""
+class TestLogicModuleAssociationCounts(unittest.TestCase):
+    """LogicModuleAssociationCounts unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestLmqlGraphInfo(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testLmqlGraphInfo(self):
-        """Test LmqlGraphInfo"""
+    def testLogicModuleAssociationCounts(self):
+        """Test LogicModuleAssociationCounts"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = logicmonitor_sdk.models.lmql_graph_info.LmqlGraphInfo()  # noqa: E501
+        # model = logicmonitor_sdk.models.logic_module_association_counts.LogicModuleAssociationCounts()  # noqa: E501
         pass
 
 

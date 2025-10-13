@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **sharable** | **bool** | Whether or not the dashboard is sharable. This value will always be true unless the dashboard is a private dashboard | [optional] 
 **widgets_config** | **object** | Information about widget configuration used by the UI | [optional] 
 **group_name** | **str** | The name of group where created dashboard will reside | [optional] 
+**default_dashboard_filters** | [**RestDefaultDashboardFilters**](RestDefaultDashboardFilters.md) |  | [optional] 
 **widget_tokens** | [**list[WidgetToken]**](WidgetToken.md) | If useDynamicWidget&#x3D;true, this field must at least contain tokens defaultDeviceGroup and defaultServiceGroup | [optional] 
 **name** | **str** | The name of the dashboard | 
 **overwrite_group_fields** | **bool** | Overwrite existing Resource/Website Group fields with ##defaultResourceGroup## and/or ##defaultWebsiteGroup## tokens. This value of this attribute is only considered while updating the Dashboard configuration. While creating the new Dashboard, this value will always be considered as false irrespective of the passed value. | [optional] 

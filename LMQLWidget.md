@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**lmql_graph_info** | [**LmqlGraphInfo**](LmqlGraphInfo.md) |  | [optional] 
+**advanced_metrics_graph_info** | [**AdvancedMetricsGraphInfo**](AdvancedMetricsGraphInfo.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

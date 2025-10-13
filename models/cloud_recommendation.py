@@ -29,19 +29,45 @@ class CloudRecommendation(Widget):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'widget_config': 'str'
     }
     if hasattr(Widget, "swagger_types"):
         swagger_types.update(Widget.swagger_types)
 
     attribute_map = {
+        'widget_config': 'widgetConfig'
     }
     if hasattr(Widget, "attribute_map"):
         attribute_map.update(Widget.attribute_map)
 
-    def __init__(self, *args, **kwargs):  # noqa: E501
+    def __init__(self, widget_config=None, *args, **kwargs):  # noqa: E501
         """CloudRecommendation - a model defined in Swagger"""  # noqa: E501
+        self._widget_config = None
         self.discriminator = None
+        if widget_config is not None:
+            self.widget_config = widget_config
         Widget.__init__(self, *args, **kwargs)
+
+    @property
+    def widget_config(self):
+        """Gets the widget_config of this CloudRecommendation.  # noqa: E501
+
+
+        :return: The widget_config of this CloudRecommendation.  # noqa: E501
+        :rtype: str
+        """
+        return self._widget_config
+
+    @widget_config.setter
+    def widget_config(self, widget_config):
+        """Sets the widget_config of this CloudRecommendation.
+
+
+        :param widget_config: The widget_config of this CloudRecommendation.  # noqa: E501
+        :type: str
+        """
+
+        self._widget_config = widget_config
 
     def to_dict(self):
         """Returns the model properties as a dict"""

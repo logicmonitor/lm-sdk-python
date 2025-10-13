@@ -30,25 +30,30 @@ class Response(object):
     swagger_types = {
         'data': 'object',
         'errmsg': 'str',
+        'ok': 'Response',
         'status': 'int'
     }
 
     attribute_map = {
         'data': 'data',
         'errmsg': 'errmsg',
+        'ok': 'ok',
         'status': 'status'
     }
 
-    def __init__(self, data=None, errmsg=None, status=None):  # noqa: E501
+    def __init__(self, data=None, errmsg=None, ok=None, status=None):  # noqa: E501
         """Response - a model defined in Swagger"""  # noqa: E501
         self._data = None
         self._errmsg = None
+        self._ok = None
         self._status = None
         self.discriminator = None
         if data is not None:
             self.data = data
         if errmsg is not None:
             self.errmsg = errmsg
+        if ok is not None:
+            self.ok = ok
         if status is not None:
             self.status = status
 
@@ -93,6 +98,27 @@ class Response(object):
         """
 
         self._errmsg = errmsg
+
+    @property
+    def ok(self):
+        """Gets the ok of this Response.  # noqa: E501
+
+
+        :return: The ok of this Response.  # noqa: E501
+        :rtype: Response
+        """
+        return self._ok
+
+    @ok.setter
+    def ok(self, ok):
+        """Sets the ok of this Response.
+
+
+        :param ok: The ok of this Response.  # noqa: E501
+        :type: Response
+        """
+
+        self._ok = ok
 
     @property
     def status(self):

@@ -37,6 +37,7 @@ class Dashboard(object):
         'sharable': 'bool',
         'widgets_config': 'object',
         'group_name': 'str',
+        'default_dashboard_filters': 'RestDefaultDashboardFilters',
         'widget_tokens': 'list[WidgetToken]',
         'name': 'str',
         'overwrite_group_fields': 'bool',
@@ -54,6 +55,7 @@ class Dashboard(object):
         'sharable': 'sharable',
         'widgets_config': 'widgetsConfig',
         'group_name': 'groupName',
+        'default_dashboard_filters': 'defaultDashboardFilters',
         'widget_tokens': 'widgetTokens',
         'name': 'name',
         'overwrite_group_fields': 'overwriteGroupFields',
@@ -61,7 +63,7 @@ class Dashboard(object):
         'group_full_path': 'groupFullPath'
     }
 
-    def __init__(self, owner=None, template=None, user_permission=None, group_id=None, full_name=None, description=None, sharable=None, widgets_config=None, group_name=None, widget_tokens=None, name=None, overwrite_group_fields=None, id=None, group_full_path=None):  # noqa: E501
+    def __init__(self, owner=None, template=None, user_permission=None, group_id=None, full_name=None, description=None, sharable=None, widgets_config=None, group_name=None, default_dashboard_filters=None, widget_tokens=None, name=None, overwrite_group_fields=None, id=None, group_full_path=None):  # noqa: E501
         """Dashboard - a model defined in Swagger"""  # noqa: E501
         self._owner = None
         self._template = None
@@ -72,6 +74,7 @@ class Dashboard(object):
         self._sharable = None
         self._widgets_config = None
         self._group_name = None
+        self._default_dashboard_filters = None
         self._widget_tokens = None
         self._name = None
         self._overwrite_group_fields = None
@@ -96,6 +99,8 @@ class Dashboard(object):
             self.widgets_config = widgets_config
         if group_name is not None:
             self.group_name = group_name
+        if default_dashboard_filters is not None:
+            self.default_dashboard_filters = default_dashboard_filters
         if widget_tokens is not None:
             self.widget_tokens = widget_tokens
         self.name = name
@@ -312,6 +317,27 @@ class Dashboard(object):
         """
 
         self._group_name = group_name
+
+    @property
+    def default_dashboard_filters(self):
+        """Gets the default_dashboard_filters of this Dashboard.  # noqa: E501
+
+
+        :return: The default_dashboard_filters of this Dashboard.  # noqa: E501
+        :rtype: RestDefaultDashboardFilters
+        """
+        return self._default_dashboard_filters
+
+    @default_dashboard_filters.setter
+    def default_dashboard_filters(self, default_dashboard_filters):
+        """Sets the default_dashboard_filters of this Dashboard.
+
+
+        :param default_dashboard_filters: The default_dashboard_filters of this Dashboard.  # noqa: E501
+        :type: RestDefaultDashboardFilters
+        """
+
+        self._default_dashboard_filters = default_dashboard_filters
 
     @property
     def widget_tokens(self):

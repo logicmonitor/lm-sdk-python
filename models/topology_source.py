@@ -40,6 +40,7 @@ class TopologySource(object):
         'audit_version': 'int',
         'installation_metadata': 'IntegrationMetadata',
         'collect_interval': 'int',
+        'origin_registry_id': 'str',
         'checksum': 'str',
         'name': 'str',
         'id': 'int',
@@ -60,6 +61,7 @@ class TopologySource(object):
         'audit_version': 'auditVersion',
         'installation_metadata': 'installationMetadata',
         'collect_interval': 'collectInterval',
+        'origin_registry_id': 'originRegistryId',
         'checksum': 'checksum',
         'name': 'name',
         'id': 'id',
@@ -67,7 +69,7 @@ class TopologySource(object):
         'group': 'group'
     }
 
-    def __init__(self, collector_attribute=None, collection_method=None, access_groups=None, description=None, applies_to=None, technology=None, version=None, lineage_id=None, tags=None, audit_version=None, installation_metadata=None, collect_interval=None, checksum=None, name=None, id=None, access_group_ids=None, group=None):  # noqa: E501
+    def __init__(self, collector_attribute=None, collection_method=None, access_groups=None, description=None, applies_to=None, technology=None, version=None, lineage_id=None, tags=None, audit_version=None, installation_metadata=None, collect_interval=None, origin_registry_id=None, checksum=None, name=None, id=None, access_group_ids=None, group=None):  # noqa: E501
         """TopologySource - a model defined in Swagger"""  # noqa: E501
         self._collector_attribute = None
         self._collection_method = None
@@ -81,6 +83,7 @@ class TopologySource(object):
         self._audit_version = None
         self._installation_metadata = None
         self._collect_interval = None
+        self._origin_registry_id = None
         self._checksum = None
         self._name = None
         self._id = None
@@ -109,6 +112,8 @@ class TopologySource(object):
             self.installation_metadata = installation_metadata
         if collect_interval is not None:
             self.collect_interval = collect_interval
+        if origin_registry_id is not None:
+            self.origin_registry_id = origin_registry_id
         if checksum is not None:
             self.checksum = checksum
         self.name = name
@@ -400,6 +405,29 @@ class TopologySource(object):
             )
 
         self._collect_interval = collect_interval
+
+    @property
+    def origin_registry_id(self):
+        """Gets the origin_registry_id of this TopologySource.  # noqa: E501
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :return: The origin_registry_id of this TopologySource.  # noqa: E501
+        :rtype: str
+        """
+        return self._origin_registry_id
+
+    @origin_registry_id.setter
+    def origin_registry_id(self, origin_registry_id):
+        """Sets the origin_registry_id of this TopologySource.
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :param origin_registry_id: The origin_registry_id of this TopologySource.  # noqa: E501
+        :type: str
+        """
+
+        self._origin_registry_id = origin_registry_id
 
     @property
     def checksum(self):

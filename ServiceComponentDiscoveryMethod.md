@@ -1,0 +1,10 @@
+# ServiceComponentDiscoveryMethod
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**service_component_identifier_key** | **str** |  | [optional] 
+**service_component_identifier_value** | **list[str]** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

@@ -30,34 +30,44 @@ class LogsInfo(object):
     swagger_types = {
         'logs_data_type': 'str',
         'partitions': 'list[str]',
+        'aggregation_column': 'str',
         'query': 'str',
         'widget_view': 'str',
+        'aggregation_function': 'str',
         'aggregate_type': 'str'
     }
 
     attribute_map = {
         'logs_data_type': 'logsDataType',
         'partitions': 'partitions',
+        'aggregation_column': 'aggregationColumn',
         'query': 'query',
         'widget_view': 'widgetView',
+        'aggregation_function': 'aggregationFunction',
         'aggregate_type': 'aggregateType'
     }
 
-    def __init__(self, logs_data_type=None, partitions=None, query=None, widget_view=None, aggregate_type=None):  # noqa: E501
+    def __init__(self, logs_data_type=None, partitions=None, aggregation_column=None, query=None, widget_view=None, aggregation_function=None, aggregate_type=None):  # noqa: E501
         """LogsInfo - a model defined in Swagger"""  # noqa: E501
         self._logs_data_type = None
         self._partitions = None
+        self._aggregation_column = None
         self._query = None
         self._widget_view = None
+        self._aggregation_function = None
         self._aggregate_type = None
         self.discriminator = None
         self.logs_data_type = logs_data_type
         if partitions is not None:
             self.partitions = partitions
+        if aggregation_column is not None:
+            self.aggregation_column = aggregation_column
         if query is not None:
             self.query = query
         if widget_view is not None:
             self.widget_view = widget_view
+        if aggregation_function is not None:
+            self.aggregation_function = aggregation_function
         self.aggregate_type = aggregate_type
 
     @property
@@ -107,6 +117,27 @@ class LogsInfo(object):
         self._partitions = partitions
 
     @property
+    def aggregation_column(self):
+        """Gets the aggregation_column of this LogsInfo.  # noqa: E501
+
+
+        :return: The aggregation_column of this LogsInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._aggregation_column
+
+    @aggregation_column.setter
+    def aggregation_column(self, aggregation_column):
+        """Sets the aggregation_column of this LogsInfo.
+
+
+        :param aggregation_column: The aggregation_column of this LogsInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._aggregation_column = aggregation_column
+
+    @property
     def query(self):
         """Gets the query of this LogsInfo.  # noqa: E501
 
@@ -151,6 +182,27 @@ class LogsInfo(object):
         """
 
         self._widget_view = widget_view
+
+    @property
+    def aggregation_function(self):
+        """Gets the aggregation_function of this LogsInfo.  # noqa: E501
+
+
+        :return: The aggregation_function of this LogsInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._aggregation_function
+
+    @aggregation_function.setter
+    def aggregation_function(self, aggregation_function):
+        """Sets the aggregation_function of this LogsInfo.
+
+
+        :param aggregation_function: The aggregation_function of this LogsInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._aggregation_function = aggregation_function
 
     @property
     def aggregate_type(self):

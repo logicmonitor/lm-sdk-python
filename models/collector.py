@@ -56,6 +56,7 @@ class Collector(object):
         'last_sent_notification_on_local': 'str',
         'custom_properties': 'list[NameAndValue]',
         'predefined_config': 'object',
+        'calculated_threshold': 'int',
         'onetime_upgrade_info': 'OnetimeUpgradeInfo',
         'wrapper_conf': 'str',
         'clear_sent': 'bool',
@@ -91,12 +92,13 @@ class Collector(object):
         'last_sent_notification_on': 'int',
         'synthetics_enabled': 'bool',
         'acked': 'bool',
-        'onetime_downgrade_info': 'OnetimeUpgradeInfo',
+        'onetime_downgrade_info': 'RestDowngradeInfoOnetime',
         'website_conf': 'str',
         'copy_url': 'str',
         'error_msg': 'str',
         'up_time': 'int',
         'otel_version': 'str',
+        'number_of_sdts': 'int',
         'bearer_token': 'str',
         'build': 'str',
         'previous_version': 'str',
@@ -139,6 +141,7 @@ class Collector(object):
         'last_sent_notification_on_local': 'lastSentNotificationOnLocal',
         'custom_properties': 'customProperties',
         'predefined_config': 'predefinedConfig',
+        'calculated_threshold': 'calculatedThreshold',
         'onetime_upgrade_info': 'onetimeUpgradeInfo',
         'wrapper_conf': 'wrapperConf',
         'clear_sent': 'clearSent',
@@ -180,6 +183,7 @@ class Collector(object):
         'error_msg': 'errorMsg',
         'up_time': 'upTime',
         'otel_version': 'otelVersion',
+        'number_of_sdts': 'numberOfSDTs',
         'bearer_token': 'bearerToken',
         'build': 'build',
         'previous_version': 'previousVersion',
@@ -193,7 +197,7 @@ class Collector(object):
         'config': 'config'
     }
 
-    def __init__(self, user_change_on=None, conf_version=None, download_url=None, updated_on_local=None, collector_type=None, encoded_config_data=None, hostname=None, number_of_instances=None, id=None, ea=None, watchdog_updated_on_local=None, has_fail_over_device=None, collector_group_name=None, netscan_version=None, in_sdt=None, is_encoded=None, format=None, updated_on=None, automatic_upgrade_info=None, number_of_hosts=None, collector_list=None, collector_conf=None, sbproxy_conf=None, agent_conf_fields=None, user_visible_websites_num=None, last_sent_notification_on_local=None, custom_properties=None, predefined_config=None, onetime_upgrade_info=None, wrapper_conf=None, clear_sent=None, is_lmlogs_syslog_enabled=None, status=None, backup_agent_id=None, is_admin_account=None, specified_collector_device_group_id=None, escalating_chain_id=None, collector_size=None, acked_on_local=None, watchdog_conf=None, description=None, created_on=None, platform=None, is_down=None, user_visible_hosts_num=None, can_downgrade=None, ack_comment=None, next_upgrade_info=None, enable_lm_logs=None, suppress_alert_clear=None, next_recipient=None, acked_on=None, user_change_on_local=None, number_of_websites=None, collector_device_id=None, acked_by=None, user_permission=None, need_auto_create_collector_device=None, watchdog_updated_on=None, can_downgrade_reason=None, last_sent_notification_on=None, synthetics_enabled=None, acked=None, onetime_downgrade_info=None, website_conf=None, copy_url=None, error_msg=None, up_time=None, otel_version=None, bearer_token=None, build=None, previous_version=None, collector_group_id=None, created_on_local=None, enable_fail_back=None, resend_ival=None, arch=None, otel_id=None, enable_fail_over_on_collector_device=None, config=None):  # noqa: E501
+    def __init__(self, user_change_on=None, conf_version=None, download_url=None, updated_on_local=None, collector_type=None, encoded_config_data=None, hostname=None, number_of_instances=None, id=None, ea=None, watchdog_updated_on_local=None, has_fail_over_device=None, collector_group_name=None, netscan_version=None, in_sdt=None, is_encoded=None, format=None, updated_on=None, automatic_upgrade_info=None, number_of_hosts=None, collector_list=None, collector_conf=None, sbproxy_conf=None, agent_conf_fields=None, user_visible_websites_num=None, last_sent_notification_on_local=None, custom_properties=None, predefined_config=None, calculated_threshold=None, onetime_upgrade_info=None, wrapper_conf=None, clear_sent=None, is_lmlogs_syslog_enabled=None, status=None, backup_agent_id=None, is_admin_account=None, specified_collector_device_group_id=None, escalating_chain_id=None, collector_size=None, acked_on_local=None, watchdog_conf=None, description=None, created_on=None, platform=None, is_down=None, user_visible_hosts_num=None, can_downgrade=None, ack_comment=None, next_upgrade_info=None, enable_lm_logs=None, suppress_alert_clear=None, next_recipient=None, acked_on=None, user_change_on_local=None, number_of_websites=None, collector_device_id=None, acked_by=None, user_permission=None, need_auto_create_collector_device=None, watchdog_updated_on=None, can_downgrade_reason=None, last_sent_notification_on=None, synthetics_enabled=None, acked=None, onetime_downgrade_info=None, website_conf=None, copy_url=None, error_msg=None, up_time=None, otel_version=None, number_of_sdts=None, bearer_token=None, build=None, previous_version=None, collector_group_id=None, created_on_local=None, enable_fail_back=None, resend_ival=None, arch=None, otel_id=None, enable_fail_over_on_collector_device=None, config=None):  # noqa: E501
         """Collector - a model defined in Swagger"""  # noqa: E501
         self._user_change_on = None
         self._conf_version = None
@@ -223,6 +227,7 @@ class Collector(object):
         self._last_sent_notification_on_local = None
         self._custom_properties = None
         self._predefined_config = None
+        self._calculated_threshold = None
         self._onetime_upgrade_info = None
         self._wrapper_conf = None
         self._clear_sent = None
@@ -264,6 +269,7 @@ class Collector(object):
         self._error_msg = None
         self._up_time = None
         self._otel_version = None
+        self._number_of_sdts = None
         self._bearer_token = None
         self._build = None
         self._previous_version = None
@@ -332,6 +338,8 @@ class Collector(object):
             self.custom_properties = custom_properties
         if predefined_config is not None:
             self.predefined_config = predefined_config
+        if calculated_threshold is not None:
+            self.calculated_threshold = calculated_threshold
         if onetime_upgrade_info is not None:
             self.onetime_upgrade_info = onetime_upgrade_info
         if wrapper_conf is not None:
@@ -414,6 +422,8 @@ class Collector(object):
             self.up_time = up_time
         if otel_version is not None:
             self.otel_version = otel_version
+        if number_of_sdts is not None:
+            self.number_of_sdts = number_of_sdts
         if bearer_token is not None:
             self.bearer_token = bearer_token
         if build is not None:
@@ -1072,6 +1082,29 @@ class Collector(object):
         """
 
         self._predefined_config = predefined_config
+
+    @property
+    def calculated_threshold(self):
+        """Gets the calculated_threshold of this Collector.  # noqa: E501
+
+        calculated threshold value for ABCG collector to check if a collector has high load  # noqa: E501
+
+        :return: The calculated_threshold of this Collector.  # noqa: E501
+        :rtype: int
+        """
+        return self._calculated_threshold
+
+    @calculated_threshold.setter
+    def calculated_threshold(self, calculated_threshold):
+        """Sets the calculated_threshold of this Collector.
+
+        calculated threshold value for ABCG collector to check if a collector has high load  # noqa: E501
+
+        :param calculated_threshold: The calculated_threshold of this Collector.  # noqa: E501
+        :type: int
+        """
+
+        self._calculated_threshold = calculated_threshold
 
     @property
     def onetime_upgrade_info(self):
@@ -1880,7 +1913,7 @@ class Collector(object):
 
 
         :return: The onetime_downgrade_info of this Collector.  # noqa: E501
-        :rtype: OnetimeUpgradeInfo
+        :rtype: RestDowngradeInfoOnetime
         """
         return self._onetime_downgrade_info
 
@@ -1890,7 +1923,7 @@ class Collector(object):
 
 
         :param onetime_downgrade_info: The onetime_downgrade_info of this Collector.  # noqa: E501
-        :type: OnetimeUpgradeInfo
+        :type: RestDowngradeInfoOnetime
         """
 
         self._onetime_downgrade_info = onetime_downgrade_info
@@ -2007,6 +2040,29 @@ class Collector(object):
         """
 
         self._otel_version = otel_version
+
+    @property
+    def number_of_sdts(self):
+        """Gets the number_of_sdts of this Collector.  # noqa: E501
+
+        The number of Collectors Sdts   # noqa: E501
+
+        :return: The number_of_sdts of this Collector.  # noqa: E501
+        :rtype: int
+        """
+        return self._number_of_sdts
+
+    @number_of_sdts.setter
+    def number_of_sdts(self, number_of_sdts):
+        """Sets the number_of_sdts of this Collector.
+
+        The number of Collectors Sdts   # noqa: E501
+
+        :param number_of_sdts: The number_of_sdts of this Collector.  # noqa: E501
+        :type: int
+        """
+
+        self._number_of_sdts = number_of_sdts
 
     @property
     def bearer_token(self):

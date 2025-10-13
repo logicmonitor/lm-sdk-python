@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **name** | **str** | Partition Name | 
 **id** | **str** | Partition Id | [optional] 
 **fullname** | **str** | Partition Fullname | [optional] 
+**sku** | **str** |  | [optional] 
 **tenant** | **str** | Tenant Name | [optional] 
 **retention** | **int** | Partition Retention in days | 
 

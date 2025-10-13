@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **audit_version** | **int** | The TopologySource audit Version | [optional] 
 **installation_metadata** | [**IntegrationMetadata**](IntegrationMetadata.md) |  | [optional] 
 **collect_interval** | **int** | The TopologySource data collect interval in seconds, default 3600 | [optional] 
+**origin_registry_id** | **str** | The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module&#x27;s import base and mark the ID&#x27;s version as audited | [optional] 
 **checksum** | **str** | The metadata checksum for the LMModule content | [optional] 
 **name** | **str** | The TopologySource name | 
 **id** | **int** | The ID of the LMModule | [optional] 

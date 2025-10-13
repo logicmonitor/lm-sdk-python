@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **log_collector_group_id** | **int** | The id of the Collector Group associated with the device&#x27;s log collection | [optional] 
 **disable_alerting** | **bool** | Indicates whether alerting is disabled (true) or enabled (false) for this device | [optional] 
+**type** | **str** | Used to distinguish Uptime Device Request | [optional] 
 **netflow_collector_group_id** | **int** | The id of the Collector Group associated with the device&#x27;s netflow collector | [optional] 
 **role_privileges** | **list[str]** | The role privilege operation(s) for this device that are granted to the user who made the API request | [optional] 
 **system_properties** | [**list[NameAndValue]**](NameAndValue.md) | Any system properties (aside from system.categories) defined for this device | [optional] 

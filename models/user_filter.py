@@ -32,6 +32,7 @@ class UserFilter(object):
         'first_name': 'str',
         'last_name': 'str',
         'enable2fa': 'str',
+        '_2_fa_passkey': 'str',
         'email_verification': 'str',
         '_2_fa': 'str',
         'role_assignment': 'str',
@@ -45,6 +46,7 @@ class UserFilter(object):
         'first_name': 'firstName',
         'last_name': 'lastName',
         'enable2fa': 'enable2fa',
+        '_2_fa_passkey': '2FA Passkey',
         'email_verification': 'emailVerification',
         '_2_fa': '2FA',
         'role_assignment': 'roleAssignment',
@@ -53,12 +55,13 @@ class UserFilter(object):
         'username': 'username'
     }
 
-    def __init__(self, api_only_user=None, first_name=None, last_name=None, enable2fa=None, email_verification=None, _2_fa=None, role_assignment=None, email=None, status=None, username=None):  # noqa: E501
+    def __init__(self, api_only_user=None, first_name=None, last_name=None, enable2fa=None, _2_fa_passkey=None, email_verification=None, _2_fa=None, role_assignment=None, email=None, status=None, username=None):  # noqa: E501
         """UserFilter - a model defined in Swagger"""  # noqa: E501
         self._api_only_user = None
         self._first_name = None
         self._last_name = None
         self._enable2fa = None
+        self.__2_fa_passkey = None
         self._email_verification = None
         self.__2_fa = None
         self._role_assignment = None
@@ -74,6 +77,8 @@ class UserFilter(object):
             self.last_name = last_name
         if enable2fa is not None:
             self.enable2fa = enable2fa
+        if _2_fa_passkey is not None:
+            self._2_fa_passkey = _2_fa_passkey
         if email_verification is not None:
             self.email_verification = email_verification
         if _2_fa is not None:
@@ -178,6 +183,29 @@ class UserFilter(object):
         """
 
         self._enable2fa = enable2fa
+
+    @property
+    def _2_fa_passkey(self):
+        """Gets the _2_fa_passkey of this UserFilter.  # noqa: E501
+
+        Filter for 2FA Passkey enabled property  # noqa: E501
+
+        :return: The _2_fa_passkey of this UserFilter.  # noqa: E501
+        :rtype: str
+        """
+        return self.__2_fa_passkey
+
+    @_2_fa_passkey.setter
+    def _2_fa_passkey(self, _2_fa_passkey):
+        """Sets the _2_fa_passkey of this UserFilter.
+
+        Filter for 2FA Passkey enabled property  # noqa: E501
+
+        :param _2_fa_passkey: The _2_fa_passkey of this UserFilter.  # noqa: E501
+        :type: str
+        """
+
+        self.__2_fa_passkey = _2_fa_passkey
 
     @property
     def email_verification(self):

@@ -55,6 +55,7 @@ class DataPoint(object):
         'error_ad_adv_setting': 'str',
         'warn_ad_adv_setting': 'str',
         'name': 'str',
+        'status_display_names': 'list[StatusDisplayName]',
         'alert_expr': 'str'
     }
 
@@ -86,10 +87,11 @@ class DataPoint(object):
         'error_ad_adv_setting': 'errorAdAdvSetting',
         'warn_ad_adv_setting': 'warnAdAdvSetting',
         'name': 'name',
+        'status_display_names': 'statusDisplayNames',
         'alert_expr': 'alertExpr'
     }
 
-    def __init__(self, alert_for_no_data=None, post_processor_method=None, post_processor_param=None, max_digits=None, raw_data_field_name=None, description=None, alert_clear_transition_interval=None, user_param3=None, user_param2=None, type=None, data_source_id=None, min_value=None, alert_body=None, origin_id=None, user_param1=None, alert_subject=None, id=None, alert_transition_interval=None, enable_anomaly_alert_suppression=None, max_value=None, data_type=None, critical_ad_adv_setting=None, alert_expr_note=None, ad_adv_setting_enabled=None, error_ad_adv_setting=None, warn_ad_adv_setting=None, name=None, alert_expr=None):  # noqa: E501
+    def __init__(self, alert_for_no_data=None, post_processor_method=None, post_processor_param=None, max_digits=None, raw_data_field_name=None, description=None, alert_clear_transition_interval=None, user_param3=None, user_param2=None, type=None, data_source_id=None, min_value=None, alert_body=None, origin_id=None, user_param1=None, alert_subject=None, id=None, alert_transition_interval=None, enable_anomaly_alert_suppression=None, max_value=None, data_type=None, critical_ad_adv_setting=None, alert_expr_note=None, ad_adv_setting_enabled=None, error_ad_adv_setting=None, warn_ad_adv_setting=None, name=None, status_display_names=None, alert_expr=None):  # noqa: E501
         """DataPoint - a model defined in Swagger"""  # noqa: E501
         self._alert_for_no_data = None
         self._post_processor_method = None
@@ -118,6 +120,7 @@ class DataPoint(object):
         self._error_ad_adv_setting = None
         self._warn_ad_adv_setting = None
         self._name = None
+        self._status_display_names = None
         self._alert_expr = None
         self.discriminator = None
         if alert_for_no_data is not None:
@@ -173,6 +176,8 @@ class DataPoint(object):
         if warn_ad_adv_setting is not None:
             self.warn_ad_adv_setting = warn_ad_adv_setting
         self.name = name
+        if status_display_names is not None:
+            self.status_display_names = status_display_names
         if alert_expr is not None:
             self.alert_expr = alert_expr
 
@@ -798,6 +803,29 @@ class DataPoint(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def status_display_names(self):
+        """Gets the status_display_names of this DataPoint.  # noqa: E501
+
+        The status display name list  # noqa: E501
+
+        :return: The status_display_names of this DataPoint.  # noqa: E501
+        :rtype: list[StatusDisplayName]
+        """
+        return self._status_display_names
+
+    @status_display_names.setter
+    def status_display_names(self, status_display_names):
+        """Sets the status_display_names of this DataPoint.
+
+        The status display name list  # noqa: E501
+
+        :param status_display_names: The status_display_names of this DataPoint.  # noqa: E501
+        :type: list[StatusDisplayName]
+        """
+
+        self._status_display_names = status_display_names
 
     @property
     def alert_expr(self):

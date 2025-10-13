@@ -76,7 +76,9 @@ class ReportBase(object):
     }
 
     discriminator_value_class_map = {
-          'alert sla': 'AlertSlaReport',
+          'AlertsHealthCheckReport': 'AlertsHealthCheckReport',
+'alert sla': 'AlertSlaReport',
+'UptimeResourceOverviewReport': 'UptimeResourceOverviewReport',
 'audit log': 'AuditLogReport',
 'alert threshold': 'AlertThresholdReport',
 'website service overview': 'WebsiteOverviewReport',
@@ -89,11 +91,13 @@ class ReportBase(object):
 'word template': 'CustomReport',
 'host metric trends': 'HostMetricsReport',
 'netflow device metric': 'NetflowReport',
+'SDTinventoryReport': 'SDTinventoryReport',
 'host inventory': 'HostInventoryReport',
 'host group inventory': 'HostGroupInventoryReport',
 'dashboard': 'DashboardReport',
 'website sla': 'WebsiteSLAReport',
 'user': 'UserReport',
+'LogsReport': 'LogsReport',
 'interfaces bandwidth': 'InterfBandwidthReport'    }
 
     def __init__(self, lastmodify_user_id=None, delivery=None, user_permission=None, last_generate_on=None, report_link_num=None, group_id=None, format=None, description=None, last_generate_size=None, custom_report_type_id=None, type=None, last_generate_pages=None, report_link_expire=None, schedule=None, recipients=None, custom_report_type_name=None, name=None, enable_view_as_other_user=None, lastmodify_user_name=None, id=None, schedule_timezone=None):  # noqa: E501

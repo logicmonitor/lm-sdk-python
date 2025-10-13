@@ -28,7 +28,7 @@ class WebsiteCheckpointRawData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'values': 'list[list[object]]',
+        'values': 'list[list[float]]',
         'time': 'list[int]',
         'next_page_params': 'str'
     }
@@ -59,7 +59,7 @@ class WebsiteCheckpointRawData(object):
         Datapoint values 2-D list  # noqa: E501
 
         :return: The values of this WebsiteCheckpointRawData.  # noqa: E501
-        :rtype: list[list[object]]
+        :rtype: list[list[float]]
         """
         return self._values
 
@@ -70,7 +70,7 @@ class WebsiteCheckpointRawData(object):
         Datapoint values 2-D list  # noqa: E501
 
         :param values: The values of this WebsiteCheckpointRawData.  # noqa: E501
-        :type: list[list[object]]
+        :type: list[list[float]]
         """
 
         self._values = values

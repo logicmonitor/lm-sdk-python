@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **user_permission** | **str** | The permissions for the device group that are granted to the user that made this API request | [optional] 
 **gcp_regions_info** | **str** |  | [optional] 
 **description** | **str** | The description of the device group | [optional] 
+**oci_regions_info** | **str** |  | [optional] 
 **applies_to** | **str** | The Applies to custom query for this group (only for dynamic groups) | [optional] 
 **role_privileges** | **list[str]** | The role privilege operations for the device group that are granted to the user that made this API request | [optional] 
 **aws_regions_info** | **str** | The number of instances in each AWS region (only applies to AWS groups) | [optional] 

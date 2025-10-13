@@ -31,6 +31,7 @@ class AppliesToFunction(object):
         'installation_metadata': 'IntegrationMetadata',
         'code': 'str',
         'access_groups': 'list[AccessGroup]',
+        'origin_registry_id': 'str',
         'name': 'str',
         'checksum': 'str',
         'description': 'str',
@@ -43,6 +44,7 @@ class AppliesToFunction(object):
         'installation_metadata': 'installationMetadata',
         'code': 'code',
         'access_groups': 'accessGroups',
+        'origin_registry_id': 'originRegistryId',
         'name': 'name',
         'checksum': 'checksum',
         'description': 'description',
@@ -51,11 +53,12 @@ class AppliesToFunction(object):
         'lineage_id': 'lineageId'
     }
 
-    def __init__(self, installation_metadata=None, code=None, access_groups=None, name=None, checksum=None, description=None, id=None, access_group_ids=None, lineage_id=None):  # noqa: E501
+    def __init__(self, installation_metadata=None, code=None, access_groups=None, origin_registry_id=None, name=None, checksum=None, description=None, id=None, access_group_ids=None, lineage_id=None):  # noqa: E501
         """AppliesToFunction - a model defined in Swagger"""  # noqa: E501
         self._installation_metadata = None
         self._code = None
         self._access_groups = None
+        self._origin_registry_id = None
         self._name = None
         self._checksum = None
         self._description = None
@@ -68,6 +71,8 @@ class AppliesToFunction(object):
         self.code = code
         if access_groups is not None:
             self.access_groups = access_groups
+        if origin_registry_id is not None:
+            self.origin_registry_id = origin_registry_id
         self.name = name
         if checksum is not None:
             self.checksum = checksum
@@ -148,6 +153,29 @@ class AppliesToFunction(object):
         """
 
         self._access_groups = access_groups
+
+    @property
+    def origin_registry_id(self):
+        """Gets the origin_registry_id of this AppliesToFunction.  # noqa: E501
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :return: The origin_registry_id of this AppliesToFunction.  # noqa: E501
+        :rtype: str
+        """
+        return self._origin_registry_id
+
+    @origin_registry_id.setter
+    def origin_registry_id(self, origin_registry_id):
+        """Sets the origin_registry_id of this AppliesToFunction.
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :param origin_registry_id: The origin_registry_id of this AppliesToFunction.  # noqa: E501
+        :type: str
+        """
+
+        self._origin_registry_id = origin_registry_id
 
     @property
     def name(self):

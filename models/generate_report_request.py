@@ -102,7 +102,7 @@ class GenerateReportRequest(object):
     def receive_emails(self):
         """Gets the receive_emails of this GenerateReportRequest.  # noqa: E501
 
-        The email addresses that LogicMonitor should send the report to, separated by commas  # noqa: E501
+        The email addresses that LogicMonitor should send the report to, separated by commas. If set to null, the report will be generated immediately and the response will contain the report file URLOtherwise, the report will be generated in the background and delivered to the specified email addresses  # noqa: E501
 
         :return: The receive_emails of this GenerateReportRequest.  # noqa: E501
         :rtype: str
@@ -113,7 +113,7 @@ class GenerateReportRequest(object):
     def receive_emails(self, receive_emails):
         """Sets the receive_emails of this GenerateReportRequest.
 
-        The email addresses that LogicMonitor should send the report to, separated by commas  # noqa: E501
+        The email addresses that LogicMonitor should send the report to, separated by commas. If set to null, the report will be generated immediately and the response will contain the report file URLOtherwise, the report will be generated in the background and delivered to the specified email addresses  # noqa: E501
 
         :param receive_emails: The receive_emails of this GenerateReportRequest.  # noqa: E501
         :type: str

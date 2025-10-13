@@ -51,6 +51,7 @@ class DeviceGroupDataSourceDataPointConfig(object):
         'ad_adv_setting_enabled': 'bool',
         'error_ad_adv_setting': 'str',
         'warn_ad_adv_setting': 'str',
+        'parent_device_group_alert_expr_list': 'DeviceGroupAlertThresholdInfo',
         'global_ad_adv_setting_enabled': 'bool',
         'collection_interval': 'int',
         'alert_expr': 'str'
@@ -80,12 +81,13 @@ class DeviceGroupDataSourceDataPointConfig(object):
         'ad_adv_setting_enabled': 'adAdvSettingEnabled',
         'error_ad_adv_setting': 'errorAdAdvSetting',
         'warn_ad_adv_setting': 'warnAdAdvSetting',
+        'parent_device_group_alert_expr_list': 'parentDeviceGroupAlertExprList',
         'global_ad_adv_setting_enabled': 'globalAdAdvSettingEnabled',
         'collection_interval': 'collectionInterval',
         'alert_expr': 'alertExpr'
     }
 
-    def __init__(self, global_alert_expr=None, alert_for_no_data=None, disable_alerting=None, alert_clear_transition_interval=None, global_critical_ad_adv_setting=None, global_alert_transition_interval=None, data_point_description=None, global_enable_anomaly_alert_generation=None, global_error_ad_adv_setting=None, enable_anomaly_alert_generation=None, data_point_name=None, data_point_id=None, global_enable_anomaly_alert_suppression=None, global_alert_clear_transition_interval=None, alert_transition_interval=None, enable_anomaly_alert_suppression=None, global_alert_for_no_data=None, critical_ad_adv_setting=None, alert_expr_note=None, global_warn_ad_adv_setting=None, ad_adv_setting_enabled=None, error_ad_adv_setting=None, warn_ad_adv_setting=None, global_ad_adv_setting_enabled=None, collection_interval=None, alert_expr=None):  # noqa: E501
+    def __init__(self, global_alert_expr=None, alert_for_no_data=None, disable_alerting=None, alert_clear_transition_interval=None, global_critical_ad_adv_setting=None, global_alert_transition_interval=None, data_point_description=None, global_enable_anomaly_alert_generation=None, global_error_ad_adv_setting=None, enable_anomaly_alert_generation=None, data_point_name=None, data_point_id=None, global_enable_anomaly_alert_suppression=None, global_alert_clear_transition_interval=None, alert_transition_interval=None, enable_anomaly_alert_suppression=None, global_alert_for_no_data=None, critical_ad_adv_setting=None, alert_expr_note=None, global_warn_ad_adv_setting=None, ad_adv_setting_enabled=None, error_ad_adv_setting=None, warn_ad_adv_setting=None, parent_device_group_alert_expr_list=None, global_ad_adv_setting_enabled=None, collection_interval=None, alert_expr=None):  # noqa: E501
         """DeviceGroupDataSourceDataPointConfig - a model defined in Swagger"""  # noqa: E501
         self._global_alert_expr = None
         self._alert_for_no_data = None
@@ -110,6 +112,7 @@ class DeviceGroupDataSourceDataPointConfig(object):
         self._ad_adv_setting_enabled = None
         self._error_ad_adv_setting = None
         self._warn_ad_adv_setting = None
+        self._parent_device_group_alert_expr_list = None
         self._global_ad_adv_setting_enabled = None
         self._collection_interval = None
         self._alert_expr = None
@@ -158,6 +161,8 @@ class DeviceGroupDataSourceDataPointConfig(object):
             self.error_ad_adv_setting = error_ad_adv_setting
         if warn_ad_adv_setting is not None:
             self.warn_ad_adv_setting = warn_ad_adv_setting
+        if parent_device_group_alert_expr_list is not None:
+            self.parent_device_group_alert_expr_list = parent_device_group_alert_expr_list
         if global_ad_adv_setting_enabled is not None:
             self.global_ad_adv_setting_enabled = global_ad_adv_setting_enabled
         if collection_interval is not None:
@@ -662,6 +667,27 @@ class DeviceGroupDataSourceDataPointConfig(object):
         """
 
         self._warn_ad_adv_setting = warn_ad_adv_setting
+
+    @property
+    def parent_device_group_alert_expr_list(self):
+        """Gets the parent_device_group_alert_expr_list of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+
+
+        :return: The parent_device_group_alert_expr_list of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :rtype: DeviceGroupAlertThresholdInfo
+        """
+        return self._parent_device_group_alert_expr_list
+
+    @parent_device_group_alert_expr_list.setter
+    def parent_device_group_alert_expr_list(self, parent_device_group_alert_expr_list):
+        """Sets the parent_device_group_alert_expr_list of this DeviceGroupDataSourceDataPointConfig.
+
+
+        :param parent_device_group_alert_expr_list: The parent_device_group_alert_expr_list of this DeviceGroupDataSourceDataPointConfig.  # noqa: E501
+        :type: DeviceGroupAlertThresholdInfo
+        """
+
+        self._parent_device_group_alert_expr_list = parent_device_group_alert_expr_list
 
     @property
     def global_ad_adv_setting_enabled(self):

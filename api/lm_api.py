@@ -33,8 +33,9 @@ class LMApi(object):
         self.api_client = api_client
 
     def ack_alert_by_id(self, body, id, **kwargs):  # noqa: E501
-        """ack alert by id  # noqa: E501
+        """Acknowledge alert by ID  # noqa: E501
 
+        Acknowledge the alert with the given ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.ack_alert_by_id(body, id, async_req=True)
@@ -55,8 +56,9 @@ class LMApi(object):
             return data
 
     def ack_alert_by_id_with_http_info(self, body, id, **kwargs):  # noqa: E501
-        """ack alert by id  # noqa: E501
+        """Acknowledge alert by ID  # noqa: E501
 
+        Acknowledge the alert with the given ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.ack_alert_by_id_with_http_info(body, id, async_req=True)
@@ -148,6 +150,7 @@ class LMApi(object):
     def ack_collector_down_alert_by_id(self, id, body, **kwargs):  # noqa: E501
         """ack collector down alert  # noqa: E501
 
+        ack collector down alert  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.ack_collector_down_alert_by_id(id, body, async_req=True)
@@ -170,6 +173,7 @@ class LMApi(object):
     def ack_collector_down_alert_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """ack collector down alert  # noqa: E501
 
+        ack collector down alert  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.ack_collector_down_alert_by_id_with_http_info(id, body, async_req=True)
@@ -261,6 +265,7 @@ class LMApi(object):
     def add_access_group(self, **kwargs):  # noqa: E501
         """Create a access group  # noqa: E501
 
+        Create a access group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_access_group(async_req=True)
@@ -282,6 +287,7 @@ class LMApi(object):
     def add_access_group_with_http_info(self, **kwargs):  # noqa: E501
         """Create a access group  # noqa: E501
 
+        Create a access group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_access_group_with_http_info(async_req=True)
@@ -362,6 +368,7 @@ class LMApi(object):
     def add_admin(self, body, **kwargs):  # noqa: E501
         """add user  # noqa: E501
 
+        add user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_admin(body, async_req=True)
@@ -383,6 +390,7 @@ class LMApi(object):
     def add_admin_with_http_info(self, body, **kwargs):  # noqa: E501
         """add user  # noqa: E501
 
+        add user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_admin_with_http_info(body, async_req=True)
@@ -465,8 +473,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_alert_note_by_id(self, body, id, **kwargs):  # noqa: E501
-        """add alert note  # noqa: E501
+        """Add alert note  # noqa: E501
 
+        Add a note to the alert with the given ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_alert_note_by_id(body, id, async_req=True)
@@ -487,8 +496,9 @@ class LMApi(object):
             return data
 
     def add_alert_note_by_id_with_http_info(self, body, id, **kwargs):  # noqa: E501
-        """add alert note  # noqa: E501
+        """Add alert note  # noqa: E501
 
+        Add a note to the alert with the given ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_alert_note_by_id_with_http_info(body, id, async_req=True)
@@ -580,6 +590,7 @@ class LMApi(object):
     def add_alert_rule(self, body, **kwargs):  # noqa: E501
         """add alert rule  # noqa: E501
 
+        add alert rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_alert_rule(body, async_req=True)
@@ -601,6 +612,7 @@ class LMApi(object):
     def add_alert_rule_with_http_info(self, body, **kwargs):  # noqa: E501
         """add alert rule  # noqa: E501
 
+        add alert rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_alert_rule_with_http_info(body, async_req=True)
@@ -683,8 +695,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_api_token_by_admin_id(self, admin_id, body, **kwargs):  # noqa: E501
-        """add api tokens for a user  # noqa: E501
+        """Add API tokens for a user  # noqa: E501
 
+        Add new API tokens for a specific user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_api_token_by_admin_id(admin_id, body, async_req=True)
@@ -706,8 +719,9 @@ class LMApi(object):
             return data
 
     def add_api_token_by_admin_id_with_http_info(self, admin_id, body, **kwargs):  # noqa: E501
-        """add api tokens for a user  # noqa: E501
+        """Add API tokens for a user  # noqa: E501
 
+        Add new API tokens for a specific user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_api_token_by_admin_id_with_http_info(admin_id, body, async_req=True)
@@ -800,8 +814,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_applies_to_function(self, **kwargs):  # noqa: E501
-        """add applies to function  # noqa: E501
+        """Add applies to function  # noqa: E501
 
+        Create a new applies to function  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_applies_to_function(async_req=True)
@@ -821,8 +836,9 @@ class LMApi(object):
             return data
 
     def add_applies_to_function_with_http_info(self, **kwargs):  # noqa: E501
-        """add applies to function  # noqa: E501
+        """Add applies to function  # noqa: E501
 
+        Create a new applies to function  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_applies_to_function_with_http_info(async_req=True)
@@ -903,6 +919,7 @@ class LMApi(object):
     def add_collector(self, body, **kwargs):  # noqa: E501
         """add collector  # noqa: E501
 
+        add collector  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_collector(body, async_req=True)
@@ -924,6 +941,7 @@ class LMApi(object):
     def add_collector_with_http_info(self, body, **kwargs):  # noqa: E501
         """add collector  # noqa: E501
 
+        add collector  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_collector_with_http_info(body, async_req=True)
@@ -1006,8 +1024,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_collector_group(self, body, **kwargs):  # noqa: E501
-        """add collector group  # noqa: E501
+        """Add collector group  # noqa: E501
 
+        Create a new collector group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_collector_group(body, async_req=True)
@@ -1027,8 +1046,9 @@ class LMApi(object):
             return data
 
     def add_collector_group_with_http_info(self, body, **kwargs):  # noqa: E501
-        """add collector group  # noqa: E501
+        """Add collector group  # noqa: E501
 
+        Create a new collector group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_collector_group_with_http_info(body, async_req=True)
@@ -1111,8 +1131,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_config_source(self, **kwargs):  # noqa: E501
-        """add config source  # noqa: E501
+        """Add a new config source  # noqa: E501
 
+        Create a new config source  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_config_source(async_req=True)
@@ -1132,8 +1153,9 @@ class LMApi(object):
             return data
 
     def add_config_source_with_http_info(self, **kwargs):  # noqa: E501
-        """add config source  # noqa: E501
+        """Add a new config source  # noqa: E501
 
+        Create a new config source  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_config_source_with_http_info(async_req=True)
@@ -1214,6 +1236,7 @@ class LMApi(object):
     def add_dashboard(self, body, **kwargs):  # noqa: E501
         """add dashboard  # noqa: E501
 
+        add dashboard  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_dashboard(body, async_req=True)
@@ -1235,6 +1258,7 @@ class LMApi(object):
     def add_dashboard_with_http_info(self, body, **kwargs):  # noqa: E501
         """add dashboard  # noqa: E501
 
+        add dashboard  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_dashboard_with_http_info(body, async_req=True)
@@ -1319,6 +1343,7 @@ class LMApi(object):
     def add_dashboard_group(self, body, **kwargs):  # noqa: E501
         """add dashboard group  # noqa: E501
 
+        add dashboard group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_dashboard_group(body, async_req=True)
@@ -1340,6 +1365,7 @@ class LMApi(object):
     def add_dashboard_group_with_http_info(self, body, **kwargs):  # noqa: E501
         """add dashboard group  # noqa: E501
 
+        add dashboard group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_dashboard_group_with_http_info(body, async_req=True)
@@ -1424,6 +1450,7 @@ class LMApi(object):
     def add_dashboard_group_asynchronously(self, id, **kwargs):  # noqa: E501
         """add dashboard group asynchronously  # noqa: E501
 
+        add dashboard group asynchronously  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_dashboard_group_asynchronously(id, async_req=True)
@@ -1447,6 +1474,7 @@ class LMApi(object):
     def add_dashboard_group_asynchronously_with_http_info(self, id, **kwargs):  # noqa: E501
         """add dashboard group asynchronously  # noqa: E501
 
+        add dashboard group asynchronously  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_dashboard_group_asynchronously_with_http_info(id, async_req=True)
@@ -1535,8 +1563,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_datasource_by_id(self, **kwargs):  # noqa: E501
-        """add datasource  # noqa: E501
+        """Add datasource  # noqa: E501
 
+        Adds a new datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_datasource_by_id(async_req=True)
@@ -1557,8 +1586,9 @@ class LMApi(object):
             return data
 
     def add_datasource_by_id_with_http_info(self, **kwargs):  # noqa: E501
-        """add datasource  # noqa: E501
+        """Add datasource  # noqa: E501
 
+        Adds a new datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_datasource_by_id_with_http_info(async_req=True)
@@ -1642,6 +1672,7 @@ class LMApi(object):
     def add_device(self, body, **kwargs):  # noqa: E501
         """add a new device  # noqa: E501
 
+        add a new device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_device(body, async_req=True)
@@ -1649,9 +1680,9 @@ class LMApi(object):
 
         :param async_req bool
         :param Device body: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param bool add_from_wizard:
         :param bool need_stc_grp_and_sorted_cp:
         :return: Device
@@ -1668,6 +1699,7 @@ class LMApi(object):
     def add_device_with_http_info(self, body, **kwargs):  # noqa: E501
         """add a new device  # noqa: E501
 
+        add a new device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_device_with_http_info(body, async_req=True)
@@ -1675,9 +1707,9 @@ class LMApi(object):
 
         :param async_req bool
         :param Device body: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param bool add_from_wizard:
         :param bool need_stc_grp_and_sorted_cp:
         :return: Device
@@ -1685,7 +1717,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['body', 'start', 'end', 'netflow_filter', 'add_from_wizard', 'need_stc_grp_and_sorted_cp']  # noqa: E501
+        all_params = ['body', 'end', 'netflow_filter', 'start', 'add_from_wizard', 'need_stc_grp_and_sorted_cp']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1711,12 +1743,12 @@ class LMApi(object):
         path_params = {}
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'add_from_wizard' in params:
             query_params.append(('addFromWizard', params['add_from_wizard']))  # noqa: E501
         if 'need_stc_grp_and_sorted_cp' in params:
@@ -1765,8 +1797,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_device_datasource_instance(self, device_id, hds_id, body, **kwargs):  # noqa: E501
-        """add device instance   # noqa: E501
+        """add device instance  # noqa: E501
 
+        add device instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_device_datasource_instance(device_id, hds_id, body, async_req=True)
@@ -1788,8 +1821,9 @@ class LMApi(object):
             return data
 
     def add_device_datasource_instance_with_http_info(self, device_id, hds_id, body, **kwargs):  # noqa: E501
-        """add device instance   # noqa: E501
+        """add device instance  # noqa: E501
 
+        add device instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_device_datasource_instance_with_http_info(device_id, hds_id, body, async_req=True)
@@ -1885,17 +1919,18 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def add_device_datasource_instance_group(self, device_id, device_ds_id, body, **kwargs):  # noqa: E501
-        """add device datasource instance group   # noqa: E501
+    def add_device_datasource_instance_group(self, device_ds_id, device_id, body, **kwargs):  # noqa: E501
+        """Add device datasource instance group  # noqa: E501
 
+        Add a new device datasource instance group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.add_device_datasource_instance_group(device_id, device_ds_id, body, async_req=True)
+        >>> thread = api.add_device_datasource_instance_group(device_ds_id, device_id, body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param DeviceDataSourceInstanceGroup body: (required)
         :return: DeviceDataSourceInstanceGroup
                  If the method is called asynchronously,
@@ -1903,29 +1938,30 @@ class LMApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.add_device_datasource_instance_group_with_http_info(device_id, device_ds_id, body, **kwargs)  # noqa: E501
+            return self.add_device_datasource_instance_group_with_http_info(device_ds_id, device_id, body, **kwargs)  # noqa: E501
         else:
-            (data) = self.add_device_datasource_instance_group_with_http_info(device_id, device_ds_id, body, **kwargs)  # noqa: E501
+            (data) = self.add_device_datasource_instance_group_with_http_info(device_ds_id, device_id, body, **kwargs)  # noqa: E501
             return data
 
-    def add_device_datasource_instance_group_with_http_info(self, device_id, device_ds_id, body, **kwargs):  # noqa: E501
-        """add device datasource instance group   # noqa: E501
+    def add_device_datasource_instance_group_with_http_info(self, device_ds_id, device_id, body, **kwargs):  # noqa: E501
+        """Add device datasource instance group  # noqa: E501
 
+        Add a new device datasource instance group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.add_device_datasource_instance_group_with_http_info(device_id, device_ds_id, body, async_req=True)
+        >>> thread = api.add_device_datasource_instance_group_with_http_info(device_ds_id, device_id, body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param DeviceDataSourceInstanceGroup body: (required)
         :return: DeviceDataSourceInstanceGroup
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['device_id', 'device_ds_id', 'body']  # noqa: E501
+        all_params = ['device_ds_id', 'device_id', 'body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1941,14 +1977,14 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'device_id' is set
-        if ('device_id' not in params or
-                params['device_id'] is None):
-            raise ValueError("Missing the required parameter `device_id` when calling `add_device_datasource_instance_group`")  # noqa: E501
         # verify the required parameter 'device_ds_id' is set
         if ('device_ds_id' not in params or
                 params['device_ds_id'] is None):
             raise ValueError("Missing the required parameter `device_ds_id` when calling `add_device_datasource_instance_group`")  # noqa: E501
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `add_device_datasource_instance_group`")  # noqa: E501
         # verify the required parameter 'body' is set
         if ('body' not in params or
                 params['body'] is None):
@@ -1957,10 +1993,10 @@ class LMApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'device_id' in params:
-            path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'device_ds_id' in params:
             path_params['deviceDsId'] = params['device_ds_id']  # noqa: E501
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
 
         query_params = []
 
@@ -2009,6 +2045,7 @@ class LMApi(object):
     def add_device_group(self, body, **kwargs):  # noqa: E501
         """add device group  # noqa: E501
 
+        add device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_device_group(body, async_req=True)
@@ -2030,6 +2067,7 @@ class LMApi(object):
     def add_device_group_with_http_info(self, body, **kwargs):  # noqa: E501
         """add device group  # noqa: E501
 
+        add device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_device_group_with_http_info(body, async_req=True)
@@ -2114,6 +2152,7 @@ class LMApi(object):
     def add_device_group_cluster_alert_conf(self, device_group_id, body, **kwargs):  # noqa: E501
         """Add cluster alert configuration  # noqa: E501
 
+        Add cluster alert configuration  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_device_group_cluster_alert_conf(device_group_id, body, async_req=True)
@@ -2136,6 +2175,7 @@ class LMApi(object):
     def add_device_group_cluster_alert_conf_with_http_info(self, device_group_id, body, **kwargs):  # noqa: E501
         """Add cluster alert configuration  # noqa: E501
 
+        Add cluster alert configuration  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_device_group_cluster_alert_conf_with_http_info(device_group_id, body, async_req=True)
@@ -2225,8 +2265,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_device_group_property(self, gid, body, **kwargs):  # noqa: E501
-        """add device group property  # noqa: E501
+        """Add device group property  # noqa: E501
 
+        Add a new property to a specific device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_device_group_property(gid, body, async_req=True)
@@ -2247,8 +2288,9 @@ class LMApi(object):
             return data
 
     def add_device_group_property_with_http_info(self, gid, body, **kwargs):  # noqa: E501
-        """add device group property  # noqa: E501
+        """Add device group property  # noqa: E501
 
+        Add a new property to a specific device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_device_group_property_with_http_info(gid, body, async_req=True)
@@ -2338,8 +2380,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_device_property(self, device_id, body, **kwargs):  # noqa: E501
-        """add device property  # noqa: E501
+        """Add device property  # noqa: E501
 
+        Add a new property to a specific device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_device_property(device_id, body, async_req=True)
@@ -2360,8 +2403,9 @@ class LMApi(object):
             return data
 
     def add_device_property_with_http_info(self, device_id, body, **kwargs):  # noqa: E501
-        """add device property  # noqa: E501
+        """Add device property  # noqa: E501
 
+        Add a new property to a specific device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_device_property_with_http_info(device_id, body, async_req=True)
@@ -2450,9 +2494,113 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def add_dns_mapping(self, **kwargs):  # noqa: E501
-        """Add dns mapping  # noqa: E501
+    def add_diagnostic_source(self, **kwargs):  # noqa: E501
+        """Add diagnostics source  # noqa: E501
 
+        Adds a new diagnostics source  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.add_diagnostic_source(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DiagnosticsSource body:
+        :return: DiagnosticsSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.add_diagnostic_source_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.add_diagnostic_source_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def add_diagnostic_source_with_http_info(self, **kwargs):  # noqa: E501
+        """Add diagnostics source  # noqa: E501
+
+        Adds a new diagnostics source  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.add_diagnostic_source_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DiagnosticsSource body:
+        :return: DiagnosticsSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method add_diagnostic_source" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'DiagnosticsSource'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/diagnosticsources', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def add_dns_mapping(self, **kwargs):  # noqa: E501
+        """Add DNS mapping  # noqa: E501
+
+        Add a new DNS mapping  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_dns_mapping(async_req=True)
@@ -2472,8 +2620,9 @@ class LMApi(object):
             return data
 
     def add_dns_mapping_with_http_info(self, **kwargs):  # noqa: E501
-        """Add dns mapping  # noqa: E501
+        """Add DNS mapping  # noqa: E501
 
+        Add a new DNS mapping  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_dns_mapping_with_http_info(async_req=True)
@@ -2552,8 +2701,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_escalation_chain(self, body, **kwargs):  # noqa: E501
-        """add escalation chain  # noqa: E501
+        """Add escalation chain  # noqa: E501
 
+        Create a new escalation chain  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_escalation_chain(body, async_req=True)
@@ -2573,8 +2723,9 @@ class LMApi(object):
             return data
 
     def add_escalation_chain_with_http_info(self, body, **kwargs):  # noqa: E501
-        """add escalation chain  # noqa: E501
+        """Add escalation chain  # noqa: E501
 
+        Create a new escalation chain  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_escalation_chain_with_http_info(body, async_req=True)
@@ -2657,8 +2808,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_event_source(self, **kwargs):  # noqa: E501
-        """add eventSource  # noqa: E501
+        """Add event source  # noqa: E501
 
+        Adds a new event source  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_event_source(async_req=True)
@@ -2678,8 +2830,9 @@ class LMApi(object):
             return data
 
     def add_event_source_with_http_info(self, **kwargs):  # noqa: E501
-        """add eventSource  # noqa: E501
+        """Add event source  # noqa: E501
 
+        Adds a new event source  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_event_source_with_http_info(async_req=True)
@@ -2760,6 +2913,7 @@ class LMApi(object):
     def add_job_monitor(self, **kwargs):  # noqa: E501
         """Add JobMonitor  # noqa: E501
 
+        Create a new JobMonitor  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_job_monitor(async_req=True)
@@ -2781,6 +2935,7 @@ class LMApi(object):
     def add_job_monitor_with_http_info(self, **kwargs):  # noqa: E501
         """Add JobMonitor  # noqa: E501
 
+        Create a new JobMonitor  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_job_monitor_with_http_info(async_req=True)
@@ -2859,8 +3014,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_log_source(self, **kwargs):  # noqa: E501
-        """add log source   # noqa: E501
+        """Add log source  # noqa: E501
 
+        Adds a new log source  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_log_source(async_req=True)
@@ -2880,8 +3036,9 @@ class LMApi(object):
             return data
 
     def add_log_source_with_http_info(self, **kwargs):  # noqa: E501
-        """add log source   # noqa: E501
+        """Add log source  # noqa: E501
 
+        Adds a new log source  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_log_source_with_http_info(async_req=True)
@@ -2960,8 +3117,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_netscan(self, **kwargs):  # noqa: E501
-        """add a new netscan  # noqa: E501
+        """Add a new netscan  # noqa: E501
 
+        Create a new netscan  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_netscan(async_req=True)
@@ -2981,8 +3139,9 @@ class LMApi(object):
             return data
 
     def add_netscan_with_http_info(self, **kwargs):  # noqa: E501
-        """add a new netscan  # noqa: E501
+        """Add a new netscan  # noqa: E501
 
+        Create a new netscan  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_netscan_with_http_info(async_req=True)
@@ -3061,8 +3220,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_oid(self, **kwargs):  # noqa: E501
-        """add a new OID  # noqa: E501
+        """Add a new OID  # noqa: E501
 
+        Create a new OID and add it to the system  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_oid(async_req=True)
@@ -3082,8 +3242,9 @@ class LMApi(object):
             return data
 
     def add_oid_with_http_info(self, **kwargs):  # noqa: E501
-        """add a new OID  # noqa: E501
+        """Add a new OID  # noqa: E501
 
+        Create a new OID and add it to the system  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_oid_with_http_info(async_req=True)
@@ -3164,6 +3325,7 @@ class LMApi(object):
     def add_ops_note(self, body, **kwargs):  # noqa: E501
         """add opsnote  # noqa: E501
 
+        add opsnote  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_ops_note(body, async_req=True)
@@ -3185,6 +3347,7 @@ class LMApi(object):
     def add_ops_note_with_http_info(self, body, **kwargs):  # noqa: E501
         """add opsnote  # noqa: E501
 
+        add opsnote  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_ops_note_with_http_info(body, async_req=True)
@@ -3267,8 +3430,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_property_rule(self, **kwargs):  # noqa: E501
-        """add a new property rule  # noqa: E501
+        """Add a new property rule  # noqa: E501
 
+        Creates a new property rule in the system  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_property_rule(async_req=True)
@@ -3288,8 +3452,9 @@ class LMApi(object):
             return data
 
     def add_property_rule_with_http_info(self, **kwargs):  # noqa: E501
-        """add a new property rule  # noqa: E501
+        """Add a new property rule  # noqa: E501
 
+        Creates a new property rule in the system  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_property_rule_with_http_info(async_req=True)
@@ -3368,8 +3533,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_recipient_group(self, body, **kwargs):  # noqa: E501
-        """add recipient group  # noqa: E501
+        """Add recipient group  # noqa: E501
 
+        Add a new recipient group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_recipient_group(body, async_req=True)
@@ -3389,8 +3555,9 @@ class LMApi(object):
             return data
 
     def add_recipient_group_with_http_info(self, body, **kwargs):  # noqa: E501
-        """add recipient group  # noqa: E501
+        """Add recipient group  # noqa: E501
 
+        Add a new recipient group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_recipient_group_with_http_info(body, async_req=True)
@@ -3473,8 +3640,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_report(self, body, **kwargs):  # noqa: E501
-        """add report  # noqa: E501
+        """Add report  # noqa: E501
 
+        Create a new report  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_report(body, async_req=True)
@@ -3494,8 +3662,9 @@ class LMApi(object):
             return data
 
     def add_report_with_http_info(self, body, **kwargs):  # noqa: E501
-        """add report  # noqa: E501
+        """Add report  # noqa: E501
 
+        Create a new report  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_report_with_http_info(body, async_req=True)
@@ -3578,8 +3747,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_report_group(self, body, **kwargs):  # noqa: E501
-        """add report group  # noqa: E501
+        """Add report group  # noqa: E501
 
+        Add a new report group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_report_group(body, async_req=True)
@@ -3599,8 +3769,9 @@ class LMApi(object):
             return data
 
     def add_report_group_with_http_info(self, body, **kwargs):  # noqa: E501
-        """add report group  # noqa: E501
+        """Add report group  # noqa: E501
 
+        Add a new report group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_report_group_with_http_info(body, async_req=True)
@@ -3683,8 +3854,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_role(self, body, **kwargs):  # noqa: E501
-        """add role  # noqa: E501
+        """Add role  # noqa: E501
 
+        Create a new role  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_role(body, async_req=True)
@@ -3704,8 +3876,9 @@ class LMApi(object):
             return data
 
     def add_role_with_http_info(self, body, **kwargs):  # noqa: E501
-        """add role  # noqa: E501
+        """Add role  # noqa: E501
 
+        Create a new role  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_role_with_http_info(body, async_req=True)
@@ -3790,6 +3963,7 @@ class LMApi(object):
     def add_sdt(self, body, **kwargs):  # noqa: E501
         """add SDT (Response may contain extra fields depending upon the type of SDT being added)  # noqa: E501
 
+        add SDT (Response may contain extra fields depending upon the type of SDT being added)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_sdt(body, async_req=True)
@@ -3811,6 +3985,7 @@ class LMApi(object):
     def add_sdt_with_http_info(self, body, **kwargs):  # noqa: E501
         """add SDT (Response may contain extra fields depending upon the type of SDT being added)  # noqa: E501
 
+        add SDT (Response may contain extra fields depending upon the type of SDT being added)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_sdt_with_http_info(body, async_req=True)
@@ -3895,6 +4070,7 @@ class LMApi(object):
     def add_topology_source(self, **kwargs):  # noqa: E501
         """Add TopologySource  # noqa: E501
 
+        Add TopologySource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_topology_source(async_req=True)
@@ -3916,6 +4092,7 @@ class LMApi(object):
     def add_topology_source_with_http_info(self, **kwargs):  # noqa: E501
         """Add TopologySource  # noqa: E501
 
+        Add TopologySource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_topology_source_with_http_info(async_req=True)
@@ -3994,8 +4171,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_website(self, body, **kwargs):  # noqa: E501
-        """Add website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
+        """Add website  # noqa: E501
 
+        Add website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_website(body, async_req=True)
@@ -4015,8 +4193,9 @@ class LMApi(object):
             return data
 
     def add_website_with_http_info(self, body, **kwargs):  # noqa: E501
-        """Add website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
+        """Add website  # noqa: E501
 
+        Add website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_website_with_http_info(body, async_req=True)
@@ -4101,6 +4280,7 @@ class LMApi(object):
     def add_website_group(self, body, **kwargs):  # noqa: E501
         """add website group  # noqa: E501
 
+        add website group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_website_group(body, async_req=True)
@@ -4122,6 +4302,7 @@ class LMApi(object):
     def add_website_group_with_http_info(self, body, **kwargs):  # noqa: E501
         """add website group  # noqa: E501
 
+        add website group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_website_group_with_http_info(body, async_req=True)
@@ -4204,8 +4385,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def add_widget(self, body, **kwargs):  # noqa: E501
-        """add widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        """Add widget  # noqa: E501
 
+        Adds a new widget. Based on widget type, the request and response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_widget(body, async_req=True)
@@ -4225,8 +4407,9 @@ class LMApi(object):
             return data
 
     def add_widget_with_http_info(self, body, **kwargs):  # noqa: E501
-        """add widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        """Add widget  # noqa: E501
 
+        Adds a new widget. Based on widget type, the request and response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_widget_with_http_info(body, async_req=True)
@@ -4308,47 +4491,49 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def collect_device_config_source_config(self, device_id, hds_id, instance_id, **kwargs):  # noqa: E501
+    def collect_device_config_source_config(self, instance_id, device_id, hds_id, **kwargs):  # noqa: E501
         """collect a config for a device  # noqa: E501
 
+        collect a config for a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.collect_device_config_source_config(device_id, hds_id, instance_id, async_req=True)
+        >>> thread = api.collect_device_config_source_config(instance_id, device_id, hds_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int instance_id: (required)
         :param int device_id: (required)
         :param int hds_id: (required)
-        :param int instance_id: (required)
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.collect_device_config_source_config_with_http_info(device_id, hds_id, instance_id, **kwargs)  # noqa: E501
+            return self.collect_device_config_source_config_with_http_info(instance_id, device_id, hds_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.collect_device_config_source_config_with_http_info(device_id, hds_id, instance_id, **kwargs)  # noqa: E501
+            (data) = self.collect_device_config_source_config_with_http_info(instance_id, device_id, hds_id, **kwargs)  # noqa: E501
             return data
 
-    def collect_device_config_source_config_with_http_info(self, device_id, hds_id, instance_id, **kwargs):  # noqa: E501
+    def collect_device_config_source_config_with_http_info(self, instance_id, device_id, hds_id, **kwargs):  # noqa: E501
         """collect a config for a device  # noqa: E501
 
+        collect a config for a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.collect_device_config_source_config_with_http_info(device_id, hds_id, instance_id, async_req=True)
+        >>> thread = api.collect_device_config_source_config_with_http_info(instance_id, device_id, hds_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int instance_id: (required)
         :param int device_id: (required)
         :param int hds_id: (required)
-        :param int instance_id: (required)
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['device_id', 'hds_id', 'instance_id']  # noqa: E501
+        all_params = ['instance_id', 'device_id', 'hds_id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4364,6 +4549,10 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'instance_id' is set
+        if ('instance_id' not in params or
+                params['instance_id'] is None):
+            raise ValueError("Missing the required parameter `instance_id` when calling `collect_device_config_source_config`")  # noqa: E501
         # verify the required parameter 'device_id' is set
         if ('device_id' not in params or
                 params['device_id'] is None):
@@ -4372,20 +4561,16 @@ class LMApi(object):
         if ('hds_id' not in params or
                 params['hds_id'] is None):
             raise ValueError("Missing the required parameter `hds_id` when calling `collect_device_config_source_config`")  # noqa: E501
-        # verify the required parameter 'instance_id' is set
-        if ('instance_id' not in params or
-                params['instance_id'] is None):
-            raise ValueError("Missing the required parameter `instance_id` when calling `collect_device_config_source_config`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'instance_id' in params:
+            path_params['instanceId'] = params['instance_id']  # noqa: E501
         if 'device_id' in params:
             path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'hds_id' in params:
             path_params['hdsId'] = params['hds_id']  # noqa: E501
-        if 'instance_id' in params:
-            path_params['instanceId'] = params['instance_id']  # noqa: E501
 
         query_params = []
 
@@ -4428,6 +4613,7 @@ class LMApi(object):
     def create_log_partition(self, **kwargs):  # noqa: E501
         """Create a new log partition  # noqa: E501
 
+        Create a new log partition  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_log_partition(async_req=True)
@@ -4449,6 +4635,7 @@ class LMApi(object):
     def create_log_partition_with_http_info(self, **kwargs):  # noqa: E501
         """Create a new log partition  # noqa: E501
 
+        Create a new log partition  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_log_partition_with_http_info(async_req=True)
@@ -4529,6 +4716,7 @@ class LMApi(object):
     def delete_access_group(self, id, **kwargs):  # noqa: E501
         """Delete access group  # noqa: E501
 
+        Delete access group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_access_group(id, async_req=True)
@@ -4550,6 +4738,7 @@ class LMApi(object):
     def delete_access_group_with_http_info(self, id, **kwargs):  # noqa: E501
         """Delete access group  # noqa: E501
 
+        Delete access group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_access_group_with_http_info(id, async_req=True)
@@ -4630,6 +4819,7 @@ class LMApi(object):
     def delete_admin_by_id(self, id, **kwargs):  # noqa: E501
         """delete user  # noqa: E501
 
+        delete user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_admin_by_id(id, async_req=True)
@@ -4651,6 +4841,7 @@ class LMApi(object):
     def delete_admin_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """delete user  # noqa: E501
 
+        delete user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_admin_by_id_with_http_info(id, async_req=True)
@@ -4731,6 +4922,7 @@ class LMApi(object):
     def delete_alert_rule_by_id(self, id, **kwargs):  # noqa: E501
         """delete alert rule  # noqa: E501
 
+        delete alert rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_alert_rule_by_id(id, async_req=True)
@@ -4752,6 +4944,7 @@ class LMApi(object):
     def delete_alert_rule_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """delete alert rule  # noqa: E501
 
+        delete alert rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_alert_rule_by_id_with_http_info(id, async_req=True)
@@ -4830,8 +5023,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_api_token_by_id(self, admin_id, apitoken_id, **kwargs):  # noqa: E501
-        """delete apiToken  # noqa: E501
+        """Delete API token  # noqa: E501
 
+        Delete a specific API token by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_api_token_by_id(admin_id, apitoken_id, async_req=True)
@@ -4852,8 +5046,9 @@ class LMApi(object):
             return data
 
     def delete_api_token_by_id_with_http_info(self, admin_id, apitoken_id, **kwargs):  # noqa: E501
-        """delete apiToken  # noqa: E501
+        """Delete API token  # noqa: E501
 
+        Delete a specific API token by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_api_token_by_id_with_http_info(admin_id, apitoken_id, async_req=True)
@@ -4939,8 +5134,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_applies_to_function_by_id(self, id, **kwargs):  # noqa: E501
-        """delete applies to function  # noqa: E501
+        """Delete applies to function  # noqa: E501
 
+        Delete a specific applies to function by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_applies_to_function_by_id(id, async_req=True)
@@ -4961,8 +5157,9 @@ class LMApi(object):
             return data
 
     def delete_applies_to_function_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete applies to function  # noqa: E501
+        """Delete applies to function  # noqa: E501
 
+        Delete a specific applies to function by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_applies_to_function_by_id_with_http_info(id, async_req=True)
@@ -5046,6 +5243,7 @@ class LMApi(object):
     def delete_collector_by_id(self, id, **kwargs):  # noqa: E501
         """delete collector  # noqa: E501
 
+        delete collector  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_collector_by_id(id, async_req=True)
@@ -5067,6 +5265,7 @@ class LMApi(object):
     def delete_collector_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """delete collector  # noqa: E501
 
+        delete collector  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_collector_by_id_with_http_info(id, async_req=True)
@@ -5145,8 +5344,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_collector_group_by_id(self, id, **kwargs):  # noqa: E501
-        """delete collector group  # noqa: E501
+        """Delete collector group  # noqa: E501
 
+        Delete a specific collector group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_collector_group_by_id(id, async_req=True)
@@ -5166,8 +5366,9 @@ class LMApi(object):
             return data
 
     def delete_collector_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete collector group  # noqa: E501
+        """Delete collector group  # noqa: E501
 
+        Delete a specific collector group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_collector_group_by_id_with_http_info(id, async_req=True)
@@ -5246,8 +5447,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_config_source_by_id(self, id, **kwargs):  # noqa: E501
-        """delete config source by id  # noqa: E501
+        """Delete config source by ID  # noqa: E501
 
+        Delete a config source based on the provided ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_config_source_by_id(id, async_req=True)
@@ -5267,8 +5469,9 @@ class LMApi(object):
             return data
 
     def delete_config_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete config source by id  # noqa: E501
+        """Delete config source by ID  # noqa: E501
 
+        Delete a config source based on the provided ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_config_source_by_id_with_http_info(id, async_req=True)
@@ -5349,6 +5552,7 @@ class LMApi(object):
     def delete_dashboard_by_id(self, id, **kwargs):  # noqa: E501
         """delete dashboard  # noqa: E501
 
+        delete dashboard  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_dashboard_by_id(id, async_req=True)
@@ -5370,6 +5574,7 @@ class LMApi(object):
     def delete_dashboard_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """delete dashboard  # noqa: E501
 
+        delete dashboard  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_dashboard_by_id_with_http_info(id, async_req=True)
@@ -5450,6 +5655,7 @@ class LMApi(object):
     def delete_dashboard_group_by_id(self, id, **kwargs):  # noqa: E501
         """delete dashboard group  # noqa: E501
 
+        delete dashboard group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_dashboard_group_by_id(id, async_req=True)
@@ -5472,6 +5678,7 @@ class LMApi(object):
     def delete_dashboard_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """delete dashboard group  # noqa: E501
 
+        delete dashboard group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_dashboard_group_by_id_with_http_info(id, async_req=True)
@@ -5553,8 +5760,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_datasource_by_id(self, id, **kwargs):  # noqa: E501
-        """delete datasource  # noqa: E501
+        """Delete datasource  # noqa: E501
 
+        Deletes a datasource by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_datasource_by_id(id, async_req=True)
@@ -5574,8 +5782,9 @@ class LMApi(object):
             return data
 
     def delete_datasource_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete datasource  # noqa: E501
+        """Delete datasource  # noqa: E501
 
+        Deletes a datasource by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_datasource_by_id_with_http_info(id, async_req=True)
@@ -5656,6 +5865,7 @@ class LMApi(object):
     def delete_device_by_id(self, id, **kwargs):  # noqa: E501
         """delete a device  # noqa: E501
 
+        delete a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_device_by_id(id, async_req=True)
@@ -5663,9 +5873,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param bool delete_hard:
         :return: object
                  If the method is called asynchronously,
@@ -5681,6 +5891,7 @@ class LMApi(object):
     def delete_device_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """delete a device  # noqa: E501
 
+        delete a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_device_by_id_with_http_info(id, async_req=True)
@@ -5688,16 +5899,16 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param bool delete_hard:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'netflow_filter', 'delete_hard']  # noqa: E501
+        all_params = ['id', 'end', 'netflow_filter', 'start', 'delete_hard']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5725,12 +5936,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'delete_hard' in params:
             query_params.append(('deleteHard', params['delete_hard']))  # noqa: E501
 
@@ -5773,6 +5984,7 @@ class LMApi(object):
     def delete_device_datasource_instance_by_id(self, device_id, hds_id, id, **kwargs):  # noqa: E501
         """delete a device instance  # noqa: E501
 
+        delete a device instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_device_datasource_instance_by_id(device_id, hds_id, id, async_req=True)
@@ -5796,6 +6008,7 @@ class LMApi(object):
     def delete_device_datasource_instance_by_id_with_http_info(self, device_id, hds_id, id, **kwargs):  # noqa: E501
         """delete a device instance  # noqa: E501
 
+        delete a device instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_device_datasource_instance_by_id_with_http_info(device_id, hds_id, id, async_req=True)
@@ -5890,6 +6103,7 @@ class LMApi(object):
     def delete_device_group_by_id(self, id, **kwargs):  # noqa: E501
         """delete device group  # noqa: E501
 
+        delete device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_device_group_by_id(id, async_req=True)
@@ -5913,6 +6127,7 @@ class LMApi(object):
     def delete_device_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """delete device group  # noqa: E501
 
+        delete device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_device_group_by_id_with_http_info(id, async_req=True)
@@ -5999,6 +6214,7 @@ class LMApi(object):
     def delete_device_group_cluster_alert_conf_by_id(self, device_group_id, id, **kwargs):  # noqa: E501
         """Delete cluster alert configuration  # noqa: E501
 
+        Delete cluster alert configuration  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_device_group_cluster_alert_conf_by_id(device_group_id, id, async_req=True)
@@ -6021,6 +6237,7 @@ class LMApi(object):
     def delete_device_group_cluster_alert_conf_by_id_with_http_info(self, device_group_id, id, **kwargs):  # noqa: E501
         """Delete cluster alert configuration  # noqa: E501
 
+        Delete cluster alert configuration  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_device_group_cluster_alert_conf_by_id_with_http_info(device_group_id, id, async_req=True)
@@ -6106,8 +6323,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_device_group_property_by_name(self, gid, name, **kwargs):  # noqa: E501
-        """delete device group property  # noqa: E501
+        """Delete device group property  # noqa: E501
 
+        Delete a specific property of a device group by its name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_device_group_property_by_name(gid, name, async_req=True)
@@ -6128,8 +6346,9 @@ class LMApi(object):
             return data
 
     def delete_device_group_property_by_name_with_http_info(self, gid, name, **kwargs):  # noqa: E501
-        """delete device group property  # noqa: E501
+        """Delete device group property  # noqa: E501
 
+        Delete a specific property of a device group by its name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_device_group_property_by_name_with_http_info(gid, name, async_req=True)
@@ -6215,8 +6434,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_device_property_by_name(self, device_id, name, **kwargs):  # noqa: E501
-        """delete device property  # noqa: E501
+        """Delete device property  # noqa: E501
 
+        Delete a specific property of a device by its name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_device_property_by_name(device_id, name, async_req=True)
@@ -6237,8 +6457,9 @@ class LMApi(object):
             return data
 
     def delete_device_property_by_name_with_http_info(self, device_id, name, **kwargs):  # noqa: E501
-        """delete device property  # noqa: E501
+        """Delete device property  # noqa: E501
 
+        Delete a specific property of a device by its name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_device_property_by_name_with_http_info(device_id, name, async_req=True)
@@ -6323,9 +6544,113 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_escalation_chain_by_id(self, id, **kwargs):  # noqa: E501
-        """delete escalation chain  # noqa: E501
+    def delete_diagnostic_source_by_id(self, id, **kwargs):  # noqa: E501
+        """Delete a diagnostic source module  # noqa: E501
 
+        Deletes a diagnostic source module by its ID  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_diagnostic_source_by_id(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :return: object
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.delete_diagnostic_source_by_id_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.delete_diagnostic_source_by_id_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def delete_diagnostic_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Delete a diagnostic source module  # noqa: E501
+
+        Deletes a diagnostic source module by its ID  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_diagnostic_source_by_id_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :return: object
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_diagnostic_source_by_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `delete_diagnostic_source_by_id`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'object'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/diagnosticsources/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_escalation_chain_by_id(self, id, **kwargs):  # noqa: E501
+        """Delete escalation chain  # noqa: E501
+
+        Delete a specific escalation chain by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_escalation_chain_by_id(id, async_req=True)
@@ -6345,8 +6670,9 @@ class LMApi(object):
             return data
 
     def delete_escalation_chain_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete escalation chain  # noqa: E501
+        """Delete escalation chain  # noqa: E501
 
+        Delete a specific escalation chain by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_escalation_chain_by_id_with_http_info(id, async_req=True)
@@ -6425,8 +6751,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_event_source_by_id(self, id, **kwargs):  # noqa: E501
-        """delete eventSource by id  # noqa: E501
+        """Delete event source by ID  # noqa: E501
 
+        Deletes an event source by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_event_source_by_id(id, async_req=True)
@@ -6446,8 +6773,9 @@ class LMApi(object):
             return data
 
     def delete_event_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete eventSource by id  # noqa: E501
+        """Delete event source by ID  # noqa: E501
 
+        Deletes an event source by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_event_source_by_id_with_http_info(id, async_req=True)
@@ -6528,6 +6856,7 @@ class LMApi(object):
     def delete_job_monitor(self, id, **kwargs):  # noqa: E501
         """Delete JobMonitor  # noqa: E501
 
+        Delete a specific JobMonitor by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_job_monitor(id, async_req=True)
@@ -6549,6 +6878,7 @@ class LMApi(object):
     def delete_job_monitor_with_http_info(self, id, **kwargs):  # noqa: E501
         """Delete JobMonitor  # noqa: E501
 
+        Delete a specific JobMonitor by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_job_monitor_with_http_info(id, async_req=True)
@@ -6629,6 +6959,7 @@ class LMApi(object):
     def delete_log_partition_by_id(self, id, **kwargs):  # noqa: E501
         """Delete a log partition by ID  # noqa: E501
 
+        Delete a log partition by ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_log_partition_by_id(id, async_req=True)
@@ -6650,6 +6981,7 @@ class LMApi(object):
     def delete_log_partition_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """Delete a log partition by ID  # noqa: E501
 
+        Delete a log partition by ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_log_partition_by_id_with_http_info(id, async_req=True)
@@ -6728,8 +7060,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_log_source(self, id, **kwargs):  # noqa: E501
-        """delete log source   # noqa: E501
+        """Delete log source  # noqa: E501
 
+        Deletes an existing log source  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_log_source(id, async_req=True)
@@ -6749,8 +7082,9 @@ class LMApi(object):
             return data
 
     def delete_log_source_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete log source   # noqa: E501
+        """Delete log source  # noqa: E501
 
+        Deletes an existing log source  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_log_source_with_http_info(id, async_req=True)
@@ -6829,8 +7163,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_netscan_by_id(self, id, **kwargs):  # noqa: E501
-        """delete a netscan  # noqa: E501
+        """Delete a netscan  # noqa: E501
 
+        Delete a specific netscan by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_netscan_by_id(id, async_req=True)
@@ -6850,8 +7185,9 @@ class LMApi(object):
             return data
 
     def delete_netscan_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete a netscan  # noqa: E501
+        """Delete a netscan  # noqa: E501
 
+        Delete a specific netscan by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_netscan_by_id_with_http_info(id, async_req=True)
@@ -6930,8 +7266,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_oid(self, id, **kwargs):  # noqa: E501
-        """delete a OID  # noqa: E501
+        """Delete an OID  # noqa: E501
 
+        Delete an existing OID from the system  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_oid(id, async_req=True)
@@ -6951,8 +7288,9 @@ class LMApi(object):
             return data
 
     def delete_oid_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete a OID  # noqa: E501
+        """Delete an OID  # noqa: E501
 
+        Delete an existing OID from the system  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_oid_with_http_info(id, async_req=True)
@@ -7033,6 +7371,7 @@ class LMApi(object):
     def delete_ops_note_by_id(self, id, **kwargs):  # noqa: E501
         """delete opsnote  # noqa: E501
 
+        delete opsnote  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_ops_note_by_id(id, async_req=True)
@@ -7054,6 +7393,7 @@ class LMApi(object):
     def delete_ops_note_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """delete opsnote  # noqa: E501
 
+        delete opsnote  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_ops_note_by_id_with_http_info(id, async_req=True)
@@ -7134,6 +7474,7 @@ class LMApi(object):
     def delete_property_rule(self, id, **kwargs):  # noqa: E501
         """delete a property rule  # noqa: E501
 
+        Delete a property rule by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_property_rule(id, async_req=True)
@@ -7155,6 +7496,7 @@ class LMApi(object):
     def delete_property_rule_with_http_info(self, id, **kwargs):  # noqa: E501
         """delete a property rule  # noqa: E501
 
+        Delete a property rule by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_property_rule_with_http_info(id, async_req=True)
@@ -7233,8 +7575,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_recipient_group_by_id(self, id, **kwargs):  # noqa: E501
-        """delete recipient group  # noqa: E501
+        """Delete recipient group  # noqa: E501
 
+        Delete a specific recipient group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_recipient_group_by_id(id, async_req=True)
@@ -7254,8 +7597,9 @@ class LMApi(object):
             return data
 
     def delete_recipient_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete recipient group  # noqa: E501
+        """Delete recipient group  # noqa: E501
 
+        Delete a specific recipient group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_recipient_group_by_id_with_http_info(id, async_req=True)
@@ -7334,8 +7678,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_report_by_id(self, id, **kwargs):  # noqa: E501
-        """delete report  # noqa: E501
+        """Delete report  # noqa: E501
 
+        Delete a specific report by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_report_by_id(id, async_req=True)
@@ -7355,8 +7700,9 @@ class LMApi(object):
             return data
 
     def delete_report_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete report  # noqa: E501
+        """Delete report  # noqa: E501
 
+        Delete a specific report by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_report_by_id_with_http_info(id, async_req=True)
@@ -7435,8 +7781,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_report_group_by_id(self, id, **kwargs):  # noqa: E501
-        """delete report group  # noqa: E501
+        """Delete report group  # noqa: E501
 
+        Delete a specific report group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_report_group_by_id(id, async_req=True)
@@ -7456,8 +7803,9 @@ class LMApi(object):
             return data
 
     def delete_report_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete report group  # noqa: E501
+        """Delete report group  # noqa: E501
 
+        Delete a specific report group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_report_group_by_id_with_http_info(id, async_req=True)
@@ -7536,8 +7884,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_role_by_id(self, id, **kwargs):  # noqa: E501
-        """delete role  # noqa: E501
+        """Delete role  # noqa: E501
 
+        Delete a specific role by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_role_by_id(id, async_req=True)
@@ -7557,8 +7906,9 @@ class LMApi(object):
             return data
 
     def delete_role_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete role  # noqa: E501
+        """Delete role  # noqa: E501
 
+        Delete a specific role by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_role_by_id_with_http_info(id, async_req=True)
@@ -7639,6 +7989,7 @@ class LMApi(object):
     def delete_sdt_by_id(self, id, **kwargs):  # noqa: E501
         """delete SDT  # noqa: E501
 
+        delete SDT  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_sdt_by_id(id, async_req=True)
@@ -7660,6 +8011,7 @@ class LMApi(object):
     def delete_sdt_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """delete SDT  # noqa: E501
 
+        delete SDT  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_sdt_by_id_with_http_info(id, async_req=True)
@@ -7740,6 +8092,7 @@ class LMApi(object):
     def delete_topology_source(self, id, **kwargs):  # noqa: E501
         """Delete TopologySource  # noqa: E501
 
+        Delete TopologySource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_topology_source(id, async_req=True)
@@ -7761,6 +8114,7 @@ class LMApi(object):
     def delete_topology_source_with_http_info(self, id, **kwargs):  # noqa: E501
         """Delete TopologySource  # noqa: E501
 
+        Delete TopologySource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_topology_source_with_http_info(id, async_req=True)
@@ -7841,6 +8195,7 @@ class LMApi(object):
     def delete_website_by_id(self, id, **kwargs):  # noqa: E501
         """delete website  # noqa: E501
 
+        delete website  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_website_by_id(id, async_req=True)
@@ -7862,6 +8217,7 @@ class LMApi(object):
     def delete_website_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """delete website  # noqa: E501
 
+        delete website  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_website_by_id_with_http_info(id, async_req=True)
@@ -7942,6 +8298,7 @@ class LMApi(object):
     def delete_website_group_by_id(self, id, **kwargs):  # noqa: E501
         """delete website group  # noqa: E501
 
+        delete website group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_website_group_by_id(id, async_req=True)
@@ -7964,6 +8321,7 @@ class LMApi(object):
     def delete_website_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """delete website group  # noqa: E501
 
+        delete website group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_website_group_by_id_with_http_info(id, async_req=True)
@@ -8045,8 +8403,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def delete_widget_by_id(self, id, **kwargs):  # noqa: E501
-        """delete widget  # noqa: E501
+        """Delete widget  # noqa: E501
 
+        Deletes a widget by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_widget_by_id(id, async_req=True)
@@ -8066,8 +8425,9 @@ class LMApi(object):
             return data
 
     def delete_widget_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete widget  # noqa: E501
+        """Delete widget  # noqa: E501
 
+        Deletes a widget by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_widget_by_id_with_http_info(id, async_req=True)
@@ -8148,6 +8508,7 @@ class LMApi(object):
     def discover_subscriptions(self, body, **kwargs):  # noqa: E501
         """view subscriptions  # noqa: E501
 
+        view subscriptions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.discover_subscriptions(body, async_req=True)
@@ -8169,6 +8530,7 @@ class LMApi(object):
     def discover_subscriptions_with_http_info(self, body, **kwargs):  # noqa: E501
         """view subscriptions  # noqa: E501
 
+        view subscriptions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.discover_subscriptions_with_http_info(body, async_req=True)
@@ -8251,8 +8613,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def escalated_alert_by_id(self, id, **kwargs):  # noqa: E501
-        """escalate alert by id  # noqa: E501
+        """Escalate alert by ID  # noqa: E501
 
+        Escalate the alert with the given ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.escalated_alert_by_id(id, async_req=True)
@@ -8272,8 +8635,9 @@ class LMApi(object):
             return data
 
     def escalated_alert_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """escalate alert by id  # noqa: E501
+        """Escalate alert by ID  # noqa: E501
 
+        Escalate the alert with the given ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.escalated_alert_by_id_with_http_info(id, async_req=True)
@@ -8354,6 +8718,7 @@ class LMApi(object):
     def execute_debug_command(self, **kwargs):  # noqa: E501
         """Execute a Collector debug command  # noqa: E501
 
+        Execute a Collector debug command  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.execute_debug_command(async_req=True)
@@ -8376,6 +8741,7 @@ class LMApi(object):
     def execute_debug_command_with_http_info(self, **kwargs):  # noqa: E501
         """Execute a Collector debug command  # noqa: E501
 
+        Execute a Collector debug command  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.execute_debug_command_with_http_info(async_req=True)
@@ -8456,9 +8822,113 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def fetch_device_instances_data(self, body, **kwargs):  # noqa: E501
-        """fetch device instances data  # noqa: E501
+    def execute_diagnostics_manually(self, **kwargs):  # noqa: E501
+        """Trigger a diagnostic module for host.  # noqa: E501
 
+        Trigger a diagnostic module for host.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.execute_diagnostics_manually(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DiagnosticsSourceExecution body:
+        :return: DiagnosticsSourceExecution
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.execute_diagnostics_manually_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.execute_diagnostics_manually_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def execute_diagnostics_manually_with_http_info(self, **kwargs):  # noqa: E501
+        """Trigger a diagnostic module for host.  # noqa: E501
+
+        Trigger a diagnostic module for host.  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.execute_diagnostics_manually_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param DiagnosticsSourceExecution body:
+        :return: DiagnosticsSourceExecution
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['body']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method execute_diagnostics_manually" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'DiagnosticsSourceExecution'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/diagnosticsources/executemanually', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def fetch_device_instances_data(self, body, **kwargs):  # noqa: E501
+        """Fetch device instances data  # noqa: E501
+
+        Retrieve a paginated list of data for device instances  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.fetch_device_instances_data(body, async_req=True)
@@ -8469,7 +8939,7 @@ class LMApi(object):
         :param float period:
         :param int start:
         :param int end:
-        :param str aggregate: the aggregate option
+        :param str aggregate: The aggregate option
         :return: DeviceInstanceDataPaginationResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -8482,8 +8952,9 @@ class LMApi(object):
             return data
 
     def fetch_device_instances_data_with_http_info(self, body, **kwargs):  # noqa: E501
-        """fetch device instances data  # noqa: E501
+        """Fetch device instances data  # noqa: E501
 
+        Retrieve a paginated list of data for device instances  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.fetch_device_instances_data_with_http_info(body, async_req=True)
@@ -8494,7 +8965,7 @@ class LMApi(object):
         :param float period:
         :param int start:
         :param int end:
-        :param str aggregate: the aggregate option
+        :param str aggregate: The aggregate option
         :return: DeviceInstanceDataPaginationResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -8578,8 +9049,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def fetch_report_using_task_id(self, id, task_id, **kwargs):  # noqa: E501
-        """get report for task Id  # noqa: E501
+        """Get report for task ID  # noqa: E501
 
+        Fetch the report associated with a specific task ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.fetch_report_using_task_id(id, task_id, async_req=True)
@@ -8600,8 +9072,9 @@ class LMApi(object):
             return data
 
     def fetch_report_using_task_id_with_http_info(self, id, task_id, **kwargs):  # noqa: E501
-        """get report for task Id  # noqa: E501
+        """Get report for task ID  # noqa: E501
 
+        Fetch the report associated with a specific task ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.fetch_report_using_task_id_with_http_info(id, task_id, async_req=True)
@@ -8687,8 +9160,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def generate_report_by_id(self, id, **kwargs):  # noqa: E501
-        """run a report  # noqa: E501
+        """Run a report  # noqa: E501
 
+        Generate a report based on the given report ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.generate_report_by_id(id, async_req=True)
@@ -8709,8 +9183,9 @@ class LMApi(object):
             return data
 
     def generate_report_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """run a report  # noqa: E501
+        """Run a report  # noqa: E501
 
+        Generate a report based on the given report ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.generate_report_by_id_with_http_info(id, async_req=True)
@@ -8798,6 +9273,7 @@ class LMApi(object):
     def get_access_group_by_id(self, id, **kwargs):  # noqa: E501
         """Get access group by id  # noqa: E501
 
+        Get access group by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_access_group_by_id(id, async_req=True)
@@ -8820,6 +9296,7 @@ class LMApi(object):
     def get_access_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """Get access group by id  # noqa: E501
 
+        Get access group by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_access_group_by_id_with_http_info(id, async_req=True)
@@ -8903,6 +9380,7 @@ class LMApi(object):
     def get_access_group_list(self, **kwargs):  # noqa: E501
         """Get access group list  # noqa: E501
 
+        Get access group list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_access_group_list(async_req=True)
@@ -8927,6 +9405,7 @@ class LMApi(object):
     def get_access_group_list_with_http_info(self, **kwargs):  # noqa: E501
         """Get access group list  # noqa: E501
 
+        Get access group list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_access_group_list_with_http_info(async_req=True)
@@ -9012,6 +9491,7 @@ class LMApi(object):
     def get_admin_by_id(self, id, **kwargs):  # noqa: E501
         """get user  # noqa: E501
 
+        get user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_admin_by_id(id, async_req=True)
@@ -9034,6 +9514,7 @@ class LMApi(object):
     def get_admin_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get user  # noqa: E501
 
+        get user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_admin_by_id_with_http_info(id, async_req=True)
@@ -9117,6 +9598,7 @@ class LMApi(object):
     def get_admin_list(self, **kwargs):  # noqa: E501
         """get user list  # noqa: E501
 
+        get user list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_admin_list(async_req=True)
@@ -9144,6 +9626,7 @@ class LMApi(object):
     def get_admin_list_with_http_info(self, **kwargs):  # noqa: E501
         """get user list  # noqa: E501
 
+        get user list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_admin_list_with_http_info(async_req=True)
@@ -9238,6 +9721,7 @@ class LMApi(object):
     def get_alert_by_id(self, id, **kwargs):  # noqa: E501
         """get alert  # noqa: E501
 
+        get alert by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_alert_by_id(id, async_req=True)
@@ -9262,6 +9746,7 @@ class LMApi(object):
     def get_alert_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get alert  # noqa: E501
 
+        get alert by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_alert_by_id_with_http_info(id, async_req=True)
@@ -9349,8 +9834,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_alert_list(self, **kwargs):  # noqa: E501
-        """get alert list  # noqa: E501
+        """Get alert list  # noqa: E501
 
+        Retrieve the list of alerts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_alert_list(async_req=True)
@@ -9373,8 +9859,9 @@ class LMApi(object):
             return data
 
     def get_alert_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get alert list  # noqa: E501
+        """Get alert list  # noqa: E501
 
+        Retrieve the list of alerts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_alert_list_with_http_info(async_req=True)
@@ -9460,6 +9947,7 @@ class LMApi(object):
     def get_alert_list_by_device_group_id(self, id, **kwargs):  # noqa: E501
         """get device group alerts  # noqa: E501
 
+        get device group alerts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_alert_list_by_device_group_id(id, async_req=True)
@@ -9487,6 +9975,7 @@ class LMApi(object):
     def get_alert_list_by_device_group_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get device group alerts  # noqa: E501
 
+        get device group alerts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_alert_list_by_device_group_id_with_http_info(id, async_req=True)
@@ -9585,6 +10074,7 @@ class LMApi(object):
     def get_alert_list_by_device_id(self, id, **kwargs):  # noqa: E501
         """get alerts  # noqa: E501
 
+        get alerts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_alert_list_by_device_id(id, async_req=True)
@@ -9592,9 +10082,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param bool need_message:
         :param str custom_columns:
         :param str bound:
@@ -9616,6 +10106,7 @@ class LMApi(object):
     def get_alert_list_by_device_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get alerts  # noqa: E501
 
+        get alerts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_alert_list_by_device_id_with_http_info(id, async_req=True)
@@ -9623,9 +10114,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param bool need_message:
         :param str custom_columns:
         :param str bound:
@@ -9638,7 +10129,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'netflow_filter', 'need_message', 'custom_columns', 'bound', 'fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['id', 'end', 'netflow_filter', 'start', 'need_message', 'custom_columns', 'bound', 'fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9666,12 +10157,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'need_message' in params:
             query_params.append(('needMessage', params['need_message']))  # noqa: E501
         if 'custom_columns' in params:
@@ -9726,6 +10217,7 @@ class LMApi(object):
     def get_alert_rule_by_id(self, id, **kwargs):  # noqa: E501
         """get alert rule by id  # noqa: E501
 
+        get alert rule by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_alert_rule_by_id(id, async_req=True)
@@ -9748,6 +10240,7 @@ class LMApi(object):
     def get_alert_rule_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get alert rule by id  # noqa: E501
 
+        get alert rule by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_alert_rule_by_id_with_http_info(id, async_req=True)
@@ -9831,6 +10324,7 @@ class LMApi(object):
     def get_alert_rule_list(self, **kwargs):  # noqa: E501
         """get alert rule list  # noqa: E501
 
+        get alert rule list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_alert_rule_list(async_req=True)
@@ -9855,6 +10349,7 @@ class LMApi(object):
     def get_alert_rule_list_with_http_info(self, **kwargs):  # noqa: E501
         """get alert rule list  # noqa: E501
 
+        get alert rule list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_alert_rule_list_with_http_info(async_req=True)
@@ -9940,6 +10435,7 @@ class LMApi(object):
     def get_all_log_partitions(self, **kwargs):  # noqa: E501
         """Retrieve a list of all log partitions  # noqa: E501
 
+        Retrieve a list of all log partitions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_all_log_partitions(async_req=True)
@@ -9960,6 +10456,7 @@ class LMApi(object):
     def get_all_log_partitions_with_http_info(self, **kwargs):  # noqa: E501
         """Retrieve a list of all log partitions  # noqa: E501
 
+        Retrieve a list of all log partitions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_all_log_partitions_with_http_info(async_req=True)
@@ -10033,6 +10530,7 @@ class LMApi(object):
     def get_all_sdt_list_by_device_id(self, id, **kwargs):  # noqa: E501
         """get SDTs for a device  # noqa: E501
 
+        get SDTs for a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_all_sdt_list_by_device_id(id, async_req=True)
@@ -10040,9 +10538,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str fields:
         :param int size:
         :param int offset:
@@ -10061,6 +10559,7 @@ class LMApi(object):
     def get_all_sdt_list_by_device_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get SDTs for a device  # noqa: E501
 
+        get SDTs for a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_all_sdt_list_by_device_id_with_http_info(id, async_req=True)
@@ -10068,9 +10567,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str fields:
         :param int size:
         :param int offset:
@@ -10080,7 +10579,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'netflow_filter', 'fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['id', 'end', 'netflow_filter', 'start', 'fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10108,12 +10607,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'fields' in params:
             query_params.append(('fields', params['fields']))  # noqa: E501
         if 'size' in params:
@@ -10162,6 +10661,7 @@ class LMApi(object):
     def get_all_sdt_list_by_website_group_id(self, id, **kwargs):  # noqa: E501
         """get a list of SDTs for a website group (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
 
+        get a list of SDTs for a website group (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_all_sdt_list_by_website_group_id(id, async_req=True)
@@ -10187,6 +10687,7 @@ class LMApi(object):
     def get_all_sdt_list_by_website_group_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get a list of SDTs for a website group (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
 
+        get a list of SDTs for a website group (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_all_sdt_list_by_website_group_id_with_http_info(id, async_req=True)
@@ -10277,8 +10778,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_api_token_list(self, **kwargs):  # noqa: E501
-        """get a list of api tokens across users  # noqa: E501
+        """Get a list of API tokens across users  # noqa: E501
 
+        Retrieve a paginated list of API tokens for all users  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_api_token_list(async_req=True)
@@ -10303,8 +10805,9 @@ class LMApi(object):
             return data
 
     def get_api_token_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get a list of api tokens across users  # noqa: E501
+        """Get a list of API tokens across users  # noqa: E501
 
+        Retrieve a paginated list of API tokens for all users  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_api_token_list_with_http_info(async_req=True)
@@ -10394,8 +10897,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_api_token_list_by_admin_id(self, admin_id, **kwargs):  # noqa: E501
-        """get api tokens for a user  # noqa: E501
+        """Get API tokens for a user  # noqa: E501
 
+        Retrieve a paginated list of API tokens for a specific user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_api_token_list_by_admin_id(admin_id, async_req=True)
@@ -10421,8 +10925,9 @@ class LMApi(object):
             return data
 
     def get_api_token_list_by_admin_id_with_http_info(self, admin_id, **kwargs):  # noqa: E501
-        """get api tokens for a user  # noqa: E501
+        """Get API tokens for a user  # noqa: E501
 
+        Retrieve a paginated list of API tokens for a specific user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_api_token_list_by_admin_id_with_http_info(admin_id, async_req=True)
@@ -10519,8 +11024,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_applies_to_function_by_id(self, id, **kwargs):  # noqa: E501
-        """get applies to function  # noqa: E501
+        """Get applies to function by ID  # noqa: E501
 
+        Retrieve a specific applies to function using its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_applies_to_function_by_id(id, async_req=True)
@@ -10540,8 +11046,9 @@ class LMApi(object):
             return data
 
     def get_applies_to_function_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get applies to function  # noqa: E501
+        """Get applies to function by ID  # noqa: E501
 
+        Retrieve a specific applies to function using its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_applies_to_function_by_id_with_http_info(id, async_req=True)
@@ -10620,8 +11127,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_applies_to_function_list(self, **kwargs):  # noqa: E501
-        """get applies to function list  # noqa: E501
+        """Get applies to function list  # noqa: E501
 
+        Retrieve a paginated list of functions that apply  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_applies_to_function_list(async_req=True)
@@ -10644,8 +11152,9 @@ class LMApi(object):
             return data
 
     def get_applies_to_function_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get applies to function list  # noqa: E501
+        """Get applies to function list  # noqa: E501
 
+        Retrieve a paginated list of functions that apply  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_applies_to_function_list_with_http_info(async_req=True)
@@ -10729,8 +11238,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_associated_device_list_by_data_source_id(self, id, **kwargs):  # noqa: E501
-        """get devices associated with a datasource  # noqa: E501
+        """Get devices associated with a datasource  # noqa: E501
 
+        Retrieves the list of devices associated with a specific datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_associated_device_list_by_data_source_id(id, async_req=True)
@@ -10754,8 +11264,9 @@ class LMApi(object):
             return data
 
     def get_associated_device_list_by_data_source_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get devices associated with a datasource  # noqa: E501
+        """Get devices associated with a datasource  # noqa: E501
 
+        Retrieves the list of devices associated with a specific datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_associated_device_list_by_data_source_id_with_http_info(id, async_req=True)
@@ -10848,6 +11359,7 @@ class LMApi(object):
     def get_audit_log_by_id(self, id, **kwargs):  # noqa: E501
         """Get audit log by id  # noqa: E501
 
+        Retrieve a specific audit log by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_audit_log_by_id(id, async_req=True)
@@ -10869,6 +11381,7 @@ class LMApi(object):
     def get_audit_log_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """Get audit log by id  # noqa: E501
 
+        Retrieve a specific audit log by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_audit_log_by_id_with_http_info(id, async_req=True)
@@ -10949,6 +11462,7 @@ class LMApi(object):
     def get_audit_log_list(self, **kwargs):  # noqa: E501
         """Get audit logs  # noqa: E501
 
+        Retrieve a paginated list of audit logs  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_audit_log_list(async_req=True)
@@ -10974,6 +11488,7 @@ class LMApi(object):
     def get_audit_log_list_with_http_info(self, **kwargs):  # noqa: E501
         """Get audit logs  # noqa: E501
 
+        Retrieve a paginated list of audit logs  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_audit_log_list_with_http_info(async_req=True)
@@ -11062,6 +11577,7 @@ class LMApi(object):
     def get_aws_account_id(self, **kwargs):  # noqa: E501
         """Get AWS account ID  # noqa: E501
 
+        Retrieve the AWS account ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_aws_account_id(async_req=True)
@@ -11082,6 +11598,7 @@ class LMApi(object):
     def get_aws_account_id_with_http_info(self, **kwargs):  # noqa: E501
         """Get AWS account ID  # noqa: E501
 
+        Retrieve the AWS account ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_aws_account_id_with_http_info(async_req=True)
@@ -11155,6 +11672,7 @@ class LMApi(object):
     def get_aws_external_id(self, **kwargs):  # noqa: E501
         """Get AWS external ID  # noqa: E501
 
+        Retrieve the AWS external ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_aws_external_id(async_req=True)
@@ -11175,6 +11693,7 @@ class LMApi(object):
     def get_aws_external_id_with_http_info(self, **kwargs):  # noqa: E501
         """Get AWS external ID  # noqa: E501
 
+        Retrieve the AWS external ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_aws_external_id_with_http_info(async_req=True)
@@ -11248,6 +11767,7 @@ class LMApi(object):
     def get_collector_by_id(self, id, **kwargs):  # noqa: E501
         """get collector  # noqa: E501
 
+        get collector  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_collector_by_id(id, async_req=True)
@@ -11270,6 +11790,7 @@ class LMApi(object):
     def get_collector_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get collector  # noqa: E501
 
+        get collector  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_collector_by_id_with_http_info(id, async_req=True)
@@ -11351,8 +11872,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_collector_group_by_id(self, id, **kwargs):  # noqa: E501
-        """get collector group  # noqa: E501
+        """Get collector group  # noqa: E501
 
+        Retrieve details of a specific collector group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_collector_group_by_id(id, async_req=True)
@@ -11373,8 +11895,9 @@ class LMApi(object):
             return data
 
     def get_collector_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get collector group  # noqa: E501
+        """Get collector group  # noqa: E501
 
+        Retrieve details of a specific collector group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_collector_group_by_id_with_http_info(id, async_req=True)
@@ -11456,8 +11979,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_collector_group_list(self, **kwargs):  # noqa: E501
-        """get collector group list  # noqa: E501
+        """Get collector group list  # noqa: E501
 
+        Retrieve a paginated list of collector groups  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_collector_group_list(async_req=True)
@@ -11480,8 +12004,9 @@ class LMApi(object):
             return data
 
     def get_collector_group_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get collector group list  # noqa: E501
+        """Get collector group list  # noqa: E501
 
+        Retrieve a paginated list of collector groups  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_collector_group_list_with_http_info(async_req=True)
@@ -11567,6 +12092,7 @@ class LMApi(object):
     def get_collector_installer(self, collector_id, os_and_arch, **kwargs):  # noqa: E501
         """get collector installer  # noqa: E501
 
+        get collector installer  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_collector_installer(collector_id, os_and_arch, async_req=True)
@@ -11594,6 +12120,7 @@ class LMApi(object):
     def get_collector_installer_with_http_info(self, collector_id, os_and_arch, **kwargs):  # noqa: E501
         """get collector installer  # noqa: E501
 
+        get collector installer  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_collector_installer_with_http_info(collector_id, os_and_arch, async_req=True)
@@ -11696,6 +12223,7 @@ class LMApi(object):
     def get_collector_list(self, **kwargs):  # noqa: E501
         """get collector list  # noqa: E501
 
+        get collector list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_collector_list(async_req=True)
@@ -11720,6 +12248,7 @@ class LMApi(object):
     def get_collector_list_with_http_info(self, **kwargs):  # noqa: E501
         """get collector list  # noqa: E501
 
+        get collector list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_collector_list_with_http_info(async_req=True)
@@ -11805,6 +12334,7 @@ class LMApi(object):
     def get_collector_version_list(self, **kwargs):  # noqa: E501
         """get collector version list  # noqa: E501
 
+        get collector version list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_collector_version_list(async_req=True)
@@ -11829,6 +12359,7 @@ class LMApi(object):
     def get_collector_version_list_with_http_info(self, **kwargs):  # noqa: E501
         """get collector version list  # noqa: E501
 
+        get collector version list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_collector_version_list_with_http_info(async_req=True)
@@ -11912,8 +12443,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_config_source_by_id(self, id, **kwargs):  # noqa: E501
-        """get config source by id  # noqa: E501
+        """Get config source by ID  # noqa: E501
 
+        Retrieve a config source by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_config_source_by_id(id, async_req=True)
@@ -11934,8 +12466,9 @@ class LMApi(object):
             return data
 
     def get_config_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get config source by id  # noqa: E501
+        """Get config source by ID  # noqa: E501
 
+        Retrieve a config source by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_config_source_by_id_with_http_info(id, async_req=True)
@@ -12017,8 +12550,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_config_source_list(self, **kwargs):  # noqa: E501
-        """get config source list  # noqa: E501
+        """Get config source list  # noqa: E501
 
+        Retrieve a list of config sources  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_config_source_list(async_req=True)
@@ -12042,8 +12576,9 @@ class LMApi(object):
             return data
 
     def get_config_source_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get config source list  # noqa: E501
+        """Get config source list  # noqa: E501
 
+        Retrieve a list of config sources  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_config_source_list_with_http_info(async_req=True)
@@ -12132,6 +12667,7 @@ class LMApi(object):
     def get_contract_info_by_company(self, **kwargs):  # noqa: E501
         """get contract info by company  # noqa: E501
 
+        get contract info by company  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_contract_info_by_company(async_req=True)
@@ -12152,6 +12688,7 @@ class LMApi(object):
     def get_contract_info_by_company_with_http_info(self, **kwargs):  # noqa: E501
         """get contract info by company  # noqa: E501
 
+        get contract info by company  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_contract_info_by_company_with_http_info(async_req=True)
@@ -12225,6 +12762,7 @@ class LMApi(object):
     def get_dashboard_by_id(self, id, **kwargs):  # noqa: E501
         """get dashboard  # noqa: E501
 
+        get dashboard  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dashboard_by_id(id, async_req=True)
@@ -12249,6 +12787,7 @@ class LMApi(object):
     def get_dashboard_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get dashboard  # noqa: E501
 
+        get dashboard  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dashboard_by_id_with_http_info(id, async_req=True)
@@ -12336,8 +12875,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_dashboard_group_by_id(self, id, **kwargs):  # noqa: E501
-        """get dashboard group  # noqa: E501
+        """Get dashboard group by ID  # noqa: E501
 
+        Retrieves a dashboard group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dashboard_group_by_id(id, async_req=True)
@@ -12360,8 +12900,9 @@ class LMApi(object):
             return data
 
     def get_dashboard_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get dashboard group  # noqa: E501
+        """Get dashboard group by ID  # noqa: E501
 
+        Retrieves a dashboard group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dashboard_group_by_id_with_http_info(id, async_req=True)
@@ -12451,6 +12992,7 @@ class LMApi(object):
     def get_dashboard_group_list(self, **kwargs):  # noqa: E501
         """get dashboard group list  # noqa: E501
 
+        get dashboard group list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dashboard_group_list(async_req=True)
@@ -12475,6 +13017,7 @@ class LMApi(object):
     def get_dashboard_group_list_with_http_info(self, **kwargs):  # noqa: E501
         """get dashboard group list  # noqa: E501
 
+        get dashboard group list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dashboard_group_list_with_http_info(async_req=True)
@@ -12558,8 +13101,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_dashboard_list(self, **kwargs):  # noqa: E501
-        """get dashboard list  # noqa: E501
+        """Get dashboard list  # noqa: E501
 
+        Retrieves a list of dashboards  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dashboard_list(async_req=True)
@@ -12582,8 +13126,9 @@ class LMApi(object):
             return data
 
     def get_dashboard_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get dashboard list  # noqa: E501
+        """Get dashboard list  # noqa: E501
 
+        Retrieves a list of dashboards  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_dashboard_list_with_http_info(async_req=True)
@@ -12667,8 +13212,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_data_source_overview_graph_by_id(self, ds_id, id, **kwargs):  # noqa: E501
-        """get datasource overview graph by id  # noqa: E501
+        """Get datasource overview graph by ID  # noqa: E501
 
+        Retrieves a datasource overview graph based on the provided ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_data_source_overview_graph_by_id(ds_id, id, async_req=True)
@@ -12689,8 +13235,9 @@ class LMApi(object):
             return data
 
     def get_data_source_overview_graph_by_id_with_http_info(self, ds_id, id, **kwargs):  # noqa: E501
-        """get datasource overview graph by id  # noqa: E501
+        """Get datasource overview graph by ID  # noqa: E501
 
+        Retrieves a datasource overview graph based on the provided ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_data_source_overview_graph_by_id_with_http_info(ds_id, id, async_req=True)
@@ -12776,8 +13323,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_data_source_overview_graph_list(self, ds_id, **kwargs):  # noqa: E501
-        """get datasource overview graph list  # noqa: E501
+        """Get datasource overview graph list  # noqa: E501
 
+        Retrieves the list of datasource overview graphs  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_data_source_overview_graph_list(ds_id, async_req=True)
@@ -12801,8 +13349,9 @@ class LMApi(object):
             return data
 
     def get_data_source_overview_graph_list_with_http_info(self, ds_id, **kwargs):  # noqa: E501
-        """get datasource overview graph list  # noqa: E501
+        """Get datasource overview graph list  # noqa: E501
 
+        Retrieves the list of datasource overview graphs  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_data_source_overview_graph_list_with_http_info(ds_id, async_req=True)
@@ -12893,8 +13442,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_datasource_by_id(self, id, **kwargs):  # noqa: E501
-        """get datasource by id  # noqa: E501
+        """Get datasource by ID  # noqa: E501
 
+        Retrieves a datasource by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_datasource_by_id(id, async_req=True)
@@ -12916,8 +13466,9 @@ class LMApi(object):
             return data
 
     def get_datasource_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get datasource by id  # noqa: E501
+        """Get datasource by ID  # noqa: E501
 
+        Retrieves a datasource by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_datasource_by_id_with_http_info(id, async_req=True)
@@ -13002,8 +13553,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_datasource_list(self, **kwargs):  # noqa: E501
-        """get datasource list  # noqa: E501
+        """Get datasource list  # noqa: E501
 
+        Retrieves a list of datasources  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_datasource_list(async_req=True)
@@ -13027,8 +13579,9 @@ class LMApi(object):
             return data
 
     def get_datasource_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get datasource list  # noqa: E501
+        """Get datasource list  # noqa: E501
 
+        Retrieves a list of datasources  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_datasource_list_with_http_info(async_req=True)
@@ -13117,6 +13670,7 @@ class LMApi(object):
     def get_debug_command_result(self, id, **kwargs):  # noqa: E501
         """Get the result of a Collector debug command using sessionId  # noqa: E501
 
+        Get the result of a Collector debug command using sessionId  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_debug_command_result(id, async_req=True)
@@ -13139,6 +13693,7 @@ class LMApi(object):
     def get_debug_command_result_with_http_info(self, id, **kwargs):  # noqa: E501
         """Get the result of a Collector debug command using sessionId  # noqa: E501
 
+        Get the result of a Collector debug command using sessionId  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_debug_command_result_with_http_info(id, async_req=True)
@@ -13222,6 +13777,7 @@ class LMApi(object):
     def get_delta_devices(self, delta_id, **kwargs):  # noqa: E501
         """Get delta devices using deltaId  # noqa: E501
 
+        Get delta devices using deltaId  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_delta_devices(delta_id, async_req=True)
@@ -13243,6 +13799,7 @@ class LMApi(object):
     def get_delta_devices_with_http_info(self, delta_id, **kwargs):  # noqa: E501
         """Get delta devices using deltaId  # noqa: E501
 
+        Get delta devices using deltaId  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_delta_devices_with_http_info(delta_id, async_req=True)
@@ -13323,6 +13880,7 @@ class LMApi(object):
     def get_delta_id_with_devices(self, **kwargs):  # noqa: E501
         """Get filter matched devices with new deltaId  # noqa: E501
 
+        Get filter matched devices with new deltaId  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_delta_id_with_devices(async_req=True)
@@ -13344,6 +13902,7 @@ class LMApi(object):
     def get_delta_id_with_devices_with_http_info(self, **kwargs):  # noqa: E501
         """Get filter matched devices with new deltaId  # noqa: E501
 
+        Get filter matched devices with new deltaId  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_delta_id_with_devices_with_http_info(async_req=True)
@@ -13420,6 +13979,7 @@ class LMApi(object):
     def get_device_by_id(self, id, **kwargs):  # noqa: E501
         """get device by id  # noqa: E501
 
+        get device by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_by_id(id, async_req=True)
@@ -13427,9 +13987,10 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
+        :param bool need_stc_grp_and_sorted_cp:
         :param str fields:
         :return: Device
                  If the method is called asynchronously,
@@ -13445,6 +14006,7 @@ class LMApi(object):
     def get_device_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get device by id  # noqa: E501
 
+        get device by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_by_id_with_http_info(id, async_req=True)
@@ -13452,16 +14014,17 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
+        :param bool need_stc_grp_and_sorted_cp:
         :param str fields:
         :return: Device
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'netflow_filter', 'fields']  # noqa: E501
+        all_params = ['id', 'end', 'netflow_filter', 'start', 'need_stc_grp_and_sorted_cp', 'fields']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -13489,12 +14052,14 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
+        if 'need_stc_grp_and_sorted_cp' in params:
+            query_params.append(('needStcGrpAndSortedCP', params['need_stc_grp_and_sorted_cp']))  # noqa: E501
         if 'fields' in params:
             query_params.append(('fields', params['fields']))  # noqa: E501
 
@@ -13534,18 +14099,19 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_device_config_source_config_by_id(self, device_id, hds_id, instance_id, id, **kwargs):  # noqa: E501
+    def get_device_config_source_config_by_id(self, instance_id, device_id, hds_id, id, **kwargs):  # noqa: E501
         """get a config for a device  # noqa: E501
 
+        get a config for a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_config_source_config_by_id(device_id, hds_id, instance_id, id, async_req=True)
+        >>> thread = api.get_device_config_source_config_by_id(instance_id, device_id, hds_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int instance_id: (required)
         :param int device_id: (required)
         :param int hds_id: (required)
-        :param int instance_id: (required)
         :param str id: (required)
         :param str format:
         :param int start_epoch:
@@ -13556,23 +14122,24 @@ class LMApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_device_config_source_config_by_id_with_http_info(device_id, hds_id, instance_id, id, **kwargs)  # noqa: E501
+            return self.get_device_config_source_config_by_id_with_http_info(instance_id, device_id, hds_id, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_device_config_source_config_by_id_with_http_info(device_id, hds_id, instance_id, id, **kwargs)  # noqa: E501
+            (data) = self.get_device_config_source_config_by_id_with_http_info(instance_id, device_id, hds_id, id, **kwargs)  # noqa: E501
             return data
 
-    def get_device_config_source_config_by_id_with_http_info(self, device_id, hds_id, instance_id, id, **kwargs):  # noqa: E501
+    def get_device_config_source_config_by_id_with_http_info(self, instance_id, device_id, hds_id, id, **kwargs):  # noqa: E501
         """get a config for a device  # noqa: E501
 
+        get a config for a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_config_source_config_by_id_with_http_info(device_id, hds_id, instance_id, id, async_req=True)
+        >>> thread = api.get_device_config_source_config_by_id_with_http_info(instance_id, device_id, hds_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int instance_id: (required)
         :param int device_id: (required)
         :param int hds_id: (required)
-        :param int instance_id: (required)
         :param str id: (required)
         :param str format:
         :param int start_epoch:
@@ -13582,7 +14149,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['device_id', 'hds_id', 'instance_id', 'id', 'format', 'start_epoch', 'fields']  # noqa: E501
+        all_params = ['instance_id', 'device_id', 'hds_id', 'id', 'format', 'start_epoch', 'fields']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -13598,6 +14165,10 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'instance_id' is set
+        if ('instance_id' not in params or
+                params['instance_id'] is None):
+            raise ValueError("Missing the required parameter `instance_id` when calling `get_device_config_source_config_by_id`")  # noqa: E501
         # verify the required parameter 'device_id' is set
         if ('device_id' not in params or
                 params['device_id'] is None):
@@ -13606,10 +14177,6 @@ class LMApi(object):
         if ('hds_id' not in params or
                 params['hds_id'] is None):
             raise ValueError("Missing the required parameter `hds_id` when calling `get_device_config_source_config_by_id`")  # noqa: E501
-        # verify the required parameter 'instance_id' is set
-        if ('instance_id' not in params or
-                params['instance_id'] is None):
-            raise ValueError("Missing the required parameter `instance_id` when calling `get_device_config_source_config_by_id`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -13618,12 +14185,12 @@ class LMApi(object):
         collection_formats = {}
 
         path_params = {}
+        if 'instance_id' in params:
+            path_params['instanceId'] = params['instance_id']  # noqa: E501
         if 'device_id' in params:
             path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'hds_id' in params:
             path_params['hdsId'] = params['hds_id']  # noqa: E501
-        if 'instance_id' in params:
-            path_params['instanceId'] = params['instance_id']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -13671,18 +14238,19 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_device_config_source_config_list(self, device_id, hds_id, instance_id, **kwargs):  # noqa: E501
+    def get_device_config_source_config_list(self, instance_id, device_id, hds_id, **kwargs):  # noqa: E501
         """get detailed config information for the instance  # noqa: E501
 
+        get detailed config information for the instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_config_source_config_list(device_id, hds_id, instance_id, async_req=True)
+        >>> thread = api.get_device_config_source_config_list(instance_id, device_id, hds_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int instance_id: (required)
         :param int device_id: (required)
         :param int hds_id: (required)
-        :param int instance_id: (required)
         :param str fields:
         :param int size:
         :param int offset:
@@ -13693,23 +14261,24 @@ class LMApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_device_config_source_config_list_with_http_info(device_id, hds_id, instance_id, **kwargs)  # noqa: E501
+            return self.get_device_config_source_config_list_with_http_info(instance_id, device_id, hds_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_device_config_source_config_list_with_http_info(device_id, hds_id, instance_id, **kwargs)  # noqa: E501
+            (data) = self.get_device_config_source_config_list_with_http_info(instance_id, device_id, hds_id, **kwargs)  # noqa: E501
             return data
 
-    def get_device_config_source_config_list_with_http_info(self, device_id, hds_id, instance_id, **kwargs):  # noqa: E501
+    def get_device_config_source_config_list_with_http_info(self, instance_id, device_id, hds_id, **kwargs):  # noqa: E501
         """get detailed config information for the instance  # noqa: E501
 
+        get detailed config information for the instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_config_source_config_list_with_http_info(device_id, hds_id, instance_id, async_req=True)
+        >>> thread = api.get_device_config_source_config_list_with_http_info(instance_id, device_id, hds_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param int instance_id: (required)
         :param int device_id: (required)
         :param int hds_id: (required)
-        :param int instance_id: (required)
         :param str fields:
         :param int size:
         :param int offset:
@@ -13719,7 +14288,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['device_id', 'hds_id', 'instance_id', 'fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['instance_id', 'device_id', 'hds_id', 'fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -13735,6 +14304,10 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'instance_id' is set
+        if ('instance_id' not in params or
+                params['instance_id'] is None):
+            raise ValueError("Missing the required parameter `instance_id` when calling `get_device_config_source_config_list`")  # noqa: E501
         # verify the required parameter 'device_id' is set
         if ('device_id' not in params or
                 params['device_id'] is None):
@@ -13743,20 +14316,16 @@ class LMApi(object):
         if ('hds_id' not in params or
                 params['hds_id'] is None):
             raise ValueError("Missing the required parameter `hds_id` when calling `get_device_config_source_config_list`")  # noqa: E501
-        # verify the required parameter 'instance_id' is set
-        if ('instance_id' not in params or
-                params['instance_id'] is None):
-            raise ValueError("Missing the required parameter `instance_id` when calling `get_device_config_source_config_list`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'instance_id' in params:
+            path_params['instanceId'] = params['instance_id']  # noqa: E501
         if 'device_id' in params:
             path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'hds_id' in params:
             path_params['hdsId'] = params['hds_id']  # noqa: E501
-        if 'instance_id' in params:
-            path_params['instanceId'] = params['instance_id']  # noqa: E501
 
         query_params = []
         if 'fields' in params:
@@ -13805,8 +14374,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_device_datasource_by_id(self, device_id, id, **kwargs):  # noqa: E501
-        """get device datasource   # noqa: E501
+        """Get device datasource  # noqa: E501
 
+        Retrieve a specific device datasource by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_by_id(device_id, id, async_req=True)
@@ -13828,8 +14398,9 @@ class LMApi(object):
             return data
 
     def get_device_datasource_by_id_with_http_info(self, device_id, id, **kwargs):  # noqa: E501
-        """get device datasource   # noqa: E501
+        """Get device datasource  # noqa: E501
 
+        Retrieve a specific device datasource by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_by_id_with_http_info(device_id, id, async_req=True)
@@ -13918,8 +14489,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_device_datasource_data_by_id(self, device_id, id, **kwargs):  # noqa: E501
-        """get device datasource data   # noqa: E501
+        """Get device datasource data  # noqa: E501
 
+        Retrieve data for a specific device datasource by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_data_by_id(device_id, id, async_req=True)
@@ -13933,7 +14505,7 @@ class LMApi(object):
         :param int end:
         :param str datapoints:
         :param str format:
-        :param str aggregate: the aggregate option
+        :param str aggregate: The aggregate option
         :return: DeviceDataSourceData
                  If the method is called asynchronously,
                  returns the request thread.
@@ -13946,8 +14518,9 @@ class LMApi(object):
             return data
 
     def get_device_datasource_data_by_id_with_http_info(self, device_id, id, **kwargs):  # noqa: E501
-        """get device datasource data   # noqa: E501
+        """Get device datasource data  # noqa: E501
 
+        Retrieve data for a specific device datasource by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_data_by_id_with_http_info(device_id, id, async_req=True)
@@ -13961,7 +14534,7 @@ class LMApi(object):
         :param int end:
         :param str datapoints:
         :param str format:
-        :param str aggregate: the aggregate option
+        :param str aggregate: The aggregate option
         :return: DeviceDataSourceData
                  If the method is called asynchronously,
                  returns the request thread.
@@ -14053,6 +14626,7 @@ class LMApi(object):
     def get_device_datasource_instance_alert_setting_by_id(self, device_id, hds_id, instance_id, id, **kwargs):  # noqa: E501
         """get device instance alert setting  # noqa: E501
 
+        get device instance alert setting  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_alert_setting_by_id(device_id, hds_id, instance_id, id, async_req=True)
@@ -14078,6 +14652,7 @@ class LMApi(object):
     def get_device_datasource_instance_alert_setting_by_id_with_http_info(self, device_id, hds_id, instance_id, id, **kwargs):  # noqa: E501
         """get device instance alert setting  # noqa: E501
 
+        get device instance alert setting  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_alert_setting_by_id_with_http_info(device_id, hds_id, instance_id, id, async_req=True)
@@ -14182,6 +14757,7 @@ class LMApi(object):
     def get_device_datasource_instance_alert_setting_list_of_device(self, device_id, **kwargs):  # noqa: E501
         """get a list of alert settings for a device  # noqa: E501
 
+        get a list of alert settings for a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_alert_setting_list_of_device(device_id, async_req=True)
@@ -14189,9 +14765,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int device_id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param int size:
         :param int offset:
         :return: DeviceDataSourceInstanceAlertSettingPaginationResponse
@@ -14208,6 +14784,7 @@ class LMApi(object):
     def get_device_datasource_instance_alert_setting_list_of_device_with_http_info(self, device_id, **kwargs):  # noqa: E501
         """get a list of alert settings for a device  # noqa: E501
 
+        get a list of alert settings for a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_alert_setting_list_of_device_with_http_info(device_id, async_req=True)
@@ -14215,9 +14792,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int device_id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param int size:
         :param int offset:
         :return: DeviceDataSourceInstanceAlertSettingPaginationResponse
@@ -14225,7 +14802,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['device_id', 'start', 'end', 'netflow_filter', 'size', 'offset']  # noqa: E501
+        all_params = ['device_id', 'end', 'netflow_filter', 'start', 'size', 'offset']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -14253,12 +14830,12 @@ class LMApi(object):
             path_params['deviceId'] = params['device_id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'size' in params:
             query_params.append(('size', params['size']))  # noqa: E501
         if 'offset' in params:
@@ -14303,6 +14880,7 @@ class LMApi(object):
     def get_device_datasource_instance_alert_setting_list_of_dsi(self, device_id, hds_id, instance_id, **kwargs):  # noqa: E501
         """get a list of alert settings for a device datasource instance  # noqa: E501
 
+        get a list of alert settings for a device datasource instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_alert_setting_list_of_dsi(device_id, hds_id, instance_id, async_req=True)
@@ -14328,6 +14906,7 @@ class LMApi(object):
     def get_device_datasource_instance_alert_setting_list_of_dsi_with_http_info(self, device_id, hds_id, instance_id, **kwargs):  # noqa: E501
         """get a list of alert settings for a device datasource instance  # noqa: E501
 
+        get a list of alert settings for a device datasource instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_alert_setting_list_of_dsi_with_http_info(device_id, hds_id, instance_id, async_req=True)
@@ -14426,8 +15005,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_device_datasource_instance_by_id(self, device_id, hds_id, id, **kwargs):  # noqa: E501
-        """get device instance   # noqa: E501
+        """get device instance  # noqa: E501
 
+        get device instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_by_id(device_id, hds_id, id, async_req=True)
@@ -14450,8 +15030,9 @@ class LMApi(object):
             return data
 
     def get_device_datasource_instance_by_id_with_http_info(self, device_id, hds_id, id, **kwargs):  # noqa: E501
-        """get device instance   # noqa: E501
+        """get device instance  # noqa: E501
 
+        get device instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_by_id_with_http_info(device_id, hds_id, id, async_req=True)
@@ -14549,6 +15130,7 @@ class LMApi(object):
     def get_device_datasource_instance_data(self, device_id, hds_id, id, **kwargs):  # noqa: E501
         """get device instance data  # noqa: E501
 
+        get device instance data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_data(device_id, hds_id, id, async_req=True)
@@ -14577,6 +15159,7 @@ class LMApi(object):
     def get_device_datasource_instance_data_with_http_info(self, device_id, hds_id, id, **kwargs):  # noqa: E501
         """get device instance data  # noqa: E501
 
+        get device instance data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_data_with_http_info(device_id, hds_id, id, async_req=True)
@@ -14684,8 +15267,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_device_datasource_instance_graph_data(self, device_id, hds_id, id, graph_id, **kwargs):  # noqa: E501
-        """get device instance graph data   # noqa: E501
+        """get device instance graph data  # noqa: E501
 
+        get device instance graph data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_graph_data(device_id, hds_id, id, graph_id, async_req=True)
@@ -14711,8 +15295,9 @@ class LMApi(object):
             return data
 
     def get_device_datasource_instance_graph_data_with_http_info(self, device_id, hds_id, id, graph_id, **kwargs):  # noqa: E501
-        """get device instance graph data   # noqa: E501
+        """get device instance graph data  # noqa: E501
 
+        get device instance graph data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_graph_data_with_http_info(device_id, hds_id, id, graph_id, async_req=True)
@@ -14820,17 +15405,18 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_device_datasource_instance_group_by_id(self, device_id, device_ds_id, id, **kwargs):  # noqa: E501
-        """get device datasource instance group   # noqa: E501
+    def get_device_datasource_instance_group_by_id(self, device_ds_id, device_id, id, **kwargs):  # noqa: E501
+        """Get device datasource instance group  # noqa: E501
 
+        Retrieve a specific device datasource instance group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_datasource_instance_group_by_id(device_id, device_ds_id, id, async_req=True)
+        >>> thread = api.get_device_datasource_instance_group_by_id(device_ds_id, device_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param int id: (required)
         :param str fields:
         :return: DeviceDataSourceInstanceGroup
@@ -14839,22 +15425,23 @@ class LMApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, **kwargs)  # noqa: E501
+            return self.get_device_datasource_instance_group_by_id_with_http_info(device_ds_id, device_id, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, **kwargs)  # noqa: E501
+            (data) = self.get_device_datasource_instance_group_by_id_with_http_info(device_ds_id, device_id, id, **kwargs)  # noqa: E501
             return data
 
-    def get_device_datasource_instance_group_by_id_with_http_info(self, device_id, device_ds_id, id, **kwargs):  # noqa: E501
-        """get device datasource instance group   # noqa: E501
+    def get_device_datasource_instance_group_by_id_with_http_info(self, device_ds_id, device_id, id, **kwargs):  # noqa: E501
+        """Get device datasource instance group  # noqa: E501
 
+        Retrieve a specific device datasource instance group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, async_req=True)
+        >>> thread = api.get_device_datasource_instance_group_by_id_with_http_info(device_ds_id, device_id, id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param int id: (required)
         :param str fields:
         :return: DeviceDataSourceInstanceGroup
@@ -14862,7 +15449,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['device_id', 'device_ds_id', 'id', 'fields']  # noqa: E501
+        all_params = ['device_ds_id', 'device_id', 'id', 'fields']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -14878,14 +15465,14 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'device_id' is set
-        if ('device_id' not in params or
-                params['device_id'] is None):
-            raise ValueError("Missing the required parameter `device_id` when calling `get_device_datasource_instance_group_by_id`")  # noqa: E501
         # verify the required parameter 'device_ds_id' is set
         if ('device_ds_id' not in params or
                 params['device_ds_id'] is None):
             raise ValueError("Missing the required parameter `device_ds_id` when calling `get_device_datasource_instance_group_by_id`")  # noqa: E501
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `get_device_datasource_instance_group_by_id`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -14894,10 +15481,10 @@ class LMApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'device_id' in params:
-            path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'device_ds_id' in params:
             path_params['deviceDsId'] = params['device_ds_id']  # noqa: E501
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -14941,17 +15528,18 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_device_datasource_instance_group_list(self, device_id, device_ds_id, **kwargs):  # noqa: E501
-        """get device datasource instance group list   # noqa: E501
+    def get_device_datasource_instance_group_list(self, device_ds_id, device_id, **kwargs):  # noqa: E501
+        """Get device datasource instance group list  # noqa: E501
 
+        Retrieve a paginated list of device datasource instance groups  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_datasource_instance_group_list(device_id, device_ds_id, async_req=True)
+        >>> thread = api.get_device_datasource_instance_group_list(device_ds_id, device_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param str fields:
         :param int size:
         :param int offset:
@@ -14962,22 +15550,23 @@ class LMApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_device_datasource_instance_group_list_with_http_info(device_id, device_ds_id, **kwargs)  # noqa: E501
+            return self.get_device_datasource_instance_group_list_with_http_info(device_ds_id, device_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_device_datasource_instance_group_list_with_http_info(device_id, device_ds_id, **kwargs)  # noqa: E501
+            (data) = self.get_device_datasource_instance_group_list_with_http_info(device_ds_id, device_id, **kwargs)  # noqa: E501
             return data
 
-    def get_device_datasource_instance_group_list_with_http_info(self, device_id, device_ds_id, **kwargs):  # noqa: E501
-        """get device datasource instance group list   # noqa: E501
+    def get_device_datasource_instance_group_list_with_http_info(self, device_ds_id, device_id, **kwargs):  # noqa: E501
+        """Get device datasource instance group list  # noqa: E501
 
+        Retrieve a paginated list of device datasource instance groups  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_datasource_instance_group_list_with_http_info(device_id, device_ds_id, async_req=True)
+        >>> thread = api.get_device_datasource_instance_group_list_with_http_info(device_ds_id, device_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param str fields:
         :param int size:
         :param int offset:
@@ -14987,7 +15576,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['device_id', 'device_ds_id', 'fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['device_ds_id', 'device_id', 'fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -15003,22 +15592,22 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'device_id' is set
-        if ('device_id' not in params or
-                params['device_id'] is None):
-            raise ValueError("Missing the required parameter `device_id` when calling `get_device_datasource_instance_group_list`")  # noqa: E501
         # verify the required parameter 'device_ds_id' is set
         if ('device_ds_id' not in params or
                 params['device_ds_id'] is None):
             raise ValueError("Missing the required parameter `device_ds_id` when calling `get_device_datasource_instance_group_list`")  # noqa: E501
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `get_device_datasource_instance_group_list`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'device_id' in params:
-            path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'device_ds_id' in params:
             path_params['deviceDsId'] = params['device_ds_id']  # noqa: E501
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
 
         query_params = []
         if 'fields' in params:
@@ -15066,17 +15655,18 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_device_datasource_instance_group_overview_graph_data(self, device_id, device_ds_id, dsig_id, ograph_id, **kwargs):  # noqa: E501
-        """get device instance group overview graph data   # noqa: E501
+    def get_device_datasource_instance_group_overview_graph_data(self, device_ds_id, device_id, dsig_id, ograph_id, **kwargs):  # noqa: E501
+        """Get device instance group overview graph data  # noqa: E501
 
+        Retrieve graph data for the overview of a device instance group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_datasource_instance_group_overview_graph_data(device_id, device_ds_id, dsig_id, ograph_id, async_req=True)
+        >>> thread = api.get_device_datasource_instance_group_overview_graph_data(device_ds_id, device_id, dsig_id, ograph_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param int dsig_id: (required)
         :param int ograph_id: (required)
         :param int start:
@@ -15088,22 +15678,23 @@ class LMApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_device_datasource_instance_group_overview_graph_data_with_http_info(device_id, device_ds_id, dsig_id, ograph_id, **kwargs)  # noqa: E501
+            return self.get_device_datasource_instance_group_overview_graph_data_with_http_info(device_ds_id, device_id, dsig_id, ograph_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_device_datasource_instance_group_overview_graph_data_with_http_info(device_id, device_ds_id, dsig_id, ograph_id, **kwargs)  # noqa: E501
+            (data) = self.get_device_datasource_instance_group_overview_graph_data_with_http_info(device_ds_id, device_id, dsig_id, ograph_id, **kwargs)  # noqa: E501
             return data
 
-    def get_device_datasource_instance_group_overview_graph_data_with_http_info(self, device_id, device_ds_id, dsig_id, ograph_id, **kwargs):  # noqa: E501
-        """get device instance group overview graph data   # noqa: E501
+    def get_device_datasource_instance_group_overview_graph_data_with_http_info(self, device_ds_id, device_id, dsig_id, ograph_id, **kwargs):  # noqa: E501
+        """Get device instance group overview graph data  # noqa: E501
 
+        Retrieve graph data for the overview of a device instance group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_device_datasource_instance_group_overview_graph_data_with_http_info(device_id, device_ds_id, dsig_id, ograph_id, async_req=True)
+        >>> thread = api.get_device_datasource_instance_group_overview_graph_data_with_http_info(device_ds_id, device_id, dsig_id, ograph_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param int dsig_id: (required)
         :param int ograph_id: (required)
         :param int start:
@@ -15114,7 +15705,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['device_id', 'device_ds_id', 'dsig_id', 'ograph_id', 'start', 'end', 'format']  # noqa: E501
+        all_params = ['device_ds_id', 'device_id', 'dsig_id', 'ograph_id', 'start', 'end', 'format']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -15130,14 +15721,14 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'device_id' is set
-        if ('device_id' not in params or
-                params['device_id'] is None):
-            raise ValueError("Missing the required parameter `device_id` when calling `get_device_datasource_instance_group_overview_graph_data`")  # noqa: E501
         # verify the required parameter 'device_ds_id' is set
         if ('device_ds_id' not in params or
                 params['device_ds_id'] is None):
             raise ValueError("Missing the required parameter `device_ds_id` when calling `get_device_datasource_instance_group_overview_graph_data`")  # noqa: E501
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `get_device_datasource_instance_group_overview_graph_data`")  # noqa: E501
         # verify the required parameter 'dsig_id' is set
         if ('dsig_id' not in params or
                 params['dsig_id'] is None):
@@ -15150,10 +15741,10 @@ class LMApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'device_id' in params:
-            path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'device_ds_id' in params:
             path_params['deviceDsId'] = params['device_ds_id']  # noqa: E501
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'dsig_id' in params:
             path_params['dsigId'] = params['dsig_id']  # noqa: E501
         if 'ograph_id' in params:
@@ -15206,6 +15797,7 @@ class LMApi(object):
     def get_device_datasource_instance_list(self, device_id, hds_id, **kwargs):  # noqa: E501
         """get device instance list  # noqa: E501
 
+        get device instance list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_list(device_id, hds_id, async_req=True)
@@ -15232,6 +15824,7 @@ class LMApi(object):
     def get_device_datasource_instance_list_with_http_info(self, device_id, hds_id, **kwargs):  # noqa: E501
         """get device instance list  # noqa: E501
 
+        get device instance list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_list_with_http_info(device_id, hds_id, async_req=True)
@@ -15331,6 +15924,7 @@ class LMApi(object):
     def get_device_datasource_instance_sdt_history(self, device_id, hds_id, id, **kwargs):  # noqa: E501
         """get device instance SDT history  # noqa: E501
 
+        get device instance SDT history  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_sdt_history(device_id, hds_id, id, async_req=True)
@@ -15358,6 +15952,7 @@ class LMApi(object):
     def get_device_datasource_instance_sdt_history_with_http_info(self, device_id, hds_id, id, **kwargs):  # noqa: E501
         """get device instance SDT history  # noqa: E501
 
+        get device instance SDT history  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_instance_sdt_history_with_http_info(device_id, hds_id, id, async_req=True)
@@ -15462,8 +16057,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_device_datasource_list(self, device_id, **kwargs):  # noqa: E501
-        """get device datasource list   # noqa: E501
+        """Get device datasource list  # noqa: E501
 
+        Retrieve a paginated list of device datasources  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_list(device_id, async_req=True)
@@ -15487,8 +16083,9 @@ class LMApi(object):
             return data
 
     def get_device_datasource_list_with_http_info(self, device_id, **kwargs):  # noqa: E501
-        """get device datasource list   # noqa: E501
+        """Get device datasource list  # noqa: E501
 
+        Retrieve a paginated list of device datasources  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_datasource_list_with_http_info(device_id, async_req=True)
@@ -15578,9 +16175,113 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_device_eventsource_list(self, device_id, **kwargs):  # noqa: E501
+        """Get device eventsource list  # noqa: E501
+
+        Retrieve a paginated list of device eventsources  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_device_eventsource_list(device_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int device_id: (required)
+        :return: RestDeviceEventsourcePaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_device_eventsource_list_with_http_info(device_id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_device_eventsource_list_with_http_info(device_id, **kwargs)  # noqa: E501
+            return data
+
+    def get_device_eventsource_list_with_http_info(self, device_id, **kwargs):  # noqa: E501
+        """Get device eventsource list  # noqa: E501
+
+        Retrieve a paginated list of device eventsources  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_device_eventsource_list_with_http_info(device_id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int device_id: (required)
+        :return: RestDeviceEventsourcePaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['device_id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_device_eventsource_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `get_device_eventsource_list`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'RestDeviceEventsourcePaginationResponse'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/device/devices/{deviceId}/deviceeventsources', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def get_device_group_by_id(self, id, **kwargs):  # noqa: E501
         """get device group  # noqa: E501
 
+        get device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_by_id(id, async_req=True)
@@ -15603,6 +16304,7 @@ class LMApi(object):
     def get_device_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get device group  # noqa: E501
 
+        get device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_by_id_with_http_info(id, async_req=True)
@@ -15686,6 +16388,7 @@ class LMApi(object):
     def get_device_group_cluster_alert_conf_by_id(self, device_group_id, id, **kwargs):  # noqa: E501
         """Get cluster alert configuration by id  # noqa: E501
 
+        Get cluster alert configuration by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_cluster_alert_conf_by_id(device_group_id, id, async_req=True)
@@ -15708,6 +16411,7 @@ class LMApi(object):
     def get_device_group_cluster_alert_conf_by_id_with_http_info(self, device_group_id, id, **kwargs):  # noqa: E501
         """Get cluster alert configuration by id  # noqa: E501
 
+        Get cluster alert configuration by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_cluster_alert_conf_by_id_with_http_info(device_group_id, id, async_req=True)
@@ -15795,6 +16499,7 @@ class LMApi(object):
     def get_device_group_cluster_alert_conf_list(self, device_group_id, **kwargs):  # noqa: E501
         """get a list of cluster alert configurations for a device group  # noqa: E501
 
+        get a list of cluster alert configurations for a device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_cluster_alert_conf_list(device_group_id, async_req=True)
@@ -15820,6 +16525,7 @@ class LMApi(object):
     def get_device_group_cluster_alert_conf_list_with_http_info(self, device_group_id, **kwargs):  # noqa: E501
         """get a list of cluster alert configurations for a device group  # noqa: E501
 
+        get a list of cluster alert configurations for a device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_cluster_alert_conf_list_with_http_info(device_group_id, async_req=True)
@@ -15910,8 +16616,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_device_group_datasource_alert_setting(self, device_group_id, ds_id, **kwargs):  # noqa: E501
-        """get device group datasource alert setting   # noqa: E501
+        """Get device group datasource alert setting  # noqa: E501
 
+        Retrieve the alert setting for a specific device group datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_datasource_alert_setting(device_group_id, ds_id, async_req=True)
@@ -15933,8 +16640,9 @@ class LMApi(object):
             return data
 
     def get_device_group_datasource_alert_setting_with_http_info(self, device_group_id, ds_id, **kwargs):  # noqa: E501
-        """get device group datasource alert setting   # noqa: E501
+        """Get device group datasource alert setting  # noqa: E501
 
+        Retrieve the alert setting for a specific device group datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_datasource_alert_setting_with_http_info(device_group_id, ds_id, async_req=True)
@@ -16025,6 +16733,7 @@ class LMApi(object):
     def get_device_group_datasource_by_id(self, device_group_id, id, **kwargs):  # noqa: E501
         """get device group datasource  # noqa: E501
 
+        get device group datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_datasource_by_id(device_group_id, id, async_req=True)
@@ -16048,6 +16757,7 @@ class LMApi(object):
     def get_device_group_datasource_by_id_with_http_info(self, device_group_id, id, **kwargs):  # noqa: E501
         """get device group datasource  # noqa: E501
 
+        get device group datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_datasource_by_id_with_http_info(device_group_id, id, async_req=True)
@@ -16138,6 +16848,7 @@ class LMApi(object):
     def get_device_group_datasource_list(self, device_group_id, **kwargs):  # noqa: E501
         """get device group datasource list  # noqa: E501
 
+        get device group datasource list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_datasource_list(device_group_id, async_req=True)
@@ -16164,6 +16875,7 @@ class LMApi(object):
     def get_device_group_datasource_list_with_http_info(self, device_group_id, **kwargs):  # noqa: E501
         """get device group datasource list  # noqa: E501
 
+        get device group datasource list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_datasource_list_with_http_info(device_group_id, async_req=True)
@@ -16259,6 +16971,7 @@ class LMApi(object):
     def get_device_group_list(self, **kwargs):  # noqa: E501
         """get device group list  # noqa: E501
 
+        get device group list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_list(async_req=True)
@@ -16283,6 +16996,7 @@ class LMApi(object):
     def get_device_group_list_with_http_info(self, **kwargs):  # noqa: E501
         """get device group list  # noqa: E501
 
+        get device group list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_list_with_http_info(async_req=True)
@@ -16366,8 +17080,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_device_group_property_by_name(self, gid, name, **kwargs):  # noqa: E501
-        """get device group property by name  # noqa: E501
+        """Get device group property by name  # noqa: E501
 
+        Retrieve a specific device group property by its name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_property_by_name(gid, name, async_req=True)
@@ -16389,8 +17104,9 @@ class LMApi(object):
             return data
 
     def get_device_group_property_by_name_with_http_info(self, gid, name, **kwargs):  # noqa: E501
-        """get device group property by name  # noqa: E501
+        """Get device group property by name  # noqa: E501
 
+        Retrieve a specific device group property by its name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_property_by_name_with_http_info(gid, name, async_req=True)
@@ -16479,8 +17195,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_device_group_property_list(self, gid, **kwargs):  # noqa: E501
-        """get device group properties  # noqa: E501
+        """Get device group properties  # noqa: E501
 
+        Retrieve a paginated list of properties for a specific device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_property_list(gid, async_req=True)
@@ -16504,8 +17221,9 @@ class LMApi(object):
             return data
 
     def get_device_group_property_list_with_http_info(self, gid, **kwargs):  # noqa: E501
-        """get device group properties  # noqa: E501
+        """Get device group properties  # noqa: E501
 
+        Retrieve a paginated list of properties for a specific device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_property_list_with_http_info(gid, async_req=True)
@@ -16598,6 +17316,7 @@ class LMApi(object):
     def get_device_group_sdt_list(self, id, **kwargs):  # noqa: E501
         """get device group SDTs  # noqa: E501
 
+        get device group SDTs  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_sdt_list(id, async_req=True)
@@ -16623,6 +17342,7 @@ class LMApi(object):
     def get_device_group_sdt_list_with_http_info(self, id, **kwargs):  # noqa: E501
         """get device group SDTs  # noqa: E501
 
+        get device group SDTs  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_group_sdt_list_with_http_info(id, async_req=True)
@@ -16715,6 +17435,7 @@ class LMApi(object):
     def get_device_instance_graph_data_only_by_instance_id(self, instance_id, graph_id, **kwargs):  # noqa: E501
         """get device instance data  # noqa: E501
 
+        get device instance data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_instance_graph_data_only_by_instance_id(instance_id, graph_id, async_req=True)
@@ -16740,6 +17461,7 @@ class LMApi(object):
     def get_device_instance_graph_data_only_by_instance_id_with_http_info(self, instance_id, graph_id, **kwargs):  # noqa: E501
         """get device instance data  # noqa: E501
 
+        get device instance data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_instance_graph_data_only_by_instance_id_with_http_info(instance_id, graph_id, async_req=True)
@@ -16836,6 +17558,7 @@ class LMApi(object):
     def get_device_instance_list(self, id, **kwargs):  # noqa: E501
         """get device instance list  # noqa: E501
 
+        get device instance list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_instance_list(id, async_req=True)
@@ -16843,9 +17566,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str fields:
         :param int size:
         :param int offset:
@@ -16864,6 +17587,7 @@ class LMApi(object):
     def get_device_instance_list_with_http_info(self, id, **kwargs):  # noqa: E501
         """get device instance list  # noqa: E501
 
+        get device instance list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_instance_list_with_http_info(id, async_req=True)
@@ -16871,9 +17595,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str fields:
         :param int size:
         :param int offset:
@@ -16883,7 +17607,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'netflow_filter', 'fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['id', 'end', 'netflow_filter', 'start', 'fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -16911,12 +17635,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'fields' in params:
             query_params.append(('fields', params['fields']))  # noqa: E501
         if 'size' in params:
@@ -16963,17 +17687,18 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_device_list(self, **kwargs):  # noqa: E501
-        """get device list  # noqa: E501
+        """Get device list  # noqa: E501
 
+        Retrieve a paginated list of devices  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_list(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param bool include_deleted_resources:
         :param str fields:
         :param int size:
@@ -16991,17 +17716,18 @@ class LMApi(object):
             return data
 
     def get_device_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get device list  # noqa: E501
+        """Get device list  # noqa: E501
 
+        Retrieve a paginated list of devices  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_list_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param bool include_deleted_resources:
         :param str fields:
         :param int size:
@@ -17012,7 +17738,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['start', 'end', 'netflow_filter', 'include_deleted_resources', 'fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['end', 'netflow_filter', 'start', 'include_deleted_resources', 'fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -17034,12 +17760,12 @@ class LMApi(object):
         path_params = {}
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'include_deleted_resources' in params:
             query_params.append(('includeDeletedResources', params['include_deleted_resources']))  # noqa: E501
         if 'fields' in params:
@@ -17088,8 +17814,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_device_property_by_name(self, device_id, name, **kwargs):  # noqa: E501
-        """get device property by name  # noqa: E501
+        """Get device property by name  # noqa: E501
 
+        Retrieve a specific device property by its name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_property_by_name(device_id, name, async_req=True)
@@ -17111,8 +17838,9 @@ class LMApi(object):
             return data
 
     def get_device_property_by_name_with_http_info(self, device_id, name, **kwargs):  # noqa: E501
-        """get device property by name  # noqa: E501
+        """Get device property by name  # noqa: E501
 
+        Retrieve a specific device property by its name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_property_by_name_with_http_info(device_id, name, async_req=True)
@@ -17201,8 +17929,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_device_property_list(self, device_id, **kwargs):  # noqa: E501
-        """get device properties  # noqa: E501
+        """Get device properties  # noqa: E501
 
+        Retrieve a paginated list of properties for a specific device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_property_list(device_id, async_req=True)
@@ -17226,8 +17955,9 @@ class LMApi(object):
             return data
 
     def get_device_property_list_with_http_info(self, device_id, **kwargs):  # noqa: E501
-        """get device properties  # noqa: E501
+        """Get device properties  # noqa: E501
 
+        Retrieve a paginated list of properties for a specific device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_device_property_list_with_http_info(device_id, async_req=True)
@@ -17317,9 +18047,212 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_escalation_chain_by_id(self, id, **kwargs):  # noqa: E501
-        """get escalation chain by id  # noqa: E501
+    def get_diagnostic_sources_by_id(self, id, **kwargs):  # noqa: E501
+        """Get diagnostics sources by ID  # noqa: E501
 
+        Retrieves a diagnostics source by its ID  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_diagnostic_sources_by_id(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :param str format:
+        :return: DiagnosticsSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_diagnostic_sources_by_id_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_diagnostic_sources_by_id_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def get_diagnostic_sources_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Get diagnostics sources by ID  # noqa: E501
+
+        Retrieves a diagnostics source by its ID  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_diagnostic_sources_by_id_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :param str format:
+        :return: DiagnosticsSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'format']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_diagnostic_sources_by_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_diagnostic_sources_by_id`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+        if 'format' in params:
+            query_params.append(('format', params['format']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'DiagnosticsSource'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/diagnosticsources/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_diagnostic_sources_list(self, **kwargs):  # noqa: E501
+        """Get diagnostics sources list  # noqa: E501
+
+        Retrieves a list of diagnostics sources  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_diagnostic_sources_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: DiagnosticsourcePaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_diagnostic_sources_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_diagnostic_sources_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_diagnostic_sources_list_with_http_info(self, **kwargs):  # noqa: E501
+        """Get diagnostics sources list  # noqa: E501
+
+        Retrieves a list of diagnostics sources  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_diagnostic_sources_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: DiagnosticsourcePaginationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_diagnostic_sources_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'DiagnosticsourcePaginationResponse'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/diagnosticsources', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_escalation_chain_by_id(self, id, **kwargs):  # noqa: E501
+        """Get escalation chain by ID  # noqa: E501
+
+        Retrieve details of a specific escalation chain by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_escalation_chain_by_id(id, async_req=True)
@@ -17340,8 +18273,9 @@ class LMApi(object):
             return data
 
     def get_escalation_chain_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get escalation chain by id  # noqa: E501
+        """Get escalation chain by ID  # noqa: E501
 
+        Retrieve details of a specific escalation chain by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_escalation_chain_by_id_with_http_info(id, async_req=True)
@@ -17423,8 +18357,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_escalation_chain_list(self, **kwargs):  # noqa: E501
-        """get escalation chain list  # noqa: E501
+        """Get escalation chain list  # noqa: E501
 
+        Retrieve a paginated list of escalation chains  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_escalation_chain_list(async_req=True)
@@ -17447,8 +18382,9 @@ class LMApi(object):
             return data
 
     def get_escalation_chain_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get escalation chain list  # noqa: E501
+        """Get escalation chain list  # noqa: E501
 
+        Retrieve a paginated list of escalation chains  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_escalation_chain_list_with_http_info(async_req=True)
@@ -17532,8 +18468,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_event_source_by_id(self, id, **kwargs):  # noqa: E501
-        """get eventSource by id  # noqa: E501
+        """Get event source by ID  # noqa: E501
 
+        Retrieves an event source by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_event_source_by_id(id, async_req=True)
@@ -17554,8 +18491,9 @@ class LMApi(object):
             return data
 
     def get_event_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get eventSource by id  # noqa: E501
+        """Get event source by ID  # noqa: E501
 
+        Retrieves an event source by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_event_source_by_id_with_http_info(id, async_req=True)
@@ -17637,8 +18575,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_event_source_list(self, **kwargs):  # noqa: E501
-        """get eventSource list  # noqa: E501
+        """Get event source list  # noqa: E501
 
+        Retrieves the list of event sources  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_event_source_list(async_req=True)
@@ -17662,8 +18601,9 @@ class LMApi(object):
             return data
 
     def get_event_source_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get eventSource list  # noqa: E501
+        """Get event source list  # noqa: E501
 
+        Retrieves the list of event sources  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_event_source_list_with_http_info(async_req=True)
@@ -17752,6 +18692,7 @@ class LMApi(object):
     def get_external_api_stats(self, **kwargs):  # noqa: E501
         """get external api stats info  # noqa: E501
 
+        get external api stats info  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_external_api_stats(async_req=True)
@@ -17772,6 +18713,7 @@ class LMApi(object):
     def get_external_api_stats_with_http_info(self, **kwargs):  # noqa: E501
         """get external api stats info  # noqa: E501
 
+        get external api stats info  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_external_api_stats_with_http_info(async_req=True)
@@ -17845,6 +18787,7 @@ class LMApi(object):
     def get_immediate_device_list_by_device_group_id(self, id, **kwargs):  # noqa: E501
         """get immediate devices under group  # noqa: E501
 
+        get immediate devices under group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_immediate_device_list_by_device_group_id(id, async_req=True)
@@ -17870,6 +18813,7 @@ class LMApi(object):
     def get_immediate_device_list_by_device_group_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get immediate devices under group  # noqa: E501
 
+        get immediate devices under group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_immediate_device_list_by_device_group_id_with_http_info(id, async_req=True)
@@ -17962,6 +18906,7 @@ class LMApi(object):
     def get_immediate_website_list_by_website_group_id(self, id, **kwargs):  # noqa: E501
         """get a list of websites for a group (Response may contain extra fields depending upon the type of check { PingCheck | WebCheck} being added)  # noqa: E501
 
+        get a list of websites for a group (Response may contain extra fields depending upon the type of check { PingCheck | WebCheck} being added)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_immediate_website_list_by_website_group_id(id, async_req=True)
@@ -17987,6 +18932,7 @@ class LMApi(object):
     def get_immediate_website_list_by_website_group_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get a list of websites for a group (Response may contain extra fields depending upon the type of check { PingCheck | WebCheck} being added)  # noqa: E501
 
+        get a list of websites for a group (Response may contain extra fields depending upon the type of check { PingCheck | WebCheck} being added)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_immediate_website_list_by_website_group_id_with_http_info(id, async_req=True)
@@ -18077,8 +19023,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_integration_audit_logs(self, **kwargs):  # noqa: E501
-        """get integration audit logs list  # noqa: E501
+        """Get integration audit logs list  # noqa: E501
 
+        Retrieves the list of integration audit logs  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_integration_audit_logs(async_req=True)
@@ -18098,8 +19045,9 @@ class LMApi(object):
             return data
 
     def get_integration_audit_logs_with_http_info(self, **kwargs):  # noqa: E501
-        """get integration audit logs list  # noqa: E501
+        """Get integration audit logs list  # noqa: E501
 
+        Retrieves the list of integration audit logs  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_integration_audit_logs_with_http_info(async_req=True)
@@ -18174,8 +19122,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_job_monitor_by_id(self, id, **kwargs):  # noqa: E501
-        """Get JobMonitor by id  # noqa: E501
+        """Get JobMonitor by ID  # noqa: E501
 
+        Retrieve a specific JobMonitor using its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_job_monitor_by_id(id, async_req=True)
@@ -18196,8 +19145,9 @@ class LMApi(object):
             return data
 
     def get_job_monitor_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """Get JobMonitor by id  # noqa: E501
+        """Get JobMonitor by ID  # noqa: E501
 
+        Retrieve a specific JobMonitor using its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_job_monitor_by_id_with_http_info(id, async_req=True)
@@ -18281,6 +19231,7 @@ class LMApi(object):
     def get_job_monitor_list(self, **kwargs):  # noqa: E501
         """Get JobMonitor List  # noqa: E501
 
+        Retrieve a paginated list of Job Monitors  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_job_monitor_list(async_req=True)
@@ -18302,6 +19253,7 @@ class LMApi(object):
     def get_job_monitor_list_with_http_info(self, **kwargs):  # noqa: E501
         """Get JobMonitor List  # noqa: E501
 
+        Retrieve a paginated list of Job Monitors  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_job_monitor_list_with_http_info(async_req=True)
@@ -18376,8 +19328,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_log_source_by_id(self, id, **kwargs):  # noqa: E501
-        """get log source   # noqa: E501
+        """Get log source  # noqa: E501
 
+        Retrieves a specific log source by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_log_source_by_id(id, async_req=True)
@@ -18398,8 +19351,9 @@ class LMApi(object):
             return data
 
     def get_log_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get log source   # noqa: E501
+        """Get log source  # noqa: E501
 
+        Retrieves a specific log source by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_log_source_by_id_with_http_info(id, async_req=True)
@@ -18481,8 +19435,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_log_source_list(self, **kwargs):  # noqa: E501
-        """get log source list  # noqa: E501
+        """Get log source list  # noqa: E501
 
+        Retrieves a list of log sources  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_log_source_list(async_req=True)
@@ -18502,8 +19457,9 @@ class LMApi(object):
             return data
 
     def get_log_source_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get log source list  # noqa: E501
+        """Get log source list  # noqa: E501
 
+        Retrieves a list of log sources  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_log_source_list_with_http_info(async_req=True)
@@ -18577,9 +19533,105 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_metrics_usage(self, **kwargs):  # noqa: E501
-        """get metrics usage  # noqa: E501
+    def get_metrics_summary(self, **kwargs):  # noqa: E501
+        """get metrics usage with company settings summary  # noqa: E501
 
+        get metrics usage with company settings summary  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_metrics_summary(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: CompanyMetricsSummary
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_metrics_summary_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_metrics_summary_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_metrics_summary_with_http_info(self, **kwargs):  # noqa: E501
+        """get metrics usage with company settings summary  # noqa: E501
+
+        get metrics usage with company settings summary  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_metrics_summary_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :return: CompanyMetricsSummary
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_metrics_summary" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'CompanyMetricsSummary'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/metrics/summary', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_metrics_usage(self, **kwargs):  # noqa: E501
+        """Get metrics usage  # noqa: E501
+
+        Retrieve the metrics usage information  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_metrics_usage(async_req=True)
@@ -18598,8 +19650,9 @@ class LMApi(object):
             return data
 
     def get_metrics_usage_with_http_info(self, **kwargs):  # noqa: E501
-        """get metrics usage  # noqa: E501
+        """Get metrics usage  # noqa: E501
 
+        Retrieve the metrics usage information  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_metrics_usage_with_http_info(async_req=True)
@@ -18673,6 +19726,7 @@ class LMApi(object):
     def get_netflow_endpoint_list(self, id, **kwargs):  # noqa: E501
         """get netflow endpoints  # noqa: E501
 
+        get netflow endpoints  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_netflow_endpoint_list(id, async_req=True)
@@ -18680,9 +19734,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str port:
         :param str fields:
         :param int size:
@@ -18702,6 +19756,7 @@ class LMApi(object):
     def get_netflow_endpoint_list_with_http_info(self, id, **kwargs):  # noqa: E501
         """get netflow endpoints  # noqa: E501
 
+        get netflow endpoints  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_netflow_endpoint_list_with_http_info(id, async_req=True)
@@ -18709,9 +19764,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str port:
         :param str fields:
         :param int size:
@@ -18722,7 +19777,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'netflow_filter', 'port', 'fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['id', 'end', 'netflow_filter', 'start', 'port', 'fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -18750,12 +19805,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'port' in params:
             query_params.append(('port', params['port']))  # noqa: E501
         if 'fields' in params:
@@ -18806,6 +19861,7 @@ class LMApi(object):
     def get_netflow_flow_list(self, id, **kwargs):  # noqa: E501
         """get netflow flows  # noqa: E501
 
+        get netflow flows  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_netflow_flow_list(id, async_req=True)
@@ -18813,9 +19869,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str fields:
         :param int size:
         :param int offset:
@@ -18834,6 +19890,7 @@ class LMApi(object):
     def get_netflow_flow_list_with_http_info(self, id, **kwargs):  # noqa: E501
         """get netflow flows  # noqa: E501
 
+        get netflow flows  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_netflow_flow_list_with_http_info(id, async_req=True)
@@ -18841,9 +19898,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str fields:
         :param int size:
         :param int offset:
@@ -18853,7 +19910,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'netflow_filter', 'fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['id', 'end', 'netflow_filter', 'start', 'fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -18881,12 +19938,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'fields' in params:
             query_params.append(('fields', params['fields']))  # noqa: E501
         if 'size' in params:
@@ -18935,6 +19992,7 @@ class LMApi(object):
     def get_netflow_port_list(self, id, **kwargs):  # noqa: E501
         """get netflow ports  # noqa: E501
 
+        get netflow ports  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_netflow_port_list(id, async_req=True)
@@ -18942,9 +20000,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str ip:
         :param str fields:
         :param int size:
@@ -18964,6 +20022,7 @@ class LMApi(object):
     def get_netflow_port_list_with_http_info(self, id, **kwargs):  # noqa: E501
         """get netflow ports  # noqa: E501
 
+        get netflow ports  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_netflow_port_list_with_http_info(id, async_req=True)
@@ -18971,9 +20030,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str ip:
         :param str fields:
         :param int size:
@@ -18984,7 +20043,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'netflow_filter', 'ip', 'fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['id', 'end', 'netflow_filter', 'start', 'ip', 'fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -19012,12 +20071,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'ip' in params:
             query_params.append(('ip', params['ip']))  # noqa: E501
         if 'fields' in params:
@@ -19066,8 +20125,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_netscan_by_id(self, id, **kwargs):  # noqa: E501
-        """get netscan by id  # noqa: E501
+        """Get netscan by ID  # noqa: E501
 
+        Retrieve a specific netscan by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_netscan_by_id(id, async_req=True)
@@ -19087,8 +20147,9 @@ class LMApi(object):
             return data
 
     def get_netscan_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get netscan by id  # noqa: E501
+        """Get netscan by ID  # noqa: E501
 
+        Retrieve a specific netscan by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_netscan_by_id_with_http_info(id, async_req=True)
@@ -19167,8 +20228,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_netscan_list(self, **kwargs):  # noqa: E501
-        """get netscan list  # noqa: E501
+        """Get netscan list  # noqa: E501
 
+        Retrieve a list of netscans  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_netscan_list(async_req=True)
@@ -19191,8 +20253,9 @@ class LMApi(object):
             return data
 
     def get_netscan_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get netscan list  # noqa: E501
+        """Get netscan list  # noqa: E501
 
+        Retrieve a list of netscans  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_netscan_list_with_http_info(async_req=True)
@@ -19276,8 +20339,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_oid_by_id(self, id, **kwargs):  # noqa: E501
-        """get OID by id  # noqa: E501
+        """Get OID by ID  # noqa: E501
 
+        Retrieve the OID details by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_oid_by_id(id, async_req=True)
@@ -19297,8 +20361,9 @@ class LMApi(object):
             return data
 
     def get_oid_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get OID by id  # noqa: E501
+        """Get OID by ID  # noqa: E501
 
+        Retrieve the OID details by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_oid_by_id_with_http_info(id, async_req=True)
@@ -19377,8 +20442,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_oid_list(self, **kwargs):  # noqa: E501
-        """get OID's list  # noqa: E501
+        """Get OID's list  # noqa: E501
 
+        Retrieve the list of OIDs  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_oid_list(async_req=True)
@@ -19397,8 +20463,9 @@ class LMApi(object):
             return data
 
     def get_oid_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get OID's list  # noqa: E501
+        """Get OID's list  # noqa: E501
 
+        Retrieve the list of OIDs  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_oid_list_with_http_info(async_req=True)
@@ -19472,6 +20539,7 @@ class LMApi(object):
     def get_ops_note_by_id(self, id, **kwargs):  # noqa: E501
         """get opsnote by id  # noqa: E501
 
+        get opsnote by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ops_note_by_id(id, async_req=True)
@@ -19494,6 +20562,7 @@ class LMApi(object):
     def get_ops_note_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get opsnote by id  # noqa: E501
 
+        get opsnote by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ops_note_by_id_with_http_info(id, async_req=True)
@@ -19577,6 +20646,7 @@ class LMApi(object):
     def get_ops_note_list(self, **kwargs):  # noqa: E501
         """get opsnote list  # noqa: E501
 
+        get opsnote list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ops_note_list(async_req=True)
@@ -19601,6 +20671,7 @@ class LMApi(object):
     def get_ops_note_list_with_http_info(self, **kwargs):  # noqa: E501
         """get opsnote list  # noqa: E501
 
+        get opsnote list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ops_note_list_with_http_info(async_req=True)
@@ -19686,6 +20757,7 @@ class LMApi(object):
     def get_partition_by_id(self, id, **kwargs):  # noqa: E501
         """Retrieve details of a specific log partition  # noqa: E501
 
+        Retrieve details of a specific log partition  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_partition_by_id(id, async_req=True)
@@ -19707,6 +20779,7 @@ class LMApi(object):
     def get_partition_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """Retrieve details of a specific log partition  # noqa: E501
 
+        Retrieve details of a specific log partition  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_partition_by_id_with_http_info(id, async_req=True)
@@ -19785,8 +20858,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_property_rules_by_id(self, id, **kwargs):  # noqa: E501
-        """get property rules by id  # noqa: E501
+        """Get property rules by id  # noqa: E501
 
+        Fetches a property rule by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_property_rules_by_id(id, async_req=True)
@@ -19807,8 +20881,9 @@ class LMApi(object):
             return data
 
     def get_property_rules_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get property rules by id  # noqa: E501
+        """Get property rules by id  # noqa: E501
 
+        Fetches a property rule by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_property_rules_by_id_with_http_info(id, async_req=True)
@@ -19890,8 +20965,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_property_rules_list(self, **kwargs):  # noqa: E501
-        """get property rules list  # noqa: E501
+        """Get property rules list  # noqa: E501
 
+        Fetches a list of property rules  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_property_rules_list(async_req=True)
@@ -19915,8 +20991,9 @@ class LMApi(object):
             return data
 
     def get_property_rules_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get property rules list  # noqa: E501
+        """Get property rules list  # noqa: E501
 
+        Fetches a list of property rules  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_property_rules_list_with_http_info(async_req=True)
@@ -20003,8 +21080,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_recipient_group_by_id(self, id, **kwargs):  # noqa: E501
-        """get recipient group by id  # noqa: E501
+        """Get recipient group by id  # noqa: E501
 
+        Retrieve a specific recipient group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_recipient_group_by_id(id, async_req=True)
@@ -20024,8 +21102,9 @@ class LMApi(object):
             return data
 
     def get_recipient_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get recipient group by id  # noqa: E501
+        """Get recipient group by id  # noqa: E501
 
+        Retrieve a specific recipient group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_recipient_group_by_id_with_http_info(id, async_req=True)
@@ -20104,8 +21183,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_recipient_group_list(self, **kwargs):  # noqa: E501
-        """get recipient group List  # noqa: E501
+        """Get recipient group list  # noqa: E501
 
+        Retrieve a paginated list of recipient groups  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_recipient_group_list(async_req=True)
@@ -20128,8 +21208,9 @@ class LMApi(object):
             return data
 
     def get_recipient_group_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get recipient group List  # noqa: E501
+        """Get recipient group list  # noqa: E501
 
+        Retrieve a paginated list of recipient groups  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_recipient_group_list_with_http_info(async_req=True)
@@ -20212,9 +21293,339 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_report_by_id(self, id, **kwargs):  # noqa: E501
-        """get report by id  # noqa: E501
+    def get_recommendation_by_id(self, id, **kwargs):  # noqa: E501
+        """Get recommendation by ID  # noqa: E501
 
+        Retrieves a recommendation by its ID  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_recommendation_by_id(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: an alphanumeric identifier composed of the recommendation's database ID, the associated resource ID, and the recommendation type, delimited with hyphens, e.g. 123-456-EBS_UNATTACHED (required)
+        :param str fields:
+        :return: RestCloudRecommendationV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_recommendation_by_id_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_recommendation_by_id_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def get_recommendation_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Get recommendation by ID  # noqa: E501
+
+        Retrieves a recommendation by its ID  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_recommendation_by_id_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str id: an alphanumeric identifier composed of the recommendation's database ID, the associated resource ID, and the recommendation type, delimited with hyphens, e.g. 123-456-EBS_UNATTACHED (required)
+        :param str fields:
+        :return: RestCloudRecommendationV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'fields']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_recommendation_by_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_recommendation_by_id`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+        if 'fields' in params:
+            query_params.append(('fields', params['fields']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'RestCloudRecommendationV3'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/cost-optimization/recommendations/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_recommendation_categories_list(self, **kwargs):  # noqa: E501
+        """Get recommendation category list  # noqa: E501
+
+        Retrieves the list of recommendation categories  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_recommendation_categories_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str fields:
+        :param int size:
+        :param int offset:
+        :param str filter:
+        :return: RestCloudRecommendationCategoryV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_recommendation_categories_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_recommendation_categories_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_recommendation_categories_list_with_http_info(self, **kwargs):  # noqa: E501
+        """Get recommendation category list  # noqa: E501
+
+        Retrieves the list of recommendation categories  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_recommendation_categories_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str fields:
+        :param int size:
+        :param int offset:
+        :param str filter:
+        :return: RestCloudRecommendationCategoryV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_recommendation_categories_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'fields' in params:
+            query_params.append(('fields', params['fields']))  # noqa: E501
+        if 'size' in params:
+            query_params.append(('size', params['size']))  # noqa: E501
+        if 'offset' in params:
+            query_params.append(('offset', params['offset']))  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'RestCloudRecommendationCategoryV3'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/cost-optimization/recommendations/categories', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_recommendations_list(self, **kwargs):  # noqa: E501
+        """Get recommendation list  # noqa: E501
+
+        Retrieves a list of recommendations  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_recommendations_list(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str fields:
+        :param int size: The number of recommendations to return. Max permitted value is 500
+        :param int offset:
+        :param str filter: Filtering is available with the : (equals) operator for recommendationStatus and recommendationCategory. Only one value at a time is supported for recommendationCategory, but multiple recommendationStatuses may be filtered on with the | (OR) operator. Also, only the , (AND) relation is supported when combining multiple filters
+        :return: RestCloudRecommendationV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_recommendations_list_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.get_recommendations_list_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def get_recommendations_list_with_http_info(self, **kwargs):  # noqa: E501
+        """Get recommendation list  # noqa: E501
+
+        Retrieves a list of recommendations  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_recommendations_list_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str fields:
+        :param int size: The number of recommendations to return. Max permitted value is 500
+        :param int offset:
+        :param str filter: Filtering is available with the : (equals) operator for recommendationStatus and recommendationCategory. Only one value at a time is supported for recommendationCategory, but multiple recommendationStatuses may be filtered on with the | (OR) operator. Also, only the , (AND) relation is supported when combining multiple filters
+        :return: RestCloudRecommendationV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_recommendations_list" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'fields' in params:
+            query_params.append(('fields', params['fields']))  # noqa: E501
+        if 'size' in params:
+            query_params.append(('size', params['size']))  # noqa: E501
+        if 'offset' in params:
+            query_params.append(('offset', params['offset']))  # noqa: E501
+        if 'filter' in params:
+            query_params.append(('filter', params['filter']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'RestCloudRecommendationV3'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/cost-optimization/recommendations', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_report_by_id(self, id, **kwargs):  # noqa: E501
+        """Get report by ID  # noqa: E501
+
+        Retrieve the details of a specific report by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_report_by_id(id, async_req=True)
@@ -20235,8 +21646,9 @@ class LMApi(object):
             return data
 
     def get_report_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get report by id  # noqa: E501
+        """Get report by ID  # noqa: E501
 
+        Retrieve the details of a specific report by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_report_by_id_with_http_info(id, async_req=True)
@@ -20318,8 +21730,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_report_group_by_id(self, id, **kwargs):  # noqa: E501
-        """get report group by id  # noqa: E501
+        """Get report group by id  # noqa: E501
 
+        Retrieve a specific report group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_report_group_by_id(id, async_req=True)
@@ -20339,8 +21752,9 @@ class LMApi(object):
             return data
 
     def get_report_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get report group by id  # noqa: E501
+        """Get report group by id  # noqa: E501
 
+        Retrieve a specific report group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_report_group_by_id_with_http_info(id, async_req=True)
@@ -20419,8 +21833,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_report_group_list(self, **kwargs):  # noqa: E501
-        """get report group list  # noqa: E501
+        """Get report group list  # noqa: E501
 
+        Retrieve a paginated list of report groups  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_report_group_list(async_req=True)
@@ -20443,8 +21858,9 @@ class LMApi(object):
             return data
 
     def get_report_group_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get report group list  # noqa: E501
+        """Get report group list  # noqa: E501
 
+        Retrieve a paginated list of report groups  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_report_group_list_with_http_info(async_req=True)
@@ -20528,8 +21944,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_report_list(self, **kwargs):  # noqa: E501
-        """get report list  # noqa: E501
+        """Get report list  # noqa: E501
 
+        Retrieve a paginated list of reports  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_report_list(async_req=True)
@@ -20553,8 +21970,9 @@ class LMApi(object):
             return data
 
     def get_report_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get report list  # noqa: E501
+        """Get report list  # noqa: E501
 
+        Retrieve a paginated list of reports  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_report_list_with_http_info(async_req=True)
@@ -20643,6 +22061,7 @@ class LMApi(object):
     def get_retention_list(self, **kwargs):  # noqa: E501
         """Retrieve the list of log retentions  # noqa: E501
 
+        Retrieve the list of log retentions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_retention_list(async_req=True)
@@ -20663,6 +22082,7 @@ class LMApi(object):
     def get_retention_list_with_http_info(self, **kwargs):  # noqa: E501
         """Retrieve the list of log retentions  # noqa: E501
 
+        Retrieve the list of log retentions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_retention_list_with_http_info(async_req=True)
@@ -20734,8 +22154,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_role_by_id(self, id, **kwargs):  # noqa: E501
-        """get role by id  # noqa: E501
+        """Get role by ID  # noqa: E501
 
+        Retrieve details of a specific role by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_role_by_id(id, async_req=True)
@@ -20756,8 +22177,9 @@ class LMApi(object):
             return data
 
     def get_role_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get role by id  # noqa: E501
+        """Get role by ID  # noqa: E501
 
+        Retrieve details of a specific role by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_role_by_id_with_http_info(id, async_req=True)
@@ -20839,8 +22261,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_role_list(self, **kwargs):  # noqa: E501
-        """get role list  # noqa: E501
+        """Get role list  # noqa: E501
 
+        Retrieve a paginated list of roles  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_role_list(async_req=True)
@@ -20864,8 +22287,9 @@ class LMApi(object):
             return data
 
     def get_role_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get role list  # noqa: E501
+        """Get role list  # noqa: E501
 
+        Retrieve a paginated list of roles  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_role_list_with_http_info(async_req=True)
@@ -20954,6 +22378,7 @@ class LMApi(object):
     def get_sdt_by_id(self, id, **kwargs):  # noqa: E501
         """get SDT by id (Response may contain extra fields depending upon the type of SDT of given id)  # noqa: E501
 
+        get SDT by id (Response may contain extra fields depending upon the type of SDT of given id)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_by_id(id, async_req=True)
@@ -20975,6 +22400,7 @@ class LMApi(object):
     def get_sdt_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get SDT by id (Response may contain extra fields depending upon the type of SDT of given id)  # noqa: E501
 
+        get SDT by id (Response may contain extra fields depending upon the type of SDT of given id)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_by_id_with_http_info(id, async_req=True)
@@ -21053,8 +22479,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_sdt_history_by_device_data_source_id(self, device_id, id, **kwargs):  # noqa: E501
-        """get SDT history for the device dataSource  # noqa: E501
+        """Get SDT history for the device dataSource  # noqa: E501
 
+        Retrieve the SDT (Service Disruption Time) history for a specific device dataSource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_history_by_device_data_source_id(device_id, id, async_req=True)
@@ -21079,8 +22506,9 @@ class LMApi(object):
             return data
 
     def get_sdt_history_by_device_data_source_id_with_http_info(self, device_id, id, **kwargs):  # noqa: E501
-        """get SDT history for the device dataSource  # noqa: E501
+        """Get SDT history for the device dataSource  # noqa: E501
 
+        Retrieve the SDT (Service Disruption Time) history for a specific device dataSource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_history_by_device_data_source_id_with_http_info(device_id, id, async_req=True)
@@ -21180,6 +22608,7 @@ class LMApi(object):
     def get_sdt_history_by_device_group_id(self, id, **kwargs):  # noqa: E501
         """get SDT history for the group  # noqa: E501
 
+        get SDT history for the group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_history_by_device_group_id(id, async_req=True)
@@ -21205,6 +22634,7 @@ class LMApi(object):
     def get_sdt_history_by_device_group_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get SDT history for the group  # noqa: E501
 
+        get SDT history for the group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_history_by_device_group_id_with_http_info(id, async_req=True)
@@ -21297,6 +22727,7 @@ class LMApi(object):
     def get_sdt_history_by_device_id(self, id, **kwargs):  # noqa: E501
         """get SDT history for the device  # noqa: E501
 
+        get SDT history for the device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_history_by_device_id(id, async_req=True)
@@ -21304,9 +22735,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str fields:
         :param int size:
         :param int offset:
@@ -21325,6 +22756,7 @@ class LMApi(object):
     def get_sdt_history_by_device_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get SDT history for the device  # noqa: E501
 
+        get SDT history for the device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_history_by_device_id_with_http_info(id, async_req=True)
@@ -21332,9 +22764,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str fields:
         :param int size:
         :param int offset:
@@ -21344,7 +22776,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'netflow_filter', 'fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['id', 'end', 'netflow_filter', 'start', 'fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -21372,12 +22804,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'fields' in params:
             query_params.append(('fields', params['fields']))  # noqa: E501
         if 'size' in params:
@@ -21426,6 +22858,7 @@ class LMApi(object):
     def get_sdt_history_by_website_group_id(self, id, **kwargs):  # noqa: E501
         """get SDT history for the website group (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
 
+        get SDT history for the website group (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_history_by_website_group_id(id, async_req=True)
@@ -21451,6 +22884,7 @@ class LMApi(object):
     def get_sdt_history_by_website_group_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get SDT history for the website group (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
 
+        get SDT history for the website group (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_history_by_website_group_id_with_http_info(id, async_req=True)
@@ -21543,6 +22977,7 @@ class LMApi(object):
     def get_sdt_history_by_website_id(self, id, **kwargs):  # noqa: E501
         """get SDT history for the website (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
 
+        get SDT history for the website (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_history_by_website_id(id, async_req=True)
@@ -21568,6 +23003,7 @@ class LMApi(object):
     def get_sdt_history_by_website_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get SDT history for the website (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
 
+        get SDT history for the website (Response may contain extra fields depending upon the type of SDT)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_history_by_website_id_with_http_info(id, async_req=True)
@@ -21660,6 +23096,7 @@ class LMApi(object):
     def get_sdt_list(self, **kwargs):  # noqa: E501
         """get SDT list  # noqa: E501
 
+        get SDT list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_list(async_req=True)
@@ -21684,6 +23121,7 @@ class LMApi(object):
     def get_sdt_list_with_http_info(self, **kwargs):  # noqa: E501
         """get SDT list  # noqa: E501
 
+        get SDT list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_sdt_list_with_http_info(async_req=True)
@@ -21767,14 +23205,16 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_site_monitor_check_point_list(self, **kwargs):  # noqa: E501
-        """get website checkpoint list  # noqa: E501
+        """Get website checkpoint list  # noqa: E501
 
+        Retrieves the list of website checkpoints  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_site_monitor_check_point_list(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str type: Type of checkpoint to filter. If not specified, returns website legacy checkpoints.
         :param str fields:
         :param int size:
         :param int offset:
@@ -21791,14 +23231,16 @@ class LMApi(object):
             return data
 
     def get_site_monitor_check_point_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get website checkpoint list  # noqa: E501
+        """Get website checkpoint list  # noqa: E501
 
+        Retrieves the list of website checkpoints  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_site_monitor_check_point_list_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param str type: Type of checkpoint to filter. If not specified, returns website legacy checkpoints.
         :param str fields:
         :param int size:
         :param int offset:
@@ -21808,7 +23250,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['fields', 'size', 'offset', 'filter']  # noqa: E501
+        all_params = ['type', 'fields', 'size', 'offset', 'filter']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -21830,6 +23272,8 @@ class LMApi(object):
         path_params = {}
 
         query_params = []
+        if 'type' in params:
+            query_params.append(('type', params['type']))  # noqa: E501
         if 'fields' in params:
             query_params.append(('fields', params['fields']))  # noqa: E501
         if 'size' in params:
@@ -21878,6 +23322,7 @@ class LMApi(object):
     def get_top_talkers_graph(self, id, **kwargs):  # noqa: E501
         """get top talkers graph  # noqa: E501
 
+        get top talkers graph  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_top_talkers_graph(id, async_req=True)
@@ -21885,9 +23330,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str format:
         :param str keyword:
         :return: GraphPlot
@@ -21904,6 +23349,7 @@ class LMApi(object):
     def get_top_talkers_graph_with_http_info(self, id, **kwargs):  # noqa: E501
         """get top talkers graph  # noqa: E501
 
+        get top talkers graph  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_top_talkers_graph_with_http_info(id, async_req=True)
@@ -21911,9 +23357,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str format:
         :param str keyword:
         :return: GraphPlot
@@ -21921,7 +23367,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'netflow_filter', 'format', 'keyword']  # noqa: E501
+        all_params = ['id', 'end', 'netflow_filter', 'start', 'format', 'keyword']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -21949,12 +23395,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'format' in params:
             query_params.append(('format', params['format']))  # noqa: E501
         if 'keyword' in params:
@@ -21999,6 +23445,7 @@ class LMApi(object):
     def get_topology_source_by_id(self, id, **kwargs):  # noqa: E501
         """Get TopologySource by id  # noqa: E501
 
+        Get TopologySource by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_topology_source_by_id(id, async_req=True)
@@ -22021,6 +23468,7 @@ class LMApi(object):
     def get_topology_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """Get TopologySource by id  # noqa: E501
 
+        Get TopologySource by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_topology_source_by_id_with_http_info(id, async_req=True)
@@ -22104,6 +23552,7 @@ class LMApi(object):
     def get_topology_source_list(self, **kwargs):  # noqa: E501
         """Get TopologySource List  # noqa: E501
 
+        Get TopologySource List  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_topology_source_list(async_req=True)
@@ -22124,6 +23573,7 @@ class LMApi(object):
     def get_topology_source_list_with_http_info(self, **kwargs):  # noqa: E501
         """Get TopologySource List  # noqa: E501
 
+        Get TopologySource List  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_topology_source_list_with_http_info(async_req=True)
@@ -22195,8 +23645,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_unmonitored_device_list(self, **kwargs):  # noqa: E501
-        """get unmonitored device list  # noqa: E501
+        """Get unmonitored device list  # noqa: E501
 
+        Retrieve a paginated list of unmonitored devices  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_unmonitored_device_list(async_req=True)
@@ -22219,8 +23670,9 @@ class LMApi(object):
             return data
 
     def get_unmonitored_device_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get unmonitored device list  # noqa: E501
+        """Get unmonitored device list  # noqa: E501
 
+        Retrieve a paginated list of unmonitored devices  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_unmonitored_device_list_with_http_info(async_req=True)
@@ -22304,8 +23756,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_update_reason_list_by_config_source_id(self, id, **kwargs):  # noqa: E501
-        """get update history for a configSource  # noqa: E501
+        """Get update history for a configSource  # noqa: E501
 
+        Retrieve the list of update reasons/history for a specific configSource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_update_reason_list_by_config_source_id(id, async_req=True)
@@ -22325,8 +23778,9 @@ class LMApi(object):
             return data
 
     def get_update_reason_list_by_config_source_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get update history for a configSource  # noqa: E501
+        """Get update history for a configSource  # noqa: E501
 
+        Retrieve the list of update reasons/history for a specific configSource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_update_reason_list_by_config_source_id_with_http_info(id, async_req=True)
@@ -22405,8 +23859,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_update_reason_list_by_data_source_id(self, id, **kwargs):  # noqa: E501
-        """get update history for a datasource  # noqa: E501
+        """Get update history for a datasource  # noqa: E501
 
+        Retrieves the update history for a specific datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_update_reason_list_by_data_source_id(id, async_req=True)
@@ -22430,8 +23885,9 @@ class LMApi(object):
             return data
 
     def get_update_reason_list_by_data_source_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get update history for a datasource  # noqa: E501
+        """Get update history for a datasource  # noqa: E501
 
+        Retrieves the update history for a specific datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_update_reason_list_by_data_source_id_with_http_info(id, async_req=True)
@@ -22524,6 +23980,7 @@ class LMApi(object):
     def get_v4_metadata(self, **kwargs):  # noqa: E501
         """get metadata  # noqa: E501
 
+        get metadata  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_v4_metadata(async_req=True)
@@ -22544,6 +24001,7 @@ class LMApi(object):
     def get_v4_metadata_with_http_info(self, **kwargs):  # noqa: E501
         """get metadata  # noqa: E501
 
+        get metadata  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_v4_metadata_with_http_info(async_req=True)
@@ -22617,6 +24075,7 @@ class LMApi(object):
     def get_website_alert_list_by_website_id(self, id, **kwargs):  # noqa: E501
         """get alerts for a website  # noqa: E501
 
+        get alerts for a website  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_alert_list_by_website_id(id, async_req=True)
@@ -22644,6 +24103,7 @@ class LMApi(object):
     def get_website_alert_list_by_website_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get alerts for a website  # noqa: E501
 
+        get alerts for a website  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_alert_list_by_website_id_with_http_info(id, async_req=True)
@@ -22742,6 +24202,7 @@ class LMApi(object):
     def get_website_by_id(self, id, **kwargs):  # noqa: E501
         """get website by id  # noqa: E501
 
+        get website by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_by_id(id, async_req=True)
@@ -22764,6 +24225,7 @@ class LMApi(object):
     def get_website_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get website by id  # noqa: E501
 
+        get website by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_by_id_with_http_info(id, async_req=True)
@@ -22847,6 +24309,7 @@ class LMApi(object):
     def get_website_checkpoint_data_by_id(self, srv_id, check_id, **kwargs):  # noqa: E501
         """get data for a website checkpoint  # noqa: E501
 
+        get data for a website checkpoint  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_checkpoint_data_by_id(srv_id, check_id, async_req=True)
@@ -22875,6 +24338,7 @@ class LMApi(object):
     def get_website_checkpoint_data_by_id_with_http_info(self, srv_id, check_id, **kwargs):  # noqa: E501
         """get data for a website checkpoint  # noqa: E501
 
+        get data for a website checkpoint  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_checkpoint_data_by_id_with_http_info(srv_id, check_id, async_req=True)
@@ -22980,6 +24444,7 @@ class LMApi(object):
     def get_website_data_by_graph_name(self, id, graph_name, **kwargs):  # noqa: E501
         """get website data by graph name  # noqa: E501
 
+        get website data by graph name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_data_by_graph_name(id, graph_name, async_req=True)
@@ -23005,6 +24470,7 @@ class LMApi(object):
     def get_website_data_by_graph_name_with_http_info(self, id, graph_name, **kwargs):  # noqa: E501
         """get website data by graph name  # noqa: E501
 
+        get website data by graph name  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_data_by_graph_name_with_http_info(id, graph_name, async_req=True)
@@ -23098,20 +24564,21 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_website_graph_data(self, website_id, checkpoint_id, graph_name, **kwargs):  # noqa: E501
-        """get website graph data  # noqa: E501
+    def get_website_graph_data(self, checkpoint_id, website_id, graph_name, **kwargs):  # noqa: E501
+        """Get website graph data  # noqa: E501
 
+        Retrieves the graph data for a website  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_website_graph_data(website_id, checkpoint_id, graph_name, async_req=True)
+        >>> thread = api.get_website_graph_data(checkpoint_id, website_id, graph_name, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int website_id: (required)
         :param int checkpoint_id: (required)
+        :param int website_id: (required)
         :param str graph_name: (required)
-        :param int start:
         :param int end:
+        :param int start:
         :param str format:
         :return: GraphPlot
                  If the method is called asynchronously,
@@ -23119,32 +24586,33 @@ class LMApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_website_graph_data_with_http_info(website_id, checkpoint_id, graph_name, **kwargs)  # noqa: E501
+            return self.get_website_graph_data_with_http_info(checkpoint_id, website_id, graph_name, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_website_graph_data_with_http_info(website_id, checkpoint_id, graph_name, **kwargs)  # noqa: E501
+            (data) = self.get_website_graph_data_with_http_info(checkpoint_id, website_id, graph_name, **kwargs)  # noqa: E501
             return data
 
-    def get_website_graph_data_with_http_info(self, website_id, checkpoint_id, graph_name, **kwargs):  # noqa: E501
-        """get website graph data  # noqa: E501
+    def get_website_graph_data_with_http_info(self, checkpoint_id, website_id, graph_name, **kwargs):  # noqa: E501
+        """Get website graph data  # noqa: E501
 
+        Retrieves the graph data for a website  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_website_graph_data_with_http_info(website_id, checkpoint_id, graph_name, async_req=True)
+        >>> thread = api.get_website_graph_data_with_http_info(checkpoint_id, website_id, graph_name, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int website_id: (required)
         :param int checkpoint_id: (required)
+        :param int website_id: (required)
         :param str graph_name: (required)
-        :param int start:
         :param int end:
+        :param int start:
         :param str format:
         :return: GraphPlot
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['website_id', 'checkpoint_id', 'graph_name', 'start', 'end', 'format']  # noqa: E501
+        all_params = ['checkpoint_id', 'website_id', 'graph_name', 'end', 'start', 'format']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -23160,14 +24628,14 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'website_id' is set
-        if ('website_id' not in params or
-                params['website_id'] is None):
-            raise ValueError("Missing the required parameter `website_id` when calling `get_website_graph_data`")  # noqa: E501
         # verify the required parameter 'checkpoint_id' is set
         if ('checkpoint_id' not in params or
                 params['checkpoint_id'] is None):
             raise ValueError("Missing the required parameter `checkpoint_id` when calling `get_website_graph_data`")  # noqa: E501
+        # verify the required parameter 'website_id' is set
+        if ('website_id' not in params or
+                params['website_id'] is None):
+            raise ValueError("Missing the required parameter `website_id` when calling `get_website_graph_data`")  # noqa: E501
         # verify the required parameter 'graph_name' is set
         if ('graph_name' not in params or
                 params['graph_name'] is None):
@@ -23176,18 +24644,18 @@ class LMApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'website_id' in params:
-            path_params['websiteId'] = params['website_id']  # noqa: E501
         if 'checkpoint_id' in params:
             path_params['checkpointId'] = params['checkpoint_id']  # noqa: E501
+        if 'website_id' in params:
+            path_params['websiteId'] = params['website_id']  # noqa: E501
         if 'graph_name' in params:
             path_params['graphName'] = params['graph_name']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'format' in params:
             query_params.append(('format', params['format']))  # noqa: E501
 
@@ -23230,6 +24698,7 @@ class LMApi(object):
     def get_website_group_by_id(self, id, **kwargs):  # noqa: E501
         """get website group  # noqa: E501
 
+        get website group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_group_by_id(id, async_req=True)
@@ -23251,6 +24720,7 @@ class LMApi(object):
     def get_website_group_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get website group  # noqa: E501
 
+        get website group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_group_by_id_with_http_info(id, async_req=True)
@@ -23331,6 +24801,7 @@ class LMApi(object):
     def get_website_group_list(self, **kwargs):  # noqa: E501
         """get website group list  # noqa: E501
 
+        get website group list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_group_list(async_req=True)
@@ -23355,6 +24826,7 @@ class LMApi(object):
     def get_website_group_list_with_http_info(self, **kwargs):  # noqa: E501
         """get website group list  # noqa: E501
 
+        get website group list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_group_list_with_http_info(async_req=True)
@@ -23440,6 +24912,7 @@ class LMApi(object):
     def get_website_list(self, **kwargs):  # noqa: E501
         """get website list  # noqa: E501
 
+        get website list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_list(async_req=True)
@@ -23465,6 +24938,7 @@ class LMApi(object):
     def get_website_list_with_http_info(self, **kwargs):  # noqa: E501
         """get website list  # noqa: E501
 
+        get website list  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_list_with_http_info(async_req=True)
@@ -23553,6 +25027,7 @@ class LMApi(object):
     def get_website_property_list_by_website_id(self, id, **kwargs):  # noqa: E501
         """get a list of properties for a website  # noqa: E501
 
+        get a list of properties for a website  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_property_list_by_website_id(id, async_req=True)
@@ -23578,6 +25053,7 @@ class LMApi(object):
     def get_website_property_list_by_website_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get a list of properties for a website  # noqa: E501
 
+        get a list of properties for a website  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_property_list_by_website_id_with_http_info(id, async_req=True)
@@ -23670,6 +25146,7 @@ class LMApi(object):
     def get_website_sdt_list_by_website_id(self, id, **kwargs):  # noqa: E501
         """get a list of SDTs for a website  # noqa: E501
 
+        get a list of SDTs for a website  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_sdt_list_by_website_id(id, async_req=True)
@@ -23695,6 +25172,7 @@ class LMApi(object):
     def get_website_sdt_list_by_website_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get a list of SDTs for a website  # noqa: E501
 
+        get a list of SDTs for a website  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_website_sdt_list_by_website_id_with_http_info(id, async_req=True)
@@ -23785,8 +25263,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_widget_by_id(self, id, **kwargs):  # noqa: E501
-        """get widget by id (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        """Get widget by ID  # noqa: E501
 
+        Retrieves a widget by its ID. Based on widget type, the response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_widget_by_id(id, async_req=True)
@@ -23807,8 +25286,9 @@ class LMApi(object):
             return data
 
     def get_widget_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get widget by id (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        """Get widget by ID  # noqa: E501
 
+        Retrieves a widget by its ID. Based on widget type, the response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_widget_by_id_with_http_info(id, async_req=True)
@@ -23892,6 +25372,7 @@ class LMApi(object):
     def get_widget_data_by_id(self, id, **kwargs):  # noqa: E501
         """get widget data (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
 
+        get widget data (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_widget_data_by_id(id, async_req=True)
@@ -23899,9 +25380,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str format:
+        :param int start:
         :return: WidgetData
                  If the method is called asynchronously,
                  returns the request thread.
@@ -23916,6 +25397,7 @@ class LMApi(object):
     def get_widget_data_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get widget data (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
 
+        get widget data (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_widget_data_by_id_with_http_info(id, async_req=True)
@@ -23923,15 +25405,15 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str format:
+        :param int start:
         :return: WidgetData
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'format']  # noqa: E501
+        all_params = ['id', 'end', 'format', 'start']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -23959,12 +25441,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'format' in params:
             query_params.append(('format', params['format']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
 
         header_params = {}
 
@@ -24003,8 +25485,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def get_widget_list(self, **kwargs):  # noqa: E501
-        """get widget list (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        """Get widget list  # noqa: E501
 
+        Retrieves a list of widgets. Based on widget type, the response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_widget_list(async_req=True)
@@ -24027,8 +25510,9 @@ class LMApi(object):
             return data
 
     def get_widget_list_with_http_info(self, **kwargs):  # noqa: E501
-        """get widget list (Based upon widget type the response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        """Get widget list  # noqa: E501
 
+        Retrieves a list of widgets. Based on widget type, the response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_widget_list_with_http_info(async_req=True)
@@ -24114,6 +25598,7 @@ class LMApi(object):
     def get_widget_list_by_dashboard_id(self, id, **kwargs):  # noqa: E501
         """get widget list by DashboardId  # noqa: E501
 
+        get widget list by DashboardId  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_widget_list_by_dashboard_id(id, async_req=True)
@@ -24139,6 +25624,7 @@ class LMApi(object):
     def get_widget_list_by_dashboard_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """get widget list by DashboardId  # noqa: E501
 
+        get widget list by DashboardId  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_widget_list_by_dashboard_id_with_http_info(id, async_req=True)
@@ -24228,37 +25714,151 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def import_batch_job(self, file, **kwargs):  # noqa: E501
-        """import batch job via xml  # noqa: E501
+    def import_applies_to_function_json(self, **kwargs):  # noqa: E501
+        """Import AppliesTo function via json  # noqa: E501
 
+        Import a AppliesTo function using json data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.import_batch_job(file, async_req=True)
+        >>> thread = api.import_applies_to_function_json(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str file: (required)
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: AppliesToFunction
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_applies_to_function_json_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.import_applies_to_function_json_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def import_applies_to_function_json_with_http_info(self, **kwargs):  # noqa: E501
+        """Import AppliesTo function via json  # noqa: E501
+
+        Import a AppliesTo function using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_applies_to_function_json_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: AppliesToFunction
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'handle_conflict', 'fields_to_preserve']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_applies_to_function_json" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'handle_conflict' in params:
+            query_params.append(('handleConflict', params['handle_conflict']))  # noqa: E501
+        if 'fields_to_preserve' in params:
+            query_params.append(('fieldsToPreserve', params['fields_to_preserve']))  # noqa: E501
+            collection_formats['fieldsToPreserve'] = 'multi'  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            form_params.append(('file', params['file']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'AppliesToFunction'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/functions/importjson', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def import_batch_job(self, **kwargs):  # noqa: E501
+        """Import batch job via XML  # noqa: E501
+
+        Import a batch job using XML data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_batch_job(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.import_batch_job_with_http_info(file, **kwargs)  # noqa: E501
+            return self.import_batch_job_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.import_batch_job_with_http_info(file, **kwargs)  # noqa: E501
+            (data) = self.import_batch_job_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def import_batch_job_with_http_info(self, file, **kwargs):  # noqa: E501
-        """import batch job via xml  # noqa: E501
+    def import_batch_job_with_http_info(self, **kwargs):  # noqa: E501
+        """Import batch job via XML  # noqa: E501
 
+        Import a batch job using XML data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.import_batch_job_with_http_info(file, async_req=True)
+        >>> thread = api.import_batch_job_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str file: (required)
+        :param FormDataContentDisposition file:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
@@ -24280,10 +25880,6 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'file' is set
-        if ('file' not in params or
-                params['file'] is None):
-            raise ValueError("Missing the required parameter `file` when calling `import_batch_job`")  # noqa: E501
 
         collection_formats = {}
 
@@ -24296,7 +25892,7 @@ class LMApi(object):
         form_params = []
         local_var_files = {}
         if 'file' in params:
-            local_var_files['file'] = params['file']  # noqa: E501
+            form_params.append(('file', params['file']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`
@@ -24333,37 +25929,39 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def import_config_source(self, file, **kwargs):  # noqa: E501
-        """import config source via xml  # noqa: E501
+    def import_config_source(self, **kwargs):  # noqa: E501
+        """Import config source via XML  # noqa: E501
 
+        Import configuration source data from an XML file  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.import_config_source(file, async_req=True)
+        >>> thread = api.import_config_source(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str file: (required)
+        :param FormDataContentDisposition file:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.import_config_source_with_http_info(file, **kwargs)  # noqa: E501
+            return self.import_config_source_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.import_config_source_with_http_info(file, **kwargs)  # noqa: E501
+            (data) = self.import_config_source_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def import_config_source_with_http_info(self, file, **kwargs):  # noqa: E501
-        """import config source via xml  # noqa: E501
+    def import_config_source_with_http_info(self, **kwargs):  # noqa: E501
+        """Import config source via XML  # noqa: E501
 
+        Import configuration source data from an XML file  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.import_config_source_with_http_info(file, async_req=True)
+        >>> thread = api.import_config_source_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str file: (required)
+        :param FormDataContentDisposition file:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
@@ -24385,10 +25983,6 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'file' is set
-        if ('file' not in params or
-                params['file'] is None):
-            raise ValueError("Missing the required parameter `file` when calling `import_config_source`")  # noqa: E501
 
         collection_formats = {}
 
@@ -24401,7 +25995,7 @@ class LMApi(object):
         form_params = []
         local_var_files = {}
         if 'file' in params:
-            local_var_files['file'] = params['file']  # noqa: E501
+            form_params.append(('file', params['file']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`
@@ -24438,37 +26032,151 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def import_data_source(self, file, **kwargs):  # noqa: E501
-        """import datasource via xml  # noqa: E501
+    def import_config_source_json(self, **kwargs):  # noqa: E501
+        """Import ConfigSource via json  # noqa: E501
 
+        Import a ConfigSource using json data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.import_data_source(file, async_req=True)
+        >>> thread = api.import_config_source_json(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str file: (required)
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: ConfigSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_config_source_json_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.import_config_source_json_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def import_config_source_json_with_http_info(self, **kwargs):  # noqa: E501
+        """Import ConfigSource via json  # noqa: E501
+
+        Import a ConfigSource using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_config_source_json_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: ConfigSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'handle_conflict', 'fields_to_preserve']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_config_source_json" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'handle_conflict' in params:
+            query_params.append(('handleConflict', params['handle_conflict']))  # noqa: E501
+        if 'fields_to_preserve' in params:
+            query_params.append(('fieldsToPreserve', params['fields_to_preserve']))  # noqa: E501
+            collection_formats['fieldsToPreserve'] = 'multi'  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            form_params.append(('file', params['file']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'ConfigSource'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/configsources/importjson', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def import_data_source(self, **kwargs):  # noqa: E501
+        """Import datasource via XML  # noqa: E501
+
+        Imports a datasource from an XML file  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_data_source(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.import_data_source_with_http_info(file, **kwargs)  # noqa: E501
+            return self.import_data_source_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.import_data_source_with_http_info(file, **kwargs)  # noqa: E501
+            (data) = self.import_data_source_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def import_data_source_with_http_info(self, file, **kwargs):  # noqa: E501
-        """import datasource via xml  # noqa: E501
+    def import_data_source_with_http_info(self, **kwargs):  # noqa: E501
+        """Import datasource via XML  # noqa: E501
 
+        Imports a datasource from an XML file  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.import_data_source_with_http_info(file, async_req=True)
+        >>> thread = api.import_data_source_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str file: (required)
+        :param FormDataContentDisposition file:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
@@ -24490,10 +26198,6 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'file' is set
-        if ('file' not in params or
-                params['file'] is None):
-            raise ValueError("Missing the required parameter `file` when calling `import_data_source`")  # noqa: E501
 
         collection_formats = {}
 
@@ -24506,7 +26210,7 @@ class LMApi(object):
         form_params = []
         local_var_files = {}
         if 'file' in params:
-            local_var_files['file'] = params['file']  # noqa: E501
+            form_params.append(('file', params['file']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`
@@ -24543,37 +26247,263 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def import_event_source(self, file, **kwargs):  # noqa: E501
-        """import eventsource via xml  # noqa: E501
+    def import_data_source_json(self, **kwargs):  # noqa: E501
+        """Import DataSource via json  # noqa: E501
 
+        Import a DataSource using json data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.import_event_source(file, async_req=True)
+        >>> thread = api.import_data_source_json(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str file: (required)
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: DataSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_data_source_json_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.import_data_source_json_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def import_data_source_json_with_http_info(self, **kwargs):  # noqa: E501
+        """Import DataSource via json  # noqa: E501
+
+        Import a DataSource using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_data_source_json_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: DataSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'handle_conflict', 'fields_to_preserve']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_data_source_json" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'handle_conflict' in params:
+            query_params.append(('handleConflict', params['handle_conflict']))  # noqa: E501
+        if 'fields_to_preserve' in params:
+            query_params.append(('fieldsToPreserve', params['fields_to_preserve']))  # noqa: E501
+            collection_formats['fieldsToPreserve'] = 'multi'  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            form_params.append(('file', params['file']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'DataSource'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/datasources/importjson', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def import_diagnostic_source_json(self, **kwargs):  # noqa: E501
+        """Import DiagnosticSource via json  # noqa: E501
+
+        Import a DiagnosticSource using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_diagnostic_source_json(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: RestDiagnosticSourceV4
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_diagnostic_source_json_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.import_diagnostic_source_json_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def import_diagnostic_source_json_with_http_info(self, **kwargs):  # noqa: E501
+        """Import DiagnosticSource via json  # noqa: E501
+
+        Import a DiagnosticSource using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_diagnostic_source_json_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: RestDiagnosticSourceV4
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'handle_conflict', 'fields_to_preserve']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_diagnostic_source_json" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'handle_conflict' in params:
+            query_params.append(('handleConflict', params['handle_conflict']))  # noqa: E501
+        if 'fields_to_preserve' in params:
+            query_params.append(('fieldsToPreserve', params['fields_to_preserve']))  # noqa: E501
+            collection_formats['fieldsToPreserve'] = 'multi'  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            form_params.append(('file', params['file']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'RestDiagnosticSourceV4'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/diagnosticsources/importjson', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def import_event_source(self, **kwargs):  # noqa: E501
+        """Import event source via XML  # noqa: E501
+
+        Imports an event source from an XML file  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_event_source(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.import_event_source_with_http_info(file, **kwargs)  # noqa: E501
+            return self.import_event_source_with_http_info(**kwargs)  # noqa: E501
         else:
-            (data) = self.import_event_source_with_http_info(file, **kwargs)  # noqa: E501
+            (data) = self.import_event_source_with_http_info(**kwargs)  # noqa: E501
             return data
 
-    def import_event_source_with_http_info(self, file, **kwargs):  # noqa: E501
-        """import eventsource via xml  # noqa: E501
+    def import_event_source_with_http_info(self, **kwargs):  # noqa: E501
+        """Import event source via XML  # noqa: E501
 
+        Imports an event source from an XML file  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.import_event_source_with_http_info(file, async_req=True)
+        >>> thread = api.import_event_source_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str file: (required)
+        :param FormDataContentDisposition file:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
@@ -24595,10 +26525,6 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'file' is set
-        if ('file' not in params or
-                params['file'] is None):
-            raise ValueError("Missing the required parameter `file` when calling `import_event_source`")  # noqa: E501
 
         collection_formats = {}
 
@@ -24611,7 +26537,7 @@ class LMApi(object):
         form_params = []
         local_var_files = {}
         if 'file' in params:
-            local_var_files['file'] = params['file']  # noqa: E501
+            form_params.append(('file', params['file']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`
@@ -24648,9 +26574,682 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def import_event_source_json(self, **kwargs):  # noqa: E501
+        """Import EventSource via json  # noqa: E501
+
+        Import a EventSource using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_event_source_json(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: EventSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_event_source_json_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.import_event_source_json_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def import_event_source_json_with_http_info(self, **kwargs):  # noqa: E501
+        """Import EventSource via json  # noqa: E501
+
+        Import a EventSource using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_event_source_json_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: EventSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'handle_conflict', 'fields_to_preserve']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_event_source_json" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'handle_conflict' in params:
+            query_params.append(('handleConflict', params['handle_conflict']))  # noqa: E501
+        if 'fields_to_preserve' in params:
+            query_params.append(('fieldsToPreserve', params['fields_to_preserve']))  # noqa: E501
+            collection_formats['fieldsToPreserve'] = 'multi'  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            form_params.append(('file', params['file']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'EventSource'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/eventsources/importjson', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def import_job_monitor_json(self, **kwargs):  # noqa: E501
+        """Import batch JobMonitor via json  # noqa: E501
+
+        Import a JobMonitor using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_job_monitor_json(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: BatchJob
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_job_monitor_json_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.import_job_monitor_json_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def import_job_monitor_json_with_http_info(self, **kwargs):  # noqa: E501
+        """Import batch JobMonitor via json  # noqa: E501
+
+        Import a JobMonitor using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_job_monitor_json_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: BatchJob
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'handle_conflict', 'fields_to_preserve']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_job_monitor_json" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'handle_conflict' in params:
+            query_params.append(('handleConflict', params['handle_conflict']))  # noqa: E501
+        if 'fields_to_preserve' in params:
+            query_params.append(('fieldsToPreserve', params['fields_to_preserve']))  # noqa: E501
+            collection_formats['fieldsToPreserve'] = 'multi'  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            form_params.append(('file', params['file']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'BatchJob'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/batchjobs/importjson', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def import_log_source_json(self, **kwargs):  # noqa: E501
+        """Import LogSource via json  # noqa: E501
+
+        Import a LogSource using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_log_source_json(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: LogSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_log_source_json_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.import_log_source_json_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def import_log_source_json_with_http_info(self, **kwargs):  # noqa: E501
+        """Import LogSource via json  # noqa: E501
+
+        Import a LogSource using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_log_source_json_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: LogSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'handle_conflict', 'fields_to_preserve']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_log_source_json" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'handle_conflict' in params:
+            query_params.append(('handleConflict', params['handle_conflict']))  # noqa: E501
+        if 'fields_to_preserve' in params:
+            query_params.append(('fieldsToPreserve', params['fields_to_preserve']))  # noqa: E501
+            collection_formats['fieldsToPreserve'] = 'multi'  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            form_params.append(('file', params['file']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'LogSource'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/logsources/importjson', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def import_oid_json(self, **kwargs):  # noqa: E501
+        """Import OID via json  # noqa: E501
+
+        Import a OID using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_oid_json(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: RestOidV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_oid_json_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.import_oid_json_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def import_oid_json_with_http_info(self, **kwargs):  # noqa: E501
+        """Import OID via json  # noqa: E501
+
+        Import a OID using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_oid_json_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: RestOidV3
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'handle_conflict', 'fields_to_preserve']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_oid_json" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'handle_conflict' in params:
+            query_params.append(('handleConflict', params['handle_conflict']))  # noqa: E501
+        if 'fields_to_preserve' in params:
+            query_params.append(('fieldsToPreserve', params['fields_to_preserve']))  # noqa: E501
+            collection_formats['fieldsToPreserve'] = 'multi'  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            form_params.append(('file', params['file']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'RestOidV3'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/oids/importjson', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def import_property_source_json(self, **kwargs):  # noqa: E501
+        """Import PropertySource via json  # noqa: E501
+
+        Import a PropertySource using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_property_source_json(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: PropertyRule
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_property_source_json_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.import_property_source_json_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def import_property_source_json_with_http_info(self, **kwargs):  # noqa: E501
+        """Import PropertySource via json  # noqa: E501
+
+        Import a PropertySource using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_property_source_json_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: PropertyRule
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'handle_conflict', 'fields_to_preserve']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_property_source_json" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'handle_conflict' in params:
+            query_params.append(('handleConflict', params['handle_conflict']))  # noqa: E501
+        if 'fields_to_preserve' in params:
+            query_params.append(('fieldsToPreserve', params['fields_to_preserve']))  # noqa: E501
+            collection_formats['fieldsToPreserve'] = 'multi'  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            form_params.append(('file', params['file']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'PropertyRule'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/propertyrules/importjson', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def import_topology_source_json(self, **kwargs):  # noqa: E501
+        """Import TopologySource via json  # noqa: E501
+
+        Import a TopologySource using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_topology_source_json(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: TopologySource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.import_topology_source_json_with_http_info(**kwargs)  # noqa: E501
+        else:
+            (data) = self.import_topology_source_json_with_http_info(**kwargs)  # noqa: E501
+            return data
+
+    def import_topology_source_json_with_http_info(self, **kwargs):  # noqa: E501
+        """Import TopologySource via json  # noqa: E501
+
+        Import a TopologySource using json data  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_topology_source_json_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param FormDataContentDisposition file:
+        :param str handle_conflict:
+        :param list[str] fields_to_preserve:
+        :return: TopologySource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['file', 'handle_conflict', 'fields_to_preserve']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_topology_source_json" % key
+                )
+            params[key] = val
+        del params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+        if 'handle_conflict' in params:
+            query_params.append(('handleConflict', params['handle_conflict']))  # noqa: E501
+        if 'fields_to_preserve' in params:
+            query_params.append(('fieldsToPreserve', params['fields_to_preserve']))  # noqa: E501
+            collection_formats['fieldsToPreserve'] = 'multi'  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'file' in params:
+            form_params.append(('file', params['file']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'TopologySource'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/topologysources/importjson', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def map_un_map_module_to_access_group(self, **kwargs):  # noqa: E501
         """Create a mapping of access group & module  # noqa: E501
 
+        Map a module to an access group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.map_un_map_module_to_access_group(async_req=True)
@@ -24672,6 +27271,7 @@ class LMApi(object):
     def map_un_map_module_to_access_group_with_http_info(self, **kwargs):  # noqa: E501
         """Create a mapping of access group & module  # noqa: E501
 
+        Map a module to an access group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.map_un_map_module_to_access_group_with_http_info(async_req=True)
@@ -24752,6 +27352,7 @@ class LMApi(object):
     def partition_action(self, id, action, **kwargs):  # noqa: E501
         """Perform an action on a specified log partition  # noqa: E501
 
+        Perform an action on a specified log partition  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.partition_action(id, action, async_req=True)
@@ -24774,6 +27375,7 @@ class LMApi(object):
     def partition_action_with_http_info(self, id, action, **kwargs):  # noqa: E501
         """Perform an action on a specified log partition  # noqa: E501
 
+        Perform an action on a specified log partition  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.partition_action_with_http_info(id, action, async_req=True)
@@ -24861,6 +27463,7 @@ class LMApi(object):
     def patch_access_group(self, id, body, **kwargs):  # noqa: E501
         """Update access group  # noqa: E501
 
+        Update access group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_access_group(id, body, async_req=True)
@@ -24883,6 +27486,7 @@ class LMApi(object):
     def patch_access_group_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """Update access group  # noqa: E501
 
+        Update access group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_access_group_with_http_info(id, body, async_req=True)
@@ -24974,6 +27578,7 @@ class LMApi(object):
     def patch_admin_by_id(self, id, body, **kwargs):  # noqa: E501
         """update user  # noqa: E501
 
+        update user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_admin_by_id(id, body, async_req=True)
@@ -24998,6 +27603,7 @@ class LMApi(object):
     def patch_admin_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update user  # noqa: E501
 
+        update user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_admin_by_id_with_http_info(id, body, async_req=True)
@@ -25095,6 +27701,7 @@ class LMApi(object):
     def patch_alert_rule_by_id(self, id, body, **kwargs):  # noqa: E501
         """update alert rule  # noqa: E501
 
+        update alert rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_alert_rule_by_id(id, body, async_req=True)
@@ -25117,6 +27724,7 @@ class LMApi(object):
     def patch_alert_rule_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update alert rule  # noqa: E501
 
+        update alert rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_alert_rule_by_id_with_http_info(id, body, async_req=True)
@@ -25206,8 +27814,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_api_token_by_admin_id(self, admin_id, apitoken_id, body, **kwargs):  # noqa: E501
-        """update api tokens for a user  # noqa: E501
+        """Update API tokens for a user  # noqa: E501
 
+        Update the API tokens for a specific user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_api_token_by_admin_id(admin_id, apitoken_id, body, async_req=True)
@@ -25229,8 +27838,9 @@ class LMApi(object):
             return data
 
     def patch_api_token_by_admin_id_with_http_info(self, admin_id, apitoken_id, body, **kwargs):  # noqa: E501
-        """update api tokens for a user  # noqa: E501
+        """Update API tokens for a user  # noqa: E501
 
+        Update the API tokens for a specific user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_api_token_by_admin_id_with_http_info(admin_id, apitoken_id, body, async_req=True)
@@ -25327,8 +27937,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_applies_to_function(self, id, **kwargs):  # noqa: E501
-        """update applies to function  # noqa: E501
+        """Update applies to function  # noqa: E501
 
+        Update an existing applies to function  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_applies_to_function(id, async_req=True)
@@ -25351,8 +27962,9 @@ class LMApi(object):
             return data
 
     def patch_applies_to_function_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update applies to function  # noqa: E501
+        """Update applies to function  # noqa: E501
 
+        Update an existing applies to function  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_applies_to_function_with_http_info(id, async_req=True)
@@ -25446,6 +28058,7 @@ class LMApi(object):
     def patch_collector_by_id(self, id, body, **kwargs):  # noqa: E501
         """update collector  # noqa: E501
 
+        update collector  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_collector_by_id(id, body, async_req=True)
@@ -25471,6 +28084,7 @@ class LMApi(object):
     def patch_collector_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update collector  # noqa: E501
 
+        update collector  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_collector_by_id_with_http_info(id, body, async_req=True)
@@ -25569,8 +28183,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_collector_group_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update collector group  # noqa: E501
+        """Update collector group  # noqa: E501
 
+        Update the details of a specific collector group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_collector_group_by_id(id, body, async_req=True)
@@ -25594,8 +28209,9 @@ class LMApi(object):
             return data
 
     def patch_collector_group_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update collector group  # noqa: E501
+        """Update collector group  # noqa: E501
 
+        Update the details of a specific collector group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_collector_group_by_id_with_http_info(id, body, async_req=True)
@@ -25694,8 +28310,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_config_source_by_id(self, id, **kwargs):  # noqa: E501
-        """update config source by id  # noqa: E501
+        """Update config source by ID  # noqa: E501
 
+        Update the config source details based on the provided ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_config_source_by_id(id, async_req=True)
@@ -25717,8 +28334,9 @@ class LMApi(object):
             return data
 
     def patch_config_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update config source by id  # noqa: E501
+        """Update config source by ID  # noqa: E501
 
+        Update the config source details based on the provided ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_config_source_by_id_with_http_info(id, async_req=True)
@@ -26041,8 +28659,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_datasource_by_id(self, id, **kwargs):  # noqa: E501
-        """update datasource  # noqa: E501
+        """Update datasource  # noqa: E501
 
+        Updates a datasource by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_datasource_by_id(id, async_req=True)
@@ -26066,8 +28685,9 @@ class LMApi(object):
             return data
 
     def patch_datasource_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update datasource  # noqa: E501
+        """Update datasource  # noqa: E501
 
+        Updates a datasource by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_datasource_by_id_with_http_info(id, async_req=True)
@@ -26162,8 +28782,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_default_dashboard(self, id, **kwargs):  # noqa: E501
-        """update default dashboard  # noqa: E501
+        """Update default dashboard  # noqa: E501
 
+        Update the default dashboard settings for a user or group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_default_dashboard(id, async_req=True)
@@ -26184,8 +28805,9 @@ class LMApi(object):
             return data
 
     def patch_default_dashboard_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update default dashboard  # noqa: E501
+        """Update default dashboard  # noqa: E501
 
+        Update the default dashboard settings for a user or group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_default_dashboard_with_http_info(id, async_req=True)
@@ -26273,6 +28895,7 @@ class LMApi(object):
     def patch_device(self, id, body, **kwargs):  # noqa: E501
         """update a device  # noqa: E501
 
+        update a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device(id, body, async_req=True)
@@ -26281,9 +28904,9 @@ class LMApi(object):
         :param async_req bool
         :param int id: (required)
         :param Device body: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str op_type:
         :param bool need_stc_grp_and_sorted_cp:
         :return: Device
@@ -26300,6 +28923,7 @@ class LMApi(object):
     def patch_device_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update a device  # noqa: E501
 
+        update a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_with_http_info(id, body, async_req=True)
@@ -26308,9 +28932,9 @@ class LMApi(object):
         :param async_req bool
         :param int id: (required)
         :param Device body: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str op_type:
         :param bool need_stc_grp_and_sorted_cp:
         :return: Device
@@ -26318,7 +28942,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'body', 'start', 'end', 'netflow_filter', 'op_type', 'need_stc_grp_and_sorted_cp']  # noqa: E501
+        all_params = ['id', 'body', 'end', 'netflow_filter', 'start', 'op_type', 'need_stc_grp_and_sorted_cp']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -26350,12 +28974,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'op_type' in params:
             query_params.append(('opType', params['op_type']))  # noqa: E501
         if 'need_stc_grp_and_sorted_cp' in params:
@@ -26406,6 +29030,7 @@ class LMApi(object):
     def patch_device_datasource_instance_alert_setting_by_id(self, device_id, hds_id, instance_id, id, body, **kwargs):  # noqa: E501
         """update device instance alert setting  # noqa: E501
 
+        update device instance alert setting  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_datasource_instance_alert_setting_by_id(device_id, hds_id, instance_id, id, body, async_req=True)
@@ -26431,6 +29056,7 @@ class LMApi(object):
     def patch_device_datasource_instance_alert_setting_by_id_with_http_info(self, device_id, hds_id, instance_id, id, body, **kwargs):  # noqa: E501
         """update device instance alert setting  # noqa: E501
 
+        update device instance alert setting  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_datasource_instance_alert_setting_by_id_with_http_info(device_id, hds_id, instance_id, id, body, async_req=True)
@@ -26543,6 +29169,7 @@ class LMApi(object):
     def patch_device_datasource_instance_by_id(self, device_id, hds_id, id, body, **kwargs):  # noqa: E501
         """update device instance  # noqa: E501
 
+        update device instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_datasource_instance_by_id(device_id, hds_id, id, body, async_req=True)
@@ -26568,6 +29195,7 @@ class LMApi(object):
     def patch_device_datasource_instance_by_id_with_http_info(self, device_id, hds_id, id, body, **kwargs):  # noqa: E501
         """update device instance  # noqa: E501
 
+        update device instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_datasource_instance_by_id_with_http_info(device_id, hds_id, id, body, async_req=True)
@@ -26673,17 +29301,18 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def patch_device_datasource_instance_group_by_id(self, device_id, device_ds_id, id, body, **kwargs):  # noqa: E501
-        """update device datasource instance group  # noqa: E501
+    def patch_device_datasource_instance_group_by_id(self, device_ds_id, device_id, id, body, **kwargs):  # noqa: E501
+        """Update device datasource instance group  # noqa: E501
 
+        Update a specific device datasource instance group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.patch_device_datasource_instance_group_by_id(device_id, device_ds_id, id, body, async_req=True)
+        >>> thread = api.patch_device_datasource_instance_group_by_id(device_ds_id, device_id, id, body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param int id: (required)
         :param DeviceDataSourceInstanceGroup body: (required)
         :return: DeviceDataSourceInstanceGroup
@@ -26692,22 +29321,23 @@ class LMApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.patch_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, body, **kwargs)  # noqa: E501
+            return self.patch_device_datasource_instance_group_by_id_with_http_info(device_ds_id, device_id, id, body, **kwargs)  # noqa: E501
         else:
-            (data) = self.patch_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, body, **kwargs)  # noqa: E501
+            (data) = self.patch_device_datasource_instance_group_by_id_with_http_info(device_ds_id, device_id, id, body, **kwargs)  # noqa: E501
             return data
 
-    def patch_device_datasource_instance_group_by_id_with_http_info(self, device_id, device_ds_id, id, body, **kwargs):  # noqa: E501
-        """update device datasource instance group  # noqa: E501
+    def patch_device_datasource_instance_group_by_id_with_http_info(self, device_ds_id, device_id, id, body, **kwargs):  # noqa: E501
+        """Update device datasource instance group  # noqa: E501
 
+        Update a specific device datasource instance group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.patch_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, body, async_req=True)
+        >>> thread = api.patch_device_datasource_instance_group_by_id_with_http_info(device_ds_id, device_id, id, body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param int id: (required)
         :param DeviceDataSourceInstanceGroup body: (required)
         :return: DeviceDataSourceInstanceGroup
@@ -26715,7 +29345,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['device_id', 'device_ds_id', 'id', 'body']  # noqa: E501
+        all_params = ['device_ds_id', 'device_id', 'id', 'body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -26731,14 +29361,14 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'device_id' is set
-        if ('device_id' not in params or
-                params['device_id'] is None):
-            raise ValueError("Missing the required parameter `device_id` when calling `patch_device_datasource_instance_group_by_id`")  # noqa: E501
         # verify the required parameter 'device_ds_id' is set
         if ('device_ds_id' not in params or
                 params['device_ds_id'] is None):
             raise ValueError("Missing the required parameter `device_ds_id` when calling `patch_device_datasource_instance_group_by_id`")  # noqa: E501
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `patch_device_datasource_instance_group_by_id`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -26751,10 +29381,10 @@ class LMApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'device_id' in params:
-            path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'device_ds_id' in params:
             path_params['deviceDsId'] = params['device_ds_id']  # noqa: E501
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -26805,6 +29435,7 @@ class LMApi(object):
     def patch_device_group_by_id(self, id, body, **kwargs):  # noqa: E501
         """update device group  # noqa: E501
 
+        update device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_group_by_id(id, body, async_req=True)
@@ -26828,6 +29459,7 @@ class LMApi(object):
     def patch_device_group_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update device group  # noqa: E501
 
+        update device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_group_by_id_with_http_info(id, body, async_req=True)
@@ -26922,6 +29554,7 @@ class LMApi(object):
     def patch_device_group_cluster_alert_conf_by_id(self, device_group_id, id, body, **kwargs):  # noqa: E501
         """Update cluster alert configuration  # noqa: E501
 
+        Update cluster alert configuration  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_group_cluster_alert_conf_by_id(device_group_id, id, body, async_req=True)
@@ -26945,6 +29578,7 @@ class LMApi(object):
     def patch_device_group_cluster_alert_conf_by_id_with_http_info(self, device_group_id, id, body, **kwargs):  # noqa: E501
         """Update cluster alert configuration  # noqa: E501
 
+        Update cluster alert configuration  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_group_cluster_alert_conf_by_id_with_http_info(device_group_id, id, body, async_req=True)
@@ -27041,8 +29675,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_device_group_datasource_alert_setting(self, device_group_id, ds_id, body, **kwargs):  # noqa: E501
-        """update device group datasource alert setting  # noqa: E501
+        """Update device group datasource alert setting  # noqa: E501
 
+        Update the alert setting for a specific device group datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_group_datasource_alert_setting(device_group_id, ds_id, body, async_req=True)
@@ -27064,8 +29699,9 @@ class LMApi(object):
             return data
 
     def patch_device_group_datasource_alert_setting_with_http_info(self, device_group_id, ds_id, body, **kwargs):  # noqa: E501
-        """update device group datasource alert setting  # noqa: E501
+        """Update device group datasource alert setting  # noqa: E501
 
+        Update the alert setting for a specific device group datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_group_datasource_alert_setting_with_http_info(device_group_id, ds_id, body, async_req=True)
@@ -27164,6 +29800,7 @@ class LMApi(object):
     def patch_device_group_datasource_by_id(self, device_group_id, id, **kwargs):  # noqa: E501
         """update device group datasource  # noqa: E501
 
+        update device group datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_group_datasource_by_id(device_group_id, id, async_req=True)
@@ -27187,6 +29824,7 @@ class LMApi(object):
     def patch_device_group_datasource_by_id_with_http_info(self, device_group_id, id, **kwargs):  # noqa: E501
         """update device group datasource  # noqa: E501
 
+        update device group datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_group_datasource_by_id_with_http_info(device_group_id, id, async_req=True)
@@ -27279,8 +29917,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_device_group_property_by_name(self, gid, name, body, **kwargs):  # noqa: E501
-        """update device group property  # noqa: E501
+        """Update device group property  # noqa: E501
 
+        Update a specific property of a device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_group_property_by_name(gid, name, body, async_req=True)
@@ -27302,8 +29941,9 @@ class LMApi(object):
             return data
 
     def patch_device_group_property_by_name_with_http_info(self, gid, name, body, **kwargs):  # noqa: E501
-        """update device group property  # noqa: E501
+        """Update device group property  # noqa: E501
 
+        Update a specific property of a device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_group_property_by_name_with_http_info(gid, name, body, async_req=True)
@@ -27400,8 +30040,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_device_property_by_name(self, device_id, name, body, **kwargs):  # noqa: E501
-        """update device property  # noqa: E501
+        """Update device property  # noqa: E501
 
+        Update a specific property of a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_property_by_name(device_id, name, body, async_req=True)
@@ -27423,8 +30064,9 @@ class LMApi(object):
             return data
 
     def patch_device_property_by_name_with_http_info(self, device_id, name, body, **kwargs):  # noqa: E501
-        """update device property  # noqa: E501
+        """Update device property  # noqa: E501
 
+        Update a specific property of a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_device_property_by_name_with_http_info(device_id, name, body, async_req=True)
@@ -27520,9 +30162,125 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def patch_escalation_chain_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update escalation chain  # noqa: E501
+    def patch_diagnostic_source_by_id(self, id, **kwargs):  # noqa: E501
+        """Update a diagnostics source  # noqa: E501
 
+        Updates a diagnostics source by its ID  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_diagnostic_source_by_id(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :param DiagnosticsSource body:
+        :param str reason:
+        :return: DiagnosticsSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.patch_diagnostic_source_by_id_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.patch_diagnostic_source_by_id_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def patch_diagnostic_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Update a diagnostics source  # noqa: E501
+
+        Updates a diagnostics source by its ID  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.patch_diagnostic_source_by_id_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :param DiagnosticsSource body:
+        :param str reason:
+        :return: DiagnosticsSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'body', 'reason']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method patch_diagnostic_source_by_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `patch_diagnostic_source_by_id`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+        if 'reason' in params:
+            query_params.append(('reason', params['reason']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'DiagnosticsSource'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/diagnosticsources/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def patch_escalation_chain_by_id(self, id, body, **kwargs):  # noqa: E501
+        """Update escalation chain  # noqa: E501
+
+        Update the details of a specific escalation chain by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_escalation_chain_by_id(id, body, async_req=True)
@@ -27543,8 +30301,9 @@ class LMApi(object):
             return data
 
     def patch_escalation_chain_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update escalation chain  # noqa: E501
+        """Update escalation chain  # noqa: E501
 
+        Update the details of a specific escalation chain by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_escalation_chain_by_id_with_http_info(id, body, async_req=True)
@@ -27634,8 +30393,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_event_source_by_id(self, id, **kwargs):  # noqa: E501
-        """update eventSource by id  # noqa: E501
+        """Update event source by ID  # noqa: E501
 
+        Updates the event source with the provided ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_event_source_by_id(id, async_req=True)
@@ -27657,8 +30417,9 @@ class LMApi(object):
             return data
 
     def patch_event_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update eventSource by id  # noqa: E501
+        """Update event source by ID  # noqa: E501
 
+        Updates the event source with the provided ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_event_source_by_id_with_http_info(id, async_req=True)
@@ -27749,6 +30510,7 @@ class LMApi(object):
     def patch_job_monitor(self, id, **kwargs):  # noqa: E501
         """Update JobMonitor  # noqa: E501
 
+        Update an existing JobMonitor by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_job_monitor(id, async_req=True)
@@ -27772,6 +30534,7 @@ class LMApi(object):
     def patch_job_monitor_with_http_info(self, id, **kwargs):  # noqa: E501
         """Update JobMonitor  # noqa: E501
 
+        Update an existing JobMonitor by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_job_monitor_with_http_info(id, async_req=True)
@@ -27862,6 +30625,7 @@ class LMApi(object):
     def patch_log_partition(self, id, **kwargs):  # noqa: E501
         """Update an existing log partition  # noqa: E501
 
+        Update an existing log partition  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_log_partition(id, async_req=True)
@@ -27884,6 +30648,7 @@ class LMApi(object):
     def patch_log_partition_with_http_info(self, id, **kwargs):  # noqa: E501
         """Update an existing log partition  # noqa: E501
 
+        Update an existing log partition  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_log_partition_with_http_info(id, async_req=True)
@@ -27969,8 +30734,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_log_source(self, id, **kwargs):  # noqa: E501
-        """update log source   # noqa: E501
+        """Update log source  # noqa: E501
 
+        Updates an existing log source  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_log_source(id, async_req=True)
@@ -27992,8 +30758,9 @@ class LMApi(object):
             return data
 
     def patch_log_source_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update log source   # noqa: E501
+        """Update log source  # noqa: E501
 
+        Updates an existing log source  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_log_source_with_http_info(id, async_req=True)
@@ -28082,8 +30849,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_netscan(self, id, **kwargs):  # noqa: E501
-        """update a netscan  # noqa: E501
+        """Update a netscan  # noqa: E501
 
+        Update an existing netscan  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_netscan(id, async_req=True)
@@ -28105,8 +30873,9 @@ class LMApi(object):
             return data
 
     def patch_netscan_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update a netscan  # noqa: E501
+        """Update a netscan  # noqa: E501
 
+        Update an existing netscan  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_netscan_with_http_info(id, async_req=True)
@@ -28195,8 +30964,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_oid(self, id, **kwargs):  # noqa: E501
-        """update a OID  # noqa: E501
+        """Update an OID  # noqa: E501
 
+        Update the details of an existing OID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_oid(id, async_req=True)
@@ -28217,8 +30987,9 @@ class LMApi(object):
             return data
 
     def patch_oid_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update a OID  # noqa: E501
+        """Update an OID  # noqa: E501
 
+        Update the details of an existing OID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_oid_with_http_info(id, async_req=True)
@@ -28306,6 +31077,7 @@ class LMApi(object):
     def patch_ops_note_by_id(self, id, body, **kwargs):  # noqa: E501
         """update opsnote  # noqa: E501
 
+        update opsnote  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_ops_note_by_id(id, body, async_req=True)
@@ -28328,6 +31100,7 @@ class LMApi(object):
     def patch_ops_note_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update opsnote  # noqa: E501
 
+        update opsnote  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_ops_note_by_id_with_http_info(id, body, async_req=True)
@@ -28419,6 +31192,7 @@ class LMApi(object):
     def patch_property_rule(self, id, **kwargs):  # noqa: E501
         """update a property rule  # noqa: E501
 
+        Update a property rule by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_property_rule(id, async_req=True)
@@ -28442,6 +31216,7 @@ class LMApi(object):
     def patch_property_rule_with_http_info(self, id, **kwargs):  # noqa: E501
         """update a property rule  # noqa: E501
 
+        Update a property rule by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_property_rule_with_http_info(id, async_req=True)
@@ -28530,8 +31305,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_recipient_group_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update recipient group  # noqa: E501
+        """Update recipient group  # noqa: E501
 
+        Update a specific recipient group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_recipient_group_by_id(id, body, async_req=True)
@@ -28552,8 +31328,9 @@ class LMApi(object):
             return data
 
     def patch_recipient_group_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update recipient group  # noqa: E501
+        """Update recipient group  # noqa: E501
 
+        Update a specific recipient group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_recipient_group_by_id_with_http_info(id, body, async_req=True)
@@ -28643,8 +31420,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_report_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update report  # noqa: E501
+        """Update report  # noqa: E501
 
+        Update the details of a specific report by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_report_by_id(id, body, async_req=True)
@@ -28665,8 +31443,9 @@ class LMApi(object):
             return data
 
     def patch_report_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update report  # noqa: E501
+        """Update report  # noqa: E501
 
+        Update the details of a specific report by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_report_by_id_with_http_info(id, body, async_req=True)
@@ -28756,8 +31535,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_report_group_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update report group  # noqa: E501
+        """Update report group  # noqa: E501
 
+        Update a specific report group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_report_group_by_id(id, body, async_req=True)
@@ -28778,8 +31558,9 @@ class LMApi(object):
             return data
 
     def patch_report_group_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update report group  # noqa: E501
+        """Update report group  # noqa: E501
 
+        Update a specific report group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_report_group_by_id_with_http_info(id, body, async_req=True)
@@ -28869,8 +31650,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_role_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update role  # noqa: E501
+        """Update role  # noqa: E501
 
+        Update the details of a specific role by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_role_by_id(id, body, async_req=True)
@@ -28891,8 +31673,9 @@ class LMApi(object):
             return data
 
     def patch_role_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update role  # noqa: E501
+        """Update role  # noqa: E501
 
+        Update the details of a specific role by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_role_by_id_with_http_info(id, body, async_req=True)
@@ -28984,6 +31767,7 @@ class LMApi(object):
     def patch_sdt_by_id(self, id, body, **kwargs):  # noqa: E501
         """update SDT (Response may contain extra fields depending upon the type of SDT being updated)  # noqa: E501
 
+        update SDT (Response may contain extra fields depending upon the type of SDT being updated)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_sdt_by_id(id, body, async_req=True)
@@ -29006,6 +31790,7 @@ class LMApi(object):
     def patch_sdt_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update SDT (Response may contain extra fields depending upon the type of SDT being updated)  # noqa: E501
 
+        update SDT (Response may contain extra fields depending upon the type of SDT being updated)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_sdt_by_id_with_http_info(id, body, async_req=True)
@@ -29097,6 +31882,7 @@ class LMApi(object):
     def patch_topology_source(self, id, **kwargs):  # noqa: E501
         """Update TopologySource  # noqa: E501
 
+        Update TopologySource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_topology_source(id, async_req=True)
@@ -29120,6 +31906,7 @@ class LMApi(object):
     def patch_topology_source_with_http_info(self, id, **kwargs):  # noqa: E501
         """Update TopologySource  # noqa: E501
 
+        Update TopologySource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_topology_source_with_http_info(id, async_req=True)
@@ -29208,8 +31995,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_website_by_id(self, id, body, **kwargs):  # noqa: E501
-        """Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
+        """update website  # noqa: E501
 
+        Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_website_by_id(id, body, async_req=True)
@@ -29231,8 +32019,9 @@ class LMApi(object):
             return data
 
     def patch_website_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
+        """update website  # noqa: E501
 
+        Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_website_by_id_with_http_info(id, body, async_req=True)
@@ -29327,6 +32116,7 @@ class LMApi(object):
     def patch_website_group_by_id(self, id, body, **kwargs):  # noqa: E501
         """update website group  # noqa: E501
 
+        update website group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_website_group_by_id(id, body, async_req=True)
@@ -29350,6 +32140,7 @@ class LMApi(object):
     def patch_website_group_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update website group  # noqa: E501
 
+        update website group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_website_group_by_id_with_http_info(id, body, async_req=True)
@@ -29442,8 +32233,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def patch_widget_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        """Update widget  # noqa: E501
 
+        Updates a widget. Based on widget type, the request and response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_widget_by_id(id, body, async_req=True)
@@ -29464,8 +32256,9 @@ class LMApi(object):
             return data
 
     def patch_widget_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        """Update widget  # noqa: E501
 
+        Updates a widget. Based on widget type, the request and response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.patch_widget_by_id_with_http_info(id, body, async_req=True)
@@ -29557,6 +32350,7 @@ class LMApi(object):
     def schedule_auto_discovery_by_device_id(self, id, **kwargs):  # noqa: E501
         """schedule active discovery for a device  # noqa: E501
 
+        schedule active discovery for a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.schedule_auto_discovery_by_device_id(id, async_req=True)
@@ -29564,9 +32358,9 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
@@ -29581,6 +32375,7 @@ class LMApi(object):
     def schedule_auto_discovery_by_device_id_with_http_info(self, id, **kwargs):  # noqa: E501
         """schedule active discovery for a device  # noqa: E501
 
+        schedule active discovery for a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.schedule_auto_discovery_by_device_id_with_http_info(id, async_req=True)
@@ -29588,15 +32383,15 @@ class LMApi(object):
 
         :param async_req bool
         :param int id: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :return: object
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'start', 'end', 'netflow_filter']  # noqa: E501
+        all_params = ['id', 'end', 'netflow_filter', 'start']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -29624,12 +32419,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
 
         header_params = {}
 
@@ -29668,8 +32463,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def test_aws_account(self, body, **kwargs):  # noqa: E501
-        """test AWS account  # noqa: E501
+        """Test AWS account  # noqa: E501
 
+        Test the connection or status of an AWS account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.test_aws_account(body, async_req=True)
@@ -29689,8 +32485,9 @@ class LMApi(object):
             return data
 
     def test_aws_account_with_http_info(self, body, **kwargs):  # noqa: E501
-        """test AWS account  # noqa: E501
+        """Test AWS account  # noqa: E501
 
+        Test the connection or status of an AWS account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.test_aws_account_with_http_info(body, async_req=True)
@@ -29775,6 +32572,7 @@ class LMApi(object):
     def test_azure_account(self, body, **kwargs):  # noqa: E501
         """test Azure account  # noqa: E501
 
+        test Azure account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.test_azure_account(body, async_req=True)
@@ -29796,6 +32594,7 @@ class LMApi(object):
     def test_azure_account_with_http_info(self, body, **kwargs):  # noqa: E501
         """test Azure account  # noqa: E501
 
+        test Azure account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.test_azure_account_with_http_info(body, async_req=True)
@@ -29880,6 +32679,7 @@ class LMApi(object):
     def test_gcp_account(self, body, **kwargs):  # noqa: E501
         """test GCP account  # noqa: E501
 
+        test GCP account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.test_gcp_account(body, async_req=True)
@@ -29901,6 +32701,7 @@ class LMApi(object):
     def test_gcp_account_with_http_info(self, body, **kwargs):  # noqa: E501
         """test GCP account  # noqa: E501
 
+        test GCP account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.test_gcp_account_with_http_info(body, async_req=True)
@@ -29983,8 +32784,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def test_saa_s_account(self, body, **kwargs):  # noqa: E501
-        """test SaaS account  # noqa: E501
+        """Test SaaS account  # noqa: E501
 
+        Test the connection or status of a SaaS account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.test_saa_s_account(body, async_req=True)
@@ -30004,8 +32806,9 @@ class LMApi(object):
             return data
 
     def test_saa_s_account_with_http_info(self, body, **kwargs):  # noqa: E501
-        """test SaaS account  # noqa: E501
+        """Test SaaS account  # noqa: E501
 
+        Test the connection or status of a SaaS account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.test_saa_s_account_with_http_info(body, async_req=True)
@@ -30090,6 +32893,7 @@ class LMApi(object):
     def update_access_group(self, id, body, **kwargs):  # noqa: E501
         """Update access group  # noqa: E501
 
+        Update access group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_access_group(id, body, async_req=True)
@@ -30112,6 +32916,7 @@ class LMApi(object):
     def update_access_group_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """Update access group  # noqa: E501
 
+        Update access group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_access_group_with_http_info(id, body, async_req=True)
@@ -30203,6 +33008,7 @@ class LMApi(object):
     def update_admin_by_id(self, id, body, **kwargs):  # noqa: E501
         """update user  # noqa: E501
 
+        update user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_admin_by_id(id, body, async_req=True)
@@ -30227,6 +33033,7 @@ class LMApi(object):
     def update_admin_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update user  # noqa: E501
 
+        update user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_admin_by_id_with_http_info(id, body, async_req=True)
@@ -30324,6 +33131,7 @@ class LMApi(object):
     def update_alert_rule_by_id(self, id, body, **kwargs):  # noqa: E501
         """update alert rule  # noqa: E501
 
+        update alert rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_alert_rule_by_id(id, body, async_req=True)
@@ -30346,6 +33154,7 @@ class LMApi(object):
     def update_alert_rule_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update alert rule  # noqa: E501
 
+        update alert rule  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_alert_rule_by_id_with_http_info(id, body, async_req=True)
@@ -30435,8 +33244,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_api_token_by_admin_id(self, admin_id, apitoken_id, body, **kwargs):  # noqa: E501
-        """update api tokens for a user  # noqa: E501
+        """Update API tokens for a user  # noqa: E501
 
+        Update the API tokens for a specific user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_api_token_by_admin_id(admin_id, apitoken_id, body, async_req=True)
@@ -30458,8 +33268,9 @@ class LMApi(object):
             return data
 
     def update_api_token_by_admin_id_with_http_info(self, admin_id, apitoken_id, body, **kwargs):  # noqa: E501
-        """update api tokens for a user  # noqa: E501
+        """Update API tokens for a user  # noqa: E501
 
+        Update the API tokens for a specific user  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_api_token_by_admin_id_with_http_info(admin_id, apitoken_id, body, async_req=True)
@@ -30556,8 +33367,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_applies_to_function(self, id, **kwargs):  # noqa: E501
-        """update applies to function  # noqa: E501
+        """Update applies to function  # noqa: E501
 
+        Update an existing applies to function  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_applies_to_function(id, async_req=True)
@@ -30580,8 +33392,9 @@ class LMApi(object):
             return data
 
     def update_applies_to_function_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update applies to function  # noqa: E501
+        """Update applies to function  # noqa: E501
 
+        Update an existing applies to function  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_applies_to_function_with_http_info(id, async_req=True)
@@ -30675,6 +33488,7 @@ class LMApi(object):
     def update_collector_by_id(self, id, body, **kwargs):  # noqa: E501
         """update collector  # noqa: E501
 
+        update collector  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_collector_by_id(id, body, async_req=True)
@@ -30700,6 +33514,7 @@ class LMApi(object):
     def update_collector_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update collector  # noqa: E501
 
+        update collector  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_collector_by_id_with_http_info(id, body, async_req=True)
@@ -30798,8 +33613,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_collector_group_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update collector group  # noqa: E501
+        """Update collector group  # noqa: E501
 
+        Update the details of a specific collector group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_collector_group_by_id(id, body, async_req=True)
@@ -30823,8 +33639,9 @@ class LMApi(object):
             return data
 
     def update_collector_group_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update collector group  # noqa: E501
+        """Update collector group  # noqa: E501
 
+        Update the details of a specific collector group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_collector_group_by_id_with_http_info(id, body, async_req=True)
@@ -30923,8 +33740,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_config_source_by_id(self, id, **kwargs):  # noqa: E501
-        """update config source by id  # noqa: E501
+        """Update config source by ID  # noqa: E501
 
+        Update the config source details based on the provided ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_config_source_by_id(id, async_req=True)
@@ -30946,8 +33764,9 @@ class LMApi(object):
             return data
 
     def update_config_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update config source by id  # noqa: E501
+        """Update config source by ID  # noqa: E501
 
+        Update the config source details based on the provided ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_config_source_by_id_with_http_info(id, async_req=True)
@@ -31270,8 +34089,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_datasource_by_id(self, id, **kwargs):  # noqa: E501
-        """update datasource  # noqa: E501
+        """Update datasource  # noqa: E501
 
+        Updates a datasource by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_datasource_by_id(id, async_req=True)
@@ -31295,8 +34115,9 @@ class LMApi(object):
             return data
 
     def update_datasource_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update datasource  # noqa: E501
+        """Update datasource  # noqa: E501
 
+        Updates a datasource by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_datasource_by_id_with_http_info(id, async_req=True)
@@ -31391,8 +34212,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_default_dashboard(self, id, **kwargs):  # noqa: E501
-        """update default dashboard  # noqa: E501
+        """Update default dashboard  # noqa: E501
 
+        Update the default dashboard settings for a user or group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_default_dashboard(id, async_req=True)
@@ -31413,8 +34235,9 @@ class LMApi(object):
             return data
 
     def update_default_dashboard_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update default dashboard  # noqa: E501
+        """Update default dashboard  # noqa: E501
 
+        Update the default dashboard settings for a user or group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_default_dashboard_with_http_info(id, async_req=True)
@@ -31502,6 +34325,7 @@ class LMApi(object):
     def update_device(self, id, body, **kwargs):  # noqa: E501
         """update a device  # noqa: E501
 
+        update a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device(id, body, async_req=True)
@@ -31510,9 +34334,9 @@ class LMApi(object):
         :param async_req bool
         :param int id: (required)
         :param Device body: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str op_type:
         :param bool need_stc_grp_and_sorted_cp:
         :return: Device
@@ -31529,6 +34353,7 @@ class LMApi(object):
     def update_device_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update a device  # noqa: E501
 
+        update a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_with_http_info(id, body, async_req=True)
@@ -31537,9 +34362,9 @@ class LMApi(object):
         :param async_req bool
         :param int id: (required)
         :param Device body: (required)
-        :param int start:
         :param int end:
         :param str netflow_filter:
+        :param int start:
         :param str op_type:
         :param bool need_stc_grp_and_sorted_cp:
         :return: Device
@@ -31547,7 +34372,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['id', 'body', 'start', 'end', 'netflow_filter', 'op_type', 'need_stc_grp_and_sorted_cp']  # noqa: E501
+        all_params = ['id', 'body', 'end', 'netflow_filter', 'start', 'op_type', 'need_stc_grp_and_sorted_cp']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -31579,12 +34404,12 @@ class LMApi(object):
             path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
-        if 'start' in params:
-            query_params.append(('start', params['start']))  # noqa: E501
         if 'end' in params:
             query_params.append(('end', params['end']))  # noqa: E501
         if 'netflow_filter' in params:
             query_params.append(('netflowFilter', params['netflow_filter']))  # noqa: E501
+        if 'start' in params:
+            query_params.append(('start', params['start']))  # noqa: E501
         if 'op_type' in params:
             query_params.append(('opType', params['op_type']))  # noqa: E501
         if 'need_stc_grp_and_sorted_cp' in params:
@@ -31635,6 +34460,7 @@ class LMApi(object):
     def update_device_datasource_instance_alert_setting_by_id(self, device_id, hds_id, instance_id, id, body, **kwargs):  # noqa: E501
         """update device instance alert setting  # noqa: E501
 
+        update device instance alert setting  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_datasource_instance_alert_setting_by_id(device_id, hds_id, instance_id, id, body, async_req=True)
@@ -31660,6 +34486,7 @@ class LMApi(object):
     def update_device_datasource_instance_alert_setting_by_id_with_http_info(self, device_id, hds_id, instance_id, id, body, **kwargs):  # noqa: E501
         """update device instance alert setting  # noqa: E501
 
+        update device instance alert setting  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_datasource_instance_alert_setting_by_id_with_http_info(device_id, hds_id, instance_id, id, body, async_req=True)
@@ -31772,6 +34599,7 @@ class LMApi(object):
     def update_device_datasource_instance_by_id(self, device_id, hds_id, id, body, **kwargs):  # noqa: E501
         """update device instance  # noqa: E501
 
+        update device instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_datasource_instance_by_id(device_id, hds_id, id, body, async_req=True)
@@ -31797,6 +34625,7 @@ class LMApi(object):
     def update_device_datasource_instance_by_id_with_http_info(self, device_id, hds_id, id, body, **kwargs):  # noqa: E501
         """update device instance  # noqa: E501
 
+        update device instance  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_datasource_instance_by_id_with_http_info(device_id, hds_id, id, body, async_req=True)
@@ -31902,17 +34731,18 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_device_datasource_instance_group_by_id(self, device_id, device_ds_id, id, body, **kwargs):  # noqa: E501
-        """update device datasource instance group  # noqa: E501
+    def update_device_datasource_instance_group_by_id(self, device_ds_id, device_id, id, body, **kwargs):  # noqa: E501
+        """Update device datasource instance group  # noqa: E501
 
+        Update a specific device datasource instance group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_device_datasource_instance_group_by_id(device_id, device_ds_id, id, body, async_req=True)
+        >>> thread = api.update_device_datasource_instance_group_by_id(device_ds_id, device_id, id, body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param int id: (required)
         :param DeviceDataSourceInstanceGroup body: (required)
         :return: DeviceDataSourceInstanceGroup
@@ -31921,22 +34751,23 @@ class LMApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.update_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, body, **kwargs)  # noqa: E501
+            return self.update_device_datasource_instance_group_by_id_with_http_info(device_ds_id, device_id, id, body, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, body, **kwargs)  # noqa: E501
+            (data) = self.update_device_datasource_instance_group_by_id_with_http_info(device_ds_id, device_id, id, body, **kwargs)  # noqa: E501
             return data
 
-    def update_device_datasource_instance_group_by_id_with_http_info(self, device_id, device_ds_id, id, body, **kwargs):  # noqa: E501
-        """update device datasource instance group  # noqa: E501
+    def update_device_datasource_instance_group_by_id_with_http_info(self, device_ds_id, device_id, id, body, **kwargs):  # noqa: E501
+        """Update device datasource instance group  # noqa: E501
 
+        Update a specific device datasource instance group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_device_datasource_instance_group_by_id_with_http_info(device_id, device_ds_id, id, body, async_req=True)
+        >>> thread = api.update_device_datasource_instance_group_by_id_with_http_info(device_ds_id, device_id, id, body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param int id: (required)
         :param DeviceDataSourceInstanceGroup body: (required)
         :return: DeviceDataSourceInstanceGroup
@@ -31944,7 +34775,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['device_id', 'device_ds_id', 'id', 'body']  # noqa: E501
+        all_params = ['device_ds_id', 'device_id', 'id', 'body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -31960,14 +34791,14 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'device_id' is set
-        if ('device_id' not in params or
-                params['device_id'] is None):
-            raise ValueError("Missing the required parameter `device_id` when calling `update_device_datasource_instance_group_by_id`")  # noqa: E501
         # verify the required parameter 'device_ds_id' is set
         if ('device_ds_id' not in params or
                 params['device_ds_id'] is None):
             raise ValueError("Missing the required parameter `device_ds_id` when calling `update_device_datasource_instance_group_by_id`")  # noqa: E501
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `update_device_datasource_instance_group_by_id`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -31980,10 +34811,10 @@ class LMApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'device_id' in params:
-            path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'device_ds_id' in params:
             path_params['deviceDsId'] = params['device_ds_id']  # noqa: E501
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -32034,6 +34865,7 @@ class LMApi(object):
     def update_device_group_by_id(self, id, body, **kwargs):  # noqa: E501
         """update device group  # noqa: E501
 
+        update device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_group_by_id(id, body, async_req=True)
@@ -32057,6 +34889,7 @@ class LMApi(object):
     def update_device_group_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update device group  # noqa: E501
 
+        update device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_group_by_id_with_http_info(id, body, async_req=True)
@@ -32151,6 +34984,7 @@ class LMApi(object):
     def update_device_group_cluster_alert_conf_by_id(self, device_group_id, id, body, **kwargs):  # noqa: E501
         """Update cluster alert configuration  # noqa: E501
 
+        Update cluster alert configuration  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_group_cluster_alert_conf_by_id(device_group_id, id, body, async_req=True)
@@ -32174,6 +35008,7 @@ class LMApi(object):
     def update_device_group_cluster_alert_conf_by_id_with_http_info(self, device_group_id, id, body, **kwargs):  # noqa: E501
         """Update cluster alert configuration  # noqa: E501
 
+        Update cluster alert configuration  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_group_cluster_alert_conf_by_id_with_http_info(device_group_id, id, body, async_req=True)
@@ -32270,8 +35105,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_device_group_datasource_alert_setting(self, device_group_id, ds_id, body, **kwargs):  # noqa: E501
-        """update device group datasource alert setting  # noqa: E501
+        """Update device group datasource alert setting  # noqa: E501
 
+        Update the alert setting for a specific device group datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_group_datasource_alert_setting(device_group_id, ds_id, body, async_req=True)
@@ -32293,8 +35129,9 @@ class LMApi(object):
             return data
 
     def update_device_group_datasource_alert_setting_with_http_info(self, device_group_id, ds_id, body, **kwargs):  # noqa: E501
-        """update device group datasource alert setting  # noqa: E501
+        """Update device group datasource alert setting  # noqa: E501
 
+        Update the alert setting for a specific device group datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_group_datasource_alert_setting_with_http_info(device_group_id, ds_id, body, async_req=True)
@@ -32393,6 +35230,7 @@ class LMApi(object):
     def update_device_group_datasource_by_id(self, device_group_id, id, **kwargs):  # noqa: E501
         """update device group datasource  # noqa: E501
 
+        update device group datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_group_datasource_by_id(device_group_id, id, async_req=True)
@@ -32416,6 +35254,7 @@ class LMApi(object):
     def update_device_group_datasource_by_id_with_http_info(self, device_group_id, id, **kwargs):  # noqa: E501
         """update device group datasource  # noqa: E501
 
+        update device group datasource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_group_datasource_by_id_with_http_info(device_group_id, id, async_req=True)
@@ -32508,8 +35347,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_device_group_property_by_name(self, gid, name, body, **kwargs):  # noqa: E501
-        """update device group property  # noqa: E501
+        """Update device group property  # noqa: E501
 
+        Update a specific property of a device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_group_property_by_name(gid, name, body, async_req=True)
@@ -32531,8 +35371,9 @@ class LMApi(object):
             return data
 
     def update_device_group_property_by_name_with_http_info(self, gid, name, body, **kwargs):  # noqa: E501
-        """update device group property  # noqa: E501
+        """Update device group property  # noqa: E501
 
+        Update a specific property of a device group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_group_property_by_name_with_http_info(gid, name, body, async_req=True)
@@ -32629,8 +35470,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_device_property_by_name(self, device_id, name, body, **kwargs):  # noqa: E501
-        """update device property  # noqa: E501
+        """Update device property  # noqa: E501
 
+        Update a specific property of a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_property_by_name(device_id, name, body, async_req=True)
@@ -32652,8 +35494,9 @@ class LMApi(object):
             return data
 
     def update_device_property_by_name_with_http_info(self, device_id, name, body, **kwargs):  # noqa: E501
-        """update device property  # noqa: E501
+        """Update device property  # noqa: E501
 
+        Update a specific property of a device  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_device_property_by_name_with_http_info(device_id, name, body, async_req=True)
@@ -32749,9 +35592,125 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_escalation_chain_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update escalation chain  # noqa: E501
+    def update_diagnostic_source_by_id(self, id, **kwargs):  # noqa: E501
+        """Update a diagnostics source  # noqa: E501
 
+        Updates a diagnostics source by its ID  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_diagnostic_source_by_id(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :param DiagnosticsSource body:
+        :param str reason:
+        :return: DiagnosticsSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.update_diagnostic_source_by_id_with_http_info(id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.update_diagnostic_source_by_id_with_http_info(id, **kwargs)  # noqa: E501
+            return data
+
+    def update_diagnostic_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Update a diagnostics source  # noqa: E501
+
+        Updates a diagnostics source by its ID  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_diagnostic_source_by_id_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param int id: (required)
+        :param DiagnosticsSource body:
+        :param str reason:
+        :return: DiagnosticsSource
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'body', 'reason']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+        all_params.append('return_raw_response')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_diagnostic_source_by_id" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_diagnostic_source_by_id`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+        if 'reason' in params:
+            query_params.append(('reason', params['reason']))  # noqa: E501
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'body' in params:
+            body_params = params['body']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['LMv1']  # noqa: E501
+        if 'return_raw_response' in params and params["return_raw_response"]==True:
+            _response_type="raw_response"
+        else:
+            _response_type = 'DiagnosticsSource'
+        _preload_content_value = True
+        if _response_type == 'str':
+            _preload_content_value = False
+
+        return self.api_client.call_api(
+            '/setting/diagnosticsources/{id}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=_response_type,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=params.get('async_req'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=_preload_content_value,
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_escalation_chain_by_id(self, id, body, **kwargs):  # noqa: E501
+        """Update escalation chain  # noqa: E501
+
+        Update the details of a specific escalation chain by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_escalation_chain_by_id(id, body, async_req=True)
@@ -32772,8 +35731,9 @@ class LMApi(object):
             return data
 
     def update_escalation_chain_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update escalation chain  # noqa: E501
+        """Update escalation chain  # noqa: E501
 
+        Update the details of a specific escalation chain by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_escalation_chain_by_id_with_http_info(id, body, async_req=True)
@@ -32863,8 +35823,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_event_source_by_id(self, id, **kwargs):  # noqa: E501
-        """update eventSource by id  # noqa: E501
+        """Update event source by ID  # noqa: E501
 
+        Updates the event source with the provided ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_event_source_by_id(id, async_req=True)
@@ -32886,8 +35847,9 @@ class LMApi(object):
             return data
 
     def update_event_source_by_id_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update eventSource by id  # noqa: E501
+        """Update event source by ID  # noqa: E501
 
+        Updates the event source with the provided ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_event_source_by_id_with_http_info(id, async_req=True)
@@ -32975,17 +35937,18 @@ class LMApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_instance_group_alert_threshold(self, device_id, device_ds_id, dsig_id, dp_id, **kwargs):  # noqa: E501
-        """update instance group alert threshold (Setting the threshold at default group is not allowed)  # noqa: E501
+    def update_instance_group_alert_threshold(self, device_ds_id, device_id, dsig_id, dp_id, **kwargs):  # noqa: E501
+        """Update instance group alert threshold  # noqa: E501
 
+        Update the alert threshold for an instance group. Setting the threshold at the default group is not allowed.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_instance_group_alert_threshold(device_id, device_ds_id, dsig_id, dp_id, async_req=True)
+        >>> thread = api.update_instance_group_alert_threshold(device_ds_id, device_id, dsig_id, dp_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param int dsig_id: (required)
         :param int dp_id: (required)
         :param RestDeviceInstanceGroupAlertConfigV3 body:
@@ -32995,22 +35958,23 @@ class LMApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.update_instance_group_alert_threshold_with_http_info(device_id, device_ds_id, dsig_id, dp_id, **kwargs)  # noqa: E501
+            return self.update_instance_group_alert_threshold_with_http_info(device_ds_id, device_id, dsig_id, dp_id, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_instance_group_alert_threshold_with_http_info(device_id, device_ds_id, dsig_id, dp_id, **kwargs)  # noqa: E501
+            (data) = self.update_instance_group_alert_threshold_with_http_info(device_ds_id, device_id, dsig_id, dp_id, **kwargs)  # noqa: E501
             return data
 
-    def update_instance_group_alert_threshold_with_http_info(self, device_id, device_ds_id, dsig_id, dp_id, **kwargs):  # noqa: E501
-        """update instance group alert threshold (Setting the threshold at default group is not allowed)  # noqa: E501
+    def update_instance_group_alert_threshold_with_http_info(self, device_ds_id, device_id, dsig_id, dp_id, **kwargs):  # noqa: E501
+        """Update instance group alert threshold  # noqa: E501
 
+        Update the alert threshold for an instance group. Setting the threshold at the default group is not allowed.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_instance_group_alert_threshold_with_http_info(device_id, device_ds_id, dsig_id, dp_id, async_req=True)
+        >>> thread = api.update_instance_group_alert_threshold_with_http_info(device_ds_id, device_id, dsig_id, dp_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param int device_id: (required)
         :param int device_ds_id: The device-datasource ID you'd like to add an instance group for (required)
+        :param int device_id: (required)
         :param int dsig_id: (required)
         :param int dp_id: (required)
         :param RestDeviceInstanceGroupAlertConfigV3 body:
@@ -33019,7 +35983,7 @@ class LMApi(object):
                  returns the request thread.
         """
 
-        all_params = ['device_id', 'device_ds_id', 'dsig_id', 'dp_id', 'body']  # noqa: E501
+        all_params = ['device_ds_id', 'device_id', 'dsig_id', 'dp_id', 'body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -33035,14 +35999,14 @@ class LMApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'device_id' is set
-        if ('device_id' not in params or
-                params['device_id'] is None):
-            raise ValueError("Missing the required parameter `device_id` when calling `update_instance_group_alert_threshold`")  # noqa: E501
         # verify the required parameter 'device_ds_id' is set
         if ('device_ds_id' not in params or
                 params['device_ds_id'] is None):
             raise ValueError("Missing the required parameter `device_ds_id` when calling `update_instance_group_alert_threshold`")  # noqa: E501
+        # verify the required parameter 'device_id' is set
+        if ('device_id' not in params or
+                params['device_id'] is None):
+            raise ValueError("Missing the required parameter `device_id` when calling `update_instance_group_alert_threshold`")  # noqa: E501
         # verify the required parameter 'dsig_id' is set
         if ('dsig_id' not in params or
                 params['dsig_id'] is None):
@@ -33055,10 +36019,10 @@ class LMApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'device_id' in params:
-            path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'device_ds_id' in params:
             path_params['deviceDsId'] = params['device_ds_id']  # noqa: E501
+        if 'device_id' in params:
+            path_params['deviceId'] = params['device_id']  # noqa: E501
         if 'dsig_id' in params:
             path_params['dsigId'] = params['dsig_id']  # noqa: E501
         if 'dp_id' in params:
@@ -33111,6 +36075,7 @@ class LMApi(object):
     def update_job_monitor(self, id, **kwargs):  # noqa: E501
         """Update JobMonitor  # noqa: E501
 
+        Update an existing JobMonitor by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_job_monitor(id, async_req=True)
@@ -33134,6 +36099,7 @@ class LMApi(object):
     def update_job_monitor_with_http_info(self, id, **kwargs):  # noqa: E501
         """Update JobMonitor  # noqa: E501
 
+        Update an existing JobMonitor by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_job_monitor_with_http_info(id, async_req=True)
@@ -33224,6 +36190,7 @@ class LMApi(object):
     def update_log_partition(self, id, **kwargs):  # noqa: E501
         """Update an existing log partition  # noqa: E501
 
+        Update an existing log partition  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_log_partition(id, async_req=True)
@@ -33246,6 +36213,7 @@ class LMApi(object):
     def update_log_partition_with_http_info(self, id, **kwargs):  # noqa: E501
         """Update an existing log partition  # noqa: E501
 
+        Update an existing log partition  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_log_partition_with_http_info(id, async_req=True)
@@ -33331,8 +36299,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_log_source(self, id, **kwargs):  # noqa: E501
-        """update log source   # noqa: E501
+        """Update log source  # noqa: E501
 
+        Updates an existing log source  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_log_source(id, async_req=True)
@@ -33354,8 +36323,9 @@ class LMApi(object):
             return data
 
     def update_log_source_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update log source   # noqa: E501
+        """Update log source  # noqa: E501
 
+        Updates an existing log source  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_log_source_with_http_info(id, async_req=True)
@@ -33444,8 +36414,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_netscan(self, id, **kwargs):  # noqa: E501
-        """update a netscan  # noqa: E501
+        """Update a netscan  # noqa: E501
 
+        Update an existing netscan  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_netscan(id, async_req=True)
@@ -33467,8 +36438,9 @@ class LMApi(object):
             return data
 
     def update_netscan_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update a netscan  # noqa: E501
+        """Update a netscan  # noqa: E501
 
+        Update an existing netscan  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_netscan_with_http_info(id, async_req=True)
@@ -33557,8 +36529,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_oid(self, id, **kwargs):  # noqa: E501
-        """update a OID  # noqa: E501
+        """Update an OID  # noqa: E501
 
+        Update the details of an existing OID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_oid(id, async_req=True)
@@ -33579,8 +36552,9 @@ class LMApi(object):
             return data
 
     def update_oid_with_http_info(self, id, **kwargs):  # noqa: E501
-        """update a OID  # noqa: E501
+        """Update an OID  # noqa: E501
 
+        Update the details of an existing OID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_oid_with_http_info(id, async_req=True)
@@ -33668,6 +36642,7 @@ class LMApi(object):
     def update_ops_note_by_id(self, id, body, **kwargs):  # noqa: E501
         """update opsnote  # noqa: E501
 
+        update opsnote  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_ops_note_by_id(id, body, async_req=True)
@@ -33690,6 +36665,7 @@ class LMApi(object):
     def update_ops_note_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update opsnote  # noqa: E501
 
+        update opsnote  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_ops_note_by_id_with_http_info(id, body, async_req=True)
@@ -33781,6 +36757,7 @@ class LMApi(object):
     def update_property_rule(self, id, **kwargs):  # noqa: E501
         """update a property rule  # noqa: E501
 
+        Update a property rule by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_property_rule(id, async_req=True)
@@ -33804,6 +36781,7 @@ class LMApi(object):
     def update_property_rule_with_http_info(self, id, **kwargs):  # noqa: E501
         """update a property rule  # noqa: E501
 
+        Update a property rule by id  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_property_rule_with_http_info(id, async_req=True)
@@ -33892,8 +36870,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_recipient_group_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update recipient group  # noqa: E501
+        """Update recipient group  # noqa: E501
 
+        Update a specific recipient group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_recipient_group_by_id(id, body, async_req=True)
@@ -33914,8 +36893,9 @@ class LMApi(object):
             return data
 
     def update_recipient_group_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update recipient group  # noqa: E501
+        """Update recipient group  # noqa: E501
 
+        Update a specific recipient group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_recipient_group_by_id_with_http_info(id, body, async_req=True)
@@ -34005,8 +36985,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_report_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update report  # noqa: E501
+        """Update report  # noqa: E501
 
+        Update the details of a specific report by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_report_by_id(id, body, async_req=True)
@@ -34027,8 +37008,9 @@ class LMApi(object):
             return data
 
     def update_report_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update report  # noqa: E501
+        """Update report  # noqa: E501
 
+        Update the details of a specific report by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_report_by_id_with_http_info(id, body, async_req=True)
@@ -34118,8 +37100,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_report_group_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update report group  # noqa: E501
+        """Update report group  # noqa: E501
 
+        Update a specific report group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_report_group_by_id(id, body, async_req=True)
@@ -34140,8 +37123,9 @@ class LMApi(object):
             return data
 
     def update_report_group_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update report group  # noqa: E501
+        """Update report group  # noqa: E501
 
+        Update a specific report group by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_report_group_by_id_with_http_info(id, body, async_req=True)
@@ -34231,8 +37215,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_role_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update role  # noqa: E501
+        """Update role  # noqa: E501
 
+        Update the details of a specific role by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_role_by_id(id, body, async_req=True)
@@ -34253,8 +37238,9 @@ class LMApi(object):
             return data
 
     def update_role_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update role  # noqa: E501
+        """Update role  # noqa: E501
 
+        Update the details of a specific role by its ID  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_role_by_id_with_http_info(id, body, async_req=True)
@@ -34346,6 +37332,7 @@ class LMApi(object):
     def update_sdt_by_id(self, id, body, **kwargs):  # noqa: E501
         """update SDT (Response may contain extra fields depending upon the type of SDT being updated)  # noqa: E501
 
+        update SDT (Response may contain extra fields depending upon the type of SDT being updated)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_sdt_by_id(id, body, async_req=True)
@@ -34368,6 +37355,7 @@ class LMApi(object):
     def update_sdt_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update SDT (Response may contain extra fields depending upon the type of SDT being updated)  # noqa: E501
 
+        update SDT (Response may contain extra fields depending upon the type of SDT being updated)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_sdt_by_id_with_http_info(id, body, async_req=True)
@@ -34459,6 +37447,7 @@ class LMApi(object):
     def update_topology_source(self, id, **kwargs):  # noqa: E501
         """Update TopologySource  # noqa: E501
 
+        Update TopologySource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_topology_source(id, async_req=True)
@@ -34482,6 +37471,7 @@ class LMApi(object):
     def update_topology_source_with_http_info(self, id, **kwargs):  # noqa: E501
         """Update TopologySource  # noqa: E501
 
+        Update TopologySource  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_topology_source_with_http_info(id, async_req=True)
@@ -34570,8 +37560,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_website_by_id(self, id, body, **kwargs):  # noqa: E501
-        """Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
+        """update website  # noqa: E501
 
+        Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_website_by_id(id, body, async_req=True)
@@ -34593,8 +37584,9 @@ class LMApi(object):
             return data
 
     def update_website_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
+        """update website  # noqa: E501
 
+        Update website. Request structure may vary based on the check type {PingCheck | WebCheck model}. Use the respective model in SDK.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_website_by_id_with_http_info(id, body, async_req=True)
@@ -34689,6 +37681,7 @@ class LMApi(object):
     def update_website_group_by_id(self, id, body, **kwargs):  # noqa: E501
         """update website group  # noqa: E501
 
+        update website group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_website_group_by_id(id, body, async_req=True)
@@ -34712,6 +37705,7 @@ class LMApi(object):
     def update_website_group_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
         """update website group  # noqa: E501
 
+        update website group  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_website_group_by_id_with_http_info(id, body, async_req=True)
@@ -34804,8 +37798,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def update_widget_by_id(self, id, body, **kwargs):  # noqa: E501
-        """update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        """Update widget  # noqa: E501
 
+        Updates a widget. Based on widget type, the request and response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_widget_by_id(id, body, async_req=True)
@@ -34826,8 +37821,9 @@ class LMApi(object):
             return data
 
     def update_widget_by_id_with_http_info(self, id, body, **kwargs):  # noqa: E501
-        """update widget (Based upon widget type the request and response may contain additional attributes. Please refer models corresponding to specific widget type at the bottom of this page to check the attributes)  # noqa: E501
+        """Update widget  # noqa: E501
 
+        Updates a widget. Based on widget type, the request and response may contain additional attributes. Please refer to the models corresponding to specific widget types at the bottom of this page for detailed attributes.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_widget_by_id_with_http_info(id, body, async_req=True)
@@ -34917,8 +37913,9 @@ class LMApi(object):
             collection_formats=collection_formats)
 
     def verify_aws_billing_permissions(self, body, **kwargs):  # noqa: E501
-        """verify AWS Billing Permissions  # noqa: E501
+        """Verify AWS Billing Permissions  # noqa: E501
 
+        Verify the billing permissions of an AWS account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.verify_aws_billing_permissions(body, async_req=True)
@@ -34938,8 +37935,9 @@ class LMApi(object):
             return data
 
     def verify_aws_billing_permissions_with_http_info(self, body, **kwargs):  # noqa: E501
-        """verify AWS Billing Permissions  # noqa: E501
+        """Verify AWS Billing Permissions  # noqa: E501
 
+        Verify the billing permissions of an AWS account  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.verify_aws_billing_permissions_with_http_info(body, async_req=True)
@@ -35024,6 +38022,7 @@ class LMApi(object):
     def verify_storage_accounts_permissions(self, body, **kwargs):  # noqa: E501
         """view storage accounts  # noqa: E501
 
+        view storage accounts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.verify_storage_accounts_permissions(body, async_req=True)
@@ -35045,6 +38044,7 @@ class LMApi(object):
     def verify_storage_accounts_permissions_with_http_info(self, body, **kwargs):  # noqa: E501
         """view storage accounts  # noqa: E501
 
+        view storage accounts  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.verify_storage_accounts_permissions_with_http_info(body, async_req=True)

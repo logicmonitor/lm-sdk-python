@@ -34,7 +34,8 @@ class BigNumberItem(object):
         'rounding': 'int',
         'position': 'int',
         'right_label': 'str',
-        'color_thresholds': 'list[ColorThreshold]'
+        'color_thresholds': 'list[ColorThreshold]',
+        'actions': 'list[WidgetActionV3]'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class BigNumberItem(object):
         'rounding': 'rounding',
         'position': 'position',
         'right_label': 'rightLabel',
-        'color_thresholds': 'colorThresholds'
+        'color_thresholds': 'colorThresholds',
+        'actions': 'actions'
     }
 
-    def __init__(self, data_point_name=None, use_comma_separators=None, bottom_label=None, rounding=None, position=None, right_label=None, color_thresholds=None):  # noqa: E501
+    def __init__(self, data_point_name=None, use_comma_separators=None, bottom_label=None, rounding=None, position=None, right_label=None, color_thresholds=None, actions=None):  # noqa: E501
         """BigNumberItem - a model defined in Swagger"""  # noqa: E501
         self._data_point_name = None
         self._use_comma_separators = None
@@ -56,6 +58,7 @@ class BigNumberItem(object):
         self._position = None
         self._right_label = None
         self._color_thresholds = None
+        self._actions = None
         self.discriminator = None
         self.data_point_name = data_point_name
         self.use_comma_separators = use_comma_separators
@@ -69,6 +72,8 @@ class BigNumberItem(object):
             self.right_label = right_label
         if color_thresholds is not None:
             self.color_thresholds = color_thresholds
+        if actions is not None:
+            self.actions = actions
 
     @property
     def data_point_name(self):
@@ -220,6 +225,27 @@ class BigNumberItem(object):
         """
 
         self._color_thresholds = color_thresholds
+
+    @property
+    def actions(self):
+        """Gets the actions of this BigNumberItem.  # noqa: E501
+
+
+        :return: The actions of this BigNumberItem.  # noqa: E501
+        :rtype: list[WidgetActionV3]
+        """
+        return self._actions
+
+    @actions.setter
+    def actions(self, actions):
+        """Sets the actions of this BigNumberItem.
+
+
+        :param actions: The actions of this BigNumberItem.  # noqa: E501
+        :type: list[WidgetActionV3]
+        """
+
+        self._actions = actions
 
     def to_dict(self):
         """Returns the model properties as a dict"""

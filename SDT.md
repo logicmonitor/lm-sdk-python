@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **end_date_time_on_local** | **str** | The date, time and time zone that the SDT will end at | [optional] 
 **timezone** | **str** | The specific timezone for SDT | [optional] 
 **sdt_type** | **str** | The type of sdt. The values can be oneTime|weekly|monthly|daily|monthlyByWeek | [optional] 
+**default_value** | **datetime** |  | [optional] 
 **month_day** | **int** | The values can be 1 | 2....| 31. Specifies the day of the month that the SDT will be active for a monthly SDT | [optional] 
 **week_of_month** | **str** | The week of the month that the SDT will be active for a monthly SDT | [optional] 
 **admin** | **str** | The name of the user that created the SDT | [optional] 

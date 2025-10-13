@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **tags** | **list[str]** | tags | [optional] 
 **log_fields** | [**list[LogSourceLogField]**](LogSourceLogField.md) |  | [optional] 
 **installation_metadata** | [**IntegrationMetadata**](IntegrationMetadata.md) |  | [optional] 
+**origin_registry_id** | **str** | The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module&#x27;s import base and mark the ID&#x27;s version as audited | [optional] 
 **checksum** | **str** | The metadata checksum for the LMModule content | [optional] 
 **name** | **str** | The log source name | [optional] 
 **id** | **int** | The ID of the LMModule | [optional] 

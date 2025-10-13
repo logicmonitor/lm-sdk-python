@@ -31,6 +31,7 @@ class SDT(object):
         'end_date_time_on_local': 'str',
         'timezone': 'str',
         'sdt_type': 'str',
+        'default_value': 'datetime',
         'month_day': 'int',
         'week_of_month': 'str',
         'admin': 'str',
@@ -53,6 +54,7 @@ class SDT(object):
         'end_date_time_on_local': 'endDateTimeOnLocal',
         'timezone': 'timezone',
         'sdt_type': 'sdtType',
+        'default_value': 'defaultValue',
         'month_day': 'monthDay',
         'week_of_month': 'weekOfMonth',
         'admin': 'admin',
@@ -86,11 +88,12 @@ class SDT(object):
 'devicedatasourcesdt': 'DeviceDataSourceSDT',
 'websitegroupsdt': 'WebsiteGroupSDT'    }
 
-    def __init__(self, end_date_time_on_local=None, timezone=None, sdt_type=None, month_day=None, week_of_month=None, admin=None, end_date_time=None, type=None, is_effective=None, minute=None, duration=None, end_hour=None, start_date_time=None, hour=None, start_date_time_on_local=None, week_day=None, comment=None, id=None, end_minute=None):  # noqa: E501
+    def __init__(self, end_date_time_on_local=None, timezone=None, sdt_type=None, default_value=None, month_day=None, week_of_month=None, admin=None, end_date_time=None, type=None, is_effective=None, minute=None, duration=None, end_hour=None, start_date_time=None, hour=None, start_date_time_on_local=None, week_day=None, comment=None, id=None, end_minute=None):  # noqa: E501
         """SDT - a model defined in Swagger"""  # noqa: E501
         self._end_date_time_on_local = None
         self._timezone = None
         self._sdt_type = None
+        self._default_value = None
         self._month_day = None
         self._week_of_month = None
         self._admin = None
@@ -114,6 +117,8 @@ class SDT(object):
             self.timezone = timezone
         if sdt_type is not None:
             self.sdt_type = sdt_type
+        if default_value is not None:
+            self.default_value = default_value
         if month_day is not None:
             self.month_day = month_day
         if week_of_month is not None:
@@ -214,6 +219,27 @@ class SDT(object):
         """
 
         self._sdt_type = sdt_type
+
+    @property
+    def default_value(self):
+        """Gets the default_value of this SDT.  # noqa: E501
+
+
+        :return: The default_value of this SDT.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._default_value
+
+    @default_value.setter
+    def default_value(self, default_value):
+        """Sets the default_value of this SDT.
+
+
+        :param default_value: The default_value of this SDT.  # noqa: E501
+        :type: datetime
+        """
+
+        self._default_value = default_value
 
     @property
     def month_day(self):

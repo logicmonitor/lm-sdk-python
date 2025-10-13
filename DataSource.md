@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **applies_to** | **str** | The Applies To for the LMModule | [optional] 
 **lineage_id** | **str** | The lineageId the LMModule belongs to | [optional] 
 **collect_method** | **str** | The  method to collect data. The values can be snmp|ping|exs|webpage|wmi|cim|datadump|dns|ipmi|jdbb|script|udp|tcp|xen | 
+**origin_registry_id** | **str** | The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module&#x27;s import base and mark the ID&#x27;s version as audited | [optional] 
 **checksum** | **str** | The metadata checksum for the LMModule content | [optional] 
 **data_points** | [**list[DataPoint]**](DataPoint.md) | The data point list | [optional] 
 **id** | **int** | The ID of the LMModule | [optional] 
@@ -17,6 +18,7 @@ Name | Type | Description | Notes
 **group** | **str** | The group the LMModule is in | [optional] 
 **collector_attribute** | [**CollectorAttribute**](CollectorAttribute.md) |  | 
 **auto_discovery_config** | [**AutoDiscoveryConfiguration**](AutoDiscoveryConfiguration.md) |  | [optional] 
+**ad_parameters** | [**DataSource**](DataSource.md) |  | [optional] 
 **payload_version** | **int** | The DataSource payload version for custom metrics | [optional] 
 **use_wild_value_as_uuid** | **bool** | Use wild-value as unique identifier in case of multi instance datasource: true|false | [optional] 
 **enable_auto_discovery** | **bool** | Enable Auto Discovery or not when this data source has multi instance: false|true | [optional] 

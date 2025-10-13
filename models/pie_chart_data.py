@@ -29,31 +29,51 @@ class PieChartData(object):
     """
     swagger_types = {
         'color_name': 'str',
+        'host_name': 'str',
         'data_point_name': 'str',
+        'instance_id': 'int',
+        'instance_name': 'str',
         'legend': 'str',
+        'host_id': 'int',
         'value': 'float'
     }
 
     attribute_map = {
         'color_name': 'colorName',
+        'host_name': 'hostName',
         'data_point_name': 'dataPointName',
+        'instance_id': 'instanceId',
+        'instance_name': 'instanceName',
         'legend': 'legend',
+        'host_id': 'hostId',
         'value': 'value'
     }
 
-    def __init__(self, color_name=None, data_point_name=None, legend=None, value=None):  # noqa: E501
+    def __init__(self, color_name=None, host_name=None, data_point_name=None, instance_id=None, instance_name=None, legend=None, host_id=None, value=None):  # noqa: E501
         """PieChartData - a model defined in Swagger"""  # noqa: E501
         self._color_name = None
+        self._host_name = None
         self._data_point_name = None
+        self._instance_id = None
+        self._instance_name = None
         self._legend = None
+        self._host_id = None
         self._value = None
         self.discriminator = None
         if color_name is not None:
             self.color_name = color_name
+        if host_name is not None:
+            self.host_name = host_name
         if data_point_name is not None:
             self.data_point_name = data_point_name
+        if instance_id is not None:
+            self.instance_id = instance_id
+        if instance_name is not None:
+            self.instance_name = instance_name
         if legend is not None:
             self.legend = legend
+        if host_id is not None:
+            self.host_id = host_id
         if value is not None:
             self.value = value
 
@@ -79,6 +99,27 @@ class PieChartData(object):
         self._color_name = color_name
 
     @property
+    def host_name(self):
+        """Gets the host_name of this PieChartData.  # noqa: E501
+
+
+        :return: The host_name of this PieChartData.  # noqa: E501
+        :rtype: str
+        """
+        return self._host_name
+
+    @host_name.setter
+    def host_name(self, host_name):
+        """Sets the host_name of this PieChartData.
+
+
+        :param host_name: The host_name of this PieChartData.  # noqa: E501
+        :type: str
+        """
+
+        self._host_name = host_name
+
+    @property
     def data_point_name(self):
         """Gets the data_point_name of this PieChartData.  # noqa: E501
 
@@ -100,6 +141,48 @@ class PieChartData(object):
         self._data_point_name = data_point_name
 
     @property
+    def instance_id(self):
+        """Gets the instance_id of this PieChartData.  # noqa: E501
+
+
+        :return: The instance_id of this PieChartData.  # noqa: E501
+        :rtype: int
+        """
+        return self._instance_id
+
+    @instance_id.setter
+    def instance_id(self, instance_id):
+        """Sets the instance_id of this PieChartData.
+
+
+        :param instance_id: The instance_id of this PieChartData.  # noqa: E501
+        :type: int
+        """
+
+        self._instance_id = instance_id
+
+    @property
+    def instance_name(self):
+        """Gets the instance_name of this PieChartData.  # noqa: E501
+
+
+        :return: The instance_name of this PieChartData.  # noqa: E501
+        :rtype: str
+        """
+        return self._instance_name
+
+    @instance_name.setter
+    def instance_name(self, instance_name):
+        """Sets the instance_name of this PieChartData.
+
+
+        :param instance_name: The instance_name of this PieChartData.  # noqa: E501
+        :type: str
+        """
+
+        self._instance_name = instance_name
+
+    @property
     def legend(self):
         """Gets the legend of this PieChartData.  # noqa: E501
 
@@ -119,6 +202,27 @@ class PieChartData(object):
         """
 
         self._legend = legend
+
+    @property
+    def host_id(self):
+        """Gets the host_id of this PieChartData.  # noqa: E501
+
+
+        :return: The host_id of this PieChartData.  # noqa: E501
+        :rtype: int
+        """
+        return self._host_id
+
+    @host_id.setter
+    def host_id(self, host_id):
+        """Sets the host_id of this PieChartData.
+
+
+        :param host_id: The host_id of this PieChartData.  # noqa: E501
+        :type: int
+        """
+
+        self._host_id = host_id
 
     @property
     def value(self):

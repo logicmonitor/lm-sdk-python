@@ -31,79 +31,85 @@ class PropertyRule(object):
         'schedule_option': 'str',
         'groovy_script': 'str',
         'access_groups': 'list[AccessGroup]',
-        'windows_script': 'str',
-        'data_type': 'int',
         'description': 'str',
         'applies_to': 'str',
-        'technology': 'str',
         'linux_cmdline': 'str',
+        'lineage_id': 'str',
+        'origin_registry_id': 'str',
+        'checksum': 'str',
+        'id': 'int',
+        'access_group_ids': 'list[int]',
+        'group': 'str',
+        'windows_script': 'str',
+        'data_type': 'int',
+        'technology': 'str',
+        'params': 'list[PropertyRuleParam]',
         'version': 'int',
         'windows_cmdline': 'str',
-        'lineage_id': 'str',
         'tags': 'str',
         'audit_version': 'int',
         'installation_metadata': 'IntegrationMetadata',
         'script_type': 'str',
         'name': 'str',
-        'checksum': 'str',
         'interval': 'int',
-        'id': 'int',
-        'access_group_ids': 'list[int]',
-        'linux_script': 'str',
-        'group': 'str'
+        'linux_script': 'str'
     }
 
     attribute_map = {
         'schedule_option': 'scheduleOption',
         'groovy_script': 'groovyScript',
         'access_groups': 'accessGroups',
-        'windows_script': 'windowsScript',
-        'data_type': 'dataType',
         'description': 'description',
         'applies_to': 'appliesTo',
-        'technology': 'technology',
         'linux_cmdline': 'linuxCmdline',
+        'lineage_id': 'lineageId',
+        'origin_registry_id': 'originRegistryId',
+        'checksum': 'checksum',
+        'id': 'id',
+        'access_group_ids': 'accessGroupIds',
+        'group': 'group',
+        'windows_script': 'windowsScript',
+        'data_type': 'dataType',
+        'technology': 'technology',
+        'params': 'params',
         'version': 'version',
         'windows_cmdline': 'windowsCmdline',
-        'lineage_id': 'lineageId',
         'tags': 'tags',
         'audit_version': 'auditVersion',
         'installation_metadata': 'installationMetadata',
         'script_type': 'scriptType',
         'name': 'name',
-        'checksum': 'checksum',
         'interval': 'interval',
-        'id': 'id',
-        'access_group_ids': 'accessGroupIds',
-        'linux_script': 'linuxScript',
-        'group': 'group'
+        'linux_script': 'linuxScript'
     }
 
-    def __init__(self, schedule_option=None, groovy_script=None, access_groups=None, windows_script=None, data_type=None, description=None, applies_to=None, technology=None, linux_cmdline=None, version=None, windows_cmdline=None, lineage_id=None, tags=None, audit_version=None, installation_metadata=None, script_type=None, name=None, checksum=None, interval=None, id=None, access_group_ids=None, linux_script=None, group=None):  # noqa: E501
+    def __init__(self, schedule_option=None, groovy_script=None, access_groups=None, description=None, applies_to=None, linux_cmdline=None, lineage_id=None, origin_registry_id=None, checksum=None, id=None, access_group_ids=None, group=None, windows_script=None, data_type=None, technology=None, params=None, version=None, windows_cmdline=None, tags=None, audit_version=None, installation_metadata=None, script_type=None, name=None, interval=None, linux_script=None):  # noqa: E501
         """PropertyRule - a model defined in Swagger"""  # noqa: E501
         self._schedule_option = None
         self._groovy_script = None
         self._access_groups = None
-        self._windows_script = None
-        self._data_type = None
         self._description = None
         self._applies_to = None
-        self._technology = None
         self._linux_cmdline = None
+        self._lineage_id = None
+        self._origin_registry_id = None
+        self._checksum = None
+        self._id = None
+        self._access_group_ids = None
+        self._group = None
+        self._windows_script = None
+        self._data_type = None
+        self._technology = None
+        self._params = None
         self._version = None
         self._windows_cmdline = None
-        self._lineage_id = None
         self._tags = None
         self._audit_version = None
         self._installation_metadata = None
         self._script_type = None
         self._name = None
-        self._checksum = None
         self._interval = None
-        self._id = None
-        self._access_group_ids = None
         self._linux_script = None
-        self._group = None
         self.discriminator = None
         if schedule_option is not None:
             self.schedule_option = schedule_option
@@ -111,24 +117,36 @@ class PropertyRule(object):
             self.groovy_script = groovy_script
         if access_groups is not None:
             self.access_groups = access_groups
-        if windows_script is not None:
-            self.windows_script = windows_script
-        if data_type is not None:
-            self.data_type = data_type
         if description is not None:
             self.description = description
         if applies_to is not None:
             self.applies_to = applies_to
-        if technology is not None:
-            self.technology = technology
         if linux_cmdline is not None:
             self.linux_cmdline = linux_cmdline
+        if lineage_id is not None:
+            self.lineage_id = lineage_id
+        if origin_registry_id is not None:
+            self.origin_registry_id = origin_registry_id
+        if checksum is not None:
+            self.checksum = checksum
+        if id is not None:
+            self.id = id
+        if access_group_ids is not None:
+            self.access_group_ids = access_group_ids
+        if group is not None:
+            self.group = group
+        if windows_script is not None:
+            self.windows_script = windows_script
+        if data_type is not None:
+            self.data_type = data_type
+        if technology is not None:
+            self.technology = technology
+        if params is not None:
+            self.params = params
         if version is not None:
             self.version = version
         if windows_cmdline is not None:
             self.windows_cmdline = windows_cmdline
-        if lineage_id is not None:
-            self.lineage_id = lineage_id
         if tags is not None:
             self.tags = tags
         if audit_version is not None:
@@ -139,18 +157,10 @@ class PropertyRule(object):
             self.script_type = script_type
         if name is not None:
             self.name = name
-        if checksum is not None:
-            self.checksum = checksum
         if interval is not None:
             self.interval = interval
-        if id is not None:
-            self.id = id
-        if access_group_ids is not None:
-            self.access_group_ids = access_group_ids
         if linux_script is not None:
             self.linux_script = linux_script
-        if group is not None:
-            self.group = group
 
     @property
     def schedule_option(self):
@@ -222,52 +232,6 @@ class PropertyRule(object):
         self._access_groups = access_groups
 
     @property
-    def windows_script(self):
-        """Gets the windows_script of this PropertyRule.  # noqa: E501
-
-        external windows script name  # noqa: E501
-
-        :return: The windows_script of this PropertyRule.  # noqa: E501
-        :rtype: str
-        """
-        return self._windows_script
-
-    @windows_script.setter
-    def windows_script(self, windows_script):
-        """Sets the windows_script of this PropertyRule.
-
-        external windows script name  # noqa: E501
-
-        :param windows_script: The windows_script of this PropertyRule.  # noqa: E501
-        :type: str
-        """
-
-        self._windows_script = windows_script
-
-    @property
-    def data_type(self):
-        """Gets the data_type of this PropertyRule.  # noqa: E501
-
-        The data type of property source, default is 0. The values can be  0: property source  1: raw ERI     # noqa: E501
-
-        :return: The data_type of this PropertyRule.  # noqa: E501
-        :rtype: int
-        """
-        return self._data_type
-
-    @data_type.setter
-    def data_type(self, data_type):
-        """Sets the data_type of this PropertyRule.
-
-        The data type of property source, default is 0. The values can be  0: property source  1: raw ERI     # noqa: E501
-
-        :param data_type: The data_type of this PropertyRule.  # noqa: E501
-        :type: int
-        """
-
-        self._data_type = data_type
-
-    @property
     def description(self):
         """Gets the description of this PropertyRule.  # noqa: E501
 
@@ -314,6 +278,211 @@ class PropertyRule(object):
         self._applies_to = applies_to
 
     @property
+    def linux_cmdline(self):
+        """Gets the linux_cmdline of this PropertyRule.  # noqa: E501
+
+        external linux script args  # noqa: E501
+
+        :return: The linux_cmdline of this PropertyRule.  # noqa: E501
+        :rtype: str
+        """
+        return self._linux_cmdline
+
+    @linux_cmdline.setter
+    def linux_cmdline(self, linux_cmdline):
+        """Sets the linux_cmdline of this PropertyRule.
+
+        external linux script args  # noqa: E501
+
+        :param linux_cmdline: The linux_cmdline of this PropertyRule.  # noqa: E501
+        :type: str
+        """
+
+        self._linux_cmdline = linux_cmdline
+
+    @property
+    def lineage_id(self):
+        """Gets the lineage_id of this PropertyRule.  # noqa: E501
+
+        LM module lineageId  # noqa: E501
+
+        :return: The lineage_id of this PropertyRule.  # noqa: E501
+        :rtype: str
+        """
+        return self._lineage_id
+
+    @lineage_id.setter
+    def lineage_id(self, lineage_id):
+        """Sets the lineage_id of this PropertyRule.
+
+        LM module lineageId  # noqa: E501
+
+        :param lineage_id: The lineage_id of this PropertyRule.  # noqa: E501
+        :type: str
+        """
+
+        self._lineage_id = lineage_id
+
+    @property
+    def origin_registry_id(self):
+        """Gets the origin_registry_id of this PropertyRule.  # noqa: E501
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :return: The origin_registry_id of this PropertyRule.  # noqa: E501
+        :rtype: str
+        """
+        return self._origin_registry_id
+
+    @origin_registry_id.setter
+    def origin_registry_id(self, origin_registry_id):
+        """Sets the origin_registry_id of this PropertyRule.
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :param origin_registry_id: The origin_registry_id of this PropertyRule.  # noqa: E501
+        :type: str
+        """
+
+        self._origin_registry_id = origin_registry_id
+
+    @property
+    def checksum(self):
+        """Gets the checksum of this PropertyRule.  # noqa: E501
+
+        LM module checksum  # noqa: E501
+
+        :return: The checksum of this PropertyRule.  # noqa: E501
+        :rtype: str
+        """
+        return self._checksum
+
+    @checksum.setter
+    def checksum(self, checksum):
+        """Sets the checksum of this PropertyRule.
+
+        LM module checksum  # noqa: E501
+
+        :param checksum: The checksum of this PropertyRule.  # noqa: E501
+        :type: str
+        """
+
+        self._checksum = checksum
+
+    @property
+    def id(self):
+        """Gets the id of this PropertyRule.  # noqa: E501
+
+
+        :return: The id of this PropertyRule.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this PropertyRule.
+
+
+        :param id: The id of this PropertyRule.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def access_group_ids(self):
+        """Gets the access_group_ids of this PropertyRule.  # noqa: E501
+
+        The Access Groups Id's  # noqa: E501
+
+        :return: The access_group_ids of this PropertyRule.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._access_group_ids
+
+    @access_group_ids.setter
+    def access_group_ids(self, access_group_ids):
+        """Sets the access_group_ids of this PropertyRule.
+
+        The Access Groups Id's  # noqa: E501
+
+        :param access_group_ids: The access_group_ids of this PropertyRule.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._access_group_ids = access_group_ids
+
+    @property
+    def group(self):
+        """Gets the group of this PropertyRule.  # noqa: E501
+
+        The property rule group name  # noqa: E501
+
+        :return: The group of this PropertyRule.  # noqa: E501
+        :rtype: str
+        """
+        return self._group
+
+    @group.setter
+    def group(self, group):
+        """Sets the group of this PropertyRule.
+
+        The property rule group name  # noqa: E501
+
+        :param group: The group of this PropertyRule.  # noqa: E501
+        :type: str
+        """
+
+        self._group = group
+
+    @property
+    def windows_script(self):
+        """Gets the windows_script of this PropertyRule.  # noqa: E501
+
+        external windows script name  # noqa: E501
+
+        :return: The windows_script of this PropertyRule.  # noqa: E501
+        :rtype: str
+        """
+        return self._windows_script
+
+    @windows_script.setter
+    def windows_script(self, windows_script):
+        """Sets the windows_script of this PropertyRule.
+
+        external windows script name  # noqa: E501
+
+        :param windows_script: The windows_script of this PropertyRule.  # noqa: E501
+        :type: str
+        """
+
+        self._windows_script = windows_script
+
+    @property
+    def data_type(self):
+        """Gets the data_type of this PropertyRule.  # noqa: E501
+
+        The data type of property source, default is 0. The values can be  0: property source  1: raw ERI     # noqa: E501
+
+        :return: The data_type of this PropertyRule.  # noqa: E501
+        :rtype: int
+        """
+        return self._data_type
+
+    @data_type.setter
+    def data_type(self, data_type):
+        """Sets the data_type of this PropertyRule.
+
+        The data type of property source, default is 0. The values can be  0: property source  1: raw ERI     # noqa: E501
+
+        :param data_type: The data_type of this PropertyRule.  # noqa: E501
+        :type: int
+        """
+
+        self._data_type = data_type
+
+    @property
     def technology(self):
         """Gets the technology of this PropertyRule.  # noqa: E501
 
@@ -337,27 +506,25 @@ class PropertyRule(object):
         self._technology = technology
 
     @property
-    def linux_cmdline(self):
-        """Gets the linux_cmdline of this PropertyRule.  # noqa: E501
+    def params(self):
+        """Gets the params of this PropertyRule.  # noqa: E501
 
-        external linux script args  # noqa: E501
 
-        :return: The linux_cmdline of this PropertyRule.  # noqa: E501
-        :rtype: str
+        :return: The params of this PropertyRule.  # noqa: E501
+        :rtype: list[PropertyRuleParam]
         """
-        return self._linux_cmdline
+        return self._params
 
-    @linux_cmdline.setter
-    def linux_cmdline(self, linux_cmdline):
-        """Sets the linux_cmdline of this PropertyRule.
+    @params.setter
+    def params(self, params):
+        """Sets the params of this PropertyRule.
 
-        external linux script args  # noqa: E501
 
-        :param linux_cmdline: The linux_cmdline of this PropertyRule.  # noqa: E501
-        :type: str
+        :param params: The params of this PropertyRule.  # noqa: E501
+        :type: list[PropertyRuleParam]
         """
 
-        self._linux_cmdline = linux_cmdline
+        self._params = params
 
     @property
     def version(self):
@@ -404,29 +571,6 @@ class PropertyRule(object):
         """
 
         self._windows_cmdline = windows_cmdline
-
-    @property
-    def lineage_id(self):
-        """Gets the lineage_id of this PropertyRule.  # noqa: E501
-
-        LM module lineageId  # noqa: E501
-
-        :return: The lineage_id of this PropertyRule.  # noqa: E501
-        :rtype: str
-        """
-        return self._lineage_id
-
-    @lineage_id.setter
-    def lineage_id(self, lineage_id):
-        """Sets the lineage_id of this PropertyRule.
-
-        LM module lineageId  # noqa: E501
-
-        :param lineage_id: The lineage_id of this PropertyRule.  # noqa: E501
-        :type: str
-        """
-
-        self._lineage_id = lineage_id
 
     @property
     def tags(self):
@@ -542,29 +686,6 @@ class PropertyRule(object):
         self._name = name
 
     @property
-    def checksum(self):
-        """Gets the checksum of this PropertyRule.  # noqa: E501
-
-        LM module checksum  # noqa: E501
-
-        :return: The checksum of this PropertyRule.  # noqa: E501
-        :rtype: str
-        """
-        return self._checksum
-
-    @checksum.setter
-    def checksum(self, checksum):
-        """Sets the checksum of this PropertyRule.
-
-        LM module checksum  # noqa: E501
-
-        :param checksum: The checksum of this PropertyRule.  # noqa: E501
-        :type: str
-        """
-
-        self._checksum = checksum
-
-    @property
     def interval(self):
         """Gets the interval of this PropertyRule.  # noqa: E501
 
@@ -588,50 +709,6 @@ class PropertyRule(object):
         self._interval = interval
 
     @property
-    def id(self):
-        """Gets the id of this PropertyRule.  # noqa: E501
-
-
-        :return: The id of this PropertyRule.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this PropertyRule.
-
-
-        :param id: The id of this PropertyRule.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
-
-    @property
-    def access_group_ids(self):
-        """Gets the access_group_ids of this PropertyRule.  # noqa: E501
-
-        The Access Groups Id's  # noqa: E501
-
-        :return: The access_group_ids of this PropertyRule.  # noqa: E501
-        :rtype: list[int]
-        """
-        return self._access_group_ids
-
-    @access_group_ids.setter
-    def access_group_ids(self, access_group_ids):
-        """Sets the access_group_ids of this PropertyRule.
-
-        The Access Groups Id's  # noqa: E501
-
-        :param access_group_ids: The access_group_ids of this PropertyRule.  # noqa: E501
-        :type: list[int]
-        """
-
-        self._access_group_ids = access_group_ids
-
-    @property
     def linux_script(self):
         """Gets the linux_script of this PropertyRule.  # noqa: E501
 
@@ -653,29 +730,6 @@ class PropertyRule(object):
         """
 
         self._linux_script = linux_script
-
-    @property
-    def group(self):
-        """Gets the group of this PropertyRule.  # noqa: E501
-
-        The property rule group name  # noqa: E501
-
-        :return: The group of this PropertyRule.  # noqa: E501
-        :rtype: str
-        """
-        return self._group
-
-    @group.setter
-    def group(self, group):
-        """Sets the group of this PropertyRule.
-
-        The property rule group name  # noqa: E501
-
-        :param group: The group of this PropertyRule.  # noqa: E501
-        :type: str
-        """
-
-        self._group = group
 
     def to_dict(self):
         """Returns the model properties as a dict"""

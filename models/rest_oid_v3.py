@@ -30,6 +30,7 @@ class RestOidV3(object):
     swagger_types = {
         'installation_metadata': 'IntegrationMetadata',
         'access_groups': 'list[AccessGroup]',
+        'origin_registry_id': 'str',
         'checksum': 'str',
         'id': 'int',
         'oid': 'str',
@@ -41,6 +42,7 @@ class RestOidV3(object):
     attribute_map = {
         'installation_metadata': 'installationMetadata',
         'access_groups': 'accessGroups',
+        'origin_registry_id': 'originRegistryId',
         'checksum': 'checksum',
         'id': 'id',
         'oid': 'oid',
@@ -49,10 +51,11 @@ class RestOidV3(object):
         'lineage_id': 'lineageId'
     }
 
-    def __init__(self, installation_metadata=None, access_groups=None, checksum=None, id=None, oid=None, categories=None, access_group_ids=None, lineage_id=None):  # noqa: E501
+    def __init__(self, installation_metadata=None, access_groups=None, origin_registry_id=None, checksum=None, id=None, oid=None, categories=None, access_group_ids=None, lineage_id=None):  # noqa: E501
         """RestOidV3 - a model defined in Swagger"""  # noqa: E501
         self._installation_metadata = None
         self._access_groups = None
+        self._origin_registry_id = None
         self._checksum = None
         self._id = None
         self._oid = None
@@ -64,12 +67,13 @@ class RestOidV3(object):
             self.installation_metadata = installation_metadata
         if access_groups is not None:
             self.access_groups = access_groups
+        if origin_registry_id is not None:
+            self.origin_registry_id = origin_registry_id
         if checksum is not None:
             self.checksum = checksum
         if id is not None:
             self.id = id
-        if oid is not None:
-            self.oid = oid
+        self.oid = oid
         if categories is not None:
             self.categories = categories
         if access_group_ids is not None:
@@ -120,6 +124,29 @@ class RestOidV3(object):
         """
 
         self._access_groups = access_groups
+
+    @property
+    def origin_registry_id(self):
+        """Gets the origin_registry_id of this RestOidV3.  # noqa: E501
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :return: The origin_registry_id of this RestOidV3.  # noqa: E501
+        :rtype: str
+        """
+        return self._origin_registry_id
+
+    @origin_registry_id.setter
+    def origin_registry_id(self, origin_registry_id):
+        """Sets the origin_registry_id of this RestOidV3.
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :param origin_registry_id: The origin_registry_id of this RestOidV3.  # noqa: E501
+        :type: str
+        """
+
+        self._origin_registry_id = origin_registry_id
 
     @property
     def checksum(self):
@@ -187,6 +214,8 @@ class RestOidV3(object):
         :param oid: The oid of this RestOidV3.  # noqa: E501
         :type: str
         """
+        if oid is None:
+            raise ValueError("Invalid value for `oid`, must not be `None`")  # noqa: E501
 
         self._oid = oid
 

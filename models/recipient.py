@@ -49,11 +49,9 @@ class Recipient(object):
         self._addr = None
         self.discriminator = None
         self.method = method
-        if contact is not None:
-            self.contact = contact
+        self.contact = contact
         self.type = type
-        if addr is not None:
-            self.addr = addr
+        self.addr = addr
 
     @property
     def method(self):
@@ -100,6 +98,8 @@ class Recipient(object):
         :param contact: The contact of this Recipient.  # noqa: E501
         :type: str
         """
+        if contact is None:
+            raise ValueError("Invalid value for `contact`, must not be `None`")  # noqa: E501
 
         self._contact = contact
 
@@ -148,6 +148,8 @@ class Recipient(object):
         :param addr: The addr of this Recipient.  # noqa: E501
         :type: str
         """
+        if addr is None:
+            raise ValueError("Invalid value for `addr`, must not be `None`")  # noqa: E501
 
         self._addr = addr
 

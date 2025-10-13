@@ -29,45 +29,45 @@ class LMQLWidget(Widget):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'lmql_graph_info': 'LmqlGraphInfo'
+        'advanced_metrics_graph_info': 'AdvancedMetricsGraphInfo'
     }
     if hasattr(Widget, "swagger_types"):
         swagger_types.update(Widget.swagger_types)
 
     attribute_map = {
-        'lmql_graph_info': 'lmqlGraphInfo'
+        'advanced_metrics_graph_info': 'advancedMetricsGraphInfo'
     }
     if hasattr(Widget, "attribute_map"):
         attribute_map.update(Widget.attribute_map)
 
-    def __init__(self, lmql_graph_info=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, advanced_metrics_graph_info=None, *args, **kwargs):  # noqa: E501
         """LMQLWidget - a model defined in Swagger"""  # noqa: E501
-        self._lmql_graph_info = None
+        self._advanced_metrics_graph_info = None
         self.discriminator = None
-        if lmql_graph_info is not None:
-            self.lmql_graph_info = lmql_graph_info
+        if advanced_metrics_graph_info is not None:
+            self.advanced_metrics_graph_info = advanced_metrics_graph_info
         Widget.__init__(self, *args, **kwargs)
 
     @property
-    def lmql_graph_info(self):
-        """Gets the lmql_graph_info of this LMQLWidget.  # noqa: E501
+    def advanced_metrics_graph_info(self):
+        """Gets the advanced_metrics_graph_info of this LMQLWidget.  # noqa: E501
 
 
-        :return: The lmql_graph_info of this LMQLWidget.  # noqa: E501
-        :rtype: LmqlGraphInfo
+        :return: The advanced_metrics_graph_info of this LMQLWidget.  # noqa: E501
+        :rtype: AdvancedMetricsGraphInfo
         """
-        return self._lmql_graph_info
+        return self._advanced_metrics_graph_info
 
-    @lmql_graph_info.setter
-    def lmql_graph_info(self, lmql_graph_info):
-        """Sets the lmql_graph_info of this LMQLWidget.
+    @advanced_metrics_graph_info.setter
+    def advanced_metrics_graph_info(self, advanced_metrics_graph_info):
+        """Sets the advanced_metrics_graph_info of this LMQLWidget.
 
 
-        :param lmql_graph_info: The lmql_graph_info of this LMQLWidget.  # noqa: E501
-        :type: LmqlGraphInfo
+        :param advanced_metrics_graph_info: The advanced_metrics_graph_info of this LMQLWidget.  # noqa: E501
+        :type: AdvancedMetricsGraphInfo
         """
 
-        self._lmql_graph_info = lmql_graph_info
+        self._advanced_metrics_graph_info = advanced_metrics_graph_info
 
     def to_dict(self):
         """Returns the model properties as a dict"""

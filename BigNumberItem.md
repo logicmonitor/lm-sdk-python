@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **position** | **int** |  | [optional] 
 **right_label** | **str** |  | [optional] 
 **color_thresholds** | [**list[ColorThreshold]**](ColorThreshold.md) |  | [optional] 
+**actions** | [**list[WidgetActionV3]**](WidgetActionV3.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

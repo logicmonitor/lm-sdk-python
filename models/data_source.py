@@ -35,6 +35,7 @@ class DataSource(object):
         'applies_to': 'str',
         'lineage_id': 'str',
         'collect_method': 'str',
+        'origin_registry_id': 'str',
         'checksum': 'str',
         'data_points': 'list[DataPoint]',
         'id': 'int',
@@ -42,6 +43,7 @@ class DataSource(object):
         'group': 'str',
         'collector_attribute': 'CollectorAttribute',
         'auto_discovery_config': 'AutoDiscoveryConfiguration',
+        'ad_parameters': 'DataSource',
         'payload_version': 'int',
         'use_wild_value_as_uuid': 'bool',
         'enable_auto_discovery': 'bool',
@@ -65,6 +67,7 @@ class DataSource(object):
         'applies_to': 'appliesTo',
         'lineage_id': 'lineageId',
         'collect_method': 'collectMethod',
+        'origin_registry_id': 'originRegistryId',
         'checksum': 'checksum',
         'data_points': 'dataPoints',
         'id': 'id',
@@ -72,6 +75,7 @@ class DataSource(object):
         'group': 'group',
         'collector_attribute': 'collectorAttribute',
         'auto_discovery_config': 'autoDiscoveryConfig',
+        'ad_parameters': 'adParameters',
         'payload_version': 'payloadVersion',
         'use_wild_value_as_uuid': 'useWildValueAsUUID',
         'enable_auto_discovery': 'enableAutoDiscovery',
@@ -87,7 +91,7 @@ class DataSource(object):
         'name': 'name'
     }
 
-    def __init__(self, eri_discovery_config=None, access_groups=None, display_name=None, description=None, applies_to=None, lineage_id=None, collect_method=None, checksum=None, data_points=None, id=None, access_group_ids=None, group=None, collector_attribute=None, auto_discovery_config=None, payload_version=None, use_wild_value_as_uuid=None, enable_auto_discovery=None, technology=None, version=None, tags=None, audit_version=None, has_multi_instances=None, installation_metadata=None, eri_discovery_interval=None, enable_eri_discovery=None, collect_interval=None, name=None):  # noqa: E501
+    def __init__(self, eri_discovery_config=None, access_groups=None, display_name=None, description=None, applies_to=None, lineage_id=None, collect_method=None, origin_registry_id=None, checksum=None, data_points=None, id=None, access_group_ids=None, group=None, collector_attribute=None, auto_discovery_config=None, ad_parameters=None, payload_version=None, use_wild_value_as_uuid=None, enable_auto_discovery=None, technology=None, version=None, tags=None, audit_version=None, has_multi_instances=None, installation_metadata=None, eri_discovery_interval=None, enable_eri_discovery=None, collect_interval=None, name=None):  # noqa: E501
         """DataSource - a model defined in Swagger"""  # noqa: E501
         self._eri_discovery_config = None
         self._access_groups = None
@@ -96,6 +100,7 @@ class DataSource(object):
         self._applies_to = None
         self._lineage_id = None
         self._collect_method = None
+        self._origin_registry_id = None
         self._checksum = None
         self._data_points = None
         self._id = None
@@ -103,6 +108,7 @@ class DataSource(object):
         self._group = None
         self._collector_attribute = None
         self._auto_discovery_config = None
+        self._ad_parameters = None
         self._payload_version = None
         self._use_wild_value_as_uuid = None
         self._enable_auto_discovery = None
@@ -130,6 +136,8 @@ class DataSource(object):
         if lineage_id is not None:
             self.lineage_id = lineage_id
         self.collect_method = collect_method
+        if origin_registry_id is not None:
+            self.origin_registry_id = origin_registry_id
         if checksum is not None:
             self.checksum = checksum
         if data_points is not None:
@@ -143,6 +151,8 @@ class DataSource(object):
         self.collector_attribute = collector_attribute
         if auto_discovery_config is not None:
             self.auto_discovery_config = auto_discovery_config
+        if ad_parameters is not None:
+            self.ad_parameters = ad_parameters
         if payload_version is not None:
             self.payload_version = payload_version
         if use_wild_value_as_uuid is not None:
@@ -330,6 +340,29 @@ class DataSource(object):
         self._collect_method = collect_method
 
     @property
+    def origin_registry_id(self):
+        """Gets the origin_registry_id of this DataSource.  # noqa: E501
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :return: The origin_registry_id of this DataSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._origin_registry_id
+
+    @origin_registry_id.setter
+    def origin_registry_id(self, origin_registry_id):
+        """Sets the origin_registry_id of this DataSource.
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :param origin_registry_id: The origin_registry_id of this DataSource.  # noqa: E501
+        :type: str
+        """
+
+        self._origin_registry_id = origin_registry_id
+
+    @property
     def checksum(self):
         """Gets the checksum of this DataSource.  # noqa: E501
 
@@ -487,6 +520,27 @@ class DataSource(object):
         """
 
         self._auto_discovery_config = auto_discovery_config
+
+    @property
+    def ad_parameters(self):
+        """Gets the ad_parameters of this DataSource.  # noqa: E501
+
+
+        :return: The ad_parameters of this DataSource.  # noqa: E501
+        :rtype: DataSource
+        """
+        return self._ad_parameters
+
+    @ad_parameters.setter
+    def ad_parameters(self, ad_parameters):
+        """Sets the ad_parameters of this DataSource.
+
+
+        :param ad_parameters: The ad_parameters of this DataSource.  # noqa: E501
+        :type: DataSource
+        """
+
+        self._ad_parameters = ad_parameters
 
     @property
     def payload_version(self):

@@ -41,6 +41,7 @@ class LogSource(object):
         'tags': 'list[str]',
         'log_fields': 'list[LogSourceLogField]',
         'installation_metadata': 'IntegrationMetadata',
+        'origin_registry_id': 'str',
         'checksum': 'str',
         'name': 'str',
         'id': 'int',
@@ -63,6 +64,7 @@ class LogSource(object):
         'tags': 'tags',
         'log_fields': 'logFields',
         'installation_metadata': 'installationMetadata',
+        'origin_registry_id': 'originRegistryId',
         'checksum': 'checksum',
         'name': 'name',
         'id': 'id',
@@ -71,7 +73,7 @@ class LogSource(object):
         'group': 'group'
     }
 
-    def __init__(self, collection_method=None, applies_to_script=None, resource_mapping=None, access_groups=None, collection_attribute=None, changelogs=None, description=None, filters=None, technical_notes=None, lineage_id=None, tags=None, log_fields=None, installation_metadata=None, checksum=None, name=None, id=None, access_group_ids=None, collection_interval=None, group=None):  # noqa: E501
+    def __init__(self, collection_method=None, applies_to_script=None, resource_mapping=None, access_groups=None, collection_attribute=None, changelogs=None, description=None, filters=None, technical_notes=None, lineage_id=None, tags=None, log_fields=None, installation_metadata=None, origin_registry_id=None, checksum=None, name=None, id=None, access_group_ids=None, collection_interval=None, group=None):  # noqa: E501
         """LogSource - a model defined in Swagger"""  # noqa: E501
         self._collection_method = None
         self._applies_to_script = None
@@ -86,6 +88,7 @@ class LogSource(object):
         self._tags = None
         self._log_fields = None
         self._installation_metadata = None
+        self._origin_registry_id = None
         self._checksum = None
         self._name = None
         self._id = None
@@ -119,6 +122,8 @@ class LogSource(object):
             self.log_fields = log_fields
         if installation_metadata is not None:
             self.installation_metadata = installation_metadata
+        if origin_registry_id is not None:
+            self.origin_registry_id = origin_registry_id
         if checksum is not None:
             self.checksum = checksum
         if name is not None:
@@ -150,7 +155,7 @@ class LogSource(object):
         :param collection_method: The collection_method of this LogSource.  # noqa: E501
         :type: str
         """
-        allowed_values = ["INVALID", "WIN_EVENT", "SYSLOG", "DUMMY", "SCRAPE_LOGS", "KUBERNETES_EVENT", "KUBERNETES_POD", "SCRIPT", "SAAS_O365_AUDIT_LOGS", "SNMP_TRAP"]  # noqa: E501
+        allowed_values = ["INVALID", "WIN_EVENT", "SYSLOG", "DUMMY", "SCRAPE_LOGS", "KUBERNETES_EVENT", "KUBERNETES_POD", "SCRIPT", "SAAS_O365_AUDIT_LOGS", "SNMP_TRAP", "WEBHOOK"]  # noqa: E501
         if collection_method not in allowed_values:
             raise ValueError(
                 "Invalid value for `collection_method` ({0}), must be one of {1}"  # noqa: E501
@@ -426,6 +431,29 @@ class LogSource(object):
         """
 
         self._installation_metadata = installation_metadata
+
+    @property
+    def origin_registry_id(self):
+        """Gets the origin_registry_id of this LogSource.  # noqa: E501
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :return: The origin_registry_id of this LogSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._origin_registry_id
+
+    @origin_registry_id.setter
+    def origin_registry_id(self, origin_registry_id):
+        """Sets the origin_registry_id of this LogSource.
+
+        The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module's import base and mark the ID's version as audited  # noqa: E501
+
+        :param origin_registry_id: The origin_registry_id of this LogSource.  # noqa: E501
+        :type: str
+        """
+
+        self._origin_registry_id = origin_registry_id
 
     @property
     def checksum(self):

@@ -30,6 +30,7 @@ class Device(object):
     swagger_types = {
         'log_collector_group_id': 'int',
         'disable_alerting': 'bool',
+        'type': 'str',
         'netflow_collector_group_id': 'int',
         'role_privileges': 'list[str]',
         'system_properties': 'list[NameAndValue]',
@@ -83,6 +84,7 @@ class Device(object):
     attribute_map = {
         'log_collector_group_id': 'logCollectorGroupId',
         'disable_alerting': 'disableAlerting',
+        'type': 'type',
         'netflow_collector_group_id': 'netflowCollectorGroupId',
         'role_privileges': 'rolePrivileges',
         'system_properties': 'systemProperties',
@@ -133,10 +135,14 @@ class Device(object):
         'contains_multi_value': 'containsMultiValue'
     }
 
-    def __init__(self, log_collector_group_id=None, disable_alerting=None, netflow_collector_group_id=None, role_privileges=None, system_properties=None, is_preferred_log_collector_configured=None, host_status=None, auto_balanced_collector_group_id=None, inherited_properties=None, id=None, synthetics_collector_ids=None, up_time_in_seconds=None, device_type=None, current_collector_id=None, netflow_collector_id=None, auto_props_assigned_on=None, updated_on=None, preferred_collector_group_id=None, custom_properties=None, collector_description=None, preferred_collector_id=None, last_rawdata_time=None, name=None, deleted_time_in_ms=None, netflow_collector_group_name=None, azure_state=None, related_device_id=None, log_collector_group_name=None, display_name=None, log_collector_description=None, link=None, aws_state=None, description=None, created_on=None, gcp_state=None, auto_props_updated_on=None, scan_config_id=None, enable_netflow=None, last_data_time=None, host_group_ids=None, resource_ids=None, op=None, current_log_collector_id=None, log_collector_id=None, netflow_collector_description=None, user_permission=None, preferred_collector_group_name=None, auto_properties=None, to_delete_time_in_ms=None, contains_multi_value=None):  # noqa: E501
+    discriminator_value_class_map = {
+              }
+
+    def __init__(self, log_collector_group_id=None, disable_alerting=None, type=None, netflow_collector_group_id=None, role_privileges=None, system_properties=None, is_preferred_log_collector_configured=None, host_status=None, auto_balanced_collector_group_id=None, inherited_properties=None, id=None, synthetics_collector_ids=None, up_time_in_seconds=None, device_type=None, current_collector_id=None, netflow_collector_id=None, auto_props_assigned_on=None, updated_on=None, preferred_collector_group_id=None, custom_properties=None, collector_description=None, preferred_collector_id=None, last_rawdata_time=None, name=None, deleted_time_in_ms=None, netflow_collector_group_name=None, azure_state=None, related_device_id=None, log_collector_group_name=None, display_name=None, log_collector_description=None, link=None, aws_state=None, description=None, created_on=None, gcp_state=None, auto_props_updated_on=None, scan_config_id=None, enable_netflow=None, last_data_time=None, host_group_ids=None, resource_ids=None, op=None, current_log_collector_id=None, log_collector_id=None, netflow_collector_description=None, user_permission=None, preferred_collector_group_name=None, auto_properties=None, to_delete_time_in_ms=None, contains_multi_value=None):  # noqa: E501
         """Device - a model defined in Swagger"""  # noqa: E501
         self._log_collector_group_id = None
         self._disable_alerting = None
+        self._type = None
         self._netflow_collector_group_id = None
         self._role_privileges = None
         self._system_properties = None
@@ -185,11 +191,13 @@ class Device(object):
         self._auto_properties = None
         self._to_delete_time_in_ms = None
         self._contains_multi_value = None
-        self.discriminator = None
+        self.discriminator = 'type'
         if log_collector_group_id is not None:
             self.log_collector_group_id = log_collector_group_id
         if disable_alerting is not None:
             self.disable_alerting = disable_alerting
+        if type is not None:
+            self.type = type
         if netflow_collector_group_id is not None:
             self.netflow_collector_group_id = netflow_collector_group_id
         if role_privileges is not None:
@@ -329,6 +337,29 @@ class Device(object):
         """
 
         self._disable_alerting = disable_alerting
+
+    @property
+    def type(self):
+        """Gets the type of this Device.  # noqa: E501
+
+        Used to distinguish Uptime Device Request  # noqa: E501
+
+        :return: The type of this Device.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this Device.
+
+        Used to distinguish Uptime Device Request  # noqa: E501
+
+        :param type: The type of this Device.  # noqa: E501
+        :type: str
+        """
+
+        self._type = type
 
     @property
     def netflow_collector_group_id(self):
@@ -1439,6 +1470,11 @@ class Device(object):
         """
 
         self._contains_multi_value = contains_multi_value
+
+    def get_real_child_model(self, data):
+        """Returns the real base class specified by the discriminator"""
+        discriminator_value = data[self.discriminator].lower()
+        return self.discriminator_value_class_map.get(discriminator_value)
 
     def to_dict(self):
         """Returns the model properties as a dict"""
