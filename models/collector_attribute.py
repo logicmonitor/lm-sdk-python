@@ -62,6 +62,7 @@ class CollectorAttribute(object):
 'AzureLogAnalyticsWorkspacesCollectorAttribute': 'AzureLogAnalyticsWorkspacesCollectorAttribute',
 'batchscript': 'BatchScriptCollectorAttribute',
 'AzureActiveDirectoryUsersCollectorAttribute': 'AzureActiveDirectoryUsersCollectorAttribute',
+'AzureVwanVpnLinkConnectionCollectorAttribute': 'AzureVwanVpnLinkConnectionCollectorAttribute',
 'AzureWebJobCollectorAttributeV3': 'AzureWebJobCollectorAttributeV3',
 'SaasOffice365HealthCollectorAttributeV3': 'SaasOffice365HealthCollectorAttributeV3',
 'WebCheckDevice': 'WebCheckDevice',

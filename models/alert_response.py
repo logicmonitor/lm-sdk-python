@@ -574,7 +574,7 @@ class AlertResponse(object):
     def suppressor(self):
         """Gets the suppressor of this AlertResponse.  # noqa: E501
 
-        The component (For example: SDT, HostClusterAlert) which suppressed the alert  # noqa: E501
+        The component (For example: SDT, CollectorDown, HostClusterAlert, Dependency, HostDown, ADS) which suppressed the alert  # noqa: E501
 
         :return: The suppressor of this AlertResponse.  # noqa: E501
         :rtype: str
@@ -585,7 +585,7 @@ class AlertResponse(object):
     def suppressor(self, suppressor):
         """Sets the suppressor of this AlertResponse.
 
-        The component (For example: SDT, HostClusterAlert) which suppressed the alert  # noqa: E501
+        The component (For example: SDT, CollectorDown, HostClusterAlert, Dependency, HostDown, ADS) which suppressed the alert  # noqa: E501
 
         :param suppressor: The suppressor of this AlertResponse.  # noqa: E501
         :type: str

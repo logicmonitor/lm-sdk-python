@@ -29,6 +29,7 @@ class RestResponseMetaBlock(object):
     """
     swagger_types = {
         'filtered_count': 'int',
+        'is_total_count_exhaustive': 'bool',
         'from_paging_response_info': 'RestResponseMetaBlock',
         'from_sort_info': 'RestResponseMetaBlock',
         'per_page_count': 'int',
@@ -39,6 +40,7 @@ class RestResponseMetaBlock(object):
 
     attribute_map = {
         'filtered_count': 'filteredCount',
+        'is_total_count_exhaustive': 'isTotalCountExhaustive',
         'from_paging_response_info': 'fromPagingResponseInfo',
         'from_sort_info': 'fromSortInfo',
         'per_page_count': 'perPageCount',
@@ -47,9 +49,10 @@ class RestResponseMetaBlock(object):
         'page_offset_count': 'pageOffsetCount'
     }
 
-    def __init__(self, filtered_count=None, from_paging_response_info=None, from_sort_info=None, per_page_count=None, sort=None, total_count=None, page_offset_count=None):  # noqa: E501
+    def __init__(self, filtered_count=None, is_total_count_exhaustive=None, from_paging_response_info=None, from_sort_info=None, per_page_count=None, sort=None, total_count=None, page_offset_count=None):  # noqa: E501
         """RestResponseMetaBlock - a model defined in Swagger"""  # noqa: E501
         self._filtered_count = None
+        self._is_total_count_exhaustive = None
         self._from_paging_response_info = None
         self._from_sort_info = None
         self._per_page_count = None
@@ -59,6 +62,8 @@ class RestResponseMetaBlock(object):
         self.discriminator = None
         if filtered_count is not None:
             self.filtered_count = filtered_count
+        if is_total_count_exhaustive is not None:
+            self.is_total_count_exhaustive = is_total_count_exhaustive
         if from_paging_response_info is not None:
             self.from_paging_response_info = from_paging_response_info
         if from_sort_info is not None:
@@ -92,6 +97,27 @@ class RestResponseMetaBlock(object):
         """
 
         self._filtered_count = filtered_count
+
+    @property
+    def is_total_count_exhaustive(self):
+        """Gets the is_total_count_exhaustive of this RestResponseMetaBlock.  # noqa: E501
+
+
+        :return: The is_total_count_exhaustive of this RestResponseMetaBlock.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_total_count_exhaustive
+
+    @is_total_count_exhaustive.setter
+    def is_total_count_exhaustive(self, is_total_count_exhaustive):
+        """Sets the is_total_count_exhaustive of this RestResponseMetaBlock.
+
+
+        :param is_total_count_exhaustive: The is_total_count_exhaustive of this RestResponseMetaBlock.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_total_count_exhaustive = is_total_count_exhaustive
 
     @property
     def from_paging_response_info(self):

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **filtered_count** | **int** |  | [optional] 
+**is_total_count_exhaustive** | **bool** |  | [optional] 
 **from_paging_response_info** | [**RestResponseMetaBlock**](RestResponseMetaBlock.md) |  | [optional] 
 **from_sort_info** | [**RestResponseMetaBlock**](RestResponseMetaBlock.md) |  | [optional] 
 **per_page_count** | **int** |  | [optional] 

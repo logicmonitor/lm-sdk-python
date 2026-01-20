@@ -30,60 +30,94 @@ class LogPartition(object):
     swagger_types = {
         'parent': 'int',
         'user_permission': 'str',
+        'next_restart_ingest_monthly': 'bool',
         'criteria': 'str',
+        'usage_limit': 'str',
         'changelogs': 'list[LogPartitionChangelog]',
         'description': 'str',
         'active': 'bool',
         'paused_at': 'int',
         'priority': 'int',
+        'next_effective_date': 'int',
+        'restart_ingest_monthly': 'bool',
+        'is_limit_exceeded': 'bool',
         'name': 'str',
+        'next_retention': 'int',
+        'next_stop_ingest_on_limit': 'bool',
         'id': 'str',
         'fullname': 'str',
         'sku': 'str',
+        'next_sku': 'str',
         'tenant': 'str',
-        'retention': 'int'
+        'retention': 'int',
+        'stop_ingest_on_limit': 'bool',
+        'next_usage_limit': 'str'
     }
 
     attribute_map = {
         'parent': 'parent',
         'user_permission': 'userPermission',
+        'next_restart_ingest_monthly': 'nextRestartIngestMonthly',
         'criteria': 'criteria',
+        'usage_limit': 'usageLimit',
         'changelogs': 'changelogs',
         'description': 'description',
         'active': 'active',
         'paused_at': 'pausedAt',
         'priority': 'priority',
+        'next_effective_date': 'nextEffectiveDate',
+        'restart_ingest_monthly': 'restartIngestMonthly',
+        'is_limit_exceeded': 'isLimitExceeded',
         'name': 'name',
+        'next_retention': 'nextRetention',
+        'next_stop_ingest_on_limit': 'nextStopIngestOnLimit',
         'id': 'id',
         'fullname': 'fullname',
         'sku': 'sku',
+        'next_sku': 'nextSku',
         'tenant': 'tenant',
-        'retention': 'retention'
+        'retention': 'retention',
+        'stop_ingest_on_limit': 'stopIngestOnLimit',
+        'next_usage_limit': 'nextUsageLimit'
     }
 
-    def __init__(self, parent=None, user_permission=None, criteria=None, changelogs=None, description=None, active=None, paused_at=None, priority=None, name=None, id=None, fullname=None, sku=None, tenant=None, retention=None):  # noqa: E501
+    def __init__(self, parent=None, user_permission=None, next_restart_ingest_monthly=None, criteria=None, usage_limit=None, changelogs=None, description=None, active=None, paused_at=None, priority=None, next_effective_date=None, restart_ingest_monthly=None, is_limit_exceeded=None, name=None, next_retention=None, next_stop_ingest_on_limit=None, id=None, fullname=None, sku=None, next_sku=None, tenant=None, retention=None, stop_ingest_on_limit=None, next_usage_limit=None):  # noqa: E501
         """LogPartition - a model defined in Swagger"""  # noqa: E501
         self._parent = None
         self._user_permission = None
+        self._next_restart_ingest_monthly = None
         self._criteria = None
+        self._usage_limit = None
         self._changelogs = None
         self._description = None
         self._active = None
         self._paused_at = None
         self._priority = None
+        self._next_effective_date = None
+        self._restart_ingest_monthly = None
+        self._is_limit_exceeded = None
         self._name = None
+        self._next_retention = None
+        self._next_stop_ingest_on_limit = None
         self._id = None
         self._fullname = None
         self._sku = None
+        self._next_sku = None
         self._tenant = None
         self._retention = None
+        self._stop_ingest_on_limit = None
+        self._next_usage_limit = None
         self.discriminator = None
         if parent is not None:
             self.parent = parent
         if user_permission is not None:
             self.user_permission = user_permission
+        if next_restart_ingest_monthly is not None:
+            self.next_restart_ingest_monthly = next_restart_ingest_monthly
         if criteria is not None:
             self.criteria = criteria
+        if usage_limit is not None:
+            self.usage_limit = usage_limit
         if changelogs is not None:
             self.changelogs = changelogs
         if description is not None:
@@ -93,16 +127,32 @@ class LogPartition(object):
             self.paused_at = paused_at
         if priority is not None:
             self.priority = priority
+        if next_effective_date is not None:
+            self.next_effective_date = next_effective_date
+        if restart_ingest_monthly is not None:
+            self.restart_ingest_monthly = restart_ingest_monthly
+        if is_limit_exceeded is not None:
+            self.is_limit_exceeded = is_limit_exceeded
         self.name = name
+        if next_retention is not None:
+            self.next_retention = next_retention
+        if next_stop_ingest_on_limit is not None:
+            self.next_stop_ingest_on_limit = next_stop_ingest_on_limit
         if id is not None:
             self.id = id
         if fullname is not None:
             self.fullname = fullname
         if sku is not None:
             self.sku = sku
+        if next_sku is not None:
+            self.next_sku = next_sku
         if tenant is not None:
             self.tenant = tenant
         self.retention = retention
+        if stop_ingest_on_limit is not None:
+            self.stop_ingest_on_limit = stop_ingest_on_limit
+        if next_usage_limit is not None:
+            self.next_usage_limit = next_usage_limit
 
     @property
     def parent(self):
@@ -151,6 +201,27 @@ class LogPartition(object):
         self._user_permission = user_permission
 
     @property
+    def next_restart_ingest_monthly(self):
+        """Gets the next_restart_ingest_monthly of this LogPartition.  # noqa: E501
+
+
+        :return: The next_restart_ingest_monthly of this LogPartition.  # noqa: E501
+        :rtype: bool
+        """
+        return self._next_restart_ingest_monthly
+
+    @next_restart_ingest_monthly.setter
+    def next_restart_ingest_monthly(self, next_restart_ingest_monthly):
+        """Sets the next_restart_ingest_monthly of this LogPartition.
+
+
+        :param next_restart_ingest_monthly: The next_restart_ingest_monthly of this LogPartition.  # noqa: E501
+        :type: bool
+        """
+
+        self._next_restart_ingest_monthly = next_restart_ingest_monthly
+
+    @property
     def criteria(self):
         """Gets the criteria of this LogPartition.  # noqa: E501
 
@@ -172,6 +243,27 @@ class LogPartition(object):
         """
 
         self._criteria = criteria
+
+    @property
+    def usage_limit(self):
+        """Gets the usage_limit of this LogPartition.  # noqa: E501
+
+
+        :return: The usage_limit of this LogPartition.  # noqa: E501
+        :rtype: str
+        """
+        return self._usage_limit
+
+    @usage_limit.setter
+    def usage_limit(self, usage_limit):
+        """Sets the usage_limit of this LogPartition.
+
+
+        :param usage_limit: The usage_limit of this LogPartition.  # noqa: E501
+        :type: str
+        """
+
+        self._usage_limit = usage_limit
 
     @property
     def changelogs(self):
@@ -289,6 +381,69 @@ class LogPartition(object):
         self._priority = priority
 
     @property
+    def next_effective_date(self):
+        """Gets the next_effective_date of this LogPartition.  # noqa: E501
+
+
+        :return: The next_effective_date of this LogPartition.  # noqa: E501
+        :rtype: int
+        """
+        return self._next_effective_date
+
+    @next_effective_date.setter
+    def next_effective_date(self, next_effective_date):
+        """Sets the next_effective_date of this LogPartition.
+
+
+        :param next_effective_date: The next_effective_date of this LogPartition.  # noqa: E501
+        :type: int
+        """
+
+        self._next_effective_date = next_effective_date
+
+    @property
+    def restart_ingest_monthly(self):
+        """Gets the restart_ingest_monthly of this LogPartition.  # noqa: E501
+
+
+        :return: The restart_ingest_monthly of this LogPartition.  # noqa: E501
+        :rtype: bool
+        """
+        return self._restart_ingest_monthly
+
+    @restart_ingest_monthly.setter
+    def restart_ingest_monthly(self, restart_ingest_monthly):
+        """Sets the restart_ingest_monthly of this LogPartition.
+
+
+        :param restart_ingest_monthly: The restart_ingest_monthly of this LogPartition.  # noqa: E501
+        :type: bool
+        """
+
+        self._restart_ingest_monthly = restart_ingest_monthly
+
+    @property
+    def is_limit_exceeded(self):
+        """Gets the is_limit_exceeded of this LogPartition.  # noqa: E501
+
+
+        :return: The is_limit_exceeded of this LogPartition.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_limit_exceeded
+
+    @is_limit_exceeded.setter
+    def is_limit_exceeded(self, is_limit_exceeded):
+        """Sets the is_limit_exceeded of this LogPartition.
+
+
+        :param is_limit_exceeded: The is_limit_exceeded of this LogPartition.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_limit_exceeded = is_limit_exceeded
+
+    @property
     def name(self):
         """Gets the name of this LogPartition.  # noqa: E501
 
@@ -312,6 +467,48 @@ class LogPartition(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def next_retention(self):
+        """Gets the next_retention of this LogPartition.  # noqa: E501
+
+
+        :return: The next_retention of this LogPartition.  # noqa: E501
+        :rtype: int
+        """
+        return self._next_retention
+
+    @next_retention.setter
+    def next_retention(self, next_retention):
+        """Sets the next_retention of this LogPartition.
+
+
+        :param next_retention: The next_retention of this LogPartition.  # noqa: E501
+        :type: int
+        """
+
+        self._next_retention = next_retention
+
+    @property
+    def next_stop_ingest_on_limit(self):
+        """Gets the next_stop_ingest_on_limit of this LogPartition.  # noqa: E501
+
+
+        :return: The next_stop_ingest_on_limit of this LogPartition.  # noqa: E501
+        :rtype: bool
+        """
+        return self._next_stop_ingest_on_limit
+
+    @next_stop_ingest_on_limit.setter
+    def next_stop_ingest_on_limit(self, next_stop_ingest_on_limit):
+        """Sets the next_stop_ingest_on_limit of this LogPartition.
+
+
+        :param next_stop_ingest_on_limit: The next_stop_ingest_on_limit of this LogPartition.  # noqa: E501
+        :type: bool
+        """
+
+        self._next_stop_ingest_on_limit = next_stop_ingest_on_limit
 
     @property
     def id(self):
@@ -381,6 +578,27 @@ class LogPartition(object):
         self._sku = sku
 
     @property
+    def next_sku(self):
+        """Gets the next_sku of this LogPartition.  # noqa: E501
+
+
+        :return: The next_sku of this LogPartition.  # noqa: E501
+        :rtype: str
+        """
+        return self._next_sku
+
+    @next_sku.setter
+    def next_sku(self, next_sku):
+        """Sets the next_sku of this LogPartition.
+
+
+        :param next_sku: The next_sku of this LogPartition.  # noqa: E501
+        :type: str
+        """
+
+        self._next_sku = next_sku
+
+    @property
     def tenant(self):
         """Gets the tenant of this LogPartition.  # noqa: E501
 
@@ -427,6 +645,48 @@ class LogPartition(object):
             raise ValueError("Invalid value for `retention`, must not be `None`")  # noqa: E501
 
         self._retention = retention
+
+    @property
+    def stop_ingest_on_limit(self):
+        """Gets the stop_ingest_on_limit of this LogPartition.  # noqa: E501
+
+
+        :return: The stop_ingest_on_limit of this LogPartition.  # noqa: E501
+        :rtype: bool
+        """
+        return self._stop_ingest_on_limit
+
+    @stop_ingest_on_limit.setter
+    def stop_ingest_on_limit(self, stop_ingest_on_limit):
+        """Sets the stop_ingest_on_limit of this LogPartition.
+
+
+        :param stop_ingest_on_limit: The stop_ingest_on_limit of this LogPartition.  # noqa: E501
+        :type: bool
+        """
+
+        self._stop_ingest_on_limit = stop_ingest_on_limit
+
+    @property
+    def next_usage_limit(self):
+        """Gets the next_usage_limit of this LogPartition.  # noqa: E501
+
+
+        :return: The next_usage_limit of this LogPartition.  # noqa: E501
+        :rtype: str
+        """
+        return self._next_usage_limit
+
+    @next_usage_limit.setter
+    def next_usage_limit(self, next_usage_limit):
+        """Sets the next_usage_limit of this LogPartition.
+
+
+        :param next_usage_limit: The next_usage_limit of this LogPartition.  # noqa: E501
+        :type: str
+        """
+
+        self._next_usage_limit = next_usage_limit
 
     def to_dict(self):
         """Returns the model properties as a dict"""

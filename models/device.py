@@ -136,7 +136,8 @@ class Device(object):
     }
 
     discriminator_value_class_map = {
-              }
+          'uptimepingcheck': 'UptimePingCheck',
+'uptimewebcheck': 'UptimeWebCheck'    }
 
     def __init__(self, log_collector_group_id=None, disable_alerting=None, type=None, netflow_collector_group_id=None, role_privileges=None, system_properties=None, is_preferred_log_collector_configured=None, host_status=None, auto_balanced_collector_group_id=None, inherited_properties=None, id=None, synthetics_collector_ids=None, up_time_in_seconds=None, device_type=None, current_collector_id=None, netflow_collector_id=None, auto_props_assigned_on=None, updated_on=None, preferred_collector_group_id=None, custom_properties=None, collector_description=None, preferred_collector_id=None, last_rawdata_time=None, name=None, deleted_time_in_ms=None, netflow_collector_group_name=None, azure_state=None, related_device_id=None, log_collector_group_name=None, display_name=None, log_collector_description=None, link=None, aws_state=None, description=None, created_on=None, gcp_state=None, auto_props_updated_on=None, scan_config_id=None, enable_netflow=None, last_data_time=None, host_group_ids=None, resource_ids=None, op=None, current_log_collector_id=None, log_collector_id=None, netflow_collector_description=None, user_permission=None, preferred_collector_group_name=None, auto_properties=None, to_delete_time_in_ms=None, contains_multi_value=None):  # noqa: E501
         """Device - a model defined in Swagger"""  # noqa: E501
@@ -342,7 +343,7 @@ class Device(object):
     def type(self):
         """Gets the type of this Device.  # noqa: E501
 
-        Used to distinguish Uptime Device Request  # noqa: E501
+        Specifies the v3 Uptime Device request type. Supported values:  uptimewebcheck - for Uptime Web Check devices  uptimepingcheck - for Uptime Ping Check devices blank/empty value- for regular devices  # noqa: E501
 
         :return: The type of this Device.  # noqa: E501
         :rtype: str
@@ -353,7 +354,7 @@ class Device(object):
     def type(self, type):
         """Sets the type of this Device.
 
-        Used to distinguish Uptime Device Request  # noqa: E501
+        Specifies the v3 Uptime Device request type. Supported values:  uptimewebcheck - for Uptime Web Check devices  uptimepingcheck - for Uptime Ping Check devices blank/empty value- for regular devices  # noqa: E501
 
         :param type: The type of this Device.  # noqa: E501
         :type: str

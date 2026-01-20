@@ -23,8 +23,10 @@ logicmonitor_sdk/models/advance_metrics_big_number_info.py
 logicmonitor_sdk/models/advance_metrics_custom_graph_info.py
 logicmonitor_sdk/models/advance_metrics_gauge_info.py
 logicmonitor_sdk/models/advance_metrics_pie_chart_info.py
+logicmonitor_sdk/models/advance_metrics_table_info.py
 logicmonitor_sdk/models/advanced_field_filter.py
 logicmonitor_sdk/models/advanced_metrics_graph_info.py
+logicmonitor_sdk/models/advanced_metrics_report.py
 logicmonitor_sdk/models/aggregate_collector_attribute.py
 logicmonitor_sdk/models/alert.py
 logicmonitor_sdk/models/alert_ack.py
@@ -162,6 +164,8 @@ logicmonitor_sdk/models/azure_vng_connection_collector_attribute_v3.py
 logicmonitor_sdk/models/azure_vng_connection_discovery_method.py
 logicmonitor_sdk/models/azure_vwan_vpn_connection_collector_attribute.py
 logicmonitor_sdk/models/azure_vwan_vpn_connection_method.py
+logicmonitor_sdk/models/azure_vwan_vpn_link_connection_collector_attribute.py
+logicmonitor_sdk/models/azure_vwan_vpn_link_connection_method.py
 logicmonitor_sdk/models/azure_web_app_instance_discovery_method.py
 logicmonitor_sdk/models/azure_web_job_collector_attribute_v3.py
 logicmonitor_sdk/models/azure_web_job_discovery_method.py
@@ -388,6 +392,9 @@ logicmonitor_sdk/models/log_file.py
 logicmonitor_sdk/models/log_file_event_source.py
 logicmonitor_sdk/models/log_partition.py
 logicmonitor_sdk/models/log_partition_changelog.py
+logicmonitor_sdk/models/log_query.py
+logicmonitor_sdk/models/log_query_group.py
+logicmonitor_sdk/models/log_query_group_pagination_response.py
 logicmonitor_sdk/models/log_source.py
 logicmonitor_sdk/models/log_source_log_field.py
 logicmonitor_sdk/models/log_source_pagination_response.py
@@ -489,6 +496,9 @@ logicmonitor_sdk/models/recipient.py
 logicmonitor_sdk/models/recipient_group.py
 logicmonitor_sdk/models/recipient_group_pagination_response.py
 logicmonitor_sdk/models/registry_metadata.py
+logicmonitor_sdk/models/remediation_source.py
+logicmonitor_sdk/models/remediation_source_execution.py
+logicmonitor_sdk/models/remediation_source_pagination_response.py
 logicmonitor_sdk/models/report_base.py
 logicmonitor_sdk/models/report_group.py
 logicmonitor_sdk/models/report_group_pagination_response.py
@@ -636,7 +646,10 @@ logicmonitor_sdk/models/unmonitored_device_pagination_response.py
 logicmonitor_sdk/models/unmonitored_devices.py
 logicmonitor_sdk/models/update_reason.py
 logicmonitor_sdk/models/update_reasons.py
+logicmonitor_sdk/models/uptime_ping_check.py
 logicmonitor_sdk/models/uptime_resource_overview_report.py
+logicmonitor_sdk/models/uptime_web_check.py
+logicmonitor_sdk/models/uptime_web_check_step.py
 logicmonitor_sdk/models/usage.py
 logicmonitor_sdk/models/user_filter.py
 logicmonitor_sdk/models/user_report.py
@@ -645,7 +658,6 @@ logicmonitor_sdk/models/viz.py
 logicmonitor_sdk/models/viz_filter_item.py
 logicmonitor_sdk/models/web_check.py
 logicmonitor_sdk/models/web_check_device.py
-logicmonitor_sdk/models/web_check_device_step.py
 logicmonitor_sdk/models/web_check_step.py
 logicmonitor_sdk/models/web_page_collector_attribute.py
 logicmonitor_sdk/models/web_resource.py
@@ -699,8 +711,10 @@ test/test_advance_metrics_big_number_info.py
 test/test_advance_metrics_custom_graph_info.py
 test/test_advance_metrics_gauge_info.py
 test/test_advance_metrics_pie_chart_info.py
+test/test_advance_metrics_table_info.py
 test/test_advanced_field_filter.py
 test/test_advanced_metrics_graph_info.py
+test/test_advanced_metrics_report.py
 test/test_aggregate_collector_attribute.py
 test/test_alert.py
 test/test_alert_ack.py
@@ -838,6 +852,8 @@ test/test_azure_vng_connection_collector_attribute_v3.py
 test/test_azure_vng_connection_discovery_method.py
 test/test_azure_vwan_vpn_connection_collector_attribute.py
 test/test_azure_vwan_vpn_connection_method.py
+test/test_azure_vwan_vpn_link_connection_collector_attribute.py
+test/test_azure_vwan_vpn_link_connection_method.py
 test/test_azure_web_app_instance_discovery_method.py
 test/test_azure_web_job_collector_attribute_v3.py
 test/test_azure_web_job_discovery_method.py
@@ -1065,6 +1081,9 @@ test/test_log_file.py
 test/test_log_file_event_source.py
 test/test_log_partition.py
 test/test_log_partition_changelog.py
+test/test_log_query.py
+test/test_log_query_group.py
+test/test_log_query_group_pagination_response.py
 test/test_log_source.py
 test/test_log_source_log_field.py
 test/test_log_source_pagination_response.py
@@ -1166,6 +1185,9 @@ test/test_recipient.py
 test/test_recipient_group.py
 test/test_recipient_group_pagination_response.py
 test/test_registry_metadata.py
+test/test_remediation_source.py
+test/test_remediation_source_execution.py
+test/test_remediation_source_pagination_response.py
 test/test_report_base.py
 test/test_report_group.py
 test/test_report_group_pagination_response.py
@@ -1313,7 +1335,10 @@ test/test_unmonitored_device_pagination_response.py
 test/test_unmonitored_devices.py
 test/test_update_reason.py
 test/test_update_reasons.py
+test/test_uptime_ping_check.py
 test/test_uptime_resource_overview_report.py
+test/test_uptime_web_check.py
+test/test_uptime_web_check_step.py
 test/test_usage.py
 test/test_user_filter.py
 test/test_user_report.py
@@ -1322,7 +1347,6 @@ test/test_viz.py
 test/test_viz_filter_item.py
 test/test_web_check.py
 test/test_web_check_device.py
-test/test_web_check_device_step.py
 test/test_web_check_step.py
 test/test_web_page_collector_attribute.py
 test/test_web_resource.py

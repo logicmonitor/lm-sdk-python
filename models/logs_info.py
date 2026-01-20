@@ -31,6 +31,7 @@ class LogsInfo(object):
         'logs_data_type': 'str',
         'partitions': 'list[str]',
         'aggregation_column': 'str',
+        'aggregation_label': 'str',
         'query': 'str',
         'widget_view': 'str',
         'aggregation_function': 'str',
@@ -41,17 +42,19 @@ class LogsInfo(object):
         'logs_data_type': 'logsDataType',
         'partitions': 'partitions',
         'aggregation_column': 'aggregationColumn',
+        'aggregation_label': 'aggregationLabel',
         'query': 'query',
         'widget_view': 'widgetView',
         'aggregation_function': 'aggregationFunction',
         'aggregate_type': 'aggregateType'
     }
 
-    def __init__(self, logs_data_type=None, partitions=None, aggregation_column=None, query=None, widget_view=None, aggregation_function=None, aggregate_type=None):  # noqa: E501
+    def __init__(self, logs_data_type=None, partitions=None, aggregation_column=None, aggregation_label=None, query=None, widget_view=None, aggregation_function=None, aggregate_type=None):  # noqa: E501
         """LogsInfo - a model defined in Swagger"""  # noqa: E501
         self._logs_data_type = None
         self._partitions = None
         self._aggregation_column = None
+        self._aggregation_label = None
         self._query = None
         self._widget_view = None
         self._aggregation_function = None
@@ -62,6 +65,8 @@ class LogsInfo(object):
             self.partitions = partitions
         if aggregation_column is not None:
             self.aggregation_column = aggregation_column
+        if aggregation_label is not None:
+            self.aggregation_label = aggregation_label
         if query is not None:
             self.query = query
         if widget_view is not None:
@@ -136,6 +141,27 @@ class LogsInfo(object):
         """
 
         self._aggregation_column = aggregation_column
+
+    @property
+    def aggregation_label(self):
+        """Gets the aggregation_label of this LogsInfo.  # noqa: E501
+
+
+        :return: The aggregation_label of this LogsInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._aggregation_label
+
+    @aggregation_label.setter
+    def aggregation_label(self, aggregation_label):
+        """Sets the aggregation_label of this LogsInfo.
+
+
+        :param aggregation_label: The aggregation_label of this LogsInfo.  # noqa: E501
+        :type: str
+        """
+
+        self._aggregation_label = aggregation_label
 
     @property
     def query(self):

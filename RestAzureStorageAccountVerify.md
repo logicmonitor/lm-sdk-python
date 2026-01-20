@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **tenant_id** | **str** |  | [optional] 
 **storage_account_name** | **str** |  | [optional] 
 **storage_account_container_name** | **str** |  | [optional] 
+**export_name** | **str** |  | [optional] 
+**storage_account_container_directory** | **str** |  | [optional] 
 **is_china_account** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

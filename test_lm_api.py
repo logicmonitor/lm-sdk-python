@@ -136,7 +136,7 @@ class TestLMApi(unittest.TestCase):
     def test_add_device(self):
         """Test case for add_device
 
-        add a new device  # noqa: E501
+        add a new device (Request schema may change depending upon the type of uptime device being added)  # noqa: E501
         """
         pass
 
@@ -217,6 +217,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_add_log_query_group(self):
+        """Test case for add_log_query_group
+
+        Create a new log query group  # noqa: E501
+        """
+        pass
+
     def test_add_log_source(self):
         """Test case for add_log_source
 
@@ -256,6 +263,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for add_recipient_group
 
         Add recipient group  # noqa: E501
+        """
+        pass
+
+    def test_add_remediation_source(self):
+        """Test case for add_remediation_source
+
+        Add remediation source  # noqa: E501
         """
         pass
 
@@ -483,6 +497,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_log_query_group(self):
+        """Test case for delete_log_query_group
+
+        Delete log query group  # noqa: E501
+        """
+        pass
+
     def test_delete_log_source(self):
         """Test case for delete_log_source
 
@@ -522,6 +543,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for delete_recipient_group_by_id
 
         Delete recipient group  # noqa: E501
+        """
+        pass
+
+    def test_delete_remediation_source_by_id(self):
+        """Test case for delete_remediation_source_by_id
+
+        Delete a remediation source module  # noqa: E501
         """
         pass
 
@@ -606,6 +634,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for execute_diagnostics_manually
 
         Trigger a diagnostic module for host.  # noqa: E501
+        """
+        pass
+
+    def test_execute_remediation_manually(self):
+        """Test case for execute_remediation_manually
+
+        Trigger a remediation module for host.  # noqa: E501
         """
         pass
 
@@ -1239,6 +1274,34 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_log_queries_by_group_id(self):
+        """Test case for get_log_queries_by_group_id
+
+        Get log queries by group ID  # noqa: E501
+        """
+        pass
+
+    def test_get_log_query_group_by_id(self):
+        """Test case for get_log_query_group_by_id
+
+        Get log query group by ID  # noqa: E501
+        """
+        pass
+
+    def test_get_log_query_group_list(self):
+        """Test case for get_log_query_group_list
+
+        Get log query group list  # noqa: E501
+        """
+        pass
+
+    def test_get_log_query_group_list_by_group_type(self):
+        """Test case for get_log_query_group_list_by_group_type
+
+        Get log query groups by groupType  # noqa: E501
+        """
+        pass
+
     def test_get_log_source_by_id(self):
         """Test case for get_log_source_by_id
 
@@ -1383,6 +1446,20 @@ class TestLMApi(unittest.TestCase):
         """Test case for get_recommendations_list
 
         Get recommendation list  # noqa: E501
+        """
+        pass
+
+    def test_get_remediation_sources_by_id(self):
+        """Test case for get_remediation_sources_by_id
+
+        Get remediation sources by ID  # noqa: E501
+        """
+        pass
+
+    def test_get_remediation_sources_list(self):
+        """Test case for get_remediation_sources_list
+
+        Get remediation sources list  # noqa: E501
         """
         pass
 
@@ -1743,6 +1820,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_move_log_queries(self):
+        """Test case for move_log_queries
+
+        Move log queries to another group  # noqa: E501
+        """
+        pass
+
     def test_partition_action(self):
         """Test case for partition_action
 
@@ -1837,7 +1921,7 @@ class TestLMApi(unittest.TestCase):
     def test_patch_device(self):
         """Test case for patch_device
 
-        update a device  # noqa: E501
+        update a device (Request schema may change depending upon the type of uptime device being updated)  # noqa: E501
         """
         pass
 
@@ -1939,6 +2023,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_log_query_group(self):
+        """Test case for patch_log_query_group
+
+        Update log query group  # noqa: E501
+        """
+        pass
+
     def test_patch_log_source(self):
         """Test case for patch_log_source
 
@@ -1978,6 +2069,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for patch_recipient_group_by_id
 
         Update recipient group  # noqa: E501
+        """
+        pass
+
+    def test_patch_remediation_source_by_id(self):
+        """Test case for patch_remediation_source_by_id
+
+        Update a remediation source  # noqa: E501
         """
         pass
 
@@ -2072,6 +2170,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_trigger_usage_exceeded(self):
+        """Test case for trigger_usage_exceeded
+
+        Trigger usage exceeded action for log partitions  # noqa: E501
+        """
+        pass
+
     def test_update_access_group(self):
         """Test case for update_access_group
 
@@ -2159,7 +2264,7 @@ class TestLMApi(unittest.TestCase):
     def test_update_device(self):
         """Test case for update_device
 
-        update a device  # noqa: E501
+        update a device (Request schema may change depending upon the type of uptime device being updated)  # noqa: E501
         """
         pass
 
@@ -2268,6 +2373,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_update_log_query_group(self):
+        """Test case for update_log_query_group
+
+        Update log query group  # noqa: E501
+        """
+        pass
+
     def test_update_log_source(self):
         """Test case for update_log_source
 
@@ -2307,6 +2419,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for update_recipient_group_by_id
 
         Update recipient group  # noqa: E501
+        """
+        pass
+
+    def test_update_remediation_source_by_id(self):
+        """Test case for update_remediation_source_by_id
+
+        Update a remediation source  # noqa: E501
         """
         pass
 

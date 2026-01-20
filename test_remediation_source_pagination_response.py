@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import logicmonitor_sdk
-from logicmonitor_sdk.models.web_check_device_step import WebCheckDeviceStep  # noqa: E501
+from logicmonitor_sdk.models.remediation_source_pagination_response import RemediationSourcePaginationResponse  # noqa: E501
 from logicmonitor_sdk.rest import ApiException
 
 
-class TestWebCheckDeviceStep(unittest.TestCase):
-    """WebCheckDeviceStep unit test stubs"""
+class TestRemediationSourcePaginationResponse(unittest.TestCase):
+    """RemediationSourcePaginationResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestWebCheckDeviceStep(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testWebCheckDeviceStep(self):
-        """Test WebCheckDeviceStep"""
+    def testRemediationSourcePaginationResponse(self):
+        """Test RemediationSourcePaginationResponse"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = logicmonitor_sdk.models.web_check_device_step.WebCheckDeviceStep()  # noqa: E501
+        # model = logicmonitor_sdk.models.remediation_source_pagination_response.RemediationSourcePaginationResponse()  # noqa: E501
         pass
 
 

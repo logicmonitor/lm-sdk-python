@@ -30,12 +30,14 @@ class CollectorGroup(object):
     swagger_types = {
         'user_permission': 'str',
         'num_of_collectors': 'int',
+        'property_for_balancing_last_updated_on': 'int',
         'auto_balance_instance_count_threshold': 'int',
         'description': 'str',
         'highest_priority_collector_status': 'RestHighestPriorityCollectorStatus',
         'platform': 'str',
         'auto_balance': 'bool',
         'custom_properties': 'list[NameAndValue]',
+        'property_for_balancing_update_locked_upto_ms': 'int',
         'num_of_hosts': 'int',
         'num_of_instances': 'int',
         'cal_threshold': 'int',
@@ -43,18 +45,21 @@ class CollectorGroup(object):
         'auto_balance_strategy': 'str',
         'create_on': 'int',
         'id': 'int',
-        'mismatch_version': 'bool'
+        'mismatch_version': 'bool',
+        'property_for_balancing': 'str'
     }
 
     attribute_map = {
         'user_permission': 'userPermission',
         'num_of_collectors': 'numOfCollectors',
+        'property_for_balancing_last_updated_on': 'propertyForBalancingLastUpdatedOn',
         'auto_balance_instance_count_threshold': 'autoBalanceInstanceCountThreshold',
         'description': 'description',
         'highest_priority_collector_status': 'highestPriorityCollectorStatus',
         'platform': 'platform',
         'auto_balance': 'autoBalance',
         'custom_properties': 'customProperties',
+        'property_for_balancing_update_locked_upto_ms': 'propertyForBalancingUpdateLockedUptoMS',
         'num_of_hosts': 'numOfHosts',
         'num_of_instances': 'numOfInstances',
         'cal_threshold': 'calThreshold',
@@ -62,19 +67,22 @@ class CollectorGroup(object):
         'auto_balance_strategy': 'autoBalanceStrategy',
         'create_on': 'createOn',
         'id': 'id',
-        'mismatch_version': 'mismatchVersion'
+        'mismatch_version': 'mismatchVersion',
+        'property_for_balancing': 'propertyForBalancing'
     }
 
-    def __init__(self, user_permission=None, num_of_collectors=None, auto_balance_instance_count_threshold=None, description=None, highest_priority_collector_status=None, platform=None, auto_balance=None, custom_properties=None, num_of_hosts=None, num_of_instances=None, cal_threshold=None, name=None, auto_balance_strategy=None, create_on=None, id=None, mismatch_version=None):  # noqa: E501
+    def __init__(self, user_permission=None, num_of_collectors=None, property_for_balancing_last_updated_on=None, auto_balance_instance_count_threshold=None, description=None, highest_priority_collector_status=None, platform=None, auto_balance=None, custom_properties=None, property_for_balancing_update_locked_upto_ms=None, num_of_hosts=None, num_of_instances=None, cal_threshold=None, name=None, auto_balance_strategy=None, create_on=None, id=None, mismatch_version=None, property_for_balancing=None):  # noqa: E501
         """CollectorGroup - a model defined in Swagger"""  # noqa: E501
         self._user_permission = None
         self._num_of_collectors = None
+        self._property_for_balancing_last_updated_on = None
         self._auto_balance_instance_count_threshold = None
         self._description = None
         self._highest_priority_collector_status = None
         self._platform = None
         self._auto_balance = None
         self._custom_properties = None
+        self._property_for_balancing_update_locked_upto_ms = None
         self._num_of_hosts = None
         self._num_of_instances = None
         self._cal_threshold = None
@@ -83,11 +91,14 @@ class CollectorGroup(object):
         self._create_on = None
         self._id = None
         self._mismatch_version = None
+        self._property_for_balancing = None
         self.discriminator = None
         if user_permission is not None:
             self.user_permission = user_permission
         if num_of_collectors is not None:
             self.num_of_collectors = num_of_collectors
+        if property_for_balancing_last_updated_on is not None:
+            self.property_for_balancing_last_updated_on = property_for_balancing_last_updated_on
         if auto_balance_instance_count_threshold is not None:
             self.auto_balance_instance_count_threshold = auto_balance_instance_count_threshold
         if description is not None:
@@ -100,6 +111,8 @@ class CollectorGroup(object):
             self.auto_balance = auto_balance
         if custom_properties is not None:
             self.custom_properties = custom_properties
+        if property_for_balancing_update_locked_upto_ms is not None:
+            self.property_for_balancing_update_locked_upto_ms = property_for_balancing_update_locked_upto_ms
         if num_of_hosts is not None:
             self.num_of_hosts = num_of_hosts
         if num_of_instances is not None:
@@ -115,6 +128,8 @@ class CollectorGroup(object):
             self.id = id
         if mismatch_version is not None:
             self.mismatch_version = mismatch_version
+        if property_for_balancing is not None:
+            self.property_for_balancing = property_for_balancing
 
     @property
     def user_permission(self):
@@ -161,6 +176,29 @@ class CollectorGroup(object):
         """
 
         self._num_of_collectors = num_of_collectors
+
+    @property
+    def property_for_balancing_last_updated_on(self):
+        """Gets the property_for_balancing_last_updated_on of this CollectorGroup.  # noqa: E501
+
+        The time at which property for balancing was last updated in epoch format  # noqa: E501
+
+        :return: The property_for_balancing_last_updated_on of this CollectorGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._property_for_balancing_last_updated_on
+
+    @property_for_balancing_last_updated_on.setter
+    def property_for_balancing_last_updated_on(self, property_for_balancing_last_updated_on):
+        """Sets the property_for_balancing_last_updated_on of this CollectorGroup.
+
+        The time at which property for balancing was last updated in epoch format  # noqa: E501
+
+        :param property_for_balancing_last_updated_on: The property_for_balancing_last_updated_on of this CollectorGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._property_for_balancing_last_updated_on = property_for_balancing_last_updated_on
 
     @property
     def auto_balance_instance_count_threshold(self):
@@ -297,6 +335,29 @@ class CollectorGroup(object):
         """
 
         self._custom_properties = custom_properties
+
+    @property
+    def property_for_balancing_update_locked_upto_ms(self):
+        """Gets the property_for_balancing_update_locked_upto_ms of this CollectorGroup.  # noqa: E501
+
+        The time at which property for balancing is locked for updating in epoch format  # noqa: E501
+
+        :return: The property_for_balancing_update_locked_upto_ms of this CollectorGroup.  # noqa: E501
+        :rtype: int
+        """
+        return self._property_for_balancing_update_locked_upto_ms
+
+    @property_for_balancing_update_locked_upto_ms.setter
+    def property_for_balancing_update_locked_upto_ms(self, property_for_balancing_update_locked_upto_ms):
+        """Sets the property_for_balancing_update_locked_upto_ms of this CollectorGroup.
+
+        The time at which property for balancing is locked for updating in epoch format  # noqa: E501
+
+        :param property_for_balancing_update_locked_upto_ms: The property_for_balancing_update_locked_upto_ms of this CollectorGroup.  # noqa: E501
+        :type: int
+        """
+
+        self._property_for_balancing_update_locked_upto_ms = property_for_balancing_update_locked_upto_ms
 
     @property
     def num_of_hosts(self):
@@ -483,6 +544,29 @@ class CollectorGroup(object):
         """
 
         self._mismatch_version = mismatch_version
+
+    @property
+    def property_for_balancing(self):
+        """Gets the property_for_balancing of this CollectorGroup.  # noqa: E501
+
+        property for balancing  # noqa: E501
+
+        :return: The property_for_balancing of this CollectorGroup.  # noqa: E501
+        :rtype: str
+        """
+        return self._property_for_balancing
+
+    @property_for_balancing.setter
+    def property_for_balancing(self, property_for_balancing):
+        """Sets the property_for_balancing of this CollectorGroup.
+
+        property for balancing  # noqa: E501
+
+        :param property_for_balancing: The property_for_balancing of this CollectorGroup.  # noqa: E501
+        :type: str
+        """
+
+        self._property_for_balancing = property_for_balancing
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **accept_eulaon** | **int** | The time, in epoch format, that the user accepted the EULA (if required to) | [optional] 
 **immediate_force_logout** | **bool** | Specifies whether the user need to be logged off, if Force Password Change is enabled. The values can be true|false | [optional] 
 **user_permission** | **str** | The permission of current user with the admin. values can be write|read|none | [optional] 
+**inactive_session_timeout_in_seconds** | **int** | The time in seconds that the user session terminated if inactive | [optional] 
 **sms_email** | **str** | The sms email address associated with the user | [optional] 
 **two_fa_enabled** | **bool** | Whether or not two factor authentication is enabled for the user | [optional] 
 **first_name** | **str** | The first name associated with the user | [optional] 

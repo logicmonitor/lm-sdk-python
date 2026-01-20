@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**host_name** | **str** |  | [optional] 
 **cells** | [**list[CellData]**](CellData.md) |  | [optional] 
 **device_id** | **int** |  | [optional] 
 **device_display_name** | **str** |  | [optional] 

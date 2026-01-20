@@ -28,29 +28,55 @@ class RowData(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'host_name': 'str',
         'cells': 'list[CellData]',
         'device_id': 'int',
         'device_display_name': 'str'
     }
 
     attribute_map = {
+        'host_name': 'hostName',
         'cells': 'cells',
         'device_id': 'deviceId',
         'device_display_name': 'deviceDisplayName'
     }
 
-    def __init__(self, cells=None, device_id=None, device_display_name=None):  # noqa: E501
+    def __init__(self, host_name=None, cells=None, device_id=None, device_display_name=None):  # noqa: E501
         """RowData - a model defined in Swagger"""  # noqa: E501
+        self._host_name = None
         self._cells = None
         self._device_id = None
         self._device_display_name = None
         self.discriminator = None
+        if host_name is not None:
+            self.host_name = host_name
         if cells is not None:
             self.cells = cells
         if device_id is not None:
             self.device_id = device_id
         if device_display_name is not None:
             self.device_display_name = device_display_name
+
+    @property
+    def host_name(self):
+        """Gets the host_name of this RowData.  # noqa: E501
+
+
+        :return: The host_name of this RowData.  # noqa: E501
+        :rtype: str
+        """
+        return self._host_name
+
+    @host_name.setter
+    def host_name(self, host_name):
+        """Sets the host_name of this RowData.
+
+
+        :param host_name: The host_name of this RowData.  # noqa: E501
+        :type: str
+        """
+
+        self._host_name = host_name
 
     @property
     def cells(self):

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **monitor_object_name** | **str** | The name of the object that the alert is associated with | [optional] 
 **data_point_name** | **str** | The name of the datapoint in alert | [optional] 
 **data_point_id** | **int** | The id of the datapoint in alert | [optional] 
-**suppressor** | **str** | The component (For example: SDT, HostClusterAlert) which suppressed the alert | [optional] 
+**suppressor** | **str** | The component (For example: SDT, CollectorDown, HostClusterAlert, Dependency, HostDown, ADS) which suppressed the alert | [optional] 
 **context** | [**RestAlertQueryContext**](RestAlertQueryContext.md) |  | [optional] 
 **id** | **str** | The alert id | [optional] 
 **rule_id** | **int** | The id of the rule the alert matches | [optional] 

@@ -49,6 +49,7 @@ class AutoDiscoveryMethod(object):
 'AzureAppServiceEnvironmentMultiRolePoolDiscoverMethod': 'AzureAppServiceEnvironmentMultiRolePoolDiscoverMethod',
 'GcpVpnTunnelDiscoveryMethodV3': 'GcpVpnTunnelDiscoveryMethodV3',
 'ad_azurebilling': 'AzureBillingDiscoveryMethod',
+'AzureVwanVpnLinkConnectionMethod': 'AzureVwanVpnLinkConnectionMethod',
 'AzureVwanVpnConnectionMethod': 'AzureVwanVpnConnectionMethod',
 'SaaSWebexLicenseDiscoveryMethod': 'SaaSWebexLicenseDiscoveryMethod',
 'GcpAppEngineDiscoveryMethod': 'GcpAppEngineDiscoveryMethod',

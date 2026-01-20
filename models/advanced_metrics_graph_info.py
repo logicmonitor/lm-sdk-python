@@ -51,6 +51,7 @@ class AdvancedMetricsGraphInfo(object):
 
     discriminator_value_class_map = {
           'AdvanceMetricsPieChartInfo': 'AdvanceMetricsPieChartInfo',
+'AdvanceMetricsTableInfo': 'AdvanceMetricsTableInfo',
 'AdvanceMetricsCustomGraphInfo': 'AdvanceMetricsCustomGraphInfo',
 'AdvanceMetricsBigNumberInfo': 'AdvanceMetricsBigNumberInfo',
 'AdvanceMetricsGaugeInfo': 'AdvanceMetricsGaugeInfo',
@@ -188,7 +189,7 @@ class AdvancedMetricsGraphInfo(object):
         :param visualization_type: The visualization_type of this AdvancedMetricsGraphInfo.  # noqa: E501
         :type: str
         """
-        allowed_values = ["bigNumber", "gauge", "pie", "donut", "line", "area", "stack", "column", "bar"]  # noqa: E501
+        allowed_values = ["bigNumber", "gauge", "pie", "donut", "line", "area", "stack", "column", "bar", "table"]  # noqa: E501
         if visualization_type not in allowed_values:
             raise ValueError(
                 "Invalid value for `visualization_type` ({0}), must be one of {1}"  # noqa: E501

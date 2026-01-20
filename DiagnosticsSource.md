@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **tags** | **str** | The Tags for the LMModule | [optional] 
 **installation_metadata** | [**IntegrationMetadata**](IntegrationMetadata.md) |  | [optional] 
 **origin_registry_id** | **str** | The Registry ID of the Exchange Integration this module is based from, including this field will set this as the module&#x27;s import base and mark the ID&#x27;s version as audited | [optional] 
+**script_type** | **str** | script type: groovy | powershell | [optional] 
 **checksum** | **str** | The metadata checksum for the LMModule content | [optional] 
 **name** | **str** | The diagnostics source name | [optional] 
 **in_use** | **str** | The diagnostics source is in use | [optional] 

@@ -1,4 +1,4 @@
-# WebCheckDeviceStep
+# UptimeWebCheckStep
 
 ## Properties
 Name | Type | Description | Notes

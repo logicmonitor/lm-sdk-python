@@ -4,7 +4,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **diagnostics** | [**ArrayNode**](ArrayNode.md) |  | [optional] 
+**suppressed_warnings** | [**ArrayNode**](ArrayNode.md) |  | [optional] 
 **data** | [**ObjectNode**](ObjectNode.md) |  | [optional] 
+**suppressed_errors** | [**ArrayNode**](ArrayNode.md) |  | [optional] 
 **successes** | [**ArrayNode**](ArrayNode.md) |  | [optional] 
 **meta** | [**RestResponseMetaBlock**](RestResponseMetaBlock.md) |  | [optional] 
 **warnings** | [**ArrayNode**](ArrayNode.md) |  | [optional] 

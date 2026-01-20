@@ -30,25 +30,30 @@ class Subscriptions(object):
     swagger_types = {
         'quantity': 'float',
         'feature': 'str',
+        'retention_days': 'int',
         'sku': 'str'
     }
 
     attribute_map = {
         'quantity': 'quantity',
         'feature': 'feature',
+        'retention_days': 'retentionDays',
         'sku': 'sku'
     }
 
-    def __init__(self, quantity=None, feature=None, sku=None):  # noqa: E501
+    def __init__(self, quantity=None, feature=None, retention_days=None, sku=None):  # noqa: E501
         """Subscriptions - a model defined in Swagger"""  # noqa: E501
         self._quantity = None
         self._feature = None
+        self._retention_days = None
         self._sku = None
         self.discriminator = None
         if quantity is not None:
             self.quantity = quantity
         if feature is not None:
             self.feature = feature
+        if retention_days is not None:
+            self.retention_days = retention_days
         if sku is not None:
             self.sku = sku
 
@@ -93,6 +98,27 @@ class Subscriptions(object):
         """
 
         self._feature = feature
+
+    @property
+    def retention_days(self):
+        """Gets the retention_days of this Subscriptions.  # noqa: E501
+
+
+        :return: The retention_days of this Subscriptions.  # noqa: E501
+        :rtype: int
+        """
+        return self._retention_days
+
+    @retention_days.setter
+    def retention_days(self, retention_days):
+        """Sets the retention_days of this Subscriptions.
+
+
+        :param retention_days: The retention_days of this Subscriptions.  # noqa: E501
+        :type: int
+        """
+
+        self._retention_days = retention_days
 
     @property
     def sku(self):

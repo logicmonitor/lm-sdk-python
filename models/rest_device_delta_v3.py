@@ -344,7 +344,7 @@ class RestDeviceDeltaV3(object):
     def type(self):
         """Gets the type of this RestDeviceDeltaV3.  # noqa: E501
 
-        Used to distinguish Uptime Device Request  # noqa: E501
+        Specifies the v3 Uptime Device request type. Supported values:  uptimewebcheck - for Uptime Web Check devices  uptimepingcheck - for Uptime Ping Check devices blank/empty value- for regular devices  # noqa: E501
 
         :return: The type of this RestDeviceDeltaV3.  # noqa: E501
         :rtype: str
@@ -355,7 +355,7 @@ class RestDeviceDeltaV3(object):
     def type(self, type):
         """Sets the type of this RestDeviceDeltaV3.
 
-        Used to distinguish Uptime Device Request  # noqa: E501
+        Specifies the v3 Uptime Device request type. Supported values:  uptimewebcheck - for Uptime Web Check devices  uptimepingcheck - for Uptime Ping Check devices blank/empty value- for regular devices  # noqa: E501
 
         :param type: The type of this RestDeviceDeltaV3.  # noqa: E501
         :type: str

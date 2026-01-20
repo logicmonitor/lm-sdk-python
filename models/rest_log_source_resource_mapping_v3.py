@@ -87,7 +87,7 @@ class RestLogSourceResourceMappingV3(object):
         :param method: The method of this RestLogSourceResourceMappingV3.  # noqa: E501
         :type: str
         """
-        allowed_values = ["INVALID", "Invalid", "STATIC", "Static", "TOKEN", "Token", "REGEX", "Regex", "ATTRIBUTE", "Attribute", "REGEX_GROUP", "RegexGroup", "IP", "Ip", "FQDN", "HOSTNAME", "HostName", "HOST_WITHOUT_DNS", "HostWithoutDNS"]  # noqa: E501
+        allowed_values = ["Invalid", "Static", "Token", "Regex", "Attribute", "RegexGroup", "Ip", "FQDN", "HostName", "HostWithoutDNS"]  # noqa: E501
         if method not in allowed_values:
             raise ValueError(
                 "Invalid value for `method` ({0}), must be one of {1}"  # noqa: E501

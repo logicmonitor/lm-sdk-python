@@ -39,6 +39,7 @@ class DiagnosticsSource(object):
         'tags': 'str',
         'installation_metadata': 'IntegrationMetadata',
         'origin_registry_id': 'str',
+        'script_type': 'str',
         'checksum': 'str',
         'name': 'str',
         'in_use': 'str',
@@ -60,6 +61,7 @@ class DiagnosticsSource(object):
         'tags': 'tags',
         'installation_metadata': 'installationMetadata',
         'origin_registry_id': 'originRegistryId',
+        'script_type': 'scriptType',
         'checksum': 'checksum',
         'name': 'name',
         'in_use': 'inUse',
@@ -69,7 +71,7 @@ class DiagnosticsSource(object):
         'group': 'group'
     }
 
-    def __init__(self, access_groups=None, groovy_script=None, data_type=None, description=None, applies_to=None, technology=None, source=None, lineage_id=None, tags=None, installation_metadata=None, origin_registry_id=None, checksum=None, name=None, in_use=None, id=None, access_group_ids=None, installation_statuses=None, group=None):  # noqa: E501
+    def __init__(self, access_groups=None, groovy_script=None, data_type=None, description=None, applies_to=None, technology=None, source=None, lineage_id=None, tags=None, installation_metadata=None, origin_registry_id=None, script_type=None, checksum=None, name=None, in_use=None, id=None, access_group_ids=None, installation_statuses=None, group=None):  # noqa: E501
         """DiagnosticsSource - a model defined in Swagger"""  # noqa: E501
         self._access_groups = None
         self._groovy_script = None
@@ -82,6 +84,7 @@ class DiagnosticsSource(object):
         self._tags = None
         self._installation_metadata = None
         self._origin_registry_id = None
+        self._script_type = None
         self._checksum = None
         self._name = None
         self._in_use = None
@@ -112,6 +115,8 @@ class DiagnosticsSource(object):
             self.installation_metadata = installation_metadata
         if origin_registry_id is not None:
             self.origin_registry_id = origin_registry_id
+        if script_type is not None:
+            self.script_type = script_type
         if checksum is not None:
             self.checksum = checksum
         if name is not None:
@@ -377,6 +382,29 @@ class DiagnosticsSource(object):
         """
 
         self._origin_registry_id = origin_registry_id
+
+    @property
+    def script_type(self):
+        """Gets the script_type of this DiagnosticsSource.  # noqa: E501
+
+        script type: groovy | powershell  # noqa: E501
+
+        :return: The script_type of this DiagnosticsSource.  # noqa: E501
+        :rtype: str
+        """
+        return self._script_type
+
+    @script_type.setter
+    def script_type(self, script_type):
+        """Sets the script_type of this DiagnosticsSource.
+
+        script type: groovy | powershell  # noqa: E501
+
+        :param script_type: The script_type of this DiagnosticsSource.  # noqa: E501
+        :type: str
+        """
+
+        self._script_type = script_type
 
     @property
     def checksum(self):

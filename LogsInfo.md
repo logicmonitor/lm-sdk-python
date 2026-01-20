@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **logs_data_type** | **str** | The logsDataType included in the widget. Note that a logsDataType must be referenced in the logsInfo object in order to be displayed | 
 **partitions** | **list[str]** |  | [optional] 
 **aggregation_column** | **str** |  | [optional] 
+**aggregation_label** | **str** |  | [optional] 
 **query** | **str** | The query is used for saving the logs query expression | [optional] 
 **widget_view** | **str** | The widgetView included in the widget. Note that a widgetView must be referenced in the logsInfo object in order to be displayed | [optional] 
 **aggregation_function** | **str** |  | [optional] 

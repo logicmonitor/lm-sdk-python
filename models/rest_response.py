@@ -29,7 +29,9 @@ class RestResponse(object):
     """
     swagger_types = {
         'diagnostics': 'ArrayNode',
+        'suppressed_warnings': 'ArrayNode',
         'data': 'ObjectNode',
+        'suppressed_errors': 'ArrayNode',
         'successes': 'ArrayNode',
         'meta': 'RestResponseMetaBlock',
         'warnings': 'ArrayNode',
@@ -38,17 +40,21 @@ class RestResponse(object):
 
     attribute_map = {
         'diagnostics': 'diagnostics',
+        'suppressed_warnings': 'suppressedWarnings',
         'data': 'data',
+        'suppressed_errors': 'suppressedErrors',
         'successes': 'successes',
         'meta': 'meta',
         'warnings': 'warnings',
         'errors': 'errors'
     }
 
-    def __init__(self, diagnostics=None, data=None, successes=None, meta=None, warnings=None, errors=None):  # noqa: E501
+    def __init__(self, diagnostics=None, suppressed_warnings=None, data=None, suppressed_errors=None, successes=None, meta=None, warnings=None, errors=None):  # noqa: E501
         """RestResponse - a model defined in Swagger"""  # noqa: E501
         self._diagnostics = None
+        self._suppressed_warnings = None
         self._data = None
+        self._suppressed_errors = None
         self._successes = None
         self._meta = None
         self._warnings = None
@@ -56,8 +62,12 @@ class RestResponse(object):
         self.discriminator = None
         if diagnostics is not None:
             self.diagnostics = diagnostics
+        if suppressed_warnings is not None:
+            self.suppressed_warnings = suppressed_warnings
         if data is not None:
             self.data = data
+        if suppressed_errors is not None:
+            self.suppressed_errors = suppressed_errors
         if successes is not None:
             self.successes = successes
         if meta is not None:
@@ -89,6 +99,27 @@ class RestResponse(object):
         self._diagnostics = diagnostics
 
     @property
+    def suppressed_warnings(self):
+        """Gets the suppressed_warnings of this RestResponse.  # noqa: E501
+
+
+        :return: The suppressed_warnings of this RestResponse.  # noqa: E501
+        :rtype: ArrayNode
+        """
+        return self._suppressed_warnings
+
+    @suppressed_warnings.setter
+    def suppressed_warnings(self, suppressed_warnings):
+        """Sets the suppressed_warnings of this RestResponse.
+
+
+        :param suppressed_warnings: The suppressed_warnings of this RestResponse.  # noqa: E501
+        :type: ArrayNode
+        """
+
+        self._suppressed_warnings = suppressed_warnings
+
+    @property
     def data(self):
         """Gets the data of this RestResponse.  # noqa: E501
 
@@ -108,6 +139,27 @@ class RestResponse(object):
         """
 
         self._data = data
+
+    @property
+    def suppressed_errors(self):
+        """Gets the suppressed_errors of this RestResponse.  # noqa: E501
+
+
+        :return: The suppressed_errors of this RestResponse.  # noqa: E501
+        :rtype: ArrayNode
+        """
+        return self._suppressed_errors
+
+    @suppressed_errors.setter
+    def suppressed_errors(self, suppressed_errors):
+        """Sets the suppressed_errors of this RestResponse.
+
+
+        :param suppressed_errors: The suppressed_errors of this RestResponse.  # noqa: E501
+        :type: ArrayNode
+        """
+
+        self._suppressed_errors = suppressed_errors
 
     @property
     def successes(self):

@@ -35,6 +35,8 @@ class RestAzureStorageAccountVerify(object):
         'tenant_id': 'str',
         'storage_account_name': 'str',
         'storage_account_container_name': 'str',
+        'export_name': 'str',
+        'storage_account_container_directory': 'str',
         'is_china_account': 'bool'
     }
 
@@ -46,10 +48,12 @@ class RestAzureStorageAccountVerify(object):
         'tenant_id': 'tenantId',
         'storage_account_name': 'storageAccountName',
         'storage_account_container_name': 'storageAccountContainerName',
+        'export_name': 'exportName',
+        'storage_account_container_directory': 'storageAccountContainerDirectory',
         'is_china_account': 'isChinaAccount'
     }
 
-    def __init__(self, client_id=None, secret_key=None, china_account=None, group_id=None, tenant_id=None, storage_account_name=None, storage_account_container_name=None, is_china_account=None):  # noqa: E501
+    def __init__(self, client_id=None, secret_key=None, china_account=None, group_id=None, tenant_id=None, storage_account_name=None, storage_account_container_name=None, export_name=None, storage_account_container_directory=None, is_china_account=None):  # noqa: E501
         """RestAzureStorageAccountVerify - a model defined in Swagger"""  # noqa: E501
         self._client_id = None
         self._secret_key = None
@@ -58,6 +62,8 @@ class RestAzureStorageAccountVerify(object):
         self._tenant_id = None
         self._storage_account_name = None
         self._storage_account_container_name = None
+        self._export_name = None
+        self._storage_account_container_directory = None
         self._is_china_account = None
         self.discriminator = None
         if client_id is not None:
@@ -74,6 +80,10 @@ class RestAzureStorageAccountVerify(object):
             self.storage_account_name = storage_account_name
         if storage_account_container_name is not None:
             self.storage_account_container_name = storage_account_container_name
+        if export_name is not None:
+            self.export_name = export_name
+        if storage_account_container_directory is not None:
+            self.storage_account_container_directory = storage_account_container_directory
         if is_china_account is not None:
             self.is_china_account = is_china_account
 
@@ -223,6 +233,48 @@ class RestAzureStorageAccountVerify(object):
         """
 
         self._storage_account_container_name = storage_account_container_name
+
+    @property
+    def export_name(self):
+        """Gets the export_name of this RestAzureStorageAccountVerify.  # noqa: E501
+
+
+        :return: The export_name of this RestAzureStorageAccountVerify.  # noqa: E501
+        :rtype: str
+        """
+        return self._export_name
+
+    @export_name.setter
+    def export_name(self, export_name):
+        """Sets the export_name of this RestAzureStorageAccountVerify.
+
+
+        :param export_name: The export_name of this RestAzureStorageAccountVerify.  # noqa: E501
+        :type: str
+        """
+
+        self._export_name = export_name
+
+    @property
+    def storage_account_container_directory(self):
+        """Gets the storage_account_container_directory of this RestAzureStorageAccountVerify.  # noqa: E501
+
+
+        :return: The storage_account_container_directory of this RestAzureStorageAccountVerify.  # noqa: E501
+        :rtype: str
+        """
+        return self._storage_account_container_directory
+
+    @storage_account_container_directory.setter
+    def storage_account_container_directory(self, storage_account_container_directory):
+        """Sets the storage_account_container_directory of this RestAzureStorageAccountVerify.
+
+
+        :param storage_account_container_directory: The storage_account_container_directory of this RestAzureStorageAccountVerify.  # noqa: E501
+        :type: str
+        """
+
+        self._storage_account_container_directory = storage_account_container_directory
 
     @property
     def is_china_account(self):

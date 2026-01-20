@@ -51,6 +51,7 @@ class Admin(object):
         'accept_eulaon': 'int',
         'immediate_force_logout': 'bool',
         'user_permission': 'str',
+        'inactive_session_timeout_in_seconds': 'int',
         'sms_email': 'str',
         'two_fa_enabled': 'bool',
         'first_name': 'str',
@@ -88,6 +89,7 @@ class Admin(object):
         'accept_eulaon': 'acceptEULAOn',
         'immediate_force_logout': 'immediateForceLogout',
         'user_permission': 'userPermission',
+        'inactive_session_timeout_in_seconds': 'inactiveSessionTimeoutInSeconds',
         'sms_email': 'smsEmail',
         'two_fa_enabled': 'twoFAEnabled',
         'first_name': 'firstName',
@@ -101,7 +103,7 @@ class Admin(object):
         'status': 'status'
     }
 
-    def __init__(self, last_name=None, note=None, view_permission=None, timezone=None, roles=None, last_login_on=None, last_action_on_local=None, sms_email_format=None, apionly=None, last_auth_ip=None, api_tokens=None, admin_group_ids=None, password=None, last_action=None, training_email=None, last_action_on=None, last_access_on=None, id=None, email=None, contact_method=None, accept_eulaon=None, immediate_force_logout=None, user_permission=None, sms_email=None, two_fa_enabled=None, first_name=None, phone=None, created_by=None, force_password_change=None, tenant_id=None, accept_eula=None, user_type=None, username=None, status=None):  # noqa: E501
+    def __init__(self, last_name=None, note=None, view_permission=None, timezone=None, roles=None, last_login_on=None, last_action_on_local=None, sms_email_format=None, apionly=None, last_auth_ip=None, api_tokens=None, admin_group_ids=None, password=None, last_action=None, training_email=None, last_action_on=None, last_access_on=None, id=None, email=None, contact_method=None, accept_eulaon=None, immediate_force_logout=None, user_permission=None, inactive_session_timeout_in_seconds=None, sms_email=None, two_fa_enabled=None, first_name=None, phone=None, created_by=None, force_password_change=None, tenant_id=None, accept_eula=None, user_type=None, username=None, status=None):  # noqa: E501
         """Admin - a model defined in Swagger"""  # noqa: E501
         self._last_name = None
         self._note = None
@@ -126,6 +128,7 @@ class Admin(object):
         self._accept_eulaon = None
         self._immediate_force_logout = None
         self._user_permission = None
+        self._inactive_session_timeout_in_seconds = None
         self._sms_email = None
         self._two_fa_enabled = None
         self._first_name = None
@@ -182,6 +185,8 @@ class Admin(object):
             self.immediate_force_logout = immediate_force_logout
         if user_permission is not None:
             self.user_permission = user_permission
+        if inactive_session_timeout_in_seconds is not None:
+            self.inactive_session_timeout_in_seconds = inactive_session_timeout_in_seconds
         if sms_email is not None:
             self.sms_email = sms_email
         if two_fa_enabled is not None:
@@ -736,6 +741,29 @@ class Admin(object):
         """
 
         self._user_permission = user_permission
+
+    @property
+    def inactive_session_timeout_in_seconds(self):
+        """Gets the inactive_session_timeout_in_seconds of this Admin.  # noqa: E501
+
+        The time in seconds that the user session terminated if inactive  # noqa: E501
+
+        :return: The inactive_session_timeout_in_seconds of this Admin.  # noqa: E501
+        :rtype: int
+        """
+        return self._inactive_session_timeout_in_seconds
+
+    @inactive_session_timeout_in_seconds.setter
+    def inactive_session_timeout_in_seconds(self, inactive_session_timeout_in_seconds):
+        """Sets the inactive_session_timeout_in_seconds of this Admin.
+
+        The time in seconds that the user session terminated if inactive  # noqa: E501
+
+        :param inactive_session_timeout_in_seconds: The inactive_session_timeout_in_seconds of this Admin.  # noqa: E501
+        :type: int
+        """
+
+        self._inactive_session_timeout_in_seconds = inactive_session_timeout_in_seconds
 
     @property
     def sms_email(self):
