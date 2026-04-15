@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **last_sent_notification_on_local** | **str** | The time that a notification was last sent for this Collector, in local time format | [optional] 
 **custom_properties** | [**list[NameAndValue]**](NameAndValue.md) | The custom properties defined for the Collector | [optional] 
 **predefined_config** | **object** | Collector configurations | [optional] 
-**calculated_threshold** | **int** | calculated threshold value for ABCG collector to check if a collector has high load | [optional] 
+**calculated_threshold** | **float** | calculated threshold value for ABCG collector to check if a collector has high load | [optional] 
 **onetime_upgrade_info** | [**OnetimeUpgradeInfo**](OnetimeUpgradeInfo.md) |  | [optional] 
 **wrapper_conf** | **str** | The java service wrapper&#x27;s configuration | [optional] 
 **clear_sent** | **bool** | Whether or not an alert clear notifcation has been sent for this Collector | [optional] 

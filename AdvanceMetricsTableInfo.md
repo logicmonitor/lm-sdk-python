@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**show_data_point_as_column** | **bool** |  | [optional] 
 **rounding** | **int** |  | [optional] 
 **page_size** | **int** |  | [optional] 
 **color_thresholds** | [**list[ColorThreshold]**](ColorThreshold.md) |  | [optional] 

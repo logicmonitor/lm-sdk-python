@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **execution_status** | **str** | The remediation module id | 
 **host_id** | **int** | The host id | 
 **remediation_id** | **int** | The remediation module id | 
-**alert_id** | **str** | The alert id | 
+**alert_id** | **str** | The alert id | [optional] 
 **trigger_type** | **str** | type of trigger | 
 **host_remediation_source_id** | **int** | The remediation module id | 
 

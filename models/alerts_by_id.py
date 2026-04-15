@@ -40,10 +40,13 @@ class AlertsById(object):
         'logpipelinesources': 'dict(str, AlertsModelAndId)',
         'services': 'dict(str, AlertsModelAndId)',
         'data_source_instances': 'dict(str, AlertsModelAndId)',
+        'billing_alerts': 'dict(str, AlertsModelAndId)',
         'alerts': 'dict(str, Alert)',
         'logalerts': 'dict(str, AlertsModelAndId)',
         'batch_jobs': 'dict(str, AlertsModelAndId)',
+        'budgets': 'dict(str, AlertsModelAndId)',
         'data_source_instance_alert_settings': 'dict(str, AlertsModelAndId)',
+        'billing_alerts_map': 'dict(str, AlertsModelAndId)',
         'service_checkpoints': 'dict(str, AlertsModelAndId)',
         'log_alerts_map': 'dict(str, AlertsModelAndId)',
         'data_sources': 'dict(str, AlertsModelAndId)'
@@ -62,16 +65,19 @@ class AlertsById(object):
         'logpipelinesources': 'logpipelinesources',
         'services': 'services',
         'data_source_instances': 'dataSourceInstances',
+        'billing_alerts': 'billingAlerts',
         'alerts': 'alerts',
         'logalerts': 'logalerts',
         'batch_jobs': 'batchJobs',
+        'budgets': 'budgets',
         'data_source_instance_alert_settings': 'dataSourceInstanceAlertSettings',
+        'billing_alerts_map': 'billingAlertsMap',
         'service_checkpoints': 'serviceCheckpoints',
         'log_alerts_map': 'logAlertsMap',
         'data_sources': 'dataSources'
     }
 
-    def __init__(self, resource_groups=None, event_sources=None, cluster_alert_settings=None, datapoints=None, escalation_chains=None, sdts=None, alert_rules=None, service_groups=None, resources=None, logpipelinesources=None, services=None, data_source_instances=None, alerts=None, logalerts=None, batch_jobs=None, data_source_instance_alert_settings=None, service_checkpoints=None, log_alerts_map=None, data_sources=None):  # noqa: E501
+    def __init__(self, resource_groups=None, event_sources=None, cluster_alert_settings=None, datapoints=None, escalation_chains=None, sdts=None, alert_rules=None, service_groups=None, resources=None, logpipelinesources=None, services=None, data_source_instances=None, billing_alerts=None, alerts=None, logalerts=None, batch_jobs=None, budgets=None, data_source_instance_alert_settings=None, billing_alerts_map=None, service_checkpoints=None, log_alerts_map=None, data_sources=None):  # noqa: E501
         """AlertsById - a model defined in Swagger"""  # noqa: E501
         self._resource_groups = None
         self._event_sources = None
@@ -85,10 +91,13 @@ class AlertsById(object):
         self._logpipelinesources = None
         self._services = None
         self._data_source_instances = None
+        self._billing_alerts = None
         self._alerts = None
         self._logalerts = None
         self._batch_jobs = None
+        self._budgets = None
         self._data_source_instance_alert_settings = None
+        self._billing_alerts_map = None
         self._service_checkpoints = None
         self._log_alerts_map = None
         self._data_sources = None
@@ -117,14 +126,20 @@ class AlertsById(object):
             self.services = services
         if data_source_instances is not None:
             self.data_source_instances = data_source_instances
+        if billing_alerts is not None:
+            self.billing_alerts = billing_alerts
         if alerts is not None:
             self.alerts = alerts
         if logalerts is not None:
             self.logalerts = logalerts
         if batch_jobs is not None:
             self.batch_jobs = batch_jobs
+        if budgets is not None:
+            self.budgets = budgets
         if data_source_instance_alert_settings is not None:
             self.data_source_instance_alert_settings = data_source_instance_alert_settings
+        if billing_alerts_map is not None:
+            self.billing_alerts_map = billing_alerts_map
         if service_checkpoints is not None:
             self.service_checkpoints = service_checkpoints
         if log_alerts_map is not None:
@@ -385,6 +400,27 @@ class AlertsById(object):
         self._data_source_instances = data_source_instances
 
     @property
+    def billing_alerts(self):
+        """Gets the billing_alerts of this AlertsById.  # noqa: E501
+
+
+        :return: The billing_alerts of this AlertsById.  # noqa: E501
+        :rtype: dict(str, AlertsModelAndId)
+        """
+        return self._billing_alerts
+
+    @billing_alerts.setter
+    def billing_alerts(self, billing_alerts):
+        """Sets the billing_alerts of this AlertsById.
+
+
+        :param billing_alerts: The billing_alerts of this AlertsById.  # noqa: E501
+        :type: dict(str, AlertsModelAndId)
+        """
+
+        self._billing_alerts = billing_alerts
+
+    @property
     def alerts(self):
         """Gets the alerts of this AlertsById.  # noqa: E501
 
@@ -448,6 +484,27 @@ class AlertsById(object):
         self._batch_jobs = batch_jobs
 
     @property
+    def budgets(self):
+        """Gets the budgets of this AlertsById.  # noqa: E501
+
+
+        :return: The budgets of this AlertsById.  # noqa: E501
+        :rtype: dict(str, AlertsModelAndId)
+        """
+        return self._budgets
+
+    @budgets.setter
+    def budgets(self, budgets):
+        """Sets the budgets of this AlertsById.
+
+
+        :param budgets: The budgets of this AlertsById.  # noqa: E501
+        :type: dict(str, AlertsModelAndId)
+        """
+
+        self._budgets = budgets
+
+    @property
     def data_source_instance_alert_settings(self):
         """Gets the data_source_instance_alert_settings of this AlertsById.  # noqa: E501
 
@@ -467,6 +524,27 @@ class AlertsById(object):
         """
 
         self._data_source_instance_alert_settings = data_source_instance_alert_settings
+
+    @property
+    def billing_alerts_map(self):
+        """Gets the billing_alerts_map of this AlertsById.  # noqa: E501
+
+
+        :return: The billing_alerts_map of this AlertsById.  # noqa: E501
+        :rtype: dict(str, AlertsModelAndId)
+        """
+        return self._billing_alerts_map
+
+    @billing_alerts_map.setter
+    def billing_alerts_map(self, billing_alerts_map):
+        """Sets the billing_alerts_map of this AlertsById.
+
+
+        :param billing_alerts_map: The billing_alerts_map of this AlertsById.  # noqa: E501
+        :type: dict(str, AlertsModelAndId)
+        """
+
+        self._billing_alerts_map = billing_alerts_map
 
     @property
     def service_checkpoints(self):

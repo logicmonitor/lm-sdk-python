@@ -37,6 +37,7 @@ Name | Type | Description | Notes
 **monitor_object_id** | **int** | The id of the object that the alert is associated with | [optional] 
 **rule** | **str** | The rule the alert matches | [optional] 
 **ack_comment** | **str** | The comment submitted with the acknowledgement | [optional] 
+**alert_trigger_value** | **str** | The trigger value associated with the alert | [optional] 
 **alert_group_entity_value** | **str** | Alert group entity value for stateful log alerts | [optional] 
 **instance_id** | **int** | The id of the instance in alert | [optional] 
 **suppress_desc** | **str** | The description for suppressed alert | [optional] 

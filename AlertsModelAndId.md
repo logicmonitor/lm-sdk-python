@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **display_name** | **str** |  | [optional] 
 **name** | **str** |  | [optional] 
 **namespace** | **str** |  | [optional] 
+**description** | **str** |  | [optional] 
 **model** | **str** |  | [optional] 
 **id** | **str** |  | [optional] 
 

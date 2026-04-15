@@ -28,6 +28,7 @@ logicmonitor_sdk/models/advanced_field_filter.py
 logicmonitor_sdk/models/advanced_metrics_graph_info.py
 logicmonitor_sdk/models/advanced_metrics_report.py
 logicmonitor_sdk/models/aggregate_collector_attribute.py
+logicmonitor_sdk/models/aggregate_config.py
 logicmonitor_sdk/models/alert.py
 logicmonitor_sdk/models/alert_ack.py
 logicmonitor_sdk/models/alert_filters.py
@@ -190,6 +191,7 @@ logicmonitor_sdk/models/cell_data.py
 logicmonitor_sdk/models/chain.py
 logicmonitor_sdk/models/cim_auto_discovery_method.py
 logicmonitor_sdk/models/cim_collector_attribute.py
+logicmonitor_sdk/models/clear_config.py
 logicmonitor_sdk/models/cloud_recommendation.py
 logicmonitor_sdk/models/cloud_watch_auto_discovery_method.py
 logicmonitor_sdk/models/collector.py
@@ -293,6 +295,7 @@ logicmonitor_sdk/models/diagnostics_source.py
 logicmonitor_sdk/models/diagnostics_source_execution.py
 logicmonitor_sdk/models/diagnosticsource_pagination_response.py
 logicmonitor_sdk/models/diagnosticsources_importjson_body.py
+logicmonitor_sdk/models/disable_processor_payload.py
 logicmonitor_sdk/models/dns_collector_attribute.py
 logicmonitor_sdk/models/dummy_auto_discovery_method.py
 logicmonitor_sdk/models/duration.py
@@ -322,6 +325,7 @@ logicmonitor_sdk/models/eventsources_importjson_body.py
 logicmonitor_sdk/models/eventsources_importxml_body.py
 logicmonitor_sdk/models/exclude_duplicate_ips.py
 logicmonitor_sdk/models/field_filter.py
+logicmonitor_sdk/models/field_panel_item.py
 logicmonitor_sdk/models/filter_by.py
 logicmonitor_sdk/models/flash_widget.py
 logicmonitor_sdk/models/flow_record_pagination_response.py
@@ -342,6 +346,7 @@ logicmonitor_sdk/models/gcp_compute_service_limits_collector_attribute_v3.py
 logicmonitor_sdk/models/gcp_lb_backend_service_discovery_method_v3.py
 logicmonitor_sdk/models/gcp_pub_sub_snapshot_discovery_method_v3.py
 logicmonitor_sdk/models/gcp_pub_sub_subscription_discovery_method_v3.py
+logicmonitor_sdk/models/gcp_router_nat_gateway_discovery_method_v3.py
 logicmonitor_sdk/models/gcp_stack_driver_collector_attribute_v3.py
 logicmonitor_sdk/models/gcp_vpn_tunnel_discovery_method_v3.py
 logicmonitor_sdk/models/generate_report_request.py
@@ -357,6 +362,7 @@ logicmonitor_sdk/models/graph_plot_line.py
 logicmonitor_sdk/models/graph_virtual_data_point.py
 logicmonitor_sdk/models/group_by_items.py
 logicmonitor_sdk/models/group_net_flow_record.py
+logicmonitor_sdk/models/grouping_config.py
 logicmonitor_sdk/models/host_cpu_report.py
 logicmonitor_sdk/models/host_group_inventory_report.py
 logicmonitor_sdk/models/host_inventory_metric.py
@@ -391,7 +397,7 @@ logicmonitor_sdk/models/location_data.py
 logicmonitor_sdk/models/log_file.py
 logicmonitor_sdk/models/log_file_event_source.py
 logicmonitor_sdk/models/log_partition.py
-logicmonitor_sdk/models/log_partition_changelog.py
+logicmonitor_sdk/models/log_partition_contract.py
 logicmonitor_sdk/models/log_query.py
 logicmonitor_sdk/models/log_query_group.py
 logicmonitor_sdk/models/log_query_group_pagination_response.py
@@ -446,6 +452,7 @@ logicmonitor_sdk/models/ntlm_authentication.py
 logicmonitor_sdk/models/object_identifier.py
 logicmonitor_sdk/models/object_node.py
 logicmonitor_sdk/models/oci_account_test_result.py
+logicmonitor_sdk/models/oci_dimension_discovery_method.py
 logicmonitor_sdk/models/oci_monitoring_collector_attribute.py
 logicmonitor_sdk/models/oid_source_pagination_response.py
 logicmonitor_sdk/models/oids_importjson_body.py
@@ -479,6 +486,8 @@ logicmonitor_sdk/models/pie_chart_widget_data.py
 logicmonitor_sdk/models/ping_check.py
 logicmonitor_sdk/models/ping_check_device.py
 logicmonitor_sdk/models/ping_collector_attribute.py
+logicmonitor_sdk/models/pipeline_pagination_response.py
+logicmonitor_sdk/models/pipeline_processor_pagination_response.py
 logicmonitor_sdk/models/point_source.py
 logicmonitor_sdk/models/port_auto_discovery_method.py
 logicmonitor_sdk/models/port_pagination_response.py
@@ -508,6 +517,7 @@ logicmonitor_sdk/models/resource_data_source_alert_threshold_info.py
 logicmonitor_sdk/models/resource_group_sdt.py
 logicmonitor_sdk/models/resource_sdt.py
 logicmonitor_sdk/models/response.py
+logicmonitor_sdk/models/rest_agent_log_level_v3.py
 logicmonitor_sdk/models/rest_alert_query_context.py
 logicmonitor_sdk/models/rest_applies_to_function_pagination_response.py
 logicmonitor_sdk/models/rest_aws_account_test_v3.py
@@ -527,6 +537,8 @@ logicmonitor_sdk/models/rest_changelog_v4.py
 logicmonitor_sdk/models/rest_cloud_ok_permissions_v3.py
 logicmonitor_sdk/models/rest_cloud_recommendation_category_v3.py
 logicmonitor_sdk/models/rest_cloud_recommendation_v3.py
+logicmonitor_sdk/models/rest_collector_event_v3.py
+logicmonitor_sdk/models/rest_collector_status_v3.py
 logicmonitor_sdk/models/rest_contract_info_base_v3.py
 logicmonitor_sdk/models/rest_dashboard_group_async_clone_response.py
 logicmonitor_sdk/models/rest_default_dashboard_filter_details.py
@@ -540,6 +552,8 @@ logicmonitor_sdk/models/rest_downgrade_info_onetime.py
 logicmonitor_sdk/models/rest_event_source_filter.py
 logicmonitor_sdk/models/rest_gcp_account_test_v3.py
 logicmonitor_sdk/models/rest_highest_priority_collector_status.py
+logicmonitor_sdk/models/rest_log_pipeline_processor_v3.py
+logicmonitor_sdk/models/rest_log_pipeline_v3.py
 logicmonitor_sdk/models/rest_log_source_filter_v3.py
 logicmonitor_sdk/models/rest_log_source_resource_mapping_v3.py
 logicmonitor_sdk/models/rest_logs_dynamic_column_v3.py
@@ -547,6 +561,7 @@ logicmonitor_sdk/models/rest_map_module_v3.py
 logicmonitor_sdk/models/rest_n_map_netscan_policy_credential.py
 logicmonitor_sdk/models/rest_netscan_ports.py
 logicmonitor_sdk/models/rest_oid_v3.py
+logicmonitor_sdk/models/rest_resource_update_criteria.py
 logicmonitor_sdk/models/rest_response.py
 logicmonitor_sdk/models/rest_response_meta_block.py
 logicmonitor_sdk/models/rest_saa_s_account_test_v3.py
@@ -640,6 +655,9 @@ logicmonitor_sdk/models/text_widget.py
 logicmonitor_sdk/models/topology_source.py
 logicmonitor_sdk/models/topology_source_pagination_response.py
 logicmonitor_sdk/models/topologysources_importjson_body.py
+logicmonitor_sdk/models/track_query_group_pagination_response.py
+logicmonitor_sdk/models/tracked_query_group.py
+logicmonitor_sdk/models/tracking_log_query.py
 logicmonitor_sdk/models/tree_node.py
 logicmonitor_sdk/models/udp_collector_attribute.py
 logicmonitor_sdk/models/unmonitored_device_pagination_response.py
@@ -653,6 +671,7 @@ logicmonitor_sdk/models/uptime_web_check_step.py
 logicmonitor_sdk/models/usage.py
 logicmonitor_sdk/models/user_filter.py
 logicmonitor_sdk/models/user_report.py
+logicmonitor_sdk/models/view_config.py
 logicmonitor_sdk/models/virtual_data_point.py
 logicmonitor_sdk/models/viz.py
 logicmonitor_sdk/models/viz_filter_item.py
@@ -694,6 +713,7 @@ logicmonitor_sdk/models/widget_data.py
 logicmonitor_sdk/models/widget_pagination_response.py
 logicmonitor_sdk/models/widget_token.py
 logicmonitor_sdk/models/widget_token_inheritance.py
+logicmonitor_sdk/models/window_config.py
 logicmonitor_sdk/models/windows_event_log_event_source.py
 logicmonitor_sdk/models/wmi_auto_discovery_method.py
 logicmonitor_sdk/models/wmi_collector_attribute.py
@@ -716,6 +736,7 @@ test/test_advanced_field_filter.py
 test/test_advanced_metrics_graph_info.py
 test/test_advanced_metrics_report.py
 test/test_aggregate_collector_attribute.py
+test/test_aggregate_config.py
 test/test_alert.py
 test/test_alert_ack.py
 test/test_alert_filters.py
@@ -878,6 +899,7 @@ test/test_cell_data.py
 test/test_chain.py
 test/test_cim_auto_discovery_method.py
 test/test_cim_collector_attribute.py
+test/test_clear_config.py
 test/test_cloud_recommendation.py
 test/test_cloud_watch_auto_discovery_method.py
 test/test_collector.py
@@ -981,6 +1003,7 @@ test/test_diagnostics_source.py
 test/test_diagnostics_source_execution.py
 test/test_diagnosticsource_pagination_response.py
 test/test_diagnosticsources_importjson_body.py
+test/test_disable_processor_payload.py
 test/test_dns_collector_attribute.py
 test/test_dummy_auto_discovery_method.py
 test/test_duration.py
@@ -1010,6 +1033,7 @@ test/test_eventsources_importjson_body.py
 test/test_eventsources_importxml_body.py
 test/test_exclude_duplicate_ips.py
 test/test_field_filter.py
+test/test_field_panel_item.py
 test/test_filter_by.py
 test/test_flash_widget.py
 test/test_flow_record_pagination_response.py
@@ -1030,6 +1054,7 @@ test/test_gcp_compute_service_limits_collector_attribute_v3.py
 test/test_gcp_lb_backend_service_discovery_method_v3.py
 test/test_gcp_pub_sub_snapshot_discovery_method_v3.py
 test/test_gcp_pub_sub_subscription_discovery_method_v3.py
+test/test_gcp_router_nat_gateway_discovery_method_v3.py
 test/test_gcp_stack_driver_collector_attribute_v3.py
 test/test_gcp_vpn_tunnel_discovery_method_v3.py
 test/test_generate_report_request.py
@@ -1045,6 +1070,7 @@ test/test_graph_plot_line.py
 test/test_graph_virtual_data_point.py
 test/test_group_by_items.py
 test/test_group_net_flow_record.py
+test/test_grouping_config.py
 test/test_host_cpu_report.py
 test/test_host_group_inventory_report.py
 test/test_host_inventory_metric.py
@@ -1080,7 +1106,7 @@ test/test_location_data.py
 test/test_log_file.py
 test/test_log_file_event_source.py
 test/test_log_partition.py
-test/test_log_partition_changelog.py
+test/test_log_partition_contract.py
 test/test_log_query.py
 test/test_log_query_group.py
 test/test_log_query_group_pagination_response.py
@@ -1135,6 +1161,7 @@ test/test_ntlm_authentication.py
 test/test_object_identifier.py
 test/test_object_node.py
 test/test_oci_account_test_result.py
+test/test_oci_dimension_discovery_method.py
 test/test_oci_monitoring_collector_attribute.py
 test/test_oid_source_pagination_response.py
 test/test_oids_importjson_body.py
@@ -1168,6 +1195,8 @@ test/test_pie_chart_widget_data.py
 test/test_ping_check.py
 test/test_ping_check_device.py
 test/test_ping_collector_attribute.py
+test/test_pipeline_pagination_response.py
+test/test_pipeline_processor_pagination_response.py
 test/test_point_source.py
 test/test_port_auto_discovery_method.py
 test/test_port_pagination_response.py
@@ -1197,6 +1226,7 @@ test/test_resource_data_source_alert_threshold_info.py
 test/test_resource_group_sdt.py
 test/test_resource_sdt.py
 test/test_response.py
+test/test_rest_agent_log_level_v3.py
 test/test_rest_alert_query_context.py
 test/test_rest_applies_to_function_pagination_response.py
 test/test_rest_aws_account_test_v3.py
@@ -1216,6 +1246,8 @@ test/test_rest_changelog_v4.py
 test/test_rest_cloud_ok_permissions_v3.py
 test/test_rest_cloud_recommendation_category_v3.py
 test/test_rest_cloud_recommendation_v3.py
+test/test_rest_collector_event_v3.py
+test/test_rest_collector_status_v3.py
 test/test_rest_contract_info_base_v3.py
 test/test_rest_dashboard_group_async_clone_response.py
 test/test_rest_default_dashboard_filter_details.py
@@ -1229,6 +1261,8 @@ test/test_rest_downgrade_info_onetime.py
 test/test_rest_event_source_filter.py
 test/test_rest_gcp_account_test_v3.py
 test/test_rest_highest_priority_collector_status.py
+test/test_rest_log_pipeline_processor_v3.py
+test/test_rest_log_pipeline_v3.py
 test/test_rest_log_source_filter_v3.py
 test/test_rest_log_source_resource_mapping_v3.py
 test/test_rest_logs_dynamic_column_v3.py
@@ -1236,6 +1270,7 @@ test/test_rest_map_module_v3.py
 test/test_rest_n_map_netscan_policy_credential.py
 test/test_rest_netscan_ports.py
 test/test_rest_oid_v3.py
+test/test_rest_resource_update_criteria.py
 test/test_rest_response.py
 test/test_rest_response_meta_block.py
 test/test_rest_saa_s_account_test_v3.py
@@ -1329,6 +1364,9 @@ test/test_text_widget.py
 test/test_topology_source.py
 test/test_topology_source_pagination_response.py
 test/test_topologysources_importjson_body.py
+test/test_track_query_group_pagination_response.py
+test/test_tracked_query_group.py
+test/test_tracking_log_query.py
 test/test_tree_node.py
 test/test_udp_collector_attribute.py
 test/test_unmonitored_device_pagination_response.py
@@ -1342,6 +1380,7 @@ test/test_uptime_web_check_step.py
 test/test_usage.py
 test/test_user_filter.py
 test/test_user_report.py
+test/test_view_config.py
 test/test_virtual_data_point.py
 test/test_viz.py
 test/test_viz_filter_item.py
@@ -1383,6 +1422,7 @@ test/test_widget_data.py
 test/test_widget_pagination_response.py
 test/test_widget_token.py
 test/test_widget_token_inheritance.py
+test/test_window_config.py
 test/test_windows_event_log_event_source.py
 test/test_wmi_auto_discovery_method.py
 test/test_wmi_collector_attribute.py

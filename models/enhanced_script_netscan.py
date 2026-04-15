@@ -38,6 +38,7 @@ class EnhancedScriptNetscan(Netscan):
         'windows_script': 'str',
         'filters': 'list[DeviceFilter]',
         'default_group': 'int',
+        'resource_update_criteria': 'RestResourceUpdateCriteria',
         'script_type': 'str',
         'windows_script_params': 'str',
         'script_params': 'str',
@@ -56,6 +57,7 @@ class EnhancedScriptNetscan(Netscan):
         'windows_script': 'windowsScript',
         'filters': 'filters',
         'default_group': 'defaultGroup',
+        'resource_update_criteria': 'resourceUpdateCriteria',
         'script_type': 'scriptType',
         'windows_script_params': 'windowsScriptParams',
         'script_params': 'scriptParams',
@@ -64,7 +66,7 @@ class EnhancedScriptNetscan(Netscan):
     if hasattr(Netscan, "attribute_map"):
         attribute_map.update(Netscan.attribute_map)
 
-    def __init__(self, script_path=None, default_group_full_path=None, groovy_script=None, credentials=None, linux_script_params=None, groovy_script_params=None, windows_script=None, filters=None, default_group=None, script_type=None, windows_script_params=None, script_params=None, linux_script=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, script_path=None, default_group_full_path=None, groovy_script=None, credentials=None, linux_script_params=None, groovy_script_params=None, windows_script=None, filters=None, default_group=None, resource_update_criteria=None, script_type=None, windows_script_params=None, script_params=None, linux_script=None, *args, **kwargs):  # noqa: E501
         """EnhancedScriptNetscan - a model defined in Swagger"""  # noqa: E501
         self._script_path = None
         self._default_group_full_path = None
@@ -75,6 +77,7 @@ class EnhancedScriptNetscan(Netscan):
         self._windows_script = None
         self._filters = None
         self._default_group = None
+        self._resource_update_criteria = None
         self._script_type = None
         self._windows_script_params = None
         self._script_params = None
@@ -98,6 +101,8 @@ class EnhancedScriptNetscan(Netscan):
             self.filters = filters
         if default_group is not None:
             self.default_group = default_group
+        if resource_update_criteria is not None:
+            self.resource_update_criteria = resource_update_criteria
         self.script_type = script_type
         if windows_script_params is not None:
             self.windows_script_params = windows_script_params
@@ -307,6 +312,27 @@ class EnhancedScriptNetscan(Netscan):
         """
 
         self._default_group = default_group
+
+    @property
+    def resource_update_criteria(self):
+        """Gets the resource_update_criteria of this EnhancedScriptNetscan.  # noqa: E501
+
+
+        :return: The resource_update_criteria of this EnhancedScriptNetscan.  # noqa: E501
+        :rtype: RestResourceUpdateCriteria
+        """
+        return self._resource_update_criteria
+
+    @resource_update_criteria.setter
+    def resource_update_criteria(self, resource_update_criteria):
+        """Sets the resource_update_criteria of this EnhancedScriptNetscan.
+
+
+        :param resource_update_criteria: The resource_update_criteria of this EnhancedScriptNetscan.  # noqa: E501
+        :type: RestResourceUpdateCriteria
+        """
+
+        self._resource_update_criteria = resource_update_criteria
 
     @property
     def script_type(self):

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **diagnostic_id** | **int** | The diagnostic module id | 
 **execution_status** | **str** | The diagnostic module id | 
 **host_id** | **int** | The host id | 
-**alert_id** | **str** | The alert id | 
+**alert_id** | **str** | The alert id | [optional] 
 **trigger_type** | **str** | type of trigger | 
 **host_diagnostic_source_id** | **int** | The diagnostic module id | 
 

@@ -40,6 +40,7 @@ class AlertReport(ReportBase):
         'data_point': 'str',
         'sdt_filter': 'str',
         'rule': 'str',
+        'monitored_object_groups': 'str',
         'ack_filter': 'str',
         'sorted_direction': 'str',
         'device_display_name': 'str',
@@ -68,6 +69,7 @@ class AlertReport(ReportBase):
         'data_point': 'dataPoint',
         'sdt_filter': 'sdtFilter',
         'rule': 'rule',
+        'monitored_object_groups': 'monitoredObjectGroups',
         'ack_filter': 'ackFilter',
         'sorted_direction': 'sortedDirection',
         'device_display_name': 'deviceDisplayName',
@@ -84,7 +86,7 @@ class AlertReport(ReportBase):
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, active_only=None, sorted_by=None, chain=None, anomaly=None, date_range=None, level=None, timing=None, columns=None, data_point=None, sdt_filter=None, rule=None, ack_filter=None, sorted_direction=None, device_display_name=None, summary_only=None, dependency_routing_state=None, dependency_role=None, data_source_instance_name=None, clear_filter=None, is_historical_sdt=None, data_source=None, group_full_path=None, include_preexist=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, active_only=None, sorted_by=None, chain=None, anomaly=None, date_range=None, level=None, timing=None, columns=None, data_point=None, sdt_filter=None, rule=None, monitored_object_groups=None, ack_filter=None, sorted_direction=None, device_display_name=None, summary_only=None, dependency_routing_state=None, dependency_role=None, data_source_instance_name=None, clear_filter=None, is_historical_sdt=None, data_source=None, group_full_path=None, include_preexist=None, *args, **kwargs):  # noqa: E501
         """AlertReport - a model defined in Swagger"""  # noqa: E501
         self._active_only = None
         self._sorted_by = None
@@ -97,6 +99,7 @@ class AlertReport(ReportBase):
         self._data_point = None
         self._sdt_filter = None
         self._rule = None
+        self._monitored_object_groups = None
         self._ack_filter = None
         self._sorted_direction = None
         self._device_display_name = None
@@ -132,6 +135,8 @@ class AlertReport(ReportBase):
             self.sdt_filter = sdt_filter
         if rule is not None:
             self.rule = rule
+        if monitored_object_groups is not None:
+            self.monitored_object_groups = monitored_object_groups
         if ack_filter is not None:
             self.ack_filter = ack_filter
         if sorted_direction is not None:
@@ -410,6 +415,29 @@ class AlertReport(ReportBase):
         """
 
         self._rule = rule
+
+    @property
+    def monitored_object_groups(self):
+        """Gets the monitored_object_groups of this AlertReport.  # noqa: E501
+
+        The resource groups selected for the report filter  # noqa: E501
+
+        :return: The monitored_object_groups of this AlertReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._monitored_object_groups
+
+    @monitored_object_groups.setter
+    def monitored_object_groups(self, monitored_object_groups):
+        """Sets the monitored_object_groups of this AlertReport.
+
+        The resource groups selected for the report filter  # noqa: E501
+
+        :param monitored_object_groups: The monitored_object_groups of this AlertReport.  # noqa: E501
+        :type: str
+        """
+
+        self._monitored_object_groups = monitored_object_groups
 
     @property
     def ack_filter(self):

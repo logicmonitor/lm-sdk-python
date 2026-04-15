@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **windows_script** | **str** |  | [optional] 
 **filters** | [**list[DeviceFilter]**](DeviceFilter.md) | The filter to be applied to filter out the reported devices | [optional] 
 **default_group** | **int** | The ID of the default group to add discovered devices to | [optional] 
+**resource_update_criteria** | [**RestResourceUpdateCriteria**](RestResourceUpdateCriteria.md) |  | [optional] 
 **script_type** | **str** | For script scans, the type of script. Options are embeded and external | 
 **windows_script_params** | **str** |  | [optional] 
 **script_params** | **str** | The parameters for an external script | [optional] 

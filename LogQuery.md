@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **group_id** | **int** | group id | [optional] 
 **into_rest_response** | [**RestResponse**](RestResponse.md) |  | [optional] 
 **label** | **str** | label for log filter | [optional] 
+**view_config** | [**ViewConfig**](ViewConfig.md) |  | [optional] 
 **favourite** | **bool** |  | [optional] 
 **version** | **str** | query grammar version | 
 **duration** | **str** | time range | [optional] 

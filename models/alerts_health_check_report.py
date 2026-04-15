@@ -39,6 +39,7 @@ class AlertsHealthCheckReport(ReportBase):
         'data_point': 'str',
         'sdt_filter': 'str',
         'rule': 'str',
+        'monitored_object_groups': 'str',
         'ack_filter': 'str',
         'dependency_routing_state': 'str',
         'dependency_role': 'str',
@@ -61,6 +62,7 @@ class AlertsHealthCheckReport(ReportBase):
         'data_point': 'dataPoint',
         'sdt_filter': 'sdtFilter',
         'rule': 'rule',
+        'monitored_object_groups': 'monitoredObjectGroups',
         'ack_filter': 'ackFilter',
         'dependency_routing_state': 'dependencyRoutingState',
         'dependency_role': 'dependencyRole',
@@ -72,7 +74,7 @@ class AlertsHealthCheckReport(ReportBase):
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, severity=None, active_only=None, chain=None, instance=None, anomaly=None, date_range=None, columns=None, data_point=None, sdt_filter=None, rule=None, ack_filter=None, dependency_routing_state=None, dependency_role=None, clear_filter=None, host=None, host_group=None, data_source=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, severity=None, active_only=None, chain=None, instance=None, anomaly=None, date_range=None, columns=None, data_point=None, sdt_filter=None, rule=None, monitored_object_groups=None, ack_filter=None, dependency_routing_state=None, dependency_role=None, clear_filter=None, host=None, host_group=None, data_source=None, *args, **kwargs):  # noqa: E501
         """AlertsHealthCheckReport - a model defined in Swagger"""  # noqa: E501
         self._severity = None
         self._active_only = None
@@ -84,6 +86,7 @@ class AlertsHealthCheckReport(ReportBase):
         self._data_point = None
         self._sdt_filter = None
         self._rule = None
+        self._monitored_object_groups = None
         self._ack_filter = None
         self._dependency_routing_state = None
         self._dependency_role = None
@@ -112,6 +115,8 @@ class AlertsHealthCheckReport(ReportBase):
             self.sdt_filter = sdt_filter
         if rule is not None:
             self.rule = rule
+        if monitored_object_groups is not None:
+            self.monitored_object_groups = monitored_object_groups
         if ack_filter is not None:
             self.ack_filter = ack_filter
         if dependency_routing_state is not None:
@@ -357,6 +362,29 @@ class AlertsHealthCheckReport(ReportBase):
         """
 
         self._rule = rule
+
+    @property
+    def monitored_object_groups(self):
+        """Gets the monitored_object_groups of this AlertsHealthCheckReport.  # noqa: E501
+
+        The resource groups selected for the report filter  # noqa: E501
+
+        :return: The monitored_object_groups of this AlertsHealthCheckReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._monitored_object_groups
+
+    @monitored_object_groups.setter
+    def monitored_object_groups(self, monitored_object_groups):
+        """Sets the monitored_object_groups of this AlertsHealthCheckReport.
+
+        The resource groups selected for the report filter  # noqa: E501
+
+        :param monitored_object_groups: The monitored_object_groups of this AlertsHealthCheckReport.  # noqa: E501
+        :type: str
+        """
+
+        self._monitored_object_groups = monitored_object_groups
 
     @property
     def ack_filter(self):

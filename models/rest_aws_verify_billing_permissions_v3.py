@@ -28,7 +28,7 @@ class RestAWSVerifyBillingPermissionsV3(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'opt_in_warnings': 'dict(str, str)',
+        'opt_in_warnings': 'list[str]',
         'is_valid': 'bool',
         'permission_errors': 'list[str]',
         'non_permission_errors': 'list[str]'
@@ -63,7 +63,7 @@ class RestAWSVerifyBillingPermissionsV3(object):
 
 
         :return: The opt_in_warnings of this RestAWSVerifyBillingPermissionsV3.  # noqa: E501
-        :rtype: dict(str, str)
+        :rtype: list[str]
         """
         return self._opt_in_warnings
 
@@ -73,7 +73,7 @@ class RestAWSVerifyBillingPermissionsV3(object):
 
 
         :param opt_in_warnings: The opt_in_warnings of this RestAWSVerifyBillingPermissionsV3.  # noqa: E501
-        :type: dict(str, str)
+        :type: list[str]
         """
 
         self._opt_in_warnings = opt_in_warnings

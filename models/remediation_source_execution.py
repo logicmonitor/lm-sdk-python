@@ -62,7 +62,8 @@ class RemediationSourceExecution(object):
         self.execution_status = execution_status
         self.host_id = host_id
         self.remediation_id = remediation_id
-        self.alert_id = alert_id
+        if alert_id is not None:
+            self.alert_id = alert_id
         self.trigger_type = trigger_type
         self.host_remediation_source_id = host_remediation_source_id
 
@@ -184,8 +185,6 @@ class RemediationSourceExecution(object):
         :param alert_id: The alert_id of this RemediationSourceExecution.  # noqa: E501
         :type: str
         """
-        if alert_id is None:
-            raise ValueError("Invalid value for `alert_id`, must not be `None`")  # noqa: E501
 
         self._alert_id = alert_id
 

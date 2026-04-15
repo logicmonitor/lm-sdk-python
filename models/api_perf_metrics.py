@@ -31,6 +31,7 @@ class ApiPerfMetrics(object):
         'summary': 'str',
         'total_waiting_requests': 'int',
         'total_rejected_get_api_count': 'int',
+        'total_rejected_mod_api_count': 'int',
         'tot_nano_time': 'int',
         'total_processed_requests': 'int',
         'total_requests': 'int',
@@ -43,6 +44,7 @@ class ApiPerfMetrics(object):
         'summary': 'summary',
         'total_waiting_requests': 'totalWaitingRequests',
         'total_rejected_get_api_count': 'totalRejectedGetAPICount',
+        'total_rejected_mod_api_count': 'totalRejectedModAPICount',
         'tot_nano_time': 'totNanoTime',
         'total_processed_requests': 'totalProcessedRequests',
         'total_requests': 'totalRequests',
@@ -51,11 +53,12 @@ class ApiPerfMetrics(object):
         'tags': 'tags'
     }
 
-    def __init__(self, summary=None, total_waiting_requests=None, total_rejected_get_api_count=None, tot_nano_time=None, total_processed_requests=None, total_requests=None, api=None, max_nano_time=None, tags=None):  # noqa: E501
+    def __init__(self, summary=None, total_waiting_requests=None, total_rejected_get_api_count=None, total_rejected_mod_api_count=None, tot_nano_time=None, total_processed_requests=None, total_requests=None, api=None, max_nano_time=None, tags=None):  # noqa: E501
         """ApiPerfMetrics - a model defined in Swagger"""  # noqa: E501
         self._summary = None
         self._total_waiting_requests = None
         self._total_rejected_get_api_count = None
+        self._total_rejected_mod_api_count = None
         self._tot_nano_time = None
         self._total_processed_requests = None
         self._total_requests = None
@@ -69,6 +72,8 @@ class ApiPerfMetrics(object):
             self.total_waiting_requests = total_waiting_requests
         if total_rejected_get_api_count is not None:
             self.total_rejected_get_api_count = total_rejected_get_api_count
+        if total_rejected_mod_api_count is not None:
+            self.total_rejected_mod_api_count = total_rejected_mod_api_count
         if tot_nano_time is not None:
             self.tot_nano_time = tot_nano_time
         if total_processed_requests is not None:
@@ -150,6 +155,29 @@ class ApiPerfMetrics(object):
         """
 
         self._total_rejected_get_api_count = total_rejected_get_api_count
+
+    @property
+    def total_rejected_mod_api_count(self):
+        """Gets the total_rejected_mod_api_count of this ApiPerfMetrics.  # noqa: E501
+
+        Total rejected mod API count  # noqa: E501
+
+        :return: The total_rejected_mod_api_count of this ApiPerfMetrics.  # noqa: E501
+        :rtype: int
+        """
+        return self._total_rejected_mod_api_count
+
+    @total_rejected_mod_api_count.setter
+    def total_rejected_mod_api_count(self, total_rejected_mod_api_count):
+        """Sets the total_rejected_mod_api_count of this ApiPerfMetrics.
+
+        Total rejected mod API count  # noqa: E501
+
+        :param total_rejected_mod_api_count: The total_rejected_mod_api_count of this ApiPerfMetrics.  # noqa: E501
+        :type: int
+        """
+
+        self._total_rejected_mod_api_count = total_rejected_mod_api_count
 
     @property
     def tot_nano_time(self):

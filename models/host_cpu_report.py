@@ -32,6 +32,8 @@ class HostCpuReport(ReportBase):
         'date_range': 'str',
         'hosts_val': 'str',
         'top10_only': 'bool',
+        'columns': 'list[DynamicColumn]',
+        'top_n': 'str',
         'display_graphs': 'bool'
     }
     if hasattr(ReportBase, "swagger_types"):
@@ -41,16 +43,20 @@ class HostCpuReport(ReportBase):
         'date_range': 'dateRange',
         'hosts_val': 'hostsVal',
         'top10_only': 'top10Only',
+        'columns': 'columns',
+        'top_n': 'topN',
         'display_graphs': 'displayGraphs'
     }
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, date_range=None, hosts_val=None, top10_only=None, display_graphs=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, date_range=None, hosts_val=None, top10_only=None, columns=None, top_n=None, display_graphs=None, *args, **kwargs):  # noqa: E501
         """HostCpuReport - a model defined in Swagger"""  # noqa: E501
         self._date_range = None
         self._hosts_val = None
         self._top10_only = None
+        self._columns = None
+        self._top_n = None
         self._display_graphs = None
         self.discriminator = None
         if date_range is not None:
@@ -58,6 +64,10 @@ class HostCpuReport(ReportBase):
         self.hosts_val = hosts_val
         if top10_only is not None:
             self.top10_only = top10_only
+        if columns is not None:
+            self.columns = columns
+        if top_n is not None:
+            self.top_n = top_n
         if display_graphs is not None:
             self.display_graphs = display_graphs
         ReportBase.__init__(self, *args, **kwargs)
@@ -114,7 +124,7 @@ class HostCpuReport(ReportBase):
     def top10_only(self):
         """Gets the top10_only of this HostCpuReport.  # noqa: E501
 
-        true | false false: CPU metrics will be displayed for all selected devices or groups true: CPU metrics will only be displayed for the top ten device or groups  # noqa: E501
+        true | false false: CPU metrics will be displayed for all selected devices or groups true: CPU metrics will only be displayed for the top ten device or groupsThis field is deprecated, use topN field for more flexible top N selection  # noqa: E501
 
         :return: The top10_only of this HostCpuReport.  # noqa: E501
         :rtype: bool
@@ -125,13 +135,59 @@ class HostCpuReport(ReportBase):
     def top10_only(self, top10_only):
         """Sets the top10_only of this HostCpuReport.
 
-        true | false false: CPU metrics will be displayed for all selected devices or groups true: CPU metrics will only be displayed for the top ten device or groups  # noqa: E501
+        true | false false: CPU metrics will be displayed for all selected devices or groups true: CPU metrics will only be displayed for the top ten device or groupsThis field is deprecated, use topN field for more flexible top N selection  # noqa: E501
 
         :param top10_only: The top10_only of this HostCpuReport.  # noqa: E501
         :type: bool
         """
 
         self._top10_only = top10_only
+
+    @property
+    def columns(self):
+        """Gets the columns of this HostCpuReport.  # noqa: E501
+
+        Custom resource properties to include as additional columns. Note: default Host CPU columns (Resource, Min(%), Max(%), Average(%)) are always included in the report  # noqa: E501
+
+        :return: The columns of this HostCpuReport.  # noqa: E501
+        :rtype: list[DynamicColumn]
+        """
+        return self._columns
+
+    @columns.setter
+    def columns(self, columns):
+        """Sets the columns of this HostCpuReport.
+
+        Custom resource properties to include as additional columns. Note: default Host CPU columns (Resource, Min(%), Max(%), Average(%)) are always included in the report  # noqa: E501
+
+        :param columns: The columns of this HostCpuReport.  # noqa: E501
+        :type: list[DynamicColumn]
+        """
+
+        self._columns = columns
+
+    @property
+    def top_n(self):
+        """Gets the top_n of this HostCpuReport.  # noqa: E501
+
+        Top N selection : 5|10|25|50|100|all  # noqa: E501
+
+        :return: The top_n of this HostCpuReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._top_n
+
+    @top_n.setter
+    def top_n(self, top_n):
+        """Sets the top_n of this HostCpuReport.
+
+        Top N selection : 5|10|25|50|100|all  # noqa: E501
+
+        :param top_n: The top_n of this HostCpuReport.  # noqa: E501
+        :type: str
+        """
+
+        self._top_n = top_n
 
     @property
     def display_graphs(self):

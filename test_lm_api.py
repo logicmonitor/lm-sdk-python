@@ -217,6 +217,20 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_add_log_alert_group(self):
+        """Test case for add_log_alert_group
+
+        Add a new LogAlertGroup  # noqa: E501
+        """
+        pass
+
+    def test_add_log_alerts(self):
+        """Test case for add_log_alerts
+
+        Add a new LogAlerts  # noqa: E501
+        """
+        pass
+
     def test_add_log_query_group(self):
         """Test case for add_log_query_group
 
@@ -340,6 +354,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for create_log_partition
 
         Create a new log partition  # noqa: E501
+        """
+        pass
+
+    def test_create_tracked_query_group(self):
+        """Test case for create_tracked_query_group
+
+        Create tracked query group  # noqa: E501
         """
         pass
 
@@ -490,6 +511,20 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_log_alert_group(self):
+        """Test case for delete_log_alert_group
+
+        Delete a specific LogAlertGroup by ID  # noqa: E501
+        """
+        pass
+
+    def test_delete_log_alerts_by_id(self):
+        """Test case for delete_log_alerts_by_id
+
+        Delete a LogAlerts by ID  # noqa: E501
+        """
+        pass
+
     def test_delete_log_partition_by_id(self):
         """Test case for delete_log_partition_by_id
 
@@ -585,6 +620,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for delete_topology_source
 
         Delete TopologySource  # noqa: E501
+        """
+        pass
+
+    def test_delete_tracked_query_group(self):
+        """Test case for delete_tracked_query_group
+
+        Delete tracked query group  # noqa: E501
         """
         pass
 
@@ -819,10 +861,31 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_collector_agent_log_level_by_component(self):
+        """Test case for get_collector_agent_log_level_by_component
+
+        get collector agent log level by component  # noqa: E501
+        """
+        pass
+
+    def test_get_collector_agent_log_levels(self):
+        """Test case for get_collector_agent_log_levels
+
+        get collector agent log levels  # noqa: E501
+        """
+        pass
+
     def test_get_collector_by_id(self):
         """Test case for get_collector_by_id
 
         get collector  # noqa: E501
+        """
+        pass
+
+    def test_get_collector_events(self):
+        """Test case for get_collector_events
+
+        get collector events  # noqa: E501
         """
         pass
 
@@ -851,6 +914,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for get_collector_list
 
         get collector list  # noqa: E501
+        """
+        pass
+
+    def test_get_collector_status_check(self):
+        """Test case for get_collector_status_check
+
+        get collector status check  # noqa: E501
         """
         pass
 
@@ -1274,6 +1344,34 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_log_alert_group_by_id(self):
+        """Test case for get_log_alert_group_by_id
+
+        Retrieve a LogAlertGroup by ID  # noqa: E501
+        """
+        pass
+
+    def test_get_log_alert_groups_list(self):
+        """Test case for get_log_alert_groups_list
+
+        Retrieve all LogAlertGroups  # noqa: E501
+        """
+        pass
+
+    def test_get_log_alerts(self):
+        """Test case for get_log_alerts
+
+        Retrieve all LogAlerts  # noqa: E501
+        """
+        pass
+
+    def test_get_log_alerts_by_id(self):
+        """Test case for get_log_alerts_by_id
+
+        Retrieve a LogAlerts by ID  # noqa: E501
+        """
+        pass
+
     def test_get_log_queries_by_group_id(self):
         """Test case for get_log_queries_by_group_id
 
@@ -1589,6 +1687,20 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_tracked_query_group_by_id(self):
+        """Test case for get_tracked_query_group_by_id
+
+        Get tracked query group by ID  # noqa: E501
+        """
+        pass
+
+    def test_get_tracked_query_group_list(self):
+        """Test case for get_tracked_query_group_list
+
+        Get tracked query group list  # noqa: E501
+        """
+        pass
+
     def test_get_unmonitored_device_list(self):
         """Test case for get_unmonitored_device_list
 
@@ -1869,6 +1981,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_collector_agent_log_level(self):
+        """Test case for patch_collector_agent_log_level
+
+        update collector agent log level  # noqa: E501
+        """
+        pass
+
     def test_patch_collector_by_id(self):
         """Test case for patch_collector_by_id
 
@@ -2016,6 +2135,20 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_log_alert_group(self):
+        """Test case for patch_log_alert_group
+
+        Update a specific LogAlertGroup by its ID  # noqa: E501
+        """
+        pass
+
+    def test_patch_log_alerts(self):
+        """Test case for patch_log_alerts
+
+        Update a LogAlerts by ID  # noqa: E501
+        """
+        pass
+
     def test_patch_log_partition(self):
         """Test case for patch_log_partition
 
@@ -2114,6 +2247,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_tracked_query_group(self):
+        """Test case for patch_tracked_query_group
+
+        Update tracked query group  # noqa: E501
+        """
+        pass
+
     def test_patch_website_by_id(self):
         """Test case for patch_website_by_id
 
@@ -2170,13 +2310,6 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
-    def test_trigger_usage_exceeded(self):
-        """Test case for trigger_usage_exceeded
-
-        Trigger usage exceeded action for log partitions  # noqa: E501
-        """
-        pass
-
     def test_update_access_group(self):
         """Test case for update_access_group
 
@@ -2209,6 +2342,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for update_applies_to_function
 
         Update applies to function  # noqa: E501
+        """
+        pass
+
+    def test_update_collector_agent_log_level(self):
+        """Test case for update_collector_agent_log_level
+
+        update collector agent log level  # noqa: E501
         """
         pass
 
@@ -2338,6 +2478,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_update_disable_log_alerts(self):
+        """Test case for update_disable_log_alerts
+
+        Enable or disable a LogAlerts by ID  # noqa: E501
+        """
+        pass
+
     def test_update_escalation_chain_by_id(self):
         """Test case for update_escalation_chain_by_id
 
@@ -2363,6 +2510,20 @@ class TestLMApi(unittest.TestCase):
         """Test case for update_job_monitor
 
         Update JobMonitor  # noqa: E501
+        """
+        pass
+
+    def test_update_log_alert_group(self):
+        """Test case for update_log_alert_group
+
+        Update a specific LogAlertGroup by its ID  # noqa: E501
+        """
+        pass
+
+    def test_update_log_alerts(self):
+        """Test case for update_log_alerts
+
+        Update a LogAlerts by ID  # noqa: E501
         """
         pass
 
@@ -2461,6 +2622,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for update_topology_source
 
         Update TopologySource  # noqa: E501
+        """
+        pass
+
+    def test_update_tracked_query_group(self):
+        """Test case for update_tracked_query_group
+
+        Update tracked query group  # noqa: E501
         """
         pass
 

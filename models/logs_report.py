@@ -30,6 +30,7 @@ class LogsReport(ReportBase):
     """
     swagger_types = {
         'partitions': 'list[str]',
+        'logs_data_type': 'str',
         'date_range': 'str',
         'timezone': 'str',
         'columns': 'list[RestLogsDynamicColumnV3]',
@@ -40,6 +41,7 @@ class LogsReport(ReportBase):
 
     attribute_map = {
         'partitions': 'partitions',
+        'logs_data_type': 'logsDataType',
         'date_range': 'dateRange',
         'timezone': 'timezone',
         'columns': 'columns',
@@ -48,9 +50,10 @@ class LogsReport(ReportBase):
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, partitions=None, date_range=None, timezone=None, columns=None, query=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, partitions=None, logs_data_type=None, date_range=None, timezone=None, columns=None, query=None, *args, **kwargs):  # noqa: E501
         """LogsReport - a model defined in Swagger"""  # noqa: E501
         self._partitions = None
+        self._logs_data_type = None
         self._date_range = None
         self._timezone = None
         self._columns = None
@@ -58,6 +61,8 @@ class LogsReport(ReportBase):
         self.discriminator = None
         if partitions is not None:
             self.partitions = partitions
+        if logs_data_type is not None:
+            self.logs_data_type = logs_data_type
         if date_range is not None:
             self.date_range = date_range
         if timezone is not None:
@@ -90,6 +95,29 @@ class LogsReport(ReportBase):
         """
 
         self._partitions = partitions
+
+    @property
+    def logs_data_type(self):
+        """Gets the logs_data_type of this LogsReport.  # noqa: E501
+
+        The type of logs data to include: basic, aggregation, or both  # noqa: E501
+
+        :return: The logs_data_type of this LogsReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._logs_data_type
+
+    @logs_data_type.setter
+    def logs_data_type(self, logs_data_type):
+        """Sets the logs_data_type of this LogsReport.
+
+        The type of logs data to include: basic, aggregation, or both  # noqa: E501
+
+        :param logs_data_type: The logs_data_type of this LogsReport.  # noqa: E501
+        :type: str
+        """
+
+        self._logs_data_type = logs_data_type
 
     @property
     def date_range(self):

@@ -46,6 +46,7 @@ class Admin(object):
         'last_action_on': 'int',
         'last_access_on': 'int',
         'id': 'int',
+        'persistent_session_enabled': 'bool',
         'email': 'str',
         'contact_method': 'str',
         'accept_eulaon': 'int',
@@ -84,6 +85,7 @@ class Admin(object):
         'last_action_on': 'lastActionOn',
         'last_access_on': 'lastAccessOn',
         'id': 'id',
+        'persistent_session_enabled': 'persistentSessionEnabled',
         'email': 'email',
         'contact_method': 'contactMethod',
         'accept_eulaon': 'acceptEULAOn',
@@ -103,7 +105,7 @@ class Admin(object):
         'status': 'status'
     }
 
-    def __init__(self, last_name=None, note=None, view_permission=None, timezone=None, roles=None, last_login_on=None, last_action_on_local=None, sms_email_format=None, apionly=None, last_auth_ip=None, api_tokens=None, admin_group_ids=None, password=None, last_action=None, training_email=None, last_action_on=None, last_access_on=None, id=None, email=None, contact_method=None, accept_eulaon=None, immediate_force_logout=None, user_permission=None, inactive_session_timeout_in_seconds=None, sms_email=None, two_fa_enabled=None, first_name=None, phone=None, created_by=None, force_password_change=None, tenant_id=None, accept_eula=None, user_type=None, username=None, status=None):  # noqa: E501
+    def __init__(self, last_name=None, note=None, view_permission=None, timezone=None, roles=None, last_login_on=None, last_action_on_local=None, sms_email_format=None, apionly=None, last_auth_ip=None, api_tokens=None, admin_group_ids=None, password=None, last_action=None, training_email=None, last_action_on=None, last_access_on=None, id=None, persistent_session_enabled=None, email=None, contact_method=None, accept_eulaon=None, immediate_force_logout=None, user_permission=None, inactive_session_timeout_in_seconds=None, sms_email=None, two_fa_enabled=None, first_name=None, phone=None, created_by=None, force_password_change=None, tenant_id=None, accept_eula=None, user_type=None, username=None, status=None):  # noqa: E501
         """Admin - a model defined in Swagger"""  # noqa: E501
         self._last_name = None
         self._note = None
@@ -123,6 +125,7 @@ class Admin(object):
         self._last_action_on = None
         self._last_access_on = None
         self._id = None
+        self._persistent_session_enabled = None
         self._email = None
         self._contact_method = None
         self._accept_eulaon = None
@@ -176,6 +179,8 @@ class Admin(object):
             self.last_access_on = last_access_on
         if id is not None:
             self.id = id
+        if persistent_session_enabled is not None:
+            self.persistent_session_enabled = persistent_session_enabled
         self.email = email
         if contact_method is not None:
             self.contact_method = contact_method
@@ -624,6 +629,29 @@ class Admin(object):
         """
 
         self._id = id
+
+    @property
+    def persistent_session_enabled(self):
+        """Gets the persistent_session_enabled of this Admin.  # noqa: E501
+
+        persistent session enabled or disabled for user  # noqa: E501
+
+        :return: The persistent_session_enabled of this Admin.  # noqa: E501
+        :rtype: bool
+        """
+        return self._persistent_session_enabled
+
+    @persistent_session_enabled.setter
+    def persistent_session_enabled(self, persistent_session_enabled):
+        """Sets the persistent_session_enabled of this Admin.
+
+        persistent session enabled or disabled for user  # noqa: E501
+
+        :param persistent_session_enabled: The persistent_session_enabled of this Admin.  # noqa: E501
+        :type: bool
+        """
+
+        self._persistent_session_enabled = persistent_session_enabled
 
     @property
     def email(self):

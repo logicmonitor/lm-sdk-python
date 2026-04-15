@@ -63,6 +63,7 @@ class Alert(object):
         'monitor_object_id': 'int',
         'rule': 'str',
         'ack_comment': 'str',
+        'alert_trigger_value': 'str',
         'alert_group_entity_value': 'str',
         'instance_id': 'int',
         'suppress_desc': 'str',
@@ -123,6 +124,7 @@ class Alert(object):
         'monitor_object_id': 'monitorObjectId',
         'rule': 'rule',
         'ack_comment': 'ackComment',
+        'alert_trigger_value': 'alertTriggerValue',
         'alert_group_entity_value': 'alertGroupEntityValue',
         'instance_id': 'instanceId',
         'suppress_desc': 'suppressDesc',
@@ -147,7 +149,7 @@ class Alert(object):
         'dependency_role': 'dependencyRole'
     }
 
-    def __init__(self, sdt_ids=None, resource_id=None, end_epoch=None, threshold=None, type=None, start_epoch=None, enable_anomaly_alert_generation=None, internal_id=None, monitor_object_name=None, data_point_name=None, data_point_id=None, suppressor=None, context=None, id=None, detail_message=None, rule_id=None, alert_external_ticket_url=None, tenant=None, alert_value=None, sdted=None, sdt=None, enable_anomaly_alert_suppression=None, received_list=None, monitor_object_groups=None, chain_id=None, resource_template_id=None, last_updated_on_epoch=None, cleared=None, ad_alert_desc=None, resource_template_name=None, anomaly=None, instance_name=None, monitor_object_id=None, rule=None, ack_comment=None, alert_group_entity_value=None, instance_id=None, suppress_desc=None, log_partition=None, next_recipient=None, clear_expr=None, ad_alert=None, acked_by=None, severity=None, acked_epoch=None, chain=None, alert_query=None, sub_chain_id=None, log_meta_data=None, monitor_object_type=None, session_id=None, acked=None, resource_template_type=None, clear_value=None, instance_description=None, dependency_routing_state=None, dependency_role=None):  # noqa: E501
+    def __init__(self, sdt_ids=None, resource_id=None, end_epoch=None, threshold=None, type=None, start_epoch=None, enable_anomaly_alert_generation=None, internal_id=None, monitor_object_name=None, data_point_name=None, data_point_id=None, suppressor=None, context=None, id=None, detail_message=None, rule_id=None, alert_external_ticket_url=None, tenant=None, alert_value=None, sdted=None, sdt=None, enable_anomaly_alert_suppression=None, received_list=None, monitor_object_groups=None, chain_id=None, resource_template_id=None, last_updated_on_epoch=None, cleared=None, ad_alert_desc=None, resource_template_name=None, anomaly=None, instance_name=None, monitor_object_id=None, rule=None, ack_comment=None, alert_trigger_value=None, alert_group_entity_value=None, instance_id=None, suppress_desc=None, log_partition=None, next_recipient=None, clear_expr=None, ad_alert=None, acked_by=None, severity=None, acked_epoch=None, chain=None, alert_query=None, sub_chain_id=None, log_meta_data=None, monitor_object_type=None, session_id=None, acked=None, resource_template_type=None, clear_value=None, instance_description=None, dependency_routing_state=None, dependency_role=None):  # noqa: E501
         """Alert - a model defined in Swagger"""  # noqa: E501
         self._sdt_ids = None
         self._resource_id = None
@@ -184,6 +186,7 @@ class Alert(object):
         self._monitor_object_id = None
         self._rule = None
         self._ack_comment = None
+        self._alert_trigger_value = None
         self._alert_group_entity_value = None
         self._instance_id = None
         self._suppress_desc = None
@@ -277,6 +280,8 @@ class Alert(object):
             self.rule = rule
         if ack_comment is not None:
             self.ack_comment = ack_comment
+        if alert_trigger_value is not None:
+            self.alert_trigger_value = alert_trigger_value
         if alert_group_entity_value is not None:
             self.alert_group_entity_value = alert_group_entity_value
         if instance_id is not None:
@@ -1118,6 +1123,29 @@ class Alert(object):
         """
 
         self._ack_comment = ack_comment
+
+    @property
+    def alert_trigger_value(self):
+        """Gets the alert_trigger_value of this Alert.  # noqa: E501
+
+        The trigger value associated with the alert  # noqa: E501
+
+        :return: The alert_trigger_value of this Alert.  # noqa: E501
+        :rtype: str
+        """
+        return self._alert_trigger_value
+
+    @alert_trigger_value.setter
+    def alert_trigger_value(self, alert_trigger_value):
+        """Sets the alert_trigger_value of this Alert.
+
+        The trigger value associated with the alert  # noqa: E501
+
+        :param alert_trigger_value: The alert_trigger_value of this Alert.  # noqa: E501
+        :type: str
+        """
+
+        self._alert_trigger_value = alert_trigger_value
 
     @property
     def alert_group_entity_value(self):

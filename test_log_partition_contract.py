@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import logicmonitor_sdk
-from logicmonitor_sdk.models.log_partition_changelog import LogPartitionChangelog  # noqa: E501
+from logicmonitor_sdk.models.log_partition_contract import LogPartitionContract  # noqa: E501
 from logicmonitor_sdk.rest import ApiException
 
 
-class TestLogPartitionChangelog(unittest.TestCase):
-    """LogPartitionChangelog unit test stubs"""
+class TestLogPartitionContract(unittest.TestCase):
+    """LogPartitionContract unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestLogPartitionChangelog(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testLogPartitionChangelog(self):
-        """Test LogPartitionChangelog"""
+    def testLogPartitionContract(self):
+        """Test LogPartitionContract"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = logicmonitor_sdk.models.log_partition_changelog.LogPartitionChangelog()  # noqa: E501
+        # model = logicmonitor_sdk.models.log_partition_contract.LogPartitionContract()  # noqa: E501
         pass
 
 

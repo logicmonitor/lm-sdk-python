@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **summary** | **str** | api&#x27;s summary defined in swagger.json | [optional] 
 **total_waiting_requests** | **int** | total waiting requests | [optional] 
 **total_rejected_get_api_count** | **int** | Total rejected get API count | [optional] 
+**total_rejected_mod_api_count** | **int** | Total rejected mod API count | [optional] 
 **tot_nano_time** | **int** | total time taken to process requests | [optional] 
 **total_processed_requests** | **int** | total processed requests | [optional] 
 **total_requests** | **int** | total requests | [optional] 

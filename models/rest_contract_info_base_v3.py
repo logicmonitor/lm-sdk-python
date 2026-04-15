@@ -31,31 +31,43 @@ class RestContractInfoBaseV3(object):
         'child_products': 'list[RestUsageContractInfoV4]',
         'product': 'str',
         'unit': 'list[str]',
+        'subscriptions': 'list[Subscriptions]',
+        'aggregation_type': 'str',
         'quantity': 'list[float]',
         'feature': 'str',
         'rounding_required': 'bool',
-        'unpaid': 'bool'
+        'unpaid': 'bool',
+        'nested_products': 'list[RestUsageContractInfoV4]',
+        'category': 'str'
     }
 
     attribute_map = {
         'child_products': 'childProducts',
         'product': 'product',
         'unit': 'unit',
+        'subscriptions': 'subscriptions',
+        'aggregation_type': 'aggregationType',
         'quantity': 'quantity',
         'feature': 'feature',
         'rounding_required': 'roundingRequired',
-        'unpaid': 'unpaid'
+        'unpaid': 'unpaid',
+        'nested_products': 'nestedProducts',
+        'category': 'category'
     }
 
-    def __init__(self, child_products=None, product=None, unit=None, quantity=None, feature=None, rounding_required=None, unpaid=None):  # noqa: E501
+    def __init__(self, child_products=None, product=None, unit=None, subscriptions=None, aggregation_type=None, quantity=None, feature=None, rounding_required=None, unpaid=None, nested_products=None, category=None):  # noqa: E501
         """RestContractInfoBaseV3 - a model defined in Swagger"""  # noqa: E501
         self._child_products = None
         self._product = None
         self._unit = None
+        self._subscriptions = None
+        self._aggregation_type = None
         self._quantity = None
         self._feature = None
         self._rounding_required = None
         self._unpaid = None
+        self._nested_products = None
+        self._category = None
         self.discriminator = None
         if child_products is not None:
             self.child_products = child_products
@@ -63,6 +75,10 @@ class RestContractInfoBaseV3(object):
             self.product = product
         if unit is not None:
             self.unit = unit
+        if subscriptions is not None:
+            self.subscriptions = subscriptions
+        if aggregation_type is not None:
+            self.aggregation_type = aggregation_type
         if quantity is not None:
             self.quantity = quantity
         if feature is not None:
@@ -71,6 +87,10 @@ class RestContractInfoBaseV3(object):
             self.rounding_required = rounding_required
         if unpaid is not None:
             self.unpaid = unpaid
+        if nested_products is not None:
+            self.nested_products = nested_products
+        if category is not None:
+            self.category = category
 
     @property
     def child_products(self):
@@ -134,6 +154,48 @@ class RestContractInfoBaseV3(object):
         """
 
         self._unit = unit
+
+    @property
+    def subscriptions(self):
+        """Gets the subscriptions of this RestContractInfoBaseV3.  # noqa: E501
+
+
+        :return: The subscriptions of this RestContractInfoBaseV3.  # noqa: E501
+        :rtype: list[Subscriptions]
+        """
+        return self._subscriptions
+
+    @subscriptions.setter
+    def subscriptions(self, subscriptions):
+        """Sets the subscriptions of this RestContractInfoBaseV3.
+
+
+        :param subscriptions: The subscriptions of this RestContractInfoBaseV3.  # noqa: E501
+        :type: list[Subscriptions]
+        """
+
+        self._subscriptions = subscriptions
+
+    @property
+    def aggregation_type(self):
+        """Gets the aggregation_type of this RestContractInfoBaseV3.  # noqa: E501
+
+
+        :return: The aggregation_type of this RestContractInfoBaseV3.  # noqa: E501
+        :rtype: str
+        """
+        return self._aggregation_type
+
+    @aggregation_type.setter
+    def aggregation_type(self, aggregation_type):
+        """Sets the aggregation_type of this RestContractInfoBaseV3.
+
+
+        :param aggregation_type: The aggregation_type of this RestContractInfoBaseV3.  # noqa: E501
+        :type: str
+        """
+
+        self._aggregation_type = aggregation_type
 
     @property
     def quantity(self):
@@ -218,6 +280,48 @@ class RestContractInfoBaseV3(object):
         """
 
         self._unpaid = unpaid
+
+    @property
+    def nested_products(self):
+        """Gets the nested_products of this RestContractInfoBaseV3.  # noqa: E501
+
+
+        :return: The nested_products of this RestContractInfoBaseV3.  # noqa: E501
+        :rtype: list[RestUsageContractInfoV4]
+        """
+        return self._nested_products
+
+    @nested_products.setter
+    def nested_products(self, nested_products):
+        """Sets the nested_products of this RestContractInfoBaseV3.
+
+
+        :param nested_products: The nested_products of this RestContractInfoBaseV3.  # noqa: E501
+        :type: list[RestUsageContractInfoV4]
+        """
+
+        self._nested_products = nested_products
+
+    @property
+    def category(self):
+        """Gets the category of this RestContractInfoBaseV3.  # noqa: E501
+
+
+        :return: The category of this RestContractInfoBaseV3.  # noqa: E501
+        :rtype: str
+        """
+        return self._category
+
+    @category.setter
+    def category(self, category):
+        """Sets the category of this RestContractInfoBaseV3.
+
+
+        :param category: The category of this RestContractInfoBaseV3.  # noqa: E501
+        :type: str
+        """
+
+        self._category = category
 
     def to_dict(self):
         """Returns the model properties as a dict"""

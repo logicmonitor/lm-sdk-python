@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **last_action_on** | **int** | The time, in epoch format, of the user&#x27;s last action | [optional] 
 **last_access_on** | **int** | The time that the user last accessed the portal | [optional] 
 **id** | **int** | The Id of the user | [optional] 
+**persistent_session_enabled** | **bool** | persistent session enabled or disabled for user | [optional] 
 **email** | **str** | The email address associated with the user | 
 **contact_method** | **str** | The values can be email | smsemail. Specifies the contact method for this admin | [optional] 
 **accept_eulaon** | **int** | The time, in epoch format, that the user accepted the EULA (if required to) | [optional] 

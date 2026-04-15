@@ -37,6 +37,7 @@ class LogQuery(object):
         'group_id': 'int',
         'into_rest_response': 'RestResponse',
         'label': 'str',
+        'view_config': 'ViewConfig',
         'favourite': 'bool',
         'version': 'str',
         'duration': 'str',
@@ -58,6 +59,7 @@ class LogQuery(object):
         'group_id': 'groupId',
         'into_rest_response': 'intoRestResponse',
         'label': 'label',
+        'view_config': 'viewConfig',
         'favourite': 'favourite',
         'version': 'version',
         'duration': 'duration',
@@ -69,7 +71,7 @@ class LogQuery(object):
         'is_aggregate': 'isAggregate'
     }
 
-    def __init__(self, partitions=None, trackable=None, identifier=None, start_ms=None, end_ms=None, query=None, group_id=None, into_rest_response=None, label=None, favourite=None, version=None, duration=None, admin_name=None, group_name=None, related_into_rest_response=None, model=None, id=None, is_aggregate=None):  # noqa: E501
+    def __init__(self, partitions=None, trackable=None, identifier=None, start_ms=None, end_ms=None, query=None, group_id=None, into_rest_response=None, label=None, view_config=None, favourite=None, version=None, duration=None, admin_name=None, group_name=None, related_into_rest_response=None, model=None, id=None, is_aggregate=None):  # noqa: E501
         """LogQuery - a model defined in Swagger"""  # noqa: E501
         self._partitions = None
         self._trackable = None
@@ -80,6 +82,7 @@ class LogQuery(object):
         self._group_id = None
         self._into_rest_response = None
         self._label = None
+        self._view_config = None
         self._favourite = None
         self._version = None
         self._duration = None
@@ -108,6 +111,8 @@ class LogQuery(object):
             self.into_rest_response = into_rest_response
         if label is not None:
             self.label = label
+        if view_config is not None:
+            self.view_config = view_config
         if favourite is not None:
             self.favourite = favourite
         self.version = version
@@ -327,6 +332,27 @@ class LogQuery(object):
         self._label = label
 
     @property
+    def view_config(self):
+        """Gets the view_config of this LogQuery.  # noqa: E501
+
+
+        :return: The view_config of this LogQuery.  # noqa: E501
+        :rtype: ViewConfig
+        """
+        return self._view_config
+
+    @view_config.setter
+    def view_config(self, view_config):
+        """Sets the view_config of this LogQuery.
+
+
+        :param view_config: The view_config of this LogQuery.  # noqa: E501
+        :type: ViewConfig
+        """
+
+        self._view_config = view_config
+
+    @property
     def favourite(self):
         """Gets the favourite of this LogQuery.  # noqa: E501
 
@@ -480,7 +506,7 @@ class LogQuery(object):
         :param model: The model of this LogQuery.  # noqa: E501
         :type: str
         """
-        allowed_values = ["accessLogs", "accessGroups", "adminNotifications", "aggregateSavings", "alerts", "visualizationAggregateEntry", "visualizationAggregateValue", "alertDependencyRules", "alertRoutings", "alertRules", "diagnosticRules", "alertTuningConfigAncestry", "alertTuningConfigs", "alertTuningConfigsHistory", "alertTuningConfigSlots", "alertTuningGraphs", "alertsTuningSeries", "asnMappings", "billingConfigurations", "cloudAccounts", "cloudResourceProperty", "clusterAlertRoutings", "clusterAlertTuningConfigs", "collectors", "collectorEvents", "collectorGroups", "collectorStatus", "collectorUpgradeHistory", "collectorUpgradeInfo", "configSources", "configSourceInstance", "configSourceInstanceAlert", "collectorLogs", "config", "configAlert", "correlationGraphs", "dashboards", "datapoints", "dataQueries", "dataSources", "dataSourceInstances", "dataSourceInstanceAlertSettings", "dataSourceInstanceGroups", "datasets", "dnsMappings", "escalationChains", "eventSources", "integrations", "integrationAuditLogs", "logSources", "exchangeAccessGroups", "exchangeActiveDiscoveryFilters", "exchangeAppliesToFunctions", "exchangeChangelogs", "exchangeConfigSources", "exchangeConfigSourceConfigChecks", "exchangeDataSources", "exchangeDataSourceDataPoints", "exchangeDataSourceDataPointDisplayStatusNames", "exchangeDataSourceGraphs", "exchangeDataSourceGraphSeries", "exchangeDataSourceGraphVirtualSeries", "exchangeDataSourceOverviewGraphs", "exchangeDataSourceOverviewGraphSeries", "exchangeDataSourceOverviewGraphVirtualSeries", "exchangeDiagnosticSources", "exchangeEventSources", "exchangeEventSourceFilters", "exchangeEventSourceLogFiles", "exchangeJobMonitors", "exchangeLogSources", "exchangeLogSourceFilters", "exchangeSnmpTrapLogSourceFilters", "exchangeLogSourceLogFields", "exchangeLogSourceResourceMappings", "exchangeLogSourceCollectorMappings", "exchangeLogicModules", "exchangeLogicModulePackages", "exchangeLogicModulePermissions", "exchangePackagedLogicModules", "exchangePropertySources", "exchangeRemediationSources", "exchangeSNMPSysOIDMaps", "exchangeTopologySources", "externalResourceIdentifiers", "failedDataSourceInfo", "filterFieldList", "graphs", "graphMeta", "healthMetrics", "hierarchy", "hostclusterAlertDefs", "hostDiagnosticSourceDetails", "diagnosticExecutionContext", "remediationExecutionContext", "latestDiagnosticExecutionResultContext", "diagnosticExecutionSearchContext", "remediationSourceExecutionSearchContext", "diagnosticSourceAssociatedDevices", "hostRemediationSourceDetails", "hostGroups", "internalAlertSettings", "jobMonitors", "jobMonitorExecutions", "lmSupportAccessHasConnection", "lmSupportAccessState", "lmotelCollectors", "lmotelCollectorVersions", "lmCollectorVersions", "logalerts", "logicModuleGroups", "logpipelinesources", "logpipelineprocessors", "matchedEvents", "metaGroupings", "metricsCorrelation", "monitoredResources", "netscanGroups", "netscans", "netflow", "netflowAlertRule", "allLevels", "nocWidgets", "normalizedProperties", "netscanPolicies", "netscanExecutions", "opsNotes", "opsNoteResourceScopes", "opsNoteServiceScopes", "opsNoteResourceGroupScopes", "opsNoteServiceGroupScopes", "opsNoteGroupAllScopes", "opsNoteTags", "orgTreeNodes", "portMappings", "productIds", "properties", "propertySources", "rawData", "recentlyDeletedItems", "recipientGroups", "cloudRecommendations", "cloudRecommendationAdditionalData", "recommendationTypes", "relationships", "reports", "reportHistories", "reportGroups", "resources", "resourceDashboards", "resourceDataSources", "resourceDatapoints", "resourceEventSources", "resourceConfigSources", "ConfigSourcesGoldStandard", "ConfigSourceConfiguration", "resourceDashboardTemplates", "resourceGroups", "resourceGroupDataSourceConfigs", "resourceGroupEventSourceConfigs", "resourceGroupInfoSourceConfigs", "resourceJobMonitors", "resourceLogPipelineResources", "resourceLogSources", "sdts", "services", "serviceCheckpoints", "serviceGroups", "sharedQueries", "siteMonitors", "slaWidgets", "spanCount", "securityRecommendations", "subscriptions", "topology", "topologyMaps", "topologyMapsHistogram", "topologyMapsGraphs", "subEntities", "subEntitiesDetails", "topologySavedMapsGroupType", "topologySavedMapsGroup", "topologyManualMapping", "topologyManualInterfaceList", "traffic", "treeNodes", "unmonitoredResources", "userdata", "users", "userSettings", "websiteCheckpoints", "websiteGroups", "websites", "ServicePreview", "BizServiceDatapoint", "ServiceTemplateView", "ServiceMemberPreview", "RestServiceTemplate", "ServiceTemplateServiceStats", "synthetics", "usage", "tracesDevicesNamesIds", "tracesGraphIds", "tracesServices", "tracesDeviceDatasources", "tracesDeviceDatasourceInstances", "tracesNamespaceGraphDetails", "tracesResourceNamesIds", "tracesTopologyEdgeData", "members", "apiTokens", "roleGroups", "roles", "userGroups", "sharingTokens", "syntheticsDSInstanceRawData", "syntheticsDSInstanceStepData", "syntheticsDSInstanceAlerts", "usageDimensions", "vizResourceInfo", "lmqlResult", "lmqlParsed", "partitions", "logPartitionChangelog", "cloudRecommendationStatus", "recommendationStatusUpdateRequest", "websiteDevice", "mibUpload", "logQueryGroups", "logQueryGroupChangelog", "logQuery", "trackingLogQueries", "billingBudgets"]  # noqa: E501
+        allowed_values = ["accessLogs", "accessGroups", "adminNotifications", "aggregateSavings", "alerts", "visualizationAggregateEntry", "visualizationAggregateValue", "alertDependencyRules", "alertRoutings", "alertRules", "actionRules", "diagnosticRules", "alertTuningConfigAncestry", "alertTuningConfigs", "alertTuningConfigsHistory", "alertTuningConfigSlots", "alertTuningGraphs", "alertsTuningSeries", "asnMappings", "billingConfigurations", "cloudAccounts", "cloudResourceProperty", "clusterAlertRoutings", "clusterAlertTuningConfigs", "collectors", "collectorEvents", "collectorGroups", "collectorStatus", "collectorUpgradeHistory", "collectorUpgradeInfo", "configSources", "configSourceInstance", "configSourceInstanceAlert", "collectorLogs", "config", "configAlert", "correlationGraphs", "dashboards", "datapoints", "dataQueries", "dataSources", "dataSourceInstances", "dataSourceInstanceAlertSettings", "dataSourceInstanceGroups", "datasets", "dnsMappings", "escalationChains", "actionChains", "eventSources", "integrations", "integrationAuditLogs", "logSources", "exchangeAccessGroups", "exchangeActiveDiscoveryFilters", "exchangeAppliesToFunctions", "exchangeChangelogs", "exchangeConfigSources", "exchangeConfigSourceConfigChecks", "exchangeDataSources", "exchangeDataSourceDataPoints", "exchangeDataSourceDataPointDisplayStatusNames", "exchangeDataSourceGraphs", "exchangeDataSourceGraphSeries", "exchangeDataSourceGraphVirtualSeries", "exchangeDataSourceOverviewGraphs", "exchangeDataSourceOverviewGraphSeries", "exchangeDataSourceOverviewGraphVirtualSeries", "exchangeDiagnosticSources", "exchangeEventSources", "exchangeEventSourceFilters", "exchangeEventSourceLogFiles", "exchangeJobMonitors", "exchangeLogSources", "exchangeLogSourceFilters", "exchangeSnmpTrapLogSourceFilters", "exchangeLogSourceLogFields", "exchangeLogSourceResourceMappings", "exchangeLogSourceCollectorMappings", "exchangeLogicModules", "exchangeLogicModulePackages", "exchangeLogicModulePermissions", "exchangePackagedLogicModules", "exchangePropertySources", "exchangeRemediationSources", "exchangeSNMPSysOIDMaps", "exchangeTopologySources", "externalResourceIdentifiers", "failedDataSourceInfo", "filterFieldList", "graphs", "graphMeta", "healthMetrics", "hierarchy", "hostclusterAlertDefs", "hostDiagnosticSourceDetails", "diagnosticExecutionContext", "remediationExecutionContext", "latestDiagnosticExecutionResultContext", "diagnosticExecutionSearchContext", "remediationSourceExecutionSearchContext", "diagnosticSourceAssociatedDevices", "hostRemediationSourceDetails", "remediationSourceAssociatedDevices", "latestRemediationExecutionResultContext", "hostGroups", "internalAlertSettings", "jobMonitors", "jobMonitorExecutions", "lmSupportAccessHasConnection", "lmSupportAccessState", "lmotelCollectors", "lmotelCollectorVersions", "lmCollectorVersions", "logalerts", "logicModuleGroups", "logpipelinesources", "logpipelineprocessors", "matchedEvents", "metaGroupings", "metricsCorrelation", "monitoredResources", "netscanGroups", "netscans", "netflow", "netflowAlertRule", "allLevels", "nocWidgets", "normalizedProperties", "netscanPolicies", "netscanExecutions", "opsNotes", "opsNoteResourceScopes", "opsNoteServiceScopes", "opsNoteResourceGroupScopes", "opsNoteServiceGroupScopes", "opsNoteGroupAllScopes", "opsNoteTags", "orgTreeNodes", "portMappings", "productIds", "properties", "propertySources", "rawData", "recentlyDeletedItems", "recipientGroups", "cloudRecommendations", "cloudRecommendationAdditionalData", "recommendationTypes", "relationships", "reports", "reportHistories", "reportGroups", "resources", "resourceDashboards", "resourceDataSources", "resourceDatapoints", "resourceEventSources", "resourceConfigSources", "ConfigSourcesGoldStandard", "ConfigSourceConfiguration", "resourceDashboardTemplates", "resourceGroups", "resourceGroupDataSourceConfigs", "resourceGroupEventSourceConfigs", "resourceGroupInfoSourceConfigs", "resourceJobMonitors", "resourceLogPipelineResources", "resourceLogSources", "sdts", "services", "serviceCheckpoints", "serviceGroups", "sharedQueries", "siteMonitors", "slaWidgets", "spanCount", "securityRecommendations", "subscriptions", "topology", "topologyMaps", "topologyMapsHistogram", "topologyMapsGraphs", "subEntities", "subEntitiesDetails", "topologySavedMapsGroupType", "topologySavedMapsGroup", "topologyManualMapping", "topologyManualInterfaceList", "traffic", "treeNodes", "unmonitoredResources", "userdata", "users", "userSettings", "websiteCheckpoints", "websiteGroups", "websites", "ServicePreview", "BizServiceDatapoint", "ServiceTemplateView", "ServiceMemberPreview", "RestServiceTemplate", "ServiceTemplateServiceStats", "synthetics", "usage", "tracesDevicesNamesIds", "tracesGraphIds", "tracesServices", "tracesDeviceDatasources", "tracesDeviceDatasourceInstances", "tracesNamespaceGraphDetails", "tracesResourceNamesIds", "tracesTopologyEdgeData", "members", "apiTokens", "roleGroups", "roles", "userGroups", "sharingTokens", "syntheticsDSInstanceRawData", "syntheticsDSInstanceStepData", "syntheticsDSInstanceAlerts", "usageDimensions", "vizResourceInfo", "lmqlResult", "lmqlParsed", "partitions", "cloudRecommendationStatus", "recommendationStatusUpdateRequest", "websiteDevice", "mibUpload", "logQueryGroups", "logQueryGroupChangelog", "logQuery", "trackingLogQueries", "billingBudgets", "trackedQuery", "trackedQueryGroups", "trackedQueryGroupChangelog", "adminName", "droppedInstances"]  # noqa: E501
         if model not in allowed_values:
             raise ValueError(
                 "Invalid value for `model` ({0}), must be one of {1}"  # noqa: E501

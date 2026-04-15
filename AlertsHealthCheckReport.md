@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **data_point** | **str** | Filter to restrict the report to a specific datapoint. Glob expressions are supported. | [optional] 
 **sdt_filter** | **str** | Filter alerts based on SDT status. | [optional] 
 **rule** | **str** | Filter for the rule. Glob expressions are supported. | [optional] 
+**monitored_object_groups** | **str** | The resource groups selected for the report filter | [optional] 
 **ack_filter** | **str** | Filter by acknowledgement status: all, acked, or nonacked. | [optional] 
 **dependency_routing_state** | **str** |  | [optional] 
 **dependency_role** | **str** |  | [optional] 

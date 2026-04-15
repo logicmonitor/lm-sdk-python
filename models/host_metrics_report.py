@@ -37,7 +37,8 @@ class HostMetricsReport(ReportBase):
         'columns': 'list[DynamicColumn]',
         'is_base1024': 'bool',
         'row_format': 'int',
-        'metrics': 'list[Metric]'
+        'metrics': 'list[Metric]',
+        'top_n': 'str'
     }
     if hasattr(ReportBase, "swagger_types"):
         swagger_types.update(ReportBase.swagger_types)
@@ -51,12 +52,13 @@ class HostMetricsReport(ReportBase):
         'columns': 'columns',
         'is_base1024': 'isBase1024',
         'row_format': 'rowFormat',
-        'metrics': 'metrics'
+        'metrics': 'metrics',
+        'top_n': 'topN'
     }
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, sorted_by=None, hosts_val_type=None, date_range=None, hosts_val=None, top10_only=None, columns=None, is_base1024=None, row_format=None, metrics=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, sorted_by=None, hosts_val_type=None, date_range=None, hosts_val=None, top10_only=None, columns=None, is_base1024=None, row_format=None, metrics=None, top_n=None, *args, **kwargs):  # noqa: E501
         """HostMetricsReport - a model defined in Swagger"""  # noqa: E501
         self._sorted_by = None
         self._hosts_val_type = None
@@ -67,6 +69,7 @@ class HostMetricsReport(ReportBase):
         self._is_base1024 = None
         self._row_format = None
         self._metrics = None
+        self._top_n = None
         self.discriminator = None
         self.sorted_by = sorted_by
         self.hosts_val_type = hosts_val_type
@@ -80,6 +83,8 @@ class HostMetricsReport(ReportBase):
         self.is_base1024 = is_base1024
         self.row_format = row_format
         self.metrics = metrics
+        if top_n is not None:
+            self.top_n = top_n
         ReportBase.__init__(self, *args, **kwargs)
 
     @property
@@ -182,7 +187,7 @@ class HostMetricsReport(ReportBase):
     def top10_only(self):
         """Gets the top10_only of this HostMetricsReport.  # noqa: E501
 
-        true | false false: Metrics will be displayed for all selected devices or groups true: Metrics will only be displayed for the top ten device or groups  # noqa: E501
+        true | false false: Metrics will be displayed for all selected devices or groups true: Metrics will only be displayed for the top ten device or groups This field is deprecated, use topN field for more flexible top N selection  # noqa: E501
 
         :return: The top10_only of this HostMetricsReport.  # noqa: E501
         :rtype: bool
@@ -193,7 +198,7 @@ class HostMetricsReport(ReportBase):
     def top10_only(self, top10_only):
         """Sets the top10_only of this HostMetricsReport.
 
-        true | false false: Metrics will be displayed for all selected devices or groups true: Metrics will only be displayed for the top ten device or groups  # noqa: E501
+        true | false false: Metrics will be displayed for all selected devices or groups true: Metrics will only be displayed for the top ten device or groups This field is deprecated, use topN field for more flexible top N selection  # noqa: E501
 
         :param top10_only: The top10_only of this HostMetricsReport.  # noqa: E501
         :type: bool
@@ -300,6 +305,29 @@ class HostMetricsReport(ReportBase):
             raise ValueError("Invalid value for `metrics`, must not be `None`")  # noqa: E501
 
         self._metrics = metrics
+
+    @property
+    def top_n(self):
+        """Gets the top_n of this HostMetricsReport.  # noqa: E501
+
+        Top N selection: 5|10|25|50|100|all  # noqa: E501
+
+        :return: The top_n of this HostMetricsReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._top_n
+
+    @top_n.setter
+    def top_n(self, top_n):
+        """Sets the top_n of this HostMetricsReport.
+
+        Top N selection: 5|10|25|50|100|all  # noqa: E501
+
+        :param top_n: The top_n of this HostMetricsReport.  # noqa: E501
+        :type: str
+        """
+
+        self._top_n = top_n
 
     def to_dict(self):
         """Returns the model properties as a dict"""

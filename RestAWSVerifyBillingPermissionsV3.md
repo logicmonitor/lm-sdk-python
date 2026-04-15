@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**opt_in_warnings** | **dict(str, str)** |  | [optional] 
+**opt_in_warnings** | **list[str]** |  | [optional] 
 **is_valid** | **bool** |  | [optional] 
 **permission_errors** | **list[str]** |  | [optional] 
 **non_permission_errors** | **list[str]** |  | [optional] 

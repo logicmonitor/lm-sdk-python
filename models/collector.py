@@ -56,7 +56,7 @@ class Collector(object):
         'last_sent_notification_on_local': 'str',
         'custom_properties': 'list[NameAndValue]',
         'predefined_config': 'object',
-        'calculated_threshold': 'int',
+        'calculated_threshold': 'float',
         'onetime_upgrade_info': 'OnetimeUpgradeInfo',
         'wrapper_conf': 'str',
         'clear_sent': 'bool',
@@ -1090,7 +1090,7 @@ class Collector(object):
         calculated threshold value for ABCG collector to check if a collector has high load  # noqa: E501
 
         :return: The calculated_threshold of this Collector.  # noqa: E501
-        :rtype: int
+        :rtype: float
         """
         return self._calculated_threshold
 
@@ -1101,7 +1101,7 @@ class Collector(object):
         calculated threshold value for ABCG collector to check if a collector has high load  # noqa: E501
 
         :param calculated_threshold: The calculated_threshold of this Collector.  # noqa: E501
-        :type: int
+        :type: float
         """
 
         self._calculated_threshold = calculated_threshold

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **data_point** | **str** | The group filter used to determine which alerts will appear in the report. Glob expression supported | [optional] 
 **sdt_filter** | **str** | all | sdt | nonsdt all: alerts that are in SDT and that aren&#x27;t in SDT that meet the report criteria will be displayed sdt: only alerts that are in SDT and that meet the report criteria will be displayed nonsdt: only alerts that aren&#x27;t in SDT and that meet the report criteria will be displayed | [optional] 
 **rule** | **str** | All alerts displayed in the report must have been routed to the Rules specified in this filter | [optional] 
+**monitored_object_groups** | **str** | The resource groups selected for the report filter | [optional] 
 **ack_filter** | **str** | all | acked | nonacked all: both acknowledged and non-acknowledged alerts that meet the report criteria will be displayed acked: only acknowledged alerts that meet the report criteria will be displayed nonacked: only non-acknowledged alerts that meet the report criteria will be displayed | [optional] 
 **sorted_direction** | **str** | asc | desc | [optional] 
 **device_display_name** | **str** | The device filter used to determine which alerts will appear in the report. Glob expressions supported | [optional] 

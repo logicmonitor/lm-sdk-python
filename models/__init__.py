@@ -31,6 +31,7 @@ from logicmonitor_sdk.models.advanced_field_filter import AdvancedFieldFilter
 from logicmonitor_sdk.models.advanced_metrics_graph_info import AdvancedMetricsGraphInfo
 from logicmonitor_sdk.models.advanced_metrics_report import AdvancedMetricsReport
 from logicmonitor_sdk.models.aggregate_collector_attribute import AggregateCollectorAttribute
+from logicmonitor_sdk.models.aggregate_config import AggregateConfig
 from logicmonitor_sdk.models.alert import Alert
 from logicmonitor_sdk.models.alert_ack import AlertAck
 from logicmonitor_sdk.models.alert_filters import AlertFilters
@@ -192,6 +193,7 @@ from logicmonitor_sdk.models.cim_auto_discovery_method import CIMAutoDiscoveryMe
 from logicmonitor_sdk.models.cim_collector_attribute import CIMCollectorAttribute
 from logicmonitor_sdk.models.cell_data import CellData
 from logicmonitor_sdk.models.chain import Chain
+from logicmonitor_sdk.models.clear_config import ClearConfig
 from logicmonitor_sdk.models.cloud_recommendation import CloudRecommendation
 from logicmonitor_sdk.models.cloud_watch_auto_discovery_method import CloudWatchAutoDiscoveryMethod
 from logicmonitor_sdk.models.collector import Collector
@@ -296,6 +298,7 @@ from logicmonitor_sdk.models.diagnostics_source import DiagnosticsSource
 from logicmonitor_sdk.models.diagnostics_source_execution import DiagnosticsSourceExecution
 from logicmonitor_sdk.models.diagnosticsource_pagination_response import DiagnosticsourcePaginationResponse
 from logicmonitor_sdk.models.diagnosticsources_importjson_body import DiagnosticsourcesImportjsonBody
+from logicmonitor_sdk.models.disable_processor_payload import DisableProcessorPayload
 from logicmonitor_sdk.models.dummy_auto_discovery_method import DummyAutoDiscoveryMethod
 from logicmonitor_sdk.models.duration import Duration
 from logicmonitor_sdk.models.dynamic_column import DynamicColumn
@@ -324,6 +327,7 @@ from logicmonitor_sdk.models.eventsources_importjson_body import EventsourcesImp
 from logicmonitor_sdk.models.eventsources_importxml_body import EventsourcesImportxmlBody
 from logicmonitor_sdk.models.exclude_duplicate_ips import ExcludeDuplicateIps
 from logicmonitor_sdk.models.field_filter import FieldFilter
+from logicmonitor_sdk.models.field_panel_item import FieldPanelItem
 from logicmonitor_sdk.models.filter_by import FilterBy
 from logicmonitor_sdk.models.flash_widget import FlashWidget
 from logicmonitor_sdk.models.flow_record_pagination_response import FlowRecordPaginationResponse
@@ -344,6 +348,7 @@ from logicmonitor_sdk.models.gcp_compute_service_limits_collector_attribute_v3 i
 from logicmonitor_sdk.models.gcp_lb_backend_service_discovery_method_v3 import GcpLBBackendServiceDiscoveryMethodV3
 from logicmonitor_sdk.models.gcp_pub_sub_snapshot_discovery_method_v3 import GcpPubSubSnapshotDiscoveryMethodV3
 from logicmonitor_sdk.models.gcp_pub_sub_subscription_discovery_method_v3 import GcpPubSubSubscriptionDiscoveryMethodV3
+from logicmonitor_sdk.models.gcp_router_nat_gateway_discovery_method_v3 import GcpRouterNatGatewayDiscoveryMethodV3
 from logicmonitor_sdk.models.gcp_stack_driver_collector_attribute_v3 import GcpStackDriverCollectorAttributeV3
 from logicmonitor_sdk.models.gcp_vpn_tunnel_discovery_method_v3 import GcpVpnTunnelDiscoveryMethodV3
 from logicmonitor_sdk.models.generate_report_request import GenerateReportRequest
@@ -359,6 +364,7 @@ from logicmonitor_sdk.models.graph_plot_line import GraphPlotLine
 from logicmonitor_sdk.models.graph_virtual_data_point import GraphVirtualDataPoint
 from logicmonitor_sdk.models.group_by_items import GroupByItems
 from logicmonitor_sdk.models.group_net_flow_record import GroupNetFlowRecord
+from logicmonitor_sdk.models.grouping_config import GroupingConfig
 from logicmonitor_sdk.models.host_cpu_report import HostCpuReport
 from logicmonitor_sdk.models.host_group_inventory_report import HostGroupInventoryReport
 from logicmonitor_sdk.models.host_inventory_metric import HostInventoryMetric
@@ -393,7 +399,7 @@ from logicmonitor_sdk.models.location_data import LocationData
 from logicmonitor_sdk.models.log_file import LogFile
 from logicmonitor_sdk.models.log_file_event_source import LogFileEventSource
 from logicmonitor_sdk.models.log_partition import LogPartition
-from logicmonitor_sdk.models.log_partition_changelog import LogPartitionChangelog
+from logicmonitor_sdk.models.log_partition_contract import LogPartitionContract
 from logicmonitor_sdk.models.log_query import LogQuery
 from logicmonitor_sdk.models.log_query_group import LogQueryGroup
 from logicmonitor_sdk.models.log_query_group_pagination_response import LogQueryGroupPaginationResponse
@@ -448,6 +454,7 @@ from logicmonitor_sdk.models.normal_graph_widget import NormalGraphWidget
 from logicmonitor_sdk.models.object_identifier import ObjectIdentifier
 from logicmonitor_sdk.models.object_node import ObjectNode
 from logicmonitor_sdk.models.oci_account_test_result import OciAccountTestResult
+from logicmonitor_sdk.models.oci_dimension_discovery_method import OciDimensionDiscoveryMethod
 from logicmonitor_sdk.models.oci_monitoring_collector_attribute import OciMonitoringCollectorAttribute
 from logicmonitor_sdk.models.oid_source_pagination_response import OidSourcePaginationResponse
 from logicmonitor_sdk.models.oids_importjson_body import OidsImportjsonBody
@@ -481,6 +488,8 @@ from logicmonitor_sdk.models.pie_chart_widget_data import PieChartWidgetData
 from logicmonitor_sdk.models.ping_check import PingCheck
 from logicmonitor_sdk.models.ping_check_device import PingCheckDevice
 from logicmonitor_sdk.models.ping_collector_attribute import PingCollectorAttribute
+from logicmonitor_sdk.models.pipeline_pagination_response import PipelinePaginationResponse
+from logicmonitor_sdk.models.pipeline_processor_pagination_response import PipelineProcessorPaginationResponse
 from logicmonitor_sdk.models.point_source import PointSource
 from logicmonitor_sdk.models.port_auto_discovery_method import PortAutoDiscoveryMethod
 from logicmonitor_sdk.models.port_pagination_response import PortPaginationResponse
@@ -511,6 +520,7 @@ from logicmonitor_sdk.models.resource_group_sdt import ResourceGroupSDT
 from logicmonitor_sdk.models.resource_sdt import ResourceSDT
 from logicmonitor_sdk.models.response import Response
 from logicmonitor_sdk.models.rest_aws_verify_billing_permissions_v3 import RestAWSVerifyBillingPermissionsV3
+from logicmonitor_sdk.models.rest_agent_log_level_v3 import RestAgentLogLevelV3
 from logicmonitor_sdk.models.rest_alert_query_context import RestAlertQueryContext
 from logicmonitor_sdk.models.rest_applies_to_function_pagination_response import RestAppliesToFunctionPaginationResponse
 from logicmonitor_sdk.models.rest_aws_account_test_v3 import RestAwsAccountTestV3
@@ -529,6 +539,8 @@ from logicmonitor_sdk.models.rest_changelog_v4 import RestChangelogV4
 from logicmonitor_sdk.models.rest_cloud_ok_permissions_v3 import RestCloudOkPermissionsV3
 from logicmonitor_sdk.models.rest_cloud_recommendation_category_v3 import RestCloudRecommendationCategoryV3
 from logicmonitor_sdk.models.rest_cloud_recommendation_v3 import RestCloudRecommendationV3
+from logicmonitor_sdk.models.rest_collector_event_v3 import RestCollectorEventV3
+from logicmonitor_sdk.models.rest_collector_status_v3 import RestCollectorStatusV3
 from logicmonitor_sdk.models.rest_contract_info_base_v3 import RestContractInfoBaseV3
 from logicmonitor_sdk.models.rest_dns_mapping_v3 import RestDNSMappingV3
 from logicmonitor_sdk.models.rest_dashboard_group_async_clone_response import RestDashboardGroupAsyncCloneResponse
@@ -542,6 +554,8 @@ from logicmonitor_sdk.models.rest_downgrade_info_onetime import RestDowngradeInf
 from logicmonitor_sdk.models.rest_event_source_filter import RestEventSourceFilter
 from logicmonitor_sdk.models.rest_gcp_account_test_v3 import RestGcpAccountTestV3
 from logicmonitor_sdk.models.rest_highest_priority_collector_status import RestHighestPriorityCollectorStatus
+from logicmonitor_sdk.models.rest_log_pipeline_processor_v3 import RestLogPipelineProcessorV3
+from logicmonitor_sdk.models.rest_log_pipeline_v3 import RestLogPipelineV3
 from logicmonitor_sdk.models.rest_log_source_filter_v3 import RestLogSourceFilterV3
 from logicmonitor_sdk.models.rest_log_source_resource_mapping_v3 import RestLogSourceResourceMappingV3
 from logicmonitor_sdk.models.rest_logs_dynamic_column_v3 import RestLogsDynamicColumnV3
@@ -549,6 +563,7 @@ from logicmonitor_sdk.models.rest_map_module_v3 import RestMapModuleV3
 from logicmonitor_sdk.models.rest_n_map_netscan_policy_credential import RestNMapNetscanPolicyCredential
 from logicmonitor_sdk.models.rest_netscan_ports import RestNetscanPorts
 from logicmonitor_sdk.models.rest_oid_v3 import RestOidV3
+from logicmonitor_sdk.models.rest_resource_update_criteria import RestResourceUpdateCriteria
 from logicmonitor_sdk.models.rest_response import RestResponse
 from logicmonitor_sdk.models.rest_response_meta_block import RestResponseMetaBlock
 from logicmonitor_sdk.models.rest_sdtv4 import RestSDTV4
@@ -642,6 +657,9 @@ from logicmonitor_sdk.models.text_widget import TextWidget
 from logicmonitor_sdk.models.topology_source import TopologySource
 from logicmonitor_sdk.models.topology_source_pagination_response import TopologySourcePaginationResponse
 from logicmonitor_sdk.models.topologysources_importjson_body import TopologysourcesImportjsonBody
+from logicmonitor_sdk.models.track_query_group_pagination_response import TrackQueryGroupPaginationResponse
+from logicmonitor_sdk.models.tracked_query_group import TrackedQueryGroup
+from logicmonitor_sdk.models.tracking_log_query import TrackingLogQuery
 from logicmonitor_sdk.models.tree_node import TreeNode
 from logicmonitor_sdk.models.udp_collector_attribute import UDPCollectorAttribute
 from logicmonitor_sdk.models.unmonitored_device_pagination_response import UnmonitoredDevicePaginationResponse
@@ -655,6 +673,7 @@ from logicmonitor_sdk.models.uptime_web_check_step import UptimeWebCheckStep
 from logicmonitor_sdk.models.usage import Usage
 from logicmonitor_sdk.models.user_filter import UserFilter
 from logicmonitor_sdk.models.user_report import UserReport
+from logicmonitor_sdk.models.view_config import ViewConfig
 from logicmonitor_sdk.models.virtual_data_point import VirtualDataPoint
 from logicmonitor_sdk.models.viz import Viz
 from logicmonitor_sdk.models.viz_filter_item import VizFilterItem
@@ -698,6 +717,7 @@ from logicmonitor_sdk.models.widget_data import WidgetData
 from logicmonitor_sdk.models.widget_pagination_response import WidgetPaginationResponse
 from logicmonitor_sdk.models.widget_token import WidgetToken
 from logicmonitor_sdk.models.widget_token_inheritance import WidgetTokenInheritance
+from logicmonitor_sdk.models.window_config import WindowConfig
 from logicmonitor_sdk.models.windows_event_log_event_source import WindowsEventLogEventSource
 from logicmonitor_sdk.models.xen_auto_discovery_method import XENAutoDiscoveryMethod
 from logicmonitor_sdk.models.xen_collector_attribute import XENCollectorAttribute

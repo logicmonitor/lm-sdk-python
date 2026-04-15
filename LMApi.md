@@ -31,6 +31,8 @@ Method | HTTP request | Description
 [**add_escalation_chain**](LMApi.md#add_escalation_chain) | **POST** /setting/alert/chains | Add escalation chain
 [**add_event_source**](LMApi.md#add_event_source) | **POST** /setting/eventsources | Add event source
 [**add_job_monitor**](LMApi.md#add_job_monitor) | **POST** /setting/batchjobs | Add JobMonitor
+[**add_log_alert_group**](LMApi.md#add_log_alert_group) | **POST** /logpipelines | Add a new LogAlertGroup
+[**add_log_alerts**](LMApi.md#add_log_alerts) | **POST** /logpipelines/processors | Add a new LogAlerts
 [**add_log_query_group**](LMApi.md#add_log_query_group) | **POST** /log/logquerygroups | Create a new log query group
 [**add_log_source**](LMApi.md#add_log_source) | **POST** /setting/logsources | Add log source
 [**add_netscan**](LMApi.md#add_netscan) | **POST** /setting/netscans | Add a new netscan
@@ -49,6 +51,7 @@ Method | HTTP request | Description
 [**add_widget**](LMApi.md#add_widget) | **POST** /dashboard/widgets | Add widget
 [**collect_device_config_source_config**](LMApi.md#collect_device_config_source_config) | **POST** /device/devices/{deviceId}/devicedatasources/{hdsId}/instances/{instanceId}/config/configCollection | collect a config for a device
 [**create_log_partition**](LMApi.md#create_log_partition) | **POST** /log/partitions | Create a new log partition
+[**create_tracked_query_group**](LMApi.md#create_tracked_query_group) | **POST** /trackedquerygroups | Create tracked query group
 [**delete_access_group**](LMApi.md#delete_access_group) | **DELETE** /setting/accessgroup/{id} | Delete access group
 [**delete_admin_by_id**](LMApi.md#delete_admin_by_id) | **DELETE** /setting/admins/{id} | delete user
 [**delete_alert_rule_by_id**](LMApi.md#delete_alert_rule_by_id) | **DELETE** /setting/alert/rules/{id} | delete alert rule
@@ -70,6 +73,8 @@ Method | HTTP request | Description
 [**delete_escalation_chain_by_id**](LMApi.md#delete_escalation_chain_by_id) | **DELETE** /setting/alert/chains/{id} | Delete escalation chain
 [**delete_event_source_by_id**](LMApi.md#delete_event_source_by_id) | **DELETE** /setting/eventsources/{id} | Delete event source by ID
 [**delete_job_monitor**](LMApi.md#delete_job_monitor) | **DELETE** /setting/batchjobs/{id} | Delete JobMonitor
+[**delete_log_alert_group**](LMApi.md#delete_log_alert_group) | **DELETE** /logpipelines/{pipelineId} | Delete a specific LogAlertGroup by ID
+[**delete_log_alerts_by_id**](LMApi.md#delete_log_alerts_by_id) | **DELETE** /logpipelines/processors/{processorId} | Delete a LogAlerts by ID
 [**delete_log_partition_by_id**](LMApi.md#delete_log_partition_by_id) | **DELETE** /log/partitions/{id} | Delete a log partition by ID
 [**delete_log_query_group**](LMApi.md#delete_log_query_group) | **DELETE** /log/logquerygroups/{id} | Delete log query group
 [**delete_log_source**](LMApi.md#delete_log_source) | **DELETE** /setting/logsources/{id} | Delete log source
@@ -84,6 +89,7 @@ Method | HTTP request | Description
 [**delete_role_by_id**](LMApi.md#delete_role_by_id) | **DELETE** /setting/roles/{id} | Delete role
 [**delete_sdt_by_id**](LMApi.md#delete_sdt_by_id) | **DELETE** /sdt/sdts/{id} | delete SDT
 [**delete_topology_source**](LMApi.md#delete_topology_source) | **DELETE** /setting/topologysources/{id} | Delete TopologySource
+[**delete_tracked_query_group**](LMApi.md#delete_tracked_query_group) | **DELETE** /trackedquerygroups/{id} | Delete tracked query group
 [**delete_website_by_id**](LMApi.md#delete_website_by_id) | **DELETE** /website/websites/{id} | delete website
 [**delete_website_group_by_id**](LMApi.md#delete_website_group_by_id) | **DELETE** /website/groups/{id} | delete website group
 [**delete_widget_by_id**](LMApi.md#delete_widget_by_id) | **DELETE** /dashboard/widgets/{id} | Delete widget
@@ -117,11 +123,15 @@ Method | HTTP request | Description
 [**get_audit_log_list**](LMApi.md#get_audit_log_list) | **GET** /setting/accesslogs | Get audit logs
 [**get_aws_account_id**](LMApi.md#get_aws_account_id) | **GET** /aws/accountId | Get AWS account ID
 [**get_aws_external_id**](LMApi.md#get_aws_external_id) | **GET** /aws/externalId | Get AWS external ID
+[**get_collector_agent_log_level_by_component**](LMApi.md#get_collector_agent_log_level_by_component) | **GET** /setting/collector/collectors/{id}/agentloglevels/{component} | get collector agent log level by component
+[**get_collector_agent_log_levels**](LMApi.md#get_collector_agent_log_levels) | **GET** /setting/collector/collectors/{id}/agentloglevels | get collector agent log levels
 [**get_collector_by_id**](LMApi.md#get_collector_by_id) | **GET** /setting/collector/collectors/{id} | get collector
+[**get_collector_events**](LMApi.md#get_collector_events) | **GET** /setting/collector/collectors/{collectorId}/events | get collector events
 [**get_collector_group_by_id**](LMApi.md#get_collector_group_by_id) | **GET** /setting/collector/groups/{id} | Get collector group
 [**get_collector_group_list**](LMApi.md#get_collector_group_list) | **GET** /setting/collector/groups | Get collector group list
 [**get_collector_installer**](LMApi.md#get_collector_installer) | **GET** /setting/collector/collectors/{collectorId}/installers/{osAndArch} | get collector installer
 [**get_collector_list**](LMApi.md#get_collector_list) | **GET** /setting/collector/collectors | get collector list
+[**get_collector_status_check**](LMApi.md#get_collector_status_check) | **GET** /setting/collector/collectors/{collectorId}/services/getStatusCheck | get collector status check
 [**get_collector_version_list**](LMApi.md#get_collector_version_list) | **GET** /setting/collector/collectors/versions | get collector version list
 [**get_config_source_by_id**](LMApi.md#get_config_source_by_id) | **GET** /setting/configsources/{id} | Get config source by ID
 [**get_config_source_list**](LMApi.md#get_config_source_list) | **GET** /setting/configsources | Get config source list
@@ -182,6 +192,10 @@ Method | HTTP request | Description
 [**get_integration_audit_logs**](LMApi.md#get_integration_audit_logs) | **GET** /setting/integrations/auditlogs | Get integration audit logs list
 [**get_job_monitor_by_id**](LMApi.md#get_job_monitor_by_id) | **GET** /setting/batchjobs/{id} | Get JobMonitor by ID
 [**get_job_monitor_list**](LMApi.md#get_job_monitor_list) | **GET** /setting/batchjobs | Get JobMonitor List
+[**get_log_alert_group_by_id**](LMApi.md#get_log_alert_group_by_id) | **GET** /logpipelines/{pipelineId} | Retrieve a LogAlertGroup by ID
+[**get_log_alert_groups_list**](LMApi.md#get_log_alert_groups_list) | **GET** /logpipelines | Retrieve all LogAlertGroups
+[**get_log_alerts**](LMApi.md#get_log_alerts) | **GET** /logpipelines/processors | Retrieve all LogAlerts
+[**get_log_alerts_by_id**](LMApi.md#get_log_alerts_by_id) | **GET** /logpipelines/processors/{processorId} | Retrieve a LogAlerts by ID
 [**get_log_queries_by_group_id**](LMApi.md#get_log_queries_by_group_id) | **GET** /log/logquerygroups/{id}/logqueries | Get log queries by group ID
 [**get_log_query_group_by_id**](LMApi.md#get_log_query_group_by_id) | **GET** /log/logquerygroups/{id} | Get log query group by ID
 [**get_log_query_group_list**](LMApi.md#get_log_query_group_list) | **GET** /log/logquerygroups | Get log query group list
@@ -227,6 +241,8 @@ Method | HTTP request | Description
 [**get_top_talkers_graph**](LMApi.md#get_top_talkers_graph) | **GET** /device/devices/{id}/topTalkersGraph | get top talkers graph
 [**get_topology_source_by_id**](LMApi.md#get_topology_source_by_id) | **GET** /setting/topologysources/{id} | Get TopologySource by id
 [**get_topology_source_list**](LMApi.md#get_topology_source_list) | **GET** /setting/topologysources | Get TopologySource List
+[**get_tracked_query_group_by_id**](LMApi.md#get_tracked_query_group_by_id) | **GET** /trackedquerygroups/{id} | Get tracked query group by ID
+[**get_tracked_query_group_list**](LMApi.md#get_tracked_query_group_list) | **GET** /trackedquerygroups | Get tracked query group list
 [**get_unmonitored_device_list**](LMApi.md#get_unmonitored_device_list) | **GET** /device/unmonitoreddevices | Get unmonitored device list
 [**get_update_reason_list_by_config_source_id**](LMApi.md#get_update_reason_list_by_config_source_id) | **GET** /setting/configsources/{id}/updatereasons | Get update history for a configSource
 [**get_update_reason_list_by_data_source_id**](LMApi.md#get_update_reason_list_by_data_source_id) | **GET** /setting/datasources/{id}/updatereasons | Get update history for a datasource
@@ -267,6 +283,7 @@ Method | HTTP request | Description
 [**patch_alert_rule_by_id**](LMApi.md#patch_alert_rule_by_id) | **PATCH** /setting/alert/rules/{id} | update alert rule
 [**patch_api_token_by_admin_id**](LMApi.md#patch_api_token_by_admin_id) | **PATCH** /setting/admins/{adminId}/apitokens/{apitokenId} | Update API tokens for a user
 [**patch_applies_to_function**](LMApi.md#patch_applies_to_function) | **PATCH** /setting/functions/{id} | Update applies to function
+[**patch_collector_agent_log_level**](LMApi.md#patch_collector_agent_log_level) | **PATCH** /setting/collector/collectors/{id}/agentloglevels/{component} | update collector agent log level
 [**patch_collector_by_id**](LMApi.md#patch_collector_by_id) | **PATCH** /setting/collector/collectors/{id} | update collector
 [**patch_collector_group_by_id**](LMApi.md#patch_collector_group_by_id) | **PATCH** /setting/collector/groups/{id} | Update collector group
 [**patch_config_source_by_id**](LMApi.md#patch_config_source_by_id) | **PATCH** /setting/configsources/{id} | Update config source by ID
@@ -288,6 +305,8 @@ Method | HTTP request | Description
 [**patch_escalation_chain_by_id**](LMApi.md#patch_escalation_chain_by_id) | **PATCH** /setting/alert/chains/{id} | Update escalation chain
 [**patch_event_source_by_id**](LMApi.md#patch_event_source_by_id) | **PATCH** /setting/eventsources/{id} | Update event source by ID
 [**patch_job_monitor**](LMApi.md#patch_job_monitor) | **PATCH** /setting/batchjobs/{id} | Update JobMonitor
+[**patch_log_alert_group**](LMApi.md#patch_log_alert_group) | **PATCH** /logpipelines/{pipelineId} | Update a specific LogAlertGroup by its ID
+[**patch_log_alerts**](LMApi.md#patch_log_alerts) | **PATCH** /logpipelines/processors/{processorId} | Update a LogAlerts by ID
 [**patch_log_partition**](LMApi.md#patch_log_partition) | **PATCH** /log/partitions/{id} | Update an existing log partition
 [**patch_log_query_group**](LMApi.md#patch_log_query_group) | **PATCH** /log/logquerygroups/{id} | Update log query group
 [**patch_log_source**](LMApi.md#patch_log_source) | **PATCH** /setting/logsources/{id} | Update log source
@@ -302,6 +321,7 @@ Method | HTTP request | Description
 [**patch_role_by_id**](LMApi.md#patch_role_by_id) | **PATCH** /setting/roles/{id} | Update role
 [**patch_sdt_by_id**](LMApi.md#patch_sdt_by_id) | **PATCH** /sdt/sdts/{id} | update SDT (Response may contain extra fields depending upon the type of SDT being updated)
 [**patch_topology_source**](LMApi.md#patch_topology_source) | **PATCH** /setting/topologysources/{id} | Update TopologySource
+[**patch_tracked_query_group**](LMApi.md#patch_tracked_query_group) | **PATCH** /trackedquerygroups/{id} | Update tracked query group
 [**patch_website_by_id**](LMApi.md#patch_website_by_id) | **PATCH** /website/websites/{id} | update website
 [**patch_website_group_by_id**](LMApi.md#patch_website_group_by_id) | **PATCH** /website/groups/{id} | update website group
 [**patch_widget_by_id**](LMApi.md#patch_widget_by_id) | **PATCH** /dashboard/widgets/{id} | Update widget
@@ -310,12 +330,12 @@ Method | HTTP request | Description
 [**test_azure_account**](LMApi.md#test_azure_account) | **POST** /azure/functions/testAccount | test Azure account
 [**test_gcp_account**](LMApi.md#test_gcp_account) | **POST** /gcp/functions/testAccount | test GCP account
 [**test_saa_s_account**](LMApi.md#test_saa_s_account) | **POST** /saas/functions/testAccount | Test SaaS account
-[**trigger_usage_exceeded**](LMApi.md#trigger_usage_exceeded) | **POST** /log/partitions/triggerUsageExceeded/{id}/{limit}/{value} | Trigger usage exceeded action for log partitions
 [**update_access_group**](LMApi.md#update_access_group) | **PUT** /setting/accessgroup/{id} | Update access group
 [**update_admin_by_id**](LMApi.md#update_admin_by_id) | **PUT** /setting/admins/{id} | update user
 [**update_alert_rule_by_id**](LMApi.md#update_alert_rule_by_id) | **PUT** /setting/alert/rules/{id} | update alert rule
 [**update_api_token_by_admin_id**](LMApi.md#update_api_token_by_admin_id) | **PUT** /setting/admins/{adminId}/apitokens/{apitokenId} | Update API tokens for a user
 [**update_applies_to_function**](LMApi.md#update_applies_to_function) | **PUT** /setting/functions/{id} | Update applies to function
+[**update_collector_agent_log_level**](LMApi.md#update_collector_agent_log_level) | **PUT** /setting/collector/collectors/{id}/agentloglevels/{component} | update collector agent log level
 [**update_collector_by_id**](LMApi.md#update_collector_by_id) | **PUT** /setting/collector/collectors/{id} | update collector
 [**update_collector_group_by_id**](LMApi.md#update_collector_group_by_id) | **PUT** /setting/collector/groups/{id} | Update collector group
 [**update_config_source_by_id**](LMApi.md#update_config_source_by_id) | **PUT** /setting/configsources/{id} | Update config source by ID
@@ -334,10 +354,13 @@ Method | HTTP request | Description
 [**update_device_group_property_by_name**](LMApi.md#update_device_group_property_by_name) | **PUT** /device/groups/{gid}/properties/{name} | Update device group property
 [**update_device_property_by_name**](LMApi.md#update_device_property_by_name) | **PUT** /device/devices/{deviceId}/properties/{name} | Update device property
 [**update_diagnostic_source_by_id**](LMApi.md#update_diagnostic_source_by_id) | **PUT** /setting/diagnosticsources/{id} | Update a diagnostics source
+[**update_disable_log_alerts**](LMApi.md#update_disable_log_alerts) | **PUT** /logpipelines/processors/{processorId}/{action} | Enable or disable a LogAlerts by ID
 [**update_escalation_chain_by_id**](LMApi.md#update_escalation_chain_by_id) | **PUT** /setting/alert/chains/{id} | Update escalation chain
 [**update_event_source_by_id**](LMApi.md#update_event_source_by_id) | **PUT** /setting/eventsources/{id} | Update event source by ID
 [**update_instance_group_alert_threshold**](LMApi.md#update_instance_group_alert_threshold) | **PUT** /device/devices/{deviceId}/devicedatasources/{deviceDsId}/groups/{dsigId}/datapoints/{dpId}/alertconfig | Update instance group alert threshold
 [**update_job_monitor**](LMApi.md#update_job_monitor) | **PUT** /setting/batchjobs/{id} | Update JobMonitor
+[**update_log_alert_group**](LMApi.md#update_log_alert_group) | **PUT** /logpipelines/{pipelineId} | Update a specific LogAlertGroup by its ID
+[**update_log_alerts**](LMApi.md#update_log_alerts) | **PUT** /logpipelines/processors/{processorId} | Update a LogAlerts by ID
 [**update_log_partition**](LMApi.md#update_log_partition) | **PUT** /log/partitions/{id} | Update an existing log partition
 [**update_log_query_group**](LMApi.md#update_log_query_group) | **PUT** /log/logquerygroups/{id} | Update log query group
 [**update_log_source**](LMApi.md#update_log_source) | **PUT** /setting/logsources/{id} | Update log source
@@ -352,6 +375,7 @@ Method | HTTP request | Description
 [**update_role_by_id**](LMApi.md#update_role_by_id) | **PUT** /setting/roles/{id} | Update role
 [**update_sdt_by_id**](LMApi.md#update_sdt_by_id) | **PUT** /sdt/sdts/{id} | update SDT (Response may contain extra fields depending upon the type of SDT being updated)
 [**update_topology_source**](LMApi.md#update_topology_source) | **PUT** /setting/topologysources/{id} | Update TopologySource
+[**update_tracked_query_group**](LMApi.md#update_tracked_query_group) | **PUT** /trackedquerygroups/{id} | Update tracked query group
 [**update_website_by_id**](LMApi.md#update_website_by_id) | **PUT** /website/websites/{id} | update website
 [**update_website_group_by_id**](LMApi.md#update_website_group_by_id) | **PUT** /website/groups/{id} | update website group
 [**update_widget_by_id**](LMApi.md#update_widget_by_id) | **PUT** /dashboard/widgets/{id} | Update widget
@@ -1856,6 +1880,114 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **add_log_alert_group**
+> RestLogPipelineV3 add_log_alert_group(body)
+
+Add a new LogAlertGroup
+
+Handles the addition of a new LogAlertGroup.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.RestLogPipelineV3() # RestLogPipelineV3 | 
+
+try:
+    # Add a new LogAlertGroup
+    api_response = api_instance.add_log_alert_group(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->add_log_alert_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RestLogPipelineV3**](RestLogPipelineV3.md)|  | 
+
+### Return type
+
+[**RestLogPipelineV3**](RestLogPipelineV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **add_log_alerts**
+> RestLogPipelineProcessorV3 add_log_alerts(body)
+
+Add a new LogAlerts
+
+Handles the addition of a new LogAlerts.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.RestLogPipelineProcessorV3() # RestLogPipelineProcessorV3 | 
+
+try:
+    # Add a new LogAlerts
+    api_response = api_instance.add_log_alerts(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->add_log_alerts: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**RestLogPipelineProcessorV3**](RestLogPipelineProcessorV3.md)|  | 
+
+### Return type
+
+[**RestLogPipelineProcessorV3**](RestLogPipelineProcessorV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **add_log_query_group**
 > LogQueryGroup add_log_query_group(body)
 
@@ -2820,6 +2952,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LogPartition**](LogPartition.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_tracked_query_group**
+> TrackedQueryGroup create_tracked_query_group(body=body)
+
+Create tracked query group
+
+Create a new tracked query group
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+body = logicmonitor_sdk.TrackedQueryGroup() # TrackedQueryGroup |  (optional)
+
+try:
+    # Create tracked query group
+    api_response = api_instance.create_tracked_query_group(body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->create_tracked_query_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**TrackedQueryGroup**](TrackedQueryGroup.md)|  | [optional] 
+
+### Return type
+
+[**TrackedQueryGroup**](TrackedQueryGroup.md)
 
 ### Authorization
 
@@ -3994,6 +4180,114 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_log_alert_group**
+> object delete_log_alert_group(pipeline_id)
+
+Delete a specific LogAlertGroup by ID
+
+Handles the deletion of a specific LogAlertGroup by it's ID.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+pipeline_id = 56 # int | 
+
+try:
+    # Delete a specific LogAlertGroup by ID
+    api_response = api_instance.delete_log_alert_group(pipeline_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->delete_log_alert_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pipeline_id** | **int**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_log_alerts_by_id**
+> object delete_log_alerts_by_id(processor_id)
+
+Delete a LogAlerts by ID
+
+Deletes the specified LogAlerts using its unique ID.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+processor_id = 56 # int | 
+
+try:
+    # Delete a LogAlerts by ID
+    api_response = api_instance.delete_log_alerts_by_id(processor_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->delete_log_alerts_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processor_id** | **int**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_log_partition_by_id**
 > object delete_log_partition_by_id(id)
 
@@ -4017,7 +4311,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-id = 'id_example' # str | 
+id = 56 # int | 
 
 try:
     # Delete a log partition by ID
@@ -4031,7 +4325,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**|  | 
 
 ### Return type
 
@@ -4734,6 +5028,60 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_tracked_query_group**
+> object delete_tracked_query_group(id)
+
+Delete tracked query group
+
+Delete a tracked query group by ID
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 'id_example' # str | 
+
+try:
+    # Delete tracked query group
+    api_response = api_instance.delete_tracked_query_group(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->delete_tracked_query_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**|  | 
 
 ### Return type
 
@@ -6676,6 +7024,116 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_collector_agent_log_level_by_component**
+> RestAgentLogLevelV3 get_collector_agent_log_level_by_component(id, component)
+
+get collector agent log level by component
+
+get collector agent log level by component
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+component = 'component_example' # str | 
+
+try:
+    # get collector agent log level by component
+    api_response = api_instance.get_collector_agent_log_level_by_component(id, component)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_collector_agent_log_level_by_component: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **component** | **str**|  | 
+
+### Return type
+
+[**RestAgentLogLevelV3**](RestAgentLogLevelV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_collector_agent_log_levels**
+> RestAgentLogLevelV3 get_collector_agent_log_levels(id)
+
+get collector agent log levels
+
+get collector agent log levels
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+
+try:
+    # get collector agent log levels
+    api_response = api_instance.get_collector_agent_log_levels(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_collector_agent_log_levels: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**RestAgentLogLevelV3**](RestAgentLogLevelV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_collector_by_id**
 > Collector get_collector_by_id(id, fields=fields)
 
@@ -6720,6 +7178,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Collector**](Collector.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_collector_events**
+> RestCollectorEventV3 get_collector_events(collector_id)
+
+get collector events
+
+get collector events
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+collector_id = 56 # int | 
+
+try:
+    # get collector events
+    api_response = api_instance.get_collector_events(collector_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_collector_events: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **collector_id** | **int**|  | 
+
+### Return type
+
+[**RestCollectorEventV3**](RestCollectorEventV3.md)
 
 ### Authorization
 
@@ -6962,6 +7474,60 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CollectorPaginationResponse**](CollectorPaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_collector_status_check**
+> RestCollectorStatusV3 get_collector_status_check(collector_id)
+
+get collector status check
+
+get collector status check
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+collector_id = 56 # int | 
+
+try:
+    # get collector status check
+    api_response = api_instance.get_collector_status_check(collector_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_collector_status_check: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **collector_id** | **int**|  | 
+
+### Return type
+
+[**RestCollectorStatusV3**](RestCollectorStatusV3.md)
 
 ### Authorization
 
@@ -10576,6 +11142,214 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_log_alert_group_by_id**
+> RestLogPipelineV3 get_log_alert_group_by_id(pipeline_id)
+
+Retrieve a LogAlertGroup by ID
+
+Handles the retrieval of a specific LogAlertGroup by its ID.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+pipeline_id = 56 # int | 
+
+try:
+    # Retrieve a LogAlertGroup by ID
+    api_response = api_instance.get_log_alert_group_by_id(pipeline_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_log_alert_group_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pipeline_id** | **int**|  | 
+
+### Return type
+
+[**RestLogPipelineV3**](RestLogPipelineV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_log_alert_groups_list**
+> PipelinePaginationResponse get_log_alert_groups_list()
+
+Retrieve all LogAlertGroups
+
+Handles the retrieval of all LogAlertGroups.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+
+try:
+    # Retrieve all LogAlertGroups
+    api_response = api_instance.get_log_alert_groups_list()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_log_alert_groups_list: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**PipelinePaginationResponse**](PipelinePaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_log_alerts**
+> PipelineProcessorPaginationResponse get_log_alerts()
+
+Retrieve all LogAlerts
+
+Handles the retrieval of all LogAlerts.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+
+try:
+    # Retrieve all LogAlerts
+    api_response = api_instance.get_log_alerts()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_log_alerts: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**PipelineProcessorPaginationResponse**](PipelineProcessorPaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_log_alerts_by_id**
+> RestLogPipelineProcessorV3 get_log_alerts_by_id(processor_id)
+
+Retrieve a LogAlerts by ID
+
+Handles the retrieval of a specific LogAlerts by ID.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+processor_id = 56 # int | 
+
+try:
+    # Retrieve a LogAlerts by ID
+    api_response = api_instance.get_log_alerts_by_id(processor_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_log_alerts_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processor_id** | **int**|  | 
+
+### Return type
+
+[**RestLogPipelineProcessorV3**](RestLogPipelineProcessorV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_log_queries_by_group_id**
 > object get_log_queries_by_group_id(id)
 
@@ -11565,7 +12339,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-id = 'id_example' # str | 
+id = 56 # int | 
 
 try:
     # Retrieve details of a specific log partition
@@ -11579,7 +12353,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**|  | 
 
 ### Return type
 
@@ -13162,6 +13936,110 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**TopologySourcePaginationResponse**](TopologySourcePaginationResponse.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_tracked_query_group_by_id**
+> TrackedQueryGroup get_tracked_query_group_by_id(id)
+
+Get tracked query group by ID
+
+Fetch a tracked query group by ID
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+
+try:
+    # Get tracked query group by ID
+    api_response = api_instance.get_tracked_query_group_by_id(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_tracked_query_group_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+[**TrackedQueryGroup**](TrackedQueryGroup.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_tracked_query_group_list**
+> TrackQueryGroupPaginationResponse get_tracked_query_group_list()
+
+Get tracked query group list
+
+Get all tracked query groups
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+
+try:
+    # Get tracked query group list
+    api_response = api_instance.get_tracked_query_group_list()
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->get_tracked_query_group_list: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**TrackQueryGroupPaginationResponse**](TrackQueryGroupPaginationResponse.md)
 
 ### Authorization
 
@@ -15183,7 +16061,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class test
 api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-id = 'id_example' # str | 
+id = 56 # int | 
 action = 'action_example' # str | 
 
 try:
@@ -15198,7 +16076,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**|  | 
  **action** | **str**|  | 
 
 ### Return type
@@ -15494,6 +16372,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AppliesToFunction**](AppliesToFunction.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_collector_agent_log_level**
+> RestAgentLogLevelV3 patch_collector_agent_log_level(id, component, body=body)
+
+update collector agent log level
+
+update collector agent log level
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+component = 'component_example' # str | 
+body = logicmonitor_sdk.RestAgentLogLevelV3() # RestAgentLogLevelV3 |  (optional)
+
+try:
+    # update collector agent log level
+    api_response = api_instance.patch_collector_agent_log_level(id, component, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_collector_agent_log_level: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **component** | **str**|  | 
+ **body** | [**RestAgentLogLevelV3**](RestAgentLogLevelV3.md)|  | [optional] 
+
+### Return type
+
+[**RestAgentLogLevelV3**](RestAgentLogLevelV3.md)
 
 ### Authorization
 
@@ -16748,6 +17684,118 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **patch_log_alert_group**
+> RestLogPipelineV3 patch_log_alert_group(pipeline_id, body)
+
+Update a specific LogAlertGroup by its ID
+
+Handles the update of a specific LogAlertGroup by its ID.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+pipeline_id = 56 # int | 
+body = logicmonitor_sdk.RestLogPipelineV3() # RestLogPipelineV3 | 
+
+try:
+    # Update a specific LogAlertGroup by its ID
+    api_response = api_instance.patch_log_alert_group(pipeline_id, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_log_alert_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pipeline_id** | **int**|  | 
+ **body** | [**RestLogPipelineV3**](RestLogPipelineV3.md)|  | 
+
+### Return type
+
+[**RestLogPipelineV3**](RestLogPipelineV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **patch_log_alerts**
+> RestLogPipelineProcessorV3 patch_log_alerts(processor_id, body)
+
+Update a LogAlerts by ID
+
+Handles the update of a specific LogAlerts by ID.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+processor_id = 56 # int | 
+body = logicmonitor_sdk.RestLogPipelineProcessorV3() # RestLogPipelineProcessorV3 | 
+
+try:
+    # Update a LogAlerts by ID
+    api_response = api_instance.patch_log_alerts(processor_id, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_log_alerts: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processor_id** | **int**|  | 
+ **body** | [**RestLogPipelineProcessorV3**](RestLogPipelineProcessorV3.md)|  | 
+
+### Return type
+
+[**RestLogPipelineProcessorV3**](RestLogPipelineProcessorV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **patch_log_partition**
 > LogPartition patch_log_partition(id, body=body)
 
@@ -17542,6 +18590,62 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **patch_tracked_query_group**
+> TrackedQueryGroup patch_tracked_query_group(id, body=body)
+
+Update tracked query group
+
+Update an existing tracked query group
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.TrackedQueryGroup() # TrackedQueryGroup |  (optional)
+
+try:
+    # Update tracked query group
+    api_response = api_instance.patch_tracked_query_group(id, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->patch_tracked_query_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**TrackedQueryGroup**](TrackedQueryGroup.md)|  | [optional] 
+
+### Return type
+
+[**TrackedQueryGroup**](TrackedQueryGroup.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **patch_website_by_id**
 > Website patch_website_by_id(id, body, op_type=op_type)
 
@@ -17990,64 +19094,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **trigger_usage_exceeded**
-> object trigger_usage_exceeded(id, limit, value)
-
-Trigger usage exceeded action for log partitions
-
-Trigger usage exceeded action for log partitions
-
-### Example
-```python
-from __future__ import print_function
-import time
-import logicmonitor_sdk
-from logicmonitor_sdk.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: LMv1
-configuration = logicmonitor_sdk.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class test
-api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
-id = 56 # int | 
-limit = 56 # int | 
-value = 56 # int | 
-
-try:
-    # Trigger usage exceeded action for log partitions
-    api_response = api_instance.trigger_usage_exceeded(id, limit, value)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling LMApi->trigger_usage_exceeded: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **int**|  | 
- **limit** | **int**|  | 
- **value** | **int**|  | 
-
-### Return type
-
-**object**
-
-### Authorization
-
-[LMv1](../README.md#LMv1)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **update_access_group**
 > AccessGroup update_access_group(id, body)
 
@@ -18326,6 +19372,64 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AppliesToFunction**](AppliesToFunction.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_collector_agent_log_level**
+> RestAgentLogLevelV3 update_collector_agent_log_level(id, component, body=body)
+
+update collector agent log level
+
+update collector agent log level
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+component = 'component_example' # str | 
+body = logicmonitor_sdk.RestAgentLogLevelV3() # RestAgentLogLevelV3 |  (optional)
+
+try:
+    # update collector agent log level
+    api_response = api_instance.update_collector_agent_log_level(id, component, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_collector_agent_log_level: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **component** | **str**|  | 
+ **body** | [**RestAgentLogLevelV3**](RestAgentLogLevelV3.md)|  | [optional] 
+
+### Return type
+
+[**RestAgentLogLevelV3**](RestAgentLogLevelV3.md)
 
 ### Authorization
 
@@ -19408,6 +20512,64 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **update_disable_log_alerts**
+> object update_disable_log_alerts(processor_id, action, body=body)
+
+Enable or disable a LogAlerts by ID
+
+Updates the state of a LogAlerts by ID. The action must be either 'enable' or 'disable'.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+processor_id = 56 # int | 
+action = 'action_example' # str | 
+body = logicmonitor_sdk.DisableProcessorPayload() # DisableProcessorPayload |  (optional)
+
+try:
+    # Enable or disable a LogAlerts by ID
+    api_response = api_instance.update_disable_log_alerts(processor_id, action, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_disable_log_alerts: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processor_id** | **int**|  | 
+ **action** | **str**|  | 
+ **body** | [**DisableProcessorPayload**](DisableProcessorPayload.md)|  | [optional] 
+
+### Return type
+
+**object**
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_escalation_chain_by_id**
 > EscalatingChain update_escalation_chain_by_id(id, body)
 
@@ -19630,6 +20792,118 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**BatchJob**](BatchJob.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_log_alert_group**
+> RestLogPipelineV3 update_log_alert_group(pipeline_id, body)
+
+Update a specific LogAlertGroup by its ID
+
+Handles the update of a specific LogAlertGroup by its ID.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+pipeline_id = 56 # int | 
+body = logicmonitor_sdk.RestLogPipelineV3() # RestLogPipelineV3 | 
+
+try:
+    # Update a specific LogAlertGroup by its ID
+    api_response = api_instance.update_log_alert_group(pipeline_id, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_log_alert_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pipeline_id** | **int**|  | 
+ **body** | [**RestLogPipelineV3**](RestLogPipelineV3.md)|  | 
+
+### Return type
+
+[**RestLogPipelineV3**](RestLogPipelineV3.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_log_alerts**
+> RestLogPipelineProcessorV3 update_log_alerts(processor_id, body)
+
+Update a LogAlerts by ID
+
+Handles the update of a specific LogAlerts by ID.
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+processor_id = 56 # int | 
+body = logicmonitor_sdk.RestLogPipelineProcessorV3() # RestLogPipelineProcessorV3 | 
+
+try:
+    # Update a LogAlerts by ID
+    api_response = api_instance.update_log_alerts(processor_id, body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_log_alerts: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **processor_id** | **int**|  | 
+ **body** | [**RestLogPipelineProcessorV3**](RestLogPipelineProcessorV3.md)|  | 
+
+### Return type
+
+[**RestLogPipelineProcessorV3**](RestLogPipelineProcessorV3.md)
 
 ### Authorization
 
@@ -20424,6 +21698,62 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TopologySource**](TopologySource.md)
+
+### Authorization
+
+[LMv1](../README.md#LMv1)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_tracked_query_group**
+> TrackedQueryGroup update_tracked_query_group(id, body=body)
+
+Update tracked query group
+
+Update an existing tracked query group
+
+### Example
+```python
+from __future__ import print_function
+import time
+import logicmonitor_sdk
+from logicmonitor_sdk.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: LMv1
+configuration = logicmonitor_sdk.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class test
+api_instance = logicmonitor_sdk.LMApi(logicmonitor_sdk.ApiClient(configuration))
+id = 56 # int | 
+body = logicmonitor_sdk.TrackedQueryGroup() # TrackedQueryGroup |  (optional)
+
+try:
+    # Update tracked query group
+    api_response = api_instance.update_tracked_query_group(id, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling LMApi->update_tracked_query_group: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+ **body** | [**TrackedQueryGroup**](TrackedQueryGroup.md)|  | [optional] 
+
+### Return type
+
+[**TrackedQueryGroup**](TrackedQueryGroup.md)
 
 ### Authorization
 

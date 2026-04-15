@@ -33,6 +33,7 @@ class AlertsModelAndId(object):
         'display_name': 'str',
         'name': 'str',
         'namespace': 'str',
+        'description': 'str',
         'model': 'str',
         'id': 'str'
     }
@@ -43,17 +44,19 @@ class AlertsModelAndId(object):
         'display_name': 'displayName',
         'name': 'name',
         'namespace': 'namespace',
+        'description': 'description',
         'model': 'model',
         'id': 'id'
     }
 
-    def __init__(self, deleted=None, is_deleted=None, display_name=None, name=None, namespace=None, model=None, id=None):  # noqa: E501
+    def __init__(self, deleted=None, is_deleted=None, display_name=None, name=None, namespace=None, description=None, model=None, id=None):  # noqa: E501
         """AlertsModelAndId - a model defined in Swagger"""  # noqa: E501
         self._deleted = None
         self._is_deleted = None
         self._display_name = None
         self._name = None
         self._namespace = None
+        self._description = None
         self._model = None
         self._id = None
         self.discriminator = None
@@ -67,6 +70,8 @@ class AlertsModelAndId(object):
             self.name = name
         if namespace is not None:
             self.namespace = namespace
+        if description is not None:
+            self.description = description
         if model is not None:
             self.model = model
         if id is not None:
@@ -176,6 +181,27 @@ class AlertsModelAndId(object):
         """
 
         self._namespace = namespace
+
+    @property
+    def description(self):
+        """Gets the description of this AlertsModelAndId.  # noqa: E501
+
+
+        :return: The description of this AlertsModelAndId.  # noqa: E501
+        :rtype: str
+        """
+        return self._description
+
+    @description.setter
+    def description(self, description):
+        """Sets the description of this AlertsModelAndId.
+
+
+        :param description: The description of this AlertsModelAndId.  # noqa: E501
+        :type: str
+        """
+
+        self._description = description
 
     @property
     def model(self):

@@ -29,6 +29,7 @@ class AdvanceMetricsTableInfo(AdvancedMetricsGraphInfo):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'show_data_point_as_column': 'bool',
         'rounding': 'int',
         'page_size': 'int',
         'color_thresholds': 'list[ColorThreshold]'
@@ -37,6 +38,7 @@ class AdvanceMetricsTableInfo(AdvancedMetricsGraphInfo):
         swagger_types.update(AdvancedMetricsGraphInfo.swagger_types)
 
     attribute_map = {
+        'show_data_point_as_column': 'showDataPointAsColumn',
         'rounding': 'rounding',
         'page_size': 'pageSize',
         'color_thresholds': 'colorThresholds'
@@ -44,12 +46,15 @@ class AdvanceMetricsTableInfo(AdvancedMetricsGraphInfo):
     if hasattr(AdvancedMetricsGraphInfo, "attribute_map"):
         attribute_map.update(AdvancedMetricsGraphInfo.attribute_map)
 
-    def __init__(self, rounding=None, page_size=None, color_thresholds=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, show_data_point_as_column=None, rounding=None, page_size=None, color_thresholds=None, *args, **kwargs):  # noqa: E501
         """AdvanceMetricsTableInfo - a model defined in Swagger"""  # noqa: E501
+        self._show_data_point_as_column = None
         self._rounding = None
         self._page_size = None
         self._color_thresholds = None
         self.discriminator = None
+        if show_data_point_as_column is not None:
+            self.show_data_point_as_column = show_data_point_as_column
         if rounding is not None:
             self.rounding = rounding
         if page_size is not None:
@@ -57,6 +62,27 @@ class AdvanceMetricsTableInfo(AdvancedMetricsGraphInfo):
         if color_thresholds is not None:
             self.color_thresholds = color_thresholds
         AdvancedMetricsGraphInfo.__init__(self, *args, **kwargs)
+
+    @property
+    def show_data_point_as_column(self):
+        """Gets the show_data_point_as_column of this AdvanceMetricsTableInfo.  # noqa: E501
+
+
+        :return: The show_data_point_as_column of this AdvanceMetricsTableInfo.  # noqa: E501
+        :rtype: bool
+        """
+        return self._show_data_point_as_column
+
+    @show_data_point_as_column.setter
+    def show_data_point_as_column(self, show_data_point_as_column):
+        """Sets the show_data_point_as_column of this AdvanceMetricsTableInfo.
+
+
+        :param show_data_point_as_column: The show_data_point_as_column of this AdvanceMetricsTableInfo.  # noqa: E501
+        :type: bool
+        """
+
+        self._show_data_point_as_column = show_data_point_as_column
 
     @property
     def rounding(self):
