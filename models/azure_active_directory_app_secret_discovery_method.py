@@ -29,19 +29,47 @@ class AzureActiveDirectoryAppSecretDiscoveryMethod(AutoDiscoveryMethod):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'expiring_soon_days': 'int'
     }
     if hasattr(AutoDiscoveryMethod, "swagger_types"):
         swagger_types.update(AutoDiscoveryMethod.swagger_types)
 
     attribute_map = {
+        'expiring_soon_days': 'expiringSoonDays'
     }
     if hasattr(AutoDiscoveryMethod, "attribute_map"):
         attribute_map.update(AutoDiscoveryMethod.attribute_map)
 
-    def __init__(self, *args, **kwargs):  # noqa: E501
+    def __init__(self, expiring_soon_days=None, *args, **kwargs):  # noqa: E501
         """AzureActiveDirectoryAppSecretDiscoveryMethod - a model defined in Swagger"""  # noqa: E501
+        self._expiring_soon_days = None
         self.discriminator = None
+        if expiring_soon_days is not None:
+            self.expiring_soon_days = expiring_soon_days
         AutoDiscoveryMethod.__init__(self, *args, **kwargs)
+
+    @property
+    def expiring_soon_days(self):
+        """Gets the expiring_soon_days of this AzureActiveDirectoryAppSecretDiscoveryMethod.  # noqa: E501
+
+        Days until expiration filter; 0 means unlimited  # noqa: E501
+
+        :return: The expiring_soon_days of this AzureActiveDirectoryAppSecretDiscoveryMethod.  # noqa: E501
+        :rtype: int
+        """
+        return self._expiring_soon_days
+
+    @expiring_soon_days.setter
+    def expiring_soon_days(self, expiring_soon_days):
+        """Sets the expiring_soon_days of this AzureActiveDirectoryAppSecretDiscoveryMethod.
+
+        Days until expiration filter; 0 means unlimited  # noqa: E501
+
+        :param expiring_soon_days: The expiring_soon_days of this AzureActiveDirectoryAppSecretDiscoveryMethod.  # noqa: E501
+        :type: int
+        """
+
+        self._expiring_soon_days = expiring_soon_days
 
     def to_dict(self):
         """Returns the model properties as a dict"""

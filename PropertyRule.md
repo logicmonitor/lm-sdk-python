@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **script_type** | **str** | script type: embed | powershell | external | [optional] 
 **name** | **str** | The property rule name | [optional] 
 **interval** | **int** | The collect interval of raw ERI | [optional] 
+**is_in_use** | **bool** | Whether the PropertySource is currently in use | [optional] 
 **linux_script** | **str** | external linux script name | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

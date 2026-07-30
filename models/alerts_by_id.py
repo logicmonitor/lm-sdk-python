@@ -44,7 +44,7 @@ class AlertsById(object):
         'alerts': 'dict(str, Alert)',
         'logalerts': 'dict(str, AlertsModelAndId)',
         'batch_jobs': 'dict(str, AlertsModelAndId)',
-        'budgets': 'dict(str, AlertsModelAndId)',
+        'billing_budgets': 'dict(str, AlertsModelAndId)',
         'data_source_instance_alert_settings': 'dict(str, AlertsModelAndId)',
         'billing_alerts_map': 'dict(str, AlertsModelAndId)',
         'service_checkpoints': 'dict(str, AlertsModelAndId)',
@@ -69,7 +69,7 @@ class AlertsById(object):
         'alerts': 'alerts',
         'logalerts': 'logalerts',
         'batch_jobs': 'batchJobs',
-        'budgets': 'budgets',
+        'billing_budgets': 'billingBudgets',
         'data_source_instance_alert_settings': 'dataSourceInstanceAlertSettings',
         'billing_alerts_map': 'billingAlertsMap',
         'service_checkpoints': 'serviceCheckpoints',
@@ -77,7 +77,7 @@ class AlertsById(object):
         'data_sources': 'dataSources'
     }
 
-    def __init__(self, resource_groups=None, event_sources=None, cluster_alert_settings=None, datapoints=None, escalation_chains=None, sdts=None, alert_rules=None, service_groups=None, resources=None, logpipelinesources=None, services=None, data_source_instances=None, billing_alerts=None, alerts=None, logalerts=None, batch_jobs=None, budgets=None, data_source_instance_alert_settings=None, billing_alerts_map=None, service_checkpoints=None, log_alerts_map=None, data_sources=None):  # noqa: E501
+    def __init__(self, resource_groups=None, event_sources=None, cluster_alert_settings=None, datapoints=None, escalation_chains=None, sdts=None, alert_rules=None, service_groups=None, resources=None, logpipelinesources=None, services=None, data_source_instances=None, billing_alerts=None, alerts=None, logalerts=None, batch_jobs=None, billing_budgets=None, data_source_instance_alert_settings=None, billing_alerts_map=None, service_checkpoints=None, log_alerts_map=None, data_sources=None):  # noqa: E501
         """AlertsById - a model defined in Swagger"""  # noqa: E501
         self._resource_groups = None
         self._event_sources = None
@@ -95,7 +95,7 @@ class AlertsById(object):
         self._alerts = None
         self._logalerts = None
         self._batch_jobs = None
-        self._budgets = None
+        self._billing_budgets = None
         self._data_source_instance_alert_settings = None
         self._billing_alerts_map = None
         self._service_checkpoints = None
@@ -134,8 +134,8 @@ class AlertsById(object):
             self.logalerts = logalerts
         if batch_jobs is not None:
             self.batch_jobs = batch_jobs
-        if budgets is not None:
-            self.budgets = budgets
+        if billing_budgets is not None:
+            self.billing_budgets = billing_budgets
         if data_source_instance_alert_settings is not None:
             self.data_source_instance_alert_settings = data_source_instance_alert_settings
         if billing_alerts_map is not None:
@@ -484,25 +484,25 @@ class AlertsById(object):
         self._batch_jobs = batch_jobs
 
     @property
-    def budgets(self):
-        """Gets the budgets of this AlertsById.  # noqa: E501
+    def billing_budgets(self):
+        """Gets the billing_budgets of this AlertsById.  # noqa: E501
 
 
-        :return: The budgets of this AlertsById.  # noqa: E501
+        :return: The billing_budgets of this AlertsById.  # noqa: E501
         :rtype: dict(str, AlertsModelAndId)
         """
-        return self._budgets
+        return self._billing_budgets
 
-    @budgets.setter
-    def budgets(self, budgets):
-        """Sets the budgets of this AlertsById.
+    @billing_budgets.setter
+    def billing_budgets(self, billing_budgets):
+        """Sets the billing_budgets of this AlertsById.
 
 
-        :param budgets: The budgets of this AlertsById.  # noqa: E501
+        :param billing_budgets: The billing_budgets of this AlertsById.  # noqa: E501
         :type: dict(str, AlertsModelAndId)
         """
 
-        self._budgets = budgets
+        self._billing_budgets = billing_budgets
 
     @property
     def data_source_instance_alert_settings(self):

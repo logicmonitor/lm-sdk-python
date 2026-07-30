@@ -31,10 +31,15 @@ class LogsReport(ReportBase):
     swagger_types = {
         'partitions': 'list[str]',
         'logs_data_type': 'str',
+        'graph_type': 'str',
         'date_range': 'str',
         'timezone': 'str',
         'columns': 'list[RestLogsDynamicColumnV3]',
-        'query': 'str'
+        'query': 'str',
+        'is_visualization_enabled': 'bool',
+        'ordering_config': 'list[OrderingConfig]',
+        'pie_slice_label': 'str',
+        'pie_data_column': 'str'
     }
     if hasattr(ReportBase, "swagger_types"):
         swagger_types.update(ReportBase.swagger_types)
@@ -42,27 +47,39 @@ class LogsReport(ReportBase):
     attribute_map = {
         'partitions': 'partitions',
         'logs_data_type': 'logsDataType',
+        'graph_type': 'graphType',
         'date_range': 'dateRange',
         'timezone': 'timezone',
         'columns': 'columns',
-        'query': 'query'
+        'query': 'query',
+        'is_visualization_enabled': 'isVisualizationEnabled',
+        'ordering_config': 'orderingConfig',
+        'pie_slice_label': 'pieSliceLabel',
+        'pie_data_column': 'pieDataColumn'
     }
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, partitions=None, logs_data_type=None, date_range=None, timezone=None, columns=None, query=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, partitions=None, logs_data_type=None, graph_type=None, date_range=None, timezone=None, columns=None, query=None, is_visualization_enabled=None, ordering_config=None, pie_slice_label=None, pie_data_column=None, *args, **kwargs):  # noqa: E501
         """LogsReport - a model defined in Swagger"""  # noqa: E501
         self._partitions = None
         self._logs_data_type = None
+        self._graph_type = None
         self._date_range = None
         self._timezone = None
         self._columns = None
         self._query = None
+        self._is_visualization_enabled = None
+        self._ordering_config = None
+        self._pie_slice_label = None
+        self._pie_data_column = None
         self.discriminator = None
         if partitions is not None:
             self.partitions = partitions
         if logs_data_type is not None:
             self.logs_data_type = logs_data_type
+        if graph_type is not None:
+            self.graph_type = graph_type
         if date_range is not None:
             self.date_range = date_range
         if timezone is not None:
@@ -71,6 +88,14 @@ class LogsReport(ReportBase):
             self.columns = columns
         if query is not None:
             self.query = query
+        if is_visualization_enabled is not None:
+            self.is_visualization_enabled = is_visualization_enabled
+        if ordering_config is not None:
+            self.ordering_config = ordering_config
+        if pie_slice_label is not None:
+            self.pie_slice_label = pie_slice_label
+        if pie_data_column is not None:
+            self.pie_data_column = pie_data_column
         ReportBase.__init__(self, *args, **kwargs)
 
     @property
@@ -118,6 +143,29 @@ class LogsReport(ReportBase):
         """
 
         self._logs_data_type = logs_data_type
+
+    @property
+    def graph_type(self):
+        """Gets the graph_type of this LogsReport.  # noqa: E501
+
+        The graph type for logs report visualization  # noqa: E501
+
+        :return: The graph_type of this LogsReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._graph_type
+
+    @graph_type.setter
+    def graph_type(self, graph_type):
+        """Sets the graph_type of this LogsReport.
+
+        The graph type for logs report visualization  # noqa: E501
+
+        :param graph_type: The graph_type of this LogsReport.  # noqa: E501
+        :type: str
+        """
+
+        self._graph_type = graph_type
 
     @property
     def date_range(self):
@@ -210,6 +258,98 @@ class LogsReport(ReportBase):
         """
 
         self._query = query
+
+    @property
+    def is_visualization_enabled(self):
+        """Gets the is_visualization_enabled of this LogsReport.  # noqa: E501
+
+        Whether visualization is enabled for the logs report  # noqa: E501
+
+        :return: The is_visualization_enabled of this LogsReport.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_visualization_enabled
+
+    @is_visualization_enabled.setter
+    def is_visualization_enabled(self, is_visualization_enabled):
+        """Sets the is_visualization_enabled of this LogsReport.
+
+        Whether visualization is enabled for the logs report  # noqa: E501
+
+        :param is_visualization_enabled: The is_visualization_enabled of this LogsReport.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_visualization_enabled = is_visualization_enabled
+
+    @property
+    def ordering_config(self):
+        """Gets the ordering_config of this LogsReport.  # noqa: E501
+
+        The ordering configuration for logs report sections  # noqa: E501
+
+        :return: The ordering_config of this LogsReport.  # noqa: E501
+        :rtype: list[OrderingConfig]
+        """
+        return self._ordering_config
+
+    @ordering_config.setter
+    def ordering_config(self, ordering_config):
+        """Sets the ordering_config of this LogsReport.
+
+        The ordering configuration for logs report sections  # noqa: E501
+
+        :param ordering_config: The ordering_config of this LogsReport.  # noqa: E501
+        :type: list[OrderingConfig]
+        """
+
+        self._ordering_config = ordering_config
+
+    @property
+    def pie_slice_label(self):
+        """Gets the pie_slice_label of this LogsReport.  # noqa: E501
+
+        The slice label column used for pie graph type  # noqa: E501
+
+        :return: The pie_slice_label of this LogsReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._pie_slice_label
+
+    @pie_slice_label.setter
+    def pie_slice_label(self, pie_slice_label):
+        """Sets the pie_slice_label of this LogsReport.
+
+        The slice label column used for pie graph type  # noqa: E501
+
+        :param pie_slice_label: The pie_slice_label of this LogsReport.  # noqa: E501
+        :type: str
+        """
+
+        self._pie_slice_label = pie_slice_label
+
+    @property
+    def pie_data_column(self):
+        """Gets the pie_data_column of this LogsReport.  # noqa: E501
+
+        The data column used for pie graph type  # noqa: E501
+
+        :return: The pie_data_column of this LogsReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._pie_data_column
+
+    @pie_data_column.setter
+    def pie_data_column(self, pie_data_column):
+        """Sets the pie_data_column of this LogsReport.
+
+        The data column used for pie graph type  # noqa: E501
+
+        :param pie_data_column: The pie_data_column of this LogsReport.  # noqa: E501
+        :type: str
+        """
+
+        self._pie_data_column = pie_data_column
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -36,7 +36,9 @@ class InterfBandwidthReport(ReportBase):
         'is_base1024': 'bool',
         'top10_only': 'bool',
         'data_format': 'str',
+        'columns': 'list[DynamicColumn]',
         'row_format': 'int',
+        'property_filter_metric': 'ReportPropertyFilterMetricV3',
         'metrics': 'list[Metric]',
         'top_n': 'str'
     }
@@ -51,14 +53,16 @@ class InterfBandwidthReport(ReportBase):
         'is_base1024': 'isBase1024',
         'top10_only': 'top10Only',
         'data_format': 'dataFormat',
+        'columns': 'columns',
         'row_format': 'rowFormat',
+        'property_filter_metric': 'propertyFilterMetric',
         'metrics': 'metrics',
         'top_n': 'topN'
     }
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, hosts_val_type=None, percentile=None, date_range=None, hosts_val=None, is_base1024=None, top10_only=None, data_format=None, row_format=None, metrics=None, top_n=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, hosts_val_type=None, percentile=None, date_range=None, hosts_val=None, is_base1024=None, top10_only=None, data_format=None, columns=None, row_format=None, property_filter_metric=None, metrics=None, top_n=None, *args, **kwargs):  # noqa: E501
         """InterfBandwidthReport - a model defined in Swagger"""  # noqa: E501
         self._hosts_val_type = None
         self._percentile = None
@@ -67,7 +71,9 @@ class InterfBandwidthReport(ReportBase):
         self._is_base1024 = None
         self._top10_only = None
         self._data_format = None
+        self._columns = None
         self._row_format = None
+        self._property_filter_metric = None
         self._metrics = None
         self._top_n = None
         self.discriminator = None
@@ -83,8 +89,12 @@ class InterfBandwidthReport(ReportBase):
         self.top10_only = top10_only
         if data_format is not None:
             self.data_format = data_format
+        if columns is not None:
+            self.columns = columns
         if row_format is not None:
             self.row_format = row_format
+        if property_filter_metric is not None:
+            self.property_filter_metric = property_filter_metric
         self.metrics = metrics
         if top_n is not None:
             self.top_n = top_n
@@ -256,6 +266,29 @@ class InterfBandwidthReport(ReportBase):
         self._data_format = data_format
 
     @property
+    def columns(self):
+        """Gets the columns of this InterfBandwidthReport.  # noqa: E501
+
+        The columns displayed in the report  # noqa: E501
+
+        :return: The columns of this InterfBandwidthReport.  # noqa: E501
+        :rtype: list[DynamicColumn]
+        """
+        return self._columns
+
+    @columns.setter
+    def columns(self, columns):
+        """Sets the columns of this InterfBandwidthReport.
+
+        The columns displayed in the report  # noqa: E501
+
+        :param columns: The columns of this InterfBandwidthReport.  # noqa: E501
+        :type: list[DynamicColumn]
+        """
+
+        self._columns = columns
+
+    @property
     def row_format(self):
         """Gets the row_format of this InterfBandwidthReport.  # noqa: E501
 
@@ -277,6 +310,27 @@ class InterfBandwidthReport(ReportBase):
         """
 
         self._row_format = row_format
+
+    @property
+    def property_filter_metric(self):
+        """Gets the property_filter_metric of this InterfBandwidthReport.  # noqa: E501
+
+
+        :return: The property_filter_metric of this InterfBandwidthReport.  # noqa: E501
+        :rtype: ReportPropertyFilterMetricV3
+        """
+        return self._property_filter_metric
+
+    @property_filter_metric.setter
+    def property_filter_metric(self, property_filter_metric):
+        """Sets the property_filter_metric of this InterfBandwidthReport.
+
+
+        :param property_filter_metric: The property_filter_metric of this InterfBandwidthReport.  # noqa: E501
+        :type: ReportPropertyFilterMetricV3
+        """
+
+        self._property_filter_metric = property_filter_metric
 
     @property
     def metrics(self):

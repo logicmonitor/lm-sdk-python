@@ -37,6 +37,7 @@ class HostMetricsReport(ReportBase):
         'columns': 'list[DynamicColumn]',
         'is_base1024': 'bool',
         'row_format': 'int',
+        'property_filter_metric': 'ReportPropertyFilterMetricV3',
         'metrics': 'list[Metric]',
         'top_n': 'str'
     }
@@ -52,13 +53,14 @@ class HostMetricsReport(ReportBase):
         'columns': 'columns',
         'is_base1024': 'isBase1024',
         'row_format': 'rowFormat',
+        'property_filter_metric': 'propertyFilterMetric',
         'metrics': 'metrics',
         'top_n': 'topN'
     }
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, sorted_by=None, hosts_val_type=None, date_range=None, hosts_val=None, top10_only=None, columns=None, is_base1024=None, row_format=None, metrics=None, top_n=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, sorted_by=None, hosts_val_type=None, date_range=None, hosts_val=None, top10_only=None, columns=None, is_base1024=None, row_format=None, property_filter_metric=None, metrics=None, top_n=None, *args, **kwargs):  # noqa: E501
         """HostMetricsReport - a model defined in Swagger"""  # noqa: E501
         self._sorted_by = None
         self._hosts_val_type = None
@@ -68,6 +70,7 @@ class HostMetricsReport(ReportBase):
         self._columns = None
         self._is_base1024 = None
         self._row_format = None
+        self._property_filter_metric = None
         self._metrics = None
         self._top_n = None
         self.discriminator = None
@@ -82,6 +85,8 @@ class HostMetricsReport(ReportBase):
             self.columns = columns
         self.is_base1024 = is_base1024
         self.row_format = row_format
+        if property_filter_metric is not None:
+            self.property_filter_metric = property_filter_metric
         self.metrics = metrics
         if top_n is not None:
             self.top_n = top_n
@@ -280,6 +285,27 @@ class HostMetricsReport(ReportBase):
             raise ValueError("Invalid value for `row_format`, must not be `None`")  # noqa: E501
 
         self._row_format = row_format
+
+    @property
+    def property_filter_metric(self):
+        """Gets the property_filter_metric of this HostMetricsReport.  # noqa: E501
+
+
+        :return: The property_filter_metric of this HostMetricsReport.  # noqa: E501
+        :rtype: ReportPropertyFilterMetricV3
+        """
+        return self._property_filter_metric
+
+    @property_filter_metric.setter
+    def property_filter_metric(self, property_filter_metric):
+        """Sets the property_filter_metric of this HostMetricsReport.
+
+
+        :param property_filter_metric: The property_filter_metric of this HostMetricsReport.  # noqa: E501
+        :type: ReportPropertyFilterMetricV3
+        """
+
+        self._property_filter_metric = property_filter_metric
 
     @property
     def metrics(self):

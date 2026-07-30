@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **description** | **str** | The description of the AppliesTo Function | [optional] 
 **id** | **int** | The ID of the AppliesTo Function | [optional] 
 **access_group_ids** | **list[int]** | The Access Groups Id&#x27;s | [optional] 
+**is_in_use** | **bool** | Whether the AppliesTo Function is currently in use | [optional] 
 **lineage_id** | **str** | The lineage Id of the LMModule | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

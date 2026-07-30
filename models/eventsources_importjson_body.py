@@ -28,7 +28,7 @@ class EventsourcesImportjsonBody(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'file': 'FormDataContentDisposition'
+        'file': 'str'
     }
 
     attribute_map = {
@@ -48,7 +48,7 @@ class EventsourcesImportjsonBody(object):
 
 
         :return: The file of this EventsourcesImportjsonBody.  # noqa: E501
-        :rtype: FormDataContentDisposition
+        :rtype: str
         """
         return self._file
 
@@ -58,7 +58,7 @@ class EventsourcesImportjsonBody(object):
 
 
         :param file: The file of this EventsourcesImportjsonBody.  # noqa: E501
-        :type: FormDataContentDisposition
+        :type: str
         """
 
         self._file = file

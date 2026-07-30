@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **name** | **str** | The TopologySource name | 
 **id** | **int** | The ID of the LMModule | [optional] 
 **access_group_ids** | **list[int]** | The Access Groups Id&#x27;s | [optional] 
+**is_in_use** | **bool** | Whether the LM module is currently in use | [optional] 
 **group** | **str** | The group the LMModule is in | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

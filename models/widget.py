@@ -81,6 +81,7 @@ class Widget(object):
 'devicesla': 'DeviceSLAWidget',
 'ngraph': 'NormalGraphWidget',
 'CloudRecommendation': 'CloudRecommendation',
+'CloudHealthEventsWidget': 'CloudHealthEventsWidget',
 'ServiceAlert': 'ServiceAlert',
 'BillingWidget': 'BillingWidget',
 'text': 'TextWidget',

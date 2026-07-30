@@ -28,7 +28,7 @@ class ConfigsourcesImportjsonBody(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'file': 'FormDataContentDisposition'
+        'file': 'str'
     }
 
     attribute_map = {
@@ -48,7 +48,7 @@ class ConfigsourcesImportjsonBody(object):
 
 
         :return: The file of this ConfigsourcesImportjsonBody.  # noqa: E501
-        :rtype: FormDataContentDisposition
+        :rtype: str
         """
         return self._file
 
@@ -58,7 +58,7 @@ class ConfigsourcesImportjsonBody(object):
 
 
         :param file: The file of this ConfigsourcesImportjsonBody.  # noqa: E501
-        :type: FormDataContentDisposition
+        :type: str
         """
 
         self._file = file

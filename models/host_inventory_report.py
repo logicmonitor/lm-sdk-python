@@ -32,6 +32,7 @@ class HostInventoryReport(ReportBase):
         'sorted_by': 'str',
         'hosts_val_type': 'str',
         'hosts_val': 'str',
+        'property_filter_metric': 'ReportPropertyFilterMetricV3',
         'metrics': 'list[HostInventoryMetric]',
         'properties': 'list[str]'
     }
@@ -42,17 +43,19 @@ class HostInventoryReport(ReportBase):
         'sorted_by': 'sortedBy',
         'hosts_val_type': 'hostsValType',
         'hosts_val': 'hostsVal',
+        'property_filter_metric': 'propertyFilterMetric',
         'metrics': 'metrics',
         'properties': 'properties'
     }
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, sorted_by=None, hosts_val_type=None, hosts_val=None, metrics=None, properties=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, sorted_by=None, hosts_val_type=None, hosts_val=None, property_filter_metric=None, metrics=None, properties=None, *args, **kwargs):  # noqa: E501
         """HostInventoryReport - a model defined in Swagger"""  # noqa: E501
         self._sorted_by = None
         self._hosts_val_type = None
         self._hosts_val = None
+        self._property_filter_metric = None
         self._metrics = None
         self._properties = None
         self.discriminator = None
@@ -62,6 +65,8 @@ class HostInventoryReport(ReportBase):
             self.hosts_val_type = hosts_val_type
         if hosts_val is not None:
             self.hosts_val = hosts_val
+        if property_filter_metric is not None:
+            self.property_filter_metric = property_filter_metric
         if metrics is not None:
             self.metrics = metrics
         self.properties = properties
@@ -135,6 +140,27 @@ class HostInventoryReport(ReportBase):
         """
 
         self._hosts_val = hosts_val
+
+    @property
+    def property_filter_metric(self):
+        """Gets the property_filter_metric of this HostInventoryReport.  # noqa: E501
+
+
+        :return: The property_filter_metric of this HostInventoryReport.  # noqa: E501
+        :rtype: ReportPropertyFilterMetricV3
+        """
+        return self._property_filter_metric
+
+    @property_filter_metric.setter
+    def property_filter_metric(self, property_filter_metric):
+        """Sets the property_filter_metric of this HostInventoryReport.
+
+
+        :param property_filter_metric: The property_filter_metric of this HostInventoryReport.  # noqa: E501
+        :type: ReportPropertyFilterMetricV3
+        """
+
+        self._property_filter_metric = property_filter_metric
 
     @property
     def metrics(self):

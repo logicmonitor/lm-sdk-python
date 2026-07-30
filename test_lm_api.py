@@ -49,6 +49,20 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_add_action_chain(self):
+        """Test case for add_action_chain
+
+        Add action chain  # noqa: E501
+        """
+        pass
+
+    def test_add_action_rule(self):
+        """Test case for add_action_rule
+
+        Add Action Rule  # noqa: E501
+        """
+        pass
+
     def test_add_admin(self):
         """Test case for add_admin
 
@@ -343,6 +357,20 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_batch_update_collector_agent_log_levels(self):
+        """Test case for batch_update_collector_agent_log_levels
+
+        batch update collector agent log levels  # noqa: E501
+        """
+        pass
+
+    def test_calculate_sizing(self):
+        """Test case for calculate_sizing
+
+        Calculate collector sizing recommendations  # noqa: E501
+        """
+        pass
+
     def test_collect_device_config_source_config(self):
         """Test case for collect_device_config_source_config
 
@@ -368,6 +396,20 @@ class TestLMApi(unittest.TestCase):
         """Test case for delete_access_group
 
         Delete access group  # noqa: E501
+        """
+        pass
+
+    def test_delete_action_chain_by_id(self):
+        """Test case for delete_action_chain_by_id
+
+        delete action chain   # noqa: E501
+        """
+        pass
+
+    def test_delete_action_rule_by_id(self):
+        """Test case for delete_action_rule_by_id
+
+        delete action rule  # noqa: E501
         """
         pass
 
@@ -721,6 +763,41 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_action_chain_by_id(self):
+        """Test case for get_action_chain_by_id
+
+        Get action chain by ID  # noqa: E501
+        """
+        pass
+
+    def test_get_action_chains_list(self):
+        """Test case for get_action_chains_list
+
+        Get action chains list  # noqa: E501
+        """
+        pass
+
+    def test_get_action_rule_by_id(self):
+        """Test case for get_action_rule_by_id
+
+        get action rule  # noqa: E501
+        """
+        pass
+
+    def test_get_action_rule_status_by_id(self):
+        """Test case for get_action_rule_status_by_id
+
+        get action rule status  # noqa: E501
+        """
+        pass
+
+    def test_get_action_rules_list(self):
+        """Test case for get_action_rules_list
+
+        Get action rules list  # noqa: E501
+        """
+        pass
+
     def test_get_admin_by_id(self):
         """Test case for get_admin_by_id
 
@@ -882,6 +959,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_collector_download_token_by_id(self):
+        """Test case for get_collector_download_token_by_id
+
+        get collector download token  # noqa: E501
+        """
+        pass
+
     def test_get_collector_events(self):
         """Test case for get_collector_events
 
@@ -917,6 +1001,20 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_collector_log_file_by_name(self):
+        """Test case for get_collector_log_file_by_name
+
+        get collector log file  # noqa: E501
+        """
+        pass
+
+    def test_get_collector_log_files(self):
+        """Test case for get_collector_log_files
+
+        get collector log files  # noqa: E501
+        """
+        pass
+
     def test_get_collector_status_check(self):
         """Test case for get_collector_status_check
 
@@ -924,10 +1022,24 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_collector_upgrade_history(self):
+        """Test case for get_collector_upgrade_history
+
+        get collector upgrade history list  # noqa: E501
+        """
+        pass
+
     def test_get_collector_version_list(self):
         """Test case for get_collector_version_list
 
         get collector version list  # noqa: E501
+        """
+        pass
+
+    def test_get_collectors_by_group_id(self):
+        """Test case for get_collectors_by_group_id
+
+        get collectors by collector group id  # noqa: E501
         """
         pass
 
@@ -1260,6 +1372,20 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_get_diagnostic_remediation_assigned_sources(self):
+        """Test case for get_diagnostic_remediation_assigned_sources
+
+        List assigned diagnostic and remediation exchange modules  # noqa: E501
+        """
+        pass
+
+    def test_get_diagnostic_remediation_execution_results(self):
+        """Test case for get_diagnostic_remediation_execution_results
+
+        Get diagnostic and remediation execution results (canonical)  # noqa: E501
+        """
+        pass
+
     def test_get_diagnostic_sources_by_id(self):
         """Test case for get_diagnostic_sources_by_id
 
@@ -1306,6 +1432,13 @@ class TestLMApi(unittest.TestCase):
         """Test case for get_external_api_stats
 
         get external api stats info  # noqa: E501
+        """
+        pass
+
+    def test_get_focus_cost_usage(self):
+        """Test case for get_focus_cost_usage
+
+        FOCUS Cost and Usage shaped usage export  # noqa: E501
         """
         pass
 
@@ -1897,6 +2030,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_import_log_query_groups(self):
+        """Test case for import_log_query_groups
+
+        Import log query groups and queries (best-effort)  # noqa: E501
+        """
+        pass
+
     def test_import_log_source_json(self):
         """Test case for import_log_source_json
 
@@ -1953,6 +2093,27 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_patch_action_chain_by_id(self):
+        """Test case for patch_action_chain_by_id
+
+        update action chain  # noqa: E501
+        """
+        pass
+
+    def test_patch_action_rule_by_id(self):
+        """Test case for patch_action_rule_by_id
+
+        update action rule  # noqa: E501
+        """
+        pass
+
+    def test_patch_action_rule_status_by_id(self):
+        """Test case for patch_action_rule_status_by_id
+
+        enable/disable action rule  # noqa: E501
+        """
+        pass
+
     def test_patch_admin_by_id(self):
         """Test case for patch_admin_by_id
 
@@ -1978,13 +2139,6 @@ class TestLMApi(unittest.TestCase):
         """Test case for patch_applies_to_function
 
         Update applies to function  # noqa: E501
-        """
-        pass
-
-    def test_patch_collector_agent_log_level(self):
-        """Test case for patch_collector_agent_log_level
-
-        update collector agent log level  # noqa: E501
         """
         pass
 
@@ -2275,6 +2429,13 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_restart_collector_by_id(self):
+        """Test case for restart_collector_by_id
+
+        restart collector  # noqa: E501
+        """
+        pass
+
     def test_schedule_auto_discovery_by_device_id(self):
         """Test case for schedule_auto_discovery_by_device_id
 
@@ -2310,10 +2471,38 @@ class TestLMApi(unittest.TestCase):
         """
         pass
 
+    def test_trigger_collector_status_check(self):
+        """Test case for trigger_collector_status_check
+
+        trigger collector status check  # noqa: E501
+        """
+        pass
+
     def test_update_access_group(self):
         """Test case for update_access_group
 
         Update access group  # noqa: E501
+        """
+        pass
+
+    def test_update_action_chain_by_id(self):
+        """Test case for update_action_chain_by_id
+
+        update action chain  # noqa: E501
+        """
+        pass
+
+    def test_update_action_rule_by_id(self):
+        """Test case for update_action_rule_by_id
+
+        update action rule  # noqa: E501
+        """
+        pass
+
+    def test_update_action_rule_status_by_id(self):
+        """Test case for update_action_rule_status_by_id
+
+        enable/disable action rule  # noqa: E501
         """
         pass
 
@@ -2342,13 +2531,6 @@ class TestLMApi(unittest.TestCase):
         """Test case for update_applies_to_function
 
         Update applies to function  # noqa: E501
-        """
-        pass
-
-    def test_update_collector_agent_log_level(self):
-        """Test case for update_collector_agent_log_level
-
-        update collector agent log level  # noqa: E501
         """
         pass
 

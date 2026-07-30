@@ -53,6 +53,7 @@ class ConfigSource(object):
         'collect_interval': 'int',
         'name': 'str',
         'timestamp_format': 'str',
+        'is_in_use': 'bool',
         'file_format': 'str'
     }
 
@@ -82,10 +83,11 @@ class ConfigSource(object):
         'collect_interval': 'collectInterval',
         'name': 'name',
         'timestamp_format': 'timestampFormat',
+        'is_in_use': 'isInUse',
         'file_format': 'fileFormat'
     }
 
-    def __init__(self, access_groups=None, display_name=None, description=None, applies_to=None, lineage_id=None, collect_method=None, origin_registry_id=None, checksum=None, id=None, access_group_ids=None, group=None, collector_attribute=None, auto_discovery_config=None, ad_parameters=None, config_checks=None, enable_auto_discovery=None, technology=None, version=None, tags=None, audit_version=None, has_multi_instances=None, installation_metadata=None, collect_interval=None, name=None, timestamp_format=None, file_format=None):  # noqa: E501
+    def __init__(self, access_groups=None, display_name=None, description=None, applies_to=None, lineage_id=None, collect_method=None, origin_registry_id=None, checksum=None, id=None, access_group_ids=None, group=None, collector_attribute=None, auto_discovery_config=None, ad_parameters=None, config_checks=None, enable_auto_discovery=None, technology=None, version=None, tags=None, audit_version=None, has_multi_instances=None, installation_metadata=None, collect_interval=None, name=None, timestamp_format=None, is_in_use=None, file_format=None):  # noqa: E501
         """ConfigSource - a model defined in Swagger"""  # noqa: E501
         self._access_groups = None
         self._display_name = None
@@ -112,6 +114,7 @@ class ConfigSource(object):
         self._collect_interval = None
         self._name = None
         self._timestamp_format = None
+        self._is_in_use = None
         self._file_format = None
         self.discriminator = None
         if access_groups is not None:
@@ -164,6 +167,8 @@ class ConfigSource(object):
             self.name = name
         if timestamp_format is not None:
             self.timestamp_format = timestamp_format
+        if is_in_use is not None:
+            self.is_in_use = is_in_use
         if file_format is not None:
             self.file_format = file_format
 
@@ -733,6 +738,29 @@ class ConfigSource(object):
         """
 
         self._timestamp_format = timestamp_format
+
+    @property
+    def is_in_use(self):
+        """Gets the is_in_use of this ConfigSource.  # noqa: E501
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :return: The is_in_use of this ConfigSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_in_use
+
+    @is_in_use.setter
+    def is_in_use(self, is_in_use):
+        """Sets the is_in_use of this ConfigSource.
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :param is_in_use: The is_in_use of this ConfigSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_in_use = is_in_use
 
     @property
     def file_format(self):

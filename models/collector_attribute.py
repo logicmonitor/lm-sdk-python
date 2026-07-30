@@ -37,6 +37,7 @@ class CollectorAttribute(object):
 
     discriminator_value_class_map = {
           'AzureExpressRouteCircuitPeeringCollectorAttributeV3': 'AzureExpressRouteCircuitPeeringCollectorAttributeV3',
+'AzureEnterpriseAppSecretCollectorAttribute': 'AzureEnterpriseAppSecretCollectorAttribute',
 'AzureRecoveryServicesVaultAgentsCollectorAttribute': 'AzureRecoveryServicesVaultAgentsCollectorAttribute',
 'AzureReplicationDisasterRecoveryCollectorAttribute': 'AzureReplicationDisasterRecoveryCollectorAttribute',
 'AzureRecoveryServiceRTOCollectorAttribute': 'AzureRecoveryServiceRTOCollectorAttribute',

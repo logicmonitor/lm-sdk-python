@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **monitored_object_groups** | **str** | The resource groups selected for the report filter | [optional] 
 **ack_filter** | **str** | Filter by acknowledgement status: all, acked, or nonacked. | [optional] 
 **dependency_routing_state** | **str** |  | [optional] 
+**is_escalation** | **str** | all | yes | no all: alerts that are escalated and not escalated that meet the report criteria will be displayed yes: only alerts that have been escalated that meet the report criteria will be displayed no: only alerts that have not been escalated that meet the report criteria will be displayed | [optional] 
 **dependency_role** | **str** |  | [optional] 
 **clear_filter** | **str** | yes: Only cleared alerts will be included in the response. no: only active alerts will be included in the response. all: both active and cleared alerts will be included in the response | [optional] 
 **host** | **str** | Filter to restrict the report to a specific device. Glob expressions are supported. | [optional] 

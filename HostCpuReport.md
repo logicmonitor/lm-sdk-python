@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **hosts_val** | **str** | The groups selected for the report, where multiple devices are separated by commas | 
 **top10_only** | **bool** | true | false false: CPU metrics will be displayed for all selected devices or groups true: CPU metrics will only be displayed for the top ten device or groupsThis field is deprecated, use topN field for more flexible top N selection | [optional] 
 **columns** | [**list[DynamicColumn]**](DynamicColumn.md) | Custom resource properties to include as additional columns. Note: default Host CPU columns (Resource, Min(%), Max(%), Average(%)) are always included in the report | [optional] 
+**property_filter_metric** | [**ReportPropertyFilterMetricV3**](ReportPropertyFilterMetricV3.md) |  | [optional] 
 **top_n** | **str** | Top N selection : 5|10|25|50|100|all | [optional] 
 **display_graphs** | **bool** | true | false. Whether or not CPU graphs should be displayed at the end of the report | [optional] 
 

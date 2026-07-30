@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **diagnostics** | [**ArrayNode**](ArrayNode.md) |  | [optional] 
 **suppressed_warnings** | [**ArrayNode**](ArrayNode.md) |  | [optional] 
+**preserve_insertion_order** | **bool** |  | [optional] 
 **data** | [**ObjectNode**](ObjectNode.md) |  | [optional] 
 **suppressed_errors** | [**ArrayNode**](ArrayNode.md) |  | [optional] 
 **successes** | [**ArrayNode**](ArrayNode.md) |  | [optional] 

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **sorted_by** | **str** | Specify a property that is included in the &#x27;properties&#x27; list that should be used to sort the devices/groups displayed in the report | [optional] 
 **hosts_val_type** | **str** | host | group. The type of entities specified in the hostsVal field | [optional] 
 **hosts_val** | **str** | The devices OR groups (full path) selected for the report, where multiple entities are separated by commas | [optional] 
+**property_filter_metric** | [**ReportPropertyFilterMetricV3**](ReportPropertyFilterMetricV3.md) |  | [optional] 
 **metrics** | [**list[HostInventoryMetric]**](HostInventoryMetric.md) | The instances will be included in the report | [optional] 
 **properties** | **list[str]** | The properties that should be displayed in the report | 
 

@@ -28,7 +28,7 @@ class BatchjobsImportxmlBody(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'file': 'FormDataContentDisposition'
+        'file': 'str'
     }
 
     attribute_map = {
@@ -47,7 +47,7 @@ class BatchjobsImportxmlBody(object):
 
 
         :return: The file of this BatchjobsImportxmlBody.  # noqa: E501
-        :rtype: FormDataContentDisposition
+        :rtype: str
         """
         return self._file
 
@@ -57,7 +57,7 @@ class BatchjobsImportxmlBody(object):
 
 
         :param file: The file of this BatchjobsImportxmlBody.  # noqa: E501
-        :type: FormDataContentDisposition
+        :type: str
         """
         if file is None:
             raise ValueError("Invalid value for `file`, must not be `None`")  # noqa: E501

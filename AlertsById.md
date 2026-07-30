@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **alerts** | [**dict(str, Alert)**](Alert.md) |  | [optional] 
 **logalerts** | [**dict(str, AlertsModelAndId)**](AlertsModelAndId.md) |  | [optional] 
 **batch_jobs** | [**dict(str, AlertsModelAndId)**](AlertsModelAndId.md) |  | [optional] 
-**budgets** | [**dict(str, AlertsModelAndId)**](AlertsModelAndId.md) |  | [optional] 
+**billing_budgets** | [**dict(str, AlertsModelAndId)**](AlertsModelAndId.md) |  | [optional] 
 **data_source_instance_alert_settings** | [**dict(str, AlertsModelAndId)**](AlertsModelAndId.md) |  | [optional] 
 **billing_alerts_map** | [**dict(str, AlertsModelAndId)**](AlertsModelAndId.md) |  | [optional] 
 **service_checkpoints** | [**dict(str, AlertsModelAndId)**](AlertsModelAndId.md) |  | [optional] 

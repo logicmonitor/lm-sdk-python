@@ -37,6 +37,7 @@ class AppliesToFunction(object):
         'description': 'str',
         'id': 'int',
         'access_group_ids': 'list[int]',
+        'is_in_use': 'bool',
         'lineage_id': 'str'
     }
 
@@ -50,10 +51,11 @@ class AppliesToFunction(object):
         'description': 'description',
         'id': 'id',
         'access_group_ids': 'accessGroupIds',
+        'is_in_use': 'isInUse',
         'lineage_id': 'lineageId'
     }
 
-    def __init__(self, installation_metadata=None, code=None, access_groups=None, origin_registry_id=None, name=None, checksum=None, description=None, id=None, access_group_ids=None, lineage_id=None):  # noqa: E501
+    def __init__(self, installation_metadata=None, code=None, access_groups=None, origin_registry_id=None, name=None, checksum=None, description=None, id=None, access_group_ids=None, is_in_use=None, lineage_id=None):  # noqa: E501
         """AppliesToFunction - a model defined in Swagger"""  # noqa: E501
         self._installation_metadata = None
         self._code = None
@@ -64,6 +66,7 @@ class AppliesToFunction(object):
         self._description = None
         self._id = None
         self._access_group_ids = None
+        self._is_in_use = None
         self._lineage_id = None
         self.discriminator = None
         if installation_metadata is not None:
@@ -82,6 +85,8 @@ class AppliesToFunction(object):
             self.id = id
         if access_group_ids is not None:
             self.access_group_ids = access_group_ids
+        if is_in_use is not None:
+            self.is_in_use = is_in_use
         if lineage_id is not None:
             self.lineage_id = lineage_id
 
@@ -293,6 +298,29 @@ class AppliesToFunction(object):
         """
 
         self._access_group_ids = access_group_ids
+
+    @property
+    def is_in_use(self):
+        """Gets the is_in_use of this AppliesToFunction.  # noqa: E501
+
+        Whether the AppliesTo Function is currently in use  # noqa: E501
+
+        :return: The is_in_use of this AppliesToFunction.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_in_use
+
+    @is_in_use.setter
+    def is_in_use(self, is_in_use):
+        """Sets the is_in_use of this AppliesToFunction.
+
+        Whether the AppliesTo Function is currently in use  # noqa: E501
+
+        :param is_in_use: The is_in_use of this AppliesToFunction.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_in_use = is_in_use
 
     @property
     def lineage_id(self):

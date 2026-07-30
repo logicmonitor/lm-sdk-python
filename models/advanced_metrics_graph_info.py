@@ -35,7 +35,8 @@ class AdvancedMetricsGraphInfo(object):
         'visualization_type': 'str',
         'query_filters': 'list[dict(str, object)]',
         'visualization_details': 'JSONObject',
-        'query_functions': 'list[dict(str, object)]'
+        'query_functions': 'list[dict(str, object)]',
+        'query_type': 'str'
     }
 
     attribute_map = {
@@ -46,7 +47,8 @@ class AdvancedMetricsGraphInfo(object):
         'visualization_type': 'visualizationType',
         'query_filters': 'queryFilters',
         'visualization_details': 'visualizationDetails',
-        'query_functions': 'queryFunctions'
+        'query_functions': 'queryFunctions',
+        'query_type': 'queryType'
     }
 
     discriminator_value_class_map = {
@@ -57,7 +59,7 @@ class AdvancedMetricsGraphInfo(object):
 'AdvanceMetricsGaugeInfo': 'AdvanceMetricsGaugeInfo',
 'AdvanceMetricsBarGraphInfo': 'AdvanceMetricsBarGraphInfo'    }
 
-    def __init__(self, query_time_selectors=None, legend=None, query=None, lm_query_type_preset=None, visualization_type=None, query_filters=None, visualization_details=None, query_functions=None):  # noqa: E501
+    def __init__(self, query_time_selectors=None, legend=None, query=None, lm_query_type_preset=None, visualization_type=None, query_filters=None, visualization_details=None, query_functions=None, query_type=None):  # noqa: E501
         """AdvancedMetricsGraphInfo - a model defined in Swagger"""  # noqa: E501
         self._query_time_selectors = None
         self._legend = None
@@ -67,6 +69,7 @@ class AdvancedMetricsGraphInfo(object):
         self._query_filters = None
         self._visualization_details = None
         self._query_functions = None
+        self._query_type = None
         self.discriminator = 'visualization_type'
         if query_time_selectors is not None:
             self.query_time_selectors = query_time_selectors
@@ -84,6 +87,8 @@ class AdvancedMetricsGraphInfo(object):
             self.visualization_details = visualization_details
         if query_functions is not None:
             self.query_functions = query_functions
+        if query_type is not None:
+            self.query_type = query_type
 
     @property
     def query_time_selectors(self):
@@ -260,6 +265,35 @@ class AdvancedMetricsGraphInfo(object):
         """
 
         self._query_functions = query_functions
+
+    @property
+    def query_type(self):
+        """Gets the query_type of this AdvancedMetricsGraphInfo.  # noqa: E501
+
+        Query type for advanced metrics. Defaults to LMQL for backward compatibility.  # noqa: E501
+
+        :return: The query_type of this AdvancedMetricsGraphInfo.  # noqa: E501
+        :rtype: str
+        """
+        return self._query_type
+
+    @query_type.setter
+    def query_type(self, query_type):
+        """Sets the query_type of this AdvancedMetricsGraphInfo.
+
+        Query type for advanced metrics. Defaults to LMQL for backward compatibility.  # noqa: E501
+
+        :param query_type: The query_type of this AdvancedMetricsGraphInfo.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["lmql", "otlp"]  # noqa: E501
+        if query_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `query_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(query_type, allowed_values)
+            )
+
+        self._query_type = query_type
 
     def get_real_child_model(self, data):
         """Returns the real base class specified by the discriminator"""

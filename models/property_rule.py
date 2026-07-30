@@ -52,6 +52,7 @@ class PropertyRule(object):
         'script_type': 'str',
         'name': 'str',
         'interval': 'int',
+        'is_in_use': 'bool',
         'linux_script': 'str'
     }
 
@@ -80,10 +81,11 @@ class PropertyRule(object):
         'script_type': 'scriptType',
         'name': 'name',
         'interval': 'interval',
+        'is_in_use': 'isInUse',
         'linux_script': 'linuxScript'
     }
 
-    def __init__(self, schedule_option=None, groovy_script=None, access_groups=None, description=None, applies_to=None, linux_cmdline=None, lineage_id=None, origin_registry_id=None, checksum=None, id=None, access_group_ids=None, group=None, windows_script=None, data_type=None, technology=None, params=None, version=None, windows_cmdline=None, tags=None, audit_version=None, installation_metadata=None, script_type=None, name=None, interval=None, linux_script=None):  # noqa: E501
+    def __init__(self, schedule_option=None, groovy_script=None, access_groups=None, description=None, applies_to=None, linux_cmdline=None, lineage_id=None, origin_registry_id=None, checksum=None, id=None, access_group_ids=None, group=None, windows_script=None, data_type=None, technology=None, params=None, version=None, windows_cmdline=None, tags=None, audit_version=None, installation_metadata=None, script_type=None, name=None, interval=None, is_in_use=None, linux_script=None):  # noqa: E501
         """PropertyRule - a model defined in Swagger"""  # noqa: E501
         self._schedule_option = None
         self._groovy_script = None
@@ -109,6 +111,7 @@ class PropertyRule(object):
         self._script_type = None
         self._name = None
         self._interval = None
+        self._is_in_use = None
         self._linux_script = None
         self.discriminator = None
         if schedule_option is not None:
@@ -159,6 +162,8 @@ class PropertyRule(object):
             self.name = name
         if interval is not None:
             self.interval = interval
+        if is_in_use is not None:
+            self.is_in_use = is_in_use
         if linux_script is not None:
             self.linux_script = linux_script
 
@@ -707,6 +712,29 @@ class PropertyRule(object):
         """
 
         self._interval = interval
+
+    @property
+    def is_in_use(self):
+        """Gets the is_in_use of this PropertyRule.  # noqa: E501
+
+        Whether the PropertySource is currently in use  # noqa: E501
+
+        :return: The is_in_use of this PropertyRule.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_in_use
+
+    @is_in_use.setter
+    def is_in_use(self, is_in_use):
+        """Sets the is_in_use of this PropertyRule.
+
+        Whether the PropertySource is currently in use  # noqa: E501
+
+        :param is_in_use: The is_in_use of this PropertyRule.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_in_use = is_in_use
 
     @property
     def linux_script(self):

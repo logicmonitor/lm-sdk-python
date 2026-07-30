@@ -42,9 +42,9 @@ class DiagnosticsSource(object):
         'script_type': 'str',
         'checksum': 'str',
         'name': 'str',
-        'in_use': 'str',
         'id': 'int',
         'access_group_ids': 'list[int]',
+        'is_in_use': 'bool',
         'installation_statuses': 'list[str]',
         'group': 'str'
     }
@@ -64,14 +64,14 @@ class DiagnosticsSource(object):
         'script_type': 'scriptType',
         'checksum': 'checksum',
         'name': 'name',
-        'in_use': 'inUse',
         'id': 'id',
         'access_group_ids': 'accessGroupIds',
+        'is_in_use': 'isInUse',
         'installation_statuses': 'installationStatuses',
         'group': 'group'
     }
 
-    def __init__(self, access_groups=None, groovy_script=None, data_type=None, description=None, applies_to=None, technology=None, source=None, lineage_id=None, tags=None, installation_metadata=None, origin_registry_id=None, script_type=None, checksum=None, name=None, in_use=None, id=None, access_group_ids=None, installation_statuses=None, group=None):  # noqa: E501
+    def __init__(self, access_groups=None, groovy_script=None, data_type=None, description=None, applies_to=None, technology=None, source=None, lineage_id=None, tags=None, installation_metadata=None, origin_registry_id=None, script_type=None, checksum=None, name=None, id=None, access_group_ids=None, is_in_use=None, installation_statuses=None, group=None):  # noqa: E501
         """DiagnosticsSource - a model defined in Swagger"""  # noqa: E501
         self._access_groups = None
         self._groovy_script = None
@@ -87,9 +87,9 @@ class DiagnosticsSource(object):
         self._script_type = None
         self._checksum = None
         self._name = None
-        self._in_use = None
         self._id = None
         self._access_group_ids = None
+        self._is_in_use = None
         self._installation_statuses = None
         self._group = None
         self.discriminator = None
@@ -121,12 +121,12 @@ class DiagnosticsSource(object):
             self.checksum = checksum
         if name is not None:
             self.name = name
-        if in_use is not None:
-            self.in_use = in_use
         if id is not None:
             self.id = id
         if access_group_ids is not None:
             self.access_group_ids = access_group_ids
+        if is_in_use is not None:
+            self.is_in_use = is_in_use
         if installation_statuses is not None:
             self.installation_statuses = installation_statuses
         if group is not None:
@@ -453,29 +453,6 @@ class DiagnosticsSource(object):
         self._name = name
 
     @property
-    def in_use(self):
-        """Gets the in_use of this DiagnosticsSource.  # noqa: E501
-
-        The diagnostics source is in use  # noqa: E501
-
-        :return: The in_use of this DiagnosticsSource.  # noqa: E501
-        :rtype: str
-        """
-        return self._in_use
-
-    @in_use.setter
-    def in_use(self, in_use):
-        """Sets the in_use of this DiagnosticsSource.
-
-        The diagnostics source is in use  # noqa: E501
-
-        :param in_use: The in_use of this DiagnosticsSource.  # noqa: E501
-        :type: str
-        """
-
-        self._in_use = in_use
-
-    @property
     def id(self):
         """Gets the id of this DiagnosticsSource.  # noqa: E501
 
@@ -520,6 +497,29 @@ class DiagnosticsSource(object):
         """
 
         self._access_group_ids = access_group_ids
+
+    @property
+    def is_in_use(self):
+        """Gets the is_in_use of this DiagnosticsSource.  # noqa: E501
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :return: The is_in_use of this DiagnosticsSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_in_use
+
+    @is_in_use.setter
+    def is_in_use(self, is_in_use):
+        """Sets the is_in_use of this DiagnosticsSource.
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :param is_in_use: The is_in_use of this DiagnosticsSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_in_use = is_in_use
 
     @property
     def installation_statuses(self):

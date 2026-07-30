@@ -17,9 +17,9 @@ Name | Type | Description | Notes
 **script_type** | **str** | script type: groovy | powershell | [optional] 
 **checksum** | **str** | The metadata checksum for the LMModule content | [optional] 
 **name** | **str** | The diagnostics source name | [optional] 
-**in_use** | **str** | The diagnostics source is in use | [optional] 
 **id** | **int** | The ID of the LMModule | [optional] 
 **access_group_ids** | **list[int]** | The Access Groups Id&#x27;s | [optional] 
+**is_in_use** | **bool** | Whether the LM module is currently in use | [optional] 
 **installation_statuses** | **list[str]** | The diagnostics Installation status | [optional] 
 **group** | **str** | The group the LMModule is in | [optional] 
 

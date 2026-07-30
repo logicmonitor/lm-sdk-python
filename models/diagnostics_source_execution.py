@@ -28,27 +28,32 @@ class DiagnosticsSourceExecution(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'output': 'str',
         'execution_id': 'str',
         'diagnostic_id': 'int',
         'execution_status': 'str',
         'host_id': 'int',
         'alert_id': 'str',
         'trigger_type': 'str',
-        'host_diagnostic_source_id': 'int'
+        'host_diagnostic_source_id': 'int',
+        'include_output': 'bool'
     }
 
     attribute_map = {
+        'output': 'output',
         'execution_id': 'executionId',
         'diagnostic_id': 'diagnosticId',
         'execution_status': 'executionStatus',
         'host_id': 'hostId',
         'alert_id': 'alertId',
         'trigger_type': 'triggerType',
-        'host_diagnostic_source_id': 'hostDiagnosticSourceId'
+        'host_diagnostic_source_id': 'hostDiagnosticSourceId',
+        'include_output': 'includeOutput'
     }
 
-    def __init__(self, execution_id=None, diagnostic_id=None, execution_status=None, host_id=None, alert_id=None, trigger_type=None, host_diagnostic_source_id=None):  # noqa: E501
+    def __init__(self, output=None, execution_id=None, diagnostic_id=None, execution_status=None, host_id=None, alert_id=None, trigger_type=None, host_diagnostic_source_id=None, include_output=None):  # noqa: E501
         """DiagnosticsSourceExecution - a model defined in Swagger"""  # noqa: E501
+        self._output = None
         self._execution_id = None
         self._diagnostic_id = None
         self._execution_status = None
@@ -56,7 +61,10 @@ class DiagnosticsSourceExecution(object):
         self._alert_id = None
         self._trigger_type = None
         self._host_diagnostic_source_id = None
+        self._include_output = None
         self.discriminator = None
+        if output is not None:
+            self.output = output
         if execution_id is not None:
             self.execution_id = execution_id
         self.diagnostic_id = diagnostic_id
@@ -66,6 +74,31 @@ class DiagnosticsSourceExecution(object):
             self.alert_id = alert_id
         self.trigger_type = trigger_type
         self.host_diagnostic_source_id = host_diagnostic_source_id
+        if include_output is not None:
+            self.include_output = include_output
+
+    @property
+    def output(self):
+        """Gets the output of this DiagnosticsSourceExecution.  # noqa: E501
+
+        Script output when includeOutput is true and execution has completed  # noqa: E501
+
+        :return: The output of this DiagnosticsSourceExecution.  # noqa: E501
+        :rtype: str
+        """
+        return self._output
+
+    @output.setter
+    def output(self, output):
+        """Sets the output of this DiagnosticsSourceExecution.
+
+        Script output when includeOutput is true and execution has completed  # noqa: E501
+
+        :param output: The output of this DiagnosticsSourceExecution.  # noqa: E501
+        :type: str
+        """
+
+        self._output = output
 
     @property
     def execution_id(self):
@@ -237,6 +270,29 @@ class DiagnosticsSourceExecution(object):
             raise ValueError("Invalid value for `host_diagnostic_source_id`, must not be `None`")  # noqa: E501
 
         self._host_diagnostic_source_id = host_diagnostic_source_id
+
+    @property
+    def include_output(self):
+        """Gets the include_output of this DiagnosticsSourceExecution.  # noqa: E501
+
+        When true, the API waits for execution to finish and returns script output in the response  # noqa: E501
+
+        :return: The include_output of this DiagnosticsSourceExecution.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_output
+
+    @include_output.setter
+    def include_output(self, include_output):
+        """Sets the include_output of this DiagnosticsSourceExecution.
+
+        When true, the API waits for execution to finish and returns script output in the response  # noqa: E501
+
+        :param include_output: The include_output of this DiagnosticsSourceExecution.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_output = include_output
 
     def to_dict(self):
         """Returns the model properties as a dict"""

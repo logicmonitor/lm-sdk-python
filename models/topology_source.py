@@ -45,6 +45,7 @@ class TopologySource(object):
         'name': 'str',
         'id': 'int',
         'access_group_ids': 'list[int]',
+        'is_in_use': 'bool',
         'group': 'str'
     }
 
@@ -66,10 +67,11 @@ class TopologySource(object):
         'name': 'name',
         'id': 'id',
         'access_group_ids': 'accessGroupIds',
+        'is_in_use': 'isInUse',
         'group': 'group'
     }
 
-    def __init__(self, collector_attribute=None, collection_method=None, access_groups=None, description=None, applies_to=None, technology=None, version=None, lineage_id=None, tags=None, audit_version=None, installation_metadata=None, collect_interval=None, origin_registry_id=None, checksum=None, name=None, id=None, access_group_ids=None, group=None):  # noqa: E501
+    def __init__(self, collector_attribute=None, collection_method=None, access_groups=None, description=None, applies_to=None, technology=None, version=None, lineage_id=None, tags=None, audit_version=None, installation_metadata=None, collect_interval=None, origin_registry_id=None, checksum=None, name=None, id=None, access_group_ids=None, is_in_use=None, group=None):  # noqa: E501
         """TopologySource - a model defined in Swagger"""  # noqa: E501
         self._collector_attribute = None
         self._collection_method = None
@@ -88,6 +90,7 @@ class TopologySource(object):
         self._name = None
         self._id = None
         self._access_group_ids = None
+        self._is_in_use = None
         self._group = None
         self.discriminator = None
         self.collector_attribute = collector_attribute
@@ -121,6 +124,8 @@ class TopologySource(object):
             self.id = id
         if access_group_ids is not None:
             self.access_group_ids = access_group_ids
+        if is_in_use is not None:
+            self.is_in_use = is_in_use
         if group is not None:
             self.group = group
 
@@ -522,6 +527,29 @@ class TopologySource(object):
         """
 
         self._access_group_ids = access_group_ids
+
+    @property
+    def is_in_use(self):
+        """Gets the is_in_use of this TopologySource.  # noqa: E501
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :return: The is_in_use of this TopologySource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_in_use
+
+    @is_in_use.setter
+    def is_in_use(self, is_in_use):
+        """Sets the is_in_use of this TopologySource.
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :param is_in_use: The is_in_use of this TopologySource.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_in_use = is_in_use
 
     @property
     def group(self):

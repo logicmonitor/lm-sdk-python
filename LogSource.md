@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **collection_method** | **str** |  | [optional] 
 **applies_to_script** | **str** | The appliesToScript | [optional] 
 **resource_mapping** | [**list[RestLogSourceResourceMappingV3]**](RestLogSourceResourceMappingV3.md) | resource mapping | [optional] 
+**sensitive_data_masking_rules** | [**list[LogSourceSensitiveDataMaskingRule]**](LogSourceSensitiveDataMaskingRule.md) |  | [optional] 
 **access_groups** | [**list[AccessGroup]**](AccessGroup.md) | Module&#x27;s access groups | [optional] 
 **collection_attribute** | **object** | collectionAttribute | [optional] 
 **changelogs** | [**list[UpdateReasons]**](UpdateReasons.md) |  | [optional] 
@@ -21,6 +22,7 @@ Name | Type | Description | Notes
 **name** | **str** | The log source name | [optional] 
 **id** | **int** | The ID of the LMModule | [optional] 
 **access_group_ids** | **list[int]** | The Access Groups Id&#x27;s | [optional] 
+**is_in_use** | **bool** | Whether the LM module is currently in use | [optional] 
 **collection_interval** | [**Duration**](Duration.md) |  | [optional] 
 **group** | **str** | group | [optional] 
 

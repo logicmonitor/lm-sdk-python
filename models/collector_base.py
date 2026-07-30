@@ -36,6 +36,7 @@ class CollectorBase(object):
         'encoded_config_data': 'str',
         'hostname': 'str',
         'number_of_instances': 'int',
+        'arch_type': 'str',
         'id': 'int',
         'ea': 'bool',
         'watchdog_updated_on_local': 'str',
@@ -118,6 +119,7 @@ class CollectorBase(object):
         'encoded_config_data': 'encodedConfigData',
         'hostname': 'hostname',
         'number_of_instances': 'numberOfInstances',
+        'arch_type': 'archType',
         'id': 'id',
         'ea': 'ea',
         'watchdog_updated_on_local': 'watchdogUpdatedOnLocal',
@@ -191,7 +193,7 @@ class CollectorBase(object):
         'config': 'config'
     }
 
-    def __init__(self, user_change_on=None, conf_version=None, download_url=None, updated_on_local=None, collector_type=None, encoded_config_data=None, hostname=None, number_of_instances=None, id=None, ea=None, watchdog_updated_on_local=None, has_fail_over_device=None, collector_group_name=None, netscan_version=None, in_sdt=None, is_encoded=None, format=None, updated_on=None, automatic_upgrade_info=None, number_of_hosts=None, collector_list=None, collector_conf=None, sbproxy_conf=None, agent_conf_fields=None, last_sent_notification_on_local=None, custom_properties=None, predefined_config=None, calculated_threshold=None, onetime_upgrade_info=None, wrapper_conf=None, clear_sent=None, is_lmlogs_syslog_enabled=None, status=None, backup_agent_id=None, is_admin_account=None, specified_collector_device_group_id=None, escalating_chain_id=None, collector_size=None, acked_on_local=None, watchdog_conf=None, description=None, created_on=None, platform=None, is_down=None, user_visible_hosts_num=None, can_downgrade=None, ack_comment=None, next_upgrade_info=None, enable_lm_logs=None, suppress_alert_clear=None, next_recipient=None, acked_on=None, user_change_on_local=None, collector_device_id=None, acked_by=None, user_permission=None, need_auto_create_collector_device=None, watchdog_updated_on=None, can_downgrade_reason=None, last_sent_notification_on=None, synthetics_enabled=None, acked=None, onetime_downgrade_info=None, copy_url=None, error_msg=None, up_time=None, otel_version=None, number_of_sdts=None, bearer_token=None, build=None, previous_version=None, collector_group_id=None, created_on_local=None, enable_fail_back=None, resend_ival=None, arch=None, otel_id=None, enable_fail_over_on_collector_device=None, config=None):  # noqa: E501
+    def __init__(self, user_change_on=None, conf_version=None, download_url=None, updated_on_local=None, collector_type=None, encoded_config_data=None, hostname=None, number_of_instances=None, arch_type=None, id=None, ea=None, watchdog_updated_on_local=None, has_fail_over_device=None, collector_group_name=None, netscan_version=None, in_sdt=None, is_encoded=None, format=None, updated_on=None, automatic_upgrade_info=None, number_of_hosts=None, collector_list=None, collector_conf=None, sbproxy_conf=None, agent_conf_fields=None, last_sent_notification_on_local=None, custom_properties=None, predefined_config=None, calculated_threshold=None, onetime_upgrade_info=None, wrapper_conf=None, clear_sent=None, is_lmlogs_syslog_enabled=None, status=None, backup_agent_id=None, is_admin_account=None, specified_collector_device_group_id=None, escalating_chain_id=None, collector_size=None, acked_on_local=None, watchdog_conf=None, description=None, created_on=None, platform=None, is_down=None, user_visible_hosts_num=None, can_downgrade=None, ack_comment=None, next_upgrade_info=None, enable_lm_logs=None, suppress_alert_clear=None, next_recipient=None, acked_on=None, user_change_on_local=None, collector_device_id=None, acked_by=None, user_permission=None, need_auto_create_collector_device=None, watchdog_updated_on=None, can_downgrade_reason=None, last_sent_notification_on=None, synthetics_enabled=None, acked=None, onetime_downgrade_info=None, copy_url=None, error_msg=None, up_time=None, otel_version=None, number_of_sdts=None, bearer_token=None, build=None, previous_version=None, collector_group_id=None, created_on_local=None, enable_fail_back=None, resend_ival=None, arch=None, otel_id=None, enable_fail_over_on_collector_device=None, config=None):  # noqa: E501
         """CollectorBase - a model defined in Swagger"""  # noqa: E501
         self._user_change_on = None
         self._conf_version = None
@@ -201,6 +203,7 @@ class CollectorBase(object):
         self._encoded_config_data = None
         self._hostname = None
         self._number_of_instances = None
+        self._arch_type = None
         self._id = None
         self._ea = None
         self._watchdog_updated_on_local = None
@@ -289,6 +292,8 @@ class CollectorBase(object):
             self.hostname = hostname
         if number_of_instances is not None:
             self.number_of_instances = number_of_instances
+        if arch_type is not None:
+            self.arch_type = arch_type
         if id is not None:
             self.id = id
         if ea is not None:
@@ -613,6 +618,29 @@ class CollectorBase(object):
         """
 
         self._number_of_instances = number_of_instances
+
+    @property
+    def arch_type(self):
+        """Gets the arch_type of this CollectorBase.  # noqa: E501
+
+        The collector architecture type (x64 or arm64)  # noqa: E501
+
+        :return: The arch_type of this CollectorBase.  # noqa: E501
+        :rtype: str
+        """
+        return self._arch_type
+
+    @arch_type.setter
+    def arch_type(self, arch_type):
+        """Sets the arch_type of this CollectorBase.
+
+        The collector architecture type (x64 or arm64)  # noqa: E501
+
+        :param arch_type: The arch_type of this CollectorBase.  # noqa: E501
+        :type: str
+        """
+
+        self._arch_type = arch_type
 
     @property
     def id(self):

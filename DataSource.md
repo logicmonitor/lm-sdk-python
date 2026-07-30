@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 **enable_eri_discovery** | **bool** | Enable ERI Discovery or not: false|true | [optional] 
 **collect_interval** | **int** | The DataSource data collect interval | 
 **name** | **str** | The data source name | 
+**is_in_use** | **bool** | Whether the LM module is currently in use | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -42,6 +42,7 @@ class AlertsHealthCheckReport(ReportBase):
         'monitored_object_groups': 'str',
         'ack_filter': 'str',
         'dependency_routing_state': 'str',
+        'is_escalation': 'str',
         'dependency_role': 'str',
         'clear_filter': 'str',
         'host': 'str',
@@ -65,6 +66,7 @@ class AlertsHealthCheckReport(ReportBase):
         'monitored_object_groups': 'monitoredObjectGroups',
         'ack_filter': 'ackFilter',
         'dependency_routing_state': 'dependencyRoutingState',
+        'is_escalation': 'isEscalation',
         'dependency_role': 'dependencyRole',
         'clear_filter': 'clearFilter',
         'host': 'host',
@@ -74,7 +76,7 @@ class AlertsHealthCheckReport(ReportBase):
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, severity=None, active_only=None, chain=None, instance=None, anomaly=None, date_range=None, columns=None, data_point=None, sdt_filter=None, rule=None, monitored_object_groups=None, ack_filter=None, dependency_routing_state=None, dependency_role=None, clear_filter=None, host=None, host_group=None, data_source=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, severity=None, active_only=None, chain=None, instance=None, anomaly=None, date_range=None, columns=None, data_point=None, sdt_filter=None, rule=None, monitored_object_groups=None, ack_filter=None, dependency_routing_state=None, is_escalation=None, dependency_role=None, clear_filter=None, host=None, host_group=None, data_source=None, *args, **kwargs):  # noqa: E501
         """AlertsHealthCheckReport - a model defined in Swagger"""  # noqa: E501
         self._severity = None
         self._active_only = None
@@ -89,6 +91,7 @@ class AlertsHealthCheckReport(ReportBase):
         self._monitored_object_groups = None
         self._ack_filter = None
         self._dependency_routing_state = None
+        self._is_escalation = None
         self._dependency_role = None
         self._clear_filter = None
         self._host = None
@@ -121,6 +124,8 @@ class AlertsHealthCheckReport(ReportBase):
             self.ack_filter = ack_filter
         if dependency_routing_state is not None:
             self.dependency_routing_state = dependency_routing_state
+        if is_escalation is not None:
+            self.is_escalation = is_escalation
         if dependency_role is not None:
             self.dependency_role = dependency_role
         if clear_filter is not None:
@@ -429,6 +434,29 @@ class AlertsHealthCheckReport(ReportBase):
         """
 
         self._dependency_routing_state = dependency_routing_state
+
+    @property
+    def is_escalation(self):
+        """Gets the is_escalation of this AlertsHealthCheckReport.  # noqa: E501
+
+        all | yes | no all: alerts that are escalated and not escalated that meet the report criteria will be displayed yes: only alerts that have been escalated that meet the report criteria will be displayed no: only alerts that have not been escalated that meet the report criteria will be displayed  # noqa: E501
+
+        :return: The is_escalation of this AlertsHealthCheckReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._is_escalation
+
+    @is_escalation.setter
+    def is_escalation(self, is_escalation):
+        """Sets the is_escalation of this AlertsHealthCheckReport.
+
+        all | yes | no all: alerts that are escalated and not escalated that meet the report criteria will be displayed yes: only alerts that have been escalated that meet the report criteria will be displayed no: only alerts that have not been escalated that meet the report criteria will be displayed  # noqa: E501
+
+        :param is_escalation: The is_escalation of this AlertsHealthCheckReport.  # noqa: E501
+        :type: str
+        """
+
+        self._is_escalation = is_escalation
 
     @property
     def dependency_role(self):

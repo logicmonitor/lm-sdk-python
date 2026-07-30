@@ -32,7 +32,7 @@ class SDT(object):
         'timezone': 'str',
         'sdt_type': 'str',
         'default_value': 'datetime',
-        'month_day': 'int',
+        'month_day': 'str',
         'week_of_month': 'str',
         'admin': 'str',
         'end_date_time': 'int',
@@ -245,10 +245,10 @@ class SDT(object):
     def month_day(self):
         """Gets the month_day of this SDT.  # noqa: E501
 
-        The values can be -3 | 1 | 2....| 31. Specifies the day of the month that the SDT will be active for a monthly SDT. Use -3 for the last day of the month.  # noqa: E501
+        The values can be -3 | 1 | 2....| 31. Specifies the day(s) of the month that the SDT will be active for a monthly SDT. Use -3 for the last day of the month. Supports comma-separated values (e.g., '1,15,28') when multi-day is enabled.  # noqa: E501
 
         :return: The month_day of this SDT.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._month_day
 
@@ -256,10 +256,10 @@ class SDT(object):
     def month_day(self, month_day):
         """Sets the month_day of this SDT.
 
-        The values can be -3 | 1 | 2....| 31. Specifies the day of the month that the SDT will be active for a monthly SDT. Use -3 for the last day of the month.  # noqa: E501
+        The values can be -3 | 1 | 2....| 31. Specifies the day(s) of the month that the SDT will be active for a monthly SDT. Use -3 for the last day of the month. Supports comma-separated values (e.g., '1,15,28') when multi-day is enabled.  # noqa: E501
 
         :param month_day: The month_day of this SDT.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._month_day = month_day
@@ -523,7 +523,7 @@ class SDT(object):
     def week_day(self):
         """Gets the week_day of this SDT.  # noqa: E501
 
-        The week day of sdt. For weekly SDT, supports comma-separated values like 'Monday,Friday'. Values can be SUNDAY|MONDAY|TUESDAY|WEDNESDAY|THURSDAY|FRIDAY|SATURDAY  # noqa: E501
+        The week day of sdt. For weekly & monthlyByWeek SDT, supports comma-separated values like 'Monday,Friday'. Values can be SUNDAY|MONDAY|TUESDAY|WEDNESDAY|THURSDAY|FRIDAY|SATURDAY  # noqa: E501
 
         :return: The week_day of this SDT.  # noqa: E501
         :rtype: str
@@ -534,7 +534,7 @@ class SDT(object):
     def week_day(self, week_day):
         """Sets the week_day of this SDT.
 
-        The week day of sdt. For weekly SDT, supports comma-separated values like 'Monday,Friday'. Values can be SUNDAY|MONDAY|TUESDAY|WEDNESDAY|THURSDAY|FRIDAY|SATURDAY  # noqa: E501
+        The week day of sdt. For weekly & monthlyByWeek SDT, supports comma-separated values like 'Monday,Friday'. Values can be SUNDAY|MONDAY|TUESDAY|WEDNESDAY|THURSDAY|FRIDAY|SATURDAY  # noqa: E501
 
         :param week_day: The week_day of this SDT.  # noqa: E501
         :type: str

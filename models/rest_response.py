@@ -30,6 +30,7 @@ class RestResponse(object):
     swagger_types = {
         'diagnostics': 'ArrayNode',
         'suppressed_warnings': 'ArrayNode',
+        'preserve_insertion_order': 'bool',
         'data': 'ObjectNode',
         'suppressed_errors': 'ArrayNode',
         'successes': 'ArrayNode',
@@ -41,6 +42,7 @@ class RestResponse(object):
     attribute_map = {
         'diagnostics': 'diagnostics',
         'suppressed_warnings': 'suppressedWarnings',
+        'preserve_insertion_order': 'preserveInsertionOrder',
         'data': 'data',
         'suppressed_errors': 'suppressedErrors',
         'successes': 'successes',
@@ -49,10 +51,11 @@ class RestResponse(object):
         'errors': 'errors'
     }
 
-    def __init__(self, diagnostics=None, suppressed_warnings=None, data=None, suppressed_errors=None, successes=None, meta=None, warnings=None, errors=None):  # noqa: E501
+    def __init__(self, diagnostics=None, suppressed_warnings=None, preserve_insertion_order=None, data=None, suppressed_errors=None, successes=None, meta=None, warnings=None, errors=None):  # noqa: E501
         """RestResponse - a model defined in Swagger"""  # noqa: E501
         self._diagnostics = None
         self._suppressed_warnings = None
+        self._preserve_insertion_order = None
         self._data = None
         self._suppressed_errors = None
         self._successes = None
@@ -64,6 +67,8 @@ class RestResponse(object):
             self.diagnostics = diagnostics
         if suppressed_warnings is not None:
             self.suppressed_warnings = suppressed_warnings
+        if preserve_insertion_order is not None:
+            self.preserve_insertion_order = preserve_insertion_order
         if data is not None:
             self.data = data
         if suppressed_errors is not None:
@@ -118,6 +123,27 @@ class RestResponse(object):
         """
 
         self._suppressed_warnings = suppressed_warnings
+
+    @property
+    def preserve_insertion_order(self):
+        """Gets the preserve_insertion_order of this RestResponse.  # noqa: E501
+
+
+        :return: The preserve_insertion_order of this RestResponse.  # noqa: E501
+        :rtype: bool
+        """
+        return self._preserve_insertion_order
+
+    @preserve_insertion_order.setter
+    def preserve_insertion_order(self, preserve_insertion_order):
+        """Sets the preserve_insertion_order of this RestResponse.
+
+
+        :param preserve_insertion_order: The preserve_insertion_order of this RestResponse.  # noqa: E501
+        :type: bool
+        """
+
+        self._preserve_insertion_order = preserve_insertion_order
 
     @property
     def data(self):

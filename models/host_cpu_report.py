@@ -33,6 +33,7 @@ class HostCpuReport(ReportBase):
         'hosts_val': 'str',
         'top10_only': 'bool',
         'columns': 'list[DynamicColumn]',
+        'property_filter_metric': 'ReportPropertyFilterMetricV3',
         'top_n': 'str',
         'display_graphs': 'bool'
     }
@@ -44,18 +45,20 @@ class HostCpuReport(ReportBase):
         'hosts_val': 'hostsVal',
         'top10_only': 'top10Only',
         'columns': 'columns',
+        'property_filter_metric': 'propertyFilterMetric',
         'top_n': 'topN',
         'display_graphs': 'displayGraphs'
     }
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, date_range=None, hosts_val=None, top10_only=None, columns=None, top_n=None, display_graphs=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, date_range=None, hosts_val=None, top10_only=None, columns=None, property_filter_metric=None, top_n=None, display_graphs=None, *args, **kwargs):  # noqa: E501
         """HostCpuReport - a model defined in Swagger"""  # noqa: E501
         self._date_range = None
         self._hosts_val = None
         self._top10_only = None
         self._columns = None
+        self._property_filter_metric = None
         self._top_n = None
         self._display_graphs = None
         self.discriminator = None
@@ -66,6 +69,8 @@ class HostCpuReport(ReportBase):
             self.top10_only = top10_only
         if columns is not None:
             self.columns = columns
+        if property_filter_metric is not None:
+            self.property_filter_metric = property_filter_metric
         if top_n is not None:
             self.top_n = top_n
         if display_graphs is not None:
@@ -165,6 +170,27 @@ class HostCpuReport(ReportBase):
         """
 
         self._columns = columns
+
+    @property
+    def property_filter_metric(self):
+        """Gets the property_filter_metric of this HostCpuReport.  # noqa: E501
+
+
+        :return: The property_filter_metric of this HostCpuReport.  # noqa: E501
+        :rtype: ReportPropertyFilterMetricV3
+        """
+        return self._property_filter_metric
+
+    @property_filter_metric.setter
+    def property_filter_metric(self, property_filter_metric):
+        """Sets the property_filter_metric of this HostCpuReport.
+
+
+        :param property_filter_metric: The property_filter_metric of this HostCpuReport.  # noqa: E501
+        :type: ReportPropertyFilterMetricV3
+        """
+
+        self._property_filter_metric = property_filter_metric
 
     @property
     def top_n(self):

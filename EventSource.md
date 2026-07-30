@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **installation_metadata** | [**IntegrationMetadata**](IntegrationMetadata.md) |  | [optional] 
 **name** | **str** | The name of the EventSource | 
 **clear_after_ack** | **bool** | Whether or not the alert should clear after acknowledgement | [optional] 
+**is_in_use** | **bool** | Whether the LM module is currently in use | [optional] 
 **alert_effective_ival** | **int** | The time in minutes after which the alert should clear | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

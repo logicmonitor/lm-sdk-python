@@ -10,7 +10,9 @@ Name | Type | Description | Notes
 **is_base1024** | **bool** | true | false false: Scale the number using 1000  true: Scale the number using 1024 | 
 **top10_only** | **bool** | true | false false: Metrics will be displayed for all selected devices or groups true: Metrics will only be displayed for the top ten device or groupsThis field is deprecated, use topN field for more flexible top N selection | 
 **data_format** | **str** | bps|Bps|Kbps|Mbps Converts the data in the given data format  | [optional] 
+**columns** | [**list[DynamicColumn]**](DynamicColumn.md) | The columns displayed in the report | [optional] 
 **row_format** | **int** | 0 | 1 0: Text only - metrics will be displayed in a tabular format. 1: One graph per instance - metrics will be displayed in a tabular format and one graph will be displayed per instance | [optional] 
+**property_filter_metric** | [**ReportPropertyFilterMetricV3**](ReportPropertyFilterMetricV3.md) |  | [optional] 
 **metrics** | [**list[Metric]**](Metric.md) | The datapoint or calculation on a datapoint that will be included in the report, where each datapoint/calculation is specified by three fields: dataSourceId, instances (glob is okay) | 
 **top_n** | **str** | Top N selection: 5|10|25|50|100|all | [optional] 
 

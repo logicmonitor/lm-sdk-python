@@ -30,7 +30,7 @@ class LogQueryGroup(object):
     swagger_types = {
         'group_type': 'str',
         'user_permission': 'str',
-        'log_queries': 'list[LogQuery]',
+        'log_query': 'list[LogQuery]',
         'name': 'str',
         'description': 'str',
         'id': 'int',
@@ -41,7 +41,7 @@ class LogQueryGroup(object):
     attribute_map = {
         'group_type': 'groupType',
         'user_permission': 'userPermission',
-        'log_queries': 'logQueries',
+        'log_query': 'logQuery',
         'name': 'name',
         'description': 'description',
         'id': 'id',
@@ -49,11 +49,11 @@ class LogQueryGroup(object):
         'parent_id': 'parentId'
     }
 
-    def __init__(self, group_type=None, user_permission=None, log_queries=None, name=None, description=None, id=None, owner_id=None, parent_id=None):  # noqa: E501
+    def __init__(self, group_type=None, user_permission=None, log_query=None, name=None, description=None, id=None, owner_id=None, parent_id=None):  # noqa: E501
         """LogQueryGroup - a model defined in Swagger"""  # noqa: E501
         self._group_type = None
         self._user_permission = None
-        self._log_queries = None
+        self._log_query = None
         self._name = None
         self._description = None
         self._id = None
@@ -64,8 +64,8 @@ class LogQueryGroup(object):
             self.group_type = group_type
         if user_permission is not None:
             self.user_permission = user_permission
-        if log_queries is not None:
-            self.log_queries = log_queries
+        if log_query is not None:
+            self.log_query = log_query
         self.name = name
         if description is not None:
             self.description = description
@@ -127,27 +127,27 @@ class LogQueryGroup(object):
         self._user_permission = user_permission
 
     @property
-    def log_queries(self):
-        """Gets the log_queries of this LogQueryGroup.  # noqa: E501
+    def log_query(self):
+        """Gets the log_query of this LogQueryGroup.  # noqa: E501
 
         List of log queries in this group  # noqa: E501
 
-        :return: The log_queries of this LogQueryGroup.  # noqa: E501
+        :return: The log_query of this LogQueryGroup.  # noqa: E501
         :rtype: list[LogQuery]
         """
-        return self._log_queries
+        return self._log_query
 
-    @log_queries.setter
-    def log_queries(self, log_queries):
-        """Sets the log_queries of this LogQueryGroup.
+    @log_query.setter
+    def log_query(self, log_query):
+        """Sets the log_query of this LogQueryGroup.
 
         List of log queries in this group  # noqa: E501
 
-        :param log_queries: The log_queries of this LogQueryGroup.  # noqa: E501
+        :param log_query: The log_query of this LogQueryGroup.  # noqa: E501
         :type: list[LogQuery]
         """
 
-        self._log_queries = log_queries
+        self._log_query = log_query
 
     @property
     def name(self):

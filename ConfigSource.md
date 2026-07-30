@@ -28,6 +28,7 @@ Name | Type | Description | Notes
 **collect_interval** | **int** | The ConfigSource data collect interval | [optional] 
 **name** | **str** | The config source name | [optional] 
 **timestamp_format** | **str** | Timestamp format. ex. yyyy-MM-dd hh:mm:ss | [optional] 
+**is_in_use** | **bool** | Whether the LM module is currently in use | [optional] 
 **file_format** | **str** | Configuration file format. The values can be arbitrary|unix|java-properties|JSON|XML | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

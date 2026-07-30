@@ -31,6 +31,7 @@ class LogSource(object):
         'collection_method': 'str',
         'applies_to_script': 'str',
         'resource_mapping': 'list[RestLogSourceResourceMappingV3]',
+        'sensitive_data_masking_rules': 'list[LogSourceSensitiveDataMaskingRule]',
         'access_groups': 'list[AccessGroup]',
         'collection_attribute': 'object',
         'changelogs': 'list[UpdateReasons]',
@@ -46,6 +47,7 @@ class LogSource(object):
         'name': 'str',
         'id': 'int',
         'access_group_ids': 'list[int]',
+        'is_in_use': 'bool',
         'collection_interval': 'Duration',
         'group': 'str'
     }
@@ -54,6 +56,7 @@ class LogSource(object):
         'collection_method': 'collectionMethod',
         'applies_to_script': 'appliesToScript',
         'resource_mapping': 'resourceMapping',
+        'sensitive_data_masking_rules': 'sensitiveDataMaskingRules',
         'access_groups': 'accessGroups',
         'collection_attribute': 'collectionAttribute',
         'changelogs': 'changelogs',
@@ -69,15 +72,17 @@ class LogSource(object):
         'name': 'name',
         'id': 'id',
         'access_group_ids': 'accessGroupIds',
+        'is_in_use': 'isInUse',
         'collection_interval': 'collectionInterval',
         'group': 'group'
     }
 
-    def __init__(self, collection_method=None, applies_to_script=None, resource_mapping=None, access_groups=None, collection_attribute=None, changelogs=None, description=None, filters=None, technical_notes=None, lineage_id=None, tags=None, log_fields=None, installation_metadata=None, origin_registry_id=None, checksum=None, name=None, id=None, access_group_ids=None, collection_interval=None, group=None):  # noqa: E501
+    def __init__(self, collection_method=None, applies_to_script=None, resource_mapping=None, sensitive_data_masking_rules=None, access_groups=None, collection_attribute=None, changelogs=None, description=None, filters=None, technical_notes=None, lineage_id=None, tags=None, log_fields=None, installation_metadata=None, origin_registry_id=None, checksum=None, name=None, id=None, access_group_ids=None, is_in_use=None, collection_interval=None, group=None):  # noqa: E501
         """LogSource - a model defined in Swagger"""  # noqa: E501
         self._collection_method = None
         self._applies_to_script = None
         self._resource_mapping = None
+        self._sensitive_data_masking_rules = None
         self._access_groups = None
         self._collection_attribute = None
         self._changelogs = None
@@ -93,6 +98,7 @@ class LogSource(object):
         self._name = None
         self._id = None
         self._access_group_ids = None
+        self._is_in_use = None
         self._collection_interval = None
         self._group = None
         self.discriminator = None
@@ -102,6 +108,8 @@ class LogSource(object):
             self.applies_to_script = applies_to_script
         if resource_mapping is not None:
             self.resource_mapping = resource_mapping
+        if sensitive_data_masking_rules is not None:
+            self.sensitive_data_masking_rules = sensitive_data_masking_rules
         if access_groups is not None:
             self.access_groups = access_groups
         if collection_attribute is not None:
@@ -132,6 +140,8 @@ class LogSource(object):
             self.id = id
         if access_group_ids is not None:
             self.access_group_ids = access_group_ids
+        if is_in_use is not None:
+            self.is_in_use = is_in_use
         if collection_interval is not None:
             self.collection_interval = collection_interval
         if group is not None:
@@ -209,6 +219,27 @@ class LogSource(object):
         """
 
         self._resource_mapping = resource_mapping
+
+    @property
+    def sensitive_data_masking_rules(self):
+        """Gets the sensitive_data_masking_rules of this LogSource.  # noqa: E501
+
+
+        :return: The sensitive_data_masking_rules of this LogSource.  # noqa: E501
+        :rtype: list[LogSourceSensitiveDataMaskingRule]
+        """
+        return self._sensitive_data_masking_rules
+
+    @sensitive_data_masking_rules.setter
+    def sensitive_data_masking_rules(self, sensitive_data_masking_rules):
+        """Sets the sensitive_data_masking_rules of this LogSource.
+
+
+        :param sensitive_data_masking_rules: The sensitive_data_masking_rules of this LogSource.  # noqa: E501
+        :type: list[LogSourceSensitiveDataMaskingRule]
+        """
+
+        self._sensitive_data_masking_rules = sensitive_data_masking_rules
 
     @property
     def access_groups(self):
@@ -546,6 +577,29 @@ class LogSource(object):
         """
 
         self._access_group_ids = access_group_ids
+
+    @property
+    def is_in_use(self):
+        """Gets the is_in_use of this LogSource.  # noqa: E501
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :return: The is_in_use of this LogSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_in_use
+
+    @is_in_use.setter
+    def is_in_use(self, is_in_use):
+        """Sets the is_in_use of this LogSource.
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :param is_in_use: The is_in_use of this LogSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_in_use = is_in_use
 
     @property
     def collection_interval(self):

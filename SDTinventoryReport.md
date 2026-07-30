@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **date_range** | **str** | The Time Range configured for the report.  | [optional] 
+**property_filter_metric** | [**ReportPropertyFilterMetricV3**](ReportPropertyFilterMetricV3.md) |  | [optional] 
 **group_entity_table** | [**list[SDTGroupEntityDataHolder]**](SDTGroupEntityDataHolder.md) |  | [optional] 
 **active** | **bool** | true: active sdts will be displayed in the report false: active sdts will not be displayed in the report the default value is false | [optional] 
 **historical** | **bool** | true: historical sdts will be displayed in the report  false: historical sdts will not be displayed in the report | [optional] 

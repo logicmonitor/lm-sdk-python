@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **encoded_config_data** | **str** | Base 64 encoded config data | [optional] 
 **hostname** | **str** | The hostname of the device the Collector is installed on | [optional] 
 **number_of_instances** | **int** |  | [optional] 
+**arch_type** | **str** | The collector architecture type (x64 or arm64) | [optional] 
 **id** | **int** | The id of the Collector | [optional] 
 **ea** | **bool** | Whether the collector is in EA version | [optional] 
 **watchdog_updated_on_local** | **str** | The time that the Collector Watchdog was last updated, in local time format | [optional] 

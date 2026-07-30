@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **columns** | [**list[DynamicColumn]**](DynamicColumn.md) | The columns that will be displayed in the report. You should specify the columns in the order in which you&#x27;d like them to be displayed. All column names need to be included in this object, but each column should have an associated isHidden field that indicates whether it is displayed or not | [optional] 
 **is_base1024** | **bool** | true | false false: Scale the number using using default 1000  true: Scale the number using 1024 | 
 **row_format** | **int** | 0 | 1 | 2 | 3 0: Text only - metrics will be displayed in a tabular format. 1: One graph per device - metrics will be displayed in a tabular format and one graph will be displayed per device. 2: One graph per instance - metrics will be displayed in a tabular format and one graph will be displayed per instance. 3: One graph per datapoint - metrics will be displayed in a tabular format and one graph will be displayed per datapoint. | 
+**property_filter_metric** | [**ReportPropertyFilterMetricV3**](ReportPropertyFilterMetricV3.md) |  | [optional] 
 **metrics** | [**list[Metric]**](Metric.md) | The datapoint or calculation on a datapoint that will be included in the report, where each datapoint/calculation is specified by three fields: dataSourceId, instances (glob is okay) and metric (no glob) | 
 **top_n** | **str** | Top N selection: 5|10|25|50|100|all | [optional] 
 

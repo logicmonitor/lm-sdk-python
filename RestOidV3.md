@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **oid** | **str** | The OID pattern to match to | 
 **categories** | **str** | Categories to match the OID on | [optional] 
 **access_group_ids** | **list[int]** | The Access Groups Id&#x27;s | [optional] 
+**is_in_use** | **bool** | Whether the SNMP SysOID Map is currently in use | [optional] 
 **lineage_id** | **str** | The lineage ID that the LMModule belongs to | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

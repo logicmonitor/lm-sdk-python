@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **group_type** | **str** |  | [optional] 
 **user_permission** | **str** | Effective user permission for this group | [optional] 
-**log_queries** | [**list[LogQuery]**](LogQuery.md) | List of log queries in this group | [optional] 
+**log_query** | [**list[LogQuery]**](LogQuery.md) | List of log queries in this group | [optional] 
 **name** | **str** | The name of the log query group | 
 **description** | **str** | Description of the log query group | [optional] 
 **id** | **int** | The ID of the log query group | [optional] 

@@ -36,6 +36,7 @@ class SLAReport(ReportBase):
         'columns': 'list[DynamicColumn]',
         'display_summary': 'bool',
         'day_in_one_week': 'str',
+        'property_filter_metric': 'ReportPropertyFilterMetricV3',
         'period_in_one_day': 'str',
         'metrics': 'list[SlaMetric]',
         'unmonitored_time': 'int'
@@ -51,6 +52,7 @@ class SLAReport(ReportBase):
         'columns': 'columns',
         'display_summary': 'displaySummary',
         'day_in_one_week': 'dayInOneWeek',
+        'property_filter_metric': 'propertyFilterMetric',
         'period_in_one_day': 'periodInOneDay',
         'metrics': 'metrics',
         'unmonitored_time': 'unmonitoredTime'
@@ -58,7 +60,7 @@ class SLAReport(ReportBase):
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, calculation_method=None, date_range=None, timezone=None, display_with_availability=None, columns=None, display_summary=None, day_in_one_week=None, period_in_one_day=None, metrics=None, unmonitored_time=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, calculation_method=None, date_range=None, timezone=None, display_with_availability=None, columns=None, display_summary=None, day_in_one_week=None, property_filter_metric=None, period_in_one_day=None, metrics=None, unmonitored_time=None, *args, **kwargs):  # noqa: E501
         """SLAReport - a model defined in Swagger"""  # noqa: E501
         self._calculation_method = None
         self._date_range = None
@@ -67,6 +69,7 @@ class SLAReport(ReportBase):
         self._columns = None
         self._display_summary = None
         self._day_in_one_week = None
+        self._property_filter_metric = None
         self._period_in_one_day = None
         self._metrics = None
         self._unmonitored_time = None
@@ -85,6 +88,8 @@ class SLAReport(ReportBase):
             self.display_summary = display_summary
         if day_in_one_week is not None:
             self.day_in_one_week = day_in_one_week
+        if property_filter_metric is not None:
+            self.property_filter_metric = property_filter_metric
         if period_in_one_day is not None:
             self.period_in_one_day = period_in_one_day
         self.metrics = metrics
@@ -252,6 +257,27 @@ class SLAReport(ReportBase):
         """
 
         self._day_in_one_week = day_in_one_week
+
+    @property
+    def property_filter_metric(self):
+        """Gets the property_filter_metric of this SLAReport.  # noqa: E501
+
+
+        :return: The property_filter_metric of this SLAReport.  # noqa: E501
+        :rtype: ReportPropertyFilterMetricV3
+        """
+        return self._property_filter_metric
+
+    @property_filter_metric.setter
+    def property_filter_metric(self, property_filter_metric):
+        """Sets the property_filter_metric of this SLAReport.
+
+
+        :param property_filter_metric: The property_filter_metric of this SLAReport.  # noqa: E501
+        :type: ReportPropertyFilterMetricV3
+        """
+
+        self._property_filter_metric = property_filter_metric
 
     @property
     def period_in_one_day(self):

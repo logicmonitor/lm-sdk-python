@@ -30,6 +30,7 @@ class SDTinventoryReport(ReportBase):
     """
     swagger_types = {
         'date_range': 'str',
+        'property_filter_metric': 'ReportPropertyFilterMetricV3',
         'group_entity_table': 'list[SDTGroupEntityDataHolder]',
         'active': 'bool',
         'historical': 'bool',
@@ -42,6 +43,7 @@ class SDTinventoryReport(ReportBase):
 
     attribute_map = {
         'date_range': 'dateRange',
+        'property_filter_metric': 'propertyFilterMetric',
         'group_entity_table': 'groupEntityTable',
         'active': 'active',
         'historical': 'historical',
@@ -52,9 +54,10 @@ class SDTinventoryReport(ReportBase):
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, date_range=None, group_entity_table=None, active=None, historical=None, metrics=None, sdt_settings=None, user=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, date_range=None, property_filter_metric=None, group_entity_table=None, active=None, historical=None, metrics=None, sdt_settings=None, user=None, *args, **kwargs):  # noqa: E501
         """SDTinventoryReport - a model defined in Swagger"""  # noqa: E501
         self._date_range = None
+        self._property_filter_metric = None
         self._group_entity_table = None
         self._active = None
         self._historical = None
@@ -64,6 +67,8 @@ class SDTinventoryReport(ReportBase):
         self.discriminator = None
         if date_range is not None:
             self.date_range = date_range
+        if property_filter_metric is not None:
+            self.property_filter_metric = property_filter_metric
         if group_entity_table is not None:
             self.group_entity_table = group_entity_table
         if active is not None:
@@ -99,6 +104,27 @@ class SDTinventoryReport(ReportBase):
         """
 
         self._date_range = date_range
+
+    @property
+    def property_filter_metric(self):
+        """Gets the property_filter_metric of this SDTinventoryReport.  # noqa: E501
+
+
+        :return: The property_filter_metric of this SDTinventoryReport.  # noqa: E501
+        :rtype: ReportPropertyFilterMetricV3
+        """
+        return self._property_filter_metric
+
+    @property_filter_metric.setter
+    def property_filter_metric(self, property_filter_metric):
+        """Sets the property_filter_metric of this SDTinventoryReport.
+
+
+        :param property_filter_metric: The property_filter_metric of this SDTinventoryReport.  # noqa: E501
+        :type: ReportPropertyFilterMetricV3
+        """
+
+        self._property_filter_metric = property_filter_metric
 
     @property
     def group_entity_table(self):

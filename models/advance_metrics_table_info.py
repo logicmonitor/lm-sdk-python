@@ -30,6 +30,7 @@ class AdvanceMetricsTableInfo(AdvancedMetricsGraphInfo):
     """
     swagger_types = {
         'show_data_point_as_column': 'bool',
+        'transformations': 'list[AdvancedMetricsTransformation]',
         'rounding': 'int',
         'page_size': 'int',
         'color_thresholds': 'list[ColorThreshold]'
@@ -39,6 +40,7 @@ class AdvanceMetricsTableInfo(AdvancedMetricsGraphInfo):
 
     attribute_map = {
         'show_data_point_as_column': 'showDataPointAsColumn',
+        'transformations': 'transformations',
         'rounding': 'rounding',
         'page_size': 'pageSize',
         'color_thresholds': 'colorThresholds'
@@ -46,15 +48,18 @@ class AdvanceMetricsTableInfo(AdvancedMetricsGraphInfo):
     if hasattr(AdvancedMetricsGraphInfo, "attribute_map"):
         attribute_map.update(AdvancedMetricsGraphInfo.attribute_map)
 
-    def __init__(self, show_data_point_as_column=None, rounding=None, page_size=None, color_thresholds=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, show_data_point_as_column=None, transformations=None, rounding=None, page_size=None, color_thresholds=None, *args, **kwargs):  # noqa: E501
         """AdvanceMetricsTableInfo - a model defined in Swagger"""  # noqa: E501
         self._show_data_point_as_column = None
+        self._transformations = None
         self._rounding = None
         self._page_size = None
         self._color_thresholds = None
         self.discriminator = None
         if show_data_point_as_column is not None:
             self.show_data_point_as_column = show_data_point_as_column
+        if transformations is not None:
+            self.transformations = transformations
         if rounding is not None:
             self.rounding = rounding
         if page_size is not None:
@@ -83,6 +88,27 @@ class AdvanceMetricsTableInfo(AdvancedMetricsGraphInfo):
         """
 
         self._show_data_point_as_column = show_data_point_as_column
+
+    @property
+    def transformations(self):
+        """Gets the transformations of this AdvanceMetricsTableInfo.  # noqa: E501
+
+
+        :return: The transformations of this AdvanceMetricsTableInfo.  # noqa: E501
+        :rtype: list[AdvancedMetricsTransformation]
+        """
+        return self._transformations
+
+    @transformations.setter
+    def transformations(self, transformations):
+        """Sets the transformations of this AdvanceMetricsTableInfo.
+
+
+        :param transformations: The transformations of this AdvanceMetricsTableInfo.  # noqa: E501
+        :type: list[AdvancedMetricsTransformation]
+        """
+
+        self._transformations = transformations
 
     @property
     def rounding(self):

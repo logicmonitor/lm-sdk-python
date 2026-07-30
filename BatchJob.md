@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **alert_subject** | **str** | Alert message subject | 
 **id** | **int** | The ID of the LMModule | [optional] 
 **access_group_ids** | **list[int]** | The Access Groups Id&#x27;s | [optional] 
+**is_in_use** | **bool** | Whether the LM module is currently in use | [optional] 
 **longest_run_time_in_minute** | **int** | Max job run time in minutes | [optional] 
 **alert_effective_ival** | **int** | JobMonitor alert effective interval in minutes | 
 **group** | **str** | The group the LMModule is in | [optional] 

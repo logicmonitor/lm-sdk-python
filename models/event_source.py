@@ -52,6 +52,7 @@ class EventSource(object):
         'installation_metadata': 'IntegrationMetadata',
         'name': 'str',
         'clear_after_ack': 'bool',
+        'is_in_use': 'bool',
         'alert_effective_ival': 'int'
     }
 
@@ -80,6 +81,7 @@ class EventSource(object):
         'installation_metadata': 'installationMetadata',
         'name': 'name',
         'clear_after_ack': 'clearAfterAck',
+        'is_in_use': 'isInUse',
         'alert_effective_ival': 'alertEffectiveIval'
     }
 
@@ -103,7 +105,7 @@ class EventSource(object):
 'azurerss': 'AzureRssEventSource',
 'RestAwsOrganizationalHealthEventSource': 'RestAwsOrganizationalHealthEventSource'    }
 
-    def __init__(self, access_groups=None, event_source=None, description=None, applies_to=None, lineage_id=None, collector=None, origin_registry_id=None, alert_body_template=None, checksum=None, id=None, access_group_ids=None, group=None, suppress_duplicates_es=None, alert_subject_template=None, event_source_filters=None, alert_level=None, technology=None, filters=None, version=None, tags=None, audit_version=None, installation_metadata=None, name=None, clear_after_ack=None, alert_effective_ival=None):  # noqa: E501
+    def __init__(self, access_groups=None, event_source=None, description=None, applies_to=None, lineage_id=None, collector=None, origin_registry_id=None, alert_body_template=None, checksum=None, id=None, access_group_ids=None, group=None, suppress_duplicates_es=None, alert_subject_template=None, event_source_filters=None, alert_level=None, technology=None, filters=None, version=None, tags=None, audit_version=None, installation_metadata=None, name=None, clear_after_ack=None, is_in_use=None, alert_effective_ival=None):  # noqa: E501
         """EventSource - a model defined in Swagger"""  # noqa: E501
         self._access_groups = None
         self._event_source = None
@@ -129,6 +131,7 @@ class EventSource(object):
         self._installation_metadata = None
         self._name = None
         self._clear_after_ack = None
+        self._is_in_use = None
         self._alert_effective_ival = None
         self.discriminator = 'collector'
         if access_groups is not None:
@@ -178,6 +181,8 @@ class EventSource(object):
         self.name = name
         if clear_after_ack is not None:
             self.clear_after_ack = clear_after_ack
+        if is_in_use is not None:
+            self.is_in_use = is_in_use
         self.alert_effective_ival = alert_effective_ival
 
     @property
@@ -727,6 +732,29 @@ class EventSource(object):
         """
 
         self._clear_after_ack = clear_after_ack
+
+    @property
+    def is_in_use(self):
+        """Gets the is_in_use of this EventSource.  # noqa: E501
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :return: The is_in_use of this EventSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_in_use
+
+    @is_in_use.setter
+    def is_in_use(self, is_in_use):
+        """Sets the is_in_use of this EventSource.
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :param is_in_use: The is_in_use of this EventSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_in_use = is_in_use
 
     @property
     def alert_effective_ival(self):

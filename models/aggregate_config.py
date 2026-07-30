@@ -29,23 +29,48 @@ class AggregateConfig(object):
     """
     swagger_types = {
         'chart_metadata': 'str',
-        'chart_type': 'str'
+        'data': 'str',
+        'columns': 'list[AggregateColumn]',
+        'donut': 'str',
+        'chart_type': 'str',
+        'sort_by': 'str',
+        'label': 'str'
     }
 
     attribute_map = {
         'chart_metadata': 'chartMetadata',
-        'chart_type': 'chartType'
+        'data': 'data',
+        'columns': 'columns',
+        'donut': 'donut',
+        'chart_type': 'chartType',
+        'sort_by': 'sortBy',
+        'label': 'label'
     }
 
-    def __init__(self, chart_metadata=None, chart_type=None):  # noqa: E501
+    def __init__(self, chart_metadata=None, data=None, columns=None, donut=None, chart_type=None, sort_by=None, label=None):  # noqa: E501
         """AggregateConfig - a model defined in Swagger"""  # noqa: E501
         self._chart_metadata = None
+        self._data = None
+        self._columns = None
+        self._donut = None
         self._chart_type = None
+        self._sort_by = None
+        self._label = None
         self.discriminator = None
         if chart_metadata is not None:
             self.chart_metadata = chart_metadata
+        if data is not None:
+            self.data = data
+        if columns is not None:
+            self.columns = columns
+        if donut is not None:
+            self.donut = donut
         if chart_type is not None:
             self.chart_type = chart_type
+        if sort_by is not None:
+            self.sort_by = sort_by
+        if label is not None:
+            self.label = label
 
     @property
     def chart_metadata(self):
@@ -69,6 +94,69 @@ class AggregateConfig(object):
         self._chart_metadata = chart_metadata
 
     @property
+    def data(self):
+        """Gets the data of this AggregateConfig.  # noqa: E501
+
+
+        :return: The data of this AggregateConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._data
+
+    @data.setter
+    def data(self, data):
+        """Sets the data of this AggregateConfig.
+
+
+        :param data: The data of this AggregateConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._data = data
+
+    @property
+    def columns(self):
+        """Gets the columns of this AggregateConfig.  # noqa: E501
+
+
+        :return: The columns of this AggregateConfig.  # noqa: E501
+        :rtype: list[AggregateColumn]
+        """
+        return self._columns
+
+    @columns.setter
+    def columns(self, columns):
+        """Sets the columns of this AggregateConfig.
+
+
+        :param columns: The columns of this AggregateConfig.  # noqa: E501
+        :type: list[AggregateColumn]
+        """
+
+        self._columns = columns
+
+    @property
+    def donut(self):
+        """Gets the donut of this AggregateConfig.  # noqa: E501
+
+
+        :return: The donut of this AggregateConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._donut
+
+    @donut.setter
+    def donut(self, donut):
+        """Sets the donut of this AggregateConfig.
+
+
+        :param donut: The donut of this AggregateConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._donut = donut
+
+    @property
     def chart_type(self):
         """Gets the chart_type of this AggregateConfig.  # noqa: E501
 
@@ -88,6 +176,48 @@ class AggregateConfig(object):
         """
 
         self._chart_type = chart_type
+
+    @property
+    def sort_by(self):
+        """Gets the sort_by of this AggregateConfig.  # noqa: E501
+
+
+        :return: The sort_by of this AggregateConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._sort_by
+
+    @sort_by.setter
+    def sort_by(self, sort_by):
+        """Sets the sort_by of this AggregateConfig.
+
+
+        :param sort_by: The sort_by of this AggregateConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._sort_by = sort_by
+
+    @property
+    def label(self):
+        """Gets the label of this AggregateConfig.  # noqa: E501
+
+
+        :return: The label of this AggregateConfig.  # noqa: E501
+        :rtype: str
+        """
+        return self._label
+
+    @label.setter
+    def label(self, label):
+        """Sets the label of this AggregateConfig.
+
+
+        :param label: The label of this AggregateConfig.  # noqa: E501
+        :type: str
+        """
+
+        self._label = label
 
     def to_dict(self):
         """Returns the model properties as a dict"""

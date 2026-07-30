@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **query_filters** | **list[dict(str, object)]** |  | [optional] 
 **visualization_details** | [**JSONObject**](JSONObject.md) |  | [optional] 
 **query_functions** | **list[dict(str, object)]** |  | [optional] 
+**query_type** | **str** | Query type for advanced metrics. Defaults to LMQL for backward compatibility. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -29,23 +29,107 @@ class AdvancedMetricsReport(ReportBase):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'metric_source': 'str',
+        'date_range': 'str',
+        'columns': 'list[DynamicColumn]',
         'query': 'str'
     }
     if hasattr(ReportBase, "swagger_types"):
         swagger_types.update(ReportBase.swagger_types)
 
     attribute_map = {
+        'metric_source': 'metricSource',
+        'date_range': 'dateRange',
+        'columns': 'columns',
         'query': 'query'
     }
     if hasattr(ReportBase, "attribute_map"):
         attribute_map.update(ReportBase.attribute_map)
 
-    def __init__(self, query=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, metric_source=None, date_range=None, columns=None, query=None, *args, **kwargs):  # noqa: E501
         """AdvancedMetricsReport - a model defined in Swagger"""  # noqa: E501
+        self._metric_source = None
+        self._date_range = None
+        self._columns = None
         self._query = None
         self.discriminator = None
+        if metric_source is not None:
+            self.metric_source = metric_source
+        if date_range is not None:
+            self.date_range = date_range
+        if columns is not None:
+            self.columns = columns
         self.query = query
         ReportBase.__init__(self, *args, **kwargs)
+
+    @property
+    def metric_source(self):
+        """Gets the metric_source of this AdvancedMetricsReport.  # noqa: E501
+
+        The metric source for the advanced metrics report. The value can be lmql, or otlp. Default is lmql.  # noqa: E501
+
+        :return: The metric_source of this AdvancedMetricsReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._metric_source
+
+    @metric_source.setter
+    def metric_source(self, metric_source):
+        """Sets the metric_source of this AdvancedMetricsReport.
+
+        The metric source for the advanced metrics report. The value can be lmql, or otlp. Default is lmql.  # noqa: E501
+
+        :param metric_source: The metric_source of this AdvancedMetricsReport.  # noqa: E501
+        :type: str
+        """
+
+        self._metric_source = metric_source
+
+    @property
+    def date_range(self):
+        """Gets the date_range of this AdvancedMetricsReport.  # noqa: E501
+
+        Overrides the LMQL query time range with a specified time period.  # noqa: E501
+
+        :return: The date_range of this AdvancedMetricsReport.  # noqa: E501
+        :rtype: str
+        """
+        return self._date_range
+
+    @date_range.setter
+    def date_range(self, date_range):
+        """Sets the date_range of this AdvancedMetricsReport.
+
+        Overrides the LMQL query time range with a specified time period.  # noqa: E501
+
+        :param date_range: The date_range of this AdvancedMetricsReport.  # noqa: E501
+        :type: str
+        """
+
+        self._date_range = date_range
+
+    @property
+    def columns(self):
+        """Gets the columns of this AdvancedMetricsReport.  # noqa: E501
+
+        The columns displayed in the report  # noqa: E501
+
+        :return: The columns of this AdvancedMetricsReport.  # noqa: E501
+        :rtype: list[DynamicColumn]
+        """
+        return self._columns
+
+    @columns.setter
+    def columns(self, columns):
+        """Sets the columns of this AdvancedMetricsReport.
+
+        The columns displayed in the report  # noqa: E501
+
+        :param columns: The columns of this AdvancedMetricsReport.  # noqa: E501
+        :type: list[DynamicColumn]
+        """
+
+        self._columns = columns
 
     @property
     def query(self):

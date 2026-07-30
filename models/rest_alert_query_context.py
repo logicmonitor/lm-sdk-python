@@ -29,16 +29,16 @@ class RestAlertQueryContext(object):
     """
     swagger_types = {
         'active_only': 'bool',
-        'anomaly': 'str',
         'pivot_type': 'str',
+        'anomaly': 'str',
         'suppressor_filters': 'list[FieldFilter]',
         'for_services': 'bool',
-        'refresh_active_alert_cache': 'bool',
         'pivot_dimensions': 'list[str]',
+        'refresh_active_alert_cache': 'bool',
         'dependency_routing_state_filters': 'list[FieldFilter]',
         'exclude_phatom_flag': 'bool',
-        'dependency_role_filters_v4': 'list[AdvancedFieldFilter]',
         'pivot_dimension_es_field': 'list[str]',
+        'dependency_role_filters_v4': 'list[AdvancedFieldFilter]',
         'lmconfig_enabled': 'bool',
         'dependency_routing_state_filters_v4': 'list[AdvancedFieldFilter]',
         'dependency_role_filters': 'list[FieldFilter]',
@@ -49,16 +49,16 @@ class RestAlertQueryContext(object):
 
     attribute_map = {
         'active_only': 'activeOnly',
-        'anomaly': 'anomaly',
         'pivot_type': 'pivotType',
+        'anomaly': 'anomaly',
         'suppressor_filters': 'suppressorFilters',
         'for_services': 'forServices',
-        'refresh_active_alert_cache': 'refreshActiveAlertCache',
         'pivot_dimensions': 'pivotDimensions',
+        'refresh_active_alert_cache': 'refreshActiveAlertCache',
         'dependency_routing_state_filters': 'dependencyRoutingStateFilters',
         'exclude_phatom_flag': 'excludePhatomFlag',
-        'dependency_role_filters_v4': 'dependencyRoleFiltersV4',
         'pivot_dimension_es_field': 'pivotDimensionESField',
+        'dependency_role_filters_v4': 'dependencyRoleFiltersV4',
         'lmconfig_enabled': 'lmconfigEnabled',
         'dependency_routing_state_filters_v4': 'dependencyRoutingStateFiltersV4',
         'dependency_role_filters': 'dependencyRoleFilters',
@@ -67,19 +67,19 @@ class RestAlertQueryContext(object):
         'alerts_by_id': 'alertsById'
     }
 
-    def __init__(self, active_only=None, anomaly=None, pivot_type=None, suppressor_filters=None, for_services=None, refresh_active_alert_cache=None, pivot_dimensions=None, dependency_routing_state_filters=None, exclude_phatom_flag=None, dependency_role_filters_v4=None, pivot_dimension_es_field=None, lmconfig_enabled=None, dependency_routing_state_filters_v4=None, dependency_role_filters=None, cleared_only=None, suppressor_filters_v4=None, alerts_by_id=None):  # noqa: E501
+    def __init__(self, active_only=None, pivot_type=None, anomaly=None, suppressor_filters=None, for_services=None, pivot_dimensions=None, refresh_active_alert_cache=None, dependency_routing_state_filters=None, exclude_phatom_flag=None, pivot_dimension_es_field=None, dependency_role_filters_v4=None, lmconfig_enabled=None, dependency_routing_state_filters_v4=None, dependency_role_filters=None, cleared_only=None, suppressor_filters_v4=None, alerts_by_id=None):  # noqa: E501
         """RestAlertQueryContext - a model defined in Swagger"""  # noqa: E501
         self._active_only = None
-        self._anomaly = None
         self._pivot_type = None
+        self._anomaly = None
         self._suppressor_filters = None
         self._for_services = None
-        self._refresh_active_alert_cache = None
         self._pivot_dimensions = None
+        self._refresh_active_alert_cache = None
         self._dependency_routing_state_filters = None
         self._exclude_phatom_flag = None
-        self._dependency_role_filters_v4 = None
         self._pivot_dimension_es_field = None
+        self._dependency_role_filters_v4 = None
         self._lmconfig_enabled = None
         self._dependency_routing_state_filters_v4 = None
         self._dependency_role_filters = None
@@ -89,26 +89,26 @@ class RestAlertQueryContext(object):
         self.discriminator = None
         if active_only is not None:
             self.active_only = active_only
-        if anomaly is not None:
-            self.anomaly = anomaly
         if pivot_type is not None:
             self.pivot_type = pivot_type
+        if anomaly is not None:
+            self.anomaly = anomaly
         if suppressor_filters is not None:
             self.suppressor_filters = suppressor_filters
         if for_services is not None:
             self.for_services = for_services
-        if refresh_active_alert_cache is not None:
-            self.refresh_active_alert_cache = refresh_active_alert_cache
         if pivot_dimensions is not None:
             self.pivot_dimensions = pivot_dimensions
+        if refresh_active_alert_cache is not None:
+            self.refresh_active_alert_cache = refresh_active_alert_cache
         if dependency_routing_state_filters is not None:
             self.dependency_routing_state_filters = dependency_routing_state_filters
         if exclude_phatom_flag is not None:
             self.exclude_phatom_flag = exclude_phatom_flag
-        if dependency_role_filters_v4 is not None:
-            self.dependency_role_filters_v4 = dependency_role_filters_v4
         if pivot_dimension_es_field is not None:
             self.pivot_dimension_es_field = pivot_dimension_es_field
+        if dependency_role_filters_v4 is not None:
+            self.dependency_role_filters_v4 = dependency_role_filters_v4
         if lmconfig_enabled is not None:
             self.lmconfig_enabled = lmconfig_enabled
         if dependency_routing_state_filters_v4 is not None:
@@ -144,27 +144,6 @@ class RestAlertQueryContext(object):
         self._active_only = active_only
 
     @property
-    def anomaly(self):
-        """Gets the anomaly of this RestAlertQueryContext.  # noqa: E501
-
-
-        :return: The anomaly of this RestAlertQueryContext.  # noqa: E501
-        :rtype: str
-        """
-        return self._anomaly
-
-    @anomaly.setter
-    def anomaly(self, anomaly):
-        """Sets the anomaly of this RestAlertQueryContext.
-
-
-        :param anomaly: The anomaly of this RestAlertQueryContext.  # noqa: E501
-        :type: str
-        """
-
-        self._anomaly = anomaly
-
-    @property
     def pivot_type(self):
         """Gets the pivot_type of this RestAlertQueryContext.  # noqa: E501
 
@@ -184,6 +163,27 @@ class RestAlertQueryContext(object):
         """
 
         self._pivot_type = pivot_type
+
+    @property
+    def anomaly(self):
+        """Gets the anomaly of this RestAlertQueryContext.  # noqa: E501
+
+
+        :return: The anomaly of this RestAlertQueryContext.  # noqa: E501
+        :rtype: str
+        """
+        return self._anomaly
+
+    @anomaly.setter
+    def anomaly(self, anomaly):
+        """Sets the anomaly of this RestAlertQueryContext.
+
+
+        :param anomaly: The anomaly of this RestAlertQueryContext.  # noqa: E501
+        :type: str
+        """
+
+        self._anomaly = anomaly
 
     @property
     def suppressor_filters(self):
@@ -228,27 +228,6 @@ class RestAlertQueryContext(object):
         self._for_services = for_services
 
     @property
-    def refresh_active_alert_cache(self):
-        """Gets the refresh_active_alert_cache of this RestAlertQueryContext.  # noqa: E501
-
-
-        :return: The refresh_active_alert_cache of this RestAlertQueryContext.  # noqa: E501
-        :rtype: bool
-        """
-        return self._refresh_active_alert_cache
-
-    @refresh_active_alert_cache.setter
-    def refresh_active_alert_cache(self, refresh_active_alert_cache):
-        """Sets the refresh_active_alert_cache of this RestAlertQueryContext.
-
-
-        :param refresh_active_alert_cache: The refresh_active_alert_cache of this RestAlertQueryContext.  # noqa: E501
-        :type: bool
-        """
-
-        self._refresh_active_alert_cache = refresh_active_alert_cache
-
-    @property
     def pivot_dimensions(self):
         """Gets the pivot_dimensions of this RestAlertQueryContext.  # noqa: E501
 
@@ -268,6 +247,27 @@ class RestAlertQueryContext(object):
         """
 
         self._pivot_dimensions = pivot_dimensions
+
+    @property
+    def refresh_active_alert_cache(self):
+        """Gets the refresh_active_alert_cache of this RestAlertQueryContext.  # noqa: E501
+
+
+        :return: The refresh_active_alert_cache of this RestAlertQueryContext.  # noqa: E501
+        :rtype: bool
+        """
+        return self._refresh_active_alert_cache
+
+    @refresh_active_alert_cache.setter
+    def refresh_active_alert_cache(self, refresh_active_alert_cache):
+        """Sets the refresh_active_alert_cache of this RestAlertQueryContext.
+
+
+        :param refresh_active_alert_cache: The refresh_active_alert_cache of this RestAlertQueryContext.  # noqa: E501
+        :type: bool
+        """
+
+        self._refresh_active_alert_cache = refresh_active_alert_cache
 
     @property
     def dependency_routing_state_filters(self):
@@ -312,27 +312,6 @@ class RestAlertQueryContext(object):
         self._exclude_phatom_flag = exclude_phatom_flag
 
     @property
-    def dependency_role_filters_v4(self):
-        """Gets the dependency_role_filters_v4 of this RestAlertQueryContext.  # noqa: E501
-
-
-        :return: The dependency_role_filters_v4 of this RestAlertQueryContext.  # noqa: E501
-        :rtype: list[AdvancedFieldFilter]
-        """
-        return self._dependency_role_filters_v4
-
-    @dependency_role_filters_v4.setter
-    def dependency_role_filters_v4(self, dependency_role_filters_v4):
-        """Sets the dependency_role_filters_v4 of this RestAlertQueryContext.
-
-
-        :param dependency_role_filters_v4: The dependency_role_filters_v4 of this RestAlertQueryContext.  # noqa: E501
-        :type: list[AdvancedFieldFilter]
-        """
-
-        self._dependency_role_filters_v4 = dependency_role_filters_v4
-
-    @property
     def pivot_dimension_es_field(self):
         """Gets the pivot_dimension_es_field of this RestAlertQueryContext.  # noqa: E501
 
@@ -352,6 +331,27 @@ class RestAlertQueryContext(object):
         """
 
         self._pivot_dimension_es_field = pivot_dimension_es_field
+
+    @property
+    def dependency_role_filters_v4(self):
+        """Gets the dependency_role_filters_v4 of this RestAlertQueryContext.  # noqa: E501
+
+
+        :return: The dependency_role_filters_v4 of this RestAlertQueryContext.  # noqa: E501
+        :rtype: list[AdvancedFieldFilter]
+        """
+        return self._dependency_role_filters_v4
+
+    @dependency_role_filters_v4.setter
+    def dependency_role_filters_v4(self, dependency_role_filters_v4):
+        """Sets the dependency_role_filters_v4 of this RestAlertQueryContext.
+
+
+        :param dependency_role_filters_v4: The dependency_role_filters_v4 of this RestAlertQueryContext.  # noqa: E501
+        :type: list[AdvancedFieldFilter]
+        """
+
+        self._dependency_role_filters_v4 = dependency_role_filters_v4
 
     @property
     def lmconfig_enabled(self):

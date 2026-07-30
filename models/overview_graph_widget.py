@@ -36,6 +36,7 @@ class OverviewGraphWidget(Widget):
         'ds_name': 'str',
         'ds_id': 'int',
         'dsig_name': 'str',
+        'vertical_label': 'str',
         'graph_id': 'int'
     }
     if hasattr(Widget, "swagger_types"):
@@ -49,12 +50,13 @@ class OverviewGraphWidget(Widget):
         'ds_name': 'dsName',
         'ds_id': 'dsId',
         'dsig_name': 'dsigName',
+        'vertical_label': 'verticalLabel',
         'graph_id': 'graphId'
     }
     if hasattr(Widget, "attribute_map"):
         attribute_map.update(Widget.attribute_map)
 
-    def __init__(self, host_name=None, graph_name=None, h_id=None, dsig_id=None, ds_name=None, ds_id=None, dsig_name=None, graph_id=None, *args, **kwargs):  # noqa: E501
+    def __init__(self, host_name=None, graph_name=None, h_id=None, dsig_id=None, ds_name=None, ds_id=None, dsig_name=None, vertical_label=None, graph_id=None, *args, **kwargs):  # noqa: E501
         """OverviewGraphWidget - a model defined in Swagger"""  # noqa: E501
         self._host_name = None
         self._graph_name = None
@@ -63,6 +65,7 @@ class OverviewGraphWidget(Widget):
         self._ds_name = None
         self._ds_id = None
         self._dsig_name = None
+        self._vertical_label = None
         self._graph_id = None
         self.discriminator = None
         if host_name is not None:
@@ -77,6 +80,8 @@ class OverviewGraphWidget(Widget):
             self.ds_id = ds_id
         if dsig_name is not None:
             self.dsig_name = dsig_name
+        if vertical_label is not None:
+            self.vertical_label = vertical_label
         if graph_id is not None:
             self.graph_id = graph_id
         Widget.__init__(self, *args, **kwargs)
@@ -231,6 +236,27 @@ class OverviewGraphWidget(Widget):
         """
 
         self._dsig_name = dsig_name
+
+    @property
+    def vertical_label(self):
+        """Gets the vertical_label of this OverviewGraphWidget.  # noqa: E501
+
+
+        :return: The vertical_label of this OverviewGraphWidget.  # noqa: E501
+        :rtype: str
+        """
+        return self._vertical_label
+
+    @vertical_label.setter
+    def vertical_label(self, vertical_label):
+        """Sets the vertical_label of this OverviewGraphWidget.
+
+
+        :param vertical_label: The vertical_label of this OverviewGraphWidget.  # noqa: E501
+        :type: str
+        """
+
+        self._vertical_label = vertical_label
 
     @property
     def graph_id(self):

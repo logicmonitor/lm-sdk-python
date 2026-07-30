@@ -28,7 +28,7 @@ class DatasourcesImportjsonBody(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'file': 'FormDataContentDisposition'
+        'file': 'str'
     }
 
     attribute_map = {
@@ -39,16 +39,16 @@ class DatasourcesImportjsonBody(object):
         """DatasourcesImportjsonBody - a model defined in Swagger"""  # noqa: E501
         self._file = None
         self.discriminator = None
-        if file is not None:
-            self.file = file
+        self.file = file
 
     @property
     def file(self):
         """Gets the file of this DatasourcesImportjsonBody.  # noqa: E501
 
+        LogicModule JSON file  # noqa: E501
 
         :return: The file of this DatasourcesImportjsonBody.  # noqa: E501
-        :rtype: FormDataContentDisposition
+        :rtype: str
         """
         return self._file
 
@@ -56,10 +56,13 @@ class DatasourcesImportjsonBody(object):
     def file(self, file):
         """Sets the file of this DatasourcesImportjsonBody.
 
+        LogicModule JSON file  # noqa: E501
 
         :param file: The file of this DatasourcesImportjsonBody.  # noqa: E501
-        :type: FormDataContentDisposition
+        :type: str
         """
+        if file is None:
+            raise ValueError("Invalid value for `file`, must not be `None`")  # noqa: E501
 
         self._file = file
 

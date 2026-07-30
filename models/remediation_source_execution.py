@@ -28,27 +28,32 @@ class RemediationSourceExecution(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'output': 'str',
         'execution_id': 'str',
         'execution_status': 'str',
         'host_id': 'int',
         'remediation_id': 'int',
         'alert_id': 'str',
         'trigger_type': 'str',
-        'host_remediation_source_id': 'int'
+        'host_remediation_source_id': 'int',
+        'include_output': 'bool'
     }
 
     attribute_map = {
+        'output': 'output',
         'execution_id': 'executionId',
         'execution_status': 'executionStatus',
         'host_id': 'hostId',
         'remediation_id': 'remediationId',
         'alert_id': 'alertId',
         'trigger_type': 'triggerType',
-        'host_remediation_source_id': 'hostRemediationSourceId'
+        'host_remediation_source_id': 'hostRemediationSourceId',
+        'include_output': 'includeOutput'
     }
 
-    def __init__(self, execution_id=None, execution_status=None, host_id=None, remediation_id=None, alert_id=None, trigger_type=None, host_remediation_source_id=None):  # noqa: E501
+    def __init__(self, output=None, execution_id=None, execution_status=None, host_id=None, remediation_id=None, alert_id=None, trigger_type=None, host_remediation_source_id=None, include_output=None):  # noqa: E501
         """RemediationSourceExecution - a model defined in Swagger"""  # noqa: E501
+        self._output = None
         self._execution_id = None
         self._execution_status = None
         self._host_id = None
@@ -56,7 +61,10 @@ class RemediationSourceExecution(object):
         self._alert_id = None
         self._trigger_type = None
         self._host_remediation_source_id = None
+        self._include_output = None
         self.discriminator = None
+        if output is not None:
+            self.output = output
         if execution_id is not None:
             self.execution_id = execution_id
         self.execution_status = execution_status
@@ -66,6 +74,31 @@ class RemediationSourceExecution(object):
             self.alert_id = alert_id
         self.trigger_type = trigger_type
         self.host_remediation_source_id = host_remediation_source_id
+        if include_output is not None:
+            self.include_output = include_output
+
+    @property
+    def output(self):
+        """Gets the output of this RemediationSourceExecution.  # noqa: E501
+
+        Script output when includeOutput is true and execution has completed  # noqa: E501
+
+        :return: The output of this RemediationSourceExecution.  # noqa: E501
+        :rtype: str
+        """
+        return self._output
+
+    @output.setter
+    def output(self, output):
+        """Sets the output of this RemediationSourceExecution.
+
+        Script output when includeOutput is true and execution has completed  # noqa: E501
+
+        :param output: The output of this RemediationSourceExecution.  # noqa: E501
+        :type: str
+        """
+
+        self._output = output
 
     @property
     def execution_id(self):
@@ -237,6 +270,29 @@ class RemediationSourceExecution(object):
             raise ValueError("Invalid value for `host_remediation_source_id`, must not be `None`")  # noqa: E501
 
         self._host_remediation_source_id = host_remediation_source_id
+
+    @property
+    def include_output(self):
+        """Gets the include_output of this RemediationSourceExecution.  # noqa: E501
+
+        When true, the API waits for execution to finish and returns script output in the response  # noqa: E501
+
+        :return: The include_output of this RemediationSourceExecution.  # noqa: E501
+        :rtype: bool
+        """
+        return self._include_output
+
+    @include_output.setter
+    def include_output(self, include_output):
+        """Sets the include_output of this RemediationSourceExecution.
+
+        When true, the API waits for execution to finish and returns script output in the response  # noqa: E501
+
+        :param include_output: The include_output of this RemediationSourceExecution.  # noqa: E501
+        :type: bool
+        """
+
+        self._include_output = include_output
 
     def to_dict(self):
         """Returns the model properties as a dict"""

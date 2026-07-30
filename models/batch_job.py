@@ -47,6 +47,7 @@ class BatchJob(object):
         'alert_subject': 'str',
         'id': 'int',
         'access_group_ids': 'list[int]',
+        'is_in_use': 'bool',
         'longest_run_time_in_minute': 'int',
         'alert_effective_ival': 'int',
         'group': 'str'
@@ -72,12 +73,13 @@ class BatchJob(object):
         'alert_subject': 'alertSubject',
         'id': 'id',
         'access_group_ids': 'accessGroupIds',
+        'is_in_use': 'isInUse',
         'longest_run_time_in_minute': 'longestRunTimeInMinute',
         'alert_effective_ival': 'alertEffectiveIval',
         'group': 'group'
     }
 
-    def __init__(self, active_monitoring=None, access_groups=None, alert_level=None, description=None, applies_to=None, technology=None, lineage_id=None, cron_schedule=None, tags=None, installation_metadata=None, cron_time_zone=None, alert_body=None, start_mrtie=None, origin_registry_id=None, checksum=None, name=None, alert_subject=None, id=None, access_group_ids=None, longest_run_time_in_minute=None, alert_effective_ival=None, group=None):  # noqa: E501
+    def __init__(self, active_monitoring=None, access_groups=None, alert_level=None, description=None, applies_to=None, technology=None, lineage_id=None, cron_schedule=None, tags=None, installation_metadata=None, cron_time_zone=None, alert_body=None, start_mrtie=None, origin_registry_id=None, checksum=None, name=None, alert_subject=None, id=None, access_group_ids=None, is_in_use=None, longest_run_time_in_minute=None, alert_effective_ival=None, group=None):  # noqa: E501
         """BatchJob - a model defined in Swagger"""  # noqa: E501
         self._active_monitoring = None
         self._access_groups = None
@@ -98,6 +100,7 @@ class BatchJob(object):
         self._alert_subject = None
         self._id = None
         self._access_group_ids = None
+        self._is_in_use = None
         self._longest_run_time_in_minute = None
         self._alert_effective_ival = None
         self._group = None
@@ -134,6 +137,8 @@ class BatchJob(object):
             self.id = id
         if access_group_ids is not None:
             self.access_group_ids = access_group_ids
+        if is_in_use is not None:
+            self.is_in_use = is_in_use
         if longest_run_time_in_minute is not None:
             self.longest_run_time_in_minute = longest_run_time_in_minute
         self.alert_effective_ival = alert_effective_ival
@@ -592,6 +597,29 @@ class BatchJob(object):
         """
 
         self._access_group_ids = access_group_ids
+
+    @property
+    def is_in_use(self):
+        """Gets the is_in_use of this BatchJob.  # noqa: E501
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :return: The is_in_use of this BatchJob.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_in_use
+
+    @is_in_use.setter
+    def is_in_use(self, is_in_use):
+        """Sets the is_in_use of this BatchJob.
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :param is_in_use: The is_in_use of this BatchJob.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_in_use = is_in_use
 
     @property
     def longest_run_time_in_minute(self):

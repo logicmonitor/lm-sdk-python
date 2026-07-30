@@ -86,6 +86,7 @@ class ReportBase(object):
 'service level agreement': 'SLAReport',
 'alert': 'AlertReport',
 'role': 'RoleReport',
+'HealthCheckReport': 'HealthCheckReport',
 'AdvancedMetricsReport': 'AdvancedMetricsReport',
 'host cpu': 'HostCpuReport',
 'alert forecasting': 'AlertForecastingReport',

@@ -56,7 +56,8 @@ class DataSource(object):
         'eri_discovery_interval': 'int',
         'enable_eri_discovery': 'bool',
         'collect_interval': 'int',
-        'name': 'str'
+        'name': 'str',
+        'is_in_use': 'bool'
     }
 
     attribute_map = {
@@ -88,10 +89,11 @@ class DataSource(object):
         'eri_discovery_interval': 'eriDiscoveryInterval',
         'enable_eri_discovery': 'enableEriDiscovery',
         'collect_interval': 'collectInterval',
-        'name': 'name'
+        'name': 'name',
+        'is_in_use': 'isInUse'
     }
 
-    def __init__(self, eri_discovery_config=None, access_groups=None, display_name=None, description=None, applies_to=None, lineage_id=None, collect_method=None, origin_registry_id=None, checksum=None, data_points=None, id=None, access_group_ids=None, group=None, collector_attribute=None, auto_discovery_config=None, ad_parameters=None, payload_version=None, use_wild_value_as_uuid=None, enable_auto_discovery=None, technology=None, version=None, tags=None, audit_version=None, has_multi_instances=None, installation_metadata=None, eri_discovery_interval=None, enable_eri_discovery=None, collect_interval=None, name=None):  # noqa: E501
+    def __init__(self, eri_discovery_config=None, access_groups=None, display_name=None, description=None, applies_to=None, lineage_id=None, collect_method=None, origin_registry_id=None, checksum=None, data_points=None, id=None, access_group_ids=None, group=None, collector_attribute=None, auto_discovery_config=None, ad_parameters=None, payload_version=None, use_wild_value_as_uuid=None, enable_auto_discovery=None, technology=None, version=None, tags=None, audit_version=None, has_multi_instances=None, installation_metadata=None, eri_discovery_interval=None, enable_eri_discovery=None, collect_interval=None, name=None, is_in_use=None):  # noqa: E501
         """DataSource - a model defined in Swagger"""  # noqa: E501
         self._eri_discovery_config = None
         self._access_groups = None
@@ -122,6 +124,7 @@ class DataSource(object):
         self._enable_eri_discovery = None
         self._collect_interval = None
         self._name = None
+        self._is_in_use = None
         self.discriminator = None
         if eri_discovery_config is not None:
             self.eri_discovery_config = eri_discovery_config
@@ -177,6 +180,8 @@ class DataSource(object):
             self.enable_eri_discovery = enable_eri_discovery
         self.collect_interval = collect_interval
         self.name = name
+        if is_in_use is not None:
+            self.is_in_use = is_in_use
 
     @property
     def eri_discovery_config(self):
@@ -842,6 +847,29 @@ class DataSource(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def is_in_use(self):
+        """Gets the is_in_use of this DataSource.  # noqa: E501
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :return: The is_in_use of this DataSource.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_in_use
+
+    @is_in_use.setter
+    def is_in_use(self, is_in_use):
+        """Sets the is_in_use of this DataSource.
+
+        Whether the LM module is currently in use  # noqa: E501
+
+        :param is_in_use: The is_in_use of this DataSource.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_in_use = is_in_use
 
     def to_dict(self):
         """Returns the model properties as a dict"""
